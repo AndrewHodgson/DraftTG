@@ -1,0 +1,44 @@
+<Window xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:DraftTG.App" x:Class="DraftTG.App.ControlRailWindow"
+        x:DataType="vm:OverlayViewModel" Title="DraftTG" Width="52" Height="354"
+        CanResize="False" Topmost="True" WindowDecorations="None" Background="Transparent"
+        TransparencyLevelHint="Transparent" ShowInTaskbar="True" WindowStartupLocation="Manual">
+  <Window.Styles>
+    <Style Selector="Button.rail">
+      <Setter Property="Width" Value="40" /><Setter Property="Height" Value="38" />
+      <Setter Property="Padding" Value="2" /><Setter Property="CornerRadius" Value="6" />
+      <Setter Property="HorizontalContentAlignment" Value="Center" />
+      <Setter Property="Background" Value="#FF272C34" /><Setter Property="Foreground" Value="#FFF1F4F8" />
+    </Style>
+  </Window.Styles>
+  <Border Margin="2" Padding="3,5" Background="#ED171B22" BorderBrush="#557D889A"
+          BorderThickness="1" CornerRadius="10">
+    <StackPanel Spacing="6" HorizontalAlignment="Center">
+      <Border Height="26" Width="40" Background="Transparent" Cursor="SizeAll"
+              PointerPressed="Drag_OnPointerPressed" ToolTip.Tip="Drag DraftTG rail">
+        <TextBlock Text="⠿" Foreground="#FFAFB9C9" FontSize="22" HorizontalAlignment="Center" />
+      </Border>
+      <Button Classes="rail" Height="58" Click="Status_OnClick" ToolTip.Tip="Draft status and diagnostics">
+        <StackPanel Spacing="2">
+          <TextBlock Text="{Binding CompactStatus}" FontSize="10" HorizontalAlignment="Center" />
+          <TextBlock Text="{Binding Session.PositionText}" FontSize="10" HorizontalAlignment="Center" />
+          <TextBlock Text="!" IsVisible="{Binding HasWarning}" Foreground="#FFF0C67A" FontSize="12" HorizontalAlignment="Center" />
+        </StackPanel>
+      </Button>
+      <Button Classes="rail" Click="Visibility_OnClick" ToolTip.Tip="{Binding VisibilityLabel}">
+        <TextBlock Text="%" FontSize="18" Opacity="0.9" />
+      </Button>
+      <Button Classes="rail" Click="History_OnClick" ToolTip.Tip="Drafted cards">
+        <TextBlock Text="≡" FontSize="23" />
+      </Button>
+      <Button Classes="rail" Click="Calibration_OnClick" ToolTip.Tip="{Binding CalibrationLabel}">
+        <TextBlock Text="⌖" FontSize="22" />
+      </Button>
+      <TextBlock Text="Set&#10;position" IsVisible="{Binding NeedsCalibration}" Foreground="#FFD8C79A"
+                 FontSize="9" TextAlignment="Center" />
+      <Button Classes="rail" Click="Close_OnClick" ToolTip.Tip="Close DraftTG">
+        <TextBlock Text="×" FontSize="23" />
+      </Button>
+    </StackPanel>
+  </Border>
+</Window>

@@ -1,0 +1,56 @@
+<UserControl xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="clr-namespace:DraftTG.App" x:Class="DraftTG.App.RailPanelView" x:DataType="vm:OverlayViewModel"
+             Width="280" MaxHeight="460">
+  <Border Background="#FA20252D" CornerRadius="8" Padding="12">
+    <Grid RowDefinitions="Auto,*">
+      <Button HorizontalAlignment="Right" Content="×" Tag="close-panel" Click="Action_OnClick"
+              ToolTip.Tip="Close panel" Padding="6,0" Foreground="White" Background="Transparent" />
+      <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+        <StackPanel Spacing="10">
+          <StackPanel IsVisible="{Binding IsStatusPanel}" Spacing="8">
+            <TextBlock Text="Draft status" Foreground="White" FontWeight="SemiBold" />
+            <TextBlock Text="{Binding Session.StatusText}" Foreground="#FFE0E5EC" TextWrapping="Wrap" />
+            <TextBlock Text="{Binding Session.ModeText}" Foreground="#FFB5BFCD" FontSize="12" TextWrapping="Wrap" />
+            <TextBlock Text="{Binding Session.StatisticsStatusText}" Foreground="#FFB5BFCD" FontSize="12" TextWrapping="Wrap" />
+            <TextBlock Text="{Binding CalibrationLabel}" Foreground="#FFB5BFCD" FontSize="12" />
+            <TextBlock Text="{Binding Diagnostics}" Foreground="#FFF0C67A" FontSize="12" TextWrapping="Wrap" />
+          </StackPanel>
+          <StackPanel IsVisible="{Binding IsHistoryPanel}" Spacing="8">
+            <TextBlock Text="Drafted cards" Foreground="White" FontWeight="SemiBold" />
+            <TextBlock Text="No picks yet" IsVisible="{Binding !Session.HasDraftedCards}" Foreground="#FFB5BFCD" />
+            <ItemsControl ItemsSource="{Binding Session.DraftedCards}">
+              <ItemsControl.ItemTemplate>
+                <DataTemplate x:DataType="vm:DraftedCardViewModel">
+                  <Grid ColumnDefinitions="45,*" Margin="0,4">
+                    <TextBlock Text="{Binding Position}" Foreground="#FF9DAABC" FontSize="12" />
+                    <TextBlock Grid.Column="1" Text="{Binding Name}" Foreground="#FFE0E5EC" FontSize="12" TextWrapping="Wrap" />
+                  </Grid>
+                </DataTemplate>
+              </ItemsControl.ItemTemplate>
+            </ItemsControl>
+          </StackPanel>
+          <StackPanel IsVisible="{Binding IsCalibrationPanel}" Spacing="10">
+            <TextBlock Text="Overlay position" Foreground="White" FontWeight="SemiBold" />
+            <TextBlock Text="Match the numbered slots to Arena’s card order. Drag the blue top edge and resize using a corner. Badges ignore clicks after you save."
+                       Foreground="#FFC7D1DE" FontSize="12" TextWrapping="Wrap" />
+            <Button Content="Set / edit position" Tag="edit" Click="Action_OnClick" IsVisible="{Binding !IsCalibrating}" />
+            <StackPanel IsVisible="{Binding IsCalibrating}" Spacing="8">
+              <TextBlock Text="Columns (14 slots, left to right)" Foreground="#FFC7D1DE" FontSize="12" />
+              <StackPanel Orientation="Horizontal" Spacing="5">
+                <Button Content="4" Tag="columns-4" Click="Action_OnClick" />
+                <Button Content="5" Tag="columns-5" Click="Action_OnClick" />
+                <Button Content="6" Tag="columns-6" Click="Action_OnClick" />
+                <Button Content="7" Tag="columns-7" Click="Action_OnClick" />
+              </StackPanel>
+              <TextBlock Text="Choose the arrangement that matches Arena. Recalibrate if Arena changes its layout."
+                         Foreground="#FF9DAABC" FontSize="11" TextWrapping="Wrap" />
+              <Button Content="Save position · resume clicks" Tag="save" Click="Action_OnClick" />
+              <Button Content="Cancel edit" Tag="cancel" Click="Action_OnClick" />
+            </StackPanel>
+            <TextBlock Text="{Binding Diagnostics}" Foreground="#FFF0C67A" FontSize="11" TextWrapping="Wrap" />
+          </StackPanel>
+        </StackPanel>
+      </ScrollViewer>
+    </Grid>
+  </Border>
+</UserControl>

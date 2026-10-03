@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="../DraftTG.RecommendationEngine/DraftTG.RecommendationEngine.csproj" />
+    <ProjectReference Include="../DraftTG.Domain/DraftTG.Domain.csproj" />
+    <ProjectReference Include="../DraftTG.Data/DraftTG.Data.csproj" />
+    <ProjectReference Include="../DraftTG.ArenaIntegration/DraftTG.ArenaIntegration.csproj" />
+  </ItemGroup>
+</Project>

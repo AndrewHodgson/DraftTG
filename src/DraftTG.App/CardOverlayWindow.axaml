@@ -1,0 +1,59 @@
+<Window xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:DraftTG.App" x:Class="DraftTG.App.CardOverlayWindow"
+        x:DataType="vm:OverlayViewModel" Title="DraftTG card badges" Width="1000" Height="500"
+        MinWidth="400" MinHeight="220" Topmost="True" WindowDecorations="None" CanResize="True"
+        TransparencyLevelHint="Transparent" Background="Transparent" ShowInTaskbar="False"
+        SizeToContent="Manual" Focusable="False" ShowActivated="False" WindowStartupLocation="Manual">
+  <Grid ClipToBounds="True">
+    <ItemsControl ItemsSource="{Binding Badges}" IsVisible="{Binding ShowBadges}" IsHitTestVisible="False" Focusable="False">
+      <ItemsControl.ItemsPanel><ItemsPanelTemplate><Canvas /></ItemsPanelTemplate></ItemsControl.ItemsPanel>
+      <ItemsControl.Styles>
+        <Style Selector="ContentPresenter" x:DataType="vm:CardBadgeViewModel">
+          <Setter Property="Canvas.Left" Value="{Binding X}" /><Setter Property="Canvas.Top" Value="{Binding Y}" />
+        </Style>
+      </ItemsControl.Styles>
+      <ItemsControl.ItemTemplate>
+        <DataTemplate x:DataType="vm:CardBadgeViewModel">
+          <Border Width="{Binding Width}" Height="42" Background="#E6171B22" CornerRadius="5"
+                  BorderBrush="#886D798B" BorderThickness="1" Padding="3,2">
+            <StackPanel Spacing="0">
+              <TextBlock Text="{Binding WinRate}" Foreground="#FFF8FAFD" FontSize="15" FontWeight="SemiBold" HorizontalAlignment="Center" />
+              <TextBlock Text="{Binding Secondary}" Foreground="#FFB9C6D8" FontSize="10" HorizontalAlignment="Center" />
+            </StackPanel>
+          </Border>
+        </DataTemplate>
+      </ItemsControl.ItemTemplate>
+    </ItemsControl>
+    <Grid x:Name="CalibrationLayer" IsVisible="{Binding IsCalibrating}" Background="#082EA8FF">
+      <Border BorderBrush="#FF69C4FF" BorderThickness="2" IsHitTestVisible="False" />
+      <ItemsControl ItemsSource="{Binding Guides}" IsHitTestVisible="False">
+        <ItemsControl.ItemsPanel><ItemsPanelTemplate><Canvas /></ItemsPanelTemplate></ItemsControl.ItemsPanel>
+        <ItemsControl.Styles>
+          <Style Selector="ContentPresenter" x:DataType="vm:CardSlotGuide">
+            <Setter Property="Canvas.Left" Value="{Binding X}" /><Setter Property="Canvas.Top" Value="{Binding Y}" />
+          </Style>
+        </ItemsControl.Styles>
+        <ItemsControl.ItemTemplate>
+          <DataTemplate x:DataType="vm:CardSlotGuide">
+            <Border Width="{Binding Width}" Height="{Binding Height}" BorderBrush="#AA69C4FF" BorderThickness="1" Padding="4,28,4,4">
+              <TextBlock Text="{Binding Label}" Foreground="White" Background="#CC172534" TextWrapping="Wrap"
+                         FontSize="11" VerticalAlignment="Top" />
+            </Border>
+          </DataTemplate>
+        </ItemsControl.ItemTemplate>
+      </ItemsControl>
+      <Border Height="26" Margin="20,16,20,0" VerticalAlignment="Top" Background="#EA245370" Cursor="SizeAll" PointerPressed="Move_OnPointerPressed">
+        <TextBlock Text="Drag draft region  ·  Resize edges/corners  ·  Save from the rail" Foreground="White" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
+      </Border>
+      <!-- Edge targets precede corners so every corner wins hit testing. -->
+      <Border Height="16" Margin="20,0" VerticalAlignment="Top" Background="Transparent" Cursor="SizeNorthSouth" Tag="North" PointerPressed="Resize_OnPointerPressed" />
+      <Border Height="16" Margin="20,0" VerticalAlignment="Bottom" Background="Transparent" Cursor="SizeNorthSouth" Tag="South" PointerPressed="Resize_OnPointerPressed" />
+      <Border Width="16" Margin="0,20" HorizontalAlignment="Left" Background="Transparent" Cursor="SizeWestEast" Tag="West" PointerPressed="Resize_OnPointerPressed" />
+      <Border Width="16" Margin="0,20" HorizontalAlignment="Right" Background="Transparent" Cursor="SizeWestEast" Tag="East" PointerPressed="Resize_OnPointerPressed" />
+      <Border Width="20" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#FF69C4FF" Cursor="TopLeftCorner" Tag="NorthWest" PointerPressed="Resize_OnPointerPressed" />
+      <Border Width="20" Height="20" HorizontalAlignment="Right" VerticalAlignment="Top" Background="#FF69C4FF" Cursor="TopRightCorner" Tag="NorthEast" PointerPressed="Resize_OnPointerPressed" />
+      <Border Width="20" Height="20" HorizontalAlignment="Left" VerticalAlignment="Bottom" Background="#FF69C4FF" Cursor="BottomLeftCorner" Tag="SouthWest" PointerPressed="Resize_OnPointerPressed" />
+      <Border Width="20" Height="20" HorizontalAlignment="Right" VerticalAlignment="Bottom" Background="#FF69C4FF" Cursor="BottomRightCorner" Tag="SouthEast" PointerPressed="Resize_OnPointerPressed" />
+    </Grid>
+  </Grid>
+</Window>
