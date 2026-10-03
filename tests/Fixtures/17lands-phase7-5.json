@@ -1,0 +1,45 @@
+[
+  {
+    "name": "Alpha",
+    "win_rate": 0.51,
+    "game_count": 5000,
+    "ever_drawn_win_rate": 0.575,
+    "ever_drawn_game_count": 900,
+    "opening_hand_win_rate": 0.59,
+    "opening_hand_game_count": 350,
+    "drawn_win_rate": 0.56,
+    "drawn_game_count": 550,
+    "drawn_improvement_win_rate": 0.025,
+    "avg_seen": 6.24,
+    "avg_pick": 4.2,
+    "play_rate": 0.7
+  },
+  {
+    "name": "Missing GIH",
+    "win_rate": 0.51,
+    "game_count": 5000,
+    "ever_drawn_win_rate": null,
+    "ever_drawn_game_count": 100,
+    "avg_seen": 7.1
+  },
+  {
+    "name": "Unknown sample",
+    "win_rate": 0.51,
+    "game_count": 5000,
+    "ever_drawn_win_rate": 0.575,
+    "avg_seen": 5.5
+  },
+  {
+    "name": "Low GIH",
+    "win_rate": 0.51,
+    "game_count": 5000,
+    "ever_drawn_win_rate": 0.575,
+    "ever_drawn_game_count": 499
+  },
+  {
+    "name": "ALSA only",
+    "win_rate": 0.51,
+    "game_count": 5000,
+    "avg_seen": 8.2
+  }
+]

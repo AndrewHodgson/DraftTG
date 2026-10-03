@@ -7,10 +7,11 @@ public enum LimitedStatisticsFormat { PremierDraft, TraditionalDraft, QuickDraft
 
 public sealed record LimitedStatisticsContext(string Expansion, LimitedStatisticsFormat Format);
 
-/// <summary>Rates are fractions, not percentages. Improvement is a signed rate difference.</summary>
+/// <summary>Rates are fractions, not percentages. Improvement is a signed rate difference.
+/// GameInHandGameCount is the sample for GameInHandWinRate; null means unknown.</summary>
 public sealed record LimitedCardStatistics(
     CardIdentifier CardIdentifier,
-    int? GameCount = null,
+    int? GameInHandGameCount = null,
     double? PlayRate = null,
     double? GameInHandWinRate = null,
     double? OpeningHandWinRate = null,

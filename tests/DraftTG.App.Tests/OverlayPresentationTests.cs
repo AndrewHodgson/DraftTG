@@ -50,15 +50,34 @@ public sealed partial class MainWindowViewModelTests
         Assert.All(hud.Badges, badge => Assert.Equal("…", badge.WinRate));
         var context = new LimitedStatisticsContext("HOB", LimitedStatisticsFormat.QuickDraft);
         session.ApplyStatisticsUpdate(new(update.SnapshotResult.Snapshot, false,
-            new(context, context, new([new(CardIdentifier.Create("domain-a"), GameCount: 20,
+            new(context, context, new([new(CardIdentifier.Create("domain-a"), GameInHandGameCount: 20,
                 GameInHandWinRate: 0.5874, AverageLastSeenAt: 6.24)]), LimitedStatisticsSource.Live, DateTimeOffset.UtcNow, null)));
         Assert.Equal(["—", "58.7%*", "—", "—"], hud.Badges.Select(badge => badge.WinRate));
         Assert.Equal("ALSA 6.24", hud.Badges[1].Secondary);
+        Assert.Contains("GIH available: 1 / 4", session.StatisticsCoverageText, StringComparison.Ordinal);
         Assert.Equal(positions, hud.Badges.Select(badge => (badge.X, badge.Y)));
         for (var i = 0; i < before.Length; i++) Assert.Same(before[i], hud.Badges[i]);
         Assert.Equal(["Gamma", "Alpha", "Gamma", "Beta"], hud.Badges.Select(badge => badge.Name));
         Assert.True(hud.ShowBadges);
     }
+    [Theory]
+    [InlineData(null, 100, "\u2014*")]
+    [InlineData(null, null, "\u2014")]
+    [InlineData(null, 500, "\u2014")]
+    [InlineData(0.575, 499, "57.5%*")]
+    [InlineData(0.575, 500, "57.5%")]
+    public void GihBadgeUsesExplicitSampleAndPreservesAlsa(double? rate, int? count, string expected)
+    {
+        var card = new CurrentPackCardViewModel("Alpha", "Common", "Colorless")
+        {
+            Statistics = LimitedCardStatisticsPresentation.From(new(CardIdentifier.Create("a"),
+                GameInHandWinRate: rate, GameInHandGameCount: count, AverageLastSeenAt: 6.24))
+        };
+        var badge = new CardBadgeViewModel(0, card);
+        Assert.Equal(expected, badge.WinRate);
+        Assert.Equal("ALSA 6.24", badge.Secondary);
+    }
+
     [Fact]
     public void FirstRunCalibrationAndVisibilityDoNotStopDraftPresentation()
     {

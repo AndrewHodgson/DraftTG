@@ -9,7 +9,7 @@ public sealed class LimitedStatisticsTests
     public void MissingMetricsStayNull()
     {
         var row = new LimitedCardStatistics(Id);
-        Assert.Null(row.GameCount);
+        Assert.Null(row.GameInHandGameCount);
         Assert.Null(row.PlayRate);
         Assert.Null(row.GameInHandWinRate);
         Assert.Null(row.OpeningHandWinRate);

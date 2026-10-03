@@ -69,7 +69,7 @@ public static class LimitedStatisticsMapper
     }
 
     private static LimitedCardStatistics Attach(CardIdentifier identifier, SeventeenLandsRating row) =>
-        new(identifier, row.GameCount, row.PlayRate, row.GameInHandWinRate,
+        new(identifier, row.GameInHandGameCount, row.PlayRate, row.GameInHandWinRate,
             row.OpeningHandWinRate, row.DrawnWinRate, row.DrawnImprovementWinRate,
             row.AverageLastSeenAt, row.AverageTakenAt);
 }

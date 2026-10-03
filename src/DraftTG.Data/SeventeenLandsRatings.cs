@@ -6,7 +6,7 @@ public enum SeventeenLandsSource { Live, Cache, StaleCache, Unavailable }
 /// <summary>Validated, name-keyed boundary value; JSON transport DTOs remain internal.</summary>
 public sealed record SeventeenLandsRating(
     string Name,
-    int? GameCount = null,
+    int? GameInHandGameCount = null,
     double? PlayRate = null,
     double? GameInHandWinRate = null,
     double? OpeningHandWinRate = null,

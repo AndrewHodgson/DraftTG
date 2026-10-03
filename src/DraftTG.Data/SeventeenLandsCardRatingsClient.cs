@@ -16,6 +16,7 @@ public sealed class SeventeenLandsCardRatingsClient : ISeventeenLandsCardRatings
     private readonly Dictionary<string, SeventeenLandsRatingsResult> _memory = new(StringComparer.Ordinal);
     private readonly Dictionary<string, (DateTimeOffset RetryAt, SeventeenLandsRatingsResult Result)> _failures = new(StringComparer.Ordinal);
     private DateTimeOffset _retryAfter;
+    private const int CacheSchemaVersion = 2;
     public static TimeSpan CacheTtl { get; } = TimeSpan.FromHours(24);
 
     public SeventeenLandsCardRatingsClient(HttpClient http, IApplicationDataPathProvider paths,
@@ -79,7 +80,7 @@ public sealed class SeventeenLandsCardRatingsClient : ISeventeenLandsCardRatings
                 _failures.Remove(key);
                 try
                 {
-                    await WriteCacheAsync(key, new RatingsCache(expansion, format, format, timestamp, rows!),
+                    await WriteCacheAsync(key, new RatingsCache(CacheSchemaVersion, expansion, format, format, timestamp, rows!),
                         cancellationToken).ConfigureAwait(false);
                 }
                 catch (Exception error) when (error is IOException or UnauthorizedAccessException)
@@ -118,7 +119,7 @@ public sealed class SeventeenLandsCardRatingsClient : ISeventeenLandsCardRatings
             await using var stream = File.OpenRead(Path.Combine(_directory, key + ".json"));
             var cache = await JsonSerializer.DeserializeAsync<RatingsCache>(stream,
                 cancellationToken: cancellationToken).ConfigureAwait(false);
-            if (cache is null || cache.Expansion != expansion || cache.RequestedFormat != format
+            if (cache is null || cache.SchemaVersion != CacheSchemaVersion || cache.Expansion != expansion || cache.RequestedFormat != format
                 || cache.SourceFormat != format || cache.FetchedAt == default || cache.FetchedAt > now)
                 return null;
             return new(expansion, format, Validate(cache.Rows), SeventeenLandsSource.Cache, cache.FetchedAt);
@@ -153,11 +154,13 @@ public sealed class SeventeenLandsCardRatingsClient : ISeventeenLandsCardRatings
         return rows.Select(row =>
         {
             if (row is null || string.IsNullOrWhiteSpace(row.Name) || !names.Add(row.Name)
-                || row.GameCount < 0 || !Rate(row.PlayRate) || !Rate(row.WinRate)
+                || row.GameCount < 0 || row.EverDrawnGameCount < 0
+                || row.OpeningHandGameCount < 0 || row.DrawnGameCount < 0
+                || !Rate(row.PlayRate) || !Rate(row.WinRate) || !Rate(row.EverDrawnWinRate)
                 || !Rate(row.OpeningHandWinRate) || !Rate(row.DrawnWinRate)
                 || !Rate(row.DrawnImprovementWinRate, -1) || !Positive(row.AvgSeen) || !Positive(row.AvgPick))
                 throw new JsonException("Invalid or duplicate card rating.");
-            return new SeventeenLandsRating(row.Name, row.GameCount, row.PlayRate, row.WinRate,
+            return new SeventeenLandsRating(row.Name, row.EverDrawnGameCount, row.PlayRate, row.EverDrawnWinRate,
                 row.OpeningHandWinRate, row.DrawnWinRate, row.DrawnImprovementWinRate, row.AvgSeen, row.AvgPick);
         }).ToArray();
     }
@@ -166,7 +169,9 @@ public sealed class SeventeenLandsCardRatingsClient : ISeventeenLandsCardRatings
         value is null || (double.IsFinite(value.Value) && value >= minimum && value <= 1);
     private static bool Positive(double? value) => value is null || (double.IsFinite(value.Value) && value > 0);
 
+    // Version 1 serialized a reduced DTO and discarded the true GIH fields.
     private sealed record RatingsCache(
+        [property: JsonRequired] int SchemaVersion,
         [property: JsonRequired] string Expansion,
         [property: JsonRequired] SeventeenLandsFormat RequestedFormat,
         [property: JsonRequired] SeventeenLandsFormat SourceFormat,
@@ -174,11 +179,16 @@ public sealed class SeventeenLandsCardRatingsClient : ISeventeenLandsCardRatings
         [property: JsonRequired] SeventeenLandsCardRatingDto[] Rows);
 }
 
+// Overall rates/counts are retained in the DTO/cache independently; they never substitute for GIH.
 internal sealed record SeventeenLandsCardRatingDto(
     [property: JsonPropertyName("name")] string Name,
     [property: JsonPropertyName("game_count")] int? GameCount,
     [property: JsonPropertyName("play_rate")] double? PlayRate,
     [property: JsonPropertyName("win_rate")] double? WinRate,
+    [property: JsonPropertyName("ever_drawn_win_rate")] double? EverDrawnWinRate,
+    [property: JsonPropertyName("ever_drawn_game_count")] int? EverDrawnGameCount,
+    [property: JsonPropertyName("opening_hand_game_count")] int? OpeningHandGameCount,
+    [property: JsonPropertyName("drawn_game_count")] int? DrawnGameCount,
     [property: JsonPropertyName("opening_hand_win_rate")] double? OpeningHandWinRate,
     [property: JsonPropertyName("drawn_win_rate")] double? DrawnWinRate,
     [property: JsonPropertyName("drawn_improvement_win_rate")] double? DrawnImprovementWinRate,

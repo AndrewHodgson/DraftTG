@@ -160,7 +160,7 @@ public sealed class LimitedStatisticsTests
         await foreach (var update in coordinator.RunAsync()) final = update;
         var snapshot = final!.SnapshotResult.Snapshot!;
         using var handler = new RatingsHandler(JsonSerializer.Serialize(names.Select((name, index) =>
-            new { name, win_rate = 0.5 + index / 100.0, avg_seen = 6.24, game_count = 4820 })));
+            new { name, ever_drawn_win_rate = 0.5 + index / 100.0, avg_seen = 6.24, ever_drawn_game_count = 4820 })));
         using var http = new HttpClient(handler);
         var directory = Path.Combine(Path.GetTempPath(), "DraftTG-hob-" + Guid.NewGuid());
         try
@@ -303,8 +303,8 @@ public sealed class LimitedStatisticsTests
         var catalog = new CardCatalog([first, second]);
         foreach (var card in new[] { first, second })
         {
-            var result = LimitedStatisticsMapper.Map([new("Alpha", GameCount: 4820)], catalog, Context, Snapshot(card));
-            Assert.Equal(4820, result.Catalog.StatisticsFor(card.Identifier)!.GameCount);
+            var result = LimitedStatisticsMapper.Map([new("Alpha", GameInHandGameCount: 4820)], catalog, Context, Snapshot(card));
+            Assert.Equal(4820, result.Catalog.StatisticsFor(card.Identifier)!.GameInHandGameCount);
             Assert.Equal(1, result.Catalog.Count);
             Assert.Null(result.Diagnostic);
         }
@@ -327,7 +327,7 @@ public sealed class LimitedStatisticsTests
     public void IdenticalProviderEvidenceIsReconciledWithoutDuplicateCatalogKeys()
     {
         var card = Card("a", "Alpha");
-        var row = new SeventeenLandsRating("Alpha", GameCount: 500);
+        var row = new SeventeenLandsRating("Alpha", GameInHandGameCount: 500);
         var result = LimitedStatisticsMapper.Map([row, row with { }], new([card]), Context, Snapshot(card, card));
         Assert.Equal(1, result.Catalog.Count);
         Assert.Null(result.Diagnostic);
@@ -343,7 +343,7 @@ public sealed class LimitedStatisticsTests
             History = new([new(new(PackNumber.Create(1), PickNumber.Create(1)), history.Identifier)])
         };
         var result = LimitedStatisticsMapper.Map(
-            [new("Alpha"), new("Other", GameCount: 1), new("Other", GameCount: 2)],
+            [new("Alpha"), new("Other", GameInHandGameCount: 1), new("Other", GameInHandGameCount: 2)],
             new([card, history]), Context, snapshot);
         Assert.Null(result.Diagnostic);
         Assert.Null(result.Catalog.StatisticsFor(history.Identifier));
@@ -369,7 +369,7 @@ public sealed class LimitedStatisticsTests
             { Card($"alt-{i}", name), Card($"old-{i}", name, "OLD") }))
             .Concat([Card("other-a", "Unrelated"), Card("other-b", "Unrelated")]));
         using var handler = new RatingsHandler(JsonSerializer.Serialize(names.Append("Unrelated").Select((name, i) =>
-            new { name, win_rate = 0.58 - i / 100.0, avg_seen = 6.24, game_count = 4820 })));
+            new { name, ever_drawn_win_rate = 0.58 - i / 100.0, avg_seen = 6.24, ever_drawn_game_count = 4820 })));
         using var http = new HttpClient(handler);
         var directory = Path.Combine(Path.GetTempPath(), "DraftTG-hob-71-" + Guid.NewGuid());
         try
@@ -395,6 +395,55 @@ public sealed class LimitedStatisticsTests
                 Assert.NotEqual("—", row.GameInHand);
             });
             Assert.Single(handler.Requests);
+        }
+        finally { if (Directory.Exists(directory)) Directory.Delete(directory, true); }
+    }
+
+    [Fact]
+    public async Task Phase75FixtureMapsTrueGihAndReportsSlotCoverageWithoutHistory()
+    {
+        var names = new[] { "Alpha", "Missing GIH", "Unknown sample", "Low GIH", "ALSA only" };
+        var cards = names.Select((name, i) => Card($"fixture-{i}", name)).ToArray();
+        var history = Card("history-fixture", "Alpha");
+        var snapshot = Snapshot(cards.Concat([cards[0]]).ToArray()) with
+        {
+            History = new([new(new(PackNumber.Create(1), PickNumber.Create(1)), history.Identifier)])
+        };
+        using var handler = new RatingsHandler(await File.ReadAllTextAsync(
+            Path.Combine(AppContext.BaseDirectory, "Fixtures", "17lands-phase7-5.json")));
+        using var http = new HttpClient(handler);
+        var directory = Path.Combine(Path.GetTempPath(), "DraftTG-phase75-" + Guid.NewGuid());
+        try
+        {
+            var service = new LimitedStatisticsService(new SeventeenLandsCardRatingsClient(http, new Paths(directory)),
+                new(cards.Concat([history])));
+            var result = await service.LoadAsync(Context, snapshot);
+            var complete = result.Catalog.StatisticsFor(cards[0].Identifier)!;
+            Assert.Equal(0.575, complete.GameInHandWinRate);
+            Assert.Equal(900, complete.GameInHandGameCount);
+            Assert.NotEqual(0.510, complete.GameInHandWinRate);
+            Assert.NotEqual(5000, complete.GameInHandGameCount);
+            Assert.Equal(0.59, complete.OpeningHandWinRate);
+            Assert.Equal(0.56, complete.DrawnWinRate);
+            Assert.Equal(0.025, complete.DrawnImprovementWinRate);
+            Assert.Equal(4.2, complete.AverageTakenAt);
+            Assert.Equal(0.7, complete.PlayRate);
+            var update = new LimitedStatisticsUpdate(snapshot, false, result);
+            Assert.Equal("57.5%", update.Cards[cards[0].Identifier].GameInHand);
+            Assert.Equal("n=900", update.Cards[cards[0].Identifier].SampleCount);
+            Assert.False(update.Cards[cards[0].Identifier].IsLowSample);
+            Assert.Equal("\u2014", update.Cards[cards[1].Identifier].GameInHand);
+            Assert.True(update.Cards[cards[1].Identifier].IsLowSample);
+            Assert.Equal("7.10", update.Cards[cards[1].Identifier].AverageLastSeen);
+            Assert.Equal("", update.Cards[cards[2].Identifier].SampleCount);
+            Assert.False(update.Cards[cards[2].Identifier].IsLowSample);
+            Assert.Equal("57.5%", update.Cards[cards[2].Identifier].GameInHand);
+            Assert.True(update.Cards[cards[3].Identifier].IsLowSample);
+            Assert.Equal("\u2014", update.Cards[cards[4].Identifier].GameInHand);
+            Assert.Equal("8.20", update.Cards[cards[4].Identifier].AverageLastSeen);
+            Assert.False(update.Cards[cards[4].Identifier].IsLowSample);
+            Assert.Equal("GIH available: 4 / 6\nGIH low sample: 2\nGIH unavailable: 2\nALSA available: 5 / 6\nSource: 17Lands QuickDraft / HOB", update.CoverageText);
+            Assert.Empty(new LimitedStatisticsUpdate(snapshot, true, null).CoverageText);
         }
         finally { if (Directory.Exists(directory)) Directory.Delete(directory, true); }
     }

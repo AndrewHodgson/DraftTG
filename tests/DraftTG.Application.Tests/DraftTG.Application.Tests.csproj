@@ -20,4 +20,7 @@
   <ItemGroup>
     <Using Include="Xunit" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="../Fixtures/17lands-phase7-5.json" Link="Fixtures/17lands-phase7-5.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
 </Project>

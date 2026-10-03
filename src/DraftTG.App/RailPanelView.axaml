@@ -12,6 +12,7 @@
             <TextBlock Text="{Binding Session.StatusText}" Foreground="#FFE0E5EC" TextWrapping="Wrap" />
             <TextBlock Text="{Binding Session.ModeText}" Foreground="#FFB5BFCD" FontSize="12" TextWrapping="Wrap" />
             <TextBlock Text="{Binding Session.StatisticsStatusText}" Foreground="#FFB5BFCD" FontSize="12" TextWrapping="Wrap" />
+            <TextBlock Text="{Binding Session.StatisticsCoverageText}" Foreground="#FFB5BFCD" FontSize="12" TextWrapping="Wrap" />
             <TextBlock Text="{Binding CalibrationLabel}" Foreground="#FFB5BFCD" FontSize="12" />
             <TextBlock Text="{Binding Diagnostics}" Foreground="#FFF0C67A" FontSize="12" TextWrapping="Wrap" />
           </StackPanel>

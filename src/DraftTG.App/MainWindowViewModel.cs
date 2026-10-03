@@ -22,6 +22,7 @@ public sealed class MainWindowViewModel : INotifyPropertyChanged, IAsyncDisposab
     private CardCatalog? _catalog;
     private DraftSnapshot? _currentSnapshot;
     private string _statisticsStatusText = string.Empty;
+    private string _statisticsCoverageText = string.Empty;
     private string _statisticsDiagnosticText = string.Empty;
     private bool _statisticsEnabled;
     private Task? _runTask;
@@ -55,6 +56,12 @@ public sealed class MainWindowViewModel : INotifyPropertyChanged, IAsyncDisposab
     {
         get => _statisticsStatusText;
         private set => SetField(ref _statisticsStatusText, value);
+    }
+
+    public string StatisticsCoverageText
+    {
+        get => _statisticsCoverageText;
+        private set => SetField(ref _statisticsCoverageText, value);
     }
 
     public string StatisticsDiagnosticText
@@ -237,6 +244,7 @@ public sealed class MainWindowViewModel : INotifyPropertyChanged, IAsyncDisposab
         if (!ReferenceEquals(update.Snapshot, _currentSnapshot)) return;
         StatisticsStatusText = update.StatusText;
         StatisticsDiagnosticText = update.Diagnostic ?? string.Empty;
+        StatisticsCoverageText = update.CoverageText;
         if (_currentSnapshot is null) return;
         for (var index = 0; index < CurrentPackCards.Count; index++)
         {
@@ -354,6 +362,7 @@ public sealed class MainWindowViewModel : INotifyPropertyChanged, IAsyncDisposab
         _currentSnapshot = snapshot;
         StatisticsStatusText = _statisticsEnabled ? "Stats: loading…" : "Stats: unavailable";
         StatisticsDiagnosticText = string.Empty;
+        StatisticsCoverageText = string.Empty;
         CurrentPackCards.Clear();
         DraftedCards.Clear();
         var missingIdentifiers = new List<string>();
@@ -419,6 +428,7 @@ public sealed class MainWindowViewModel : INotifyPropertyChanged, IAsyncDisposab
         _currentSnapshot = null;
         StatisticsStatusText = string.Empty;
         StatisticsDiagnosticText = string.Empty;
+        StatisticsCoverageText = string.Empty;
         CurrentPackCards.Clear();
         IsCurrentPackVisible = false;
         IsWaitingForPackVisible = false;

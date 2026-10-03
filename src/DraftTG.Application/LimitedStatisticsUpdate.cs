@@ -11,14 +11,15 @@ public sealed record LimitedCardStatisticsPresentation(string GameInHand, string
     public string Summary => $"GIH {GameInHand}   ALSA {AverageLastSeen}"
         + (SampleCount.Length > 0 ? $"   {SampleCount}" : string.Empty)
         + (IsLowSample ? "   Low sample" : string.Empty);
+    public const int LowSampleThreshold = 500;
     public static LimitedCardStatisticsPresentation Missing { get; } = new("—", "—", "", false);
     public static LimitedCardStatisticsPresentation Loading { get; } = new("…", "…", "", false);
 
     public static LimitedCardStatisticsPresentation From(LimitedCardStatistics? statistics) => new(
         statistics?.GameInHandWinRate is { } rate ? (rate * 100).ToString("0.0", CultureInfo.InvariantCulture) + "%" : "—",
         statistics?.AverageLastSeenAt?.ToString("0.00", CultureInfo.InvariantCulture) ?? "—",
-        statistics?.GameCount is { } count ? $"n={count.ToString("N0", CultureInfo.InvariantCulture)}" : "",
-        statistics?.GameCount is < 500);
+        statistics?.GameInHandGameCount is { } count ? $"n={count.ToString("N0", CultureInfo.InvariantCulture)}" : "",
+        statistics?.GameInHandGameCount is < LowSampleThreshold);
 }
 
 /// <summary>UI-ready values tied to the precise snapshot that was mapped.</summary>
@@ -45,6 +46,18 @@ public sealed class LimitedStatisticsUpdate
             ? "Stats: unavailable" : $"Stats: {format}" + (result!.IsFallback ? " (fallback)" : "")
                 + (result.Source == LimitedStatisticsSource.StaleCache ? " · stale cache" : "");
         Diagnostic = unavailableReason ?? result?.Diagnostic;
+        if (!isLoading && snapshot is not null)
+        {
+            var rows = snapshot.CurrentPack.AvailableCardIdentifiers
+                .Select(id => result?.Catalog.StatisticsFor(id)).ToArray();
+            var available = rows.Count(row => row?.GameInHandWinRate is not null);
+            var low = rows.Count(row => row?.GameInHandGameCount is < LimitedCardStatisticsPresentation.LowSampleThreshold);
+            var alsa = rows.Count(row => row?.AverageLastSeenAt is not null);
+            var context = result?.ActualSourceContext ?? result?.RequestedContext;
+            var source = context is null ? "unavailable" : $"17Lands {context.Format} / {context.Expansion}";
+            CoverageText = $"GIH available: {available} / {rows.Length}\nGIH low sample: {low}\n"
+                + $"GIH unavailable: {rows.Length - available}\nALSA available: {alsa} / {rows.Length}\nSource: {source}";
+        }
     }
     public DraftSnapshot? Snapshot { get; }
     public bool IsLoading { get; }
@@ -52,4 +65,5 @@ public sealed class LimitedStatisticsUpdate
     public IReadOnlyDictionary<CardIdentifier, LimitedCardStatisticsPresentation> Cards { get; }
     public string StatusText { get; }
     public string? Diagnostic { get; }
+    public string CoverageText { get; } = string.Empty;
 }

@@ -48,6 +48,8 @@ Add eight native resize targets, an AppKit resizable-frame fallback for Avalonia
 
 Correct the macOS Retina desktop/render-scale mismatch that rejected valid saves. Share Save/Cancel cleanup, hide all calibration presentation, close the flyout, and restore borderless passive badges. Re-enter calibration from the rail icon with saved geometry. Native window/button smoke checks pass; physical Arena interaction is reported separately in PHASE7_4_REPORT.md.
 
+Phase 7.5 corrects GIH to the provider ever-drawn metric and sample, rejects incompatible statistics caches automatically, and adds current-pack coverage in the control rail. No recommendation logic is added.
+
 ## Phase 8 — Recommendation Engine
 
 Rank available cards using explicit, testable inputs and scoring rules. Run calculations without blocking the UI.

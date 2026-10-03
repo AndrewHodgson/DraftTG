@@ -295,7 +295,7 @@ public sealed partial class MainWindowViewModelTests
     public void StatisticsFormatFractionsAlsaAndSampleCount()
     {
         var presentation = LimitedCardStatisticsPresentation.From(new(CardIdentifier.Create("a"),
-            GameCount: 4820, GameInHandWinRate: 0.5874, AverageLastSeenAt: 6.24));
+            GameInHandGameCount: 4820, GameInHandWinRate: 0.5874, AverageLastSeenAt: 6.24));
         Assert.Equal("58.7%", presentation.GameInHand);
         Assert.Equal("6.24", presentation.AverageLastSeen);
         Assert.Equal("n=4,820", presentation.SampleCount);
@@ -311,11 +311,11 @@ public sealed partial class MainWindowViewModelTests
     [InlineData(null, false)]
     public void LowSampleIsPresentationOnly(int? count, bool expected)
     {
-        var statistics = new LimitedCardStatistics(CardIdentifier.Create("a"), GameCount: count, GameInHandWinRate: 0.6);
+        var statistics = new LimitedCardStatistics(CardIdentifier.Create("a"), GameInHandGameCount: count, GameInHandWinRate: 0.6);
         var presentation = LimitedCardStatisticsPresentation.From(statistics);
         Assert.Equal(expected, presentation.IsLowSample);
         Assert.Equal("60.0%", presentation.GameInHand);
-        Assert.Equal(count, statistics.GameCount);
+        Assert.Equal(count, statistics.GameInHandGameCount);
     }
 
     [Fact]
@@ -340,8 +340,8 @@ public sealed partial class MainWindowViewModelTests
         Assert.All(viewModel.CurrentPackCards, row => Assert.Equal("…", row.Statistics.GameInHand));
         var context = new LimitedStatisticsContext("TST", LimitedStatisticsFormat.QuickDraft);
         var result = new LimitedStatisticsLoadResult(context, context,
-            new([new(CardIdentifier.Create("domain-a"), GameCount: 20, GameInHandWinRate: 0.9),
-                 new(CardIdentifier.Create("domain-c"), GameCount: 20000, GameInHandWinRate: 0.5)]),
+            new([new(CardIdentifier.Create("domain-a"), GameInHandGameCount: 20, GameInHandWinRate: 0.9),
+                 new(CardIdentifier.Create("domain-c"), GameInHandGameCount: 20000, GameInHandWinRate: 0.5)]),
             LimitedStatisticsSource.Live, DateTimeOffset.UtcNow, null);
         viewModel.ApplyStatisticsUpdate(new(snapshot, false, result));
         Assert.Equal(["Gamma", "Alpha", "Gamma", "Beta"], viewModel.CurrentPackCards.Select(row => row.Name));
@@ -408,7 +408,7 @@ public sealed partial class MainWindowViewModelTests
         Assert.Equal("Draft active", viewModel.StatusText);
         Assert.Equal(["Alpha", "Beta"], viewModel.CurrentPackCards.Select(row => row.Name));
         client.Release.SetResult(new("TST", SeventeenLandsFormat.QuickDraft,
-            [new("Alpha", GameCount: 4820, GameInHandWinRate: 0.5874, AverageLastSeenAt: 6.24)],
+            [new("Alpha", GameInHandGameCount: 4820, GameInHandWinRate: 0.5874, AverageLastSeenAt: 6.24)],
             SeventeenLandsSource.Live, DateTimeOffset.UtcNow));
         await WaitUntilAsync(() => viewModel.CurrentPackCards[0].Statistics.GameInHand == "58.7%");
         Assert.Equal("—", viewModel.CurrentPackCards[1].Statistics.GameInHand);
@@ -484,7 +484,7 @@ public sealed partial class MainWindowViewModelTests
         var context = new LimitedStatisticsContext("TST", LimitedStatisticsFormat.QuickDraft);
         var rows = Enumerable.Range(0, 50).Select(i => new SeventeenLandsRating($"Unrelated {i}"))
             .Concat(baseCatalog.Cards.Where(card => !missingCurrentRow || card.Name != "Beta")
-                .Select(card => new SeventeenLandsRating(card.Name, GameCount: 4820,
+                .Select(card => new SeventeenLandsRating(card.Name, GameInHandGameCount: 4820,
                     GameInHandWinRate: 0.5874, AverageLastSeenAt: 6.24)));
         var mapping = LimitedStatisticsMapper.Map(rows, catalog, context, update.SnapshotResult.Snapshot);
         viewModel.ApplyStatisticsUpdate(new(update.SnapshotResult.Snapshot, false,
