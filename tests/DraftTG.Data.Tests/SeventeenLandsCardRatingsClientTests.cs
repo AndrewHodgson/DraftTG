@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DraftTG.Data.Tests;
 
-public sealed class SeventeenLandsCardRatingsClientTests : IDisposable
+public sealed partial class SeventeenLandsCardRatingsClientTests : IDisposable
 {
     private readonly string _directory = Path.Combine(Path.GetTempPath(), "DraftTG-ratings-" + Guid.NewGuid());
     private readonly TestTime _time = new();
@@ -15,13 +15,13 @@ public sealed class SeventeenLandsCardRatingsClientTests : IDisposable
     {
         using var handler = new Handler(request =>
         {
-            Assert.Equal("https://www.17lands.com/card_ratings/data?expansion=HOB&format=QuickDraft", request.RequestUri!.AbsoluteUri);
-            Assert.Contains("DraftTG/0.7", request.Headers.UserAgent.ToString(), StringComparison.Ordinal);
+            Assert.Equal("https://www.17lands.com/api/card_data?expansion=HOB&event_type=QuickDraft&time_period=ALL_TIME", request.RequestUri!.AbsoluteUri);
+            Assert.Contains("DraftTG/0.8.1", request.Headers.UserAgent.ToString(), StringComparison.Ordinal);
             Assert.Contains(request.Headers.Accept, value => value.MediaType == "application/json");
             return Json(Valid);
         });
         var result = await Client(handler).LoadAsync("hob", SeventeenLandsFormat.QuickDraft);
-        var row = Assert.Single(result.Rows);
+        var row = Alpha(result.Rows);
         Assert.Equal(4820, row.GameInHandGameCount);
         Assert.Equal(0.7, row.PlayRate);
         Assert.Equal(0.5874, row.GameInHandWinRate);
@@ -38,7 +38,7 @@ public sealed class SeventeenLandsCardRatingsClientTests : IDisposable
     public async Task OptionalAndNullMetricsRemainMissing()
     {
         using var handler = new Handler(_ => Json("""[{"name":"Alpha","win_rate":null}]"""));
-        var row = Assert.Single((await Client(handler).LoadAsync("HOB", SeventeenLandsFormat.QuickDraft)).Rows);
+        var row = Alpha((await Client(handler).LoadAsync("HOB", SeventeenLandsFormat.QuickDraft)).Rows);
         Assert.Null(row.GameInHandWinRate);
         Assert.Null(row.GameInHandGameCount);
         Assert.Null(row.AverageTakenAt);
@@ -99,15 +99,18 @@ public sealed class SeventeenLandsCardRatingsClientTests : IDisposable
         var result = await Client(handler).LoadAsync("HOB", SeventeenLandsFormat.QuickDraft);
         Assert.Equal(SeventeenLandsSource.Cache, result.Source);
         Assert.Equal(1, handler.Calls);
-        Assert.Equal(0.5874, Assert.Single(result.Rows).GameInHandWinRate);
+        Assert.Equal(0.5874, Alpha(result.Rows).GameInHandWinRate);
     }
 
     [Fact]
-    public async Task EmptyDatasetIsCached()
+    public async Task EmptyDatasetIsRejectedAndRepeatedCallsUseCooldown()
     {
         using var handler = new Handler(_ => Json("[]"));
-        await Client(handler).LoadAsync("HOB", SeventeenLandsFormat.QuickDraft);
-        Assert.Empty((await Client(handler).LoadAsync("HOB", SeventeenLandsFormat.QuickDraft)).Rows);
+        var client = Client(handler);
+        var first = await client.LoadAsync("HOB", SeventeenLandsFormat.QuickDraft);
+        Assert.Equal(SeventeenLandsSource.Unavailable, first.Source);
+        Assert.Contains("0 rows", first.Diagnostic, StringComparison.Ordinal);
+        Assert.Empty((await client.LoadAsync("HOB", SeventeenLandsFormat.QuickDraft)).Rows);
         Assert.Equal(1, handler.Calls);
     }
 
@@ -121,7 +124,7 @@ public sealed class SeventeenLandsCardRatingsClientTests : IDisposable
         var refreshed = await Client(handler).LoadAsync("HOB", SeventeenLandsFormat.QuickDraft);
         Assert.Equal(SeventeenLandsSource.Live, refreshed.Source);
         var cached = await Client(handler).LoadAsync("HOB", SeventeenLandsFormat.QuickDraft);
-        Assert.Equal(0.61, Assert.Single(cached.Rows).GameInHandWinRate);
+        Assert.Equal(0.61, Alpha(cached.Rows).GameInHandWinRate);
         Assert.Equal(2, handler.Calls);
     }
 
@@ -135,7 +138,7 @@ public sealed class SeventeenLandsCardRatingsClientTests : IDisposable
         var result = await Client(handler).LoadAsync("HOB", SeventeenLandsFormat.QuickDraft);
         Assert.Equal(SeventeenLandsSource.StaleCache, result.Source);
         Assert.Equal(original.FetchedAt, result.FetchedAt);
-        Assert.Single(result.Rows);
+        Alpha(result.Rows);
         Assert.Contains("cached", result.Diagnostic, StringComparison.Ordinal);
     }
 
@@ -199,7 +202,7 @@ public sealed class SeventeenLandsCardRatingsClientTests : IDisposable
     {
         using var handler = new Handler(_ => Json(Valid));
         await Client(handler).LoadAsync("HOB", SeventeenLandsFormat.QuickDraft);
-        var path = Path.Combine(_directory, "limited-data", "17lands", "HOB_QuickDraft.json");
+        var path = Path.Combine(_directory, "limited-data", "17lands", "HOB_QuickDraft_ALL_TIME_v3.json");
         await File.WriteAllTextAsync(path, (await File.ReadAllTextAsync(path)).Replace("HOB", "OTHER", StringComparison.Ordinal));
         await Client(handler).LoadAsync("HOB", SeventeenLandsFormat.QuickDraft);
         Assert.Equal(2, handler.Calls);
@@ -213,7 +216,7 @@ public sealed class SeventeenLandsCardRatingsClientTests : IDisposable
         handler.Response = _ => Json("{}");
         var result = await Client(handler).LoadAsync("HOB", SeventeenLandsFormat.QuickDraft, forceRefresh: true);
         Assert.Equal(SeventeenLandsSource.StaleCache, result.Source);
-        Assert.Single((await Client(handler).LoadAsync("HOB", SeventeenLandsFormat.QuickDraft)).Rows);
+        Alpha((await Client(handler).LoadAsync("HOB", SeventeenLandsFormat.QuickDraft)).Rows);
         Assert.Equal(2, handler.Calls);
     }
 
@@ -237,7 +240,7 @@ public sealed class SeventeenLandsCardRatingsClientTests : IDisposable
     {
         using var handler = new Handler(_ => Json(Valid));
         await Client(handler).LoadAsync("HOB", SeventeenLandsFormat.PremierDraft);
-        var path = Path.Combine(_directory, "limited-data", "17lands", "HOB_PremierDraft.json");
+        var path = Path.Combine(_directory, "limited-data", "17lands", "HOB_PremierDraft_ALL_TIME_v3.json");
         var json = System.Text.Json.Nodes.JsonNode.Parse(await File.ReadAllTextAsync(path))!.AsObject();
         json.Remove("RequestedFormat");
         await File.WriteAllTextAsync(path, json.ToJsonString());
@@ -249,10 +252,10 @@ public sealed class SeventeenLandsCardRatingsClientTests : IDisposable
     public async Task ValidJsonWithIncorrectContentTypeStillDecodes()
     {
         using var handler = new Handler(_ => new(HttpStatusCode.OK)
-            { Content = new StringContent(Valid, Encoding.UTF8, "text/html") });
+            { Content = new StringContent(Envelope(Valid), Encoding.UTF8, "text/html") });
         var result = await Client(handler).LoadAsync("HOB", SeventeenLandsFormat.QuickDraft);
         Assert.Equal(SeventeenLandsSource.Live, result.Source);
-        Assert.Equal(0.5874, Assert.Single(result.Rows).GameInHandWinRate);
+        Assert.Equal(0.5874, Alpha(result.Rows).GameInHandWinRate);
     }
 
     [Fact]
@@ -264,10 +267,10 @@ public sealed class SeventeenLandsCardRatingsClientTests : IDisposable
         var row = result.Rows[0];
         Assert.Equal(0.575, row.GameInHandWinRate);
         Assert.Equal(900, row.GameInHandGameCount);
-        var path = Path.Combine(_directory, "limited-data", "17lands", "WOE_QuickDraft.json");
+        var path = Path.Combine(_directory, "limited-data", "17lands", "WOE_QuickDraft_ALL_TIME_v3.json");
         using var json = System.Text.Json.JsonDocument.Parse(await File.ReadAllTextAsync(path));
-        Assert.Equal(2, json.RootElement.GetProperty("SchemaVersion").GetInt32());
-        var raw = json.RootElement.GetProperty("Rows")[0];
+        Assert.Equal(3, json.RootElement.GetProperty("SchemaVersion").GetInt32());
+        var raw = json.RootElement.GetProperty("Payload").GetProperty("data")[0];
         Assert.Equal(0.510, raw.GetProperty("win_rate").GetDouble());
         Assert.Equal(5000, raw.GetProperty("game_count").GetInt32());
         Assert.Equal(0.575, raw.GetProperty("ever_drawn_win_rate").GetDouble());
@@ -292,19 +295,44 @@ public sealed class SeventeenLandsCardRatingsClientTests : IDisposable
         Directory.CreateDirectory(directory);
         var json = System.Text.Json.Nodes.JsonNode.Parse("""{"Expansion":"WOE","RequestedFormat":2,"SourceFormat":2,"FetchedAt":"2026-09-26T12:00:00Z","Rows":[{"name":"Alpha","win_rate":0.51,"game_count":5000}]}""")!;
         if (version is not null) json["SchemaVersion"] = version.Value;
-        await File.WriteAllTextAsync(Path.Combine(directory, "WOE_QuickDraft.json"), json.ToJsonString());
+        await File.WriteAllTextAsync(Path.Combine(directory, "WOE_QuickDraft_ALL_TIME_v3.json"), json.ToJsonString());
         using var handler = new Handler(_ => online ? Json(Valid) : new(HttpStatusCode.ServiceUnavailable));
         var result = await Client(handler).LoadAsync("WOE", SeventeenLandsFormat.QuickDraft);
         Assert.Equal(1, handler.Calls);
         Assert.Equal(online ? SeventeenLandsSource.Live : SeventeenLandsSource.Unavailable, result.Source);
-        if (online) Assert.Equal(0.5874, Assert.Single(result.Rows).GameInHandWinRate);
+        if (online) Assert.Equal(0.5874, Alpha(result.Rows).GameInHandWinRate);
         else Assert.Empty(result.Rows);
     }
 
     private SeventeenLandsCardRatingsClient Client(Handler handler) =>
         new(new HttpClient(handler, disposeHandler: false), new Paths(_directory), _time);
+    private static SeventeenLandsRating Alpha(IReadOnlyList<SeventeenLandsRating> rows) =>
+        Assert.Single(rows, row => row.Name == "Alpha");
+
+    // Metric-focused legacy fixtures now travel in a healthy current API envelope.
+    // Padding is explicit synthetic environment data, never a production fallback.
+    private static string Envelope(string json)
+    {
+        try
+        {
+            if (System.Text.Json.Nodes.JsonNode.Parse(json) is System.Text.Json.Nodes.JsonArray rows)
+            {
+                while (rows.Count is > 0 and < 20)
+                    rows.Add(new System.Text.Json.Nodes.JsonObject
+                    {
+                        ["name"] = $"Fixture padding {rows.Count}",
+                        ["ever_drawn_win_rate"] = 0.55,
+                        ["ever_drawn_game_count"] = 1000
+                    });
+                return new System.Text.Json.Nodes.JsonObject { ["data"] = rows }.ToJsonString();
+            }
+        }
+        catch (System.Text.Json.JsonException) { }
+        return json;
+    }
+
     private static HttpResponseMessage Json(string json) => new(HttpStatusCode.OK)
-        { Content = new StringContent(json, Encoding.UTF8, "application/json") };
+        { Content = new StringContent(Envelope(json), Encoding.UTF8, "application/json") };
     private sealed class Paths(string directory) : IApplicationDataPathProvider
     { public string GetApplicationDataDirectory() => directory; }
     private sealed class TestTime : TimeProvider

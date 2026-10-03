@@ -16,7 +16,11 @@ public sealed class SeventeenLandsCardRatingsClient : ISeventeenLandsCardRatings
     private readonly Dictionary<string, SeventeenLandsRatingsResult> _memory = new(StringComparer.Ordinal);
     private readonly Dictionary<string, (DateTimeOffset RetryAt, SeventeenLandsRatingsResult Result)> _failures = new(StringComparer.Ordinal);
     private DateTimeOffset _retryAfter;
-    private const int CacheSchemaVersion = 2;
+    private const int CacheSchemaVersion = 3;
+    private const string SourceEndpoint = "/api/card_data";
+    private const string TimePeriod = "ALL_TIME";
+    // A conservative sanity floor for whole draft environments, not an expected set size.
+    private const int MinimumDatasetRows = 20;
     public static TimeSpan CacheTtl { get; } = TimeSpan.FromHours(24);
 
     public SeventeenLandsCardRatingsClient(HttpClient http, IApplicationDataPathProvider paths,
@@ -35,7 +39,7 @@ public sealed class SeventeenLandsCardRatingsClient : ISeventeenLandsCardRatings
             throw new ArgumentException("Invalid expansion code.", nameof(expansion));
         if (!Enum.IsDefined(format)) throw new ArgumentOutOfRangeException(nameof(format));
         expansion = expansion.ToUpperInvariant();
-        var key = $"{expansion}_{format}";
+        var key = $"{expansion}_{format}_{TimePeriod}_v{CacheSchemaVersion}";
         await _gate.WaitAsync(cancellationToken).ConfigureAwait(false);
         try
         {
@@ -54,8 +58,8 @@ public sealed class SeventeenLandsCardRatingsClient : ISeventeenLandsCardRatings
             try
             {
                 using var request = new HttpRequestMessage(HttpMethod.Get,
-                    $"https://www.17lands.com/card_ratings/data?expansion={expansion}&format={format}");
-                request.Headers.UserAgent.ParseAdd("DraftTG/0.7 (Limited statistics; cached for 24 hours)");
+                    $"https://www.17lands.com{SourceEndpoint}?expansion={expansion}&event_type={format}&time_period={TimePeriod}");
+                request.Headers.UserAgent.ParseAdd("DraftTG/0.8.1 (Limited statistics; whole-environment data cached for 24 hours)");
                 request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 using var response = await _http.SendAsync(request, HttpCompletionOption.ResponseHeadersRead,
                     cancellationToken).ConfigureAwait(false);
@@ -70,17 +74,19 @@ public sealed class SeventeenLandsCardRatingsClient : ISeventeenLandsCardRatings
                 // Some unversioned endpoints mislabel JSON as text/html. Validate the body;
                 // real HTML still fails JSON decoding and never replaces valid cached data.
                 await using var stream = await response.Content.ReadAsStreamAsync(cancellationToken).ConfigureAwait(false);
-                var rows = await JsonSerializer.DeserializeAsync<SeventeenLandsCardRatingDto[]>(stream,
+                var payload = await JsonSerializer.DeserializeAsync<SeventeenLandsApiCardDataDto>(stream,
                     cancellationToken: cancellationToken).ConfigureAwait(false);
-                var validated = Validate(rows);
+                var validated = Validate(payload?.Data);
+                CheckDataset(validated);
                 var timestamp = _time.GetUtcNow();
                 var result = new SeventeenLandsRatingsResult(expansion, format, validated,
-                    SeventeenLandsSource.Live, timestamp);
+                    SeventeenLandsSource.Live, timestamp, metadata: Metadata(validated.Length));
                 _memory[key] = result;
                 _failures.Remove(key);
                 try
                 {
-                    await WriteCacheAsync(key, new RatingsCache(CacheSchemaVersion, expansion, format, format, timestamp, rows!),
+                    await WriteCacheAsync(key, new RatingsCache(CacheSchemaVersion, SourceEndpoint, TimePeriod,
+                        expansion, format, format, timestamp, payload!),
                         cancellationToken).ConfigureAwait(false);
                 }
                 catch (Exception error) when (error is IOException or UnauthorizedAccessException)
@@ -93,7 +99,8 @@ public sealed class SeventeenLandsCardRatingsClient : ISeventeenLandsCardRatings
             catch (Exception error) when (error is HttpRequestException or IOException or JsonException or OperationCanceledException)
             {
                 var result = Failure(cached, expansion, format,
-                    error is JsonException ? "17Lands returned invalid statistics." : "17Lands refresh unavailable.");
+                    error is SuspiciousDatasetException ? error.Message
+                        : error is JsonException ? "17Lands returned invalid statistics." : "17Lands refresh unavailable.");
                 // Avoid repeated calls after failures, including callers outside the live coordinator.
                 _failures[key] = (_time.GetUtcNow() + TimeSpan.FromHours(1), result);
                 return result;
@@ -104,11 +111,13 @@ public sealed class SeventeenLandsCardRatingsClient : ISeventeenLandsCardRatings
 
     private static SeventeenLandsRatingsResult Result(SeventeenLandsRatingsResult value,
         SeventeenLandsSource source, string? diagnostic = null) =>
-        new(value.Expansion, value.Format, value.Rows, source, value.FetchedAt, diagnostic);
+        new(value.Expansion, value.Format, value.Rows, source, value.FetchedAt, diagnostic, value.Metadata);
+
+    private static SeventeenLandsDatasetMetadata Metadata(int rowCount) => new(SourceEndpoint, TimePeriod, rowCount);
 
     private static SeventeenLandsRatingsResult Failure(SeventeenLandsRatingsResult? cache,
         string expansion, SeventeenLandsFormat format, string diagnostic) => cache is null
-        ? new(expansion, format, [], SeventeenLandsSource.Unavailable, diagnostic: diagnostic)
+        ? new(expansion, format, [], SeventeenLandsSource.Unavailable, diagnostic: diagnostic, metadata: Metadata(0))
         : Result(cache, SeventeenLandsSource.StaleCache, diagnostic + " Using cached statistics.");
 
     private async Task<SeventeenLandsRatingsResult?> ReadCacheAsync(string key, string expansion,
@@ -120,9 +129,12 @@ public sealed class SeventeenLandsCardRatingsClient : ISeventeenLandsCardRatings
             var cache = await JsonSerializer.DeserializeAsync<RatingsCache>(stream,
                 cancellationToken: cancellationToken).ConfigureAwait(false);
             if (cache is null || cache.SchemaVersion != CacheSchemaVersion || cache.Expansion != expansion || cache.RequestedFormat != format
-                || cache.SourceFormat != format || cache.FetchedAt == default || cache.FetchedAt > now)
+                || cache.SourceFormat != format || cache.SourceEndpoint != SourceEndpoint || cache.TimePeriod != TimePeriod
+                || cache.FetchedAt == default || cache.FetchedAt > now)
                 return null;
-            return new(expansion, format, Validate(cache.Rows), SeventeenLandsSource.Cache, cache.FetchedAt);
+            var rows = Validate(cache.Payload?.Data);
+            CheckDataset(rows);
+            return new(expansion, format, rows, SeventeenLandsSource.Cache, cache.FetchedAt, metadata: Metadata(rows.Length));
         }
         catch (Exception error) when (error is IOException or UnauthorizedAccessException or JsonException)
         { return null; }
@@ -147,7 +159,7 @@ public sealed class SeventeenLandsCardRatingsClient : ISeventeenLandsCardRatings
         }
     }
 
-    private static SeventeenLandsRating[] Validate(SeventeenLandsCardRatingDto[]? rows)
+    private static SeventeenLandsRating[] Validate(SeventeenLandsApiCardDataRowDto[]? rows)
     {
         if (rows is null) throw new JsonException("Expected a ratings array.");
         var names = new HashSet<string>(StringComparer.Ordinal);
@@ -169,18 +181,36 @@ public sealed class SeventeenLandsCardRatingsClient : ISeventeenLandsCardRatings
         value is null || (double.IsFinite(value.Value) && value >= minimum && value <= 1);
     private static bool Positive(double? value) => value is null || (double.IsFinite(value.Value) && value > 0);
 
-    // Version 1 serialized a reduced DTO and discarded the true GIH fields.
+    private static void CheckDataset(SeventeenLandsRating[] rows)
+    {
+        if (rows.Length < MinimumDatasetRows)
+            throw new SuspiciousDatasetException($"17Lands card-data refresh rejected: suspicious dataset ({rows.Length} rows).");
+        if (!rows.Any(row => row.GameInHandWinRate is not null && row.GameInHandGameCount is > 0))
+            throw new SuspiciousDatasetException("17Lands card-data refresh rejected: no valid GIH samples.");
+    }
+
+    private sealed class SuspiciousDatasetException(string message) : JsonException(message);
+
+    // Versions 1/2 came from the legacy endpoint; only the current API envelope is compatible.
     private sealed record RatingsCache(
         [property: JsonRequired] int SchemaVersion,
+        [property: JsonRequired] string SourceEndpoint,
+        [property: JsonRequired] string TimePeriod,
         [property: JsonRequired] string Expansion,
         [property: JsonRequired] SeventeenLandsFormat RequestedFormat,
         [property: JsonRequired] SeventeenLandsFormat SourceFormat,
         [property: JsonRequired] DateTimeOffset FetchedAt,
-        [property: JsonRequired] SeventeenLandsCardRatingDto[] Rows);
+        [property: JsonRequired] SeventeenLandsApiCardDataDto Payload);
 }
 
+// The current API returns an envelope, not a bare ratings array.
+internal sealed record SeventeenLandsApiCardDataDto(
+    [property: JsonPropertyName("data"), JsonRequired] SeventeenLandsApiCardDataRowDto[] Data,
+    [property: JsonPropertyName("copyright")] string? Copyright,
+    [property: JsonPropertyName("notes")] string? Notes);
+
 // Overall rates/counts are retained in the DTO/cache independently; they never substitute for GIH.
-internal sealed record SeventeenLandsCardRatingDto(
+internal sealed record SeventeenLandsApiCardDataRowDto(
     [property: JsonPropertyName("name")] string Name,
     [property: JsonPropertyName("game_count")] int? GameCount,
     [property: JsonPropertyName("play_rate")] double? PlayRate,

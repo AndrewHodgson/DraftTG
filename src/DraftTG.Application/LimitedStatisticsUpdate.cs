@@ -31,6 +31,9 @@ public sealed class LimitedStatisticsUpdate
         Snapshot = snapshot;
         IsLoading = isLoading;
         Result = result;
+        Recommendation = !isLoading && snapshot is not null && result is not null
+            ? new StatisticalRecommendationEngine().Recommend(snapshot.CurrentPack, result.Catalog,
+                result.EnvironmentCatalog) : null;
         Cards = new ReadOnlyDictionary<CardIdentifier, LimitedCardStatisticsPresentation>(
             (snapshot?.CurrentPack.AvailableCardIdentifiers ?? []).Distinct().ToDictionary(id => id,
                 id => isLoading ? LimitedCardStatisticsPresentation.Loading
@@ -57,11 +60,14 @@ public sealed class LimitedStatisticsUpdate
             var source = context is null ? "unavailable" : $"17Lands {context.Format} / {context.Expansion}";
             CoverageText = $"GIH available: {available} / {rows.Length}\nGIH low sample: {low}\n"
                 + $"GIH unavailable: {rows.Length - available}\nALSA available: {alsa} / {rows.Length}\nSource: {source}";
+            if (!string.IsNullOrEmpty(result?.DatasetDiagnosticText))
+                CoverageText = result.DatasetDiagnosticText + "\n\nCurrent pack:\n" + CoverageText;
         }
     }
     public DraftSnapshot? Snapshot { get; }
     public bool IsLoading { get; }
     public LimitedStatisticsLoadResult? Result { get; }
+    public DraftRecommendation? Recommendation { get; }
     public IReadOnlyDictionary<CardIdentifier, LimitedCardStatisticsPresentation> Cards { get; }
     public string StatusText { get; }
     public string? Diagnostic { get; }

@@ -15,9 +15,12 @@
       <ItemsControl.ItemTemplate>
         <DataTemplate x:DataType="vm:CardBadgeViewModel">
           <Border Width="{Binding Width}" Height="42" Background="#E6171B22" CornerRadius="5"
-                  BorderBrush="#886D798B" BorderThickness="1" Padding="3,2">
+                  BorderBrush="{Binding BorderColor}" BorderThickness="1" Padding="3,2">
             <StackPanel Spacing="0">
-              <TextBlock Text="{Binding WinRate}" Foreground="#FFF8FAFD" FontSize="15" FontWeight="SemiBold" HorizontalAlignment="Center" />
+              <StackPanel Orientation="Horizontal" Spacing="3" HorizontalAlignment="Center">
+                <TextBlock Text="{Binding Rank}" Foreground="{Binding RankColor}" FontSize="10" FontWeight="SemiBold" VerticalAlignment="Center" />
+                <TextBlock Text="{Binding WinRate}" Foreground="#FFF8FAFD" FontSize="13" FontWeight="SemiBold" />
+              </StackPanel>
               <TextBlock Text="{Binding Secondary}" Foreground="#FFB9C6D8" FontSize="10" HorizontalAlignment="Center" />
             </StackPanel>
           </Border>

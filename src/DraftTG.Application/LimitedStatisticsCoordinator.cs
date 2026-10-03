@@ -56,7 +56,8 @@ public sealed class LimitedStatisticsCoordinator(LimitedStatisticsService servic
             }
             if (_loaded.TryGetValue(context, out var loaded))
             {
-                Publish(new(_snapshot, false, service.Map(loaded, _snapshot)));
+                // Scoring runs off the monitoring/UI thread, even for cached environments.
+                QueueLoadedUpdate(loaded);
                 return;
             }
             Publish(new(_snapshot, true, null));
@@ -78,7 +79,7 @@ public sealed class LimitedStatisticsCoordinator(LimitedStatisticsService servic
             {
                 if (_disposed || generation != _generation || cancellationToken.IsCancellationRequested) return;
                 _loaded[context] = loaded;
-                Publish(new(_snapshot, false, service.Map(loaded, _snapshot)));
+                QueueLoadedUpdate(loaded);
             }
         }
         catch (OperationCanceledException) when (cancellationToken.IsCancellationRequested) { }
@@ -92,9 +93,24 @@ public sealed class LimitedStatisticsCoordinator(LimitedStatisticsService servic
                             DraftTG.Data.SeventeenLandsSource.Unavailable,
                             diagnostic: "Limited statistics unavailable; draft tracking continues."));
                     _loaded[context] = failed;
-                    Publish(new(_snapshot, false, service.Map(failed, _snapshot)));
+                    QueueLoadedUpdate(failed);
                 }
         }
+    }
+
+    // Called under _gate. Capture both generation and snapshot; a late calculation must
+    // never publish a recommendation for a pack that has already advanced.
+    private void QueueLoadedUpdate(LoadedLimitedStatistics loaded)
+    {
+        var snapshot = _snapshot;
+        var generation = _generation;
+        _workers.Add(Task.Run(() =>
+        {
+            var update = new LimitedStatisticsUpdate(snapshot, false, service.Map(loaded, snapshot));
+            lock (_gate)
+                if (!_disposed && generation == _generation && ReferenceEquals(snapshot, _snapshot))
+                    Publish(update);
+        }));
     }
 
     private void Publish(LimitedStatisticsUpdate update) => _updates.Writer.TryWrite(update);

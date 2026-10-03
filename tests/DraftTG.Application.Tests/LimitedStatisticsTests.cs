@@ -67,17 +67,18 @@ public sealed class LimitedStatisticsTests
     [Theory]
     [InlineData(LimitedStatisticsFormat.QuickDraft)]
     [InlineData(LimitedStatisticsFormat.TraditionalDraft)]
-    public async Task EmptyExactFormatFallsBackToExplicitPremierSource(LimitedStatisticsFormat requested)
+    public async Task EmptyExactFormatNeverFallsBackToPremierSource(LimitedStatisticsFormat requested)
     {
         var card = Card("a", "Alpha");
         var client = new FakeClient((expansion, format, _) => Task.FromResult(Ratings(expansion, format,
             format == SeventeenLandsFormat.PremierDraft ? [new("Alpha", GameInHandWinRate: 0.6)] : [])));
         var result = await new LimitedStatisticsService(client, new([card]))
             .LoadAsync(Context with { Format = requested }, Snapshot(card));
-        Assert.True(result.IsFallback);
-        Assert.Equal(LimitedStatisticsFormat.PremierDraft, result.ActualSourceContext!.Format);
+        Assert.False(result.IsFallback);
+        Assert.Equal(LimitedStatisticsSource.Unavailable, result.Source);
+        Assert.Null(result.ActualSourceContext);
         Assert.Equal(requested, result.RequestedContext.Format);
-        Assert.Equal([LimitedStatisticsService.ProviderFormat(requested), SeventeenLandsFormat.PremierDraft],
+        Assert.Equal([LimitedStatisticsService.ProviderFormat(requested)],
             client.Requests.Select(request => request.Format));
     }
 
@@ -169,7 +170,7 @@ public sealed class LimitedStatisticsTests
             var context = service.Resolve(final);
             Assert.Equal(Context, context);
             var result = await service.LoadAsync(context!, snapshot);
-            Assert.Equal(SeventeenLandsFormat.QuickDraft.ToString(), handler.Requests.Single().Query.Split("format=")[1]);
+            Assert.Equal(SeventeenLandsFormat.QuickDraft.ToString(), handler.Requests.Single().Query.Split("event_type=")[1].Split("&")[0]);
             Assert.Equal(10, result.Catalog.Count);
             Assert.Equal(names, snapshot.CurrentPack.AvailableCardIdentifiers.Select(id => data.Catalog.Find(id)!.Name));
             Assert.Equal(names, new LimitedStatisticsUpdate(snapshot, false, result).Cards.Keys.Select(id => data.Catalog.Find(id)!.Name));
@@ -442,7 +443,7 @@ public sealed class LimitedStatisticsTests
             Assert.Equal("\u2014", update.Cards[cards[4].Identifier].GameInHand);
             Assert.Equal("8.20", update.Cards[cards[4].Identifier].AverageLastSeen);
             Assert.False(update.Cards[cards[4].Identifier].IsLowSample);
-            Assert.Equal("GIH available: 4 / 6\nGIH low sample: 2\nGIH unavailable: 2\nALSA available: 5 / 6\nSource: 17Lands QuickDraft / HOB", update.CoverageText);
+            Assert.EndsWith("GIH available: 4 / 6\nGIH low sample: 2\nGIH unavailable: 2\nALSA available: 5 / 6\nSource: 17Lands QuickDraft / HOB", update.CoverageText, StringComparison.Ordinal);
             Assert.Empty(new LimitedStatisticsUpdate(snapshot, true, null).CoverageText);
         }
         finally { if (Directory.Exists(directory)) Directory.Delete(directory, true); }
@@ -470,13 +471,26 @@ public sealed class LimitedStatisticsTests
                 new(cards.Select(ArenaCardIdentifier.Create))), new([]));
         return new(state, new ArenaDraftSnapshotAdapter(new(data)).Convert(state));
     }
+    private static string ApiEnvelope(string json)
+    {
+        var rows = System.Text.Json.Nodes.JsonNode.Parse(json)!.AsArray();
+        while (rows.Count < 20)
+            rows.Add(new System.Text.Json.Nodes.JsonObject
+            {
+                ["name"] = $"Fixture padding {rows.Count}",
+                ["ever_drawn_win_rate"] = 0.55,
+                ["ever_drawn_game_count"] = 1000
+            });
+        return new System.Text.Json.Nodes.JsonObject { ["data"] = rows }.ToJsonString();
+    }
+
     private sealed class RatingsHandler(string json) : HttpMessageHandler
     {
         public List<Uri> Requests { get; } = [];
         protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
             Requests.Add(request.RequestUri!);
-            return Task.FromResult(new HttpResponseMessage(HttpStatusCode.OK) { Content = new StringContent(json, Encoding.UTF8, "application/json") });
+            return Task.FromResult(new HttpResponseMessage(HttpStatusCode.OK) { Content = new StringContent(ApiEnvelope(json), Encoding.UTF8, "application/json") });
         }
     }
     private sealed class Paths(string directory) : IApplicationDataPathProvider

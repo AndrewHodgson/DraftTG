@@ -1,6 +1,7 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using DraftTG.Application;
+using DraftTG.RecommendationEngine;
 
 namespace DraftTG.App;
 
@@ -15,7 +16,12 @@ public sealed class CardBadgeViewModel(int index, CurrentPackCardViewModel card)
     public int Index { get; } = index;
     public string Name { get; } = card.Name;
     private LimitedCardStatisticsPresentation _statistics = card.Statistics;
+    private CardRecommendation? _recommendation = card.Recommendation;
     public string WinRate => _statistics.GameInHand + (_statistics.IsLowSample ? "*" : "");
+    public string Rank => _recommendation?.StatisticalRank is { } rank ? $"#{rank}" : string.Empty;
+    public bool IsStatisticalPick => _recommendation?.IsTopStatisticalCandidate == true;
+    public string BorderColor => IsStatisticalPick ? "#FFE2BE64" : "#886D798B";
+    public string RankColor => IsStatisticalPick ? "#FFFFD57D" : "#FFB9C6D8";
     public string Secondary => "ALSA " + _statistics.AverageLastSeen;
     public string Detail => $"{Name} · {_statistics.Summary}";
     public double X { get; private set; }
@@ -24,7 +30,9 @@ public sealed class CardBadgeViewModel(int index, CurrentPackCardViewModel card)
     public void UpdateStatistics(CurrentPackCardViewModel row)
     {
         _statistics = row.Statistics;
+        _recommendation = row.Recommendation;
         Notify(nameof(WinRate)); Notify(nameof(Secondary)); Notify(nameof(Detail));
+        Notify(nameof(Rank)); Notify(nameof(IsStatisticalPick)); Notify(nameof(BorderColor)); Notify(nameof(RankColor));
     }
     public void Place(CardSlot slot, double width, double height)
     {

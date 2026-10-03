@@ -8,6 +8,26 @@ public sealed record LimitedStatisticsMappingResult(LimitedCardStatisticsCatalog
 
 public static class LimitedStatisticsMapper
 {
+    /// <summary>One entry per exact source name, independent of current pack/history.
+    /// A deterministic known printing is only a representative for baseline aggregation;
+    /// pack identity continues to come exclusively from the Arena/Scryfall resolver.</summary>
+    public static LimitedCardStatisticsCatalog MapEnvironment(IEnumerable<SeventeenLandsRating> rows,
+        CardCatalog catalog, LimitedStatisticsContext context)
+    {
+        var mapped = new List<LimitedCardStatistics>();
+        foreach (var group in rows.GroupBy(row => row.Name, StringComparer.Ordinal))
+        {
+            var evidence = group.Distinct().ToArray();
+            if (evidence.Length != 1) continue;
+            var representative = catalog.FindByExactName(group.Key)
+                .OrderByDescending(card => string.Equals(card.SetCode.Value, context.Expansion,
+                    StringComparison.OrdinalIgnoreCase))
+                .ThenBy(card => card.Identifier.Value, StringComparer.Ordinal).FirstOrDefault();
+            if (representative is not null) mapped.Add(Attach(representative.Identifier, evidence[0]));
+        }
+        return new(mapped);
+    }
+
     public static LimitedStatisticsMappingResult Map(IEnumerable<SeventeenLandsRating> rows,
         CardCatalog catalog, LimitedStatisticsContext context, DraftSnapshot? snapshot)
     {

@@ -4,12 +4,14 @@ using System.Runtime.CompilerServices;
 using DraftTG.Application;
 using DraftTG.ArenaIntegration;
 using DraftTG.Domain;
+using DraftTG.RecommendationEngine;
 
 namespace DraftTG.App;
 
 public sealed record CurrentPackCardViewModel(string Name, string Rarity, string Colors)
 {
     public LimitedCardStatisticsPresentation Statistics { get; init; } = LimitedCardStatisticsPresentation.Missing;
+    public CardRecommendation? Recommendation { get; init; }
 }
 
 public sealed record DraftedCardViewModel(string Position, string Name);
@@ -23,6 +25,7 @@ public sealed class MainWindowViewModel : INotifyPropertyChanged, IAsyncDisposab
     private DraftSnapshot? _currentSnapshot;
     private string _statisticsStatusText = string.Empty;
     private string _statisticsCoverageText = string.Empty;
+    private string _recommendationStatusText = string.Empty;
     private string _statisticsDiagnosticText = string.Empty;
     private bool _statisticsEnabled;
     private Task? _runTask;
@@ -62,6 +65,12 @@ public sealed class MainWindowViewModel : INotifyPropertyChanged, IAsyncDisposab
     {
         get => _statisticsCoverageText;
         private set => SetField(ref _statisticsCoverageText, value);
+    }
+
+    public string RecommendationStatusText
+    {
+        get => _recommendationStatusText;
+        private set => SetField(ref _recommendationStatusText, value);
     }
 
     public string StatisticsDiagnosticText
@@ -246,12 +255,16 @@ public sealed class MainWindowViewModel : INotifyPropertyChanged, IAsyncDisposab
         StatisticsDiagnosticText = update.Diagnostic ?? string.Empty;
         StatisticsCoverageText = update.CoverageText;
         if (_currentSnapshot is null) return;
+        var topName = update.Recommendation?.TopRecommendedPackIndex is { } top
+            ? CurrentPackCards[top].Name : null;
+        RecommendationStatusText = RecommendationPresentation.Summary(update.Recommendation, topName, update.IsLoading);
         for (var index = 0; index < CurrentPackCards.Count; index++)
         {
             var id = _currentSnapshot.CurrentPack.AvailableCardIdentifiers[index];
             CurrentPackCards[index] = CurrentPackCards[index] with
             {
-                Statistics = update.Cards.GetValueOrDefault(id) ?? LimitedCardStatisticsPresentation.Missing
+                Statistics = update.Cards.GetValueOrDefault(id) ?? LimitedCardStatisticsPresentation.Missing,
+                Recommendation = update.Recommendation?.Cards[index]
             };
         }
         PackPresentationChanged?.Invoke(false);
@@ -363,6 +376,7 @@ public sealed class MainWindowViewModel : INotifyPropertyChanged, IAsyncDisposab
         StatisticsStatusText = _statisticsEnabled ? "Stats: loading…" : "Stats: unavailable";
         StatisticsDiagnosticText = string.Empty;
         StatisticsCoverageText = string.Empty;
+        RecommendationStatusText = RecommendationPresentation.Summary(null, null, _statisticsEnabled);
         CurrentPackCards.Clear();
         DraftedCards.Clear();
         var missingIdentifiers = new List<string>();
@@ -429,6 +443,7 @@ public sealed class MainWindowViewModel : INotifyPropertyChanged, IAsyncDisposab
         StatisticsStatusText = string.Empty;
         StatisticsDiagnosticText = string.Empty;
         StatisticsCoverageText = string.Empty;
+        RecommendationStatusText = string.Empty;
         CurrentPackCards.Clear();
         IsCurrentPackVisible = false;
         IsWaitingForPackVisible = false;

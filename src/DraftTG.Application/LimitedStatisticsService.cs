@@ -15,10 +15,14 @@ public sealed record LimitedStatisticsLoadResult(
     string? Diagnostic)
 {
     public bool IsFallback => ActualSourceContext is { } actual && actual.Format != RequestedContext.Format;
+    // An absent environment must not silently become a pack/history-derived baseline.
+    public LimitedCardStatisticsCatalog EnvironmentCatalog { get; init; } = new();
+    public string DatasetDiagnosticText { get; init; } = string.Empty;
 }
 
 internal sealed record LoadedLimitedStatistics(LimitedStatisticsContext Requested,
-    LimitedStatisticsContext Actual, SeventeenLandsRatingsResult Ratings);
+    LimitedStatisticsContext Actual, SeventeenLandsRatingsResult Ratings,
+    LimitedCardStatisticsCatalog? EnvironmentCatalog = null);
 
 public sealed class LimitedStatisticsService(ISeventeenLandsCardRatingsClient client, CardCatalog catalog)
 {
@@ -46,19 +50,13 @@ public sealed class LimitedStatisticsService(ISeventeenLandsCardRatingsClient cl
     {
         var exact = await client.LoadAsync(context.Expansion, ProviderFormat(context.Format),
             cancellationToken: cancellationToken).ConfigureAwait(false);
-        // Only a successful empty dataset proves absence. Network/provider errors do not trigger fallback.
-        if (exact.Source is SeventeenLandsSource.Live or SeventeenLandsSource.Cache
-            && exact.Rows.Count == 0 && context.Format != LimitedStatisticsFormat.PremierDraft)
-        {
-            var fallback = await client.LoadAsync(context.Expansion, SeventeenLandsFormat.PremierDraft,
-                cancellationToken: cancellationToken).ConfigureAwait(false);
-            if (fallback.Rows.Count > 0)
-                return new(context, context with { Format = LimitedStatisticsFormat.PremierDraft }, fallback);
-            return new(context, context, new(exact.Expansion, exact.Format, [], exact.Source,
-                exact.FetchedAt, fallback.Diagnostic ?? "No ratings for this environment."));
-        }
-        return new(context, context, exact);
+        // An empty or sparse exact-format result is never evidence for another format.
+        return Prepare(context, context, exact);
     }
+
+    private LoadedLimitedStatistics Prepare(LimitedStatisticsContext requested, LimitedStatisticsContext actual,
+        SeventeenLandsRatingsResult ratings) => new(requested, actual, ratings,
+            LimitedStatisticsMapper.MapEnvironment(ratings.Rows, catalog, actual));
 
     internal LimitedStatisticsLoadResult Map(LoadedLimitedStatistics loaded, DraftSnapshot? snapshot)
     {
@@ -77,6 +75,10 @@ public sealed class LimitedStatisticsService(ISeventeenLandsCardRatingsClient cl
         var diagnostic = string.Join(" ", new[] { loaded.Ratings.Diagnostic, mapping.Diagnostic }
             .Where(message => !string.IsNullOrEmpty(message)));
         return new(loaded.Requested, source == LimitedStatisticsSource.Unavailable ? null : loaded.Actual,
-            mapping.Catalog, source, loaded.Ratings.FetchedAt, diagnostic.Length == 0 ? null : diagnostic);
+            mapping.Catalog, source, loaded.Ratings.FetchedAt, diagnostic.Length == 0 ? null : diagnostic)
+        {
+            EnvironmentCatalog = loaded.EnvironmentCatalog ?? new(),
+            DatasetDiagnosticText = loaded.Ratings.DatasetDiagnosticText
+        };
     }
 }

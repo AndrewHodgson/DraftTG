@@ -21,4 +21,7 @@
   <ItemGroup>
     <None Include="../Fixtures/17lands-phase7-5.json" Link="Fixtures/17lands-phase7-5.json" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="../Fixtures/17lands-api-card-data.json" Link="Fixtures/17lands-api-card-data.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
 </Project>

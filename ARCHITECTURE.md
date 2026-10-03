@@ -206,7 +206,7 @@ DraftTG UI — one OverlayDesktopSession / MainWindowViewModel runtime owner
 
 The 52-DIP rail starts near the working-area left edge and remains interactive. Its explicit pointer-press grip calls Avalonia `BeginMoveDrag`, rather than relying on title-bar role hints. Buttons open status/diagnostics, toggle statistics, open drafted history, open calibration, or close DraftTG. Flyouts are temporary, dismissible, and replace one another. Routine warnings are a small `!`; details appear only inside the flyout. Fatal runtime/startup errors open status once. There is no general settings system.
 
-The badge window has no opaque root panel, normal chrome, or taskbar entry. Normal mode draws only small rounded, translucent dark badges with GIH WR, ALSA, and a subtle low-sample asterisk. Names and numbered slot guides are shown only during calibration. Missing values use `—`, loading uses `…`. Pack order and duplicate copies are preserved; between-pick and unsupported/unavailable pack states remove all badges. Statistics visibility does not stop monitoring. No ranking or suggested-pick styling exists.
+The badge window has no opaque root panel, normal chrome, or taskbar entry. Normal mode draws only small rounded, translucent dark badges with GIH WR, ALSA, and a subtle low-sample asterisk. Names and numbered slot guides are shown only during calibration. Missing values use `—`, loading uses `…`. Pack order and duplicate copies are preserved; between-pick and unsupported/unavailable pack states remove all badges. Statistics visibility does not stop monitoring. Phase 8 adds occurrence ranks alongside raw GIH and a restrained gold border/rank color for the Stats Pick, without changing the badge dimensions or native interaction policy.
 
 ### Normalized layout and manual calibration
 
@@ -255,7 +255,7 @@ From the repository root:
 dotnet run --project src/DraftTG.App
 ```
 
-Detailed Logs must be enabled in Arena. Automatic Arena-window following, persisted rail placement, card images, application packaging/signing, and Phase 8 scoring remain deferred.
+Detailed Logs must be enabled in Arena. Automatic Arena-window following, persisted rail placement, card images, application packaging/signing, and Phase 9 contextual scoring remain deferred.
 
 ## Concurrency Ownership
 
@@ -289,16 +289,16 @@ Application exact-name / draft-participant mapping
         ↓
 LimitedCardStatisticsCatalog
         ↓
-Application presentation → Overlay / future Recommendation Engine
+Recommendation Engine → Application update → Overlay
 ```
 
 ### Statistical values and provider boundary
 
-`LimitedCardStatistics` is an immutable record keyed by Domain `CardIdentifier`. Nullable metrics preserve absent data: sample/game count, play rate, Game-in-Hand win rate, Opening-Hand win rate, drawn win rate, drawn improvement, average last seen (ALSA), and average taken (ATA). Rates remain fractions (0.5874 internally displays as 58.7%). Drawn improvement is a signed rate difference and may be negative. `LimitedCardStatisticsCatalog` copies and freezes identity lookups, rejecting duplicate keys. `LimitedStatisticsContext` records expansion and the provider-neutral `PremierDraft`, `TraditionalDraft`, or `QuickDraft` format. No ranking API exists.
+`LimitedCardStatistics` is an immutable record keyed by Domain `CardIdentifier`. Nullable metrics preserve absent data: sample/game count, play rate, Game-in-Hand win rate, Opening-Hand win rate, drawn win rate, drawn improvement, average last seen (ALSA), and average taken (ATA). Rates remain fractions (0.5874 internally displays as 58.7%). Drawn improvement is a signed rate difference and may be negative. `LimitedCardStatisticsCatalog` copies and freezes identity lookups, rejecting duplicate keys. `LimitedStatisticsContext` records expansion and the provider-neutral `PremierDraft`, `TraditionalDraft`, or `QuickDraft` format. Phase 8 adds the pure statistical ranking API described below.
 
-`SeventeenLandsCardRatingsClient` isolates the community-accessible, undocumented `https://www.17lands.com/card_ratings/data` endpoint. It uses `HttpClient` and `System.Text.Json` with `expansion` and `format` query parameters, `Accept: application/json`, and `User-Agent: DraftTG/0.7 (Limited statistics; cached for 24 hours)`. It requests the complete environment once, never individual cards. Its internal `SeventeenLandsCardRatingDto` decodes `name`, `game_count`, `play_rate`, `win_rate`, `ever_drawn_win_rate`, `ever_drawn_game_count`, `opening_hand_win_rate`, `opening_hand_game_count`, `drawn_win_rate`, `drawn_game_count`, `drawn_improvement_win_rate`, `avg_seen`, and `avg_pick` independently; unknown properties are ignored. Only the exact name is required. The wire DTO never leaves Data: Application receives immutable, validated `SeventeenLandsRating` boundary values with names rather than invented Domain IDs.
+`SeventeenLandsCardRatingsClient` uses the current `https://www.17lands.com/api/card_data` endpoint. The legacy `/card_ratings/data` endpoint is no longer a production source; `/card_data` is a UI page, not the data API. Requests use `HttpClient` and `System.Text.Json` with `expansion`, `event_type`, and `time_period=ALL_TIME`, `Accept: application/json`, and `User-Agent: DraftTG/0.8.1 (Limited statistics; whole-environment data cached for 24 hours)`. It requests the whole environment once, never individual cards. The inspected response is an object with `copyright`, `notes`, and a required `data` array; `SeventeenLandsApiCardDataDto` models this envelope inside Data. Its internal `SeventeenLandsApiCardDataRowDto` decodes `name`, `game_count`, `play_rate`, `win_rate`, `ever_drawn_win_rate`, `ever_drawn_game_count`, `opening_hand_win_rate`, `opening_hand_game_count`, `drawn_win_rate`, `drawn_game_count`, `drawn_improvement_win_rate`, `avg_seen`, and `avg_pick` independently; unknown properties are ignored. Only the exact name is required. The wire DTO never leaves Data: Application receives immutable, validated `SeventeenLandsRating` boundary values with names rather than invented Domain IDs.
 
-Phase 7.5 corrects GIH WR to use `ever_drawn_win_rate` and its explicit `GameInHandGameCount` sample to use `ever_drawn_game_count`. Overall `win_rate`/`game_count` remain separately parsed and retained inside Data and its cache; they never substitute for missing GIH. Cache schema 2 rejects unversioned Phase 7 caches because the old DTO discarded the true GIH fields; incompatible caches are never used even after a failed refresh. Probability values must be finite within [0, 1], signed improvement within [-1, 1], counts nonnegative, and ALSA/ATA finite and positive. Null metrics remain null. Invalid rows, duplicate names, malformed arrays/JSON, and non-JSON bodies reject the response without replacing a usable cache. The body is validated as JSON even when the server incorrectly labels it `text/html`; real HTML is rejected by JSON decoding. HTTP errors and timeouts are nonfatal. Cancellation propagates normally. There are no automatic retries or polling: 429 establishes a client-wide cooldown using either form of `Retry-After` (one hour if absent, at least one minute if expired). Other failures have a one-hour per-environment in-memory cooldown; forced refresh can bypass that cooldown but never 429. The runtime uses a 30-second HTTP timeout.
+Phase 7.5 corrects GIH WR to use `ever_drawn_win_rate` and its explicit `GameInHandGameCount` sample to use `ever_drawn_game_count`. Overall `win_rate`/`game_count` remain separately parsed and retained inside Data and its cache; they never substitute for missing GIH. Phase 8.1 cache schema 3 additionally rejects all legacy-endpoint data, including schema 2. Expansion, exact event type, ALL_TIME period, source endpoint, and schema/source version are part of cache identity. Incompatible caches are never used even after a failed refresh. Probability values must be finite within [0, 1], signed improvement within [-1, 1], counts nonnegative, and ALSA/ATA finite and positive. Null metrics remain null. Invalid rows, duplicate names, malformed arrays/JSON, and non-JSON bodies reject the response without replacing a usable cache. The body is validated as JSON even when the server incorrectly labels it `text/html`; real HTML is rejected by JSON decoding. HTTP errors and timeouts are nonfatal. Cancellation propagates normally. There are no automatic retries or polling: 429 establishes a client-wide cooldown using either form of `Retry-After` (one hour if absent, at least one minute if expired). Other failures have a one-hour per-environment in-memory cooldown; forced refresh can bypass that cooldown but never 429. The runtime uses a 30-second HTTP timeout.
 
 ### Cache and offline behavior
 
@@ -307,7 +307,7 @@ Cache roots:
 - Windows: `%LOCALAPPDATA%\DraftTG\limited-data\17lands\`
 - macOS: `~/Library/Application Support/DraftTG/limited-data/17lands/`
 
-Filenames are deterministic, such as `HOB_QuickDraft.json`. Expansion components are restricted to 2–8 ASCII letters/digits and normalized uppercase; formats are validated enum values. Each JSON document includes expansion, required requested/source formats, fetch timestamp, and provider rows. All metadata and rows are validated on read, including rejection of future timestamps. Successful empty datasets are also cached. Writes stage a unique local temporary file and atomically replace the destination after serialization. Failed refreshes never overwrite good data.
+Filenames are deterministic, such as `HOB_QuickDraft_ALL_TIME_v3.json`; old legacy filenames are not read and require no manual deletion. Expansion components are restricted to 2–8 ASCII letters/digits and normalized uppercase; formats are validated enum values. Each JSON document includes required schema version, source endpoint, time period, expansion, requested/source formats, fetch timestamp, and the current API envelope. All metadata and rows are validated on read, including rejection of future timestamps. Empty or suspiciously small/no-GIH datasets are rejected, never cached, and cannot overwrite a usable cache. Writes stage a unique local temporary file and atomically replace the destination after serialization. Failed refreshes never overwrite good data.
 
 The default TTL is **24 hours**. A fresh disk or memory cache avoids HTTP entirely. An expired but valid cache remains available offline when refresh fails, marked `StaleCache` with its original timestamp and a diagnostic. With no usable data, statistics are unavailable while Arena tracking, card names, and history continue. Concurrent client loads are serialized and recheck cache, preventing duplicate requests in one runtime. This is a single-application cache, not a cross-process locking system. Failure/429 cooldowns are in memory and reset when the app restarts.
 
@@ -315,7 +315,7 @@ The default TTL is **24 hours**. A fresh disk or memory cache avoids HTTP entire
 
 Recognized event names have the exact form `QuickDraft_SET`, `PremierDraft_SET`, `TraditionalDraft_SET`, or `TradDraft_SET`, optionally followed by `_YYYYMMDD` (eight digits). SET is 2–8 uppercase ASCII letters/digits. For example, `QuickDraft_HOB_20260915` resolves to HOB. If the event name is unrecognized, fallback requires a nonempty current pack whose **every** identity resolves and whose set codes unanimously agree after uppercase normalization. Mixed-set or incomplete evidence cannot infer an expansion. A known environment is retained across the temporary gap between packs within the same session. Unknown expansion or unsupported mode causes a nonfatal unavailable state.
 
-Quick maps to `QuickDraft`; Premier to `PremierDraft`; Traditional to provider `TradDraft`. Exact format is always requested first. Only a successful empty exact dataset permits one fallback to Premier; transport or validation failure does not imply that the format lacks data. Premier never falls back further. `LimitedStatisticsLoadResult` preserves requested context, actual source context, catalog, Live/Cache/StaleCache/Unavailable status, timestamp, diagnostic, and an explicit `IsFallback` flag. Format fallback and stale-cache status can coexist without losing either fact.
+Quick maps to `event_type=QuickDraft`; Premier to `event_type=PremierDraft`; Traditional to `event_type=TradDraft`. The exact requested event type is the only format fetched. Phase 8.1 removes the old empty-dataset Premier fallback; no sparse or empty Quick/Traditional response causes a different format request. `LimitedStatisticsLoadResult` preserves requested/actual context, catalog, source status, timestamp, diagnostic, and dataset diagnostic text. The generic `IsFallback` presentation field remains for compatibility but production no longer creates format-fallback results. Stale cache is allowed only for the same endpoint, expansion, event type, period and schema.
 
 Phase 7.1 live mapping starts from the exact identities already resolved by Arena/Scryfall:
 
@@ -341,13 +341,13 @@ A direct mapper call without a snapshot retains conservative standalone mapping 
 
 The separate `LimitedStatisticsCoordinator` reacts to draft updates; the existing sequential `DraftSessionCoordinator` contains no ratings I/O. Pack rendering precedes statistics observation. A background worker loads each environment once during a session, while pack/pick changes reuse loaded data and perform local lookups. New session/context generations cancel pending work and disregard late completions deterministically. UI-ready updates carry their snapshot identity so queued results cannot overwrite a different pack. The bounded stream keeps only the latest presentation update. Shutdown cancels workers, waits for completion, and disposes the owned HTTP client.
 
-Each row retains name, rarity, colors, and Arena ordering/duplicates. Secondary text shows GIH to one decimal, ALSA to two decimals, and `n=4,820` sample count when known. GIH sample counts below 500 display `Low sample`; this is presentation only and changes no raw values. Loading uses `…`; unavailable/missing values use `—`. The source label identifies the actual format, including `Stats: Premier Draft (fallback)` and stale-cache status. The control rail status panel also reports current-pack GIH availability, low GIH samples, unavailable GIH, ALSA availability, and source format/expansion. Counts include duplicate pack slots and exclude drafted history. Low-sample counts can overlap unavailable GIH when a known sample is below 500; an unknown sample never implies low sample. Coverage is cleared while loading or between packs. Diagnostics remain separate from Arena errors. No scores, grades, tiers, sorting by win rate, strongest-card highlighting, or pick recommendations are produced.
+Each row retains name, rarity, colors, and Arena ordering/duplicates. Secondary text shows GIH to one decimal, ALSA to two decimals, and `n=4,820` sample count when known. GIH sample counts below 500 display `Low sample`; this is presentation only and changes no raw values. Loading uses `…`; unavailable/missing values use `—`. The source label identifies the exact requested format and stale-cache status; production no longer uses an automatic format substitute. The control rail status panel also reports current-pack GIH availability, low GIH samples, unavailable GIH, ALSA availability, and source format/expansion. Counts include duplicate pack slots and exclude drafted history. Low-sample counts can overlap unavailable GIH when a known sample is below 500; an unknown sample never implies low sample. Coverage is cleared while loading or between packs. Diagnostics remain separate from Arena errors. Phase 7 presentation preserves raw statistics; Phase 8 separately adds adjusted-value occurrence ranks and a Stats Pick. Pack order remains unchanged; no grades or tiers are assigned.
 
 ### Attribution, stability, and future work
 
 Limited statistics are sourced from [17Lands](https://www.17lands.com/). Its [official public datasets](https://www.17lands.com/public_datasets) are published under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) unless otherwise noted; this attribution does not assume a stability guarantee for the community-accessible ratings endpoint. Phase 7 does not download or recompute those large datasets. A future public-dataset adapter can produce the same provider-neutral catalog without changing Domain identity or scoring inputs.
 
-Endpoint stability, exact-format availability, sparse samples, and provider/Scryfall name differences remain limitations. Name normalization or fuzzy matching is deliberately absent. Phase 8 must design confidence-aware scoring explicitly; Phase 7 does not infer recommendations from GIH alone.
+Endpoint stability, exact-format availability, sparse samples, and provider/Scryfall name differences remain limitations. Name normalization or fuzzy matching is deliberately absent. Phase 8 uses the explicit sample-shrinkage model below. Phase 7 supplies raw statistics; Phase 9 contextual evaluation remains deferred.
 
 ### Phase 7 validation
 
@@ -366,3 +366,62 @@ Phase 7.1 fixtures use synthetic provider values for those names and multiple gl
 ### Phase 7.2 verification
 
 Layout, calibration persistence/rejection, atomic badge replacement, 14/12/1-card packs, between-pick clearing, in-place statistics changes, missing/low-sample values, flyout selection, rail warnings, explicit drag initiation, and fake native-controller mode transitions are covered without native-window automation. All previous 350 tests are retained. Physical Arena interaction and Windows testing are reported separately in PHASE7_2_REPORT.md; unit tests do not establish mouse passthrough to a real game window.
+
+
+## Phase 8 - Basic Statistical Recommendation Engine
+
+`StatisticalRecommendationEngine` depends only on Domain and provider-neutral statistics. It performs no I/O and has no UI, provider, Arena, filesystem, networking or operating-system dependencies. Its input is `DraftPack`, not `DraftSnapshot` or drafted history. It never selects or clicks an Arena card.
+
+### Exact model
+
+For the active environment `LimitedCardStatisticsCatalog`, valid entries have finite GIH WR `p_i` in [0, 1] and a positive GIH sample `n_i`:
+
+```text
+b = sum(p_i * n_i) / sum(n_i)
+s = (n * p + k * b) / (n + k)
+data weight = n / (n + k)
+k = PriorEquivalentGames = 500
+```
+
+The baseline is a GIH-sample-weighted environment mean, not 50% or an unweighted mean. `StatisticalRecommendationConfiguration` exposes `PriorEquivalentGames` and `ModelVersion` (`gih-shrinkage-v1`). The prior must be a positive integer. 500 is a transparent Phase 8 product/model configuration choice, not a claim of statistical optimality. Counts are converted to double before addition/multiplication where needed; nonfinite/out-of-range rates and nonpositive/unknown samples are excluded. With int-bounded counts and collection sizes, the weighted sums cannot overflow double.
+
+Only raw GIH and GIH sample contribute to the score. ALSA, ATA, play rate, OH WR, drawn WR, drawn improvement, colors, rarity, names, drafted history, curve, synergy and signals are not strength inputs. Raw GIH remains the badge percentage; adjusted values are internal ranking values. The low-sample asterisk independently retains the existing `n < 500` threshold.
+
+### Environment preparation and occurrence identity
+
+Application prepares a separate immutable environment statistics catalog once for each loaded response, before pack mapping. It retains one statistical entry per nonconflicting exact source name known to the Domain catalog. To avoid double weighting different printings, it chooses a deterministic representative identity (prefer actual source expansion, then ordinal identifier) solely for baseline aggregation. This representative does not resolve pack identity; Arena/Scryfall-resolved current-pack identifiers remain authoritative. Unknown source names and conflicting source evidence are excluded rather than assigned invented identities. This is a mapping-coverage limitation of the baseline. Pack copies and drafted history cannot alter the environment baseline.
+
+The live `LimitedStatisticsLoadResult` carries both participant statistics and `EnvironmentCatalog`. A missing environment defaults to an empty catalog and cannot silently use participant/history statistics for a baseline. The pure engine can also accept one full active catalog directly.
+
+`CardRecommendation` records original `PackIndex`, `CardIdentifier`, raw GIH/sample, nullable adjusted value and data weight, nullable statistical rank, top-candidate flag and scoring availability. `DraftRecommendation` retains an immutable list in Arena order, availability, top pack index, scored/total counts and coverage fraction, environment baseline/card count, and configuration metadata. Duplicate identifiers remain separate occurrences. Ranking uses adjusted value descending, then sample descending, then original index ascending; names play no role.
+
+Without a valid baseline: `NoEnvironmentBaseline`, no scores/ranks/pick. With fewer than two scored occurrences: `InsufficientComparableStatistics`, no comparative ranks or top pick; a sole valid card may retain its genuine adjusted value. With two or more: `ReadyCompleteCoverage` if all pack occurrences are scored, otherwise `ReadyPartialCoverage`. Unscored occurrences have null scores and ranks and are never assigned a fake bottom score/rank.
+
+### Async integration and presentation
+
+The existing flow now continues from Limited statistics into RecommendationEngine and an Application update. `LimitedStatisticsCoordinator.Observe` queues background mapping/scoring, including cached environments; it does not perform recommendation calculation on the UI/Arena-monitoring thread. Workers capture session generation and exact snapshot and drop results after pack or context changes. The ViewModel also rejects mismatched snapshots. New packs immediately clear previous ranks; loading statistics show no recommendation. Statistics responses produce new recommendation values; panel/visibility/calibration changes do not rerun the algorithm. Between packs and unsupported/completed states clear the recommendation UI.
+
+Badges remain 42 pixels high with the existing width/placement/calibration mapping and click-through behavior. A compact rank sits beside raw GIH, with ALSA on the second line. The #1 Stats Pick uses a restrained gold border and rank color. The rail status panel reports Stats Pick/name, `Rank model: GIH + sample shrinkage`, scored/total coverage, baseline, and explicit partial or unavailable status. No label claims a contextual Best Pick. Numeric adjusted values/data weights remain available through the immutable model for diagnostics, without expanding the normal overlay.
+
+Phase 8 ranks cards by baseline statistical performance only. Phase 9 will add contextual draft/pool-aware evaluation. No Phase 9 inference, pool fit, curve, synergy, signals, text analysis, deck construction, automation, OCR, image downloads or provider changes are implemented.
+
+Validation on Windows: solution build has zero warnings/errors and all tests pass (see PHASE8_REPORT.md). Live Arena badge alignment/focus/click-through has not been physically retested for Phase 8; no Arena/DraftTG process was running. macOS physical testing was unavailable. Existing Windows/macOS calibration and injected native-policy tests remain passing, and the new engine adds no platform-specific code.
+
+
+## Phase 8.1 - Current card-data API migration
+
+Production request:
+
+```text
+https://www.17lands.com/api/card_data?expansion=WOE&event_type=QuickDraft&time_period=ALL_TIME
+```
+
+The dedicated Data envelope requires `data` to be an array; bare legacy arrays, missing/null/incorrect data shapes and HTML bodies fail decoding. The live endpoint labels valid JSON `text/html`, so the body is validated independently of Content-Type. Provider-specific names and DTOs remain in Data. GIH still uses only `ever_drawn_win_rate` / `ever_drawn_game_count`; generic overall rate/count stay separate in the DTO/cache. ALSA, ATA and other displayed metrics retain their Phase 7.5 mappings. No generic WR, other event type or 50% fills missing GIH.
+
+Whole-environment sanity validation uses a named conservative floor of 20 rows (a heuristic, not a required exact card count), and requires at least one non-null valid GIH value with a positive GIH sample. Empty, fewer-than-20 and no-scorable-GIH datasets are suspicious. These checks apply both to fetched payloads and cache reads. A rejected refresh retains a compatible, valid stale cache and reports why; without one, statistics and recommendations are unavailable. Failed responses do not overwrite good cache data. Existing 24-hour TTL, one-hour failure cooldown, cancellation, concurrent request sharing and client-wide Retry-After handling remain unchanged. Forced refresh is explicit; there is no polling or per-card traffic.
+
+The status rail extends its existing pack coverage with expansion, requested provider event type, source endpoint, ALL_TIME period, usable provider row count, and network/fresh-cache/stale-cache/unavailable origin. Diagnostics are not added to badges. A failed load has zero usable provider rows; the rejection reason states suspicious observed row counts. A stale fallback reports the row count of the retained usable dataset.
+
+The Phase 8 engine and badge UI are byte-for-byte unchanged. Scoring remains `s = (n*p + 500*b)/(n+500)` with the sample-weighted environment baseline. The existing background pipeline recomputes ranks when the corrected dataset arrives and updates badge values in place without geometry changes or restart.
+
+One development-only WOE QuickDraft ALL_TIME fetch on 2026-10-03 returned 324 rows, 284 with GIH and 40 without it. Recorded-response replay through the production decoder verified every GIH/sample mapping and retained all rows, without another network request. Counts are diagnostic observations, not test expectations. Ordinary tests use synthetic current-shape envelopes and no live network. See PHASE8_1_REPORT.md for validation and limitations. Phase 9 remains unimplemented.

@@ -50,13 +50,17 @@ Correct the macOS Retina desktop/render-scale mismatch that rejected valid saves
 
 Phase 7.5 corrects GIH to the provider ever-drawn metric and sample, rejects incompatible statistics caches automatically, and adds current-pack coverage in the control rail. No recommendation logic is added.
 
-## Phase 8 — Recommendation Engine
+## Phase 8 - Basic Statistical Recommendation Engine (implemented)
 
-Rank available cards using explicit, testable inputs and scoring rules. Run calculations without blocking the UI.
+Rank scorable pack occurrences by adjusted historical GIH using a weighted environment baseline and sample shrinkage: `b = sum(p_i*n_i)/sum(n_i)`, `s = (n*p + 500*b)/(n+500)`. The prior-equivalent 500 games is a configurable product choice. Show raw GIH alongside occurrence rank, a subtle gold Stats Pick border, and explicit scored/total coverage and baseline in the control rail. Preserve Arena order, duplicate slots, geometry and passive interaction. Missing/invalid GIH or sample data is unscored; fewer than two scored cards or no baseline produces no top pick. Calculation runs on a background worker with stale-pack/context rejection. ALSA is display only. No pool-aware scoring or automatic Arena input. Physical Windows/macOS Phase 8 acceptance remains unverified; see PHASE8_REPORT.md.
 
-## Phase 9 — Archetype and Color Inference
+## Phase 8.1 - Current 17Lands Card Data API (implemented)
 
-Estimate the drafter's likely colors and archetypes from drafted cards and signals. Represent uncertainty rather than forcing premature conclusions.
+Use `/api/card_data` with `expansion`, exact `event_type` and `time_period=ALL_TIME`. Decode the current object envelope's `data` array using Data-only DTOs, preserve corrected GIH mappings, and automatically migrate to cache schema 3 with endpoint/format/period identity. Remove automatic Premier substitution. Reject empty, tiny and no-GIH datasets, preserving a valid same-source stale cache when available. Extend rail diagnostics with endpoint, period, row count and origin. Phase 8 scoring, badge UI and geometry are unchanged. Live WOE network validation succeeded; live Arena was not running. See PHASE8_1_REPORT.md.
+
+## Phase 9 - Contextual Draft Evaluation (not started)
+
+Add draft-context/pool-aware evaluation, including likely colors and archetypes from drafted cards and signals. Represent uncertainty rather than forcing premature conclusions. Phase 8 contains none of this contextual logic.
 
 ## Phase 10 — Recommendation Explanations
 

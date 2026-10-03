@@ -31,6 +31,7 @@ public sealed class LimitedCardStatisticsCatalog
     }
 
     public int Count => _statistics.Count;
+    public IEnumerable<LimitedCardStatistics> Entries => _statistics.Values;
     public LimitedCardStatistics? StatisticsFor(CardIdentifier identifier) =>
         _statistics.GetValueOrDefault(identifier);
 }

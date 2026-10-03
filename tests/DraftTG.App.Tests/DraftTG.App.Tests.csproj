@@ -22,4 +22,7 @@
     <Using Include="Xunit" />
     <EmbeddedResource Include="../../src/DraftTG.App/CardOverlayWindow.axaml" LogicalName="CardOverlayWindow.axaml" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="../Fixtures/17lands-api-card-data.json" Link="Fixtures/17lands-api-card-data.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
 </Project>
