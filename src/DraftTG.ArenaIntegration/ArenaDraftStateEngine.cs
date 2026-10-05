@@ -15,6 +15,9 @@ public sealed class ArenaDraftStateEngine
     private string? _eventName;
     private ArenaDraftPackState? _currentPack;
     private bool _hasExplicitStart;
+    private string? _entryRequestIdentifier;
+    private ArenaDraftPoolState? _recoveredPool;
+    private ArenaPickedCardsDiagnostic? _pickedCardsDiagnostic;
     private readonly SortedDictionary<ArenaDraftCoordinate, ArenaDraftPickRecord> _picks =
         new(CoordinateComparer);
     private readonly Dictionary<ArenaDraftCoordinate, ArenaDraftPackState> _presentedPacks = [];
@@ -31,6 +34,7 @@ public sealed class ArenaDraftStateEngine
             ArenaDraftLogEvent.DraftStarted started => ApplyDraftStart(started.Start),
             ArenaDraftLogEvent.PackPresented presented => ApplyPack(presented.Pack),
             ArenaDraftLogEvent.PickSubmitted submitted => ApplyPick(submitted.Pick),
+            ArenaDraftLogEvent.PickedCardsObserved observed => ApplyPickedCards(observed.Pool),
             ArenaDraftLogEvent.DraftCompleted completed => ApplyCompletion(completed.Completion),
             _ => throw new ArgumentOutOfRangeException(nameof(draftEvent))
         };
@@ -55,10 +59,12 @@ public sealed class ArenaDraftStateEngine
                 start.Mode,
                 start.EventName,
                 hasExplicitStart: true);
+            _entryRequestIdentifier = start.EntryRequestIdentifier;
             return true;
         }
 
-        if (IsClearlyDifferentStart(start))
+        if (IsClearlyDifferentStart(start) || _status == ArenaDraftSessionStatus.Completed
+            && start.EntryRequestIdentifier is not null && start.EntryRequestIdentifier != _entryRequestIdentifier)
         {
             BeginSession(
                 ArenaDraftSessionStatus.Active,
@@ -66,10 +72,16 @@ public sealed class ArenaDraftStateEngine
                 start.Mode,
                 start.EventName,
                 hasExplicitStart: true);
+            _entryRequestIdentifier = start.EntryRequestIdentifier;
             return true;
         }
 
         var changed = false;
+        if (_entryRequestIdentifier is null && start.EntryRequestIdentifier is not null)
+        {
+            _entryRequestIdentifier = start.EntryRequestIdentifier;
+            changed = true;
+        }
         if (_draftIdentifier is null && start.DraftIdentifier is not null)
         {
             _draftIdentifier = start.DraftIdentifier;
@@ -187,11 +199,24 @@ public sealed class ArenaDraftStateEngine
             changed = true;
         }
 
+        if (_recoveredPool is { } pool)
+        {
+            var covered = new ArenaCardMultiset(_picks.Values.Where(p => pool.CurrentCoordinate is null
+                || CoordinateComparer.Compare(p.Coordinate, pool.CurrentCoordinate) < 0).SelectMany(p => p.CardIdentifiers));
+            if (!pool.Cards.Contains(covered))
+                changed |= RejectPool(ArenaPickedCardsDiagnosticKind.ExactHistoryMismatch,
+                    "Known completed selections contradict the recovered PickedCards snapshot; exact history retained.");
+        }
+
         return changed;
     }
 
     private bool ApplyCompletion(ArenaDraftCompletion completion)
     {
+        // A late deck selection response cannot complete a different currently observed session.
+        if (completion.Origin == ArenaDraftCompletionOrigin.DeckSelection
+            && (HasConflictingDraftIdentifier(completion.DraftIdentifier)
+                || _eventName is not null && !string.Equals(_eventName, completion.EventName, StringComparison.Ordinal))) return false;
         var startsNewSession = HasConflictingDraftIdentifier(completion.DraftIdentifier);
         var changed = false;
 
@@ -200,10 +225,10 @@ public sealed class ArenaDraftStateEngine
             BeginSession(
                 ArenaDraftSessionStatus.Completed,
                 completion.DraftIdentifier,
-                mode: null,
+                completion.Mode,
                 completion.EventName,
                 hasExplicitStart: false);
-            return true;
+            changed = true;
         }
 
         if (_draftIdentifier is null && completion.DraftIdentifier is not null)
@@ -216,6 +241,11 @@ public sealed class ArenaDraftStateEngine
             _eventName = completion.EventName;
             changed = true;
         }
+        if (_mode is null && completion.Mode is not null)
+        {
+            _mode = completion.Mode;
+            changed = true;
+        }
         if (_status != ArenaDraftSessionStatus.Completed)
         {
             _status = ArenaDraftSessionStatus.Completed;
@@ -226,6 +256,74 @@ public sealed class ArenaDraftStateEngine
             _currentPack = null;
             changed = true;
         }
+        if (completion.Origin == ArenaDraftCompletionOrigin.DeckSelection && completion.FinalPickedCards is { } cards)
+            changed |= ApplyFinalPickedCards(cards);
+        return changed;
+    }
+
+    private bool ApplyFinalPickedCards(ArenaCardIdentifierList identifiers)
+    {
+        var incoming = new ArenaCardMultiset(identifiers);
+        var known = Current.DraftedPool;
+        var expected = ArenaQuickDraftCoordinates.PackCount * ArenaQuickDraftCoordinates.PicksPerPack;
+        if (_mode?.Kind != ArenaDraftModeKind.Quick || incoming.Count != expected || !incoming.Contains(known))
+            return RejectPool(ArenaPickedCardsDiagnosticKind.FinalPoolMismatch,
+                $"DeckSelect PickedCards mismatch: recovered/exact pool {known.Count}, completion pool {incoming.Count}, expected {expected}. "
+                + "Completion inventory does not agree with known drafted multiplicities; recovered/exact pool retained, not merged.");
+
+        // Prefer an already complete recovered/exact multiset. An agreeing response only confirms it.
+        var changed = _pickedCardsDiagnostic is not null;
+        _pickedCardsDiagnostic = null;
+        if (known.Count == expected) return changed;
+        // A full successful Quick Draft response can fill missing picks, but never removes known copies
+        // or assigns invented coordinates to previously unobserved selections.
+        _recoveredPool = new(null, incoming);
+        return true;
+    }
+
+    private bool ApplyPickedCards(ArenaPickedCardsSnapshot snapshot)
+    {
+        var changed = PrepareForFact(snapshot.DraftIdentifier, HasConflictingDraftIdentifier(snapshot.DraftIdentifier));
+        var coordinate = snapshot.CurrentCoordinate;
+        var cards = snapshot.Cards;
+        if (coordinate is not null && (!ArenaQuickDraftCoordinates.IsSupported(coordinate)
+            || cards.Count != ArenaQuickDraftCoordinates.CompletedPicksBefore(coordinate)))
+            return RejectPool(ArenaPickedCardsDiagnosticKind.UnexpectedCardCount,
+                "PickedCards count does not agree with the current Quick Draft coordinate; pool snapshot ignored.") || changed;
+
+        if (_recoveredPool?.CurrentCoordinate is { } previous && coordinate is not null
+            && CoordinateComparer.Compare(coordinate, previous) < 0)
+            return RejectPool(ArenaPickedCardsDiagnosticKind.BackwardCoordinate,
+                "PickedCards coordinate moved backwards without a session/source reset; pool snapshot ignored.") || changed;
+        if (_recoveredPool is { } baseline && !cards.Contains(baseline.Cards))
+            return RejectPool(ArenaPickedCardsDiagnosticKind.RemovedCards,
+                "PickedCards removed drafted occurrences without a session/source reset; pool snapshot ignored.") || changed;
+
+        var coveredExactPicks = new ArenaCardMultiset(_picks.Values.Where(p => coordinate is null
+                || CoordinateComparer.Compare(p.Coordinate, coordinate) < 0).SelectMany(p => p.CardIdentifiers));
+        if (!cards.Contains(coveredExactPicks))
+            return RejectPool(ArenaPickedCardsDiagnosticKind.ExactHistoryMismatch,
+                "PickedCards does not contain the known completed selections; pool snapshot ignored.") || changed;
+
+        // Only a consecutive coordinate and one added occurrence prove an exact selection.
+        // Explicit and inferred selections use the very same conflict/idempotence path.
+        if (_recoveredPool?.CurrentCoordinate is { } prior && coordinate is not null
+            && ArenaQuickDraftCoordinates.IsNext(prior, coordinate)
+            && cards.TryGetSingleAddition(_recoveredPool.Cards, out var added))
+            changed |= ApplyPick(new(snapshot.DraftIdentifier, prior, new([added!])));
+
+        var incoming = new ArenaDraftPoolState(coordinate, cards);
+        changed |= incoming != _recoveredPool || _pickedCardsDiagnostic is not null;
+        _recoveredPool = incoming;
+        _pickedCardsDiagnostic = null;
+        return changed;
+    }
+
+    private bool RejectPool(ArenaPickedCardsDiagnosticKind kind, string message)
+    {
+        var diagnostic = new ArenaPickedCardsDiagnostic(kind, message);
+        var changed = diagnostic != _pickedCardsDiagnostic;
+        _pickedCardsDiagnostic = diagnostic;
         return changed;
     }
 
@@ -294,6 +392,9 @@ public sealed class ArenaDraftStateEngine
         _eventName = null;
         _currentPack = null;
         _hasExplicitStart = false;
+        _entryRequestIdentifier = null;
+        _recoveredPool = null;
+        _pickedCardsDiagnostic = null;
         _picks.Clear();
         _presentedPacks.Clear();
     }
@@ -314,7 +415,8 @@ public sealed class ArenaDraftStateEngine
             _mode,
             _eventName,
             _currentPack,
-            new ArenaDraftPickRecordList(_picks.Values));
+            new ArenaDraftPickRecordList(_picks.Values))
+        { RecoveredPool = _recoveredPool, PickedCardsDiagnostic = _pickedCardsDiagnostic };
 
     private sealed class ArenaDraftCoordinateComparer : IComparer<ArenaDraftCoordinate>
     {

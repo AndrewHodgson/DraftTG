@@ -17,6 +17,9 @@ public sealed record LimitedStatisticsLoadResult(
     public bool IsFallback => ActualSourceContext is { } actual && actual.Format != RequestedContext.Format;
     // An absent environment must not silently become a pack/history-derived baseline.
     public LimitedCardStatisticsCatalog EnvironmentCatalog { get; init; } = new();
+    public CardCatalog CardCatalog { get; init; } = new();
+    public IReadOnlyDictionary<CardIdentifier, string> StatisticsResolvedNames { get; init; }
+        = System.Collections.Frozen.FrozenDictionary<CardIdentifier, string>.Empty;
     public string DatasetDiagnosticText { get; init; } = string.Empty;
 }
 
@@ -24,8 +27,63 @@ internal sealed record LoadedLimitedStatistics(LimitedStatisticsContext Requeste
     LimitedStatisticsContext Actual, SeventeenLandsRatingsResult Ratings,
     LimitedCardStatisticsCatalog? EnvironmentCatalog = null);
 
-public sealed class LimitedStatisticsService(ISeventeenLandsCardRatingsClient client, CardCatalog catalog)
+public sealed class LimitedStatisticsService(ISeventeenLandsCardRatingsClient client, CardCatalog catalog,
+    ISetArchetypeProfileCatalog? archetypeProfiles = null, ArchetypeConfiguration? archetypeConfiguration = null,
+    ISeventeenLandsPairRatingsClient? pairClient = null,
+    ISuccessfulDeckProvider? trophyProvider = null, TrophyRecommendationConfiguration? trophyConfiguration = null)
 {
+    private readonly ISetArchetypeProfileCatalog _archetypes = archetypeProfiles ?? SetArchetypeProfileCatalog.Default;
+    private readonly ISeventeenLandsPairRatingsClient? _pairClient = pairClient ?? client as ISeventeenLandsPairRatingsClient;
+    internal ArchetypeConfiguration ArchetypeConfiguration { get; } = archetypeConfiguration ?? new();
+    internal bool CanLoadPairStatistics => _pairClient is not null;
+    internal bool CanLoadTrophyEvidence => trophyProvider is not null;
+    internal TrophyRecommendationConfiguration TrophyConfiguration { get; } = trophyConfiguration ?? new();
+    internal async Task<SuccessfulDeckLoadResult> LoadTrophyAsync(SuccessfulDeckKey key, CancellationToken token)
+    {
+        var result = await trophyProvider!.LoadAsync(key, token).ConfigureAwait(false);
+        if (result.Key != key || (result.Corpus is not null && result.Corpus.Key != key)
+            || (result.Source == SuccessfulDeckSource.Unavailable) != (result.Corpus is null))
+            throw new InvalidDataException("Mismatched exact-format trophy evidence.");
+        return result;
+    }
+    internal CardCatalog CardCatalog => catalog;
+    internal async Task<LoadedArchetypeStatistics> LoadPairAsync(ArchetypeStatisticsKey key, CancellationToken token)
+    {
+        var ratings = await _pairClient!.LoadPairAsync(key.Context.Expansion, ProviderFormat(key.Context.Format), key.Pair, token).ConfigureAwait(false);
+        if (ratings.Expansion != key.Context.Expansion || ratings.Format != ProviderFormat(key.Context.Format) || ratings.ColorPair != key.Pair)
+            throw new InvalidDataException("Pair statistics have a different set, exact format or color-pair identity.");
+        return new(key, ratings);
+    }
+
+    internal LimitedStatisticsUpdate CreateUpdate(LoadedLimitedStatistics loaded, DraftSnapshot? snapshot,
+        DraftPackObservationHistory observations, LoadedArchetypeStatistics? pair = null, ArchetypeDataStatus? pairStatus = null,
+        SuccessfulDeckLoadResult? trophy = null, TrophyDataStatus? trophyStatus = null)
+    {
+        ArchetypePairStatistics? data = null;
+        if (snapshot is not null && pair is not null && pair.Key.Context == loaded.Requested && pair.Ratings.Source != SeventeenLandsSource.Unavailable)
+        {
+            var mapped = LimitedStatisticsMapper.Map(pair.Ratings.Rows, catalog, loaded.Requested, snapshot);
+            data = new(pair.Key.Context, pair.Key.Pair, mapped.Catalog,
+                pair.Ratings.Rows.Select(r => new PairGihStatistics(r.GameInHandWinRate, r.GameInHandGameCount)));
+        }
+        return new(snapshot, false, Map(loaded, snapshot), observationHistory: EnrichObservations(loaded, observations),
+            archetypeProfile: _archetypes.Find(loaded.Requested.Expansion), archetypeStatistics: data,
+            archetypeConfiguration: ArchetypeConfiguration, archetypeDataStatus: pairStatus, useDefaultArchetypeProfile: false,
+            trophyCorpus: trophy?.Corpus, trophyConfiguration: TrophyConfiguration, trophyDataStatus: trophyStatus);
+    }
+    internal DraftPackObservationHistory EnrichObservations(LoadedLimitedStatistics loaded,
+        DraftPackObservationHistory observations)
+    {
+        foreach (var observation in observations.Observations.Where(o => !o.HasStatisticsSnapshot))
+        {
+            var snapshot = new DraftSnapshot(observation.Pack, new(),
+                loaded.Actual.Format == LimitedStatisticsFormat.TraditionalDraft ? DraftFormat.BestOfThree : DraftFormat.BestOfOne);
+            var result = Map(loaded, snapshot);
+            var statistical = new StatisticalRecommendationEngine().Recommend(observation.Pack, result.Catalog, result.EnvironmentCatalog);
+            observations = observations.WithStatistics(observation.Pack, catalog, statistical, result.Catalog);
+        }
+        return observations;
+    }
     public LimitedStatisticsContext? Resolve(DraftSessionUpdate update)
     {
         var expansion = DraftExpansionResolver.Resolve(update.ArenaState.EventName, update.SnapshotResult.Snapshot, catalog);
@@ -78,6 +136,8 @@ public sealed class LimitedStatisticsService(ISeventeenLandsCardRatingsClient cl
             mapping.Catalog, source, loaded.Ratings.FetchedAt, diagnostic.Length == 0 ? null : diagnostic)
         {
             EnvironmentCatalog = loaded.EnvironmentCatalog ?? new(),
+            CardCatalog = catalog,
+            StatisticsResolvedNames = mapping.ResolvedNames,
             DatasetDiagnosticText = loaded.Ratings.DatasetDiagnosticText
         };
     }

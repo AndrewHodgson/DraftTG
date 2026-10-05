@@ -126,7 +126,11 @@ public sealed class ArenaCardIdentifierList
 public sealed record ArenaDraftStart(
     string EventName,
     ArenaDraftMode Mode,
-    ArenaDraftIdentifier? DraftIdentifier = null);
+    ArenaDraftIdentifier? DraftIdentifier = null)
+{
+    /// <summary>Deduplicates an explicit entry request; never promoted to a draft identifier.</summary>
+    public string? EntryRequestIdentifier { get; init; }
+}
 
 public sealed record ArenaDraftPackPresentation(
     ArenaDraftIdentifier? DraftIdentifier,
@@ -140,7 +144,24 @@ public sealed record ArenaDraftPickSubmission(
 
 public sealed record ArenaDraftCompletion(
     string? EventName = null,
-    ArenaDraftIdentifier? DraftIdentifier = null);
+    ArenaDraftIdentifier? DraftIdentifier = null)
+{
+    public ArenaDraftCompletionOrigin Origin { get; init; }
+    public ArenaDraftMode? Mode { get; init; }
+    /// <summary>Only explicit Quick Draft PickedCards, never a deck or generic CardPool.</summary>
+    public ArenaCardIdentifierList? FinalPickedCards { get; init; }
+}
+
+public enum ArenaDraftCompletionOrigin { DraftProtocol, DeckSelection }
+
+/// <summary>Quick Draft pool membership, not a chronological sequence of picks.</summary>
+public sealed record ArenaPickedCardsSnapshot(
+    ArenaDraftIdentifier? DraftIdentifier,
+    ArenaDraftCoordinate? CurrentCoordinate,
+    ArenaCardIdentifierList RawCardIdentifiers)
+{
+    public ArenaCardMultiset Cards => new(RawCardIdentifiers);
+}
 
 public abstract record ArenaDraftLogEvent
 {
@@ -150,5 +171,6 @@ public abstract record ArenaDraftLogEvent
     public sealed record DraftStarted(ArenaDraftStart Start) : ArenaDraftLogEvent;
     public sealed record PackPresented(ArenaDraftPackPresentation Pack) : ArenaDraftLogEvent;
     public sealed record PickSubmitted(ArenaDraftPickSubmission Pick) : ArenaDraftLogEvent;
+    public sealed record PickedCardsObserved(ArenaPickedCardsSnapshot Pool) : ArenaDraftLogEvent;
     public sealed record DraftCompleted(ArenaDraftCompletion Completion) : ArenaDraftLogEvent;
 }

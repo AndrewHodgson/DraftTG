@@ -57,7 +57,33 @@ public sealed record ArenaDraftStateSnapshot(
     ArenaDraftPickRecordList CompletedPicks)
 {
     public bool IsCompleted => Status == ArenaDraftSessionStatus.Completed;
+    public ArenaDraftPoolState? RecoveredPool { get; init; }
+    public ArenaPickedCardsDiagnostic? PickedCardsDiagnostic { get; init; }
+
+    /// <summary>Snapshot pool plus exact selections not yet covered by that snapshot.</summary>
+    public ArenaCardMultiset DraftedPool
+    {
+        get
+        {
+            if (RecoveredPool is null) return new(CompletedPicks.SelectMany(p => p.CardIdentifiers));
+            var covered = new ArenaCardMultiset(CompletedPicks.Where(p => IsCoveredByPool(p.Coordinate)).SelectMany(p => p.CardIdentifiers));
+            // Incoherent late exact facts are diagnosed, but never disappear from the known pool.
+            var missingKnown = covered.Counts.SelectMany(p => Enumerable.Repeat(p.Key,
+                Math.Max(0, p.Value - RecoveredPool.Cards.CountOf(p.Key))));
+            return new(RecoveredPool.Cards.Occurrences.Concat(missingKnown)
+                .Concat(CompletedPicks.Where(p => !IsCoveredByPool(p.Coordinate)).SelectMany(p => p.CardIdentifiers)));
+        }
+    }
+    private bool IsCoveredByPool(ArenaDraftCoordinate coordinate) => RecoveredPool is not null &&
+        (RecoveredPool.CurrentCoordinate is not { } current || coordinate.Pack < current.Pack
+            || (coordinate.Pack == current.Pack && coordinate.Pick < current.Pick));
+    public int ExactHistoryCardCount => CompletedPicks.Sum(p => p.CardIdentifiers.Count);
+    public int UnqualifiedHistoryCardCount => Math.Max(0, DraftedPool.Count - ExactHistoryCardCount);
 }
+
+public sealed record ArenaDraftPoolState(ArenaDraftCoordinate? CurrentCoordinate, ArenaCardMultiset Cards);
+public enum ArenaPickedCardsDiagnosticKind { UnexpectedCardCount, RemovedCards, BackwardCoordinate, ExactHistoryMismatch, FinalPoolMismatch }
+public sealed record ArenaPickedCardsDiagnostic(ArenaPickedCardsDiagnosticKind Kind, string Message);
 
 public sealed record ArenaDraftStateUpdate(
     ArenaDraftStateSnapshot Snapshot,

@@ -88,7 +88,7 @@ public sealed class DraftSessionCoordinatorTests
 
         var updates = await CollectAsync(CreateCoordinator(source, mappings).RunAsync());
 
-        Assert.Equal(4, updates.Count);
+        Assert.Equal(3, updates.Count);
         Assert.All(updates, update => Assert.Null(update.Diagnostic));
         var final = updates[^1];
         var snapshot = Assert.IsType<DraftSnapshot>(final.SnapshotResult.Snapshot);
@@ -98,10 +98,10 @@ public sealed class DraftSessionCoordinatorTests
         Assert.Equal(1, snapshot.CurrentPack.Position.Pack.Value);
         Assert.Equal(3, snapshot.CurrentPack.Position.Pick.Value);
         Assert.Equal(12, snapshot.CurrentPack.AvailableCardIdentifiers.Count);
-        Assert.Equal(2, snapshot.History.Count);
+        Assert.Equal(0, snapshot.History.Count);
         Assert.Equal(
             ["domain-103499", "domain-103521"],
-            snapshot.History.SelectedCardIdentifiers.Select(identifier => identifier.Value));
+            snapshot.DraftedPool.CardIdentifiers.Select(identifier => identifier.Value));
     }
 
     [Fact]

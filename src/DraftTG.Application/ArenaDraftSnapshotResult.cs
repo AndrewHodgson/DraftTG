@@ -32,6 +32,10 @@ public sealed record ArenaDraftSnapshotResult
 
     public DraftSnapshotAvailability Availability { get; }
     public DraftSnapshot? Snapshot { get; }
+    /// <summary>Resolved existing Arena history, including the gap after a pick and draft completion.</summary>
+    public DraftHistory? ResolvedHistory { get; init; }
+    public DraftedCardPool? ResolvedDraftedPool { get; init; }
+    public DraftPoolSnapshot? DraftPool { get; init; }
     public ArenaCardIdentifierList UnresolvedArenaCards { get; }
     public ArenaCardIdentifierList AmbiguousArenaCards { get; }
 

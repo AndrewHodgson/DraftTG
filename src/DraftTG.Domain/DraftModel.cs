@@ -71,4 +71,9 @@ public sealed class DraftHistory : IEquatable<DraftHistory>
 public sealed record DraftSnapshot(
     DraftPack CurrentPack,
     DraftHistory History,
-    DraftFormat Format);
+    DraftFormat Format)
+{
+    /// <summary>Optional pool recovered without chronology; includes all known drafted occurrences.</summary>
+    public DraftedCardPool? RecoveredPool { get; init; }
+    public DraftedCardPool DraftedPool => RecoveredPool ?? new(History.SelectedCardIdentifiers);
+}

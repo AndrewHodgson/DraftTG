@@ -17,6 +17,8 @@ public sealed class OverlayDesktopSession : ICalibrationSurface
     private readonly OverlayCalibrationService _settings;
     private readonly CancellationTokenSource _lifetime = new();
     private readonly OverlayCalibrationEditor _calibration;
+    private readonly AutomaticCardLocalizationSession _localization;
+    private bool _localizationSurfaceVisible = true;
     private OverlayCalibration? Saved => _calibration.Saved;
     private bool _closing;
     private bool _allowClose;
@@ -34,6 +36,11 @@ public sealed class OverlayDesktopSession : ICalibrationSurface
         _cards = new(_presentation);
         _interaction = new(ClickThroughWindowControllerFactory.Create(_cards));
         _calibration = new(_presentation, settings, _interaction, this);
+        _localization = new(_presentation, () => Saved, (x, y, width, height) =>
+        {
+            _cards.Position = new(x, y); _cards.Width = width; _cards.Height = height;
+            _presentation.SetViewport(width, height);
+        }, visible => { _localizationSurfaceVisible = visible; RefreshVisibility(); });
         Rail.Opened += OnOpened;
         Rail.Closing += OnClosing;
         Rail.ActionRequested += OnAction;
@@ -50,6 +57,7 @@ public sealed class OverlayDesktopSession : ICalibrationSurface
         if (screen is not null)
             Rail.Position = new(screen.WorkingArea.X + 12, screen.WorkingArea.Y + 60);
         _runtime.Start(); // Calibration I/O never gates Scryfall bootstrap or Arena tracking.
+        _localization.Start(); // Timer reports prerequisites even if calibration loading is superseded.
         try
         {
             var revision = _calibrationRevision;
@@ -82,7 +90,7 @@ public sealed class OverlayDesktopSession : ICalibrationSurface
             _presentation.SetDiagnostic(diagnostic);
             return;
         }
-        if (!_presentation.IsCalibrating && (!_presentation.ShowBadges || Saved is null))
+        if (!_presentation.IsCalibrating && (!_presentation.ShowBadges || Saved is null || !_localizationSurfaceVisible))
         { _cards.Hide(); return; }
         if (!_cards.IsVisible) _cards.Show(); // No activation during normal gameplay.
         // Showing a native window can reset its style; verify the complete policy afterward.
@@ -108,6 +116,9 @@ public sealed class OverlayDesktopSession : ICalibrationSurface
             case "edit": BeginCalibration(); break;
             case "cancel": CancelCalibration(); break;
             case "save": await (_saveTask = SaveCalibrationAsync()); break;
+            case "confirm-card-positions": _presentation.ConfirmVisualSelections(); break;
+            case "retry-card-localization": _localization.RetryManually(); break;
+            case "save-card-capture": await _localization.SaveCurrentCaptureForDebugging(); break;
             default:
                 if (_presentation.IsCalibrating && action.StartsWith("columns-", StringComparison.Ordinal)
                     && int.TryParse(action.AsSpan(8), out var columns))
@@ -168,7 +179,7 @@ public sealed class OverlayDesktopSession : ICalibrationSurface
     private void ScreensChanged(object? sender, EventArgs e)
     {
         if (_closing) return;
-        if (_presentation.IsCalibrating || (Saved is not null && !CurrentScreens().Any(Saved.IsValidFor)))
+        if (_presentation.IsCalibrating || (Saved is not null && !CurrentScreens().Any(Saved.IsValidFor) && !_localization.CanFollowWindow))
         {
             _calibrationRevision++;
             _cards.Hide();
@@ -176,6 +187,7 @@ public sealed class OverlayDesktopSession : ICalibrationSurface
             _calibration.Cancel();
             _presentation.SetDiagnostic("Display geometry changed. Set overlay position again.");
         }
+        else if (_localization.CanFollowWindow) _localization.Retry();
         // Keep the interactive escape hatch reachable after a display is disconnected.
         if (!Rail.Screens.All.Any(screen => screen.WorkingArea.Contains(Rail.Position)) && Rail.Screens.Primary is { } primary)
             Rail.Position = new(primary.WorkingArea.X + 12, primary.WorkingArea.Y + 60);
@@ -197,6 +209,7 @@ public sealed class OverlayDesktopSession : ICalibrationSurface
         {
             try { await Task.WhenAll((Task?)_loadTask ?? Task.CompletedTask, _saveTask ?? Task.CompletedTask); }
             catch (OperationCanceledException) when (_lifetime.IsCancellationRequested) { }
+            await _localization.DisposeAsync();
             await _runtime.DisposeAsync();
         }
         finally

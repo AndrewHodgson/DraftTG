@@ -1,0 +1,106 @@
+﻿{
+    "PackNumber":  1,
+    "PickNumber":  7,
+    "Columns":  5,
+    "Cards":  [
+                  {
+                      "Id":  "1a8bb9c7-2c4b-48a1-806e-742addb72b4b",
+                      "Name":  "Freeze in Place",
+                      "ArenaId":  86737,
+                      "Set":  "woe",
+                      "CollectorNumber":  "50",
+                      "ReferenceFile":  "1a8bb9c7-2c4b-48a1-806e-742addb72b4b.jpg",
+                      "ReferenceUri":  "https://cards.scryfall.io/small/front/1/a/1a8bb9c7-2c4b-48a1-806e-742addb72b4b.jpg?1783915120",
+                      "ArtUri":  "https://cards.scryfall.io/art_crop/front/1/a/1a8bb9c7-2c4b-48a1-806e-742addb72b4b.jpg?1783915120",
+                      "Artist":  "Leanna Crossan"
+                  },
+                  {
+                      "Id":  "8059be65-3c73-49bb-a3b6-c346ce2f9fa4",
+                      "Name":  "Voracious Vermin",
+                      "ArenaId":  86813,
+                      "Set":  "woe",
+                      "CollectorNumber":  "116",
+                      "ReferenceFile":  "8059be65-3c73-49bb-a3b6-c346ce2f9fa4.jpg",
+                      "ReferenceUri":  "https://cards.scryfall.io/small/front/8/0/8059be65-3c73-49bb-a3b6-c346ce2f9fa4.jpg?1783915099",
+                      "ArtUri":  "https://cards.scryfall.io/art_crop/front/8/0/8059be65-3c73-49bb-a3b6-c346ce2f9fa4.jpg?1783915099",
+                      "Artist":  "Milivoj Ćeran"
+                  },
+                  {
+                      "Id":  "e78e50ca-d27b-45db-91fa-7fef3cad16d0",
+                      "Name":  "Skewer Slinger",
+                      "ArenaId":  86851,
+                      "Set":  "woe",
+                      "CollectorNumber":  "149",
+                      "ReferenceFile":  "e78e50ca-d27b-45db-91fa-7fef3cad16d0.jpg",
+                      "ReferenceUri":  "https://cards.scryfall.io/small/front/e/7/e78e50ca-d27b-45db-91fa-7fef3cad16d0.jpg?1783915089",
+                      "ArtUri":  "https://cards.scryfall.io/art_crop/front/e/7/e78e50ca-d27b-45db-91fa-7fef3cad16d0.jpg?1783915089",
+                      "Artist":  "Edgar Sánchez Hidalgo"
+                  },
+                  {
+                      "Id":  "74f9c819-719a-461b-8e7e-a26c88e8099b",
+                      "Name":  "Evolving Wilds",
+                      "ArenaId":  86988,
+                      "Set":  "woe",
+                      "CollectorNumber":  "256",
+                      "ReferenceFile":  "74f9c819-719a-461b-8e7e-a26c88e8099b.jpg",
+                      "ReferenceUri":  "https://cards.scryfall.io/small/front/7/4/74f9c819-719a-461b-8e7e-a26c88e8099b.jpg?1783915056",
+                      "ArtUri":  "https://cards.scryfall.io/art_crop/front/7/4/74f9c819-719a-461b-8e7e-a26c88e8099b.jpg?1783915056",
+                      "Artist":  "Alayna Danner"
+                  },
+                  {
+                      "Id":  "4c6c7a43-c3d1-450e-834a-54e1b9def1cd",
+                      "Name":  "Misleading Motes",
+                      "ArenaId":  86750,
+                      "Set":  "woe",
+                      "CollectorNumber":  "61",
+                      "ReferenceFile":  "4c6c7a43-c3d1-450e-834a-54e1b9def1cd.jpg",
+                      "ReferenceUri":  "https://cards.scryfall.io/small/front/4/c/4c6c7a43-c3d1-450e-834a-54e1b9def1cd.jpg?1783915117",
+                      "ArtUri":  "https://cards.scryfall.io/art_crop/front/4/c/4c6c7a43-c3d1-450e-834a-54e1b9def1cd.jpg?1783915117",
+                      "Artist":  "Raoul Vitale"
+                  },
+                  {
+                      "Id":  "60acc0b7-6842-44aa-a7cc-c5d315d90287",
+                      "Name":  "Rimefur Reindeer",
+                      "ArenaId":  86711,
+                      "Set":  "woe",
+                      "CollectorNumber":  "27",
+                      "ReferenceFile":  "60acc0b7-6842-44aa-a7cc-c5d315d90287.jpg",
+                      "ReferenceUri":  "https://cards.scryfall.io/small/front/6/0/60acc0b7-6842-44aa-a7cc-c5d315d90287.jpg?1783915128",
+                      "ArtUri":  "https://cards.scryfall.io/art_crop/front/6/0/60acc0b7-6842-44aa-a7cc-c5d315d90287.jpg?1783915128",
+                      "Artist":  "Lucas Graciano"
+                  },
+                  {
+                      "Id":  "1db79785-4f55-445f-93f2-14c6e4606fc5",
+                      "Name":  "Harried Spearguard",
+                      "ArenaId":  86834,
+                      "Set":  "woe",
+                      "CollectorNumber":  "135",
+                      "ReferenceFile":  "1db79785-4f55-445f-93f2-14c6e4606fc5.jpg",
+                      "ReferenceUri":  "https://cards.scryfall.io/small/front/1/d/1db79785-4f55-445f-93f2-14c6e4606fc5.jpg?1783915094",
+                      "ArtUri":  "https://cards.scryfall.io/art_crop/front/1/d/1db79785-4f55-445f-93f2-14c6e4606fc5.jpg?1783915094",
+                      "Artist":  "Borja Pindado"
+                  },
+                  {
+                      "Id":  "742f2d20-0f6b-488e-ae37-54a41522c191",
+                      "Name":  "Season of Growth",
+                      "ArenaId":  87099,
+                      "Set":  "wot",
+                      "CollectorNumber":  "61",
+                      "ReferenceFile":  "742f2d20-0f6b-488e-ae37-54a41522c191.jpg",
+                      "ReferenceUri":  "https://cards.scryfall.io/small/front/7/4/742f2d20-0f6b-488e-ae37-54a41522c191.jpg?1783914916",
+                      "ArtUri":  "https://cards.scryfall.io/art_crop/front/7/4/742f2d20-0f6b-488e-ae37-54a41522c191.jpg?1783914916",
+                      "Artist":  "Maël Ollivier-Henry"
+                  }
+              ],
+    "Source":  "Candidates verified against exact P1P7-8cards.txt. ExpectedVisualOrder is the user-stated order, contradicted by supplied PNG pixels; used only as report labels, never matcher input.",
+    "ExpectedVisualOrder":  [
+                                "742f2d20-0f6b-488e-ae37-54a41522c191",
+                                "60acc0b7-6842-44aa-a7cc-c5d315d90287",
+                                "1a8bb9c7-2c4b-48a1-806e-742addb72b4b",
+                                "4c6c7a43-c3d1-450e-834a-54e1b9def1cd",
+                                "8059be65-3c73-49bb-a3b6-c346ce2f9fa4",
+                                "1db79785-4f55-445f-93f2-14c6e4606fc5",
+                                "e78e50ca-d27b-45db-91fa-7fef3cad16d0",
+                                "74f9c819-719a-461b-8e7e-a26c88e8099b"
+                            ]
+}

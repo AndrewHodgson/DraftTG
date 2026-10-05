@@ -102,20 +102,18 @@ public sealed class ArenaDraftLogParserTests
     }
 
     [Fact]
-    public void StandaloneLiveQuickStatusRecoversHistoryThenOrderedCurrentPack()
+    public void StandaloneLiveQuickStatusEmitsUnorderedPoolThenOrderedCurrentPack()
     {
         var events = ParseLine(LiveQuickDraftStatus);
 
-        Assert.Equal(4, events.Count);
+        Assert.Equal(3, events.Count);
         Assert.Equal(ArenaDraftModeKind.Quick,
             Assert.IsType<ArenaDraftLogEvent.DraftStarted>(events[0]).Start.Mode.Kind);
-        var firstPick = Assert.IsType<ArenaDraftLogEvent.PickSubmitted>(events[1]).Pick;
-        var secondPick = Assert.IsType<ArenaDraftLogEvent.PickSubmitted>(events[2]).Pick;
-        var pack = Assert.IsType<ArenaDraftLogEvent.PackPresented>(events[3]).Pack;
-        Assert.Equal(ArenaDraftCoordinate.Create(1, 1), firstPick.Coordinate);
-        Assert.Equal([103499], Values(firstPick.CardIdentifiers));
-        Assert.Equal(ArenaDraftCoordinate.Create(1, 2), secondPick.Coordinate);
-        Assert.Equal([103521], Values(secondPick.CardIdentifiers));
+        var pool = Assert.IsType<ArenaDraftLogEvent.PickedCardsObserved>(events[1]).Pool;
+        var pack = Assert.IsType<ArenaDraftLogEvent.PackPresented>(events[2]).Pack;
+        Assert.Equal(ArenaDraftCoordinate.Create(1, 3), pool.CurrentCoordinate);
+        Assert.Equal([103499, 103521], Values(pool.RawCardIdentifiers));
+        Assert.Empty(events.OfType<ArenaDraftLogEvent.PickSubmitted>());
         Assert.Equal(ArenaDraftCoordinate.Create(1, 3), pack.Coordinate);
         Assert.Equal(
             [103441, 103501, 103421, 103401, 103411, 103513,
@@ -134,33 +132,29 @@ public sealed class ArenaDraftLogParserTests
 
         Assert.Equal(ArenaDraftSessionStatus.Active, state.Status);
         Assert.Equal(ArenaDraftModeKind.Quick, state.Mode!.Kind);
-        Assert.Equal([103499, 103521], state.CompletedPicks.Select(
-            pick => Assert.Single(pick.CardIdentifiers).Value));
-        Assert.Equal(
-            [ArenaDraftCoordinate.Create(1, 1), ArenaDraftCoordinate.Create(1, 2)],
-            state.CompletedPicks.Select(pick => pick.Coordinate));
+        Assert.Empty(state.CompletedPicks);
+        Assert.Equal([103499, 103521], Values(state.DraftedPool.Occurrences));
+        Assert.Equal(2, state.UnqualifiedHistoryCardCount);
         Assert.Equal(ArenaDraftCoordinate.Create(1, 3), state.CurrentPack!.Coordinate);
         Assert.Equal(12, state.CurrentPack.CardIdentifiers.Count);
 
         var replay = events.Select(engine.Apply).ToArray();
         Assert.All(replay, update => Assert.False(update.Changed));
-        Assert.Equal(2, engine.Current.CompletedPicks.Count);
+        Assert.Empty(engine.Current.CompletedPicks);
+        Assert.Equal(2, engine.Current.DraftedPool.Count);
     }
 
     [Fact]
-    public void CoherentPickedCardsReconstructAcrossPackBoundary()
+    public void SingleSnapshotAcrossPackBoundaryDoesNotInventChronology()
     {
         var pickedCards = Enumerable.Range(1, 15).Select(number => number.ToString()).ToArray();
         var line = BotStatusEnvelope(pack: 1, pick: 1, numCardsToPick: 1, pickedCards);
 
-        var picks = ParseLine(line)
-            .OfType<ArenaDraftLogEvent.PickSubmitted>()
-            .Select(draftEvent => draftEvent.Pick)
-            .ToArray();
-
-        Assert.Equal(15, picks.Length);
-        Assert.Equal(ArenaDraftCoordinate.Create(1, 14), picks[13].Coordinate);
-        Assert.Equal(ArenaDraftCoordinate.Create(2, 1), picks[14].Coordinate);
+        var events = ParseLine(line);
+        Assert.Empty(events.OfType<ArenaDraftLogEvent.PickSubmitted>());
+        var pool = Assert.Single(events.OfType<ArenaDraftLogEvent.PickedCardsObserved>()).Pool;
+        Assert.Equal(15, pool.Cards.Count);
+        Assert.Equal(ArenaDraftCoordinate.Create(2, 2), pool.CurrentCoordinate);
     }
 
     [Fact]
@@ -173,6 +167,10 @@ public sealed class ArenaDraftLogParserTests
             pickedCards: ["901"]));
 
         Assert.Empty(events.OfType<ArenaDraftLogEvent.PickSubmitted>());
+        var engine = new ArenaDraftStateEngine();
+        foreach (var draftEvent in events) engine.Apply(draftEvent);
+        Assert.Equal(ArenaPickedCardsDiagnosticKind.UnexpectedCardCount, engine.Current.PickedCardsDiagnostic!.Kind);
+        Assert.Empty(engine.Current.DraftedPool.Occurrences);
         Assert.Equal(ArenaDraftCoordinate.Create(1, 3), Pack(events).Coordinate);
         Start(events);
     }

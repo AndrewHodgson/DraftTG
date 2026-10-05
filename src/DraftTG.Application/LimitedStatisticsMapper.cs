@@ -4,7 +4,11 @@ using DraftTG.RecommendationEngine;
 
 namespace DraftTG.Application;
 
-public sealed record LimitedStatisticsMappingResult(LimitedCardStatisticsCatalog Catalog, string? Diagnostic);
+public sealed record LimitedStatisticsMappingResult(LimitedCardStatisticsCatalog Catalog, string? Diagnostic)
+{
+    public IReadOnlyDictionary<CardIdentifier, string> ResolvedNames { get; init; }
+        = System.Collections.Frozen.FrozenDictionary<CardIdentifier, string>.Empty;
+}
 
 public static class LimitedStatisticsMapper
 {
@@ -48,6 +52,7 @@ public static class LimitedStatisticsMapper
     {
         var mapped = new List<LimitedCardStatistics>();
         var current = snapshot.CurrentPack.AvailableCardIdentifiers.ToHashSet();
+        var names = new Dictionary<CardIdentifier, string>();
         var unavailable = 0;
         foreach (var identifier in snapshot.CurrentPack.AvailableCardIdentifiers
             .Concat(snapshot.History.SelectedCardIdentifiers).Distinct())
@@ -55,7 +60,10 @@ public static class LimitedStatisticsMapper
             // Identity was resolved by Arena/Scryfall already. Never re-resolve it by name.
             var card = catalog.Find(identifier);
             if (card is not null && byName.TryGetValue(card.Name, out var row) && row is not null)
+            {
                 mapped.Add(Attach(identifier, row));
+                names.Add(identifier, row.Name);
+            }
             else if (current.Contains(identifier))
                 unavailable++;
         }
@@ -64,7 +72,7 @@ public static class LimitedStatisticsMapper
             0 => null,
             1 => "1 current-pack card has no statistics.",
             _ => $"{unavailable} current-pack cards have no statistics."
-        });
+        }) { ResolvedNames = System.Collections.Frozen.FrozenDictionary.ToFrozenDictionary(names) };
     }
 
     // Standalone catalogs have no known participant identities. Keep their conservative

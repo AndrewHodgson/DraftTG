@@ -17,6 +17,7 @@
   </ItemGroup>
   <ItemGroup>
     <Using Include="Xunit" />
+    <None Include="../Fixtures/phase10a-scryfall-cards.json" Link="Fixtures/phase10a-scryfall-cards.json" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
   <ItemGroup>
     <None Include="../Fixtures/17lands-phase7-5.json" Link="Fixtures/17lands-phase7-5.json" CopyToOutputDirectory="PreserveNewest" />

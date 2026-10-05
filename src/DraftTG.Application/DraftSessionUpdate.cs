@@ -4,13 +4,15 @@ namespace DraftTG.Application;
 
 public enum DraftSessionDiagnosticKind
 {
-    ParseError
+    ParseError,
+    PickedCardsSnapshot
 }
 
 public sealed record DraftSessionDiagnostic(
     DraftSessionDiagnosticKind Kind,
     string Message,
-    ArenaDraftLogParseErrorKind? ParseErrorKind = null);
+    ArenaDraftLogParseErrorKind? ParseErrorKind = null,
+    ArenaPickedCardsDiagnosticKind? PickedCardsDiagnosticKind = null);
 
 /// <summary>An immutable state or diagnostic update for application consumers.</summary>
 public sealed record DraftSessionUpdate(

@@ -3,11 +3,12 @@ using System.Net.Http.Headers;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Text.RegularExpressions;
+using DraftTG.Domain;
 
 namespace DraftTG.Data;
 
 /// <summary>One whole-environment request, persistent cache, no polling or automatic retries.</summary>
-public sealed class SeventeenLandsCardRatingsClient : ISeventeenLandsCardRatingsClient
+public sealed class SeventeenLandsCardRatingsClient : ISeventeenLandsCardRatingsClient, ISeventeenLandsPairRatingsClient
 {
     private readonly HttpClient _http;
     private readonly string _directory;
@@ -16,6 +17,7 @@ public sealed class SeventeenLandsCardRatingsClient : ISeventeenLandsCardRatings
     private readonly Dictionary<string, SeventeenLandsRatingsResult> _memory = new(StringComparer.Ordinal);
     private readonly Dictionary<string, (DateTimeOffset RetryAt, SeventeenLandsRatingsResult Result)> _failures = new(StringComparer.Ordinal);
     private DateTimeOffset _retryAfter;
+    private DateTimeOffset _nextPairRequest;
     private const int CacheSchemaVersion = 3;
     private const string SourceEndpoint = "/api/card_data";
     private const string TimePeriod = "ALL_TIME";
@@ -31,21 +33,32 @@ public sealed class SeventeenLandsCardRatingsClient : ISeventeenLandsCardRatings
         _time = timeProvider ?? TimeProvider.System;
     }
 
-    public async Task<SeventeenLandsRatingsResult> LoadAsync(string expansion, SeventeenLandsFormat format,
-        bool forceRefresh = false, CancellationToken cancellationToken = default)
+    public Task<SeventeenLandsRatingsResult> LoadAsync(string expansion, SeventeenLandsFormat format,
+        bool forceRefresh = false, CancellationToken cancellationToken = default) =>
+        LoadCoreAsync(expansion, format, null, forceRefresh, cancellationToken);
+
+    public Task<SeventeenLandsRatingsResult> LoadPairAsync(string expansion, SeventeenLandsFormat format,
+        ArchetypeColorPair colorPair, CancellationToken cancellationToken = default)
+    {
+        ArgumentNullException.ThrowIfNull(colorPair);
+        return LoadCoreAsync(expansion, format, colorPair, false, cancellationToken);
+    }
+
+    private async Task<SeventeenLandsRatingsResult> LoadCoreAsync(string expansion, SeventeenLandsFormat format,
+        ArchetypeColorPair? pair, bool forceRefresh, CancellationToken cancellationToken)
     {
         // Allowlisted components cannot escape the cache directory or inject query parameters.
         if (!Regex.IsMatch(expansion, @"^[A-Za-z0-9]{2,8}\z", RegexOptions.CultureInvariant))
             throw new ArgumentException("Invalid expansion code.", nameof(expansion));
         if (!Enum.IsDefined(format)) throw new ArgumentOutOfRangeException(nameof(format));
         expansion = expansion.ToUpperInvariant();
-        var key = $"{expansion}_{format}_{TimePeriod}_v{CacheSchemaVersion}";
+        var key = $"{expansion}_{format}_{TimePeriod}_v{CacheSchemaVersion}" + (pair is null ? "" : $"_{pair.Code}_pair_v1");
         await _gate.WaitAsync(cancellationToken).ConfigureAwait(false);
         try
         {
             var now = _time.GetUtcNow();
             var cached = _memory.GetValueOrDefault(key)
-                ?? await ReadCacheAsync(key, expansion, format, now, cancellationToken).ConfigureAwait(false);
+                ?? await ReadCacheAsync(key, expansion, format, pair, now, cancellationToken).ConfigureAwait(false);
             if (!forceRefresh && cached?.FetchedAt is { } fetched && now - fetched < CacheTtl)
                 return Result(cached, SeventeenLandsSource.Cache);
 
@@ -53,12 +66,19 @@ public sealed class SeventeenLandsCardRatingsClient : ISeventeenLandsCardRatings
                 return failure.Result;
 
             if (now < _retryAfter)
-                return Failure(cached, expansion, format, $"17Lands rate limited; retry after {_retryAfter:u}.");
+                return Failure(cached, expansion, format, $"17Lands rate limited; retry after {_retryAfter:u}.", pair);
 
             try
             {
+                if (pair is not null)
+                {
+                    var wait = _nextPairRequest - _time.GetUtcNow();
+                    if (wait > TimeSpan.Zero) await Task.Delay(wait, cancellationToken).ConfigureAwait(false);
+                    _nextPairRequest = _time.GetUtcNow() + TimeSpan.FromSeconds(1);
+                }
                 using var request = new HttpRequestMessage(HttpMethod.Get,
-                    $"https://www.17lands.com{SourceEndpoint}?expansion={expansion}&event_type={format}&time_period={TimePeriod}");
+                    $"https://www.17lands.com{SourceEndpoint}?expansion={expansion}&event_type={format}&time_period={TimePeriod}"
+                    + (pair is null ? "" : $"&colors={pair.Code}"));
                 request.Headers.UserAgent.ParseAdd("DraftTG/0.8.1 (Limited statistics; whole-environment data cached for 24 hours)");
                 request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 using var response = await _http.SendAsync(request, HttpCompletionOption.ResponseHeadersRead,
@@ -68,7 +88,7 @@ public sealed class SeventeenLandsCardRatingsClient : ISeventeenLandsCardRatings
                     _retryAfter = response.Headers.RetryAfter?.Date
                         ?? now + (response.Headers.RetryAfter?.Delta ?? TimeSpan.FromHours(1));
                     if (_retryAfter <= now) _retryAfter = now + TimeSpan.FromMinutes(1);
-                    return Failure(cached, expansion, format, $"17Lands rate limited; retry after {_retryAfter:u}.");
+                    return Failure(cached, expansion, format, $"17Lands rate limited; retry after {_retryAfter:u}.", pair);
                 }
                 response.EnsureSuccessStatusCode();
                 // Some unversioned endpoints mislabel JSON as text/html. Validate the body;
@@ -80,13 +100,13 @@ public sealed class SeventeenLandsCardRatingsClient : ISeventeenLandsCardRatings
                 CheckDataset(validated);
                 var timestamp = _time.GetUtcNow();
                 var result = new SeventeenLandsRatingsResult(expansion, format, validated,
-                    SeventeenLandsSource.Live, timestamp, metadata: Metadata(validated.Length));
+                    SeventeenLandsSource.Live, timestamp, metadata: Metadata(validated.Length), colorPair: pair);
                 _memory[key] = result;
                 _failures.Remove(key);
                 try
                 {
                     await WriteCacheAsync(key, new RatingsCache(CacheSchemaVersion, SourceEndpoint, TimePeriod,
-                        expansion, format, format, timestamp, payload!),
+                        expansion, format, format, timestamp, payload!, pair?.Code, pair is null ? null : 1),
                         cancellationToken).ConfigureAwait(false);
                 }
                 catch (Exception error) when (error is IOException or UnauthorizedAccessException)
@@ -100,7 +120,7 @@ public sealed class SeventeenLandsCardRatingsClient : ISeventeenLandsCardRatings
             {
                 var result = Failure(cached, expansion, format,
                     error is SuspiciousDatasetException ? error.Message
-                        : error is JsonException ? "17Lands returned invalid statistics." : "17Lands refresh unavailable.");
+                        : error is JsonException ? "17Lands returned invalid statistics." : "17Lands refresh unavailable.", pair);
                 // Avoid repeated calls after failures, including callers outside the live coordinator.
                 _failures[key] = (_time.GetUtcNow() + TimeSpan.FromHours(1), result);
                 return result;
@@ -111,17 +131,17 @@ public sealed class SeventeenLandsCardRatingsClient : ISeventeenLandsCardRatings
 
     private static SeventeenLandsRatingsResult Result(SeventeenLandsRatingsResult value,
         SeventeenLandsSource source, string? diagnostic = null) =>
-        new(value.Expansion, value.Format, value.Rows, source, value.FetchedAt, diagnostic, value.Metadata);
+        new(value.Expansion, value.Format, value.Rows, source, value.FetchedAt, diagnostic, value.Metadata, value.ColorPair);
 
     private static SeventeenLandsDatasetMetadata Metadata(int rowCount) => new(SourceEndpoint, TimePeriod, rowCount);
 
     private static SeventeenLandsRatingsResult Failure(SeventeenLandsRatingsResult? cache,
-        string expansion, SeventeenLandsFormat format, string diagnostic) => cache is null
-        ? new(expansion, format, [], SeventeenLandsSource.Unavailable, diagnostic: diagnostic, metadata: Metadata(0))
+        string expansion, SeventeenLandsFormat format, string diagnostic, ArchetypeColorPair? pair = null) => cache is null
+        ? new(expansion, format, [], SeventeenLandsSource.Unavailable, diagnostic: diagnostic, metadata: Metadata(0), colorPair: pair)
         : Result(cache, SeventeenLandsSource.StaleCache, diagnostic + " Using cached statistics.");
 
     private async Task<SeventeenLandsRatingsResult?> ReadCacheAsync(string key, string expansion,
-        SeventeenLandsFormat format, DateTimeOffset now, CancellationToken cancellationToken)
+        SeventeenLandsFormat format, ArchetypeColorPair? pair, DateTimeOffset now, CancellationToken cancellationToken)
     {
         try
         {
@@ -130,11 +150,12 @@ public sealed class SeventeenLandsCardRatingsClient : ISeventeenLandsCardRatings
                 cancellationToken: cancellationToken).ConfigureAwait(false);
             if (cache is null || cache.SchemaVersion != CacheSchemaVersion || cache.Expansion != expansion || cache.RequestedFormat != format
                 || cache.SourceFormat != format || cache.SourceEndpoint != SourceEndpoint || cache.TimePeriod != TimePeriod
+                || cache.DeckColors != pair?.Code || cache.PairSchemaVersion != (pair is null ? (int?)null : 1)
                 || cache.FetchedAt == default || cache.FetchedAt > now)
                 return null;
             var rows = Validate(cache.Payload?.Data);
             CheckDataset(rows);
-            return new(expansion, format, rows, SeventeenLandsSource.Cache, cache.FetchedAt, metadata: Metadata(rows.Length));
+            return new(expansion, format, rows, SeventeenLandsSource.Cache, cache.FetchedAt, metadata: Metadata(rows.Length), colorPair: pair);
         }
         catch (Exception error) when (error is IOException or UnauthorizedAccessException or JsonException)
         { return null; }
@@ -200,7 +221,8 @@ public sealed class SeventeenLandsCardRatingsClient : ISeventeenLandsCardRatings
         [property: JsonRequired] SeventeenLandsFormat RequestedFormat,
         [property: JsonRequired] SeventeenLandsFormat SourceFormat,
         [property: JsonRequired] DateTimeOffset FetchedAt,
-        [property: JsonRequired] SeventeenLandsApiCardDataDto Payload);
+        [property: JsonRequired] SeventeenLandsApiCardDataDto Payload,
+        string? DeckColors = null, int? PairSchemaVersion = null);
 }
 
 // The current API returns an envelope, not a bare ratings array.

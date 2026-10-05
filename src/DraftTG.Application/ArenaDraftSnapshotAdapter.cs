@@ -12,6 +12,43 @@ public sealed class ArenaDraftSnapshotAdapter(ArenaCardResolver resolver)
     public ArenaDraftSnapshotResult Convert(ArenaDraftStateSnapshot state)
     {
         ArgumentNullException.ThrowIfNull(state);
+        var result = ConvertSnapshot(state);
+        return result with
+        {
+            ResolvedHistory = result.Snapshot?.History ?? ResolveCompletedHistory(state),
+            ResolvedDraftedPool = result.Snapshot?.DraftedPool ?? ResolveDraftedPool(state),
+            DraftPool = ArenaDraftPoolAssembler.Assemble(state, _resolver)
+        };
+    }
+
+    private DraftedCardPool? ResolveDraftedPool(ArenaDraftStateSnapshot state)
+    {
+        var cards = new List<CardIdentifier>();
+        foreach (var id in state.DraftedPool.Occurrences)
+        {
+            var resolution = _resolver.Resolve(id);
+            if (resolution.Status != ArenaCardResolutionStatus.Resolved) return null;
+            cards.Add(resolution.CardIdentifier!);
+        }
+        return new(cards);
+    }
+
+    private DraftHistory? ResolveCompletedHistory(ArenaDraftStateSnapshot state)
+    {
+        var picks = new List<DraftPick>();
+        foreach (var pick in state.CompletedPicks)
+        {
+            if (!TryCreatePosition(pick.Coordinate, out var position) || pick.CardIdentifiers.Count != 1) return null;
+            var resolution = _resolver.Resolve(pick.CardIdentifiers[0]);
+            if (resolution.Status != ArenaCardResolutionStatus.Resolved) return null;
+            picks.Add(new(position!, resolution.CardIdentifier!));
+        }
+        return new(picks);
+    }
+
+    private ArenaDraftSnapshotResult ConvertSnapshot(ArenaDraftStateSnapshot state)
+    {
+        ArgumentNullException.ThrowIfNull(state);
 
         if (state.Status == ArenaDraftSessionStatus.Idle)
         {
@@ -71,6 +108,8 @@ public sealed class ArenaDraftSnapshotAdapter(ArenaCardResolver resolver)
                 ambiguous,
                 ambiguousSet);
         }
+        var poolCards = state.RecoveredPool is null ? null : ResolveAll(state.DraftedPool.Occurrences,
+            unresolved, unresolvedSet, ambiguous, ambiguousSet);
 
         // Ambiguity takes presentation precedence because it is a known
         // one-to-many mapping, while both diagnostic lists remain available.
@@ -94,7 +133,8 @@ public sealed class ArenaDraftSnapshotAdapter(ArenaCardResolver resolver)
         var snapshot = new DraftSnapshot(
             new DraftPack(currentPosition!, currentCards!),
             new DraftHistory(history),
-            format);
+            format)
+        { RecoveredPool = poolCards is null ? null : new DraftedCardPool(poolCards.Select(c => c!)) };
         return ArenaDraftSnapshotResult.Ready(snapshot);
     }
 

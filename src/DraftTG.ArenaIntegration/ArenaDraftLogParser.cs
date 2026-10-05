@@ -14,7 +14,7 @@ public sealed class ArenaDraftLogParser
         }
 
         var line = ((ArenaLogSourceEvent.Line)sourceEvent).Text;
-        if (IsIncomingBotDraftStatusMarker(line)) return [];
+        if (IsIncomingBotDraftResponseMarker(line)) return [];
         var kind = Classify(line);
         if (kind is null) return [];
 
@@ -28,6 +28,7 @@ public sealed class ArenaDraftLogParser
             RecordKind.BotDraftPick => [ParseBotDraftPick(root)],
             RecordKind.EventJoin => ParseEventJoin(root),
             RecordKind.HumanCompletion => [ParseHumanCompletion(root)],
+            RecordKind.DeckSelection => ParseDeckSelection(root),
             _ => []
         };
     }
@@ -88,7 +89,10 @@ public sealed class ArenaDraftLogParser
         var eventName = Meaningful(OptionalText(fields, "EventName", "eventName"));
         if (string.Equals(OptionalText(fields, "DraftStatus"), "Completed", StringComparison.OrdinalIgnoreCase))
         {
-            return [new ArenaDraftLogEvent.DraftCompleted(new ArenaDraftCompletion(eventName, draftIdentifier))];
+            var completed = new List<ArenaDraftLogEvent>();
+            AddQuickDraftPoolSnapshot(completed, fields, eventName, draftIdentifier, null, completed: true);
+            completed.Add(new ArenaDraftLogEvent.DraftCompleted(new ArenaDraftCompletion(eventName, draftIdentifier)));
+            return completed;
         }
 
         var events = new List<ArenaDraftLogEvent>();
@@ -102,13 +106,12 @@ public sealed class ArenaDraftLogParser
         {
             var pack = RequiredInteger(fields, "PackNumber");
             var pick = RequiredInteger(fields, "PickNumber");
-            AddRecoveredQuickDraftHistory(
+            AddQuickDraftPoolSnapshot(
                 events,
                 fields,
                 eventName,
                 draftIdentifier,
-                pack,
-                pick);
+                BotCoordinate(pack, pick));
             events.Add(new ArenaDraftLogEvent.PackPresented(
                 new ArenaDraftPackPresentation(
                     draftIdentifier,
@@ -125,19 +128,17 @@ public sealed class ArenaDraftLogParser
         return events;
     }
 
-    private static void AddRecoveredQuickDraftHistory(
+    private static void AddQuickDraftPoolSnapshot(
         ICollection<ArenaDraftLogEvent> events,
         JsonElement fields,
         string? eventName,
         ArenaDraftIdentifier? draftIdentifier,
-        int wirePack,
-        int wirePick)
+        ArenaDraftCoordinate? coordinate,
+        bool completed = false)
     {
         if (eventName is null
             || ClassifyDraftMode(eventName)?.Kind != ArenaDraftModeKind.Quick
-            || OptionalInteger(fields, "NumCardsToPick") != 1
-            || wirePack is < 0 or > 2
-            || wirePick is < 0 or > 13
+            || (!completed && OptionalInteger(fields, "NumCardsToPick") != 1)
             || !fields.TryGetProperty("PickedCards", out var pickedCards))
         {
             return;
@@ -149,19 +150,9 @@ public sealed class ArenaDraftLogParser
                 "PickedCards");
         }
 
-        const int picksPerPack = 14;
-        var expectedCompletedPicks = (wirePack * picksPerPack) + wirePick;
-        if (pickedCards.GetArrayLength() != expectedCompletedPicks) return;
-
         var identifiers = ParseCardArray(fields, "PickedCards", allowEmpty: true);
-        for (var index = 0; index < identifiers.Count; index++)
-        {
-            events.Add(new ArenaDraftLogEvent.PickSubmitted(
-                new ArenaDraftPickSubmission(
-                    draftIdentifier,
-                    BotCoordinate(index / picksPerPack, index % picksPerPack),
-                    new ArenaCardIdentifierList([identifiers[index]]))));
-        }
+        events.Add(new ArenaDraftLogEvent.PickedCardsObserved(
+            new ArenaPickedCardsSnapshot(draftIdentifier, coordinate, identifiers)));
     }
 
     private static ArenaDraftLogEvent ParseBotDraftPick(JsonElement root)
@@ -199,7 +190,12 @@ public sealed class ArenaDraftLogParser
             new ArenaDraftStart(
                 eventName,
                 mode,
-                OptionalDraftIdentifier(OptionalText(fields, "DraftId", "draftId"))))];
+                OptionalDraftIdentifier(OptionalText(fields, "DraftId", "draftId")))
+            {
+                EntryRequestIdentifier = root.TryGetProperty("request", out _)
+                    && fields.TryGetProperty("EntryCurrencyType", out _) && fields.TryGetProperty("EntryCurrencyPaid", out _)
+                    ? Meaningful(OptionalText(root, "id")) : null
+            })];
     }
 
     private static ArenaDraftLogEvent ParseHumanCompletion(JsonElement root)
@@ -215,6 +211,28 @@ public sealed class ArenaDraftLogParser
     {
         var container = FirstEmbedded(root, "request", "response", "Payload") ?? root;
         return Embedded(container, "Payload") ?? container;
+    }
+
+    private static IReadOnlyList<ArenaDraftLogEvent> ParseDeckSelection(JsonElement root)
+    {
+        // A module name nested in Courses, ModulePayload or a deck summary is not this response.
+        if (!string.Equals(OptionalText(root, "CurrentModule"), "DeckSelect", StringComparison.Ordinal)) return [];
+        var fields = Embedded(root, "Payload");
+        if (fields is not { } payload
+            || !string.Equals(OptionalText(payload, "Result"), "Success", StringComparison.OrdinalIgnoreCase)
+            || !string.Equals(OptionalText(payload, "DraftStatus"), "Completed", StringComparison.OrdinalIgnoreCase)) return [];
+        var eventName = Meaningful(OptionalText(payload, "EventName"));
+        var mode = eventName is null ? null : ClassifyDraftMode(eventName);
+        if (mode is null) return [];
+        return [new ArenaDraftLogEvent.DraftCompleted(new(eventName,
+            OptionalDraftIdentifier(OptionalText(payload, "DraftId", "draftId")))
+        {
+            Origin = ArenaDraftCompletionOrigin.DeckSelection,
+            Mode = mode,
+            FinalPickedCards = mode.Kind == ArenaDraftModeKind.Quick && OptionalInteger(payload, "NumCardsToPick") == 1
+                && payload.TryGetProperty("PickedCards", out _)
+                ? ParseCardArray(payload, "PickedCards", allowEmpty: true) : null
+        })];
     }
 
     private static JsonElement ParseOuterJson(string line)
@@ -465,6 +483,9 @@ public sealed class ArenaDraftLogParser
         if (line.Contains("BotDraftDraftStatus", StringComparison.Ordinal)
             || line.Contains("BotDraft_DraftStatus", StringComparison.Ordinal)) return RecordKind.BotDraftStatus;
         if (line.Contains("\"CurrentModule\"", StringComparison.Ordinal)
+            && line.Contains("\"DeckSelect\"", StringComparison.Ordinal)
+            && line.Contains("\"Payload\"", StringComparison.Ordinal)) return RecordKind.DeckSelection;
+        if (line.Contains("\"CurrentModule\"", StringComparison.Ordinal)
             && line.Contains("\"BotDraft\"", StringComparison.Ordinal)
             && line.Contains("\"Payload\"", StringComparison.Ordinal)) return RecordKind.BotDraftStatus;
         if (line.Contains("DraftCompleteDraft", StringComparison.Ordinal)) return RecordKind.HumanCompletion;
@@ -474,19 +495,17 @@ public sealed class ArenaDraftLogParser
         return null;
     }
 
-    private static bool IsIncomingBotDraftStatusMarker(string line)
+    private static bool IsIncomingBotDraftResponseMarker(string line)
     {
-        var markerStart = line.IndexOf("<== BotDraftDraftStatus(", StringComparison.Ordinal);
-        if (markerStart < 0)
+        foreach (var name in new[] { "BotDraftDraftStatus", "BotDraft_DraftStatus", "BotDraftDraftPick", "BotDraft_DraftPick" })
         {
-            markerStart = line.IndexOf("<== BotDraft_DraftStatus(", StringComparison.Ordinal);
+            var markerStart = line.IndexOf($"<== {name}(", StringComparison.Ordinal);
+            if (markerStart < 0) continue;
+            var marker = line[markerStart..].Trim();
+            if (marker.EndsWith(')') && !marker.Contains('{', StringComparison.Ordinal)
+                && !marker.Contains('}', StringComparison.Ordinal)) return true;
         }
-        if (markerStart < 0) return false;
-
-        var marker = line[markerStart..].Trim();
-        return marker.EndsWith(')')
-            && !marker.Contains('{', StringComparison.Ordinal)
-            && !marker.Contains('}', StringComparison.Ordinal);
+        return false;
     }
 
     private static ArenaDraftLogParseException Missing(string field) =>
@@ -519,6 +538,7 @@ public sealed class ArenaDraftLogParser
         BotDraftStatus,
         BotDraftPick,
         EventJoin,
-        HumanCompletion
+        HumanCompletion,
+        DeckSelection
     }
 }

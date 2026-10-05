@@ -13,14 +13,22 @@ public sealed class LimitedStatisticsCoordinator(LimitedStatisticsService servic
     private readonly Channel<LimitedStatisticsUpdate> _updates = Channel.CreateBounded<LimitedStatisticsUpdate>(
         new BoundedChannelOptions(1) { FullMode = BoundedChannelFullMode.DropOldest });
     private readonly Dictionary<LimitedStatisticsContext, LoadedLimitedStatistics> _loaded = [];
+    private readonly Dictionary<ArchetypeStatisticsKey, LoadedArchetypeStatistics> _pairs = [];
+    private readonly Dictionary<ArchetypeStatisticsKey, CancellationTokenSource> _pairPending = [];
+    private int _pairRequests;
+    private readonly Dictionary<SuccessfulDeckKey, SuccessfulDeckLoadResult> _trophies = [];
+    private readonly Dictionary<SuccessfulDeckKey, CancellationTokenSource> _trophyPending = [];
+    private int _trophyRequests;
     private readonly List<Task> _workers = [];
     private readonly List<CancellationTokenSource> _cancellations = [];
     private CancellationTokenSource? _pending;
     private LimitedStatisticsContext? _context;
     private DraftSnapshot? _snapshot;
+    private DraftPackObservationHistory _observations = DraftPackObservationHistory.Empty;
     private string? _eventName;
     private ArenaDraftIdentifier? _draftId;
     private long _generation;
+    private long _revision;
     private bool _disposed;
 
     public IAsyncEnumerable<LimitedStatisticsUpdate> ReadUpdatesAsync(CancellationToken cancellationToken = default) =>
@@ -32,8 +40,12 @@ public sealed class LimitedStatisticsCoordinator(LimitedStatisticsService servic
         lock (_gate)
         {
             if (_disposed) return;
+            _revision++;
             _snapshot = update.SnapshotResult.Snapshot;
             var newSession = _draftId != update.ArenaState.DraftIdentifier || _eventName != update.ArenaState.EventName;
+            if (newSession) _observations = DraftPackObservationHistory.Empty;
+            _observations = _observations.Observe(_snapshot?.CurrentPack, service.CardCatalog,
+                update.SnapshotResult.ResolvedHistory ?? _snapshot?.History);
             _draftId = update.ArenaState.DraftIdentifier;
             _eventName = update.ArenaState.EventName;
             var context = update.ArenaState.Status == ArenaDraftSessionStatus.Active ? service.Resolve(update) : null;
@@ -44,14 +56,19 @@ public sealed class LimitedStatisticsCoordinator(LimitedStatisticsService servic
             if (context != _context || newSession)
             {
                 _generation++;
-                if (newSession) _loaded.Clear();
+                if (newSession) { _loaded.Clear(); _pairs.Clear(); _pairRequests = 0; }
+                if (newSession) { _trophies.Clear(); _trophyRequests = 0; }
+                foreach (var trophy in _trophyPending.Values) trophy.Cancel();
+                _trophyPending.Clear();
+                foreach (var pair in _pairPending.Values) pair.Cancel();
+                _pairPending.Clear();
                 _pending?.Cancel();
                 _pending = null;
                 _context = context;
             }
             if (context is null)
             {
-                Publish(new(_snapshot, false, null, "Draft expansion or format is unknown or unsupported."));
+                Publish(new(_snapshot, false, null, "Draft expansion or format is unknown or unsupported.", _observations));
                 return;
             }
             if (_loaded.TryGetValue(context, out var loaded))
@@ -60,7 +77,7 @@ public sealed class LimitedStatisticsCoordinator(LimitedStatisticsService servic
                 QueueLoadedUpdate(loaded);
                 return;
             }
-            Publish(new(_snapshot, true, null));
+            Publish(new(_snapshot, true, null, observationHistory: _observations));
             if (_pending is not null) return;
             var cancellation = new CancellationTokenSource();
             _pending = cancellation;
@@ -104,16 +121,114 @@ public sealed class LimitedStatisticsCoordinator(LimitedStatisticsService servic
     {
         var snapshot = _snapshot;
         var generation = _generation;
+        var observations = _observations;
+        var revision = _revision;
         _workers.Add(Task.Run(() =>
         {
-            var update = new LimitedStatisticsUpdate(snapshot, false, service.Map(loaded, snapshot));
+            var initial = service.CreateUpdate(loaded, snapshot, observations);
+            LoadedArchetypeStatistics? pair = null;
+            SuccessfulDeckLoadResult? trophy = null;
+            var trophyStatus = TrophyDataStatus.Unavailable;
+            var status = ArchetypeDataStatus.Unavailable;
             lock (_gate)
-                if (!_disposed && generation == _generation && ReferenceEquals(snapshot, _snapshot))
+            {
+                if (!IsCurrent(generation, revision, snapshot)) return;
+                if (initial.ArchetypeRecommendation?.Profile.Active is { } active)
+                {
+                    var key = new ArchetypeStatisticsKey(loaded.Requested, active.Definition.Pair);
+                    if (_pairs.TryGetValue(key, out pair))
+                        status = new(false, pair.Ratings.Source switch
+                        {
+                            DraftTG.Data.SeventeenLandsSource.Live => LimitedStatisticsSource.Live,
+                            DraftTG.Data.SeventeenLandsSource.Cache => LimitedStatisticsSource.Cache,
+                            DraftTG.Data.SeventeenLandsSource.StaleCache => LimitedStatisticsSource.StaleCache,
+                            _ => LimitedStatisticsSource.Unavailable
+                        }, pair.Ratings.Diagnostic);
+                    else if (service.CanLoadPairStatistics)
+                    {
+                        if (!_pairPending.ContainsKey(key) && _pairRequests < service.ArchetypeConfiguration.MaxPairDatasetsPerDraft)
+                        {
+                            _pairRequests++;
+                            var cancellation = new CancellationTokenSource();
+                            _cancellations.Add(cancellation); _pairPending[key] = cancellation;
+                            _workers.Add(Task.Run(() => LoadPairAsync(key, generation, cancellation.Token)));
+                        }
+                        status = _pairPending.ContainsKey(key) ? new(true, LimitedStatisticsSource.Unavailable)
+                            : new(false, LimitedStatisticsSource.Unavailable, "Pair request budget exhausted for this draft.");
+                    }
+                    else status = new(false, LimitedStatisticsSource.Unavailable, "Pair statistics provider unavailable.");
+                    var trophyKey = new SuccessfulDeckKey(loaded.Requested.Expansion,
+                        TrophyRecommendationEngine.Format(loaded.Requested.Format), active.Definition.Pair);
+                    if (_trophies.TryGetValue(trophyKey, out trophy))
+                        trophyStatus = new(false, trophy.Source, trophy.Diagnostic);
+                    else if (service.CanLoadTrophyEvidence)
+                    {
+                        if (!_trophyPending.ContainsKey(trophyKey) && _trophyRequests < service.TrophyConfiguration.MaxCorporaPerDraft)
+                        {
+                            _trophyRequests++;
+                            var cancellation = new CancellationTokenSource();
+                            _cancellations.Add(cancellation); _trophyPending[trophyKey] = cancellation;
+                            _workers.Add(Task.Run(() => LoadTrophyAsync(trophyKey, generation, cancellation.Token)));
+                        }
+                        trophyStatus = _trophyPending.ContainsKey(trophyKey) ? new(true, SuccessfulDeckSource.Unavailable)
+                            : new(false, SuccessfulDeckSource.Unavailable, "Trophy request budget exhausted for this draft.");
+                    }
+                    else trophyStatus = new(false, SuccessfulDeckSource.Unavailable, "Successful-deck provider unavailable.");
+                }
+            }
+            // Mapping/scoring stays off the monitor thread and outside the coordinator gate.
+            var update = service.CreateUpdate(loaded, snapshot, initial.ObservationHistory, pair, status, trophy, trophyStatus);
+            lock (_gate)
+                if (IsCurrent(generation, revision, snapshot))
+                {
+                    _observations = update.ObservationHistory;
                     Publish(update);
+                }
         }));
     }
 
+    private bool IsCurrent(long generation, long revision, DraftSnapshot? snapshot) =>
+        !_disposed && generation == _generation && revision == _revision && ReferenceEquals(snapshot, _snapshot);
+
+    private async Task LoadPairAsync(ArchetypeStatisticsKey key, long generation, CancellationToken token)
+    {
+        LoadedArchetypeStatistics? loaded = null;
+        try { loaded = await service.LoadPairAsync(key, token).ConfigureAwait(false); }
+        catch (OperationCanceledException) when (token.IsCancellationRequested) { return; }
+        catch (Exception)
+        {
+            loaded = new(key, new(key.Context.Expansion, LimitedStatisticsService.ProviderFormat(key.Context.Format), [],
+                DraftTG.Data.SeventeenLandsSource.Unavailable, diagnostic: "Exact pair statistics unavailable; using Lane result.", colorPair: key.Pair));
+        }
+        lock (_gate)
+        {
+            if (_disposed || generation != _generation || token.IsCancellationRequested) return;
+            _pairPending.Remove(key); _pairs[key] = loaded;
+            // Supersede a queued pre-affinity calculation even if the Arena snapshot did not change.
+            _revision++;
+            if (_context is { } context && _loaded.TryGetValue(context, out var environment)) QueueLoadedUpdate(environment);
+        }
+    }
+
     private void Publish(LimitedStatisticsUpdate update) => _updates.Writer.TryWrite(update);
+
+    private async Task LoadTrophyAsync(SuccessfulDeckKey key, long generation, CancellationToken token)
+    {
+        SuccessfulDeckLoadResult loaded;
+        try { loaded = await service.LoadTrophyAsync(key, token).ConfigureAwait(false); }
+        catch (OperationCanceledException) when (token.IsCancellationRequested) { return; }
+        catch (Exception)
+        { loaded = new(key, null, SuccessfulDeckSource.Unavailable, "Exact-format trophy evidence unavailable; using Archetype result."); }
+        lock (_gate)
+        {
+            if (_disposed || generation != _generation || token.IsCancellationRequested) return;
+            _trophyPending.Remove(key); _trophies[key] = loaded;
+            // Queue the current snapshot, and choose its current active pair again. An older
+            // pair may remain cached, but can never contaminate the new pair or draft.
+            _revision++;
+            if (_context is { } context && _loaded.TryGetValue(context, out var environment)) QueueLoadedUpdate(environment);
+        }
+    }
 
     public async ValueTask DisposeAsync()
     {

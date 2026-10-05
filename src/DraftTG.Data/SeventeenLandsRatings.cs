@@ -1,3 +1,5 @@
+using DraftTG.Domain;
+
 namespace DraftTG.Data;
 
 public enum SeventeenLandsFormat { PremierDraft, TradDraft, QuickDraft }
@@ -21,7 +23,8 @@ public sealed class SeventeenLandsRatingsResult
 {
     public SeventeenLandsRatingsResult(string expansion, SeventeenLandsFormat format,
         IEnumerable<SeventeenLandsRating> rows, SeventeenLandsSource source,
-        DateTimeOffset? fetchedAt = null, string? diagnostic = null, SeventeenLandsDatasetMetadata? metadata = null)
+        DateTimeOffset? fetchedAt = null, string? diagnostic = null, SeventeenLandsDatasetMetadata? metadata = null,
+        ArchetypeColorPair? colorPair = null)
     {
         Expansion = expansion;
         Format = format;
@@ -30,6 +33,7 @@ public sealed class SeventeenLandsRatingsResult
         FetchedAt = fetchedAt;
         Diagnostic = diagnostic;
         Metadata = metadata;
+        ColorPair = colorPair;
     }
 
     public string Expansion { get; }
@@ -39,6 +43,7 @@ public sealed class SeventeenLandsRatingsResult
     public DateTimeOffset? FetchedAt { get; }
     public string? Diagnostic { get; }
     public SeventeenLandsDatasetMetadata? Metadata { get; }
+    public ArchetypeColorPair? ColorPair { get; }
 
     public string DatasetDiagnosticText => Metadata is null ? string.Empty
         : $"Expansion: {Expansion}\nRequested format: {Format}\nSource endpoint: {Metadata.SourceEndpoint}"
@@ -50,6 +55,12 @@ public sealed class SeventeenLandsRatingsResult
                 SeventeenLandsSource.StaleCache => "stale cache",
                 _ => "unavailable"
             });
+}
+
+public interface ISeventeenLandsPairRatingsClient
+{
+    Task<SeventeenLandsRatingsResult> LoadPairAsync(string expansion, SeventeenLandsFormat format,
+        ArchetypeColorPair colorPair, CancellationToken cancellationToken = default);
 }
 
 public interface ISeventeenLandsCardRatingsClient

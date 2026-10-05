@@ -22,7 +22,8 @@ public sealed record DraftTGRuntime(
     DraftTGCardDataStatus CardDataStatus,
     DateTimeOffset? CardDataUpdatedAt,
     string? CardDataDiagnostic,
-    LimitedStatisticsCoordinator? Statistics = null);
+    LimitedStatisticsCoordinator? Statistics = null,
+    DeckConstructionCoordinator? Decks = null);
 
 public interface IDraftTGRuntimeFactory
 {
@@ -53,10 +54,14 @@ public sealed class DraftTGRuntimeFactory : IDraftTGRuntimeFactory
             bootstrap.SnapshotAdapter);
 
         var statisticsHttp = new HttpClient { Timeout = TimeSpan.FromSeconds(30) };
-        var statistics = new LimitedStatisticsCoordinator(
-            new LimitedStatisticsService(new SeventeenLandsCardRatingsClient(
-                statisticsHttp, ApplicationDataPathProviderFactory.CreateDefault()), bootstrap.Catalog),
-            statisticsHttp);
+        var service = new LimitedStatisticsService(new SeventeenLandsCardRatingsClient(
+                statisticsHttp, ApplicationDataPathProviderFactory.CreateDefault()), bootstrap.Catalog,
+                trophyProvider: new SeventeenLandsTrophyClient(statisticsHttp, ApplicationDataPathProviderFactory.CreateDefault(),
+                    canonicalCardName: (id, name) => bootstrap.ArenaCardResolver.TryResolve(ArenaCardIdentifier.Create(id), out var identifier)
+                        && bootstrap.Catalog.Find(identifier) is { } card
+                        && (card.Name == name || card.Name.StartsWith(name + " // ", StringComparison.Ordinal)) ? card.Name : null));
+        var statistics = new LimitedStatisticsCoordinator(service, statisticsHttp);
+        var decks = new DeckConstructionCoordinator(new DeckConstructionService(service));
 
         return new DraftTGRuntime(
             coordinator,
@@ -64,7 +69,7 @@ public sealed class DraftTGRuntimeFactory : IDraftTGRuntimeFactory
             MapStatus(bootstrap.DataSource),
             bootstrap.DatasetUpdatedAt,
             bootstrap.RefreshDiagnostic?.Message,
-            statistics);
+            statistics, decks);
     }
 
     private static DraftTGCardDataStatus MapStatus(ScryfallCardDataLoadSource source) =>

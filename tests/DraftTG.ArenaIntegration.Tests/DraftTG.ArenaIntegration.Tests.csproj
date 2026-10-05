@@ -17,4 +17,9 @@
   <ItemGroup>
     <Using Include="Xunit" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="../Fixtures/arena-woe-saved-deck-live.jsonl" Link="Fixtures/arena-woe-saved-deck-live.jsonl" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="../Fixtures/quick-draft-picked-cards-live.jsonl" Link="Fixtures/quick-draft-picked-cards-live.jsonl" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="../Fixtures/deckselect-woe-completion-live.jsonl" Link="Fixtures/deckselect-woe-completion-live.jsonl" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
 </Project>

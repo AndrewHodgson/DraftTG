@@ -26,7 +26,11 @@ public sealed record LimitedCardStatisticsPresentation(string GameInHand, string
 public sealed class LimitedStatisticsUpdate
 {
     public LimitedStatisticsUpdate(DraftSnapshot? snapshot, bool isLoading, LimitedStatisticsLoadResult? result,
-        string? unavailableReason = null)
+        string? unavailableReason = null, DraftPackObservationHistory? observationHistory = null,
+        SetArchetypeProfile? archetypeProfile = null, ArchetypePairStatistics? archetypeStatistics = null,
+        ArchetypeConfiguration? archetypeConfiguration = null, ArchetypeDataStatus? archetypeDataStatus = null,
+        bool useDefaultArchetypeProfile = true, SuccessfulDeckCorpus? trophyCorpus = null,
+        TrophyRecommendationConfiguration? trophyConfiguration = null, TrophyDataStatus? trophyDataStatus = null)
     {
         Snapshot = snapshot;
         IsLoading = isLoading;
@@ -34,10 +38,40 @@ public sealed class LimitedStatisticsUpdate
         Recommendation = !isLoading && snapshot is not null && result is not null
             ? new StatisticalRecommendationEngine().Recommend(snapshot.CurrentPack, result.Catalog,
                 result.EnvironmentCatalog) : null;
+        ContextualRecommendation = Recommendation is not null
+            ? new ContextualRecommendationEngine().Recommend(snapshot!, result!.CardCatalog, Recommendation) : null;
+        ObservationHistory = observationHistory ?? DraftPackObservationHistory.Empty;
+        if (snapshot is not null && result is not null && Recommendation is not null)
+            ObservationHistory = ObservationHistory.Observe(snapshot.CurrentPack, result.CardCatalog,
+                snapshot.History, Recommendation, result.Catalog);
+        LaneRecommendation = ContextualRecommendation is not null ? new LaneContextualRecommendationEngine().Recommend(
+            snapshot!, ContextualRecommendation, ObservationHistory, result!.RequestedContext.Format) : null;
+        ArchetypeDataStatus = archetypeDataStatus ?? global::DraftTG.Application.ArchetypeDataStatus.Unavailable;
+        ArchetypeRecommendation = LaneRecommendation is not null
+            ? new ArchetypeRecommendationEngine(archetypeConfiguration).Recommend(LaneRecommendation,
+                archetypeProfile ?? (useDefaultArchetypeProfile ? DraftTG.Data.SetArchetypeProfileCatalog.Default.Find(result!.RequestedContext.Expansion) : null),
+                result!.RequestedContext, archetypeStatistics) : null;
+        TrophyDataStatus = trophyDataStatus ?? global::DraftTG.Application.TrophyDataStatus.Unavailable;
+        TrophyRecommendation = ArchetypeRecommendation is not null
+            ? new TrophyRecommendationEngine(trophyConfiguration).Recommend(ArchetypeRecommendation,
+                result!.RequestedContext, result.CardCatalog, trophyCorpus) : null;
         Cards = new ReadOnlyDictionary<CardIdentifier, LimitedCardStatisticsPresentation>(
             (snapshot?.CurrentPack.AvailableCardIdentifiers ?? []).Distinct().ToDictionary(id => id,
                 id => isLoading ? LimitedCardStatisticsPresentation.Loading
                     : LimitedCardStatisticsPresentation.From(result?.Catalog.StatisticsFor(id))));
+        // Rank order and display order are independent. Join each stage by occurrence identity.
+        var statistical = Recommendation?.Cards.ToDictionary(c => new CardOccurrenceKey(c.PackIndex, c.CardIdentifier));
+        var pool = ContextualRecommendation?.Cards.ToDictionary(c => new CardOccurrenceKey(c.PackIndex, c.CardIdentifier));
+        var lane = LaneRecommendation?.Cards.ToDictionary(c => new CardOccurrenceKey(c.PackIndex, c.CardIdentifier));
+        var archetype = ArchetypeRecommendation?.Cards.ToDictionary(c => new CardOccurrenceKey(c.PackIndex, c.CardIdentifier));
+        var trophy = TrophyRecommendation?.Cards.ToDictionary(c => new CardOccurrenceKey(c.PackIndex, c.CardIdentifier));
+        Occurrences = new ReadOnlyDictionary<CardOccurrenceKey, CurrentPackCardPresentation>(
+            (snapshot?.CurrentPack.AvailableCardIdentifiers ?? []).Select((id, index) => new CardOccurrenceKey(index, id))
+            .ToDictionary(key => key, key => new CurrentPackCardPresentation(key,
+                result?.CardCatalog.Find(key.CardIdentifier), result?.Catalog.StatisticsFor(key.CardIdentifier),
+                result?.StatisticsResolvedNames.GetValueOrDefault(key.CardIdentifier),
+                statistical?.GetValueOrDefault(key), pool?.GetValueOrDefault(key), lane?.GetValueOrDefault(key), isLoading,
+                archetype?.GetValueOrDefault(key), trophy?.GetValueOrDefault(key))));
         var format = result?.ActualSourceContext?.Format switch
         {
             LimitedStatisticsFormat.QuickDraft => "Quick Draft",
@@ -65,9 +99,18 @@ public sealed class LimitedStatisticsUpdate
         }
     }
     public DraftSnapshot? Snapshot { get; }
+    public DraftPack? PackIdentity => Snapshot?.CurrentPack;
+    public IReadOnlyDictionary<CardOccurrenceKey, CurrentPackCardPresentation> Occurrences { get; }
     public bool IsLoading { get; }
     public LimitedStatisticsLoadResult? Result { get; }
     public DraftRecommendation? Recommendation { get; }
+    public ContextualDraftRecommendation? ContextualRecommendation { get; }
+    public LaneDraftRecommendation? LaneRecommendation { get; }
+    public ArchetypeRecommendationResult? ArchetypeRecommendation { get; }
+    public ArchetypeDataStatus ArchetypeDataStatus { get; }
+    public TrophyRecommendationResult? TrophyRecommendation { get; }
+    public TrophyDataStatus TrophyDataStatus { get; }
+    public DraftPackObservationHistory ObservationHistory { get; }
     public IReadOnlyDictionary<CardIdentifier, LimitedCardStatisticsPresentation> Cards { get; }
     public string StatusText { get; }
     public string? Diagnostic { get; }

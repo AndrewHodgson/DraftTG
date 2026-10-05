@@ -5,7 +5,7 @@ using DraftTG.Domain;
 
 namespace DraftTG.Data;
 
-internal sealed class ScryfallCardRecord
+internal sealed class ScryfallCardRecord : ScryfallGameplayFields
 {
     [JsonPropertyName("id")]
     public string? Id { get; init; }
@@ -30,12 +30,30 @@ internal sealed class ScryfallCardRecord
 
     [JsonPropertyName("arena_id")]
     public int? ArenaIdentifier { get; init; }
+
+    [JsonPropertyName("layout")]
+    public string? Layout { get; init; }
 }
 
-internal sealed class ScryfallCardFace
+internal sealed class ScryfallCardFace : ScryfallGameplayFields
 {
+    [JsonPropertyName("name")]
+    public string? Name { get; init; }
+
     [JsonPropertyName("colors")]
     public string[]? Colors { get; init; }
+}
+
+internal class ScryfallGameplayFields
+{
+    [JsonPropertyName("cmc")] public JsonElement ManaValue { get; init; }
+    [JsonPropertyName("mana_cost")] public string? ManaCost { get; init; }
+    [JsonPropertyName("type_line")] public JsonElement TypeLine { get; init; }
+    [JsonPropertyName("oracle_text")] public string? OracleText { get; init; }
+    [JsonPropertyName("keywords")] public string[]? Keywords { get; init; }
+    [JsonPropertyName("power")] public string? Power { get; init; }
+    [JsonPropertyName("toughness")] public string? Toughness { get; init; }
+    [JsonPropertyName("produced_mana")] public string[]? ProducedMana { get; init; }
 }
 
 internal sealed record NormalizedScryfallCard(Card Card, int? ArenaIdentifier);
@@ -96,7 +114,7 @@ internal static class ScryfallCardNormalizer
                 NormalizeColors(record),
                 NormalizeRarity(record.Rarity),
                 setCode!,
-                collectorNumber!),
+                collectorNumber!) { GameplayMetadata = NormalizeGameplay(record) },
             record.ArenaIdentifier);
     }
 
@@ -106,7 +124,10 @@ internal static class ScryfallCardNormalizer
             ?? record.CardFaces?.SelectMany(face => face.Colors ?? [])
             ?? [];
 
-        return new ColorSet(codes.Select(code => code switch
+        return NormalizeColorCodes(codes);
+    }
+
+    private static ColorSet NormalizeColorCodes(IEnumerable<string> codes) => new(codes.Select(code => code switch
         {
             "W" => MagicColor.White,
             "U" => MagicColor.Blue,
@@ -117,7 +138,57 @@ internal static class ScryfallCardNormalizer
                 CardCatalogImportErrorKind.UnsupportedColorCode,
                 code)
         }));
+
+    private static CardGameplayMetadata NormalizeGameplay(ScryfallCardRecord record)
+    {
+        var layout = record.Layout switch
+        {
+            null or "normal" => CardLayout.Normal, "adventure" => CardLayout.Adventure,
+            "transform" => CardLayout.Transform, "modal_dfc" => CardLayout.ModalDoubleFaced,
+            "split" => CardLayout.Split, _ => CardLayout.Other
+        };
+        var manaValue = NormalizeManaValue(record.ManaValue);
+        var faces = (record.CardFaces ?? []).Select((f, i) => new CardFaceMetadata(
+            f.Name, f.ManaCost, NormalizeManaValue(f.ManaValue) ??
+                (i == 0 && layout is CardLayout.Adventure or CardLayout.Transform or CardLayout.ModalDoubleFaced ? manaValue : null),
+            f.Colors is null ? null : NormalizeColorCodes(f.Colors),
+            NormalizeTypeLine(f.TypeLine),
+            f.OracleText, f.Power, f.Toughness)).ToArray();
+        var front = faces.FirstOrDefault();
+        return new CardGameplayMetadata(manaValue ?? front?.ManaValue,
+            record.ManaCost ?? front?.ManaCost, NormalizeTypeLine(record.TypeLine) ?? front?.TypeLine,
+            layout, faces, record.OracleText ?? front?.OracleText, record.Keywords,
+            record.Power ?? front?.Power, record.Toughness ?? front?.Toughness,
+            record.ProducedMana?.Select(NormalizeManaKind).Where(kind => kind.HasValue).Select(kind => kind!.Value),
+            record.Colors is not null || record.CardFaces is { Length: > 0 } && record.CardFaces.All(f => f.Colors is not null),
+            record.ProducedMana?.Where(code => NormalizeManaKind(code) is null));
     }
+
+    private static double? NormalizeManaValue(JsonElement value)
+    {
+        if (value.ValueKind is JsonValueKind.Undefined or JsonValueKind.Null) return null;
+        if (value.ValueKind != JsonValueKind.Number || !value.TryGetDouble(out var number) || !double.IsFinite(number) || number < 0)
+            throw new CardCatalogImportException(CardCatalogImportErrorKind.InvalidManaValue, value.GetRawText());
+        return number;
+    }
+
+    private static string? NormalizeTypeLine(JsonElement value)
+    {
+        if (value.ValueKind is JsonValueKind.Undefined or JsonValueKind.Null) return null;
+        if (value.ValueKind != JsonValueKind.String)
+            throw new CardCatalogImportException(CardCatalogImportErrorKind.InvalidCardType, value.GetRawText());
+        var text = value.GetString();
+        try { _ = CardTypeSet.Parse(text); }
+        catch (ArgumentException error) { throw new CardCatalogImportException(CardCatalogImportErrorKind.InvalidCardType, text ?? "", error); }
+        return text;
+    }
+
+    private static ManaKind? NormalizeManaKind(string code) => code switch
+    {
+        "W" => ManaKind.White, "U" => ManaKind.Blue, "B" => ManaKind.Black,
+        "R" => ManaKind.Red, "G" => ManaKind.Green, "C" => ManaKind.Colorless,
+        _ => null
+    };
 
     private static CardRarity NormalizeRarity(string? rarity) => rarity switch
     {

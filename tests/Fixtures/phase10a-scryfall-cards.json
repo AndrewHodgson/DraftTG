@@ -1,0 +1,310 @@
+[
+  {
+    "id": "09a4578a-7dc6-4da3-93ee-913b10be5740",
+    "arena_id": 86978,
+    "name": "Gingerbrute",
+    "layout": "normal",
+    "mana_cost": "{1}",
+    "cmc": 1.0,
+    "type_line": "Artifact Creature — Food Golem",
+    "oracle_text": "Haste (This creature can attack and {T} as soon as it comes under your control.)\n{1}: This creature can't be blocked this turn except by creatures with haste.\n{2}, {T}, Sacrifice this creature: You gain 3 life.",
+    "power": "1",
+    "toughness": "1",
+    "colors": [],
+    "keywords": [
+      "Haste"
+    ],
+    "set": "woe",
+    "collector_number": "246",
+    "rarity": "common"
+  },
+  {
+    "id": "190d97bc-dbef-496d-9bd1-b785bdf8a964",
+    "arena_id": 86776,
+    "name": "Candy Grapple",
+    "layout": "normal",
+    "mana_cost": "{1}{B}",
+    "cmc": 2.0,
+    "type_line": "Instant",
+    "oracle_text": "Bargain (You may sacrifice an artifact, enchantment, or token as you cast this spell.)\nTarget creature gets -3/-3 until end of turn. If this spell was bargained, that creature gets -5/-5 until end of turn instead.",
+    "colors": [
+      "B"
+    ],
+    "keywords": [
+      "Bargain"
+    ],
+    "set": "woe",
+    "collector_number": "83",
+    "rarity": "common"
+  },
+  {
+    "id": "1bd51a22-3e0d-4826-aab7-0adbfce4478a",
+    "arena_id": 87019,
+    "name": "Forest",
+    "layout": "normal",
+    "mana_cost": "",
+    "cmc": 0.0,
+    "type_line": "Basic Land — Forest",
+    "oracle_text": "({T}: Add {G}.)",
+    "colors": [],
+    "keywords": [],
+    "produced_mana": [
+      "G"
+    ],
+    "set": "woe",
+    "collector_number": "276",
+    "rarity": "common"
+  },
+  {
+    "id": "2cfd365e-34d1-4224-b925-119000311934",
+    "arena_id": 86915,
+    "name": "Greta, Sweettooth Scourge",
+    "layout": "normal",
+    "mana_cost": "{1}{B}{G}",
+    "cmc": 3.0,
+    "type_line": "Legendary Creature — Human Warrior",
+    "oracle_text": "When Greta enters, create a Food token. (It's an artifact with \"{2}, {T}, Sacrifice this token: You gain 3 life.\")\n{G}, Sacrifice a Food: Put a +1/+1 counter on target creature. Activate only as a sorcery.\n{1}{B}, Sacrifice a Food: You draw a card and you lose 1 life.",
+    "power": "3",
+    "toughness": "3",
+    "colors": [
+      "B",
+      "G"
+    ],
+    "keywords": [
+      "Food"
+    ],
+    "set": "woe",
+    "collector_number": "205",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "74f9c819-719a-461b-8e7e-a26c88e8099b",
+    "arena_id": 86988,
+    "name": "Evolving Wilds",
+    "layout": "normal",
+    "mana_cost": "",
+    "cmc": 0.0,
+    "type_line": "Land",
+    "oracle_text": "{T}, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",
+    "colors": [],
+    "keywords": [],
+    "set": "woe",
+    "collector_number": "256",
+    "rarity": "common"
+  },
+  {
+    "id": "f2c42755-bf91-4c75-95c6-d2a60ba3492a",
+    "arena_id": 86799,
+    "name": "Rat Out",
+    "layout": "normal",
+    "mana_cost": "{B}",
+    "cmc": 1.0,
+    "type_line": "Instant",
+    "oracle_text": "Up to one target creature gets -1/-1 until end of turn. You create a 1/1 black Rat creature token with \"This token can't block.\"",
+    "colors": [
+      "B"
+    ],
+    "keywords": [],
+    "set": "woe",
+    "collector_number": "103",
+    "rarity": "common"
+  },
+  {
+    "id": "fab7646a-61e8-446b-9dba-ac6e0db82f10",
+    "arena_id": 86831,
+    "name": "Grabby Giant // That's Mine",
+    "layout": "adventure",
+    "mana_cost": "{3}{R} // {1}{R}",
+    "cmc": 4.0,
+    "type_line": "Creature — Giant // Instant — Adventure",
+    "power": "4",
+    "toughness": "3",
+    "colors": [
+      "R"
+    ],
+    "keywords": [
+      "Reach",
+      "Treasure"
+    ],
+    "card_faces": [
+      {
+        "name": "Grabby Giant",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "oracle_text": "Reach\n{2}{R}, Sacrifice an artifact or land: Draw a card.",
+        "power": "4",
+        "toughness": "3"
+      },
+      {
+        "name": "That's Mine",
+        "mana_cost": "{1}{R}",
+        "type_line": "Instant — Adventure",
+        "oracle_text": "Create a Treasure token. (Then exile this card. You may cast the creature later from exile.)"
+      }
+    ],
+    "set": "woe",
+    "collector_number": "133",
+    "rarity": "common"
+  },
+  {
+    "id": "001e9f20-5b15-41cb-bf82-46172decc235",
+    "arena_id": 96150,
+    "name": "Balamb Garden, SeeD Academy // Balamb Garden, Airborne",
+    "layout": "transform",
+    "cmc": 0.0,
+    "type_line": "Land — Town // Legendary Artifact — Vehicle",
+    "keywords": [
+      "Flying",
+      "Transform",
+      "Crew"
+    ],
+    "produced_mana": [
+      "G",
+      "U"
+    ],
+    "card_faces": [
+      {
+        "name": "Balamb Garden, SeeD Academy",
+        "mana_cost": "",
+        "type_line": "Land — Town",
+        "oracle_text": "This land enters tapped.\n{T}: Add {G} or {U}.\n{5}{G}{U}, {T}: Transform this land. This ability costs {1} less to activate for each other Town you control.",
+        "colors": []
+      },
+      {
+        "name": "Balamb Garden, Airborne",
+        "mana_cost": "",
+        "type_line": "Legendary Artifact — Vehicle",
+        "oracle_text": "Flying\nWhenever Balamb Garden attacks, draw a card.\nCrew 1 (Tap any number of creatures you control with total power 1 or more: This Vehicle becomes an artifact creature until end of turn.)",
+        "colors": [],
+        "power": "5",
+        "toughness": "4"
+      }
+    ],
+    "set": "fin",
+    "collector_number": "272",
+    "rarity": "rare"
+  },
+  {
+    "id": "00320106-ce51-46a9-b0f9-79b3baf4e505",
+    "arena_id": 69358,
+    "name": "Consecrate // Consume",
+    "layout": "split",
+    "mana_cost": "{1}{W/B} // {2}{W}{B}",
+    "cmc": 6.0,
+    "type_line": "Instant // Sorcery",
+    "colors": [
+      "B",
+      "W"
+    ],
+    "keywords": [],
+    "card_faces": [
+      {
+        "name": "Consecrate",
+        "mana_cost": "{1}{W/B}",
+        "type_line": "Instant",
+        "oracle_text": "Exile target card from a graveyard.\nDraw a card."
+      },
+      {
+        "name": "Consume",
+        "mana_cost": "{2}{W}{B}",
+        "type_line": "Sorcery",
+        "oracle_text": "Target player sacrifices a creature with the greatest power among creatures they control. You gain life equal to its power."
+      }
+    ],
+    "set": "rna",
+    "collector_number": "224",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "014027c4-7f9d-4096-b308-ea4be574c0d4",
+    "arena_id": 73227,
+    "name": "Skyclave Cleric // Skyclave Basilica",
+    "layout": "modal_dfc",
+    "cmc": 2.0,
+    "type_line": "Creature — Kor Cleric // Land",
+    "keywords": [],
+    "produced_mana": [
+      "W"
+    ],
+    "card_faces": [
+      {
+        "name": "Skyclave Cleric",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Kor Cleric",
+        "oracle_text": "When this creature enters, you gain 2 life.",
+        "colors": [
+          "W"
+        ],
+        "power": "1",
+        "toughness": "3"
+      },
+      {
+        "name": "Skyclave Basilica",
+        "mana_cost": "",
+        "type_line": "Land",
+        "oracle_text": "This land enters tapped.\n{T}: Add {W}.",
+        "colors": []
+      }
+    ],
+    "set": "znr",
+    "collector_number": "40",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "2c2ee817-9ca9-4f09-bc71-7994c19a9470",
+    "arena_id": 86791,
+    "name": "Hopeless Nightmare",
+    "layout": "normal",
+    "mana_cost": "{B}",
+    "cmc": 1.0,
+    "type_line": "Enchantment",
+    "oracle_text": "When this enchantment enters, each opponent discards a card and loses 2 life.\nWhen this enchantment is put into a graveyard from the battlefield, scry 2.\n{2}{B}: Sacrifice this enchantment.",
+    "colors": [
+      "B"
+    ],
+    "keywords": [
+      "Scry"
+    ],
+    "set": "woe",
+    "collector_number": "95",
+    "rarity": "common"
+  },
+  {
+    "id": "8059be65-3c73-49bb-a3b6-c346ce2f9fa4",
+    "arena_id": 86813,
+    "name": "Voracious Vermin",
+    "layout": "normal",
+    "mana_cost": "{2}{B}",
+    "cmc": 3.0,
+    "type_line": "Creature — Rat",
+    "oracle_text": "When this creature enters, create a 1/1 black Rat creature token with \"This token can't block.\"\nWhenever another creature you control dies, put a +1/+1 counter on this creature.",
+    "power": "2",
+    "toughness": "1",
+    "colors": [
+      "B"
+    ],
+    "keywords": [],
+    "set": "woe",
+    "collector_number": "116",
+    "rarity": "common"
+  },
+  {
+    "id": "9597d9ea-d9b2-4009-8e7c-02caa3585bc5",
+    "arena_id": 86889,
+    "name": "Return from the Wilds",
+    "layout": "normal",
+    "mana_cost": "{2}{G}",
+    "cmc": 3.0,
+    "type_line": "Sorcery",
+    "oracle_text": "Choose two —\n• Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\n• Create a 1/1 white Human creature token.\n• Create a Food token. (It's an artifact with \"{2}, {T}, Sacrifice this token: You gain 3 life.\")",
+    "colors": [
+      "G"
+    ],
+    "keywords": [
+      "Food"
+    ],
+    "set": "woe",
+    "collector_number": "181",
+    "rarity": "common"
+  }
+]

@@ -107,7 +107,12 @@ public sealed class DraftSessionCoordinator
 
                     yield return new DraftSessionUpdate(
                         stateUpdate.Snapshot,
-                        _snapshotAdapter.Convert(stateUpdate.Snapshot));
+                        _snapshotAdapter.Convert(stateUpdate.Snapshot),
+                        (draftEvent is ArenaDraftLogEvent.PickedCardsObserved
+                            or ArenaDraftLogEvent.DraftCompleted { Completion.Origin: ArenaDraftCompletionOrigin.DeckSelection })
+                            && stateUpdate.Snapshot.PickedCardsDiagnostic is { } warning
+                            ? new(DraftSessionDiagnosticKind.PickedCardsSnapshot, warning.Message,
+                                PickedCardsDiagnosticKind: warning.Kind) : null);
                 }
             }
         }

@@ -1,0 +1,283 @@
+{
+  "Source": "User-confirmed P1P6 visual order; local BotDraft payload/Scryfall/17Lands cache metrics. Not an inferred sorting rule.",
+  "LogPack": {
+    "Result": "Success",
+    "EventName": "QuickDraft_WOE_20260929",
+    "DraftStatus": "PickNext",
+    "PackNumber": 0,
+    "PickNumber": 5,
+    "NumCardsToPick": 1,
+    "DraftPack": [
+      "86982",
+      "86889",
+      "86849",
+      "86831",
+      "86840",
+      "86978",
+      "86799",
+      "86853",
+      "87058"
+    ],
+    "PackStyles": [],
+    "PickedCards": [
+      "86902",
+      "86908",
+      "87091",
+      "86881",
+      "86915"
+    ],
+    "PickedStyles": []
+  },
+  "VisualArenaIds": [
+    87058,
+    86853,
+    86799,
+    86831,
+    86840,
+    86849,
+    86889,
+    86978,
+    86982
+  ],
+  "Cards": [
+    {
+      "id": "09a4578a-7dc6-4da3-93ee-913b10be5740",
+      "arena_id": 86978,
+      "name": "Gingerbrute",
+      "colors": [],
+      "rarity": "common",
+      "set": "woe",
+      "collector_number": "246",
+      "cmc": 1.0
+    },
+    {
+      "id": "0ad345b6-7077-4dd2-b515-c774a3185fe4",
+      "arena_id": 86881,
+      "name": "Hollow Scavenger // Bakery Raid",
+      "colors": [
+        "G"
+      ],
+      "rarity": "common",
+      "set": "woe",
+      "collector_number": "174",
+      "cmc": 3.0
+    },
+    {
+      "id": "2cfd365e-34d1-4224-b925-119000311934",
+      "arena_id": 86915,
+      "name": "Greta, Sweettooth Scourge",
+      "colors": [
+        "B",
+        "G"
+      ],
+      "rarity": "uncommon",
+      "set": "woe",
+      "collector_number": "205",
+      "cmc": 3.0
+    },
+    {
+      "id": "3dc08461-bec6-4a18-b782-da4c92abb789",
+      "arena_id": 86982,
+      "name": "Scarecrow Guide",
+      "colors": [],
+      "rarity": "common",
+      "set": "woe",
+      "collector_number": "250",
+      "cmc": 2.0
+    },
+    {
+      "id": "7931a072-b688-4a0b-a32e-9a2082738745",
+      "arena_id": 87091,
+      "name": "Garruk's Uprising",
+      "colors": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "set": "wot",
+      "collector_number": "53",
+      "cmc": 3.0
+    },
+    {
+      "id": "7aa37f85-5336-4372-97a2-9c8b00798c7a",
+      "arena_id": 86902,
+      "name": "Tough Cookie",
+      "colors": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "set": "woe",
+      "collector_number": "193",
+      "cmc": 2.0
+    },
+    {
+      "id": "8e629a31-2e06-4f95-9628-34670dcf68b9",
+      "arena_id": 86908,
+      "name": "Welcome to Sweettooth",
+      "colors": [
+        "G"
+      ],
+      "rarity": "uncommon",
+      "set": "woe",
+      "collector_number": "198",
+      "cmc": 2.0
+    },
+    {
+      "id": "9597d9ea-d9b2-4009-8e7c-02caa3585bc5",
+      "arena_id": 86889,
+      "name": "Return from the Wilds",
+      "colors": [
+        "G"
+      ],
+      "rarity": "common",
+      "set": "woe",
+      "collector_number": "181",
+      "cmc": 3.0
+    },
+    {
+      "id": "b0058b9b-e919-45eb-9da0-690f62aa252e",
+      "arena_id": 86840,
+      "name": "Merry Bards",
+      "colors": [
+        "R"
+      ],
+      "rarity": "common",
+      "set": "woe",
+      "collector_number": "140",
+      "cmc": 3.0
+    },
+    {
+      "id": "cda6bdeb-a0d6-46ca-ba8c-317ee0096416",
+      "arena_id": 86849,
+      "name": "Redcap Thief",
+      "colors": [
+        "R"
+      ],
+      "rarity": "common",
+      "set": "woe",
+      "collector_number": "147",
+      "cmc": 3.0
+    },
+    {
+      "id": "e8ebcbfb-1522-4ff5-b23a-f3ea9e08ad9b",
+      "arena_id": 87058,
+      "name": "Hatching Plans",
+      "colors": [
+        "U"
+      ],
+      "rarity": "uncommon",
+      "set": "wot",
+      "collector_number": "20",
+      "cmc": 2.0
+    },
+    {
+      "id": "f2c42755-bf91-4c75-95c6-d2a60ba3492a",
+      "arena_id": 86799,
+      "name": "Rat Out",
+      "colors": [
+        "B"
+      ],
+      "rarity": "common",
+      "set": "woe",
+      "collector_number": "103",
+      "cmc": 1.0
+    },
+    {
+      "id": "fab7646a-61e8-446b-9dba-ac6e0db82f10",
+      "arena_id": 86831,
+      "name": "Grabby Giant // That's Mine",
+      "colors": [
+        "R"
+      ],
+      "rarity": "common",
+      "set": "woe",
+      "collector_number": "133",
+      "cmc": 4.0
+    },
+    {
+      "id": "fb22f79c-3075-439d-a072-ceaabe35d76f",
+      "arena_id": 86853,
+      "name": "Stonesplitter Bolt",
+      "colors": [
+        "R"
+      ],
+      "rarity": "uncommon",
+      "set": "woe",
+      "collector_number": "151",
+      "cmc": 1.0
+    }
+  ],
+  "Ratings": [
+    {
+      "name": "Rat Out",
+      "ever_drawn_game_count": 50422,
+      "ever_drawn_win_rate": 0.59775495,
+      "avg_seen": 5.311911
+    },
+    {
+      "name": "Merry Bards",
+      "ever_drawn_game_count": 35319,
+      "ever_drawn_win_rate": 0.57558255,
+      "avg_seen": 6.3894335
+    },
+    {
+      "name": "Redcap Thief",
+      "ever_drawn_game_count": 60167,
+      "ever_drawn_win_rate": 0.5872322,
+      "avg_seen": 5.3453346
+    },
+    {
+      "name": "Stonesplitter Bolt",
+      "ever_drawn_game_count": 16092,
+      "ever_drawn_win_rate": 0.57034551,
+      "avg_seen": 2.4395601
+    },
+    {
+      "name": "Return from the Wilds",
+      "ever_drawn_game_count": 35111,
+      "ever_drawn_win_rate": 0.55529606,
+      "avg_seen": 5.4564476
+    },
+    {
+      "name": "Tough Cookie",
+      "ever_drawn_game_count": 32802,
+      "ever_drawn_win_rate": 0.62529724,
+      "avg_seen": 2.2994261
+    },
+    {
+      "name": "Welcome to Sweettooth",
+      "ever_drawn_game_count": 31862,
+      "ever_drawn_win_rate": 0.62161823,
+      "avg_seen": 2.4207431
+    },
+    {
+      "name": "Greta, Sweettooth Scourge",
+      "ever_drawn_game_count": 31768,
+      "ever_drawn_win_rate": 0.59097205,
+      "avg_seen": 3.3973398
+    },
+    {
+      "name": "Gingerbrute",
+      "ever_drawn_game_count": 49208,
+      "ever_drawn_win_rate": 0.57460169,
+      "avg_seen": 4.7623357
+    },
+    {
+      "name": "Scarecrow Guide",
+      "ever_drawn_game_count": 21880,
+      "ever_drawn_win_rate": 0.55585009,
+      "avg_seen": 6.9474995
+    },
+    {
+      "name": "Hatching Plans",
+      "ever_drawn_game_count": 46464,
+      "ever_drawn_win_rate": 0.60593147,
+      "avg_seen": 5.2198577
+    },
+    {
+      "name": "Garruk's Uprising",
+      "ever_drawn_game_count": 7654,
+      "ever_drawn_win_rate": 0.51136661,
+      "avg_seen": 5.4872458
+    }
+  ]
+}

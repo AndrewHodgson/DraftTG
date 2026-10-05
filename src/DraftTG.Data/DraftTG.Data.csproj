@@ -2,4 +2,5 @@
   <ItemGroup>
     <ProjectReference Include="../DraftTG.Domain/DraftTG.Domain.csproj" />
   </ItemGroup>
+  <ItemGroup><EmbeddedResource Include="Archetypes/*.json" /></ItemGroup>
 </Project>

@@ -1,0 +1,706 @@
+[
+  {
+    "id": "0001e77a-7fff-49d2-a55c-42f6fdf6db08",
+    "arena_id": 86752,
+    "name": "Obyra's Attendants // Desperate Parry",
+    "layout": "adventure",
+    "mana_cost": "{4}{U} // {1}{U}",
+    "cmc": 5.0,
+    "type_line": "Creature \u2014 Faerie Wizard // Instant \u2014 Adventure",
+    "colors": [
+      "U"
+    ],
+    "card_faces": [
+      {
+        "object": "card_face",
+        "name": "Obyra's Attendants",
+        "mana_cost": "{4}{U}",
+        "type_line": "Creature \u2014 Faerie Wizard",
+        "oracle_text": "Flying",
+        "power": "3",
+        "toughness": "4",
+        "flavor_text": "Obyra's devoted servants shrieked as their sleeping mistress slashed at them, unseeing.",
+        "artist": "Andreas Zafiratos",
+        "artist_id": "e2f13a9a-57c5-40de-81d4-3b0723899cdf",
+        "illustration_id": "d1ea5321-62e2-4894-a79f-03b792daf2c8"
+      },
+      {
+        "object": "card_face",
+        "name": "Desperate Parry",
+        "mana_cost": "{1}{U}",
+        "type_line": "Instant \u2014 Adventure",
+        "oracle_text": "Target creature gets -4/-0 until end of turn. (Then exile this card. You may cast the creature later from exile.)",
+        "artist": "Andreas Zafiratos",
+        "artist_id": "e2f13a9a-57c5-40de-81d4-3b0723899cdf"
+      }
+    ],
+    "set": "woe",
+    "collector_number": "63",
+    "rarity": "common"
+  },
+  {
+    "id": "09a4578a-7dc6-4da3-93ee-913b10be5740",
+    "arena_id": 86978,
+    "name": "Gingerbrute",
+    "layout": "normal",
+    "mana_cost": "{1}",
+    "cmc": 1.0,
+    "type_line": "Artifact Creature \u2014 Food Golem",
+    "colors": [],
+    "set": "woe",
+    "collector_number": "246",
+    "rarity": "common"
+  },
+  {
+    "id": "0ad345b6-7077-4dd2-b515-c774a3185fe4",
+    "arena_id": 86881,
+    "name": "Hollow Scavenger // Bakery Raid",
+    "layout": "adventure",
+    "mana_cost": "{2}{G} // {G}",
+    "cmc": 3.0,
+    "type_line": "Creature \u2014 Wolf // Sorcery \u2014 Adventure",
+    "colors": [
+      "G"
+    ],
+    "card_faces": [
+      {
+        "object": "card_face",
+        "name": "Hollow Scavenger",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature \u2014 Wolf",
+        "oracle_text": "{1}, Sacrifice a Food: This creature gets +2/+2 until end of turn. Activate only once each turn.",
+        "power": "3",
+        "toughness": "2",
+        "artist": "Michele Giorgi",
+        "artist_id": "60ff7459-c81d-41e6-bec1-4264c2161014",
+        "illustration_id": "2d3c4016-1be2-4448-9539-90f897006c48"
+      },
+      {
+        "object": "card_face",
+        "name": "Bakery Raid",
+        "mana_cost": "{G}",
+        "type_line": "Sorcery \u2014 Adventure",
+        "oracle_text": "Create a Food token. (Then exile this card. You may cast the creature later from exile.)",
+        "artist": "Michele Giorgi",
+        "artist_id": "60ff7459-c81d-41e6-bec1-4264c2161014"
+      }
+    ],
+    "set": "woe",
+    "collector_number": "174",
+    "rarity": "common"
+  },
+  {
+    "id": "19f20c0a-22be-4a9c-96ce-4047f7a2d424",
+    "arena_id": 86865,
+    "name": "Beanstalk Wurm // Plant Beans",
+    "layout": "adventure",
+    "mana_cost": "{4}{G} // {1}{G}",
+    "cmc": 5.0,
+    "type_line": "Creature \u2014 Plant Wurm // Sorcery \u2014 Adventure",
+    "colors": [
+      "G"
+    ],
+    "card_faces": [
+      {
+        "object": "card_face",
+        "name": "Beanstalk Wurm",
+        "mana_cost": "{4}{G}",
+        "type_line": "Creature \u2014 Plant Wurm",
+        "oracle_text": "Reach",
+        "power": "5",
+        "toughness": "4",
+        "flavor_text": "When Beluna's pets escape Stormkeld, villages fall and new Everstalks rise.",
+        "artist": "Aldo Dom\u00ednguez",
+        "artist_id": "b701136e-c578-4a48-9383-1c2a5381ecb2",
+        "illustration_id": "d38376dc-f4f1-4fd7-9806-e97cb0e71803"
+      },
+      {
+        "object": "card_face",
+        "name": "Plant Beans",
+        "mana_cost": "{1}{G}",
+        "type_line": "Sorcery \u2014 Adventure",
+        "oracle_text": "You may play an additional land this turn. (Then exile this card. You may cast the creature later from exile.)",
+        "artist": "Aldo Dom\u00ednguez",
+        "artist_id": "b701136e-c578-4a48-9383-1c2a5381ecb2"
+      }
+    ],
+    "set": "woe",
+    "collector_number": "161",
+    "rarity": "common"
+  },
+  {
+    "id": "1a860925-d912-49e5-9ddc-41ab26916bb3",
+    "arena_id": 86975,
+    "name": "Candy Trail",
+    "layout": "normal",
+    "mana_cost": "{1}",
+    "cmc": 1.0,
+    "type_line": "Artifact \u2014 Food Clue",
+    "colors": [],
+    "set": "woe",
+    "collector_number": "243",
+    "rarity": "common"
+  },
+  {
+    "id": "26ece013-f3ef-4c12-9dea-b2789f61f8a0",
+    "arena_id": 86818,
+    "name": "Bellowing Bruiser // Beat a Path",
+    "layout": "adventure",
+    "mana_cost": "{4}{R} // {2}{R}",
+    "cmc": 5.0,
+    "type_line": "Creature \u2014 Ogre // Sorcery \u2014 Adventure",
+    "colors": [
+      "R"
+    ],
+    "card_faces": [
+      {
+        "object": "card_face",
+        "name": "Bellowing Bruiser",
+        "mana_cost": "{4}{R}",
+        "type_line": "Creature \u2014 Ogre",
+        "oracle_text": "Haste",
+        "power": "4",
+        "toughness": "4",
+        "flavor_text": "You can't give an ogre the runaround.",
+        "artist": "Kai Carpenter",
+        "artist_id": "dcd3cf0d-67b7-4b73-8e62-1d318bf6209c",
+        "illustration_id": "791282ac-9bfb-46dd-9c59-19e43f99a0b4"
+      },
+      {
+        "object": "card_face",
+        "name": "Beat a Path",
+        "mana_cost": "{2}{R}",
+        "type_line": "Sorcery \u2014 Adventure",
+        "oracle_text": "Up to two target creatures can't block this turn. (Then exile this card. You may cast the creature later from exile.)",
+        "artist": "Kai Carpenter",
+        "artist_id": "dcd3cf0d-67b7-4b73-8e62-1d318bf6209c"
+      }
+    ],
+    "set": "woe",
+    "collector_number": "121",
+    "rarity": "common"
+  },
+  {
+    "id": "27003577-e276-4ad5-b3e9-8523b166ad49",
+    "arena_id": 86884,
+    "name": "The Huntsman's Redemption",
+    "layout": "saga",
+    "mana_cost": "{2}{G}",
+    "cmc": 3.0,
+    "type_line": "Enchantment \u2014 Saga",
+    "colors": [
+      "G"
+    ],
+    "set": "woe",
+    "collector_number": "176",
+    "rarity": "rare"
+  },
+  {
+    "id": "27f53bed-7075-4303-aa9e-fcca0a266e19",
+    "arena_id": 86886,
+    "name": "Night of the Sweets' Revenge",
+    "layout": "normal",
+    "mana_cost": "{3}{G}",
+    "cmc": 4.0,
+    "type_line": "Enchantment",
+    "colors": [
+      "G"
+    ],
+    "produced_mana": [
+      "G"
+    ],
+    "set": "woe",
+    "collector_number": "178",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "2cfd365e-34d1-4224-b925-119000311934",
+    "arena_id": 86915,
+    "name": "Greta, Sweettooth Scourge",
+    "layout": "normal",
+    "mana_cost": "{1}{B}{G}",
+    "cmc": 3.0,
+    "type_line": "Legendary Creature \u2014 Human Warrior",
+    "colors": [
+      "B",
+      "G"
+    ],
+    "set": "woe",
+    "collector_number": "205",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "46917de3-5e98-4dd6-8950-fc10338515df",
+    "arena_id": 86900,
+    "name": "Titanic Growth",
+    "layout": "normal",
+    "mana_cost": "{1}{G}",
+    "cmc": 2.0,
+    "type_line": "Instant",
+    "colors": [
+      "G"
+    ],
+    "set": "woe",
+    "collector_number": "191",
+    "rarity": "common"
+  },
+  {
+    "id": "5224eec3-2941-4d16-a713-099e34e93eee",
+    "arena_id": 86872,
+    "name": "Commune with Nature",
+    "layout": "normal",
+    "mana_cost": "{G}",
+    "cmc": 1.0,
+    "type_line": "Sorcery",
+    "colors": [
+      "G"
+    ],
+    "set": "woe",
+    "collector_number": "166",
+    "rarity": "common"
+  },
+  {
+    "id": "55b9b8e5-1ed8-4be0-aad5-041a599c6841",
+    "arena_id": 86867,
+    "name": "Bestial Bloodline",
+    "layout": "normal",
+    "mana_cost": "{1}{G}",
+    "cmc": 2.0,
+    "type_line": "Enchantment \u2014 Aura",
+    "colors": [
+      "G"
+    ],
+    "set": "woe",
+    "collector_number": "162",
+    "rarity": "common"
+  },
+  {
+    "id": "5b61711f-8982-4ff0-86ba-01e0125cd705",
+    "arena_id": 86977,
+    "name": "Eriette's Tempting Apple",
+    "layout": "normal",
+    "mana_cost": "{4}",
+    "cmc": 4.0,
+    "type_line": "Legendary Artifact \u2014 Food",
+    "colors": [],
+    "set": "woe",
+    "collector_number": "245",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "673a67b2-fbb0-4be4-9edd-93946a583f23",
+    "arena_id": 86826,
+    "name": "Flick a Coin",
+    "layout": "normal",
+    "mana_cost": "{2}{R}",
+    "cmc": 3.0,
+    "type_line": "Instant",
+    "colors": [
+      "R"
+    ],
+    "produced_mana": [
+      "B",
+      "G",
+      "R",
+      "U",
+      "W"
+    ],
+    "set": "woe",
+    "collector_number": "128",
+    "rarity": "common"
+  },
+  {
+    "id": "742f2d20-0f6b-488e-ae37-54a41522c191",
+    "arena_id": 87099,
+    "name": "Season of Growth",
+    "layout": "normal",
+    "mana_cost": "{1}{G}",
+    "cmc": 2.0,
+    "type_line": "Enchantment",
+    "colors": [
+      "G"
+    ],
+    "set": "wot",
+    "collector_number": "61",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "74f9c819-719a-461b-8e7e-a26c88e8099b",
+    "arena_id": 86988,
+    "name": "Evolving Wilds",
+    "layout": "normal",
+    "mana_cost": "",
+    "cmc": 0.0,
+    "type_line": "Land",
+    "colors": [],
+    "set": "woe",
+    "collector_number": "256",
+    "rarity": "common"
+  },
+  {
+    "id": "7931a072-b688-4a0b-a32e-9a2082738745",
+    "arena_id": 87091,
+    "name": "Garruk's Uprising",
+    "layout": "normal",
+    "mana_cost": "{2}{G}",
+    "cmc": 3.0,
+    "type_line": "Enchantment",
+    "colors": [
+      "G"
+    ],
+    "set": "wot",
+    "collector_number": "53",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "7aa37f85-5336-4372-97a2-9c8b00798c7a",
+    "arena_id": 86902,
+    "name": "Tough Cookie",
+    "layout": "normal",
+    "mana_cost": "{1}{G}",
+    "cmc": 2.0,
+    "type_line": "Artifact Creature \u2014 Food Golem",
+    "colors": [
+      "G"
+    ],
+    "set": "woe",
+    "collector_number": "193",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "7f4c0959-a107-4d61-9e51-256b2955f6ba",
+    "arena_id": 86845,
+    "name": "Ratcatcher Trainee // Pest Problem",
+    "layout": "adventure",
+    "mana_cost": "{1}{R} // {2}{R}",
+    "cmc": 2.0,
+    "type_line": "Creature \u2014 Human Peasant // Instant \u2014 Adventure",
+    "colors": [
+      "R"
+    ],
+    "card_faces": [
+      {
+        "object": "card_face",
+        "name": "Ratcatcher Trainee",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature \u2014 Human Peasant",
+        "oracle_text": "During your turn, this creature has first strike.",
+        "power": "2",
+        "toughness": "1",
+        "flavor_text": "\"Where do they keep coming from?!\"",
+        "artist": "Michele Giorgi",
+        "artist_id": "60ff7459-c81d-41e6-bec1-4264c2161014",
+        "illustration_id": "d9ca5167-a01f-469c-bca5-69d093c29869"
+      },
+      {
+        "object": "card_face",
+        "name": "Pest Problem",
+        "mana_cost": "{2}{R}",
+        "type_line": "Instant \u2014 Adventure",
+        "oracle_text": "Create two 1/1 black Rat creature tokens with \"This token can't block.\" (Then exile this card. You may cast the creature later from exile.)",
+        "artist": "Michele Giorgi",
+        "artist_id": "60ff7459-c81d-41e6-bec1-4264c2161014"
+      }
+    ],
+    "set": "woe",
+    "collector_number": "144",
+    "rarity": "common"
+  },
+  {
+    "id": "80dea5c0-ada3-488a-9f2b-f895b92c762f",
+    "arena_id": 86758,
+    "name": "Sleight of Hand",
+    "layout": "normal",
+    "mana_cost": "{U}",
+    "cmc": 1.0,
+    "type_line": "Sorcery",
+    "colors": [
+      "U"
+    ],
+    "set": "woe",
+    "collector_number": "67",
+    "rarity": "common"
+  },
+  {
+    "id": "821b9e86-d108-42e5-b642-c5e07ab16c37",
+    "arena_id": 86871,
+    "name": "Brave the Wilds",
+    "layout": "normal",
+    "mana_cost": "{G}",
+    "cmc": 1.0,
+    "type_line": "Sorcery",
+    "colors": [
+      "G"
+    ],
+    "set": "woe",
+    "collector_number": "165",
+    "rarity": "common"
+  },
+  {
+    "id": "86311523-d0eb-4db3-b586-8349de9c2d37",
+    "arena_id": 86883,
+    "name": "Howling Galefang",
+    "layout": "normal",
+    "mana_cost": "{2}{G}{G}",
+    "cmc": 4.0,
+    "type_line": "Creature \u2014 Beast",
+    "colors": [
+      "G"
+    ],
+    "set": "woe",
+    "collector_number": "175",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "8dc7ea40-f45d-4550-82f5-ded841d8746d",
+    "arena_id": 87079,
+    "name": "Dragon Mantle",
+    "layout": "normal",
+    "mana_cost": "{R}",
+    "cmc": 1.0,
+    "type_line": "Enchantment \u2014 Aura",
+    "colors": [
+      "R"
+    ],
+    "set": "wot",
+    "collector_number": "41",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "8e629a31-2e06-4f95-9628-34670dcf68b9",
+    "arena_id": 86908,
+    "name": "Welcome to Sweettooth",
+    "layout": "saga",
+    "mana_cost": "{1}{G}",
+    "cmc": 2.0,
+    "type_line": "Enchantment \u2014 Saga",
+    "colors": [
+      "G"
+    ],
+    "set": "woe",
+    "collector_number": "198",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "8ea4d40a-7657-4ff8-9fc2-915b99432275",
+    "arena_id": 86823,
+    "name": "Cut In",
+    "layout": "normal",
+    "mana_cost": "{3}{R}",
+    "cmc": 4.0,
+    "type_line": "Sorcery",
+    "colors": [
+      "R"
+    ],
+    "set": "woe",
+    "collector_number": "125",
+    "rarity": "common"
+  },
+  {
+    "id": "9597d9ea-d9b2-4009-8e7c-02caa3585bc5",
+    "arena_id": 86889,
+    "name": "Return from the Wilds",
+    "layout": "normal",
+    "mana_cost": "{2}{G}",
+    "cmc": 3.0,
+    "type_line": "Sorcery",
+    "colors": [
+      "G"
+    ],
+    "set": "woe",
+    "collector_number": "181",
+    "rarity": "common"
+  },
+  {
+    "id": "969b13bb-6411-41f9-b6b4-af4ffca62e17",
+    "arena_id": 86746,
+    "name": "Into the Fae Court",
+    "layout": "normal",
+    "mana_cost": "{3}{U}{U}",
+    "cmc": 5.0,
+    "type_line": "Sorcery",
+    "colors": [
+      "U"
+    ],
+    "set": "woe",
+    "collector_number": "57",
+    "rarity": "common"
+  },
+  {
+    "id": "a08da5c6-ebe7-4166-99d5-2aca5b0b529f",
+    "arena_id": 86893,
+    "name": "Skybeast Tracker",
+    "layout": "normal",
+    "mana_cost": "{3}{G}",
+    "cmc": 4.0,
+    "type_line": "Creature \u2014 Giant Archer",
+    "colors": [
+      "G"
+    ],
+    "set": "woe",
+    "collector_number": "185",
+    "rarity": "common"
+  },
+  {
+    "id": "a66fbaeb-1624-43b3-83e2-a37ce7588a5a",
+    "arena_id": 86721,
+    "name": "Unassuming Sage",
+    "layout": "normal",
+    "mana_cost": "{1}{W}",
+    "cmc": 2.0,
+    "type_line": "Creature \u2014 Human Peasant Wizard",
+    "colors": [
+      "W"
+    ],
+    "set": "woe",
+    "collector_number": "37",
+    "rarity": "common"
+  },
+  {
+    "id": "a7f6a79c-aa2f-47d2-a929-1606a61f9341",
+    "arena_id": 86749,
+    "name": "Merfolk Coralsmith",
+    "layout": "normal",
+    "mana_cost": "{2}{U}",
+    "cmc": 3.0,
+    "type_line": "Creature \u2014 Merfolk",
+    "colors": [
+      "U"
+    ],
+    "set": "woe",
+    "collector_number": "60",
+    "rarity": "common"
+  },
+  {
+    "id": "acda9d02-00fc-49e2-a9f3-176e9c0a8c5f",
+    "arena_id": 86824,
+    "name": "Edgewall Pack",
+    "layout": "normal",
+    "mana_cost": "{3}{R}",
+    "cmc": 4.0,
+    "type_line": "Creature \u2014 Dog",
+    "colors": [
+      "R"
+    ],
+    "set": "woe",
+    "collector_number": "126",
+    "rarity": "common"
+  },
+  {
+    "id": "b0058b9b-e919-45eb-9da0-690f62aa252e",
+    "arena_id": 86840,
+    "name": "Merry Bards",
+    "layout": "normal",
+    "mana_cost": "{2}{R}",
+    "cmc": 3.0,
+    "type_line": "Creature \u2014 Human Bard",
+    "colors": [
+      "R"
+    ],
+    "set": "woe",
+    "collector_number": "140",
+    "rarity": "common"
+  },
+  {
+    "id": "c39d78e6-fa15-43a2-8c8e-5436e82926b7",
+    "arena_id": 87053,
+    "name": "Compulsion",
+    "layout": "normal",
+    "mana_cost": "{1}{U}",
+    "cmc": 2.0,
+    "type_line": "Enchantment",
+    "colors": [
+      "U"
+    ],
+    "set": "wot",
+    "collector_number": "15",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "c8090bcf-e17a-4110-a518-77ccd045b18f",
+    "arena_id": 86822,
+    "name": "Charming Scoundrel",
+    "layout": "normal",
+    "mana_cost": "{1}{R}",
+    "cmc": 2.0,
+    "type_line": "Creature \u2014 Human Rogue",
+    "colors": [
+      "R"
+    ],
+    "set": "woe",
+    "collector_number": "124",
+    "rarity": "rare"
+  },
+  {
+    "id": "cda6bdeb-a0d6-46ca-ba8c-317ee0096416",
+    "arena_id": 86849,
+    "name": "Redcap Thief",
+    "layout": "normal",
+    "mana_cost": "{2}{R}",
+    "cmc": 3.0,
+    "type_line": "Creature \u2014 Goblin Rogue",
+    "colors": [
+      "R"
+    ],
+    "produced_mana": [
+      "B",
+      "G",
+      "R",
+      "U",
+      "W"
+    ],
+    "set": "woe",
+    "collector_number": "147",
+    "rarity": "common"
+  },
+  {
+    "id": "e78e50ca-d27b-45db-91fa-7fef3cad16d0",
+    "arena_id": 86851,
+    "name": "Skewer Slinger",
+    "layout": "normal",
+    "mana_cost": "{1}{R}",
+    "cmc": 2.0,
+    "type_line": "Creature \u2014 Dwarf Knight",
+    "colors": [
+      "R"
+    ],
+    "set": "woe",
+    "collector_number": "149",
+    "rarity": "common"
+  },
+  {
+    "id": "f0a6349a-beff-4abd-b005-86d27c1e2957",
+    "arena_id": 86901,
+    "name": "Toadstool Admirer",
+    "layout": "normal",
+    "mana_cost": "{G}",
+    "cmc": 1.0,
+    "type_line": "Creature \u2014 Ouphe",
+    "colors": [
+      "G"
+    ],
+    "set": "woe",
+    "collector_number": "192",
+    "rarity": "common"
+  },
+  {
+    "id": "ffb5786b-6825-4ebf-a1e1-80011340adbb",
+    "arena_id": 86922,
+    "name": "Ruby, Daring Tracker",
+    "layout": "normal",
+    "mana_cost": "{R}{G}",
+    "cmc": 2.0,
+    "type_line": "Legendary Creature \u2014 Human Scout",
+    "colors": [
+      "G",
+      "R"
+    ],
+    "produced_mana": [
+      "G",
+      "R"
+    ],
+    "set": "woe",
+    "collector_number": "212",
+    "rarity": "uncommon"
+  }
+]

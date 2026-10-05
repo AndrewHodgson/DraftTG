@@ -16,4 +16,7 @@ public sealed record Card(
     ColorSet Colors,
     CardRarity Rarity,
     CardSetCode SetCode,
-    CollectorNumber CollectorNumber);
+    CollectorNumber CollectorNumber)
+{
+    public CardGameplayMetadata GameplayMetadata { get; init; } = CardGameplayMetadata.Unknown;
+}

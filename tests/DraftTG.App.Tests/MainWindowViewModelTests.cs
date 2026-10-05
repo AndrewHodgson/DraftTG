@@ -76,7 +76,7 @@ public sealed partial class MainWindowViewModelTests
     }
 
     [Fact]
-    public void RecoveredQuickDraftSnapshotDisplaysP1P3PackAndHistory()
+    public void ExactQuickDraftSnapshotDisplaysP1P3PackAndKnownHistory()
     {
         var viewModel = ReadyViewModel();
 
@@ -93,6 +93,21 @@ public sealed partial class MainWindowViewModelTests
         Assert.Equal(2, viewModel.DraftedCards.Count);
         Assert.Equal(["P1P1", "P1P2"],
             viewModel.DraftedCards.Select(card => card.Position));
+    }
+
+    [Fact]
+    public void RecoveredPoolDisplaysUnknownPositionsAndHistoryCoverageWithoutInventingPicks()
+    {
+        var viewModel = ReadyViewModel();
+        var state = State(ArenaDraftSessionStatus.Active, ArenaDraftMode.Quick, [101], [(1, 1, 101)], pack: 1, pick: 4)
+            with { RecoveredPool = new(ArenaDraftCoordinate.Create(1, 4), new(new[] { 101, 102, 102 }.Select(ArenaCardIdentifier.Create))) };
+        var result = Adapter().Convert(state);
+        viewModel.ApplySessionUpdate(new(state, result));
+        Assert.Equal(3, viewModel.DraftedCards.Count);
+        Assert.Equal(["P1P1", "Position unknown", "Position unknown"], viewModel.DraftedCards.Select(c => c.Position));
+        Assert.Equal(["Alpha", "Beta", "Beta"], viewModel.DraftedCards.Select(c => c.Name));
+        Assert.Contains("Exact pick history: 1/3", viewModel.DiagnosticText);
+        Assert.Single(result.Snapshot!.History.Picks);
     }
 
     [Fact]

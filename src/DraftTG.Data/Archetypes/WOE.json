@@ -1,0 +1,16 @@
+{
+  "set": "WOE",
+  "source": "https://magic.wizards.com/en/news/making-magic/wilds-story-part-2",
+  "archetypes": [
+    { "colors": "WU", "name": "Tap Tempo", "story": "Snow Queen", "description": "Tap and lock down creatures to gain tempo" },
+    { "colors": "UB", "name": "Faeries Control", "story": "Sleeping Beauty", "description": "Faeries and disruptive control" },
+    { "colors": "BR", "name": "Rats Aggro", "story": "Pied Piper", "description": "Rat tokens and aggressive sacrifice" },
+    { "colors": "RG", "name": "Big-Creature Beatdown", "story": "Little Red Riding Hood", "description": "Large creatures and aggressive midrange" },
+    { "colors": "GW", "name": "Enchantments and Roles", "story": "Beauty and the Beast", "description": "Enchantments and Roles strengthen creatures" },
+    { "colors": "WB", "name": "Sacrifice and Bargain", "story": "Snow White", "description": "Bargain and rewards for your permanents dying" },
+    { "colors": "UR", "name": "Spells and Prowess", "story": "Sorcerer's Apprentice", "description": "Instants and sorceries support spell-driven threats" },
+    { "colors": "BG", "name": "Food Midrange", "story": "Hansel and Gretel", "description": "Food generation and use; midrange" },
+    { "colors": "RW", "name": "Celebration Aggro", "story": "Cinderella", "description": "Aggression and Celebration from multiple new permanents" },
+    { "colors": "GU", "name": "Ramp and Adventures", "story": "Jack and the Beanstalk", "description": "Ramp, mana value five or greater, and Adventures" }
+  ]
+}

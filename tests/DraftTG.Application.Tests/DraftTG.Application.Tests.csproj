@@ -21,6 +21,10 @@
     <Using Include="Xunit" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="../Fixtures/arena-woe-saved-deck-live.jsonl" Link="Fixtures/arena-woe-saved-deck-live.jsonl" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="../Fixtures/arena-woe-saved-deck-cards.json" Link="Fixtures/arena-woe-saved-deck-cards.json" CopyToOutputDirectory="PreserveNewest" />
     <None Include="../Fixtures/17lands-phase7-5.json" Link="Fixtures/17lands-phase7-5.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="../Fixtures/deckselect-woe-completion-live.jsonl" Link="Fixtures/deckselect-woe-completion-live.jsonl" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="../Fixtures/deckselect-woe-cards.json" Link="Fixtures/deckselect-woe-cards.json" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 </Project>

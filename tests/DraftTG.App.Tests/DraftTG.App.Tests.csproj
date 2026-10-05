@@ -2,6 +2,8 @@
   <PropertyGroup>
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
+    <TargetFramework Condition="$([MSBuild]::IsOSPlatform('Windows')) and '$(DraftTGPortableBuild)' != 'true'">net10.0-windows10.0.19041.0</TargetFramework>
+    <SupportedOSPlatformVersion Condition="$([MSBuild]::IsOSPlatform('Windows')) and '$(DraftTGPortableBuild)' != 'true'">10.0.18362.0</SupportedOSPlatformVersion>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
@@ -23,6 +25,11 @@
     <EmbeddedResource Include="../../src/DraftTG.App/CardOverlayWindow.axaml" LogicalName="CardOverlayWindow.axaml" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="../Fixtures/arena-artwork-live/**/*" Link="Fixtures/arena-artwork-live/%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="../Fixtures/arena-wgc-p1p7/**/*" Link="Fixtures/arena-wgc-p1p7/%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
     <None Include="../Fixtures/17lands-api-card-data.json" Link="Fixtures/17lands-api-card-data.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="../Fixtures/arena-woe-p1p6-visual-placement.json" Link="Fixtures/arena-woe-p1p6-visual-placement.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="../Fixtures/deckselect-woe-completion-live.jsonl" Link="Fixtures/deckselect-woe-completion-live.jsonl" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="../Fixtures/deckselect-woe-cards.json" Link="Fixtures/deckselect-woe-cards.json" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 </Project>

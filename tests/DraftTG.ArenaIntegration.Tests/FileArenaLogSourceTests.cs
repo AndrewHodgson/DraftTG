@@ -257,7 +257,21 @@ public sealed class FileArenaLogSourceTests
         {
             var replacement = Path.Combine(_directory, "replacement.log");
             File.WriteAllText(replacement, value, new UTF8Encoding(false));
-            File.Move(replacement, FilePath, overwrite: true);
+            // A line can reach the consumer before the poll finishes and closes its reader.
+            // Windows can reject replacement during that brief window despite delete sharing.
+            var retryUntil = DateTime.UtcNow.AddSeconds(1);
+            while (true)
+            {
+                try
+                {
+                    File.Move(replacement, FilePath, overwrite: true);
+                    return;
+                }
+                catch (UnauthorizedAccessException) when (DateTime.UtcNow < retryUntil)
+                {
+                    Thread.Sleep(10);
+                }
+            }
         }
         public void Dispose() => Directory.Delete(_directory, recursive: true);
     }

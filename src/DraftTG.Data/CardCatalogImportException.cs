@@ -12,7 +12,9 @@ public enum CardCatalogImportErrorKind
     UnsupportedRarity,
     DuplicateCardIdentifier,
     InvalidArenaIdentifier,
-    DuplicateArenaIdentifier
+    DuplicateArenaIdentifier,
+    InvalidManaValue,
+    InvalidCardType
 }
 
 public sealed class CardCatalogImportException : Exception

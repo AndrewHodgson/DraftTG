@@ -1,5 +1,6 @@
 <UserControl xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:vm="clr-namespace:DraftTG.App" x:Class="DraftTG.App.RailPanelView" x:DataType="vm:OverlayViewModel"
+             xmlns:deck="clr-namespace:DraftTG.RecommendationEngine;assembly=DraftTG.RecommendationEngine"
              Width="280" MaxHeight="460">
   <Border Background="#FA20252D" CornerRadius="8" Padding="12">
     <Grid RowDefinitions="Auto,*">
@@ -13,7 +14,85 @@
             <TextBlock Text="{Binding Session.ModeText}" Foreground="#FFB5BFCD" FontSize="12" TextWrapping="Wrap" />
             <TextBlock Text="{Binding Session.StatisticsStatusText}" Foreground="#FFB5BFCD" FontSize="12" TextWrapping="Wrap" />
             <TextBlock Text="{Binding Session.StatisticsCoverageText}" Foreground="#FFB5BFCD" FontSize="12" TextWrapping="Wrap" />
-            <TextBlock Text="{Binding Session.RecommendationStatusText}" Foreground="#FFE2BE64" FontSize="12" TextWrapping="Wrap" />
+            <TextBlock Text="{Binding Session.FinalRecommendationStatusText}" Foreground="#FFE2BE64" FontSize="12" TextWrapping="Wrap" />
+            <TextBlock Text="{Binding Session.StatisticalPickStatusText}" Foreground="#FFB5BFCD" FontSize="12" TextWrapping="Wrap" />
+            <TextBlock Text="{Binding Session.ArchetypeStatusText}" Foreground="#FFB5BFCD" FontSize="12" TextWrapping="Wrap" />
+            <TextBlock Text="{Binding LocalizationStatus}" Foreground="#FFB5BFCD" FontSize="12" TextWrapping="Wrap" />
+            <Expander Header="Draft pool" IsVisible="{Binding Session.HasDraftPool}" Foreground="#FFB5BFCD" FontSize="12">
+              <StackPanel Spacing="6">
+                <TextBlock Text="{Binding Session.PoolSummaryText}" TextWrapping="Wrap" />
+                <TextBlock Text="Color and type counts overlap. Curve intervals include fractional mana values."
+                           Foreground="#FF9DAABC" FontSize="11" TextWrapping="Wrap" />
+                <Expander Header="Pool entry diagnostics">
+                  <SelectableTextBlock Text="{Binding Session.PoolEntryDiagnosticsText}" FontSize="11" TextWrapping="Wrap" />
+                </Expander>
+              </StackPanel>
+            </Expander>
+            <Expander Header="Suggested Decks" IsVisible="{Binding Session.HasBaselineDeckPanel}" Foreground="#FFB5BFCD" FontSize="12">
+              <StackPanel Spacing="6">
+                <ComboBox ItemsSource="{Binding Session.SuggestedDecks}" SelectedItem="{Binding Session.SelectedSuggestedDeck, Mode=TwoWay}" HorizontalAlignment="Stretch">
+                  <ComboBox.ItemTemplate>
+                    <DataTemplate x:DataType="deck:SuggestedDeck">
+                      <StackPanel Spacing="2">
+                        <TextBlock Text="{Binding Label}" FontWeight="SemiBold" TextWrapping="Wrap" />
+                        <TextBlock Text="{Binding PlanLabel}" FontSize="11" TextWrapping="Wrap" />
+                      </StackPanel>
+                    </DataTemplate>
+                  </ComboBox.ItemTemplate>
+                </ComboBox>
+                <TextBlock Text="{Binding Session.BaselineDeckSummaryText}" TextWrapping="Wrap" />
+                <Expander Header="Compared with Build 1" IsVisible="{Binding Session.HasSuggestedDeckDifference}">
+                  <SelectableTextBlock Text="{Binding Session.SuggestedDeckDifferenceText}" FontSize="11" TextWrapping="Wrap" />
+                </Expander>
+                <TextBlock Text="Main Deck" FontWeight="SemiBold" />
+                <SelectableTextBlock Text="{Binding Session.BaselineDeckCardsText}" TextWrapping="Wrap" />
+                <Expander Header="Sideboard / Not Included">
+                  <SelectableTextBlock Text="{Binding Session.BaselineDeckSideboardText}" TextWrapping="Wrap" />
+                </Expander>
+                <Expander Header="Build diagnostics">
+                  <SelectableTextBlock Text="{Binding Session.BaselineDeckDiagnosticsText}" FontSize="11" TextWrapping="Wrap" />
+                </Expander>
+              </StackPanel>
+            </Expander>
+            <Expander Header="Match card positions" IsVisible="{Binding HasVisualSlots}" Foreground="#FFB5BFCD" FontSize="12">
+              <StackPanel Spacing="6">
+                <TextBlock Text="Choose the card shown in each numbered slot, left to right, then top to bottom. Set the overlay columns to match Arena if needed."
+                           TextWrapping="Wrap" />
+                <ItemsControl ItemsSource="{Binding VisualSlots}">
+                  <ItemsControl.ItemTemplate>
+                    <DataTemplate x:DataType="vm:VisualSlotAssignmentViewModel">
+                      <StackPanel Spacing="3" Margin="0,3">
+                        <TextBlock Text="{Binding Label}" />
+                        <ComboBox ItemsSource="{Binding Choices}" SelectedItem="{Binding SelectedCard, Mode=TwoWay}"
+                                  HorizontalAlignment="Stretch">
+                          <ComboBox.ItemTemplate>
+                            <DataTemplate x:DataType="vm:VisualCardChoice"><TextBlock Text="{Binding Label}" /></DataTemplate>
+                          </ComboBox.ItemTemplate>
+                        </ComboBox>
+                      </StackPanel>
+                    </DataTemplate>
+                  </ItemsControl.ItemTemplate>
+                </ItemsControl>
+                <Button Content="Confirm card positions" IsEnabled="{Binding CanConfirmVisualPlacement}"
+                        Tag="confirm-card-positions" Click="Action_OnClick" />
+                <TextBlock Text="{Binding PlacementDiagnostic}" TextWrapping="Wrap" />
+              </StackPanel>
+            </Expander>
+            <Expander Header="Recommendation diagnostics" Foreground="#FFB5BFCD" FontSize="12">
+              <StackPanel Spacing="8">
+                <TextBlock Text="{Binding Session.RecommendationStatusText}" TextWrapping="Wrap" />
+                <TextBlock Text="{Binding Session.ContextualRecommendationDiagnosticsText}" TextWrapping="Wrap" />
+                <TextBlock Text="{Binding BadgeBindingDiagnosticsText}" TextWrapping="Wrap" />
+              </StackPanel>
+            </Expander>
+            <Expander Header="Card placement diagnostics" Foreground="#FFB5BFCD" FontSize="12">
+              <StackPanel Spacing="6">
+                <TextBlock Text="{Binding LocalizationDiagnostics}" TextWrapping="Wrap" />
+                <TextBlock Text="{Binding CaptureRuntimeDiagnosticsText}" TextWrapping="Wrap" />
+                <Button Content="Retry automatic placement" Tag="retry-card-localization" Click="Action_OnClick" />
+                <Button Content="Save current Arena capture for debugging" Tag="save-card-capture" Click="Action_OnClick" />
+              </StackPanel>
+            </Expander>
             <TextBlock Text="{Binding CalibrationLabel}" Foreground="#FFB5BFCD" FontSize="12" />
             <TextBlock Text="{Binding Diagnostics}" Foreground="#FFF0C67A" FontSize="12" TextWrapping="Wrap" />
           </StackPanel>
