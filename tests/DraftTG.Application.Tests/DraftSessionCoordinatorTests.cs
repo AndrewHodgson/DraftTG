@@ -355,6 +355,44 @@ public sealed class DraftSessionCoordinatorTests
         return source;
     }
 
+    [Fact]
+    public async Task AcceptedCurrentPickIsAwaitedBeforeAdaptedUpdateAndDuplicateDoesNotNotifyAgain()
+    {
+        var coordinator = CreateCoordinator(Source(FakeArenaLogSource.Line(PremierStart),
+            FakeArenaLogSource.Line(PackOnePickOne), FakeArenaLogSource.Line(PickOnePickOne),
+            FakeArenaLogSource.Line(PickOnePickOne), FakeArenaLogSource.Line(PackOnePickTwo)));
+        var entered = new TaskCompletionSource(TaskCreationOptions.RunContinuationsAsynchronously);
+        var release = new TaskCompletionSource(TaskCreationOptions.RunContinuationsAsynchronously);
+        var calls = 0;
+        coordinator.CurrentPackPickAccepted += async state =>
+        { calls++; Assert.Null(state.CurrentPack); Assert.Single(state.CompletedPicks); entered.SetResult(); await release.Task; };
+        var work = CollectAsync(coordinator.RunAsync());
+        await entered.Task.WaitAsync(TimeSpan.FromSeconds(2)); Assert.False(work.IsCompleted);
+        release.SetResult(); var updates = await work;
+        Assert.Equal(1,calls); Assert.Single(updates[^1].ArenaState.CompletedPicks);
+        Assert.Equal(2,updates[^1].ArenaState.CurrentPack!.Coordinate.Pick);
+
+        // A known draft ID can first arrive with the accepted pick (Quick Draft identity enrichment).
+        var enriching = CreateCoordinator(Source(FakeArenaLogSource.Line(
+            """{"method":"BotDraftDraftStatus","response":{"EventName":"QuickDraft_TST","DraftPack":[101,102,103],"PackNumber":0,"PickNumber":0,"DraftStatus":"Drafting"}}"""),
+            FakeArenaLogSource.Line(PickOnePickOne)));
+        var enrichCalls = 0;
+        enriching.CurrentPackPickAccepted += state =>
+        { enrichCalls++; Assert.Equal("draft-1",state.DraftIdentifier!.Value); return Task.CompletedTask; };
+        await CollectAsync(enriching.RunAsync());
+        Assert.Equal(1,enrichCalls);
+    }
+    [Fact]
+    public async Task PickHistoryWithoutCurrentCoordinateDoesNotRetireTheDisplayedPack()
+    {
+        var coordinator = CreateCoordinator(Source(FakeArenaLogSource.Line(PremierStart),
+            FakeArenaLogSource.Line(PackOnePickTwo), FakeArenaLogSource.Line(PickOnePickOne),
+            FakeArenaLogSource.Line(PickOnePickOne)));
+        var calls=0; coordinator.CurrentPackPickAccepted += _=> { calls++; return Task.CompletedTask; };
+        var updates=await CollectAsync(coordinator.RunAsync());
+        Assert.Equal(0,calls); Assert.Equal(2,updates[^1].ArenaState.CurrentPack!.Coordinate.Pick);
+    }
+
     private static DraftSessionCoordinator CreateCoordinator(FakeArenaLogSource source)
     {
         return CreateCoordinator(

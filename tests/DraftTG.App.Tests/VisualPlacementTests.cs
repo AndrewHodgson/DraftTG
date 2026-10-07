@@ -101,7 +101,8 @@ public sealed partial class MainWindowViewModelTests
         Assert.Contains("Card positions unconfirmed", overlay.Diagnostics);
         Assert.Contains("Visual slot: unmapped", overlay.BadgeBindingDiagnosticsText);
         var item = Assert.Single(PassiveBadgeView().Descendants(), e => (string?)e.Attribute("ItemsSource") == "{Binding Badges}");
-        var gate = Assert.Single(item.Descendants(), e => e.Name.LocalName == "Border");
+        var gate = Assert.Single(item.Descendants(), e => e.Name.LocalName == "Border"
+            && (string?)e.Attribute("IsVisible") == "{Binding IsPlaced}");
         Assert.Equal("{Binding IsPlaced}", (string?)gate.Attribute("IsVisible"));
     }
 

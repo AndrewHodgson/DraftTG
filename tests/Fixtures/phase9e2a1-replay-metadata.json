@@ -1,0 +1,979 @@
+{
+  "Source": "Offline replay of existing DraftTG WOE fixtures and Arena-only audit images, 2026-10-07. Rounded scores are diagnostic; runtime gates use full precision. No production evidence was written.",
+  "PriorEvidenceForAuditedCaptures": [
+    {
+      "Label": "WOE P1P6",
+      "Visual": [
+        87058,
+        86853,
+        86799,
+        86831,
+        86840,
+        86849,
+        86889,
+        86978,
+        86982
+      ],
+      "Log": [
+        86982,
+        86889,
+        86849,
+        86831,
+        86840,
+        86978,
+        86799,
+        86853,
+        87058
+      ]
+    },
+    {
+      "Label": "WOE P1P7",
+      "Visual": [
+        87099,
+        86711,
+        86737,
+        86750,
+        86813,
+        86834,
+        86851,
+        86988
+      ],
+      "Log": [
+        86737,
+        86813,
+        86851,
+        86988,
+        86750,
+        86711,
+        86834,
+        87099
+      ]
+    }
+  ],
+  "Fixtures": [
+    {
+      "Fixture": "p1p6",
+      "CardCount": 9,
+      "DistinctCandidateOrders": 11,
+      "VerifiedCandidateOrders": 0,
+      "FullMatcherMatches": 9,
+      "LivePromotionEvidence": false,
+      "FullMatcherEvidenceContract": true,
+      "DeclineReason": "unsupported envelope",
+      "FullMatcherSlots": [
+        {
+          "Slot": 1,
+          "GrpId": 87058,
+          "Score": 0.982005,
+          "Margin": 0.538713,
+          "Accepted": true
+        },
+        {
+          "Slot": 2,
+          "GrpId": 86853,
+          "Score": 0.979759,
+          "Margin": 0.536467,
+          "Accepted": true
+        },
+        {
+          "Slot": 3,
+          "GrpId": 86799,
+          "Score": 0.995517,
+          "Margin": 0.47953,
+          "Accepted": true
+        },
+        {
+          "Slot": 4,
+          "GrpId": 86831,
+          "Score": 0.990876,
+          "Margin": 0.474889,
+          "Accepted": true
+        },
+        {
+          "Slot": 5,
+          "GrpId": 86840,
+          "Score": 0.983131,
+          "Margin": 0.588763,
+          "Accepted": true
+        },
+        {
+          "Slot": 6,
+          "GrpId": 86849,
+          "Score": 0.986205,
+          "Margin": 0.441168,
+          "Accepted": true
+        },
+        {
+          "Slot": 7,
+          "GrpId": 86889,
+          "Score": 0.98557,
+          "Margin": 0.43301,
+          "Accepted": true
+        },
+        {
+          "Slot": 8,
+          "GrpId": 86978,
+          "Score": 0.992556,
+          "Margin": 0.43985,
+          "Accepted": true
+        },
+        {
+          "Slot": 9,
+          "GrpId": 86982,
+          "Score": 0.993967,
+          "Margin": 0.441261,
+          "Accepted": true
+        }
+      ]
+    },
+    {
+      "Fixture": "p1p7",
+      "CardCount": 8,
+      "DistinctCandidateOrders": 1,
+      "VerifiedCandidateOrders": 0,
+      "FullMatcherMatches": 8,
+      "LivePromotionEvidence": false,
+      "FullMatcherEvidenceContract": true,
+      "DeclineReason": "unsupported envelope",
+      "FullMatcherSlots": [
+        {
+          "Slot": 1,
+          "GrpId": 87099,
+          "Score": 0.984399,
+          "Margin": 0.528524,
+          "Accepted": true
+        },
+        {
+          "Slot": 2,
+          "GrpId": 86711,
+          "Score": 0.968524,
+          "Margin": 0.633734,
+          "Accepted": true
+        },
+        {
+          "Slot": 3,
+          "GrpId": 86737,
+          "Score": 0.977841,
+          "Margin": 0.719695,
+          "Accepted": true
+        },
+        {
+          "Slot": 4,
+          "GrpId": 86750,
+          "Score": 0.980972,
+          "Margin": 0.525097,
+          "Accepted": true
+        },
+        {
+          "Slot": 5,
+          "GrpId": 86813,
+          "Score": 0.977048,
+          "Margin": 0.571478,
+          "Accepted": true
+        },
+        {
+          "Slot": 6,
+          "GrpId": 86834,
+          "Score": 0.980258,
+          "Margin": 0.509766,
+          "Accepted": true
+        },
+        {
+          "Slot": 7,
+          "GrpId": 86851,
+          "Score": 0.986069,
+          "Margin": 0.484929,
+          "Accepted": true
+        },
+        {
+          "Slot": 8,
+          "GrpId": 86988,
+          "Score": 0.995402,
+          "Margin": 0.494262,
+          "Accepted": true
+        }
+      ]
+    },
+    {
+      "Fixture": "p1p1-1723",
+      "CardCount": 14,
+      "DistinctCandidateOrders": 1,
+      "VerifiedCandidateOrders": 1,
+      "FullMatcherMatches": 14,
+      "LivePromotionEvidence": false,
+      "ClientWidth": 1723,
+      "ClientHeight": 1009,
+      "FastCandidates": [
+        {
+          "Candidate": 1,
+          "RuleCount": 120,
+          "PassingSlots": 14,
+          "Slots": [
+            {
+              "Slot": 1,
+              "GrpId": 87040,
+              "Score": 0.994745,
+              "AmbiguityMargin": 0.492277,
+              "Accepted": true
+            },
+            {
+              "Slot": 2,
+              "GrpId": 86993,
+              "Score": 0.988556,
+              "AmbiguityMargin": 0.479874,
+              "Accepted": true
+            },
+            {
+              "Slot": 3,
+              "GrpId": 86744,
+              "Score": 0.985617,
+              "AmbiguityMargin": 0.523119,
+              "Accepted": true
+            },
+            {
+              "Slot": 4,
+              "GrpId": 86857,
+              "Score": 0.980214,
+              "AmbiguityMargin": 0.465089,
+              "Accepted": true
+            },
+            {
+              "Slot": 5,
+              "GrpId": 86878,
+              "Score": 0.981878,
+              "AmbiguityMargin": 0.704258,
+              "Accepted": true
+            },
+            {
+              "Slot": 6,
+              "GrpId": 86686,
+              "Score": 0.982286,
+              "AmbiguityMargin": 0.475963,
+              "Accepted": true
+            },
+            {
+              "Slot": 7,
+              "GrpId": 86702,
+              "Score": 0.97835,
+              "AmbiguityMargin": 0.528432,
+              "Accepted": true
+            },
+            {
+              "Slot": 8,
+              "GrpId": 86733,
+              "Score": 0.988658,
+              "AmbiguityMargin": 0.522154,
+              "Accepted": true
+            },
+            {
+              "Slot": 9,
+              "GrpId": 86751,
+              "Score": 0.982156,
+              "AmbiguityMargin": 0.519659,
+              "Accepted": true
+            },
+            {
+              "Slot": 10,
+              "GrpId": 86760,
+              "Score": 0.980313,
+              "AmbiguityMargin": 0.545704,
+              "Accepted": true
+            },
+            {
+              "Slot": 11,
+              "GrpId": 86785,
+              "Score": 0.984106,
+              "AmbiguityMargin": 0.468981,
+              "Accepted": true
+            },
+            {
+              "Slot": 12,
+              "GrpId": 86849,
+              "Score": 0.987664,
+              "AmbiguityMargin": 0.51168,
+              "Accepted": true
+            },
+            {
+              "Slot": 13,
+              "GrpId": 86900,
+              "Score": 0.973687,
+              "AmbiguityMargin": 0.7286,
+              "Accepted": true
+            },
+            {
+              "Slot": 14,
+              "GrpId": 86986,
+              "Score": 0.991237,
+              "AmbiguityMargin": 0.482555,
+              "Accepted": true
+            }
+          ]
+        }
+      ],
+      "GeometryComparison": {
+        "Status": "GeometryAgreement",
+        "Compared": 14,
+        "SlotAgreements": 14,
+        "ReadingOrderAgrees": true,
+        "MaxCenter": 4.98,
+        "RmsCenter": 4.24,
+        "OffsetX": -0.07,
+        "OffsetY": 4.19,
+        "MaxScatter": 1.36,
+        "RmsScatter": 0.67,
+        "WidthRatio": 1.079,
+        "HeightRatio": 1.108
+      }
+    },
+    {
+      "Fixture": "p1p2-1723",
+      "CardCount": 13,
+      "DistinctCandidateOrders": 2,
+      "VerifiedCandidateOrders": 1,
+      "FullMatcherMatches": 12,
+      "LivePromotionEvidence": false,
+      "ClientWidth": 1723,
+      "ClientHeight": 1009,
+      "FastCandidates": [
+        {
+          "Candidate": 1,
+          "RuleCount": 110,
+          "PassingSlots": 13,
+          "Slots": [
+            {
+              "Slot": 1,
+              "GrpId": 86984,
+              "Score": 0.980192,
+              "AmbiguityMargin": 0.458058,
+              "Accepted": true
+            },
+            {
+              "Slot": 2,
+              "GrpId": 86700,
+              "Score": 0.989762,
+              "AmbiguityMargin": 0.386204,
+              "Accepted": true
+            },
+            {
+              "Slot": 3,
+              "GrpId": 87058,
+              "Score": 0.9785,
+              "AmbiguityMargin": 0.746484,
+              "Accepted": true
+            },
+            {
+              "Slot": 4,
+              "GrpId": 86897,
+              "Score": 0.988214,
+              "AmbiguityMargin": 0.332639,
+              "Accepted": true
+            },
+            {
+              "Slot": 5,
+              "GrpId": 86985,
+              "Score": 0.985374,
+              "AmbiguityMargin": 0.536499,
+              "Accepted": true
+            },
+            {
+              "Slot": 6,
+              "GrpId": 86702,
+              "Score": 0.978873,
+              "AmbiguityMargin": 0.533307,
+              "Accepted": true
+            },
+            {
+              "Slot": 7,
+              "GrpId": 86710,
+              "Score": 0.997655,
+              "AmbiguityMargin": 0.353052,
+              "Accepted": true
+            },
+            {
+              "Slot": 8,
+              "GrpId": 86721,
+              "Score": 0.989038,
+              "AmbiguityMargin": 0.333463,
+              "Accepted": true
+            },
+            {
+              "Slot": 9,
+              "GrpId": 86725,
+              "Score": 0.99145,
+              "AmbiguityMargin": 0.749309,
+              "Accepted": true
+            },
+            {
+              "Slot": 10,
+              "GrpId": 86786,
+              "Score": 0.991996,
+              "AmbiguityMargin": 0.658506,
+              "Accepted": true
+            },
+            {
+              "Slot": 11,
+              "GrpId": 86845,
+              "Score": 0.98203,
+              "AmbiguityMargin": 0.5065,
+              "Accepted": true
+            },
+            {
+              "Slot": 12,
+              "GrpId": 86889,
+              "Score": 0.98434,
+              "AmbiguityMargin": 0.513176,
+              "Accepted": true
+            },
+            {
+              "Slot": 13,
+              "GrpId": 86978,
+              "Score": 0.991093,
+              "AmbiguityMargin": 0.519929,
+              "Accepted": true
+            }
+          ]
+        },
+        {
+          "Candidate": 2,
+          "RuleCount": 10,
+          "PassingSlots": 10,
+          "Slots": [
+            {
+              "Slot": 1,
+              "GrpId": 86984,
+              "Score": 0.980192,
+              "AmbiguityMargin": 0.458058,
+              "Accepted": true
+            },
+            {
+              "Slot": 2,
+              "GrpId": 86700,
+              "Score": 0.989762,
+              "AmbiguityMargin": 0.386204,
+              "Accepted": true
+            },
+            {
+              "Slot": 3,
+              "GrpId": 87058,
+              "Score": 0.9785,
+              "AmbiguityMargin": 0.746484,
+              "Accepted": true
+            },
+            {
+              "Slot": 4,
+              "GrpId": 86897,
+              "Score": 0.988214,
+              "AmbiguityMargin": 0.332639,
+              "Accepted": true
+            },
+            {
+              "Slot": 5,
+              "GrpId": 86985,
+              "Score": 0.985374,
+              "AmbiguityMargin": 0.536499,
+              "Accepted": true
+            },
+            {
+              "Slot": 6,
+              "GrpId": 86721,
+              "Score": 0.320534,
+              "AmbiguityMargin": -0.668504,
+              "Accepted": false
+            },
+            {
+              "Slot": 7,
+              "GrpId": 86702,
+              "Score": 0.308581,
+              "AmbiguityMargin": -0.689073,
+              "Accepted": false
+            },
+            {
+              "Slot": 8,
+              "GrpId": 86710,
+              "Score": 0.598137,
+              "AmbiguityMargin": -0.399518,
+              "Accepted": false
+            },
+            {
+              "Slot": 9,
+              "GrpId": 86725,
+              "Score": 0.99145,
+              "AmbiguityMargin": 0.749309,
+              "Accepted": true
+            },
+            {
+              "Slot": 10,
+              "GrpId": 86786,
+              "Score": 0.991996,
+              "AmbiguityMargin": 0.658506,
+              "Accepted": true
+            },
+            {
+              "Slot": 11,
+              "GrpId": 86845,
+              "Score": 0.98203,
+              "AmbiguityMargin": 0.5065,
+              "Accepted": true
+            },
+            {
+              "Slot": 12,
+              "GrpId": 86889,
+              "Score": 0.98434,
+              "AmbiguityMargin": 0.513176,
+              "Accepted": true
+            },
+            {
+              "Slot": 13,
+              "GrpId": 86978,
+              "Score": 0.991093,
+              "AmbiguityMargin": 0.519929,
+              "Accepted": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Fixture": "p1p2-1280",
+      "CardCount": 13,
+      "DistinctCandidateOrders": 2,
+      "VerifiedCandidateOrders": 1,
+      "FullMatcherMatches": 12,
+      "LivePromotionEvidence": false,
+      "ClientWidth": 1280,
+      "ClientHeight": 720,
+      "FastCandidates": [
+        {
+          "Candidate": 1,
+          "RuleCount": 110,
+          "PassingSlots": 13,
+          "Slots": [
+            {
+              "Slot": 1,
+              "GrpId": 86984,
+              "Score": 0.980385,
+              "AmbiguityMargin": 0.473304,
+              "Accepted": true
+            },
+            {
+              "Slot": 2,
+              "GrpId": 86700,
+              "Score": 0.99019,
+              "AmbiguityMargin": 0.386269,
+              "Accepted": true
+            },
+            {
+              "Slot": 3,
+              "GrpId": 87058,
+              "Score": 0.981876,
+              "AmbiguityMargin": 0.753528,
+              "Accepted": true
+            },
+            {
+              "Slot": 4,
+              "GrpId": 86897,
+              "Score": 0.987728,
+              "AmbiguityMargin": 0.333521,
+              "Accepted": true
+            },
+            {
+              "Slot": 5,
+              "GrpId": 86985,
+              "Score": 0.984658,
+              "AmbiguityMargin": 0.54419,
+              "Accepted": true
+            },
+            {
+              "Slot": 6,
+              "GrpId": 86702,
+              "Score": 0.973261,
+              "AmbiguityMargin": 0.532209,
+              "Accepted": true
+            },
+            {
+              "Slot": 7,
+              "GrpId": 86710,
+              "Score": 0.995901,
+              "AmbiguityMargin": 0.350132,
+              "Accepted": true
+            },
+            {
+              "Slot": 8,
+              "GrpId": 86721,
+              "Score": 0.980992,
+              "AmbiguityMargin": 0.326786,
+              "Accepted": true
+            },
+            {
+              "Slot": 9,
+              "GrpId": 86725,
+              "Score": 0.984906,
+              "AmbiguityMargin": 0.70984,
+              "Accepted": true
+            },
+            {
+              "Slot": 10,
+              "GrpId": 86786,
+              "Score": 0.989885,
+              "AmbiguityMargin": 0.682477,
+              "Accepted": true
+            },
+            {
+              "Slot": 11,
+              "GrpId": 86845,
+              "Score": 0.982894,
+              "AmbiguityMargin": 0.503973,
+              "Accepted": true
+            },
+            {
+              "Slot": 12,
+              "GrpId": 86889,
+              "Score": 0.982868,
+              "AmbiguityMargin": 0.558395,
+              "Accepted": true
+            },
+            {
+              "Slot": 13,
+              "GrpId": 86978,
+              "Score": 0.983503,
+              "AmbiguityMargin": 0.55903,
+              "Accepted": true
+            }
+          ]
+        },
+        {
+          "Candidate": 2,
+          "RuleCount": 10,
+          "PassingSlots": 10,
+          "Slots": [
+            {
+              "Slot": 1,
+              "GrpId": 86984,
+              "Score": 0.980385,
+              "AmbiguityMargin": 0.473304,
+              "Accepted": true
+            },
+            {
+              "Slot": 2,
+              "GrpId": 86700,
+              "Score": 0.99019,
+              "AmbiguityMargin": 0.386269,
+              "Accepted": true
+            },
+            {
+              "Slot": 3,
+              "GrpId": 87058,
+              "Score": 0.981876,
+              "AmbiguityMargin": 0.753528,
+              "Accepted": true
+            },
+            {
+              "Slot": 4,
+              "GrpId": 86897,
+              "Score": 0.987728,
+              "AmbiguityMargin": 0.333521,
+              "Accepted": true
+            },
+            {
+              "Slot": 5,
+              "GrpId": 86985,
+              "Score": 0.984658,
+              "AmbiguityMargin": 0.54419,
+              "Accepted": true
+            },
+            {
+              "Slot": 6,
+              "GrpId": 86721,
+              "Score": 0.337178,
+              "AmbiguityMargin": -0.643814,
+              "Accepted": false
+            },
+            {
+              "Slot": 7,
+              "GrpId": 86702,
+              "Score": 0.263904,
+              "AmbiguityMargin": -0.731997,
+              "Accepted": false
+            },
+            {
+              "Slot": 8,
+              "GrpId": 86710,
+              "Score": 0.600781,
+              "AmbiguityMargin": -0.39512,
+              "Accepted": false
+            },
+            {
+              "Slot": 9,
+              "GrpId": 86725,
+              "Score": 0.984906,
+              "AmbiguityMargin": 0.70984,
+              "Accepted": true
+            },
+            {
+              "Slot": 10,
+              "GrpId": 86786,
+              "Score": 0.989885,
+              "AmbiguityMargin": 0.682477,
+              "Accepted": true
+            },
+            {
+              "Slot": 11,
+              "GrpId": 86845,
+              "Score": 0.982894,
+              "AmbiguityMargin": 0.503973,
+              "Accepted": true
+            },
+            {
+              "Slot": 12,
+              "GrpId": 86889,
+              "Score": 0.982868,
+              "AmbiguityMargin": 0.558395,
+              "Accepted": true
+            },
+            {
+              "Slot": 13,
+              "GrpId": 86978,
+              "Score": 0.983503,
+              "AmbiguityMargin": 0.55903,
+              "Accepted": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Fixture": "p1p2-1920",
+      "CardCount": 13,
+      "DistinctCandidateOrders": 2,
+      "VerifiedCandidateOrders": 1,
+      "FullMatcherMatches": 11,
+      "LivePromotionEvidence": false,
+      "ClientWidth": 1920,
+      "ClientHeight": 1080,
+      "FastCandidates": [
+        {
+          "Candidate": 1,
+          "RuleCount": 110,
+          "PassingSlots": 13,
+          "Slots": [
+            {
+              "Slot": 1,
+              "GrpId": 86984,
+              "Score": 0.988115,
+              "AmbiguityMargin": 0.480727,
+              "Accepted": true
+            },
+            {
+              "Slot": 2,
+              "GrpId": 86700,
+              "Score": 0.992537,
+              "AmbiguityMargin": 0.39675,
+              "Accepted": true
+            },
+            {
+              "Slot": 3,
+              "GrpId": 87058,
+              "Score": 0.98138,
+              "AmbiguityMargin": 0.69777,
+              "Accepted": true
+            },
+            {
+              "Slot": 4,
+              "GrpId": 86897,
+              "Score": 0.991426,
+              "AmbiguityMargin": 0.337219,
+              "Accepted": true
+            },
+            {
+              "Slot": 5,
+              "GrpId": 86985,
+              "Score": 0.990947,
+              "AmbiguityMargin": 0.554677,
+              "Accepted": true
+            },
+            {
+              "Slot": 6,
+              "GrpId": 86702,
+              "Score": 0.971537,
+              "AmbiguityMargin": 0.593082,
+              "Accepted": true
+            },
+            {
+              "Slot": 7,
+              "GrpId": 86710,
+              "Score": 0.996569,
+              "AmbiguityMargin": 0.359001,
+              "Accepted": true
+            },
+            {
+              "Slot": 8,
+              "GrpId": 86721,
+              "Score": 0.989462,
+              "AmbiguityMargin": 0.335255,
+              "Accepted": true
+            },
+            {
+              "Slot": 9,
+              "GrpId": 86725,
+              "Score": 0.99019,
+              "AmbiguityMargin": 0.70658,
+              "Accepted": true
+            },
+            {
+              "Slot": 10,
+              "GrpId": 86786,
+              "Score": 0.994117,
+              "AmbiguityMargin": 0.688547,
+              "Accepted": true
+            },
+            {
+              "Slot": 11,
+              "GrpId": 86845,
+              "Score": 0.990012,
+              "AmbiguityMargin": 0.519416,
+              "Accepted": true
+            },
+            {
+              "Slot": 12,
+              "GrpId": 86889,
+              "Score": 0.987614,
+              "AmbiguityMargin": 0.50912,
+              "Accepted": true
+            },
+            {
+              "Slot": 13,
+              "GrpId": 86978,
+              "Score": 0.991157,
+              "AmbiguityMargin": 0.512663,
+              "Accepted": true
+            }
+          ]
+        },
+        {
+          "Candidate": 2,
+          "RuleCount": 10,
+          "PassingSlots": 10,
+          "Slots": [
+            {
+              "Slot": 1,
+              "GrpId": 86984,
+              "Score": 0.988115,
+              "AmbiguityMargin": 0.480727,
+              "Accepted": true
+            },
+            {
+              "Slot": 2,
+              "GrpId": 86700,
+              "Score": 0.992537,
+              "AmbiguityMargin": 0.39675,
+              "Accepted": true
+            },
+            {
+              "Slot": 3,
+              "GrpId": 87058,
+              "Score": 0.98138,
+              "AmbiguityMargin": 0.69777,
+              "Accepted": true
+            },
+            {
+              "Slot": 4,
+              "GrpId": 86897,
+              "Score": 0.991426,
+              "AmbiguityMargin": 0.337219,
+              "Accepted": true
+            },
+            {
+              "Slot": 5,
+              "GrpId": 86985,
+              "Score": 0.990947,
+              "AmbiguityMargin": 0.554677,
+              "Accepted": true
+            },
+            {
+              "Slot": 6,
+              "GrpId": 86721,
+              "Score": 0.336589,
+              "AmbiguityMargin": -0.652873,
+              "Accepted": false
+            },
+            {
+              "Slot": 7,
+              "GrpId": 86702,
+              "Score": 0.265907,
+              "AmbiguityMargin": -0.730662,
+              "Accepted": false
+            },
+            {
+              "Slot": 8,
+              "GrpId": 86710,
+              "Score": 0.609494,
+              "AmbiguityMargin": -0.387074,
+              "Accepted": false
+            },
+            {
+              "Slot": 9,
+              "GrpId": 86725,
+              "Score": 0.99019,
+              "AmbiguityMargin": 0.70658,
+              "Accepted": true
+            },
+            {
+              "Slot": 10,
+              "GrpId": 86786,
+              "Score": 0.994117,
+              "AmbiguityMargin": 0.688547,
+              "Accepted": true
+            },
+            {
+              "Slot": 11,
+              "GrpId": 86845,
+              "Score": 0.990012,
+              "AmbiguityMargin": 0.519416,
+              "Accepted": true
+            },
+            {
+              "Slot": 12,
+              "GrpId": 86889,
+              "Score": 0.987614,
+              "AmbiguityMargin": 0.50912,
+              "Accepted": true
+            },
+            {
+              "Slot": 13,
+              "GrpId": 86978,
+              "Score": 0.991157,
+              "AmbiguityMargin": 0.512663,
+              "Accepted": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Fixture": "p1p1-empty-ledger",
+      "CardCount": 14,
+      "DistinctCandidateOrders": 17,
+      "VerifiedCandidateOrders": 0,
+      "FullMatcherMatches": 14,
+      "LivePromotionEvidence": false,
+      "ClientWidth": 1723,
+      "ClientHeight": 1009,
+      "FastCandidates": [],
+      "DeclineReason": "candidate limit exceeded (17 > 8)",
+      "GeometryComparison": {
+        "Status": "GeometryAgreement",
+        "Compared": 14,
+        "SlotAgreements": 14,
+        "ReadingOrderAgrees": true,
+        "MaxCenter": 4.98,
+        "RmsCenter": 4.24,
+        "OffsetX": -0.07,
+        "OffsetY": 4.19,
+        "MaxScatter": 1.36,
+        "RmsScatter": 0.67,
+        "WidthRatio": 1.079,
+        "HeightRatio": 1.108
+      }
+    }
+  ]
+}

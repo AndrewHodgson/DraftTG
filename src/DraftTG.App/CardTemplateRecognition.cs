@@ -16,6 +16,21 @@ internal sealed record CardRecognitionSlotAudit(int Slot, NormalizedDraftRegion 
 internal sealed record CardRecognitionAudit(int Width, int Height, string Method, int Matched,
     IReadOnlyList<string> MissingReferences, IReadOnlyList<CardRecognitionSlotAudit> Slots);
 
+/// <summary>Phase 9E.2A experiment: one fixed, predicted slot scored against every current candidate.</summary>
+internal sealed record FixedSlotVerification(int Slot, int ExpectedOccurrence, double ExpectedScore, double CompetingScore,
+    bool Accepted, string Reason);
+internal sealed record FixedSlotVerificationResult(IReadOnlyList<FixedSlotVerification> Slots, TimeSpan Duration, string? Error = null)
+{
+    public int Accepted => Slots.Count(s => s.Accepted);
+    public bool AllAccepted => Error is null && Slots.Count > 0 && Slots.All(s => s.Accepted);
+    public bool FullyVerifies(int count) => AllAccepted && Slots.Count == count
+        && Slots.Select(s => s.Slot).Order().SequenceEqual(Enumerable.Range(0, count))
+        && Slots.Select(s => s.ExpectedOccurrence).Order().SequenceEqual(Enumerable.Range(0, count))
+        && Slots.All(s => double.IsFinite(s.ExpectedScore) && double.IsFinite(s.CompetingScore)
+            && s.ExpectedScore is >= CardVisualLocalizationResult.MinimumConfidence and <= 1
+            && s.ExpectedScore - s.CompetingScore >= CardTemplateRecognizer.IdentityMargin);
+}
+
 /// <summary>Geometry proposals are hypotheses; only image evidence can authorize a placement.</summary>
 internal static class CardRectangleProposals
 {
@@ -153,6 +168,53 @@ internal sealed class CardTemplateRecognizer
         }).ToArray();
         return new(frame.Width, frame.Height, method, matches.Count,
             occurrences.Where(c => !references.ContainsKey(c.CardIdentifier)).Select(c => c.CardIdentifier.Value).ToArray(), slots);
+    }
+
+    /// <summary>
+    /// Phase 9E.2A shadow experiment, never used for placement. Verifies a deterministic assignment (one predicted
+    /// rectangle per occurrence) without proposal search or global assignment: every candidate is scored at every
+    /// predicted rectangle with the same bounded local artwork registration as <see cref="Recognize"/>, then the
+    /// unchanged identity gate applies (score ≥ 0.94 and a 0.07 lead over other identities at that slot and over the
+    /// expected card at other slots).
+    /// </summary>
+    public FixedSlotVerificationResult VerifyFixedSlots(CardVisualLocalizationRequest request, SKBitmap frame,
+        IReadOnlyDictionary<CardIdentifier, SKBitmap> references, IReadOnlyList<(int Occurrence, NormalizedDraftRegion Rectangle)> slots,
+        CancellationToken cancellationToken = default)
+    {
+        var watch = Stopwatch.StartNew();
+        var occurrences = request.Occurrences; var n = occurrences.Count;
+        if (n != request.Pack.AvailableCardIdentifiers.Count || n is < 1 or > 14 || slots.Count != n || slots.Select(s => s.Occurrence).Distinct().Count() != n
+            || slots.Any(s => s.Occurrence < 0 || s.Occurrence >= n || !s.Rectangle.IsValid)
+            || slots.Where((s, i) => slots.Where((_, j) => j != i).Any(other => Intersection(s.Rectangle, other.Rectangle) > .25)).Any()
+            || occurrences.Where((c, i) => c.Key != new CardOccurrenceKey(i, request.Pack.AvailableCardIdentifiers[i])).Any())
+            return new([], watch.Elapsed, "Invalid fixed-slot verification request.");
+        var sampled = new IntegralImage(frame);
+        var templates = occurrences.Select(c => references.TryGetValue(c.CardIdentifier, out var image)
+            ? Describe(new IntegralImage(image), new(0, 0, 1, 1)) : null).ToArray();
+        var scores = new double[n, n];
+        for (var slot = 0; slot < n; slot++)
+        for (var card = 0; card < n; card++)
+        {
+            cancellationToken.ThrowIfCancellationRequested();
+            if (templates[card] is null) continue;
+            var seed = slots[slot].Rectangle;
+            scores[slot, card] = RegisterArtwork(sampled, seed, templates[card]!, Similarity(Describe(sampled, seed), templates[card])).Score;
+        }
+        var results = Enumerable.Range(0, n).Select(slot =>
+        {
+            var expected = slots[slot].Occurrence; var identity = occurrences[expected].CardIdentifier;
+            var score = scores[slot, expected];
+            var otherIdentity = Enumerable.Range(0, n).Where(c => occurrences[c].CardIdentifier != identity).Select(c => scores[slot, c]).DefaultIfEmpty(0).Max();
+            var otherSlot = Enumerable.Range(0, n).Where(s => s != slot && occurrences[slots[s].Occurrence].CardIdentifier != identity)
+                .Select(s => scores[s, expected]).DefaultIfEmpty(0).Max();
+            var competing = Math.Max(otherIdentity, otherSlot);
+            var reasons = new List<string>();
+            if (templates[expected] is null) reasons.Add("missing exact-printing reference");
+            if (!double.IsFinite(score) || !double.IsFinite(competing) || score < CardVisualLocalizationResult.MinimumConfidence) reasons.Add($"score {score:F3} below {CardVisualLocalizationResult.MinimumConfidence:F2}");
+            if (score - competing < IdentityMargin) reasons.Add($"margin {score - competing:F3} below {IdentityMargin:F2}");
+            return new FixedSlotVerification(slot, expected, score, competing, reasons.Count == 0, string.Join("; ", reasons));
+        }).ToArray();
+        return new(Array.AsReadOnly(results), watch.Elapsed);
     }
 
     internal static NormalizedDraftRegion ArtworkCore(NormalizedDraftRegion card) =>

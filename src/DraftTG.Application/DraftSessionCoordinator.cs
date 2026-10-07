@@ -17,6 +17,8 @@ public sealed class DraftSessionCoordinator
     private readonly ArenaDraftStateEngine _stateEngine;
     private readonly ArenaDraftSnapshotAdapter _snapshotAdapter;
     private int _isRunning;
+    /// <summary>Accepted current-pack pick, before snapshot identity resolution. Awaited so UI placement can retire first.</summary>
+    public event Func<ArenaDraftStateSnapshot, Task>? CurrentPackPickAccepted;
 
     public DraftSessionCoordinator(
         IArenaLogSource logSource,
@@ -102,8 +104,16 @@ public sealed class DraftSessionCoordinator
 
                 foreach (var draftEvent in parsedEvents!)
                 {
+                    var previous = _stateEngine.Current;
                     var stateUpdate = _stateEngine.Apply(draftEvent);
                     if (!stateUpdate.Changed) continue;
+
+                    if (draftEvent is ArenaDraftLogEvent.PickSubmitted submitted
+                        && previous.CurrentPack?.Coordinate == submitted.Pick.Coordinate
+                        && (previous.DraftIdentifier is null || previous.DraftIdentifier == stateUpdate.Snapshot.DraftIdentifier)
+                        && stateUpdate.Snapshot.CurrentPack is null && CurrentPackPickAccepted is { } handlers)
+                        foreach (Func<ArenaDraftStateSnapshot, Task> handler in handlers.GetInvocationList())
+                            await handler(stateUpdate.Snapshot).ConfigureAwait(false);
 
                     yield return new DraftSessionUpdate(
                         stateUpdate.Snapshot,

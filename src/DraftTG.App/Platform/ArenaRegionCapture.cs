@@ -20,6 +20,12 @@ internal sealed record ArenaWindowGeometry(nint Handle, int X, int Y, int Width,
         : b is not null && a.Handle == b.Handle && a.ProcessId == b.ProcessId
         && Math.Abs(a.X - b.X) <= 1 && Math.Abs(a.Y - b.Y) <= 1
         && Math.Abs(a.Width - b.Width) <= 1 && Math.Abs(a.Height - b.Height) <= 1 && Math.Abs(a.Scaling - b.Scaling) < .001;
+    // A completed placement is local to the client. Origin and foreground never change that layout.
+    // Unlike capture jitter tolerance, even a one-pixel client resize invalidates completed placement.
+    public static bool SamePlacementGeometry(ArenaWindowGeometry? a, ArenaWindowGeometry? b) => a is null ? b is null
+        : b is not null && a.Handle == b.Handle && a.ProcessId == b.ProcessId
+        && a.Width == b.Width && a.Height == b.Height && a.Scaling == b.Scaling
+        && a.IsVisible == b.IsVisible && a.IsMinimized == b.IsMinimized;
 }
 internal sealed record ArenaWindowInspection(bool ProcessFound, ArenaWindowGeometry? Window, string? Diagnostic = null);
 internal sealed record ArenaRegionFrame(SKBitmap Image, int X, int Y, double Scaling) : IDisposable

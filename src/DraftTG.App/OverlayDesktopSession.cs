@@ -19,6 +19,7 @@ public sealed class OverlayDesktopSession : ICalibrationSurface
     private readonly OverlayCalibrationEditor _calibration;
     private readonly AutomaticCardLocalizationSession _localization;
     private readonly OrderEvidenceRecorder _orderEvidence;
+    private readonly DeterministicSlotShadowObserver _deterministicShadow;
     private bool _localizationSurfaceVisible = true;
     private OverlayCalibration? Saved => _calibration.Saved;
     private bool _closing;
@@ -39,11 +40,18 @@ public sealed class OverlayDesktopSession : ICalibrationSurface
         _calibration = new(_presentation, settings, _interaction, this);
         _localization = new(_presentation, () => Saved, (x, y, width, height) =>
         {
-            _cards.Position = new(x, y); _cards.Width = width; _cards.Height = height;
+            _cards.Position = new(x, y);
+            if (_cards.Width == width && _cards.Height == height) return;
+            _cards.Width = width; _cards.Height = height;
             _presentation.SetViewport(width, height);
         }, visible => { _localizationSurfaceVisible = visible; RefreshVisibility(); });
         // Phase 9E.1: observational order evidence; it cannot influence placement.
         _orderEvidence = new(_presentation, () => _localization.ArenaWindow is { } window ? (window.Width, window.Height) : null);
+        // Phase 9E.2A: shadow-mode deterministic slots; compared with the artwork matcher, never used for placement.
+        _deterministicShadow = new(_presentation, () => _localization.ArenaWindow, () => _localization.CaptureAnchor,
+            () => _orderEvidence.Evaluation, log: DeterministicSlotShadowObserver.DefaultLog(),
+            isCurrentFrame: _localization.IsCurrentEvidenceFrame, recordEvidence: _orderEvidence.RecordVerified);
+        _localization.RecognitionFrameObserver = _deterministicShadow.ObserveFrame;
         Rail.Opened += OnOpened;
         Rail.Closing += OnClosing;
         Rail.ActionRequested += OnAction;
@@ -191,7 +199,7 @@ public sealed class OverlayDesktopSession : ICalibrationSurface
             _calibration.Cancel();
             _presentation.SetDiagnostic("Display geometry changed. Set overlay position again.");
         }
-        else if (_localization.CanFollowWindow) _localization.Retry();
+        else if (_localization.CanFollowWindow) _localization.RefreshWindow();
         // Keep the interactive escape hatch reachable after a display is disconnected.
         if (!Rail.Screens.All.Any(screen => screen.WorkingArea.Contains(Rail.Position)) && Rail.Screens.Primary is { } primary)
             Rail.Position = new(primary.WorkingArea.X + 12, primary.WorkingArea.Y + 60);
@@ -215,6 +223,7 @@ public sealed class OverlayDesktopSession : ICalibrationSurface
             catch (OperationCanceledException) when (_lifetime.IsCancellationRequested) { }
             await _localization.DisposeAsync();
             await _orderEvidence.DisposeAsync();
+            await _deterministicShadow.DisposeAsync();
             await _runtime.DisposeAsync();
         }
         finally

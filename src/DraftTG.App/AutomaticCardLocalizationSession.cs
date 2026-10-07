@@ -24,7 +24,9 @@ internal sealed class AutomaticCardLocalizationSession : ICardVisualLocator, IAs
     internal string? LastDebugLogPath { get; private set; }
     private readonly HttpClient _http = new(new HttpClientHandler { AllowAutoRedirect = false }) { Timeout = TimeSpan.FromSeconds(15) };
     private readonly ScryfallVisualReferenceCache _references;
-    private readonly DispatcherTimer _timer = new() { Interval = TimeSpan.FromMilliseconds(500) };
+    internal static readonly TimeSpan WindowHealthInterval = TimeSpan.FromSeconds(2);
+    private readonly DispatcherTimer _timer = new() { Interval = WindowHealthInterval };
+    private readonly ArenaWindowEventPump? _windowEvents;
     private readonly CancellationTokenSource _lifetime = new();
     private CancellationTokenSource? _attempt;
     private Task? _work;
@@ -43,9 +45,10 @@ internal sealed class AutomaticCardLocalizationSession : ICardVisualLocator, IAs
         IArenaRegionCapture? capture = null, ArenaCaptureOptions? options = null,
         Func<CardVisualLocalizationRequest, ArenaRegionFrame, CancellationToken, Task<CardVisualLocalizationResult>>? recognize = null,
         string? debugPath = null, Action<Action>? dispatch = null, PackFrameTiming? timing = null,
-        Func<TimeSpan, CancellationToken, Task>? delay = null)
+        Func<TimeSpan, CancellationToken, Task>? delay = null, IArenaWindowEvents? windowEvents = null)
     {
         _presentation = presentation; _calibration = calibration; _moveOverlay = moveOverlay; _captureVisibility = captureVisibility;
+        var nativeWindowEvents = capture is null && OperatingSystem.IsWindows();
         capture ??= WindowsCaptureFactory.CreateForCurrentPlatform();
         _coordinator = capture is null ? null : new(capture, options ?? ArenaCaptureOptions.FromEnvironment());
         _references = new(ApplicationDataPathProviderFactory.CreateDefault().GetApplicationDataDirectory(), _http);
@@ -58,6 +61,9 @@ internal sealed class AutomaticCardLocalizationSession : ICardVisualLocator, IAs
         _synchronizer = new(timing ?? PackFrameTiming.FromEnvironment(), delay);
         BindPack();
         _dispatch = dispatch ?? (action => { if (Dispatcher.UIThread.CheckAccess()) action(); else Dispatcher.UIThread.Post(action); });
+        windowEvents ??= nativeWindowEvents ? new WindowsArenaWindowEvents() : null;
+        if (windowEvents is not null) _windowEvents = new(windowEvents,
+            dispatch ?? (action => Dispatcher.UIThread.Post(action)), RefreshWindow);
         if (_coordinator is not null) _coordinator.Changed += DiagnosticsChanged;
         _presentation.PropertyChanged += Changed;
         _timer.Tick += Tick;
@@ -66,10 +72,18 @@ internal sealed class AutomaticCardLocalizationSession : ICardVisualLocator, IAs
     private void DiagnosticsChanged() => _dispatch(() =>
     { if (!_disposed) _presentation.SetCaptureRuntimeDiagnostics(_coordinator!.DiagnosticText); });
     public void Start() { Retry(); Tick(null, EventArgs.Empty); _timer.Start(); }
+    internal void RefreshWindow() => Tick(null, EventArgs.Empty);
     public bool CanFollowWindow => _coordinator is not null && _anchor is not null;
     /// <summary>Last observed Arena client geometry; read by order-evidence metadata only.</summary>
     internal ArenaWindowGeometry? ArenaWindow => _coordinator?.Window;
-    internal Task CurrentWork => _restartWork ?? _work ?? Task.CompletedTask;
+    /// <summary>Draft-region crop relative to Arena's client area; read by the Phase 9E.2A shadow comparison only.</summary>
+    internal NormalizedDraftRegion? CaptureAnchor => _anchor;
+    /// <summary>
+    /// Phase 9E.2A shadow hook. Invoked after recognition with the synchronized frame, before the frame is disposed.
+    /// Observers must copy what they need and return quickly; exceptions are contained and the result is unaffected.
+    /// </summary>
+    internal Action<RecognitionFrameObservation>? RecognitionFrameObserver { get; set; }
+    internal Task CurrentWork => _restartWork is { IsCompleted: false } ? _restartWork : _work ?? Task.CompletedTask;
     public void RetryManually()
     {
         _presentation.InvalidateAutomaticLocalization("Rediscovering Arena and requesting a fresh frame.");
@@ -126,13 +140,16 @@ internal sealed class AutomaticCardLocalizationSession : ICardVisualLocator, IAs
         }
         try
         {
-            var window = _coordinator.Observe();
+            var completedPlacement = _work is not { IsCompleted: false } && _presentation.Badges.Any(b => b.IsPlaced);
+            var window = _coordinator.Observe(completedPlacement);
+            _windowEvents?.Track(window);
             if (_presentation.IsCalibrating) { _coordinator.Note("Waiting for calibration editing to finish"); return; }
             if (_calibration() is not { } saved) { _coordinator.Note("Waiting for saved draft-region calibration"); return; }
             if (_observedGeneration != _coordinator.Generation || !ReferenceEquals(saved, _saved))
             {
-                var changedLayout = window is not null && _window is not null &&
-                    (Math.Abs(window.Width - _window.Width) > 1 || Math.Abs(window.Height - _window.Height) > 1 || Math.Abs(window.Scaling - _window.Scaling) >= .001);
+                var changedLayout = _observedGeneration != 0 &&
+                    (window?.Width != _window?.Width || window?.Height != _window?.Height || window?.Scaling != _window?.Scaling
+                        || window?.Handle != _window?.Handle || window?.ProcessId != _window?.ProcessId);
                 if (!ReferenceEquals(saved, _saved) || window?.Handle != _window?.Handle) _anchor = null;
                 _observedGeneration = _coordinator.Generation; _saved = saved;
                 var immediate = _force;
@@ -325,16 +342,55 @@ internal sealed class AutomaticCardLocalizationSession : ICardVisualLocator, IAs
     }
     private async Task<CardVisualLocalizationResult> RecognizeAsync(CardVisualLocalizationRequest request, ArenaRegionFrame frame, CancellationToken token)
     {
+        var window = _coordinator!.Window;
+        var anchor = _anchor;
+        var revision = _revision;
         _coordinator!.Note("Preparing artwork references after fresh draft crop", frame.Generation);
         var references = await Task.Run(() => _references.GetAsync(request.Occurrences.Select(c => c.CardIdentifier), token), token);
         token.ThrowIfCancellationRequested();
         _coordinator.LocalizationStarted(frame.Generation);
-        return await Task.Run(() => new CardTemplateRecognizer().Recognize(request, frame.Image, references, token), token);
+        var result = await Task.Run(() => new CardTemplateRecognizer().Recognize(request, frame.Image, references, token), token);
+        if (RecognitionFrameObserver is { } observer && window is not null && anchor is not null)
+        {
+            try
+            {
+                var observation = new RecognitionFrameObservation(request, frame.Image, references, window, anchor)
+                {
+                    CaptureGeneration = frame.Generation, CaptureRequestGeneration = frame.CaptureRequestGeneration,
+                    CapturedAt = frame.CapturedAt, FramePackGeneration = frame.PackGeneration, Revision = revision,
+                    FrameX = frame.X, FrameY = frame.Y, FrameWindowHandle = frame.WindowHandle,
+                    Visual = result with { PackGeneration = request.PackGeneration, CaptureRequestGeneration = frame.CaptureRequestGeneration }
+                };
+                if (!token.IsCancellationRequested && IsCurrentEvidenceFrame(observation)) observer(observation);
+            }
+            catch (Exception ex) { System.Diagnostics.Trace.WriteLine("Deterministic shadow frame observer failed: " + ex.Message); }
+        }
+        return result;
+    }
+
+    internal bool IsCurrentEvidenceFrame(RecognitionFrameObservation observation)
+    {
+        var context = _packContext;
+        var expected = observation.Window;
+        var mapping = VisualCaptureMapping.FromAnchor(observation.Anchor, expected.Width, expected.Height);
+        if (_disposed || _coordinator is null || context is null || !_synchronizer.IsCurrent(context)
+            || observation.Request.PackGeneration != context.Request.PackGeneration || !observation.Request.Pack.Equals(context.Request.Pack)
+            || observation.FramePackGeneration != context.Request.PackGeneration || observation.CapturedAt < context.ChangedAt
+            || observation.Revision != _revision || observation.CaptureGeneration != _coordinator.Generation
+            || observation.CaptureRequestGeneration <= 0 || observation.CaptureRequestGeneration != _coordinator.Diagnostics.RequestGeneration
+            || observation.Anchor != _anchor || observation.FrameWindowHandle != expected.Handle
+            || observation.FrameX != expected.X + mapping.CropX || observation.FrameY != expected.Y + mapping.CropY
+            || observation.CaptureWidth != mapping.CropWidth || observation.CaptureHeight != mapping.CropHeight) return false;
+        var current = _coordinator.InspectCurrentWindow();
+        return current is { IsVisible: true, IsMinimized: false } && current.Handle == expected.Handle && current.ProcessId == expected.ProcessId
+            && current.X == expected.X && current.Y == expected.Y && current.Width == expected.Width && current.Height == expected.Height
+            && current.Scaling == expected.Scaling;
     }
 
     public async ValueTask DisposeAsync()
     {
         _disposed = true; _timer.Stop(); _timer.Tick -= Tick; _presentation.PropertyChanged -= Changed;
+        _windowEvents?.Dispose();
         if (_coordinator is not null) { _coordinator.Changed -= DiagnosticsChanged; _coordinator.Dispose(); }
         await _lifetime.CancelAsync();
         _synchronizer.Dispose();

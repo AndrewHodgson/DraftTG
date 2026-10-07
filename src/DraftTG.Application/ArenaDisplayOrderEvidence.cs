@@ -15,6 +15,7 @@ public sealed record ArenaDisplayOrderObservation
 {
     public const int CurrentSchemaVersion = 1;
     public const string CurrentEvidenceSource = "DraftTG/9E.1 automatic-artwork-matcher";
+    public const string FixedSlotEvidenceSource = "DraftTG/9E.2A.1 deterministic-slot-full-verification";
 
     public int SchemaVersion { get; init; } = CurrentSchemaVersion;
     public string EvidenceSource { get; init; } = CurrentEvidenceSource;
@@ -39,6 +40,8 @@ public sealed record ArenaDisplayOrderObservation
     public string? Method { get; init; }
     public double MinimumScore { get; init; }
     public double MeanScore { get; init; }
+    public double? MinimumAmbiguityMargin { get; init; }
+    public int CandidateOrderCount { get; init; }
     public required IReadOnlyList<ArenaCardSortKeys> SortKeys { get; init; }
 
     public IReadOnlyDictionary<int, ArenaCardSortKeys> KeyMap()
@@ -57,6 +60,13 @@ public sealed record ArenaDisplayOrderObservation
     public string? Validate()
     {
         if (SchemaVersion != CurrentSchemaVersion) return $"unsupported schema version {SchemaVersion}";
+        if (EvidenceSource is not (CurrentEvidenceSource or FixedSlotEvidenceSource)) return "unknown evidence source";
+        if (EvidenceSource == FixedSlotEvidenceSource && (CandidateOrderCount is < 1 or > 8
+            || ClientWidth <= 0 || ClientHeight <= 0 || CaptureWidth <= 0 || CaptureHeight <= 0
+            || !double.IsFinite(MinimumScore) || MinimumScore is < .94 or > 1
+            || !double.IsFinite(MeanScore) || MeanScore < MinimumScore || MeanScore > 1
+            || MinimumAmbiguityMargin is not { } margin || !double.IsFinite(margin) || margin < .07))
+            return "invalid full-verification metadata";
         if (string.IsNullOrWhiteSpace(ObservationId) || string.IsNullOrWhiteSpace(DraftScope)) return "missing identity";
         if (Pack < 1 || Pick < 1) return "invalid pack coordinate";
         if (LogOrder is null || VisualOrder is null || SortKeys is null || SortKeys.Any(k => k is null)) return "missing card lists";
@@ -64,6 +74,7 @@ public sealed record ArenaDisplayOrderObservation
         if (!LogOrder.Order().SequenceEqual(VisualOrder.Order())) return "visual order is not a permutation of the pack";
         if (ObservationId != CreateId(DraftScope, Pack, Pick, LogOrder)) return "observation identity does not match its contents";
         var keys = KeyMap();
+        if (SortKeys.Select(k => k.GrpId).Distinct().Count() != SortKeys.Count) return "duplicate sort keys";
         if (LogOrder.Any(id => !keys.ContainsKey(id))) return "missing sort keys";
         return null;
     }

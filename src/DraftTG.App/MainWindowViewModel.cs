@@ -83,6 +83,17 @@ public sealed class MainWindowViewModel : INotifyPropertyChanged, IAsyncDisposab
     public event PropertyChangedEventHandler? PropertyChanged;
     // Emitted after a whole pack presentation is ready; statistics updates retain slot objects.
     public event Action<bool>? PackPresentationChanged;
+    public event Action? CurrentPackPlacementInvalidated;
+    private bool _submittedPackInvalidated;
+    internal void InvalidateSubmittedPack(ArenaDraftStateSnapshot acceptedState)
+    {
+        if (_isDisposed || _submittedPackInvalidated || CurrentArenaState?.CurrentPack is not { } displayed
+            || acceptedState.CurrentPack is not null || (CurrentArenaState.DraftIdentifier is { } displayedDraft
+                && displayedDraft != acceptedState.DraftIdentifier)
+            || !acceptedState.CompletedPicks.Any(pick => pick.Coordinate == displayed.Coordinate)) return;
+        _submittedPackInvalidated = true;
+        CurrentPackPlacementInvalidated?.Invoke();
+    }
 
     public ObservableCollection<CurrentPackCardViewModel> CurrentPackCards { get; } = [];
     /// <summary>The immutable ordered snapshot shared by rail names and passive badge bindings.</summary>
@@ -300,6 +311,8 @@ public sealed class MainWindowViewModel : INotifyPropertyChanged, IAsyncDisposab
         var statisticsTask = runtime.Statistics is { } statistics
             ? ReadStatisticsAsync(statistics, statisticsCancellation.Token) : Task.CompletedTask;
         var decksTask = runtime.Decks is { } decks ? ReadDecksAsync(decks, statisticsCancellation.Token) : Task.CompletedTask;
+        Task RetireSubmittedPack(ArenaDraftStateSnapshot state) => _dispatcher.InvokeAsync(() => InvalidateSubmittedPack(state));
+        runtime.Coordinator.CurrentPackPickAccepted += RetireSubmittedPack;
         try
         {
             await foreach (var update in runtime.Coordinator
@@ -329,6 +342,7 @@ public sealed class MainWindowViewModel : INotifyPropertyChanged, IAsyncDisposab
         }
         finally
         {
+            runtime.Coordinator.CurrentPackPickAccepted -= RetireSubmittedPack;
             await statisticsCancellation.CancelAsync().ConfigureAwait(false);
             if (runtime.Decks is not null) await runtime.Decks.DisposeAsync().ConfigureAwait(false);
             await decksTask.ConfigureAwait(false);
@@ -556,6 +570,7 @@ public sealed class MainWindowViewModel : INotifyPropertyChanged, IAsyncDisposab
 
     private void ApplyReady(ArenaDraftStateSnapshot arenaState, DraftSnapshot snapshot)
     {
+        _submittedPackInvalidated = false;
         _currentSnapshot = snapshot;
         CurrentArenaState = arenaState;
         StatisticsStatusText = _statisticsEnabled ? "Stats: loading…" : "Stats: unavailable";

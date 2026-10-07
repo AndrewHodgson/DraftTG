@@ -83,6 +83,8 @@ internal sealed class ArenaCaptureCoordinator(IArenaRegionCapture capture, Arena
     public ArenaWindowGeometry? Window => Diagnostics.Inspection.Window;
     public long Generation => Diagnostics.Generation;
     public string DiagnosticText => Diagnostics.Format(options.FreshFrameTimeout);
+    // Read-only evidence freshness check; does not restart capture or alter window tracking.
+    internal ArenaWindowGeometry? InspectCurrentWindow() => capture.InspectWindow().Window;
 
     private void Update(Func<ArenaCaptureDiagnostics, ArenaCaptureDiagnostics> change, long? generation = null, long? request = null)
     {
@@ -96,13 +98,16 @@ internal sealed class ArenaCaptureCoordinator(IArenaRegionCapture capture, Arena
         Changed?.Invoke();
     }
 
-    public ArenaWindowGeometry? Observe()
+    public ArenaWindowGeometry? Observe(bool retainCompletedPlacementOnTranslation = false)
     {
         try
         {
             var observation = capture.InspectWindow();
             var previous = Window;
-            if (!ArenaWindowGeometry.SameCaptureGeometry(previous, observation.Window)) RestartCore("Window geometry discovered/changed");
+            var same = retainCompletedPlacementOnTranslation
+                ? ArenaWindowGeometry.SamePlacementGeometry(previous, observation.Window)
+                : ArenaWindowGeometry.SameCaptureGeometry(previous, observation.Window);
+            if (!same) RestartCore("Window geometry discovered/changed");
             Update(d => d with { Inspection = observation, WindowRediscovery = previous?.Handle == observation.Window?.Handle ? d.WindowRediscovery
                 : $"previous {(previous is null ? "none" : $"0x{previous.Handle.ToInt64():X}")}; current "
                     + (observation.Window is { } current ? $"0x{current.Handle.ToInt64():X}" : "none; " + observation.Diagnostic) });

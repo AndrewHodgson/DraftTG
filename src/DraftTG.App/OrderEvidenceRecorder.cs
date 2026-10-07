@@ -38,6 +38,39 @@ internal sealed class OrderEvidenceRecorder : IAsyncDisposable
             () => ArenaCardDatabaseLocator.FindNewest(databasePath) is { } path ? new ArenaCardDatabaseReader(path) : null);
 
     internal Task Completion => _tail;
+    /// <summary>Current evaluation (immutable snapshot). Read by the Phase 9E.2A shadow observer at pack arrival.</summary>
+    internal ArenaDisplayOrderEvaluation Evaluation => _presentation.Session.CurrentArenaState?.CurrentPack is { } pack
+        ? _service.BeforePack(pack.Coordinate.Pack, pack.Coordinate.Pick, pack.CardIdentifiers.Select(c => c.Value).ToArray())
+        : _service.Evaluation;
+
+    /// <summary>Called on the UI thread after frame/current-geometry validation. Persistence stays on the evidence queue.</summary>
+    internal void RecordVerified(VisualPlacementContext context, RecognitionFrameObservation observation, FixedSlotOrderEvidenceResult verified)
+    {
+        if (_disposed) return;
+        var state = _presentation.Session.CurrentArenaState;
+        var pack = state?.CurrentPack;
+        var log = pack?.CardIdentifiers.Select(c => c.Value).ToArray();
+        if (pack is null || log is null || _scope is null || pack.Coordinate.Pack != context.Pack.Position.Pack.Value
+            || pack.Coordinate.Pick != context.Pack.Position.Pick.Value) return;
+        var gate = FixedSlotOrderEvidence.Gate(observation.Request, log, verified,
+            ReferenceEquals(context, _presentation.PlacementContext) ? context.Generation : -1, _presentation.Session.CurrentPackIdentity,
+            true, _presentation.HasConfirmedVisualPlacement || _presentation.HasManualVisualEdits || _presentation.IsCalibrating);
+        if (!gate.Accepted) return;
+        var winner = verified.Candidates.Single(c => c.Verification.FullyVerifies(log.Length));
+        var candidate = new ArenaDisplayOrderCandidate(_scope, state!.EventName, pack.Coordinate.Pack, pack.Coordinate.Pick,
+            log, gate, observation.Window.Width, observation.Window.Height, observation.CaptureWidth, observation.CaptureHeight,
+            "deterministic-slot-full-verification", DateTimeOffset.UtcNow)
+        {
+            EvidenceSource = ArenaDisplayOrderObservation.FixedSlotEvidenceSource,
+            PredictionBeforeVerification = verified.PredictionBefore, CandidateOrderCount = verified.Candidates.Count,
+            MinimumAmbiguityMargin = winner.Verification.Slots.Min(s => s.ExpectedScore - s.CompetingScore)
+        };
+        Enqueue(() =>
+        {
+            var outcome = _service.Record(candidate);
+            Publish(ArenaDisplayOrderEvidencePresentation.RailLine(outcome), ArenaDisplayOrderEvidencePresentation.DetailLine(outcome));
+        });
+    }
 
     public void Start() => Enqueue(() =>
     {

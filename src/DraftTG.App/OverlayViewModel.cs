@@ -34,6 +34,14 @@ public sealed class CardBadgeViewModel : PresentationModel
     public CardOccurrenceKey? OccurrenceKey { get; }
     public CurrentPackCardPresentation? Presentation { get; private set; }
     public string Name => Presentation?.CardName ?? _legacyCard!.Name;
+    // The canonical occurrence name is never looked up or inferred by the overlay.
+    public string DisplayName => Presentation is { IsIdentityConsistent: true, Card: not null } ? Presentation.CardName : string.Empty;
+    public bool ShowName { get; private set; } = true;
+    public bool HasDisplayName => ShowName && DisplayName.Length > 0;
+    public double NameWidth { get; private set; }
+    public double NameX => (Width - NameWidth) / 2;
+    internal void SetNameVisibility(bool visible)
+    { ShowName = visible; Notify(nameof(ShowName)); Notify(nameof(HasDisplayName)); }
     private LimitedCardStatisticsPresentation Statistics => Presentation?.Statistics ?? _legacyCard!.Statistics;
     private CardRecommendation? Recommendation => Presentation is { } p ? p.Statistical : _legacyCard!.Recommendation;
     public string WinRate => Presentation?.DisplayedGIH ?? Statistics.GameInHand + (Statistics.IsLowSample ? "*" : "");
@@ -72,21 +80,26 @@ public sealed class CardBadgeViewModel : PresentationModel
         Notify(nameof(WinRate)); Notify(nameof(Secondary)); Notify(nameof(Detail));
         Notify(nameof(Rank)); Notify(nameof(IsStatisticalPick)); Notify(nameof(BorderColor)); Notify(nameof(RankColor));
         Notify(nameof(IsContextPick));
+        Notify(nameof(DisplayName)); Notify(nameof(HasDisplayName));
     }
     public void Place(CardSlot slot, double width, double height)
     {
         VisualSlotIndex = slot.Index;
         var bounds = slot.Scale(width, height);
         Width = Math.Min(86, bounds.Width);
+        NameWidth = Math.Min(180, bounds.Width);
         X = bounds.X + (bounds.Width - Width) / 2;
         Y = Math.Max(bounds.Y, bounds.Y + bounds.Height - 44);
         Notify(nameof(X)); Notify(nameof(Y)); Notify(nameof(Width)); Notify(nameof(VisualSlotIndex)); Notify(nameof(IsPlaced));
+        Notify(nameof(NameWidth)); Notify(nameof(NameX));
     }
     internal void ClearPlacement()
     {
         VisualSlotIndex = null;
         X = 0; Y = 0; Width = 0;
+        NameWidth = 0;
         Notify(nameof(X)); Notify(nameof(Y)); Notify(nameof(Width)); Notify(nameof(VisualSlotIndex)); Notify(nameof(IsPlaced));
+        Notify(nameof(NameWidth)); Notify(nameof(NameX));
     }
 }
 
@@ -108,15 +121,25 @@ public sealed class OverlayViewModel : PresentationModel, IDisposable
     private CardVisualLocalizationResult? _automaticPlacement;
     private long _visualGeneration;
     private string? _placementError;
+    private bool _waitingForNextPack;
+    private bool _showCardNames = true;
     public OverlayViewModel(MainWindowViewModel session)
     {
         Session = session;
         session.PackPresentationChanged += RefreshPack;
+        session.CurrentPackPlacementInvalidated += InvalidateSubmittedPack;
         session.PropertyChanged += SessionChanged;
         RefreshPack(true);
     }
     public MainWindowViewModel Session { get; }
     public IReadOnlyList<CardBadgeViewModel> Badges { get; private set; } = [];
+    public bool ShowCardNames => _showCardNames;
+    public void SetCardNamesVisible(bool visible)
+    {
+        _showCardNames = visible;
+        foreach (var badge in Badges) badge.SetNameVisibility(visible);
+        Notify(nameof(ShowCardNames));
+    }
     public string BadgeBindingDiagnosticsText { get; private set; } = string.Empty;
     public VisualPlacementContext? PlacementContext { get; private set; }
     public IReadOnlyList<VisualSlotAssignmentViewModel> VisualSlots { get; private set; } = [];
@@ -143,7 +166,7 @@ public sealed class OverlayViewModel : PresentationModel, IDisposable
     public bool HasCalibration => _hasCalibration;
     public bool NeedsCalibration => !_hasCalibration;
     public bool StatisticsVisible => _statisticsVisible;
-    public bool ShowBadges => (_hasCalibration || _isCalibrating) && _statisticsVisible && Badges.Count > 0;
+    public bool ShowBadges => !_waitingForNextPack && (_hasCalibration || _isCalibrating) && _statisticsVisible && Badges.Count > 0;
     public string VisibilityLabel => _statisticsVisible ? "Hide statistics" : "Show statistics";
     public string CalibrationLabel => _isCalibrating ? "Editing overlay" : _hasCalibration ? "Edit overlay position" : "Set overlay position";
     public RailPanel Panel => _panel;
@@ -235,6 +258,15 @@ public sealed class OverlayViewModel : PresentationModel, IDisposable
         if (diagnostics is not null) OrderEvidenceDiagnostics = diagnostics;
         Notify(nameof(OrderEvidenceStatus)); Notify(nameof(OrderEvidenceDiagnostics));
     }
+    /// <summary>Phase 9E.2A shadow diagnostic only; never read by placement, badges or matching.</summary>
+    public string DeterministicSlotStatus { get; private set; } = string.Empty;
+    public string DeterministicSlotDiagnostics { get; private set; } = string.Empty;
+    internal void SetDeterministicSlots(string status, string? diagnostics = null)
+    {
+        DeterministicSlotStatus = status;
+        if (diagnostics is not null) DeterministicSlotDiagnostics = diagnostics;
+        Notify(nameof(DeterministicSlotStatus)); Notify(nameof(DeterministicSlotDiagnostics));
+    }
     public void InvalidateAutomaticLocalization(string diagnostic, bool invalidateManual = false)
     {
         _automaticPlacement = null;
@@ -270,6 +302,7 @@ public sealed class OverlayViewModel : PresentationModel, IDisposable
         && ConfirmVisualOrder(context, VisualSlots.Select(slot => slot.SelectedCard!.Key));
     private void ResetVisualPlacement()
     {
+        _waitingForNextPack = false;
         _visualPlacement = null;
         _automaticPlacement = null;
         HasManualVisualEdits = false;
@@ -314,9 +347,22 @@ public sealed class OverlayViewModel : PresentationModel, IDisposable
             return badge;
         }).ToArray();
         Badges = Array.AsReadOnly(next);
+        foreach (var badge in Badges) badge.SetNameVisibility(_showCardNames);
         if (newPack) ResetVisualPlacement();
         PlaceAll();
         Notify(nameof(Badges)); Notify(nameof(ShowBadges));
+    }
+    private void InvalidateSubmittedPack()
+    {
+        if (PlacementContext is null) return;
+        _waitingForNextPack = true;
+        ++_visualGeneration;
+        PlacementContext = null;
+        _automaticPlacement = null; _visualPlacement = null;
+        HasManualVisualEdits = false; _placementError = null; VisualSlots = [];
+        SetLocalizationStatus("Card placement: Waiting for next pack", "Pick accepted; outgoing pack placements invalidated.");
+        PlaceAll();
+        Notify(nameof(PlacementContext)); Notify(nameof(VisualSlots)); NotifyPlacement(); Notify(nameof(ShowBadges));
     }
     private void CaptureBadgeDiagnostics()
     {
@@ -358,6 +404,7 @@ public sealed class OverlayViewModel : PresentationModel, IDisposable
     public void Dispose()
     {
         Session.PackPresentationChanged -= RefreshPack;
+        Session.CurrentPackPlacementInvalidated -= InvalidateSubmittedPack;
         Session.PropertyChanged -= SessionChanged;
     }
 }

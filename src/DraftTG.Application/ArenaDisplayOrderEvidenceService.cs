@@ -8,7 +8,13 @@ namespace DraftTG.Application;
 /// <summary>A gate-accepted pack waiting for Arena sort keys. Raw scope text is hashed before persistence.</summary>
 public sealed record ArenaDisplayOrderCandidate(string RawDraftScope, string? EventName, int Pack, int Pick,
     IReadOnlyList<int> LogOrder, ArenaDisplayOrderGateResult Gate, int ClientWidth, int ClientHeight,
-    int CaptureWidth, int CaptureHeight, string? Method, DateTimeOffset RecordedAt);
+    int CaptureWidth, int CaptureHeight, string? Method, DateTimeOffset RecordedAt)
+{
+    public string EvidenceSource { get; init; } = ArenaDisplayOrderObservation.CurrentEvidenceSource;
+    public ArenaDisplayOrderPrediction? PredictionBeforeVerification { get; init; }
+    public double? MinimumAmbiguityMargin { get; init; }
+    public int CandidateOrderCount { get; init; }
+}
 
 public enum ArenaDisplayOrderRecordStatus { Recorded, Duplicate, Unavailable }
 
@@ -25,11 +31,21 @@ public sealed class ArenaDisplayOrderEvidenceService(ArenaDisplayOrderEvidenceLe
     private readonly List<ArenaDisplayOrderObservation> _observations = [];
     private IReadOnlyDictionary<int, ArenaCardSortKeys>? _universe;
     private string _universeCodes = "";
+    private sealed record EvidenceSnapshot(ArenaDisplayOrderEvaluation Evaluation, ArenaDisplayOrderObservation[] Observations);
+    private EvidenceSnapshot _snapshot = new(ArenaDisplayOrderModel.Evaluate([]), []);
 
     public ArenaDisplayOrderLedgerLoad? LastLoad { get; private set; }
     public ArenaCardDatabaseInfo? Database { get; private set; }
     public string? DatabaseDiagnostic { get; private set; }
-    public ArenaDisplayOrderEvaluation Evaluation { get; private set; } = ArenaDisplayOrderModel.Evaluate([]);
+    public ArenaDisplayOrderEvaluation Evaluation => Volatile.Read(ref _snapshot).Evaluation;
+    public ArenaDisplayOrderEvaluation BeforePack(int pack, int pick, IReadOnlyList<int> logOrder)
+    {
+        // A retry/rebind of an already observed pack must not train its own prediction, even after ledger replay.
+        var snapshot = Volatile.Read(ref _snapshot);
+        var observations = snapshot.Observations;
+        var prior = observations.Where(o => o.Pack != pack || o.Pick != pick || !o.LogOrder.Order().SequenceEqual(logOrder.Order())).ToArray();
+        return prior.Length == observations.Length ? snapshot.Evaluation : ArenaDisplayOrderModel.Evaluate(prior);
+    }
     public IReadOnlyList<ArenaDisplayOrderObservation> Observations => _observations.AsReadOnly();
     public ArenaDisplayOrderGateProgress Progress => ArenaDisplayOrderGateProgress.From(_observations, Evaluation, _universe);
     public string LedgerPath => ledger.Path;
@@ -54,6 +70,10 @@ public sealed class ArenaDisplayOrderEvidenceService(ArenaDisplayOrderEvidenceLe
             candidate.Pick, candidate.LogOrder.Count, ArenaDisplayOrderPrediction.Unavailable(reason, survivorsBefore),
             ArenaDisplayOrderAgreement.Unavailable, survivorsBefore, classesBefore, survivorsBefore, classesBefore, candidate.Gate.VisualOrder, reason);
         if (!candidate.Gate.Accepted) return Unavailable("gate rejected: " + candidate.Gate.Reason);
+        if (candidate.EvidenceSource == ArenaDisplayOrderObservation.FixedSlotEvidenceSource
+            && (candidate.PredictionBeforeVerification is not { } frozen || candidate.CandidateOrderCount != frozen.Orders.Count
+                || !frozen.Orders.Any(o => o.Order.SequenceEqual(candidate.Gate.VisualOrder))))
+            return Unavailable("missing frozen pre-verification prediction");
         var reader = database();
         if (reader is null) { DatabaseDiagnostic = "Arena card database not found."; return Unavailable(DatabaseDiagnostic); }
         var lookup = reader.ReadSortKeys(candidate.LogOrder);
@@ -65,6 +85,8 @@ public sealed class ArenaDisplayOrderEvidenceService(ArenaDisplayOrderEvidenceLe
         var observation = new ArenaDisplayOrderObservation
         {
             ObservationId = ArenaDisplayOrderObservation.CreateId(scope, candidate.Pack, candidate.Pick, candidate.LogOrder),
+            EvidenceSource = candidate.EvidenceSource, MinimumAmbiguityMargin = candidate.MinimumAmbiguityMargin,
+            CandidateOrderCount = candidate.CandidateOrderCount,
             DraftScope = scope,
             EventName = candidate.EventName,
             Expansion = DraftExpansionResolver.Resolve(candidate.EventName, null, new CardCatalog())
@@ -79,7 +101,8 @@ public sealed class ArenaDisplayOrderEvidenceService(ArenaDisplayOrderEvidenceLe
             SortKeys = candidate.LogOrder.Distinct().Order().Select(id => lookup.Keys[id]).ToArray()
         };
         // Predict from the evidence before this pack; never evaluate a pack after training on itself.
-        var prediction = ArenaDisplayOrderModel.Predict(observation.LogOrder, observation.KeyMap(), Evaluation.Survivors);
+        var prediction = candidate.PredictionBeforeVerification
+            ?? ArenaDisplayOrderModel.Predict(observation.LogOrder, observation.KeyMap(), BeforePack(candidate.Pack, candidate.Pick, candidate.LogOrder).Survivors);
         var agreement = prediction.CompareWith(observation.VisualOrder);
         if (!ledger.TryAppend(observation))
             return new(ArenaDisplayOrderRecordStatus.Duplicate, candidate.Pack, candidate.Pick, observation.CardCount, prediction, agreement,
@@ -99,7 +122,7 @@ public sealed class ArenaDisplayOrderEvidenceService(ArenaDisplayOrderEvidenceLe
             var universe = reader.ReadDraftUniverse(codes.Split(',', StringSplitOptions.RemoveEmptyEntries));
             if (universe.Status == ArenaCardDatabaseStatus.Available) { _universe = universe.Keys; _universeCodes = codes; }
         }
-        Evaluation = ArenaDisplayOrderModel.Evaluate(_observations, _universe);
+        Volatile.Write(ref _snapshot, new(ArenaDisplayOrderModel.Evaluate(_observations, _universe), _observations.ToArray()));
     }
 }
 
@@ -151,6 +174,9 @@ public static class ArenaDisplayOrderEvidencePresentation
         text.AppendLine();
         text.AppendLine($"Observations: {evaluation.ObservationCount}");
         text.AppendLine($"Cards observed: {evaluation.CardCount}");
+        text.AppendLine($"Evidence sources: Full matcher {service.Observations.Count(o => o.EvidenceSource == ArenaDisplayOrderObservation.CurrentEvidenceSource)}"
+            + $" | Fast verifier {service.Observations.Count(o => o.EvidenceSource == ArenaDisplayOrderObservation.FixedSlotEvidenceSource)}");
+        text.AppendLine($"Candidate-order resolutions: {service.Observations.Count(o => o.EvidenceSource == ArenaDisplayOrderObservation.FixedSlotEvidenceSource && o.CandidateOrderCount > 1)}");
         text.AppendLine($"Raw surviving hypotheses: {evaluation.Survivors.Count} / {evaluation.HypothesisCount}");
         text.AppendLine("Distinct rule classes: " + (evaluation.ClassUniverseSize == 0 ? "n/a (no observed cards)" : $"{evaluation.Classes.Count} (over {evaluation.ClassUniverseSize} cards)"));
         text.AppendLine($"Contradictions: {evaluation.Contradictions}");

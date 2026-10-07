@@ -205,6 +205,49 @@ On the two real WOE packs, 120/400 rules survive in 20 classes. Placement, the m
 
 Gate 1 requires 2 complete drafts, ≥ 80 observations, the listed coverage, two window sizes, and exactly one surviving class with zero contradictions. Do not start Phase 9E.2 until Gate 1 is satisfied and separately approved. If the family is refuted, abandon DB order. See [PHASE9E_1_REPORT.md](PHASE9E_1_REPORT.md).
 
+## Phase 9E.2A — Deterministic draft slot locator, shadow validation (implemented; promotion not justified yet)
+
+Add pure slot geometry (validated envelope: 13–14 cards, client height 720–1080, aspect 1.70–1.78, windowed draft grid), a locator that accepts only **unanimous** Phase 9E.1 predictions, and a shadow comparer, observer and log. Add an experimental fixed-slot verifier (unchanged 0.94/0.07) and the `--deterministic-shadow-live` developer command.
+
+The WGC/artwork path still places every badge. On real captures, order agreed 14/14 on the one unanimous pack, every matched centre fell inside its formula slot (scatter ≤ 1.4 px), and the verifier passed only the true order. Discriminating packs, and today's empty DraftTG ledger, fail closed. Twelve test methods (33 cases) bring the suite to 978 passing tests with zero warnings/errors. See [PHASE9E_2A_REPORT.md](PHASE9E_2A_REPORT.md).
+
+**Phase 9E.2B gate** (do not start without approval):
+- DraftTG-recorded order evidence that makes live packs unanimous before learning;
+- ≥ 30 live shadow agreements across ≥ 2 drafts and ≥ 2 client sizes, with zero order mismatches;
+- verifier all-pass on every compared pack;
+- clean logged fallback;
+- no stale-generation acceptance/failures in the qualifying live sample;
+- documented geometry tolerance (maximum/RMS residual scatter ≤3 client px and reported common offset ≤6·H/1009 px; raw errors retained);
+- separate measurement of ≤12-card, 15-card and fullscreen regimes before the envelope widens.
+
+The offline reliability pass below implements event-driven window tracking and earlier accepted-pick placement retirement; physical accepted-pick-to-badge-hide latency measurement remains pending. The state engine/UI already clear a matching current pack on `PickSubmitted`; the earlier report's claim that they wait for the next pack was incorrect.
+
+## Phase 9E.2A.1 — Offline hardening and verified evidence integration (complete)
+
+Independently reviewed Claude's 9E.2A implementation, preserved its shadow-only placement boundary and hardened capture binding, UI admission, atomic evidence snapshots, copied-image cleanup, duplicate semantics and malformed-ledger replay. A uniquely successful full fixed-slot verification may now record independently confirmed visual order as Phase 9E.1 evidence, with separate provenance. The existing full-matcher evidence path remains.
+
+Discriminating packs test functionally distinct candidate orders once each, with a limit of **8**. Exactly one must pass every occurrence at **0.94/0.07**; zero/two winners, partial, manual, stale and excessive-candidate attempts record no fast evidence. Predictions are frozen before verification, and retries/replayed packs exclude their own prior observation. Recording happens after verification, followed by model reevaluation; no deterministic prediction proves itself.
+
+Offline replay: WOE P1P6/P1P7 full matcher 9/9 and 8/8; P1P1 one candidate, 14/14; P1P2 two candidates at 1723×1009, 1280×720 and 1920×1080, exactly one 13/13 winner while the wrong order passes only 10/13. Empty-ledger P1P1 has 17 candidates and declines all fast verification. The numeric score fixture and replay CLI/script avoid adding screenshots.
+
+The developer summary includes source counts and candidate-order resolutions; the separate shadow JSONL includes draft scope, capture tokens, strict verifier outcomes and geometry/fallback metrics. At completion of Phase 9E.2A.1, WinEvent tracking and early pick-hide designs were documentation only; the subsequent offline reliability pass implements them. Relative measurements on real 8/9-card crops do not expand the envelope; absolute measurements remain needed there, plus settled captures for 15, 12, 11, 10 and 7 through 1 cards.
+
+Eleven focused methods (18 cases) bring the suite to **996 passing tests**, zero build warnings/errors. Production ledger: **0 observations / 0 complete drafts**; Gate 1 and the live Phase 9E.2B gate remain unsatisfied. WGC/artwork still places badges; thresholds, recommendations and deck building are unchanged; no memory reader exists in production. **Stop here; do not begin Phase 9E.2B.** See [PHASE9E_2A_1_REPORT.md](PHASE9E_2A_1_REPORT.md).
+
+## Phase 9E.2A.2 — Offline Arena draft sort investigation (complete)
+
+Static metadata/CIL inspection proves Steam build **25640408** selects **MythicToCommon → LandLast → ColorOrder → localized Title**, ascending with stable incoming-order ties and no final GrpId key. The priority array is embedded managed data; Unity sort assets and process memory are unnecessary. Artifact/land color identity and localized culture-sensitive titles require compatibility work before replacing the current normalized-title/GrpId hypothesis model.
+
+The isolated reference matches **4/4 distinct saved packs / 44 positions**, zero contradictions. Historical 48-pack Untapped aggregates remain compatibility evidence, not an independent exact-comparator replay. Production ledger: **0 observations**. Solution validation: **996 passing tests**, plus **10 isolated reference tests**, zero warnings/errors. Production placement and the model are unchanged; geometry and both live promotion gates still apply. **Stop after the offline audit; do not begin Phase 9E.2B.** See [ARENA_DRAFT_SORT_STATIC_AUDIT.md](ARENA_DRAFT_SORT_STATIC_AUDIT.md).
+
+## Offline UI / Overlay Reliability Pass (implemented; physical validation pending)
+
+- Card names: canonical resolved occurrence names above passive ratings, visible by default, centered/bounded/ellipsized; unresolved identities omit names. Existing rating/tier styling remains unchanged. A future toggle integration point exists without a settings page.
+- Accepted picks: await placement retirement immediately after state-engine acceptance and before snapshot adaptation; preserve history/pool/recommendation data, reject late asynchronous results through existing tokens/cancellation, and resume only on the next valid pack. Duplicate and unrelated picks remain idempotent.
+- Windows tracking: read-only out-of-context WinEvent notifications, exact HWND/process filtering, UI dispatch/coalescing, same-thread hook cleanup and a 2-second recovery poll. Completed move-only placement translates without WGC/rematching or a new layout generation; actual size/DPI/HWND changes invalidate and relocalize through the visual locator.
+
+Validation: **20 added tests**, **1,016 solution tests passed**, **10 separate static sort-reference tests passed**, **zero build warnings/errors**. Arena maintenance leaves actual label readability, pick-hide latency, event delivery, cross-monitor behavior and HWND restart/shutdown for physical validation. Deterministic placement stays shadow-only; scoring, identity fallback, capture quality and deck behavior are unchanged. Stop after this pass; do not begin Phase 9E.2B or deck-builder localization. See [OFFLINE_OVERLAY_RELIABILITY_REPORT.md](OFFLINE_OVERLAY_RELIABILITY_REPORT.md).
+
 ## Later — Recommendation Explanations
 
 Explain the most important factors behind each recommendation in concise user-facing language. Keep explanations traceable to engine inputs and rules.

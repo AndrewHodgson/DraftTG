@@ -202,7 +202,8 @@ public sealed partial class MainWindowViewModelTests
     {
         var items = Assert.Single(PassiveBadgeView().Descendants(), e =>
             (string?)e.Attribute("ItemsSource") == "{Binding Badges}");
-        var textBindings = items.Descendants().Where(e => e.Name.LocalName == "TextBlock")
+        var textBindings = items.Descendants().Where(e => e.Name.LocalName == "TextBlock"
+                && ((string?)e.Attribute("Text"))?.StartsWith("{Binding Presentation.", StringComparison.Ordinal) == true)
             .Select(e => (string)e.Attribute("Text")!).ToArray();
         Assert.Equal(["{Binding Presentation.DisplayedContextRank}", "{Binding Presentation.DisplayedGIH}",
             "{Binding Presentation.DisplayedALSA}"], textBindings);
