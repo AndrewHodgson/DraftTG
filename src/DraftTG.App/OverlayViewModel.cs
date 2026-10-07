@@ -221,7 +221,19 @@ public sealed class OverlayViewModel : PresentationModel, IDisposable
             + string.Join("\n", result.Matches.Select(m => $"Slot {m.VisualSlot + 1}: {Badges.Single(b => b.OccurrenceKey == m.Key).Name}; similarity {m.Confidence:F3}; {m.State}"))
             + (result.Diagnostic is null ? "" : "\n" + result.Diagnostic));
         PlaceAll(); NotifyPlacement();
+        AutomaticLocalizationApplied?.Invoke(context, result);
         return true;
+    }
+    /// <summary>Raised after a safe automatic result has been applied. Observers cannot alter placement.</summary>
+    public event Action<VisualPlacementContext, CardVisualLocalizationResult>? AutomaticLocalizationApplied;
+    /// <summary>Phase 9E.1 diagnostic only; never read by placement, badges or matching.</summary>
+    public string OrderEvidenceStatus { get; private set; } = string.Empty;
+    public string OrderEvidenceDiagnostics { get; private set; } = string.Empty;
+    internal void SetOrderEvidence(string status, string? diagnostics = null)
+    {
+        OrderEvidenceStatus = status;
+        if (diagnostics is not null) OrderEvidenceDiagnostics = diagnostics;
+        Notify(nameof(OrderEvidenceStatus)); Notify(nameof(OrderEvidenceDiagnostics));
     }
     public void InvalidateAutomaticLocalization(string diagnostic, bool invalidateManual = false)
     {

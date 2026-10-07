@@ -150,9 +150,11 @@ public sealed record ArenaDraftCompletion(
     public ArenaDraftMode? Mode { get; init; }
     /// <summary>Only explicit Quick Draft PickedCards, never a deck or generic CardPool.</summary>
     public ArenaCardIdentifierList? FinalPickedCards { get; init; }
+    /// <summary>The single draft course's CardPool from an EventGetCoursesV2 DeckSelect entry; drafted copies only.</summary>
+    public ArenaCardIdentifierList? CourseCardPool { get; init; }
 }
 
-public enum ArenaDraftCompletionOrigin { DraftProtocol, DeckSelection }
+public enum ArenaDraftCompletionOrigin { DraftProtocol, DeckSelection, CourseSnapshot }
 
 /// <summary>Quick Draft pool membership, not a chronological sequence of picks.</summary>
 public sealed record ArenaPickedCardsSnapshot(

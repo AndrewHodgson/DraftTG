@@ -17,7 +17,8 @@ public sealed class ArenaDraftSnapshotAdapter(ArenaCardResolver resolver)
         {
             ResolvedHistory = result.Snapshot?.History ?? ResolveCompletedHistory(state),
             ResolvedDraftedPool = result.Snapshot?.DraftedPool ?? ResolveDraftedPool(state),
-            DraftPool = ArenaDraftPoolAssembler.Assemble(state, _resolver)
+            DraftPool = ArenaDraftPoolAssembler.Assemble(state, _resolver),
+            PoolIdentity = ArenaDraftPoolAssembler.Summarize(state, _resolver)
         };
     }
 

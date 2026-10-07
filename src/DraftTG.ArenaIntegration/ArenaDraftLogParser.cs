@@ -29,6 +29,7 @@ public sealed class ArenaDraftLogParser
             RecordKind.EventJoin => ParseEventJoin(root),
             RecordKind.HumanCompletion => [ParseHumanCompletion(root)],
             RecordKind.DeckSelection => ParseDeckSelection(root),
+            RecordKind.CourseSnapshot => ParseCourseSnapshot(root),
             _ => []
         };
     }
@@ -233,6 +234,38 @@ public sealed class ArenaDraftLogParser
                 && payload.TryGetProperty("PickedCards", out _)
                 ? ParseCardArray(payload, "PickedCards", allowEmpty: true) : null
         })];
+    }
+
+    /// <summary>
+    /// EventGetCoursesV2 lists every course. After an Arena restart it is the only surviving evidence of a
+    /// completed draft awaiting deck construction. Only an unambiguous single Premier/Traditional/Quick course in
+    /// DeckSelect with a full 3x14 CardPool qualifies; anything else emits nothing.
+    /// </summary>
+    private static IReadOnlyList<ArenaDraftLogEvent> ParseCourseSnapshot(JsonElement root)
+    {
+        if (!root.TryGetProperty("Courses", out var courses) || courses.ValueKind != JsonValueKind.Array) return [];
+        var candidates = new List<ArenaDraftLogEvent>();
+        foreach (var course in courses.EnumerateArray())
+        {
+            if (course.ValueKind != JsonValueKind.Object) continue;
+            try
+            {
+                if (!string.Equals(OptionalText(course, "CurrentModule"), "DeckSelect", StringComparison.Ordinal)) continue;
+                var eventName = Meaningful(OptionalText(course, "InternalEventName"));
+                var mode = eventName is null ? null : ClassifyDraftMode(eventName);
+                if (mode?.Kind is not (ArenaDraftModeKind.Premier or ArenaDraftModeKind.Traditional or ArenaDraftModeKind.Quick)) continue;
+                if (!course.TryGetProperty("CardPool", out _)) continue;
+                var pool = ParseCardArray(course, "CardPool", allowEmpty: true);
+                candidates.Add(new ArenaDraftLogEvent.DraftCompleted(new(eventName, null)
+                {
+                    Origin = ArenaDraftCompletionOrigin.CourseSnapshot,
+                    Mode = mode,
+                    CourseCardPool = pool
+                }));
+            }
+            catch (ArenaDraftLogParseException) { } // A malformed unrelated course never becomes draft evidence.
+        }
+        return candidates.Count == 1 ? candidates : [];
     }
 
     private static JsonElement ParseOuterJson(string line)
@@ -482,6 +515,9 @@ public sealed class ArenaDraftLogParser
             || line.Contains("BotDraft_DraftPick", StringComparison.Ordinal)) return RecordKind.BotDraftPick;
         if (line.Contains("BotDraftDraftStatus", StringComparison.Ordinal)
             || line.Contains("BotDraft_DraftStatus", StringComparison.Ordinal)) return RecordKind.BotDraftStatus;
+        if (line.StartsWith("{\"Courses\":[", StringComparison.Ordinal)
+            && line.Contains("\"DeckSelect\"", StringComparison.Ordinal)
+            && line.Contains("\"CardPool\"", StringComparison.Ordinal)) return RecordKind.CourseSnapshot;
         if (line.Contains("\"CurrentModule\"", StringComparison.Ordinal)
             && line.Contains("\"DeckSelect\"", StringComparison.Ordinal)
             && line.Contains("\"Payload\"", StringComparison.Ordinal)) return RecordKind.DeckSelection;
@@ -539,6 +575,7 @@ public sealed class ArenaDraftLogParser
         BotDraftPick,
         EventJoin,
         HumanCompletion,
-        DeckSelection
+        DeckSelection,
+        CourseSnapshot
     }
 }

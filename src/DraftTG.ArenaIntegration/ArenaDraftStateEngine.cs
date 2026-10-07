@@ -213,10 +213,13 @@ public sealed class ArenaDraftStateEngine
 
     private bool ApplyCompletion(ArenaDraftCompletion completion)
     {
-        // A late deck selection response cannot complete a different currently observed session.
-        if (completion.Origin == ArenaDraftCompletionOrigin.DeckSelection
+        // A late deck selection response or course list cannot complete a different currently observed session.
+        if (completion.Origin is ArenaDraftCompletionOrigin.DeckSelection or ArenaDraftCompletionOrigin.CourseSnapshot
             && (HasConflictingDraftIdentifier(completion.DraftIdentifier)
                 || _eventName is not null && !string.Equals(_eventName, completion.EventName, StringComparison.Ordinal))) return false;
+        // A course list is only usable as a full drafted pool; otherwise it is not draft evidence at all.
+        if (completion.Origin == ArenaDraftCompletionOrigin.CourseSnapshot
+            && completion.CourseCardPool?.Count != ArenaQuickDraftCoordinates.PackCount * ArenaQuickDraftCoordinates.PicksPerPack) return false;
         var startsNewSession = HasConflictingDraftIdentifier(completion.DraftIdentifier);
         var changed = false;
 
@@ -257,18 +260,20 @@ public sealed class ArenaDraftStateEngine
             changed = true;
         }
         if (completion.Origin == ArenaDraftCompletionOrigin.DeckSelection && completion.FinalPickedCards is { } cards)
-            changed |= ApplyFinalPickedCards(cards);
+            changed |= ApplyFinalPickedCards(cards, requireQuick: true, "DeckSelect PickedCards");
+        if (completion.Origin == ArenaDraftCompletionOrigin.CourseSnapshot && completion.CourseCardPool is { } pool)
+            changed |= ApplyFinalPickedCards(pool, requireQuick: false, "Course CardPool");
         return changed;
     }
 
-    private bool ApplyFinalPickedCards(ArenaCardIdentifierList identifiers)
+    private bool ApplyFinalPickedCards(ArenaCardIdentifierList identifiers, bool requireQuick, string source)
     {
         var incoming = new ArenaCardMultiset(identifiers);
         var known = Current.DraftedPool;
         var expected = ArenaQuickDraftCoordinates.PackCount * ArenaQuickDraftCoordinates.PicksPerPack;
-        if (_mode?.Kind != ArenaDraftModeKind.Quick || incoming.Count != expected || !incoming.Contains(known))
+        if ((requireQuick && _mode?.Kind != ArenaDraftModeKind.Quick) || incoming.Count != expected || !incoming.Contains(known))
             return RejectPool(ArenaPickedCardsDiagnosticKind.FinalPoolMismatch,
-                $"DeckSelect PickedCards mismatch: recovered/exact pool {known.Count}, completion pool {incoming.Count}, expected {expected}. "
+                $"{source} mismatch: recovered/exact pool {known.Count}, completion pool {incoming.Count}, expected {expected}. "
                 + "Completion inventory does not agree with known drafted multiplicities; recovered/exact pool retained, not merged.");
 
         // Prefer an already complete recovered/exact multiset. An agreeing response only confirms it.

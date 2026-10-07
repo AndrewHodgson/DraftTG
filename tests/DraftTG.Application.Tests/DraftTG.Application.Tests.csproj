@@ -27,4 +27,13 @@
     <None Include="../Fixtures/deckselect-woe-completion-live.jsonl" Link="Fixtures/deckselect-woe-completion-live.jsonl" CopyToOutputDirectory="PreserveNewest" />
     <None Include="../Fixtures/deckselect-woe-cards.json" Link="Fixtures/deckselect-woe-cards.json" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="../Shared/SyntheticArenaDatabase.cs" Link="Shared/SyntheticArenaDatabase.cs" />
+    <None Include="../Fixtures/arena-card-database-fra-identity.sql" Link="Fixtures/arena-card-database-fra-identity.sql" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="../Fixtures/premier-fra-course-cards.json" Link="Fixtures/premier-fra-course-cards.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="../Fixtures/premier-fra-course-snapshot-live.jsonl" Link="Fixtures/premier-fra-course-snapshot-live.jsonl" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="../Fixtures/arena-card-database-synthetic.sql" Link="Fixtures/arena-card-database-synthetic.sql" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="../Fixtures/arena-woe-p1p6-visual-placement.json" Link="Fixtures/arena-woe-p1p6-visual-placement.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="../Fixtures/arena-wgc-p1p7/manifest.json" Link="Fixtures/arena-wgc-p1p7/manifest.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
 </Project>

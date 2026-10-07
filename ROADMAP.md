@@ -156,7 +156,7 @@ Completed-only asynchronous construction and a collapsible counted deck/sideboar
 
 ## Phase 10B.1 — Live Draft Completion / DeckSelect Integration (implemented; physical acceptance pending)
 
-Recognize the observed successful top-level DeckSelect/Completed payload through the canonical DraftCompleted event. Preserve authoritative recovered/exact PickedCards counts, compare final single-selection Quick Draft multiplicities, and allow a validated full final snapshot to recover missing inventory without invented chronology. Mismatches retain known cards, report both totals and make reliability/provisional status explicit. Generic deck, sideboard, Courses and CardPool records do not replace drafted inventory. Duplicate completion is idempotent; existing session/generation fences protect new drafts and asynchronous results.
+Recognize the observed successful top-level DeckSelect/Completed payload through the canonical DraftCompleted event. Preserve authoritative recovered/exact PickedCards counts, compare final single-selection Quick Draft multiplicities, and allow a validated full final snapshot to recover missing inventory without invented chronology. Mismatches retain known cards, report both totals and make reliability/provisional status explicit. Generic deck, sideboard, Courses and CardPool records do not replace drafted inventory, with one exception: the narrow Premier/Traditional/Quick course-list completion added later (see the course-list completion section). Duplicate completion is idempotent; existing session/generation fences protect new drafts and asynchronous results.
 
 Eleven focused additions retain all 828 existing tests: 839 pass on Windows and portable .NET 10 with zero warnings/errors. Real current-log replay through the production view model and coordinators automatically exposes a Complete 42-card pool and Ready RG 40-card baseline, with one completion transition, no warnings/conflicts and no HTTP requests. No manual Completed state or direct builder call is used. This replay is headless; physically observing a newly running build after a live final pick remains pending, as does native macOS execution. Phase 10B selection, Phase 8/9 scoring, providers and capture/localization are unchanged. See [PHASE10B_1_REPORT.md](PHASE10B_1_REPORT.md).
 
@@ -171,6 +171,39 @@ The real completed 42-card WOE pool supports only RG and UG: two valid 40-card b
 The October 4 audit found exact historical saved-deck main/sideboard/basic counts after EventSetDeckV3, but has not established an authoritative current unsaved editor source. Implemented the separate immutable observed-deck/revision model, saved-response parser/adapter, selected-build multiset differences and fail-closed saved/current distinction. Twenty focused additions retain all 867 previous tests: 887 pass on Windows and portable targets with zero build warnings/errors.
 
 An explicit read-only Arena-only WGC capture command is available. The live audit observed EventLanding and later Home; a real completed deck-builder fixture and a user-performed edit observation are outstanding. No production deck-builder localization, outlines, comparison rail or live revision wiring has been implemented. Do not proceed with highlighting until the required semantic and visual audit is satisfied. Physical Windows acceptance and native macOS visual localization remain pending. See [PHASE10D_AUDIT.md](PHASE10D_AUDIT.md).
+
+## Course-list draft completion after an Arena restart (fix)
+
+**Root cause.** DraftTG stayed `Waiting for MTG Arena...` on a completed Premier Draft FRA deck builder because Arena had been restarted after the draft, and the rotated Player.log held no draft records. The only evidence was `EventGetCoursesV2`. Its `DeckSelect` module and `CardPool` are nested inside `Courses[]`, with no `Payload`, and Phase 10B.1 recognizes only the top-level DeckSelect/Completed payload written at the final pick. So the parser emitted nothing, the state engine stayed Idle, and Idle is rendered as Waiting. This was not specific to Premier Draft; a Quick Draft after a restart behaves the same way.
+
+**Fix.** A top-level `{"Courses":[...]}` response now completes a draft only when:
+- exactly one Premier, Traditional or Quick course is in `DeckSelect`
+- that course has a full 3×14 `CardPool`
+- the state engine is idle or is tracking the same event
+
+The course list never replaces a live or different draft. Duplicates are preserved, and repeated course lists are idempotent. The fix does not change scoring, capture, localization or Phase 9E.1.
+
+**Residual blocker** (since resolved). Scryfall had no FRA `arena_id`. The Arena local-database identity fallback below now resolves the pool 42/42 and activates Suggested Decks. Nine regression cases bring the suite to 929 passing tests.
+
+## Arena local-database card identity fallback (implemented)
+
+This fallback applies only when the Scryfall `arena_id` mapping is Missing. It maps the GrpId through Arena's read-only `Raw_CardDatabase` (`ExpansionCode` + `CollectorNumber`) to exactly one catalog printing, and resolves only when the name agrees with Arena's English title.
+
+- Several printings stay Ambiguous; a zero match or a name mismatch stays Missing.
+- Tokens and rebalanced cards are excluded.
+- Direct mappings and direct ambiguities are untouched.
+- Provenance appears in pool diagnostics.
+- If the database is unavailable, resolution falls back to the existing Missing behavior.
+
+The real FRA Premier pool resolves 42/42 through the fallback, producing a Ready RG baseline and Suggested Decks. Sixteen focused cases bring the suite to 945 passing tests with zero warnings/errors. Scoring, deck algorithms, capture, localization and Phase 9E.1 are unchanged.
+
+## Phase 9E.1 — Arena display-order evidence collection (implemented; evidence gathering pending)
+
+Read Arena's local `Raw_CardDatabase_*.mtga` strictly read-only. Port the review's 400-rule sort-key family into a pure `ArenaDisplayOrderModel`, which supports functional equivalence classes and Unanimous/Discriminating/Unavailable predictions. Record an IDs-only, versioned JSONL observation only from full high-confidence automatic placements; manual, partial, ambiguous and stale results are never recorded. Each pack is predicted before it is learned from. A diagnostic rail line and the `--order-evidence-summary` command report survivors, classes, contradictions and strict Gate-1 progress.
+
+On the two real WOE packs, 120/400 rules survive in 20 classes. Placement, the matcher and recommendations are unchanged. Sixteen focused test methods (33 cases) bring the suite to 920 passing tests with zero warnings/errors. No live observations exist yet, so Gate 1 stands at 0/2 drafts and 0/80 observations.
+
+Gate 1 requires 2 complete drafts, ≥ 80 observations, the listed coverage, two window sizes, and exactly one surviving class with zero contradictions. Do not start Phase 9E.2 until Gate 1 is satisfied and separately approved. If the family is refuted, abandon DB order. See [PHASE9E_1_REPORT.md](PHASE9E_1_REPORT.md).
 
 ## Later — Recommendation Explanations
 

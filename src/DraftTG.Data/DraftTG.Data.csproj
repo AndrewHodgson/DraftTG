@@ -3,4 +3,7 @@
     <ProjectReference Include="../DraftTG.Domain/DraftTG.Domain.csproj" />
   </ItemGroup>
   <ItemGroup><EmbeddedResource Include="Archetypes/*.json" /></ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.12" />
+  </ItemGroup>
 </Project>

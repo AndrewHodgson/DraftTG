@@ -67,6 +67,8 @@ internal sealed class AutomaticCardLocalizationSession : ICardVisualLocator, IAs
     { if (!_disposed) _presentation.SetCaptureRuntimeDiagnostics(_coordinator!.DiagnosticText); });
     public void Start() { Retry(); Tick(null, EventArgs.Empty); _timer.Start(); }
     public bool CanFollowWindow => _coordinator is not null && _anchor is not null;
+    /// <summary>Last observed Arena client geometry; read by order-evidence metadata only.</summary>
+    internal ArenaWindowGeometry? ArenaWindow => _coordinator?.Window;
     internal Task CurrentWork => _restartWork ?? _work ?? Task.CompletedTask;
     public void RetryManually()
     {

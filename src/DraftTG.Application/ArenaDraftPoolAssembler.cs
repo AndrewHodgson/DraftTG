@@ -6,6 +6,26 @@ namespace DraftTG.Application;
 /// <summary>Adapts the already-merged state inventory without adding exact history a second time.</summary>
 internal static class ArenaDraftPoolAssembler
 {
+    /// <summary>Drafted-pool occurrences by resolution provenance; developer diagnostics only.</summary>
+    internal static ArenaCardIdentitySummary? Summarize(ArenaDraftStateSnapshot state, ArenaCardResolver resolver)
+    {
+        if (state.Status == ArenaDraftSessionStatus.Idle) return null;
+        int direct = 0, fallback = 0, missing = 0, ambiguous = 0;
+        foreach (var id in state.DraftedPool.Occurrences)
+        {
+            var resolution = resolver.Resolve(id);
+            switch (resolution.Status)
+            {
+                case ArenaCardResolutionStatus.Ambiguous: ambiguous++; break;
+                case ArenaCardResolutionStatus.Missing: missing++; break;
+                default:
+                    if (resolution.Source == ArenaCardResolutionSource.ArenaDatabaseSetCollector) fallback++; else direct++;
+                    break;
+            }
+        }
+        return new(state.DraftedPool.Count, direct, fallback, missing, ambiguous);
+    }
+
     internal static DraftPoolSnapshot? Assemble(ArenaDraftStateSnapshot state, ArenaCardResolver resolver)
     {
         if (state.Status == ArenaDraftSessionStatus.Idle) return null;
@@ -56,4 +76,11 @@ internal static class ArenaDraftPoolAssembler
         return state.DraftedPool.Count == expected && (recoveredValidated || contiguousExact)
             ? DraftPoolCompleteness.Complete : DraftPoolCompleteness.Partial;
     }
+}
+
+public sealed record ArenaCardIdentitySummary(int Total, int DirectArenaId, int ArenaDatabaseFallback, int Missing, int Ambiguous)
+{
+    public int Resolved => DirectArenaId + ArenaDatabaseFallback;
+    public string Text => $"Card identity: {Resolved} / {Total} resolved\nDirect Arena ID: {DirectArenaId}\n"
+        + $"Arena DB fallback: {ArenaDatabaseFallback}\nMissing: {Missing}\nAmbiguous: {Ambiguous}";
 }

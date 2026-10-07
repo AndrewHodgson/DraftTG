@@ -18,6 +18,8 @@
             <TextBlock Text="{Binding Session.StatisticalPickStatusText}" Foreground="#FFB5BFCD" FontSize="12" TextWrapping="Wrap" />
             <TextBlock Text="{Binding Session.ArchetypeStatusText}" Foreground="#FFB5BFCD" FontSize="12" TextWrapping="Wrap" />
             <TextBlock Text="{Binding LocalizationStatus}" Foreground="#FFB5BFCD" FontSize="12" TextWrapping="Wrap" />
+            <TextBlock Text="{Binding OrderEvidenceStatus}" Foreground="#FF9DAABC" FontSize="11" TextWrapping="Wrap"
+                       ToolTip.Tip="Diagnostic only: Arena database order prediction is not used for placement." />
             <Expander Header="Draft pool" IsVisible="{Binding Session.HasDraftPool}" Foreground="#FFB5BFCD" FontSize="12">
               <StackPanel Spacing="6">
                 <TextBlock Text="{Binding Session.PoolSummaryText}" TextWrapping="Wrap" />
@@ -88,6 +90,7 @@
             <Expander Header="Card placement diagnostics" Foreground="#FFB5BFCD" FontSize="12">
               <StackPanel Spacing="6">
                 <TextBlock Text="{Binding LocalizationDiagnostics}" TextWrapping="Wrap" />
+                <TextBlock Text="{Binding OrderEvidenceDiagnostics}" TextWrapping="Wrap" />
                 <TextBlock Text="{Binding CaptureRuntimeDiagnosticsText}" TextWrapping="Wrap" />
                 <Button Content="Retry automatic placement" Tag="retry-card-localization" Click="Action_OnClick" />
                 <Button Content="Save current Arena capture for debugging" Tag="save-card-capture" Click="Action_OnClick" />

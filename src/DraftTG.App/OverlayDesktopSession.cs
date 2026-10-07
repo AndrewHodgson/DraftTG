@@ -18,6 +18,7 @@ public sealed class OverlayDesktopSession : ICalibrationSurface
     private readonly CancellationTokenSource _lifetime = new();
     private readonly OverlayCalibrationEditor _calibration;
     private readonly AutomaticCardLocalizationSession _localization;
+    private readonly OrderEvidenceRecorder _orderEvidence;
     private bool _localizationSurfaceVisible = true;
     private OverlayCalibration? Saved => _calibration.Saved;
     private bool _closing;
@@ -41,6 +42,8 @@ public sealed class OverlayDesktopSession : ICalibrationSurface
             _cards.Position = new(x, y); _cards.Width = width; _cards.Height = height;
             _presentation.SetViewport(width, height);
         }, visible => { _localizationSurfaceVisible = visible; RefreshVisibility(); });
+        // Phase 9E.1: observational order evidence; it cannot influence placement.
+        _orderEvidence = new(_presentation, () => _localization.ArenaWindow is { } window ? (window.Width, window.Height) : null);
         Rail.Opened += OnOpened;
         Rail.Closing += OnClosing;
         Rail.ActionRequested += OnAction;
@@ -58,6 +61,7 @@ public sealed class OverlayDesktopSession : ICalibrationSurface
             Rail.Position = new(screen.WorkingArea.X + 12, screen.WorkingArea.Y + 60);
         _runtime.Start(); // Calibration I/O never gates Scryfall bootstrap or Arena tracking.
         _localization.Start(); // Timer reports prerequisites even if calibration loading is superseded.
+        _orderEvidence.Start();
         try
         {
             var revision = _calibrationRevision;
@@ -210,6 +214,7 @@ public sealed class OverlayDesktopSession : ICalibrationSurface
             try { await Task.WhenAll((Task?)_loadTask ?? Task.CompletedTask, _saveTask ?? Task.CompletedTask); }
             catch (OperationCanceledException) when (_lifetime.IsCancellationRequested) { }
             await _localization.DisposeAsync();
+            await _orderEvidence.DisposeAsync();
             await _runtime.DisposeAsync();
         }
         finally

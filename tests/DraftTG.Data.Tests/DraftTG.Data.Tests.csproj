@@ -25,4 +25,8 @@
   <ItemGroup>
     <None Include="../Fixtures/17lands-api-card-data.json" Link="Fixtures/17lands-api-card-data.json" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="../Shared/SyntheticArenaDatabase.cs" Link="Shared/SyntheticArenaDatabase.cs" />
+    <None Include="../Fixtures/arena-card-database-synthetic.sql" Link="Fixtures/arena-card-database-synthetic.sql" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
 </Project>

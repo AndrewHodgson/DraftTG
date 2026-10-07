@@ -88,13 +88,16 @@ public sealed class MainWindowViewModel : INotifyPropertyChanged, IAsyncDisposab
     /// <summary>The immutable ordered snapshot shared by rail names and passive badge bindings.</summary>
     public IReadOnlyList<CurrentPackCardPresentation> CurrentPackPresentations { get; private set; } = [];
     public DraftPack? CurrentPackIdentity => _currentSnapshot?.CurrentPack;
+    /// <summary>Arena-native state behind the current pack (GrpIds in log order); Phase 9E.1 order evidence only.</summary>
+    internal ArenaDraftStateSnapshot? CurrentArenaState { get; private set; }
     public ObservableCollection<DraftedCardViewModel> DraftedCards { get; } = [];
     public DraftPoolSnapshot? DraftPool { get; private set; }
     public DraftPoolAnalysis? PoolAnalysis { get; private set; }
     public bool HasDraftPool => DraftPool is not null;
     public string PoolSummaryText { get; private set; } = string.Empty;
     public string PoolEntryDiagnosticsText => DraftPool is { } pool && _catalog is { } catalog
-        ? DraftPoolPresentation.Entries(pool, catalog) : string.Empty;
+        ? (PoolIdentity is { Total: > 0 } identity ? identity.Text + "\n\n" : "") + DraftPoolPresentation.Entries(pool, catalog) : string.Empty;
+    public ArenaCardIdentitySummary? PoolIdentity { get; private set; }
     public DeckBuildResult? BaselineDeckResult { get; private set; }
     public SuggestedDeckSet? SuggestedDeckSet { get; private set; }
     public IReadOnlyList<SuggestedDeck> SuggestedDecks => SuggestedDeckSet?.Builds ?? [];
@@ -461,6 +464,7 @@ public sealed class MainWindowViewModel : INotifyPropertyChanged, IAsyncDisposab
         _draftCompleted = update.ArenaState.IsCompleted;
         _deckDraftId = update.ArenaState.DraftIdentifier; _deckEventName = update.ArenaState.EventName;
         DraftPool = update.SnapshotResult.DraftPool;
+        PoolIdentity = update.SnapshotResult.PoolIdentity;
         PoolAnalysis = DraftPool is { } pool ? new DraftPoolAnalyzer().Analyze(pool, _catalog ?? new CardCatalog()) : null;
         PoolSummaryText = PoolAnalysis is { } analysis
             ? DraftPoolPresentation.Summary(analysis, update.ArenaState.IsCompleted) : string.Empty;
@@ -553,6 +557,7 @@ public sealed class MainWindowViewModel : INotifyPropertyChanged, IAsyncDisposab
     private void ApplyReady(ArenaDraftStateSnapshot arenaState, DraftSnapshot snapshot)
     {
         _currentSnapshot = snapshot;
+        CurrentArenaState = arenaState;
         StatisticsStatusText = _statisticsEnabled ? "Stats: loading…" : "Stats: unavailable";
         StatisticsDiagnosticText = string.Empty;
         StatisticsCoverageText = string.Empty;
@@ -634,6 +639,7 @@ public sealed class MainWindowViewModel : INotifyPropertyChanged, IAsyncDisposab
     private void ClearCurrentPack()
     {
         _currentSnapshot = null;
+        CurrentArenaState = null;
         CurrentPackPresentations = [];
         StatisticsStatusText = string.Empty;
         StatisticsDiagnosticText = string.Empty;

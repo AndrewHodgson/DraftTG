@@ -1,0 +1,641 @@
+[
+  {
+    "id": "32a7a905-11bf-4b66-a28e-1066a0e372b8",
+    "name": "Graft Surgeon",
+    "layout": "normal",
+    "mana_cost": "{2}{W}",
+    "cmc": 3.0,
+    "type_line": "Creature \u2014 Human Cleric",
+    "colors": [
+      "W"
+    ],
+    "rarity": "common",
+    "set": "fra",
+    "collector_number": "10",
+    "oracle_text": "This creature enters with a +1/+1 counter on it.\nWhen this creature dies, put its counters on up to one target creature you control.",
+    "power": "2",
+    "toughness": "2",
+    "arena_id": 106235
+  },
+  {
+    "id": "2381d123-d8c7-4822-98fe-b1c365beb5ed",
+    "name": "Last Gasp",
+    "layout": "normal",
+    "mana_cost": "{1}{B}",
+    "cmc": 2.0,
+    "type_line": "Instant",
+    "colors": [
+      "B"
+    ],
+    "rarity": "common",
+    "set": "fra",
+    "collector_number": "56",
+    "oracle_text": "Target creature gets -3/-3 until end of turn.",
+    "arena_id": 106285
+  },
+  {
+    "id": "c4554f5b-791b-48f6-bf54-ad28699e1beb",
+    "name": "Overwrite the Multiverse",
+    "layout": "normal",
+    "mana_cost": "{4}{B}{B}",
+    "cmc": 6.0,
+    "type_line": "Sorcery",
+    "colors": [
+      "B"
+    ],
+    "rarity": "mythic",
+    "set": "fra",
+    "collector_number": "59",
+    "oracle_text": "Exile all creatures. Empower Jace X, where X is the number of creatures exiled this way. (Put that many loyalty counters on a Jace token you control. If you don't control one, first create a blue Jace planeswalker token with \"[\u22121]: Surveil 1\" and \"[\u22123]: Draw a card.\")",
+    "arena_id": 106288
+  },
+  {
+    "id": "4ff6da82-d7dd-4b59-b7e6-30670cea7169",
+    "name": "Rank Rat",
+    "layout": "normal",
+    "mana_cost": "{1}{B}",
+    "cmc": 2.0,
+    "type_line": "Creature \u2014 Zombie Rat",
+    "colors": [
+      "B"
+    ],
+    "rarity": "common",
+    "set": "fra",
+    "collector_number": "61",
+    "oracle_text": "When this creature enters, each opponent discards a card.",
+    "power": "1",
+    "toughness": "1",
+    "arena_id": 106290
+  },
+  {
+    "id": "f1d274db-751b-4414-a38d-762198168e91",
+    "name": "Silence the Echo",
+    "layout": "normal",
+    "mana_cost": "{1}{B}",
+    "cmc": 2.0,
+    "type_line": "Sorcery",
+    "colors": [
+      "B"
+    ],
+    "rarity": "common",
+    "set": "fra",
+    "collector_number": "66",
+    "oracle_text": "As an additional cost to cast this spell, sacrifice a creature or planeswalker or pay {3}.\nDestroy target creature or planeswalker.",
+    "arena_id": 106295
+  },
+  {
+    "id": "7d3b720d-f27c-462a-8f80-15748e5086e1",
+    "name": "Artifist Acumen",
+    "layout": "normal",
+    "mana_cost": "{R}",
+    "cmc": 1.0,
+    "type_line": "Sorcery",
+    "colors": [
+      "R"
+    ],
+    "rarity": "common",
+    "set": "fra",
+    "collector_number": "73",
+    "oracle_text": "Creatures you control gain first strike until end of turn.\nDraw a card.",
+    "arena_id": 106303
+  },
+  {
+    "id": "3a64c5f4-9cfc-4d19-bd99-13d619b1aa9d",
+    "name": "Chandra's Emberling",
+    "layout": "normal",
+    "mana_cost": "{2}{R}",
+    "cmc": 3.0,
+    "type_line": "Creature \u2014 Gremlin Elemental",
+    "colors": [
+      "R"
+    ],
+    "rarity": "common",
+    "set": "fra",
+    "collector_number": "76",
+    "oracle_text": "Haste\nWhenever you cast a noncreature spell, put a +1/+1 counter on this creature.",
+    "power": "2",
+    "toughness": "2",
+    "arena_id": 106306
+  },
+  {
+    "id": "5f8771f9-8128-4818-a11d-41ea368cf697",
+    "name": "Eardrum Rattler",
+    "layout": "normal",
+    "mana_cost": "{1}{R}",
+    "cmc": 2.0,
+    "type_line": "Creature \u2014 Human Bard",
+    "colors": [
+      "R"
+    ],
+    "rarity": "common",
+    "set": "fra",
+    "collector_number": "81",
+    "oracle_text": "{1}, {T}: Another target creature you control with power 2 or less can't be blocked this turn.",
+    "power": "2",
+    "toughness": "2",
+    "arena_id": 106311
+  },
+  {
+    "id": "7e324816-552f-455d-97c4-5ea6b26d2e6e",
+    "name": "Hallway Heckler // Vicious Verse",
+    "layout": "prepare",
+    "mana_cost": "{2}{R} // {B/R}",
+    "cmc": 3.0,
+    "type_line": "Creature \u2014 Elemental Sorcerer // Sorcery",
+    "colors": [
+      "R"
+    ],
+    "card_faces": [
+      {
+        "object": "card_face",
+        "name": "Hallway Heckler",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature \u2014 Elemental Sorcerer",
+        "oracle_text": "This creature enters prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)\n{T}, Discard a card: Draw a card.",
+        "power": "2",
+        "toughness": "3"
+      },
+      {
+        "object": "card_face",
+        "name": "Vicious Verse",
+        "mana_cost": "{B/R}",
+        "type_line": "Sorcery",
+        "oracle_text": "Vicious Verse deals 1 damage to target opponent."
+      }
+    ],
+    "rarity": "common",
+    "set": "fra",
+    "collector_number": "85",
+    "power": "2",
+    "toughness": "3",
+    "arena_id": 106315
+  },
+  {
+    "id": "2b0ebea0-86de-4da4-9fe8-dacc1e75c161",
+    "name": "Pyre Rhymer // Molten Tide",
+    "layout": "prepare",
+    "mana_cost": "{1}{R}{R} // {R}",
+    "cmc": 3.0,
+    "type_line": "Creature \u2014 Elemental Sorcerer // Instant",
+    "colors": [
+      "R"
+    ],
+    "card_faces": [
+      {
+        "object": "card_face",
+        "name": "Pyre Rhymer",
+        "mana_cost": "{1}{R}{R}",
+        "type_line": "Creature \u2014 Elemental Sorcerer",
+        "oracle_text": "Prowess\nThis creature enters prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)",
+        "power": "3",
+        "toughness": "3"
+      },
+      {
+        "object": "card_face",
+        "name": "Molten Tide",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "oracle_text": "Until end of turn, whenever you tap a Mountain for mana, add an additional {R}."
+      }
+    ],
+    "produced_mana": [
+      "R"
+    ],
+    "rarity": "rare",
+    "set": "fra",
+    "collector_number": "91",
+    "power": "3",
+    "toughness": "3",
+    "arena_id": 106323
+  },
+  {
+    "id": "0e44f959-1322-4abd-b6eb-dea992307c0c",
+    "name": "Skilled Battlecarver",
+    "layout": "normal",
+    "mana_cost": "{1}{R}",
+    "cmc": 2.0,
+    "type_line": "Creature \u2014 Human Warrior",
+    "colors": [
+      "R"
+    ],
+    "rarity": "common",
+    "set": "fra",
+    "collector_number": "92",
+    "oracle_text": "During your turn, this creature has first strike.\n{1}{R}: This creature gets +1/+0 until end of turn.",
+    "power": "2",
+    "toughness": "1",
+    "arena_id": 106325
+  },
+  {
+    "id": "e0de5f66-f0df-4866-9f73-104ce50411b4",
+    "name": "Bestial Incursion",
+    "layout": "normal",
+    "mana_cost": "{3}{G}",
+    "cmc": 4.0,
+    "type_line": "Sorcery",
+    "colors": [
+      "G"
+    ],
+    "rarity": "common",
+    "set": "fra",
+    "collector_number": "98",
+    "oracle_text": "Create a 4/4 green Beast creature token with trample.\nFlashback {5}{G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+    "arena_id": 106331
+  },
+  {
+    "id": "a56e0f91-b128-4693-a949-53cb403f4fbf",
+    "name": "Greenhouse Propagator",
+    "layout": "normal",
+    "mana_cost": "{2}{G}",
+    "cmc": 3.0,
+    "type_line": "Creature \u2014 Cat Druid",
+    "colors": [
+      "G"
+    ],
+    "produced_mana": [
+      "G"
+    ],
+    "rarity": "common",
+    "set": "fra",
+    "collector_number": "104",
+    "oracle_text": "Whenever another creature you control enters, you gain 1 life.\n{T}: Add {G}.",
+    "power": "2",
+    "toughness": "3",
+    "arena_id": 106338
+  },
+  {
+    "id": "b635389c-e286-4edb-80d1-23dbe4a18857",
+    "name": "Sureshot Sower",
+    "layout": "normal",
+    "mana_cost": "{1}{G}",
+    "cmc": 2.0,
+    "type_line": "Creature \u2014 Human Archer",
+    "colors": [
+      "G"
+    ],
+    "rarity": "common",
+    "set": "fra",
+    "collector_number": "115",
+    "oracle_text": "Reach\n{3}{G}, Discard this card: Destroy target creature with flying.",
+    "power": "3",
+    "toughness": "1",
+    "arena_id": 106350
+  },
+  {
+    "id": "7d29dfa1-9582-47bc-8f42-62b611bdcc4e",
+    "name": "Konstrari Charm",
+    "layout": "normal",
+    "mana_cost": "{R}{G}",
+    "cmc": 2.0,
+    "type_line": "Instant",
+    "colors": [
+      "G",
+      "R"
+    ],
+    "produced_mana": [
+      "C"
+    ],
+    "rarity": "uncommon",
+    "set": "fra",
+    "collector_number": "138",
+    "oracle_text": "Choose one \u2014\n\u2022 Konstrari Charm deals 6 damage to target creature with flying.\n\u2022 Put two +1/+1 counters on target creature. It gains trample until end of turn.\n\u2022 Add {C}{C}{C}.",
+    "arena_id": 106375
+  },
+  {
+    "id": "acefc515-bf97-4dc0-b0f7-ae8ae5a61671",
+    "name": "Vigorbloom Vanguard // Seed Suture",
+    "layout": "prepare",
+    "mana_cost": "{1}{G/W} // {G/W}",
+    "cmc": 2.0,
+    "type_line": "Creature \u2014 Troll Druid // Sorcery",
+    "colors": [
+      "G",
+      "W"
+    ],
+    "card_faces": [
+      {
+        "object": "card_face",
+        "name": "Vigorbloom Vanguard",
+        "mana_cost": "{1}{G/W}",
+        "type_line": "Creature \u2014 Troll Druid",
+        "oracle_text": "This creature enters prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)\nEach creature you control with a +1/+1 counter on it has vigilance.",
+        "power": "2",
+        "toughness": "2"
+      },
+      {
+        "object": "card_face",
+        "name": "Seed Suture",
+        "mana_cost": "{G/W}",
+        "type_line": "Sorcery",
+        "oracle_text": "Put a +1/+1 counter on target creature. You gain 1 life."
+      }
+    ],
+    "rarity": "uncommon",
+    "set": "fra",
+    "collector_number": "161",
+    "power": "2",
+    "toughness": "2",
+    "arena_id": 106403
+  },
+  {
+    "id": "a803dbe7-153a-4e92-ad4d-c2babebe003d",
+    "name": "Vindictive Triumph",
+    "layout": "normal",
+    "mana_cost": "{W}{B}{B}",
+    "cmc": 3.0,
+    "type_line": "Instant",
+    "colors": [
+      "B",
+      "W"
+    ],
+    "rarity": "rare",
+    "set": "fra",
+    "collector_number": "162",
+    "oracle_text": "Exile target creature or planeswalker. If that permanent's mana value was 3 or less, return it to the battlefield tapped under your control. Exile it at the beginning of the next end step.",
+    "arena_id": 106405
+  },
+  {
+    "id": "8b07409a-1dce-461d-95e4-1130521ff4c4",
+    "name": "Medic's Kitesail",
+    "layout": "normal",
+    "mana_cost": "{2}",
+    "cmc": 2.0,
+    "type_line": "Artifact \u2014 Equipment",
+    "colors": [],
+    "rarity": "common",
+    "set": "fra",
+    "collector_number": "173",
+    "oracle_text": "Equipped creature gets +1/+0 and has flying and \"Whenever this creature attacks, you gain 1 life.\"\nEquip {2} ({2}: Attach to target creature you control. Equip only as a sorcery.)",
+    "arena_id": 106418
+  },
+  {
+    "id": "39c805e3-82cd-42a9-80fe-8d81712a94ea",
+    "name": "Konstrari Annex",
+    "layout": "normal",
+    "mana_cost": "",
+    "cmc": 0.0,
+    "type_line": "Land",
+    "colors": [],
+    "produced_mana": [
+      "G",
+      "R"
+    ],
+    "rarity": "common",
+    "set": "fra",
+    "collector_number": "183",
+    "oracle_text": "This land enters tapped unless you control a planeswalker.\n{T}: Add {R} or {G}.",
+    "arena_id": 106428
+  },
+  {
+    "id": "6ede3143-69ac-4cbe-922a-d25b07c26da7",
+    "name": "Stingerquill Annex",
+    "layout": "normal",
+    "mana_cost": "",
+    "cmc": 0.0,
+    "type_line": "Land",
+    "colors": [],
+    "produced_mana": [
+      "B",
+      "R"
+    ],
+    "rarity": "common",
+    "set": "fra",
+    "collector_number": "190",
+    "oracle_text": "This land enters tapped unless you control a planeswalker.\n{T}: Add {B} or {R}.",
+    "arena_id": 106435
+  },
+  {
+    "id": "d5cb9810-3c2d-4ae4-b8b6-0155ca3f47ad",
+    "name": "Danitha, Sword of Hope",
+    "layout": "normal",
+    "mana_cost": "{2}{W}",
+    "cmc": 3.0,
+    "type_line": "Legendary Creature \u2014 Human Knight",
+    "colors": [
+      "W"
+    ],
+    "rarity": "uncommon",
+    "set": "fra",
+    "collector_number": "196",
+    "oracle_text": "First strike\nWhenever you cast an Equipment spell or a spell that targets a creature you control, draw a card. This ability triggers only once each turn.",
+    "power": "2",
+    "toughness": "2",
+    "arena_id": 106441
+  },
+  {
+    "id": "bc3c096f-7f6c-474c-a2c8-75d3e6ddd6f5",
+    "name": "Ajani Unrelenting",
+    "layout": "normal",
+    "mana_cost": "{4}{R}{R}",
+    "cmc": 6.0,
+    "type_line": "Legendary Planeswalker \u2014 Ajani",
+    "colors": [
+      "R"
+    ],
+    "rarity": "mythic",
+    "set": "fra",
+    "collector_number": "242",
+    "oracle_text": "Whenever you activate a loyalty ability, create a 2/2 colorless Wizard Soldier creature token named Cadet.\n+1: Creatures you control get +1/+0 and gain haste until end of turn.\n\u22122: Discard your hand, then draw a card for each creature you control.\n\u22123: Ajani deals 4 damage to each creature except for tokens you control.",
+    "arena_id": 106487
+  },
+  {
+    "id": "40cb22c8-cb03-45c9-bb0e-b8cabdcc43cd",
+    "name": "Chandra, Torch of Defiance",
+    "layout": "normal",
+    "mana_cost": "{2}{R}{R}",
+    "cmc": 4.0,
+    "type_line": "Legendary Planeswalker \u2014 Chandra",
+    "colors": [
+      "R"
+    ],
+    "produced_mana": [
+      "R"
+    ],
+    "rarity": "mythic",
+    "set": "fra",
+    "collector_number": "244",
+    "oracle_text": "+1: Exile the top card of your library. You may cast that card. If you don't, Chandra deals 2 damage to each opponent.\n+1: Add {R}{R}.\n\u22123: Chandra deals 4 damage to target creature.\n\u22127: You get an emblem with \"Whenever you cast a spell, this emblem deals 5 damage to any target.\"",
+    "arena_id": 106489
+  },
+  {
+    "id": "e8c1ce21-b77d-40bf-9ed1-478604e71f5f",
+    "name": "Jiang Yanggu, Alone",
+    "layout": "normal",
+    "mana_cost": "{4}{R}",
+    "cmc": 5.0,
+    "type_line": "Legendary Creature \u2014 Human Berserker",
+    "colors": [
+      "R"
+    ],
+    "rarity": "uncommon",
+    "set": "fra",
+    "collector_number": "246",
+    "oracle_text": "Menace (This creature can't be blocked except by two or more creatures.)\nWhenever a creature you control attacks a player alone, discard a card, then draw a card. Then put a +1/+1 counter on that creature for each card you've discarded this turn.",
+    "power": "4",
+    "toughness": "4",
+    "arena_id": 106491
+  },
+  {
+    "id": "5c5afd5f-6f37-4c3e-83f0-68fdcea98810",
+    "name": "Tomik, Izzet Sparkmage",
+    "layout": "normal",
+    "mana_cost": "{1}{R}",
+    "cmc": 2.0,
+    "type_line": "Legendary Creature \u2014 Human Wizard",
+    "colors": [
+      "R"
+    ],
+    "rarity": "uncommon",
+    "set": "fra",
+    "collector_number": "253",
+    "oracle_text": "Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)\nIf a source you control would deal noncombat damage to an opponent or a permanent an opponent controls, it deals that much damage plus 1 instead.",
+    "power": "1",
+    "toughness": "2",
+    "arena_id": 106498
+  },
+  {
+    "id": "6d86e410-20c4-4248-96bf-5780ece6274a",
+    "name": "Way of the Warlord",
+    "layout": "normal",
+    "mana_cost": "{2}{R}",
+    "cmc": 3.0,
+    "type_line": "Legendary Enchantment",
+    "colors": [
+      "R"
+    ],
+    "rarity": "uncommon",
+    "set": "fra",
+    "collector_number": "255",
+    "oracle_text": "When Way of the Warlord enters, empower Jace 5. (Put five loyalty counters on a Jace token you control. If you don't control one, first create a blue Jace planeswalker token with \"[\u22121]: Surveil 1\" and \"[\u22123]: Draw a card.\")\nPlaneswalkers you control have \"[\u22124]: This planeswalker deals 2 damage to up to one target creature or planeswalker and 2 damage to target player.\"",
+    "arena_id": 106500
+  },
+  {
+    "id": "dad6afc9-8505-4cdd-bf79-e9ba4670f2bb",
+    "name": "Edgar, Moonlit Sovereign",
+    "layout": "normal",
+    "mana_cost": "{3}{G}{G}",
+    "cmc": 5.0,
+    "type_line": "Legendary Creature \u2014 Werewolf Noble",
+    "colors": [
+      "G"
+    ],
+    "rarity": "uncommon",
+    "set": "fra",
+    "collector_number": "257",
+    "oracle_text": "Flash\nAt the beginning of your end step, if you didn't cast a spell this turn, put two +1/+1 counters on Edgar.\n{4}{G}: Put a +1/+1 counter on each creature you control with a +1/+1 counter on it.",
+    "power": "4",
+    "toughness": "4",
+    "arena_id": 106502
+  },
+  {
+    "id": "eed83302-dc2c-45f4-a4bd-af9da51edef5",
+    "name": "Ruric Thar, Magecrusher",
+    "layout": "normal",
+    "mana_cost": "{5}{G}{G}",
+    "cmc": 7.0,
+    "type_line": "Legendary Creature \u2014 Ogre Warrior",
+    "colors": [
+      "G"
+    ],
+    "rarity": "uncommon",
+    "set": "fra",
+    "collector_number": "265",
+    "oracle_text": "This spell can't be countered.\nReach, vigilance, trample\nRuric Thar has hexproof as long as they haven't dealt combat damage yet. (They can't be the target of spells or abilities your opponents control.)",
+    "power": "7",
+    "toughness": "7",
+    "arena_id": 106510
+  },
+  {
+    "id": "edea6f70-a5a7-475d-b7f2-97933d0f32cf",
+    "name": "Titanbones, Towering Heart",
+    "layout": "normal",
+    "mana_cost": "{3}{G}",
+    "cmc": 4.0,
+    "type_line": "Legendary Creature \u2014 Skeleton Druid",
+    "colors": [
+      "G"
+    ],
+    "rarity": "uncommon",
+    "set": "fra",
+    "collector_number": "266",
+    "oracle_text": "Reach\nWhenever you gain life, put two +1/+1 counters on Titanbones.\nWhen you discard this card, you gain 3 life.",
+    "power": "4",
+    "toughness": "3",
+    "arena_id": 106511
+  },
+  {
+    "id": "b8dfd087-2434-42c6-ac4c-1decbcdde2db",
+    "name": "Yoshimaru, Scrappy Stray",
+    "layout": "normal",
+    "mana_cost": "{1}{G}",
+    "cmc": 2.0,
+    "type_line": "Legendary Creature \u2014 Dog",
+    "colors": [
+      "G"
+    ],
+    "rarity": "uncommon",
+    "set": "fra",
+    "collector_number": "269",
+    "oracle_text": "When Yoshimaru enters, another target creature you control fights up to one target creature an opponent controls. (Each deals damage equal to its power to the other.)\n{6}: Put a +1/+1 counter on target nonlegendary creature.",
+    "power": "1",
+    "toughness": "1",
+    "arena_id": 106514
+  },
+  {
+    "id": "7c619fed-2394-4efc-8cdc-6df5f51c1f57",
+    "name": "Edgar, Ancient Bloodlord",
+    "layout": "normal",
+    "mana_cost": "{W}{B}",
+    "cmc": 2.0,
+    "type_line": "Legendary Creature \u2014 Vampire Noble",
+    "colors": [
+      "B",
+      "W"
+    ],
+    "rarity": "uncommon",
+    "set": "fra",
+    "collector_number": "270",
+    "oracle_text": "Whenever another creature or planeswalker you control dies, you gain 1 life.\n{2}, Sacrifice another creature or planeswalker: Put a +1/+1 counter on Edgar. He gains menace until end of turn. (He can't be blocked except by two or more creatures.)",
+    "power": "2",
+    "toughness": "3",
+    "arena_id": 106515
+  },
+  {
+    "id": "3abcae65-5b21-4c98-adad-34b8bc76ea3a",
+    "name": "Karn, Gilded Guardian",
+    "layout": "normal",
+    "mana_cost": "{2/W}{2/U}{2/B}{2/R}{2/G}",
+    "cmc": 10.0,
+    "type_line": "Legendary Artifact Creature \u2014 Golem",
+    "colors": [
+      "B",
+      "G",
+      "R",
+      "U",
+      "W"
+    ],
+    "rarity": "rare",
+    "set": "fra",
+    "collector_number": "272",
+    "oracle_text": "Vigilance, trample\nWhen Karn enters, draw a card for each color among other artifacts you control.",
+    "power": "5",
+    "toughness": "5",
+    "arena_id": 106517
+  },
+  {
+    "id": "1ebbbddb-2dc3-4194-b72b-13bcebe2ab89",
+    "name": "Karn, Argent Defender",
+    "layout": "normal",
+    "mana_cost": "{2}",
+    "cmc": 2.0,
+    "type_line": "Legendary Artifact Creature \u2014 Golem",
+    "colors": [],
+    "rarity": "rare",
+    "set": "fra",
+    "collector_number": "279",
+    "oracle_text": "Artifacts and creatures entering the battlefield don't cause abilities to trigger.",
+    "power": "1",
+    "toughness": "3",
+    "arena_id": 106524
+  }
+]

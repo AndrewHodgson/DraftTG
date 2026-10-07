@@ -42,7 +42,8 @@ public sealed class DraftTGRuntimeFactory : IDraftTGRuntimeFactory
             bulkDataClient,
             new ScryfallJsonlGzipCardDataLoader(),
             ApplicationDataPathProviderFactory.CreateDefault());
-        var bootstrap = await new DraftTGCardDataBootstrapper(cardDataProvider)
+        // Arena's local card database bridges new-set cards until Scryfall publishes their arena_id; optional and read-only.
+        var bootstrap = await new DraftTGCardDataBootstrapper(cardDataProvider, ArenaDatabasePrintingIdentitySource.CreateDefault())
             .BootstrapAsync(cancellationToken: cancellationToken)
             .ConfigureAwait(false);
 

@@ -13,7 +13,9 @@ public sealed record DraftTGCardDataBootstrapResult(
     ScryfallCardDataRefreshDiagnostic? RefreshDiagnostic);
 
 /// <summary>Builds UI-independent runtime card dependencies from Data-layer bootstrap output.</summary>
-public sealed class DraftTGCardDataBootstrapper(IScryfallCardDataProvider cardDataProvider)
+/// <param name="arenaDatabase">Optional Arena local identity bridge; null keeps Scryfall arena_id resolution only.</param>
+public sealed class DraftTGCardDataBootstrapper(IScryfallCardDataProvider cardDataProvider,
+    IArenaPrintingIdentitySource? arenaDatabase = null)
 {
     private readonly IScryfallCardDataProvider _cardDataProvider =
         cardDataProvider ?? throw new ArgumentNullException(nameof(cardDataProvider));
@@ -25,7 +27,7 @@ public sealed class DraftTGCardDataBootstrapper(IScryfallCardDataProvider cardDa
         var loadResult = await _cardDataProvider
             .LoadAsync(forceRefresh, cancellationToken)
             .ConfigureAwait(false);
-        var resolver = new ArenaCardResolver(loadResult.CardData);
+        var resolver = new ArenaCardResolver(loadResult.CardData, arenaDatabase);
         var adapter = new ArenaDraftSnapshotAdapter(resolver);
 
         return new DraftTGCardDataBootstrapResult(

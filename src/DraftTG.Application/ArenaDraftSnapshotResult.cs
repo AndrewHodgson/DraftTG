@@ -36,6 +36,8 @@ public sealed record ArenaDraftSnapshotResult
     public DraftHistory? ResolvedHistory { get; init; }
     public DraftedCardPool? ResolvedDraftedPool { get; init; }
     public DraftPoolSnapshot? DraftPool { get; init; }
+    /// <summary>How the drafted pool's Arena IDs were resolved (Scryfall arena_id, Arena DB fallback, missing, ambiguous).</summary>
+    public ArenaCardIdentitySummary? PoolIdentity { get; init; }
     public ArenaCardIdentifierList UnresolvedArenaCards { get; }
     public ArenaCardIdentifierList AmbiguousArenaCards { get; }
 

@@ -892,3 +892,129 @@ The eventual visual layer must localize visible tiles or list rows within indepe
 The intended dedicated passive deck overlay will reuse existing native transparency, click-through and non-activation behavior; the rail remains the only interactive DraftTG surface. Event-driven WGC requests and apply-time fences must bind current revision, selected build, localization generation, session and compatible screen/window geometry. They must clear stale outlines on edits, build switches, navigation or a new draft. No production deck capture loop, overlay window or stale-result application pipeline exists yet; the existing draft pipeline is unaffected.
 
 An explicit `--capture-deck-builder` developer command uses existing WGC and Arena-window-only region capture. It refuses a non-DeckBuilder latest scene and discards the frame if the scene record or window geometry changes during acquisition. It saves a cropped PNG and diagnostics only when explicitly invoked, never automates Arena input, and does not certify current editor counts. The command and semantic models compile on the portable target; native macOS deck-builder capture/localization remains unimplemented and unvalidated.
+
+## Phase 9E.1 — Arena display-order evidence (observational)
+
+Phase 9E.1 implements Step 1 of section 14 in [CLAUDE_LOCALIZATION_REVIEW.md](CLAUDE_LOCALIZATION_REVIEW.md). It collects evidence about whether Arena's visual draft-pack order is a pure function of sort keys in Arena's local card database. Nothing it produces reaches placement, badges, identity, matcher thresholds or recommendations. See [PHASE9E_1_REPORT.md](PHASE9E_1_REPORT.md).
+
+```text
+Data         ArenaCardDatabaseLocator / ArenaCardDatabaseReader (Microsoft.Data.Sqlite, Mode=ReadOnly, no pooling)
+             ArenaCardSortKeys (verbatim Order_* keys + coverage traits), JsonLinesLedgerFile (append-only JSONL)
+Application  ArenaDisplayOrderModel (pure: 400-rule family, Evaluate, functional classes, Predict)
+             ArenaDisplayOrderEvidenceGate, ArenaDisplayOrderObservation, ArenaDisplayOrderEvidenceLedger,
+             ArenaDisplayOrderGateProgress, ArenaDraftEvidenceScopeTracker, ArenaDisplayOrderEvidenceService
+App          OrderEvidenceRecorder (observes OverlayViewModel.AutomaticLocalizationApplied), rail text,
+             --order-evidence-summary developer command
+```
+
+**Source.** Arena ships `Raw_CardDatabase_*.mtga`, a SQLite database, under:
+- Windows: `MTGA_Data/Downloads/Raw` (Steam or Wizards install)
+- macOS: `~/Library/Application Support/com.wizards.mtga/Downloads/Raw/` (not runtime-validated)
+
+The locator picks the newest file. An explicit file or directory overrides it, via `--db` or `DRAFTTG_ARENA_CARD_DATABASE`.
+
+**Read-only access.** Each query opens the file read-only without pooling and closes it, so no handle outlives a query. Missing required columns or an unreadable file return `Unavailable`. The file is never copied or modified.
+
+**Sort keys.** The keys used are `Order_MythicToCommon`, `Order_ColorOrder`, `Order_Title`, `Order_CMCWithXLast`, `Order_CreaturesFirst`, `Order_LandLast` and `Order_BasicLandsFirst`, plus `CollectorNumber`, `ExpansionCode` and the `Versions` rows. Arena's color order is used as shipped and never rederived from Scryfall. Multicolor, hybrid and nonbasic-land traits use enum values confirmed in the database's own `Enums` table, and serve only Gate-1 coverage reporting.
+
+**Hypothesis family.** The family is ported unchanged from `tools/ArenaSortOrderProbe`:
+- rarity first
+- then 1–3 ordered keys from {color, landLast, creaturesFirst, cmc, basicLandsFirst, title, collector, grpId}
+- then a GrpId tiebreak, with NULL keys sorting last
+
+That makes 400 rules.
+
+**Functional equivalence.** Rules are grouped by the total order they induce on the draft universe of the observed expansions, plus all observed cards. Diagnostics report both raw survivors and distinct classes. On the two real WOE packs, 120 of 400 rules survive and form 20 classes.
+
+**Prediction statuses.**
+- `Unanimous`: one order.
+- `Discriminating`: several orders.
+- `Unavailable`: missing keys, or no surviving rule.
+
+Each recorded pack is predicted *before* it is added. The result is classified as agrees, undetermined or DISAGREES.
+
+**Recording gate.** Only a live, current-generation, `IsSafeFor` result qualifies. It must have every occurrence matched at HighConfidence/Confirmed, a count equal to the Arena log pack, and an unambiguous reading order derived from the matched rectangles. Partial, ambiguous, stale and manually placed results are never evidence.
+
+**Ledger.** Location: `<app data>/localization/order-evidence.jsonl`.
+- Each record is versioned and self-contained, including the sort keys used.
+- Appends are serialized and flushed as single lines. A torn tail is skipped on reload, and one corrupt row never stops startup.
+- One visual pack state (draft scope, coordinate, unordered multiset) is recorded once.
+
+**Privacy.** The ledger contains no pixels, paths, account data or raw draft IDs; draft scopes are SHA-256 digests.
+
+**Gate 1** requires:
+- ≥ 2 strictly complete drafts: every pick of all three packs from P1P1, with no gaps
+- ≥ 80 observations
+- a full P1P1, rare, mythic, multicolor, hybrid (when the format has one), same-rarity bonus sheet, duplicate and nonbasic land
+- two Arena window sizes
+- exactly one surviving class with zero contradictions
+
+No code promotes a rule. A refuted family is reported and disables the prediction. Arena `Data` versions are recorded per observation, and contradictions are shown per version, so a client change becomes visible. Future production use must fail closed.
+
+**Not production-authoritative.** Two packs leave 20 distinct rules, which disagree on about half of simulated packs. The WGC capture and artwork matcher remain the sole source of placement. Phase 9E.2 (`OrderVerifiedCardLocator`) must not begin until Gate 1 is satisfied and separately approved.
+
+**macOS.** All of the new code is portable, and the portable target builds. Without Mac capture, no Mac observations can be recorded. The Player.log path discrepancy between `~/Library/Logs/Wizards Of The Coast/MTGA/Player.log` (implemented) and `~/Library/Application Support/com.wizards.mtga/Logs/Logs` (Wizards' article) is unresolved, and the production path is unchanged until it is checked on a Mac.
+
+**Deferred.** The UIA descendant-count watch is deferred, because it needs a UIA client in the Avalonia App. `tools/DraftTG.LocalizationAudit snapshot` already reports the count. `Raw_ArtCropDatabase` holds crop parameters rather than pixels, and is not adopted. Deck-builder ordering is out of scope.
+
+## Course-list draft completion (Arena restart recovery)
+
+Arena writes the Phase 10B.1 top-level `{"CurrentModule":"DeckSelect","Payload":"{...Completed...}"}` only at the moment of the final pick. If Arena restarts after a draft, the rotated Player.log keeps no draft records. The only surviving evidence is the `EventGetCoursesV2` response `{"Courses":[...]}`, which nests each course's `InternalEventName`, `CurrentModule` and `CardPool`.
+
+`ArenaDraftLogParser` classifies a line starting with `{"Courses":[` that contains `DeckSelect` and `CardPool`. It emits one `DraftCompleted` with `Origin = CourseSnapshot`, the classified mode and `CourseCardPool` only when exactly one Premier, Traditional or Quick course is in `DeckSelect`. Malformed unrelated courses are skipped. Non-draft courses, Pick-Two and Unknown modes, submitted decks (other modules) and several candidate draft courses emit nothing. `CourseId` is not used as a draft identifier.
+
+`ArenaDraftStateEngine` applies the course snapshot only under these conditions:
+- The pool has exactly 3 × 14 cards.
+- The engine is idle, or tracking the same event name. A live or different session is never replaced.
+- The pool contains every known exact or recovered occurrence. Otherwise the pool is retained and a FinalPoolMismatch diagnostic is reported.
+
+An already complete pool is only confirmed. Otherwise the multiset becomes the recovered pool, with no invented chronology. The existing pool assembler therefore reports a resolvable 42-card pool as Complete, and Phase 10B/10C construction activates through the unchanged completed-session path.
+
+Card identity is unchanged. Scryfall `default_cards` had no FRA `arena_id` values on 2026-10-05, so FRA pools currently resolve to 42 unresolved occurrences: Partial, with no suggested decks. Identity from Arena's own `ExpansionCode`/`CollectorNumber` would need a separate, explicit decision.
+
+## Arena local-database card identity fallback
+
+Scryfall can publish a new set's printings days before it fills their `arena_id`. On 2026-10-05, all 462 FRA printings lacked it. `ArenaCardResolver` therefore takes an optional `IArenaPrintingIdentitySource`.
+
+**Resolution order.**
+1. The Scryfall `arena_id` mapping is used exactly as before.
+2. A direct ambiguity is returned unchanged. The fallback is never consulted for either case.
+3. Only a direct **Missing** reaches `ArenaDatabasePrintingIdentitySource`. It reuses the Phase 9E.1 locator and read-only reader.
+
+**What the bridge reads.** `ArenaCardDatabaseReader.ReadPrintingIdentities` validates only `GrpId`, `ExpansionCode`, `CollectorNumber` and `TitleId`. It also reads the enUS title (`Localizations_enUS`, highest `Formatted`) and the optional `IsToken`/`IsRebalanced` flags.
+
+**Normalization** (`ArenaPrintingKey`):
+- Set code is trimmed and uppercased.
+- Collector number stays a string, trimmed and uppercased. Letters, suffixes, symbols and leading zeros are kept; `012` ≠ `12`.
+- Names have Arena markup (`<nobr>`, `<sprite>`) removed, NFKC applied, typographic apostrophes folded, whitespace collapsed, then case-folded.
+
+The exact Arena `ExpansionCode` of each GrpId is used; there is no set-code mapping table. Bonus-sheet cards therefore keep their own code, e.g. WOT.
+
+**Outcomes.**
+
+| Fallback result | Status |
+|---|---|
+| Arena token or rebalanced card | Missing |
+| No matching catalog printing | Missing |
+| Several matching catalog printings | Ambiguous, with all candidates (never first-wins) |
+| One printing whose name agrees with Arena's title (whole name or any face) | Resolved |
+| One printing, but the name disagrees or Arena has no title | Missing, with a diagnostic |
+
+**Provenance.** `ArenaCardResolutionResult` carries `Source` (`ScryfallArenaId`, `ArenaDatabaseSetCollector` or `None`) and `Diagnostic`. Callers still see only Resolved, Missing or Ambiguous. `ArenaDraftSnapshotResult.PoolIdentity` counts pool occurrences by provenance. The rail's *Pool entry diagnostics* shows it as `Card identity: n / N resolved`, followed by direct, fallback, missing and ambiguous counts. Badges are unchanged.
+
+**Caching and failure.** Identities are cached in memory per database identity (file name, modification time, Data/GRP version). The newest database is re-located at most every 30 s, and a replaced file clears the cache. A missing, unreadable or schema-incompatible database, or an absent GrpId, simply yields Missing. Bootstrap never fails because of the bridge, and the bridge makes no network request.
+
+Only the production `DraftTGRuntimeFactory` supplies the bridge. Tests and other callers keep Scryfall-only resolution.
+
+**Audit.** Over the 18,779 Arena GrpIds that have a unique direct Scryfall mapping (Arena Data 2026.63.0.270):
+
+| Fallback outcome | Cards |
+|---|---|
+| Same printing as the direct mapping | 18,326 |
+| Rejected by the name check | 273 (mostly Alchemy/HBG and Jumpstart renumbering) |
+| No catalog printing | 669 |
+| Same-named reprint chosen instead of Scryfall's printing | 513 (Arena labels the original set, e.g. MH1 #163, where Scryfall attached the ID to J21) |
+| A differently named card | 0 |
+
+Those 513 cards always have direct IDs, so the fallback never runs for them. All 305 FRA primary GrpIds without a Scryfall ID resolve. The real 42-card FRA pool resolves 42/42 (33 distinct FRA printings), and Phase 10B/10C produces a Ready RG baseline, the only viable pair.
+

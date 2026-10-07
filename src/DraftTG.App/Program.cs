@@ -15,6 +15,8 @@ internal static class Program
         { Environment.ExitCode = CompareArenaCaptureCommand.Run(args); return; }
         if (args.Length > 0 && args[0] == "--stress-wgc")
         { Environment.ExitCode = WgcStressCommand.Run(args); return; }
+        if (args.Length > 0 && args[0] == "--order-evidence-summary")
+        { Environment.ExitCode = OrderEvidenceSummaryCommand.Run(args); return; }
         if (args.Length > 0 && args[0] == "--benchmark-arena-capture")
         { Environment.ExitCode = DesktopDuplicationBenchmarkCommand.Run(args); return; }
         BuildAvaloniaApp().StartWithClassicDesktopLifetime(args);
