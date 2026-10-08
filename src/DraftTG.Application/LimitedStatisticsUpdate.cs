@@ -30,7 +30,9 @@ public sealed class LimitedStatisticsUpdate
         SetArchetypeProfile? archetypeProfile = null, ArchetypePairStatistics? archetypeStatistics = null,
         ArchetypeConfiguration? archetypeConfiguration = null, ArchetypeDataStatus? archetypeDataStatus = null,
         bool useDefaultArchetypeProfile = true, SuccessfulDeckCorpus? trophyCorpus = null,
-        TrophyRecommendationConfiguration? trophyConfiguration = null, TrophyDataStatus? trophyDataStatus = null)
+        TrophyRecommendationConfiguration? trophyConfiguration = null, TrophyDataStatus? trophyDataStatus = null,
+        bool calculatePickScores = true, ContextualPickScoreConfiguration? pickScoreConfiguration = null,
+        DraftPoolSnapshot? draftPool = null)
     {
         Snapshot = snapshot;
         IsLoading = isLoading;
@@ -55,6 +57,11 @@ public sealed class LimitedStatisticsUpdate
         TrophyRecommendation = ArchetypeRecommendation is not null
             ? new TrophyRecommendationEngine(trophyConfiguration).Recommend(ArchetypeRecommendation,
                 result!.RequestedContext, result.CardCatalog, trophyCorpus) : null;
+        PickScores = calculatePickScores && ArchetypeRecommendation is not null
+            ? new ContextualPickScoreEngine(pickScoreConfiguration
+                ?? new ContextualPickScoreConfiguration(supplyProfile: FuturePickSupplyProfile.For(result!.RequestedContext.Expansion)))
+                .Recommend(snapshot!, result!.CardCatalog,
+                ArchetypeRecommendation, result.Catalog, result.EnvironmentCatalog, draftPool) : null;
         Cards = new ReadOnlyDictionary<CardIdentifier, LimitedCardStatisticsPresentation>(
             (snapshot?.CurrentPack.AvailableCardIdentifiers ?? []).Distinct().ToDictionary(id => id,
                 id => isLoading ? LimitedCardStatisticsPresentation.Loading
@@ -65,13 +72,15 @@ public sealed class LimitedStatisticsUpdate
         var lane = LaneRecommendation?.Cards.ToDictionary(c => new CardOccurrenceKey(c.PackIndex, c.CardIdentifier));
         var archetype = ArchetypeRecommendation?.Cards.ToDictionary(c => new CardOccurrenceKey(c.PackIndex, c.CardIdentifier));
         var trophy = TrophyRecommendation?.Cards.ToDictionary(c => new CardOccurrenceKey(c.PackIndex, c.CardIdentifier));
+        var pickScores = PickScores?.Cards.ToDictionary(c => new CardOccurrenceKey(c.PackIndex, c.CardIdentifier));
         Occurrences = new ReadOnlyDictionary<CardOccurrenceKey, CurrentPackCardPresentation>(
             (snapshot?.CurrentPack.AvailableCardIdentifiers ?? []).Select((id, index) => new CardOccurrenceKey(index, id))
             .ToDictionary(key => key, key => new CurrentPackCardPresentation(key,
                 result?.CardCatalog.Find(key.CardIdentifier), result?.Catalog.StatisticsFor(key.CardIdentifier),
                 result?.StatisticsResolvedNames.GetValueOrDefault(key.CardIdentifier),
                 statistical?.GetValueOrDefault(key), pool?.GetValueOrDefault(key), lane?.GetValueOrDefault(key), isLoading,
-                archetype?.GetValueOrDefault(key), trophy?.GetValueOrDefault(key))));
+                archetype?.GetValueOrDefault(key), trophy?.GetValueOrDefault(key), pickScores?.GetValueOrDefault(key))
+                { StatisticsResolution = result?.StatisticsResolutions.GetValueOrDefault(key.CardIdentifier) }));
         var format = result?.ActualSourceContext?.Format switch
         {
             LimitedStatisticsFormat.QuickDraft => "Quick Draft",
@@ -109,6 +118,7 @@ public sealed class LimitedStatisticsUpdate
     public ArchetypeRecommendationResult? ArchetypeRecommendation { get; }
     public ArchetypeDataStatus ArchetypeDataStatus { get; }
     public TrophyRecommendationResult? TrophyRecommendation { get; }
+    public ContextualPickScoreResult? PickScores { get; }
     public TrophyDataStatus TrophyDataStatus { get; }
     public DraftPackObservationHistory ObservationHistory { get; }
     public IReadOnlyDictionary<CardIdentifier, LimitedCardStatisticsPresentation> Cards { get; }

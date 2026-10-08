@@ -385,16 +385,17 @@ public sealed class MainWindowViewModel : INotifyPropertyChanged, IAsyncDisposab
         var finalName = occurrences.FirstOrDefault(c => c.Lane?.IsTopContextualCandidate == true)?.CardName;
         LaneRecommendationStatusText = LaneRecommendationPresentation.Summary(update.LaneRecommendation, finalName, update.IsLoading);
         var archetypeName = occurrences.FirstOrDefault(c => c.IsContextPick)?.CardName;
-        FinalRecommendationStatusText = TrophyRecommendationPresentation.Summary(update.TrophyRecommendation,
-            update.TrophyDataStatus, archetypeName, update.IsLoading);
+        FinalRecommendationStatusText = PickScorePresentation.Summary(update.PickScores, archetypeName, update.IsLoading);
         ArchetypeStatusText = ArchetypeRecommendationPresentation.Archetype(update.ArchetypeRecommendation, update.ArchetypeDataStatus);
         StatisticalPickStatusText = update.Recommendation?.TopRecommendedPackIndex is { } statsTop
-            && (update.ArchetypeRecommendation?.TopRecommendedPackIndex ?? update.LaneRecommendation?.TopRecommendedPackIndex) != statsTop ? $"Stats Pick: {topName}" : string.Empty;
+            && (update.PickScores?.TopRecommendedPackIndex ?? update.ArchetypeRecommendation?.TopRecommendedPackIndex ?? update.LaneRecommendation?.TopRecommendedPackIndex) != statsTop ? $"Stats Pick: {topName}" : string.Empty;
         ContextualRecommendationDiagnosticsText = ContextualRecommendationPresentation.Diagnostics(
             update.ContextualRecommendation, update.ObservationHistory)
             + "\n\n" + LaneRecommendationPresentation.Diagnostics(update.LaneRecommendation);
         ContextualRecommendationDiagnosticsText += "\n\n" + ArchetypeRecommendationPresentation.Diagnostics(update.ArchetypeRecommendation, update.ArchetypeDataStatus);
         ContextualRecommendationDiagnosticsText += "\n\n" + TrophyRecommendationPresentation.Diagnostics(update.TrophyRecommendation, update.TrophyDataStatus);
+        ContextualRecommendationDiagnosticsText += "\n\nLegacy phase details:\n" + TrophyRecommendationPresentation.Summary(
+            update.TrophyRecommendation, update.TrophyDataStatus, archetypeName, update.IsLoading);
         ContextualRecommendationDiagnosticsText += "\n\nCurrent-pack identity:\n"
             + string.Join("\n\n", occurrences.Select(c => c.DiagnosticText));
         if (occurrences.Any(c => !c.IsIdentityConsistent))

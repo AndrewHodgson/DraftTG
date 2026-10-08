@@ -20,6 +20,8 @@ public sealed record LimitedStatisticsLoadResult(
     public CardCatalog CardCatalog { get; init; } = new();
     public IReadOnlyDictionary<CardIdentifier, string> StatisticsResolvedNames { get; init; }
         = System.Collections.Frozen.FrozenDictionary<CardIdentifier, string>.Empty;
+    public IReadOnlyDictionary<CardIdentifier, StatisticalIdentityResolution> StatisticsResolutions { get; init; }
+        = System.Collections.Frozen.FrozenDictionary<CardIdentifier, StatisticalIdentityResolution>.Empty;
     public string DatasetDiagnosticText { get; init; } = string.Empty;
 }
 
@@ -57,7 +59,8 @@ public sealed class LimitedStatisticsService(ISeventeenLandsCardRatingsClient cl
 
     internal LimitedStatisticsUpdate CreateUpdate(LoadedLimitedStatistics loaded, DraftSnapshot? snapshot,
         DraftPackObservationHistory observations, LoadedArchetypeStatistics? pair = null, ArchetypeDataStatus? pairStatus = null,
-        SuccessfulDeckLoadResult? trophy = null, TrophyDataStatus? trophyStatus = null)
+        SuccessfulDeckLoadResult? trophy = null, TrophyDataStatus? trophyStatus = null, bool calculatePickScores = true,
+        DraftPoolSnapshot? draftPool = null)
     {
         ArchetypePairStatistics? data = null;
         if (snapshot is not null && pair is not null && pair.Key.Context == loaded.Requested && pair.Ratings.Source != SeventeenLandsSource.Unavailable)
@@ -69,7 +72,8 @@ public sealed class LimitedStatisticsService(ISeventeenLandsCardRatingsClient cl
         return new(snapshot, false, Map(loaded, snapshot), observationHistory: EnrichObservations(loaded, observations),
             archetypeProfile: _archetypes.Find(loaded.Requested.Expansion), archetypeStatistics: data,
             archetypeConfiguration: ArchetypeConfiguration, archetypeDataStatus: pairStatus, useDefaultArchetypeProfile: false,
-            trophyCorpus: trophy?.Corpus, trophyConfiguration: TrophyConfiguration, trophyDataStatus: trophyStatus);
+            trophyCorpus: trophy?.Corpus, trophyConfiguration: TrophyConfiguration, trophyDataStatus: trophyStatus,
+            calculatePickScores: calculatePickScores, draftPool: draftPool);
     }
     internal DraftPackObservationHistory EnrichObservations(LoadedLimitedStatistics loaded,
         DraftPackObservationHistory observations)
@@ -138,6 +142,7 @@ public sealed class LimitedStatisticsService(ISeventeenLandsCardRatingsClient cl
             EnvironmentCatalog = loaded.EnvironmentCatalog ?? new(),
             CardCatalog = catalog,
             StatisticsResolvedNames = mapping.ResolvedNames,
+            StatisticsResolutions = mapping.Resolutions,
             DatasetDiagnosticText = loaded.Ratings.DatasetDiagnosticText
         };
     }

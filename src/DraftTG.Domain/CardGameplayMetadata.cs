@@ -9,7 +9,8 @@ public enum CardType
 
 public enum BasicLandType { Plains, Island, Swamp, Mountain, Forest }
 public enum ManaKind { White, Blue, Black, Red, Green, Colorless }
-public enum CardLayout { Normal, Adventure, Transform, ModalDoubleFaced, Split, Other }
+/// <summary>Scryfall layouts DraftTG distinguishes; Prepare is Scryfall's `prepare` (front creature plus a prepared spell face).</summary>
+public enum CardLayout { Normal, Adventure, Transform, ModalDoubleFaced, Split, Other, Prepare }
 
 /// <summary>Central type interpretation. Missing types stay unknown; types and subtypes are distinct.</summary>
 public readonly record struct CardTypeSet(CardType Types, bool IsKnown, bool IsBasic, BasicLandType? BasicLandType)

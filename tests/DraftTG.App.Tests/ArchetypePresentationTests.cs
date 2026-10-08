@@ -42,9 +42,9 @@ public sealed partial class MainWindowViewModelTests
         var final = new LimitedStatisticsUpdate(state.SnapshotResult.Snapshot, false, ArchetypeUiStatistics(data), archetypeStatistics: pair,
             archetypeDataStatus: new(false, LimitedStatisticsSource.Cache)); session.ApplyStatisticsUpdate(final);
         Assert.Contains("BG — Food Midrange", session.ArchetypeStatusText); Assert.Contains("Confidence: 1.00", session.ArchetypeStatusText);
-        Assert.Contains("Context Pick\nAlpha", session.FinalRecommendationStatusText); Assert.Contains("Lane rank: #2 · Final rank: #1", session.FinalRecommendationStatusText);
-        Assert.Contains("Lane observations:", session.FinalRecommendationStatusText); Assert.Contains("Pool colors:", session.FinalRecommendationStatusText);
-        Assert.Contains("Pair GIH: 62.0%", session.FinalRecommendationStatusText); Assert.Contains("pair baseline", session.ContextualRecommendationDiagnosticsText);
+        Assert.Contains("Context Pick\nAlpha", session.FinalRecommendationStatusText); Assert.Contains("Lane rank: #2 · Final rank: #1", session.ContextualRecommendationDiagnosticsText);
+        Assert.Contains("Lane observations:", session.ContextualRecommendationDiagnosticsText); Assert.Contains("Pool colors:", session.ContextualRecommendationDiagnosticsText);
+        Assert.Contains("Pair GIH: 62.0%", session.ContextualRecommendationDiagnosticsText); Assert.Contains("pair baseline", session.ContextualRecommendationDiagnosticsText);
         Assert.Equal(["#1", "#2"], badges.Select(b => b.Rank)); Assert.Equal([true, false], badges.Select(b => b.IsContextPick));
         Assert.Equal("#FFE2BE64", badges[0].BorderColor); Assert.Equal(raw, badges.Select(b => (b.WinRate, b.Secondary)));
         Assert.Equal(geometry, badges.Select(b => (b.X, b.Y, b.Width))); Assert.True(overlay.HasConfirmedVisualPlacement);

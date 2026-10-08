@@ -145,7 +145,7 @@ internal static class ScryfallCardNormalizer
         {
             null or "normal" => CardLayout.Normal, "adventure" => CardLayout.Adventure,
             "transform" => CardLayout.Transform, "modal_dfc" => CardLayout.ModalDoubleFaced,
-            "split" => CardLayout.Split, _ => CardLayout.Other
+            "split" => CardLayout.Split, "prepare" => CardLayout.Prepare, _ => CardLayout.Other
         };
         var manaValue = NormalizeManaValue(record.ManaValue);
         var faces = (record.CardFaces ?? []).Select((f, i) => new CardFaceMetadata(

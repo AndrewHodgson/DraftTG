@@ -23,16 +23,22 @@
                            VerticalAlignment="Center" />
               </Border>
             </Canvas>
-          <Border IsVisible="{Binding IsPlaced}" Width="{Binding Width}" Height="42" Background="#E6171B22" CornerRadius="5"
-                  BorderBrush="{Binding BorderColor}" BorderThickness="1" Padding="3,2">
-            <StackPanel Spacing="0">
-              <StackPanel Orientation="Horizontal" Spacing="3" HorizontalAlignment="Center">
-                <TextBlock Text="{Binding Presentation.DisplayedContextRank}" Foreground="{Binding RankColor}" FontSize="10" FontWeight="SemiBold" VerticalAlignment="Center" />
-                <TextBlock Text="{Binding Presentation.DisplayedGIH}" Foreground="#FFF8FAFD" FontSize="13" FontWeight="SemiBold" />
-              </StackPanel>
-              <TextBlock Text="{Binding Presentation.DisplayedALSA}" Foreground="#FFB9C6D8" FontSize="10" HorizontalAlignment="Center" />
-            </StackPanel>
-          </Border>
+            <Border IsVisible="{Binding IsPlaced}" Width="{Binding Width}" Height="42" Background="#E6171B22" CornerRadius="5"
+                    BorderBrush="{Binding BorderColor}" BorderThickness="1" Padding="0">
+              <Grid>
+                <vm:MysticRatingBackground PickScore="{Binding Presentation.PickScore.Score0To50}" OccurrenceIndex="{Binding Index}" />
+                <StackPanel Spacing="0" Margin="3,1">
+                  <StackPanel Orientation="Horizontal" Spacing="3" HorizontalAlignment="Center">
+                    <TextBlock Text="{Binding Presentation.DisplayedPickScore}" Foreground="{Binding RankColor}" FontSize="15" LineHeight="16" FontWeight="SemiBold" />
+                    <!-- Card-level quality is estimated (no direct 17Lands GIH); lane/archetype/deck fit are real. Secondary, neutral, visual only. -->
+                    <TextBlock Text="EST" IsVisible="{Binding IsPickScoreEstimate}" Foreground="#FFB9C6D8" FontSize="9" FontWeight="SemiBold"
+                               VerticalAlignment="Center" />
+                  </StackPanel>
+                  <TextBlock Text="{Binding Presentation.DisplayedBadgeGIH}" Foreground="#FFF8FAFD" FontSize="10" LineHeight="11" HorizontalAlignment="Center" />
+                  <TextBlock Text="{Binding Presentation.DisplayedALSA}" Foreground="#FFB9C6D8" FontSize="9" LineHeight="10" HorizontalAlignment="Center" />
+                </StackPanel>
+              </Grid>
+            </Border>
           </Grid>
         </DataTemplate>
       </ItemsControl.ItemTemplate>

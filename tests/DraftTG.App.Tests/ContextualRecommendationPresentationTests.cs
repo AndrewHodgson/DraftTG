@@ -63,8 +63,9 @@ public sealed partial class MainWindowViewModelTests
         Assert.Equal(top, update.ContextualRecommendation!.TopRecommendedPackIndex);
         Assert.Contains($"Commitment progress: {progress}", session.ContextualRecommendationStatusText);
         Assert.Equal(1, update.Recommendation!.TopRecommendedPackIndex);
-        Assert.True(hud.Badges[top].IsContextPick);
-        Assert.Equal(top == 1 ? string.Empty : "Stats Pick: Beta", session.StatisticalPickStatusText);
+        var scoreTop = update.PickScores!.TopRecommendedPackIndex!.Value;
+        Assert.True(hud.Badges[scoreTop].IsContextPick);
+        Assert.Equal(scoreTop == 1 ? string.Empty : "Stats Pick: Beta", session.StatisticalPickStatusText);
     }
 
     [Fact]

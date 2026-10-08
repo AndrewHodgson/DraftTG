@@ -63,7 +63,7 @@ public sealed class SuggestedDeckBuilder(BaselineDeckBuilder? baselineBuilder = 
         .ThenBy(c => c.Comparison.CompositionRelaxations).ThenByDescending(c => c.Comparison.CombinedColorEvidence)
         .ThenBy(c => c.Result.Deck!.Plan.Pair.Colors.Colors[0]).ThenBy(c => c.Result.Deck!.Plan.Pair.Colors.Colors[1]);
 
-    private static SuggestedDeckComparison Compare(BaselineDeck deck, DeckPairEvidence pair)
+    internal static SuggestedDeckComparison Compare(BaselineDeck deck, DeckPairEvidence pair)
     {
         var strengths = deck.Decisions.ToDictionary(d => d.CardIdentifier, d => d.Strength);
         double total = 0; var measured = 0; var neutral = 0; var unscored = 0;

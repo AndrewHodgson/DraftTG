@@ -8,6 +8,9 @@ public sealed record LimitedStatisticsMappingResult(LimitedCardStatisticsCatalog
 {
     public IReadOnlyDictionary<CardIdentifier, string> ResolvedNames { get; init; }
         = System.Collections.Frozen.FrozenDictionary<CardIdentifier, string>.Empty;
+    /// <summary>Statistical-identity outcome for every participant, including unresolved ones.</summary>
+    public IReadOnlyDictionary<CardIdentifier, StatisticalIdentityResolution> Resolutions { get; init; }
+        = System.Collections.Frozen.FrozenDictionary<CardIdentifier, StatisticalIdentityResolution>.Empty;
 }
 
 public static class LimitedStatisticsMapper
@@ -19,11 +22,15 @@ public static class LimitedStatisticsMapper
         CardCatalog catalog, LimitedStatisticsContext context)
     {
         var mapped = new List<LimitedCardStatistics>();
-        foreach (var group in rows.GroupBy(row => row.Name, StringComparer.Ordinal))
+        var groups = rows.GroupBy(row => row.Name, StringComparer.Ordinal).ToArray();
+        // Only the catalog-side name -> printing direction is needed here, so no row lookup is supplied.
+        var resolver = SeventeenLandsStatisticalIdentity.For(new Dictionary<string, SeventeenLandsRating?>(), catalog);
+        foreach (var group in groups)
         {
             var evidence = group.Distinct().ToArray();
             if (evidence.Length != 1) continue;
-            var representative = catalog.FindByExactName(group.Key)
+            // Front-face-named multiface rows belong to the environment too (same rule as participants).
+            var representative = resolver.CardsFor(group.Key)
                 .OrderByDescending(card => string.Equals(card.SetCode.Value, context.Expansion,
                     StringComparison.OrdinalIgnoreCase))
                 .ThenBy(card => card.Identifier.Value, StringComparer.Ordinal).FirstOrDefault();
@@ -43,23 +50,28 @@ public static class LimitedStatisticsMapper
                 var distinct = group.Distinct().ToArray();
                 return distinct.Length == 1 ? distinct[0] : null;
             }, StringComparer.Ordinal);
-        if (snapshot is not null) return MapParticipants(byName, catalog, snapshot);
-        return MapStandalone(byName, catalog, context);
+        var resolver = SeventeenLandsStatisticalIdentity.For(byName, catalog);
+        if (snapshot is not null) return MapParticipants(resolver, catalog, snapshot);
+        return MapStandalone(byName, resolver, context);
     }
 
     private static LimitedStatisticsMappingResult MapParticipants(
-        IReadOnlyDictionary<string, SeventeenLandsRating?> byName, CardCatalog catalog, DraftSnapshot snapshot)
+        SeventeenLandsStatisticalIdentity.Resolver resolver, CardCatalog catalog, DraftSnapshot snapshot)
     {
         var mapped = new List<LimitedCardStatistics>();
         var current = snapshot.CurrentPack.AvailableCardIdentifiers.ToHashSet();
         var names = new Dictionary<CardIdentifier, string>();
+        var resolutions = new Dictionary<CardIdentifier, StatisticalIdentityResolution>();
         var unavailable = 0;
         foreach (var identifier in snapshot.CurrentPack.AvailableCardIdentifiers
-            .Concat(snapshot.History.SelectedCardIdentifiers).Distinct())
+            .Concat(snapshot.DraftedPool.CardIdentifiers).Distinct())
         {
-            // Identity was resolved by Arena/Scryfall already. Never re-resolve it by name.
+            // Identity was resolved by Arena/Scryfall already. Never re-resolve printing identity by name;
+            // only the statistical identity (which provider row describes this exact card) is resolved here.
             var card = catalog.Find(identifier);
-            if (card is not null && byName.TryGetValue(card.Name, out var row) && row is not null)
+            var (resolution, row) = card is null ? (new(StatisticalIdentityKind.NoProviderRow, null), null) : resolver.Resolve(card);
+            resolutions.Add(identifier, resolution);
+            if (row is not null)
             {
                 mapped.Add(Attach(identifier, row));
                 names.Add(identifier, row.Name);
@@ -72,20 +84,24 @@ public static class LimitedStatisticsMapper
             0 => null,
             1 => "1 current-pack card has no statistics.",
             _ => $"{unavailable} current-pack cards have no statistics."
-        }) { ResolvedNames = System.Collections.Frozen.FrozenDictionary.ToFrozenDictionary(names) };
+        })
+        {
+            ResolvedNames = System.Collections.Frozen.FrozenDictionary.ToFrozenDictionary(names),
+            Resolutions = System.Collections.Frozen.FrozenDictionary.ToFrozenDictionary(resolutions)
+        };
     }
 
     // Standalone catalogs have no known participant identities. Keep their conservative
     // printing analysis separate from the live path and never emit a name-list audit.
-    private static LimitedStatisticsMappingResult MapStandalone(
-        IReadOnlyDictionary<string, SeventeenLandsRating?> byName, CardCatalog catalog, LimitedStatisticsContext context)
+    private static LimitedStatisticsMappingResult MapStandalone(IReadOnlyDictionary<string, SeventeenLandsRating?> byName,
+        SeventeenLandsStatisticalIdentity.Resolver resolver, LimitedStatisticsContext context)
     {
         var mapped = new List<LimitedCardStatistics>();
         var ambiguous = 0;
         foreach (var (name, row) in byName)
         {
             if (row is null) { ambiguous++; continue; }
-            var matches = catalog.FindByExactName(name);
+            var matches = resolver.CardsFor(name);
             var inSet = matches.Where(card => string.Equals(card.SetCode.Value, context.Expansion,
                 StringComparison.OrdinalIgnoreCase)).ToArray();
             if (inSet.Length > 0) matches = inSet;

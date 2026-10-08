@@ -19,9 +19,9 @@ public sealed partial class MainWindowViewModelTests
         var corpus = new SuccessfulDeckCorpus(key, [sample], time, new("synthetic", "recent", "WOE QuickDraft BG", 100, 20, 1, "final"));
         var final = new LimitedStatisticsUpdate(state.SnapshotResult.Snapshot, false, ArchetypeUiStatistics(data), trophyCorpus: corpus,
             trophyDataStatus: new(false, SuccessfulDeckSource.Cache)); session.ApplyStatisticsUpdate(final);
-        Assert.Contains("Archetype rank:", session.FinalRecommendationStatusText); Assert.Contains("1 recent BG QuickDraft decks", session.FinalRecommendationStatusText);
-        Assert.Contains("Card seen in pool: 1; main-decked: 1", session.FinalRecommendationStatusText);
-        Assert.Contains("100.0%", session.FinalRecommendationStatusText); Assert.Contains("Adjustment disabled: incompatible baseline semantics", session.FinalRecommendationStatusText);
+        Assert.Contains("Archetype rank:", session.ContextualRecommendationDiagnosticsText); Assert.Contains("1 recent BG QuickDraft decks", session.ContextualRecommendationDiagnosticsText);
+        Assert.Contains("Card seen in pool: 1; main-decked: 1", session.ContextualRecommendationDiagnosticsText);
+        Assert.Contains("100.0%", session.ContextualRecommendationDiagnosticsText); Assert.Contains("Adjustment disabled: incompatible baseline semantics", session.ContextualRecommendationDiagnosticsText);
         Assert.Contains("copy utilization", session.ContextualRecommendationDiagnosticsText);
         Assert.Equal(original, badges.Select(b => (b.Rank, b.WinRate, b.Secondary, b.X, b.Y, b.Width)));
         Assert.True(overlay.HasConfirmedVisualPlacement); Assert.All(final.Occurrences.Values, c => Assert.Equal(0, c.Phase9DAdjustment));
@@ -33,13 +33,13 @@ public sealed partial class MainWindowViewModelTests
         var data = ArchetypeUiData(); var session = AssociationSession(data.Catalog); var state = ArchetypeUiPack(data); session.ApplySessionUpdate(state);
         var update = new LimitedStatisticsUpdate(state.SnapshotResult.Snapshot, false, ArchetypeUiStatistics(data),
             trophyDataStatus: new(false, SuccessfulDeckSource.Unavailable, "Exact-format source unavailable."));
-        session.ApplyStatisticsUpdate(update); Assert.Contains("Trophy evidence unavailable", session.FinalRecommendationStatusText);
-        Assert.Contains("Exact-format source unavailable", session.FinalRecommendationStatusText);
+        session.ApplyStatisticsUpdate(update); Assert.Contains("Trophy evidence unavailable", session.ContextualRecommendationDiagnosticsText);
+        Assert.Contains("Exact-format source unavailable", session.ContextualRecommendationDiagnosticsText);
         var first = update.Occurrences.Values.First(); var other = update.Occurrences.Values.Last();
         var invalid = new CurrentPackCardPresentation(first.Key, first.Card, first.RawStatistics, first.ResolvedStatisticsName,
             first.Statistical, first.Pool, first.Lane, archetype: first.Archetype, trophy: other.Trophy);
         Assert.False(invalid.IsIdentityConsistent); Assert.Null(invalid.Trophy); Assert.Null(invalid.RawGIH);
         session.ApplySessionUpdate(AssociationPack(data, [102, 103], 2)); session.ApplyStatisticsUpdate(update);
-        Assert.DoesNotContain("Exact-format source unavailable", session.FinalRecommendationStatusText);
+        Assert.DoesNotContain("Exact-format source unavailable", session.ContextualRecommendationDiagnosticsText);
     }
 }

@@ -248,9 +248,9 @@ The isolated reference matches **4/4 distinct saved packs / 44 positions**, zero
 
 Validation: **20 added tests**, **1,016 solution tests passed**, **10 separate static sort-reference tests passed**, **zero build warnings/errors**. Arena maintenance leaves actual label readability, pick-hide latency, event delivery, cross-monitor behavior and HWND restart/shutdown for physical validation. Deterministic placement stays shadow-only; scoring, identity fallback, capture quality and deck behavior are unchanged. Stop after this pass; do not begin Phase 9E.2B or deck-builder localization. See [OFFLINE_OVERLAY_RELIABILITY_REPORT.md](OFFLINE_OVERLAY_RELIABILITY_REPORT.md).
 
-## Later — Recommendation Explanations
+## Recommendation Explanations — V1 implemented
 
-Explain the most important factors behind each recommendation in concise user-facing language. Keep explanations traceable to engine inputs and rules.
+Contextual Pick Score V1 now retains component/weight/confidence/deck-impact details and understandable reasons for each candidate in expanded diagnostics. The status summary shows the winner's score, separate pack rank, model version and brief reasons. Broader role evidence and cross-pick score-delta presentation remain future refinements.
 
 Later deck work includes same-pair strategy variants, splashes, card roles, richer synergy, mana-source optimization and successful-deck composition analysis after their input semantics are established.
 
@@ -259,3 +259,134 @@ Later deck work includes same-pair strategy variants, splashes, card roles, rich
 Refine the cross-platform Avalonia overlay for production recommendations. Address opt-in native click-through behavior, permissions, focus, and positioning carefully.
 
 Deck construction follows the Phase 10A–10D sequence above. Complete Phase 10D's current-editor and visible-tile audit before production highlighting; do not start Phase 10E or additional deck-generation heuristics.
+
+## Contextual Pick Score V1 — implemented and validated offline
+
+The primary badge number is now a contextual 0–50 score answering how useful a card is to the current draft. Phase 8/9 ordinal ranks are preserved in diagnostics. Version `contextual-pick-score-v1` reuses Phase 8 adjusted GIH/baseline, Phase 9B format-scaled openness, Phase 9C confidence-shrunk pair lift and Phase 9A commitment, plus immutable Phase 10 projected-before/projected-after deck impacts. Phase 8/9/10 algorithms remain intact.
+
+Normalizations: Q `.5+(adjusted−baseline)/.16`; L `.5+.5*existingLaneAdjustment/humanMaximum`; A `.5+.5*existingNormalizedAffinity*activeConfidence`; clamp each to [0,1]. D measures projected membership, common-quality replacement and the strongest existing structural deficit reduction, with explicit missing-projection fallback. The nonland normalization is `.65+.25*clamp(qualityDelta/.01)+.10*structure` when selected, otherwise zero. Configured weights smoothly interpolate at completed picks 4/21/35 from `.70/.20/.10/0` through `.50/.20/.15/.15` to `.30/.10/.20/.40`; final calibration is `round(50*clamp(.5+1.4*(weighted−.5)))`. Missing GIH is never fabricated: estimates require a genuine environment prior and are labeled; no baseline means no score.
+
+Structured roles and exact-set curated profile support are present. Semantic removal/synergy quotas, learned successful 6+ win/trophy structure and supported splashes are deferred. Trophy-frequency scoring stays zero. The completed-deck builder has not been redesigned; incomplete projections are explicitly labeled.
+
+Badges retain names, GIH, ALSA, bounds and stationary borders. Animation follows six quality bands: graphite 0–9, steel 10–19, silver 20–29, gold 30–39, rich gold 40–44, premium bronze/amber 45–50; printed rarity has no effect. The 15-badge preview includes all bands and long names, preserving shared-clock/static behavior.
+
+Validation: **30 new tests**, **1,057 solution tests passed**, **zero build warnings/errors**. Final full 14-card cached-data workloads measured roughly 73 ms median / 102 ms maximum for a saved FRA pool, and 206 ms median / 237 ms maximum for a varied all-pairs stress pack. Duplicate/eligible/equivalent projection reuse is bounded and tested against uncached impacts. Offline replay makes zero network requests. WOE exact-format stats are unavailable locally; FRA completed-pool comparisons are labeled what-if because chronology is absent. See [CONTEXTUAL_PICK_SCORE_REPORT.md](CONTEXTUAL_PICK_SCORE_REPORT.md) for formulas, exact metrics, explanations, ten representative saved-state examples, performance and limitations.
+
+Stop at Pick Score V1. Do not start Phase 9E.2B, localization/WGC/artwork/sort/Player.log changes, placement promotion or unrelated deck work.
+
+## Pick Score stabilization — phase 1 complete (graded deck fit)
+
+Implemented model `contextual-pick-score-v1.1`: projected deck membership is replaced by a continuous cut-line margin, an open-slot value aware of remaining picks, and a softmax blend over viable projected pairs. The audit's 57.00% → 57.05% jump (12 → 31) is now 21 → 22; 0.1 pp steps change at most one point. 14 regression tests added; **1,071 solution tests pass**, zero warnings. See [CONTEXTUAL_PICK_SCORE_PHASE1_REPORT.md](CONTEXTUAL_PICK_SCORE_PHASE1_REPORT.md).
+
+Remaining stabilization items (not started; await instruction): structural-reason corrections (unscaled floors, nonland mana term), count-driven incomplete-shell pair viability, and land/fixing deck fit.
+
+## Pick Score stabilization — phase 2 complete (saturation and ranking precision)
+
+Implemented model `contextual-pick-score-v1.2`. The hard clamps on Q (±8 pp) and on the final value are replaced by slope-continuous soft limits, so the unrounded contextual value is strictly ordered and rankings no longer fall through to sample size. The audit's 72% mythic vs 65% uncommon P1P1 case is now 49 vs 48 with the mythic ranked first and highlighted. Twelve engine tests and one Application test were added (8 of them fail on v1.1); **1,084 solution tests pass**, zero warnings. A replay of 1,000 real-rating FRA packs shows no top-pick changes and identical tier distributions; only formerly pinned 50s now read 45–49. See [CONTEXTUAL_PICK_SCORE_PHASE2_REPORT.md](CONTEXTUAL_PICK_SCORE_PHASE2_REPORT.md).
+
+## Pick Score stabilization — phase 3 complete (multiface stats and EST marker)
+
+Implemented model `contextual-pick-score-v1.3`:
+
+- Multiface cards now receive the real 17Lands row that the provider publishes under the front face, through a fail-closed statistical-identity resolver (exact name first, then a structural front-face alias).
+- Estimated card-level quality is visible as a neutral `EST` beside the badge score.
+
+FRA results:
+
+- 21/21 multiface cards attached (previously 0/21);
+- estimated scores 41 → 20;
+- 0 ambiguous resolutions;
+- no single-faced row changed.
+
+**1,114 solution tests pass**, zero warnings. See [CONTEXTUAL_PICK_SCORE_PHASE3_REPORT.md](CONTEXTUAL_PICK_SCORE_PHASE3_REPORT.md).
+
+## Pick Score stabilization — phase 4 complete (deck need and card roles)
+
+Implemented model `contextual-pick-score-v1.4`. Deck need now measures marginal deck improvement:
+
+- a graded maindeck value (membership plus replacement upgrade, with a sideboard floor);
+- one confidence-shrunk structural need (creatures, early plays, removal, top-end redundancy);
+- measured-shortfall fixing.
+
+Precision-first removal roles cover FRA with 18 hard and 12 conditional cards and no overrides. Successful-deck structure data remains unavailable, so generic targets are used. **1,157 solution tests pass**, zero warnings. See [CONTEXTUAL_PICK_SCORE_PHASE4_REPORT.md](CONTEXTUAL_PICK_SCORE_PHASE4_REPORT.md).
+
+**Open for a later calibration phase:**
+- late-score upward shift (review tiers or final calibration), addressed in phase 5;
+- removal target and structure weight calibration once real deck data exists;
+- splash/nonland fixing and ramp;
+- count-driven incomplete-shell pair viability.
+
+## Pick Score stabilization — phase 5 complete (calibration and tier validation)
+
+Measured v1.4 on 9 draft stages × 1,000 real-rating FRA packs, plus semantic anchors, matched pairs and real-pool scenarios.
+
+- **Calibration:** the final calibration `SoftLimit(.5 + 1.4(w − .5), .45)` meets anchors A–H and J and was kept unchanged. The model stays `contextual-pick-score-v1.4`, and scores and rankings are bit-identical.
+- **Tiers:** badge tiers are realigned to the score semantics: 0–14 / 15–24 / 25–34 / 35–39 / 40–44 / 45–50, tier scheme `pick-score-tiers-v2`.
+- **Centralization:** calibration and tier thresholds are centralized, and the badge consumes the canonical tier.
+- **2-drop case:** the 2-drop judgment case is a 3 pp quality gap that need correctly does not overcome. Break-even is about 1.5 pp.
+
+**1,188 solution tests pass**, zero warnings; performance is unchanged. See [CONTEXTUAL_PICK_SCORE_PHASE5_REPORT.md](CONTEXTUAL_PICK_SCORE_PHASE5_REPORT.md).
+
+**Phase 6 candidates (addressed in phase 6 where marked):**
+- late castability gating of Q, for the off-colour bomb that scores about 24 against a 10–20 target (addressed: playability-gated quality);
+- open-slot and upgrade saturation in D, which drives late "strong" scores (addressed: expected-future cut line);
+- the deck builder's early-play floor relaxation;
+- an optional score-confidence indicator.
+
+## Pick Score stabilization — phase 6 complete (playability-gated quality and continuous deck fit)
+
+Implemented model `contextual-pick-score-v1.5`. Calibration and tiers (`pick-score-tiers-v2`) are unchanged.
+
+- **Playability-gated quality.** Intrinsic Q is kept. Its upside is scaled by a quality relevance R that ramps smoothly from 10 to 35 picks and depends on playability in realistic projected builds, including close alternate pairs and fixed single-pip splashes.
+  - Anchor I (excellent off-colour card at P3P5): 24 → 16.
+  - P1P3: unchanged at 47.
+- **Expected-future cut line.** Open slots and weak maindeck cards are measured against the expected marginal card of the final deck, an order statistic over contested slots and later supply derived from FRA availability.
+  - Open-slot mediocre Strong cards at P3P1: 196 → 27.
+  - The 22 → 23 spell transition step: 7–13 points → 0–4.
+  - Filler value rises monotonically as picks run out.
+- **P1 stability.** P1P1 and P1P5 are identical to v1.4.
+- **Validation.** **1,209 solution tests pass**, zero warnings; performance is unchanged (about 75 ms median, 12 optimizer calls). See [CONTEXTUAL_PICK_SCORE_PHASE6_REPORT.md](CONTEXTUAL_PICK_SCORE_PHASE6_REPORT.md).
+
+**Open (not started):**
+- splash support in the deck builder itself (D still floors splash cards);
+- per-set supply calibration;
+- late Strong scores for decks with more weak cards than later supply can replace;
+- an optional score-confidence indicator.
+
+## Pick Score — phase 7 complete: Contextual Pick Score V1 FROZEN (`contextual-pick-score-v1.6`)
+
+Validation covered:
+- anchors A–P;
+- whole-draft trajectories;
+- 240 deterministic self-drafts (10,080 pack states, 0 network requests);
+- a pick-to-pick delta audit;
+- outlier search;
+- adversarial cases;
+- EST, rarity and determinism checks;
+- a memory check.
+
+**Defect fixed (v1.6):** a pair-viability cliff, where a near-equal alternative pair switched on and off with a single card.
+- Six-point-plus swings: 1.4% → 0.8%.
+- Largest swing: 27 → 19 points (a dual land; non-land probes max 14).
+- Unexplained large deltas: 0.
+
+**Other changes**
+- Supply constants are profiled: FRA is calibrated, other sets use a labelled provisional default.
+- Calibration and tiers are unchanged.
+- Twelve golden fixtures.
+
+**1,229 solution tests pass**, zero warnings. The FRA pool median is about 93 ms (21 optimizer calls).
+
+**Spec:** [CONTEXTUAL_PICK_SCORE_V1_SPEC.md](CONTEXTUAL_PICK_SCORE_V1_SPEC.md). **Report:** [CONTEXTUAL_PICK_SCORE_PHASE7_REPORT.md](CONTEXTUAL_PICK_SCORE_PHASE7_REPORT.md).
+
+**Next:** return to live Arena validation and localization.
+
+**Post-V1 (not started; any score change needs a version bump and a golden/replay comparison):**
+- per-set supply calibration;
+- splash deck construction;
+- continuous fixing-land value;
+- successful-deck structural profiles;
+- archetype-specific role targets;
+- smoothing archetype activation;
+- additional set and format validation.
+

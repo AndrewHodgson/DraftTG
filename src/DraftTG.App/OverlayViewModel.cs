@@ -45,6 +45,9 @@ public sealed class CardBadgeViewModel : PresentationModel
     private LimitedCardStatisticsPresentation Statistics => Presentation?.Statistics ?? _legacyCard!.Statistics;
     private CardRecommendation? Recommendation => Presentation is { } p ? p.Statistical : _legacyCard!.Recommendation;
     public string WinRate => Presentation?.DisplayedGIH ?? Statistics.GameInHand + (Statistics.IsLowSample ? "*" : "");
+    public string PickScore => Presentation?.DisplayedPickScore ?? "—";
+    /// <summary>Card-level quality is estimated (no direct 17Lands GIH); the score and its quality tier are unchanged.</summary>
+    public bool IsPickScoreEstimate => Presentation is { IsLoading: false } p && p.IsPickScoreEstimate && p.PickScore?.Score0To50 is not null;
     public string Rank => Presentation?.DisplayedContextRank
         ?? ((_legacyCard!.LaneRecommendation?.ContextualRank ?? _legacyCard.ContextualRecommendation?.ContextualRank
             ?? Recommendation?.StatisticalRank) is { } rank ? $"#{rank}" : string.Empty);
@@ -78,7 +81,7 @@ public sealed class CardBadgeViewModel : PresentationModel
     private void NotifyValues()
     {
         Notify(nameof(WinRate)); Notify(nameof(Secondary)); Notify(nameof(Detail));
-        Notify(nameof(Rank)); Notify(nameof(IsStatisticalPick)); Notify(nameof(BorderColor)); Notify(nameof(RankColor));
+        Notify(nameof(Rank)); Notify(nameof(PickScore)); Notify(nameof(IsPickScoreEstimate)); Notify(nameof(IsStatisticalPick)); Notify(nameof(BorderColor)); Notify(nameof(RankColor));
         Notify(nameof(IsContextPick));
         Notify(nameof(DisplayName)); Notify(nameof(HasDisplayName));
     }

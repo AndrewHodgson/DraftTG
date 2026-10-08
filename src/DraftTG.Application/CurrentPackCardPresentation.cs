@@ -14,7 +14,7 @@ public sealed class CurrentPackCardPresentation
         LimitedCardStatistics? rawStatistics = null, string? resolvedStatisticsName = null,
         CardRecommendation? statistical = null, ContextualCardRecommendation? pool = null,
         LaneCardRecommendation? lane = null, bool isLoading = false, ArchetypeCardRecommendation? archetype = null,
-        TrophyCardRecommendation? trophy = null)
+        TrophyCardRecommendation? trophy = null, ContextualPickScore? pickScore = null)
     {
         Key = key;
         Card = card;
@@ -26,8 +26,10 @@ public sealed class CurrentPackCardPresentation
             && (lane is null || new CardOccurrenceKey(lane.PackIndex, lane.CardIdentifier) == key)
             && (archetype is null || new CardOccurrenceKey(archetype.PackIndex, archetype.CardIdentifier) == key)
             && (trophy is null || new CardOccurrenceKey(trophy.PackIndex, trophy.CardIdentifier) == key)
+            && (pickScore is null || new CardOccurrenceKey(pickScore.PackIndex, pickScore.CardIdentifier) == key)
+            // The provider row must structurally denote this exact card: its name, or its multiface front face.
             && (card is null || resolvedStatisticsName is null
-                || string.Equals(card.Name, resolvedStatisticsName, StringComparison.Ordinal))
+                || SeventeenLandsStatisticalIdentity.Denotes(card, resolvedStatisticsName))
             && (pool is null || pool.StatisticalRecommendation == statistical)
             && (lane is null || lane.PoolRecommendation == pool)
             && (archetype is null || archetype.LaneRecommendation == lane)
@@ -41,6 +43,7 @@ public sealed class CurrentPackCardPresentation
             Lane = lane;
             Archetype = archetype;
             Trophy = trophy;
+            PickScore = pickScore;
         }
         IsLoading = isLoading;
         Statistics = IsIdentityConsistent && isLoading ? LimitedCardStatisticsPresentation.Loading
@@ -54,6 +57,8 @@ public sealed class CurrentPackCardPresentation
     public string CardName => Card?.Identifier == CardIdentifier ? Card.Name : "Unknown card";
     public string StatisticsLookupKey => CardName;
     public string? ResolvedStatisticsName { get; }
+    /// <summary>Diagnostic only: how the 17Lands row was (or was not) joined to this printing.</summary>
+    public StatisticalIdentityResolution? StatisticsResolution { get; init; }
     public bool IsIdentityConsistent { get; }
     public bool IsLoading { get; }
     public LimitedCardStatistics? RawStatistics { get; }
@@ -63,6 +68,9 @@ public sealed class CurrentPackCardPresentation
     public LaneCardRecommendation? Lane { get; }
     public ArchetypeCardRecommendation? Archetype { get; }
     public TrophyCardRecommendation? Trophy { get; }
+    public ContextualPickScore? PickScore { get; }
+    public string DisplayedPickScore => IsLoading ? "…" : PickScore?.Score0To50?.ToString(CultureInfo.InvariantCulture) ?? "—";
+    public bool IsPickScoreEstimate => PickScore?.Availability == PickScoreAvailability.EstimatedMissingStatistics;
     public double? RawGIH => RawStatistics?.GameInHandWinRate;
     public int? GIHSample => RawStatistics?.GameInHandGameCount;
     public double? ALSA => RawStatistics?.AverageLastSeenAt;
@@ -80,23 +88,27 @@ public sealed class CurrentPackCardPresentation
     public double? Phase9DAdjustment => Trophy?.Adjustment;
     public double? FinalContextualValue => Trophy?.FinalValue ?? Phase9CValue ?? Phase9BValue;
     public int? ContextRank => Trophy?.FinalRank ?? ArchetypeRank ?? LaneRank ?? PoolRank ?? StatsRank;
-    public bool IsContextPick => Trophy?.IsContextPick ?? Archetype?.IsTopContextualCandidate ?? Lane?.IsTopContextualCandidate
+    public bool IsContextPick => PickScore?.IsContextPick ?? Trophy?.IsContextPick ?? Archetype?.IsTopContextualCandidate ?? Lane?.IsTopContextualCandidate
         ?? Pool?.IsTopContextualCandidate ?? Statistical?.IsTopStatisticalCandidate ?? false;
     public string DisplayedGIH => Statistics.GameInHand + (Statistics.IsLowSample ? "*" : "");
+    public string DisplayedBadgeGIH => "GIH " + DisplayedGIH;
     public string DisplayedALSA => "ALSA " + Statistics.AverageLastSeen;
     public string DisplayedContextRank => ContextRank is { } rank ? $"#{rank}" : string.Empty;
 
     public CurrentPackCardPresentation WithCard(Card? card) => IsIdentityConsistent
-        ? new(Key, card, RawStatistics, ResolvedStatisticsName, Statistical, Pool, Lane, IsLoading, Archetype, Trophy)
+        ? new(Key, card, RawStatistics, ResolvedStatisticsName, Statistical, Pool, Lane, IsLoading, Archetype, Trophy, PickScore)
+            { StatisticsResolution = StatisticsResolution }
         : this;
 
     public string DiagnosticText => string.Create(CultureInfo.InvariantCulture,
         $"Slot: {PackIndex}; CardIdentifier: {CardIdentifier.Value}; Card: {CardName}\n"
         + $"Stats lookup: {StatisticsLookupKey}; Stats resolved: {ResolvedStatisticsName ?? "unavailable"}; Identity: {(IsIdentityConsistent ? "consistent" : "REJECTED")}\n"
+        + $"17Lands identity: {StatisticsResolution?.Description ?? "not evaluated"}\n"
         + $"GIH: {RawGIH}; GIH n: {GIHSample}; ALSA: {ALSA}\n"
         + $"Phase 8: {Phase8AdjustedValue}; Stats rank: {StatsRank}\n"
         + $"Phase 9A adjustment: {Phase9AColorAdjustment}; Pool value: {Phase9AValue}; Pool rank: {PoolRank}\n"
         + $"Phase 9B adjustment: {Phase9BLaneAdjustment}; Lane value: {Phase9BValue}; Lane rank: {LaneRank}\n"
         + $"Phase 9C adjustment: {Phase9CAdjustment}; Archetype value: {Phase9CValue}; Archetype rank: {ArchetypeRank}\n"
-        + $"Phase 9D adjustment: {Phase9DAdjustment}; Final value: {FinalContextualValue}; Context rank: {ContextRank}");
+        + $"Phase 9D adjustment: {Phase9DAdjustment}; Final value: {FinalContextualValue}; Context rank: {ContextRank}")
+        + "\n" + PickScorePresentation.Diagnostics(PickScore, RawStatistics);
 }

@@ -24,6 +24,7 @@ public sealed class LimitedStatisticsCoordinator(LimitedStatisticsService servic
     private CancellationTokenSource? _pending;
     private LimitedStatisticsContext? _context;
     private DraftSnapshot? _snapshot;
+    private DraftPoolSnapshot? _draftPool;
     private DraftPackObservationHistory _observations = DraftPackObservationHistory.Empty;
     private string? _eventName;
     private ArenaDraftIdentifier? _draftId;
@@ -42,6 +43,7 @@ public sealed class LimitedStatisticsCoordinator(LimitedStatisticsService servic
             if (_disposed) return;
             _revision++;
             _snapshot = update.SnapshotResult.Snapshot;
+            _draftPool = update.SnapshotResult.DraftPool;
             var newSession = _draftId != update.ArenaState.DraftIdentifier || _eventName != update.ArenaState.EventName;
             if (newSession) _observations = DraftPackObservationHistory.Empty;
             _observations = _observations.Observe(_snapshot?.CurrentPack, service.CardCatalog,
@@ -123,9 +125,10 @@ public sealed class LimitedStatisticsCoordinator(LimitedStatisticsService servic
         var generation = _generation;
         var observations = _observations;
         var revision = _revision;
+        var draftPool = _draftPool;
         _workers.Add(Task.Run(() =>
         {
-            var initial = service.CreateUpdate(loaded, snapshot, observations);
+            var initial = service.CreateUpdate(loaded, snapshot, observations, calculatePickScores: false);
             LoadedArchetypeStatistics? pair = null;
             SuccessfulDeckLoadResult? trophy = null;
             var trophyStatus = TrophyDataStatus.Unavailable;
@@ -177,7 +180,7 @@ public sealed class LimitedStatisticsCoordinator(LimitedStatisticsService servic
                 }
             }
             // Mapping/scoring stays off the monitor thread and outside the coordinator gate.
-            var update = service.CreateUpdate(loaded, snapshot, initial.ObservationHistory, pair, status, trophy, trophyStatus);
+            var update = service.CreateUpdate(loaded, snapshot, initial.ObservationHistory, pair, status, trophy, trophyStatus, draftPool: draftPool);
             lock (_gate)
                 if (IsCurrent(generation, revision, snapshot))
                 {

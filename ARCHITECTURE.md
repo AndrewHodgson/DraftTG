@@ -4,7 +4,7 @@ DraftTG is a shared Windows and macOS desktop application written in C# 14, targ
 
 Supported deployment targets are Windows 10 22H2 or newer, Windows 11, and macOS 14 or newer.
 
-The phase sections below retain their original validation history. Phase 9B.7 was subsequently confirmed physically complete by the user; the current recommendation pipeline and Phase 9C validation status are described in the final section.
+The phase sections below retain their original validation history. Phase 9B.7 was subsequently confirmed physically complete by the user. The current primary recommendation is Contextual Pick Score V1, described in the final section and its dedicated report; Phase 8/9 outputs remain available as separate evidence and legacy ranks.
 
 ## Projects
 
@@ -1074,3 +1074,140 @@ Only the production `DraftTGRuntimeFactory` supplies the bridge. Tests and other
 | A differently named card | 0 |
 
 Those 513 cards always have direct IDs, so the fallback never runs for them. All 305 FRA primary GrpIds without a Scryfall ID resolve. The real 42-card FRA pool resolves 42/42 (33 distinct FRA printings), and Phase 10B/10C produces a Ready RG baseline, the only viable pair.
+
+## Contextual Pick Score V1 — current recommendation presentation
+
+`ContextualPickScoreEngine` composes existing Phase 8 adjusted GIH, Phase 9B scaled lane support, Phase 9C confidence-shrunk pair affinity, and new immutable Phase 10 before/after projections. `ContextualPickScore`/`CandidateDeckImpact` and configuration/roles live in RecommendationEngine and depend only on Domain. No provider DTO, UI color, HTTP, filesystem or operating-system operation enters the engine.
+
+The model version is `contextual-pick-score-v1.4` (V1 with graded deck fit, soft score limits, multiface statistical identity and phase 4 deck need). Normalizations are `Q=soft(.5+(adjustedGIH−environmentBaseline)/.16)`, `L=clamp(.5+.5*laneAdjustment/humanMaximum)`, and `A=clamp(.5+.5*normalizedPairAffinity*activeConfidence)`. Neutral absent L/A is .5; existing Quick Draft scaling is preserved. Q reuses the 500-game Phase 8 prior; GIH remains the only quality statistic. ALSA supplies existing lane evidence, not intrinsic strength; other available win rates are not averaged together.
+
+Q/L/A/D weights interpolate with smoothstep between completed-pick anchors 4, 21 and 35: `.70/.20/.10/0`, `.50/.20/.15/.15`, `.30/.10/.20/.40`. Progress uses the greater of known pool count and coordinate-implied stage over expected 42 picks, without reconstructing missing cards. Final value is `soft(.5+1.4*(weighted−.5))` (see stabilization phase 2); the integer is 50 times that value rounded away from zero. Pack rank is separate, uses unrounded values and stable tie-breaks, and never changes the absolute score.
+
+`CandidateDeckImpactEvaluator` reuses the unchanged deck optimizer across all viable existing two-color pairs. Full 23-spell projections take precedence; otherwise the maximum eligible shell gets proportionally scaled composition targets and an explicit incomplete flag. Common overall Phase 8 deck quality is reused from Phase 10C without pair-GIH double counting. Adding each candidate preserves counted copies and the actual immutable inventory. Impacts record membership, replacement, common quality and creature/early/top-end/mana deltas, pair/constraint changes and reasons. Nonland D is graded (stabilization phase 1, model `contextual-pick-score-v1.1`): in each viable after-pair, `D_p=logistic(margin/s)·(.65+.10·structure)+.25·clamp(commonQualityDelta/.01)`, where the margin is the candidate's selection value minus the projected cut line, i.e. its best feasible swap partner (bench card if included, weakest maindeck card if excluded) or the open-slot value when none exists. Pairs are blended by a softmax of projected average quality; a pair the candidate newly makes viable is an option that never dilutes existing fit. Off-pair cards still receive zero. See [CONTEXTUAL_PICK_SCORE_PHASE1_REPORT.md](CONTEXTUAL_PICK_SCORE_PHASE1_REPORT.md). Selected fixing uses measured source-shortfall reduction, with restrained value when unnecessary. Missing projections use an explicit Phase 9A color-fit fallback. The detailed land formula and projection rules are in the report.
+
+Per-pack caches reuse duplicates and unchanged eligible projections; equivalent pair projections can share work when there are no drafted lands and all colored mana demands are supported. There is no cross-draft cache or random scoring. A cached/uncached regression verifies identical impacts. Computation stays on the Application background worker outside its lock; the preliminary pair-discovery pass skips projection and existing generation/revision/snapshot guards reject late publication. The coordinator carries authoritative pool completeness; statistics mapping now includes recovered-only drafted inventory without inventing chronology.
+
+`LimitedCardRoleProfile` separates structured Creature/Land/Early Play/direct known mana production from optional exact-set curated semantic roles. Removal, synergy and successful-deck composition targets are foundation/future work. Current Phase 9D transport/source limitations and incompatible denominators remain explicit: trophy frequency adds zero and V1 uses existing conservative composition defaults. No splashes or completed-deck redesign were introduced.
+
+Each occurrence retains its score, availability, actual contribution values, confidence/data weight, component weights, roles, deck impact and reasons. Missing measured stats can use a neutral estimate only with a genuine environment baseline; raw GIH remains missing. Missing baseline yields an unavailable score. Per-candidate explanations and separate Phase 8/9 ranks remain in the existing expanded diagnostics.
+
+The 86×42 badge now presents dominant score, GIH and ALSA on three compact lines; the name remains above it. The existing best-card border is stationary. Animation uses only the downstream score bands: 0–9 graphite, 10–19 steel, 20–29 silver, 30–39 gold, 40–44 rich gold, 45–50 premium bronze/amber. No printed rarity participates. UI palette colors remain in App; cached smoke, five sparkles, rounded clipping, shared clock and static behavior are retained. The 15-badge offline preview covers all bands, long names and an unavailable score.
+
+Validation: 30 focused added tests; **1,057 solution tests passed**, zero warnings/errors. Saved FRA pool counterfactuals and real WOE missing-cache packs were evaluated offline without network requests. FRA's completed pool has no pick chronology, so its what-if comparisons are labeled explicitly. Final full 14-card benchmarks measured approximately 73 ms median for the saved pool and 206 ms median for an all-pairs stress fixture; cached-data loading is excluded. These are observed workloads, not universal latency guarantees. See [CONTEXTUAL_PICK_SCORE_REPORT.md](CONTEXTUAL_PICK_SCORE_REPORT.md) for exact formulas, DTO audit, ten saved-state examples, tier colors, benchmark distributions, commands and limits. Phase 9E.2B and localization/capture behavior remain unchanged.
+
+### Pick Score stabilization phase 1 — graded deck fit
+
+The V1 deck-need term was a step function: projected maindeck membership added at least `.65·D-weight`, so late in the draft a 0.05 pp GIH change could move a card 12 → 31. The optimizer's *decision* is discontinuous in a candidate's strength, but its single-swap optimality makes the *margin* to the cut line continuous and sign-consistent with that decision. `CandidateDeckImpactEvaluator` now derives each candidate's margin from the existing projection decisions and composition floors (no extra optimizer calls) and maps it through `logistic(margin/s)`, with `s` narrowing from 2 pp early to 1 pp at the end of the draft. Open slots are valued at `baseline − 4 pp`, falling toward `baseline − 10 pp` when the remaining picks (60% assumed playable) cover fewer than 1.5× the open slots. All viable pairs are blended by `softmax(averageQuality/0.25 pp)`. Land deck fit, Q/L/A, weights, calibration, the 0–50 scale, tiers, saturation/tie-break and name lookups are unchanged in this phase. `CandidateDeckImpact` adds cut-line margin, graded membership, open-slot value, best-pair weight and pair count, which the expanded diagnostics show.
+
+### Pick Score stabilization phase 2 — soft score limits and ranking precision
+
+V1 clipped Q at baseline ±8 pp and clipped the final value at [0, 1]. Every card past either bound became indistinguishable, so the pack ranking fell through to its next keys (clipped Q, then Phase 8 data weight): a 72% mythic with 2,500 games ranked below a 65% uncommon with 40,000. Both clips are now `SoftLimit(value, knee)`: identity within `knee` of .5, then a slope-continuous exponential approach to 0 or 1. Q uses knee .35 (linear within ±5.6 pp of baseline); the final calibration uses knee .45 (linear for displayed scores 2.5–47.5). Both maps are continuous, strictly increasing and bounded, so the unrounded `ContextualValue`, the internal ranking value, orders all distinct candidates, and the displayed rounded score is consistent with it. Q, then data weight, then pack index now only separate exact ties. Statistical uncertainty remains the Phase 8 500-game shrinkage; there is no extra sample-size penalty. Contribution diagnostics add a "Soft limit" entry so the points sum to the actual value. Weights, Phase 1 deck fit, tier boundaries and badge artwork are unchanged. See [CONTEXTUAL_PICK_SCORE_PHASE2_REPORT.md](CONTEXTUAL_PICK_SCORE_PHASE2_REPORT.md).
+
+### Pick Score phase 3 — statistical identity and estimated marker
+
+Printing identity and statistical identity are now separate. The Arena/Scryfall `CardIdentifier` stays the exact printing. `SeventeenLandsStatisticalIdentity` (Application) only decides which row of the already set/format-scoped 17Lands snapshot describes that card.
+
+Precedence:
+
+1. **Exact canonical name.** Unchanged; conflicting rows fail closed without fallback.
+2. **Front-face alias.** Only if no row has the exact name, and only for structured Adventure, Transform, ModalDoubleFaced or Prepare cards whose canonical name is exactly their face names joined by " // ".
+   - The alias must not be any catalog card's canonical name.
+   - Every eligible card with that front face must be the same canonical card.
+   - Back faces, split halves and fuzzy matching are never used.
+   - The alias index is built once per immutable catalog.
+
+The resolver is used for participants (pack and pool), the environment baseline and standalone catalogs. Presentation accepts a row name only if it structurally denotes the card. Scryfall's `prepare` layout is now `CardLayout.Prepare`.
+
+`ContextualPickScore.QualityEvidence` records whether Q came from direct card statistics or from the neutral prior, and why (no row, or a row without a usable GIH). Expanded diagnostics describe Q separately from lane, archetype and deck fit. The badge shows a 9-DIP neutral `EST` beside the score when Q is estimated. The animation tier still derives only from the score. See [CONTEXTUAL_PICK_SCORE_PHASE3_REPORT.md](CONTEXTUAL_PICK_SCORE_PHASE3_REPORT.md).
+
+### Pick Score phase 4 — deck need and card roles
+
+D is now `clamp(F + 0.30·c·played·S, 0, 1)`, blended over viable pairs as before.
+
+**F, the graded maindeck value:**
+- `F = 0.10 + 0.90·(½·logistic(margin/s) + ½·logistic(margin/(margin>0 ? 4 pp : s)))`.
+- It is neutral (about .55) at the projected cut line and falls to the 0.10 floor for cards that cannot be played.
+- One cut-line margin carries both "makes the deck" and replacement value, so no separate average-quality term exists.
+
+**S, the structural need:**
+- `S = max(creature, early, removal need) − top-end redundancy`.
+- It is measured on the projected deck before the pick and scaled to 23 spells.
+- Targets: the existing builder targets (preferred 16 / minimum 14 creatures, 4 early plays, cap 6 at MV5+), plus a conservative `HealthyRemovalCount = 3`.
+
+**c, the structure confidence:** `projectedSpells / 18`.
+
+**played:** the membership probability, or 1 when a composition floor forces the card in. In that case its F compares quality with the best bench card, so the need is not credited twice.
+
+**Lands:** they earn D only by reducing a measured colour-source shortfall; otherwise they keep the floor.
+
+**Roles:**
+- `LimitedCardRoleClassifier` parses intrinsic roles once per immutable `Card`: structured Creature, EarlyPlay, Land and land Fixing, plus precision-first Oracle Hard/Conditional removal from castable faces.
+- `LimitedCardRoleOverrideTable` applies data-driven add/remove corrections by identifier or `SET#collector`.
+- Ramp, tempo, fight and sweepers are deferred.
+
+**Successful-deck structure profiles are not built.** Phase 9D's source is use-restricted and no corpus exists, so generic targets are used. `CandidateDeckImpact` adds the displaced card, the projected structure, confidence and the individual needs. Expanded diagnostics label deck need strong/neutral/weak with +/− reasons; the badge is unchanged. See [CONTEXTUAL_PICK_SCORE_PHASE4_REPORT.md](CONTEXTUAL_PICK_SCORE_PHASE4_REPORT.md).
+
+### Pick Score phase 5 — calibration and tier validation
+
+A 9-stage × 1,000-pack replay of real FRA ratings, plus anchor scenarios, confirmed the v1.4 final calibration. It was kept unchanged, so displayed scores and rankings are identical and the model version stays `contextual-pick-score-v1.4`.
+
+The calibration constants now live in `ContextualPickScoreCalibration` (RecommendationEngine):
+- gain 1.4 and soft knee .45;
+- `Calibrate`, `ExactScore`, `DisplayScore` and `SoftLimit`;
+- the semantic anchors A–J.
+
+`ContextualPickScoreConfiguration` delegates to it. There is one global scale: no per-stage, per-pack or per-rarity calibration.
+
+Visual tiers now follow the score semantics through the canonical `PickScoreTierThresholds` (`pick-score-tiers-v2`):
+
+| Score | Tier | Palette |
+|---|---|---|
+| 0–14 | VeryWeak | Graphite |
+| 15–24 | Marginal | Steel |
+| 25–34 | Solid | Silver |
+| 35–39 | Strong | Gold |
+| 40–44 | Excellent | Rich gold |
+| 45–50 | Premium | Premium |
+
+`ContextualPickScore.Tier` exposes the canonical tier. `MysticBadgeTierPalette` maps it to a palette and derives its labels, and no longer holds its own bands. The superseded band list in the V1 section above describes V1.
+
+Expanded diagnostics show the exact unrounded score and the tier. Known component-level gaps are documented in [CONTEXTUAL_PICK_SCORE_PHASE5_REPORT.md](CONTEXTUAL_PICK_SCORE_PHASE5_REPORT.md):
+- a late off-colour bomb scores about 24;
+- late "strong" scores come mostly from deck-need saturation.
+
+### Pick Score phase 6 — playability-gated quality and continuous deck fit
+
+Model `contextual-pick-score-v1.5`. The final calibration and tier scheme `pick-score-tiers-v2` are unchanged.
+
+**Playability-gated quality.** Composition uses `Q_eff = Q > .5 ? .5 + R·(Q − .5) : Q`. Raw Q stays in `QualityComponent`.
+- `R = 1 − smoothstep((picks − 10)/(35 − 10))·(1 − P)·(1 − .20)`.
+- P is the softmax(average spell quality / 1 pp)-weighted share of viable projected pairs, after the pick, that can play the card.
+- A single-pip, single off-colour card earns `.6·clamp(drafted lands producing that colour / 3)` splash credit.
+- No extra optimizer calls.
+
+**Expected-future cut line.** Every non-forced candidate's margin is measured against `max(real optimizer cut, X)`. X is the expected marginal card of the final deck without the candidate:
+- **Inputs:** later supply S = remaining picks × .8; contested slots = open slots plus maindeck spells below baseline − 3 pp.
+- **S ≥ contested:** X is a later pick at baseline − 3 / − 1 / + 0.8 pp for coverage 1 / 3 / ≥ 10.
+- **S < contested:** X is the (contested − S)-th best existing contested card, with open slots counting as baseline − 10 pp emergency filler.
+
+**Structure gate.** Structure is realised by `logistic(margin / 2 pp)` (1 when the card is forced).
+
+`CandidateDeckImpact` and `ContextualPickScore` expose the real and virtual cut lines, open and contested slots, remaining picks, supply, coverage, urgency, gate, playability, R and Q effective. Expanded diagnostics show them, plus a separate Playability evidence line; the badge is unchanged. See [CONTEXTUAL_PICK_SCORE_PHASE6_REPORT.md](CONTEXTUAL_PICK_SCORE_PHASE6_REPORT.md).
+
+### Pick Score phase 7 — validation and V1 freeze (`contextual-pick-score-v1.6`)
+
+A whole-draft stability audit found one defect:
+- **What:** pair viability was a hard eligible-spell threshold, so a near-equal alternative pair appeared and disappeared with a single card.
+- **Effect:** consecutive-pick swings of up to 27 points.
+
+The fix, in `CandidateDeckImpactEvaluator`:
+- Pairs up to `ViabilityTolerance` (2) spells short of the leading shell are projected at their own size.
+- They enter the deck-fit and playability blends with a taper (`1 − shortfall/3`); the removed weight returns to the best fully viable pair.
+- Each build's expected-future cut line uses its own open slots and weak spells.
+
+Also in this phase:
+- **Supply profile:** the supply constants are now an explicit `FuturePickSupplyProfile`. FRA uses its calibrated profile; other sets use a provisional default with the same values, labelled in diagnostics. The Application layer selects the profile by set.
+- **Freeze:** calibration, tiers, Q, L and A are unchanged. Twelve golden fixtures freeze V1.
+
+The authoritative reference is [CONTEXTUAL_PICK_SCORE_V1_SPEC.md](CONTEXTUAL_PICK_SCORE_V1_SPEC.md); see [CONTEXTUAL_PICK_SCORE_PHASE7_REPORT.md](CONTEXTUAL_PICK_SCORE_PHASE7_REPORT.md).
+

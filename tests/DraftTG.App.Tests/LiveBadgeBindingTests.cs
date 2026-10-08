@@ -205,7 +205,7 @@ public sealed partial class MainWindowViewModelTests
         var textBindings = items.Descendants().Where(e => e.Name.LocalName == "TextBlock"
                 && ((string?)e.Attribute("Text"))?.StartsWith("{Binding Presentation.", StringComparison.Ordinal) == true)
             .Select(e => (string)e.Attribute("Text")!).ToArray();
-        Assert.Equal(["{Binding Presentation.DisplayedContextRank}", "{Binding Presentation.DisplayedGIH}",
+        Assert.Equal(["{Binding Presentation.DisplayedPickScore}", "{Binding Presentation.DisplayedBadgeGIH}",
             "{Binding Presentation.DisplayedALSA}"], textBindings);
         Assert.DoesNotContain(items.DescendantsAndSelf().Attributes(), a =>
             a.Value.Contains("CurrentPackCards", StringComparison.Ordinal)
