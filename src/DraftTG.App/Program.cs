@@ -21,6 +21,15 @@ internal static class Program
         { Environment.ExitCode = DeterministicShadowLiveCommand.Run(args); return; }
         if (args.Length > 0 && args[0] == "--benchmark-arena-capture")
         { Environment.ExitCode = DesktopDuplicationBenchmarkCommand.Run(args); return; }
+        if (args.Length > 0 && args[0] == "--live-localization-validation-summary")
+        { Environment.ExitCode = LiveLocalizationValidationSummaryCommand.Run(args); return; }
+        if (args.Length > 0 && args[0] == "--live-localization-validation")
+        {
+            if (args.Length != 1) { Console.Error.WriteLine("Usage: DraftTG.App --live-localization-validation"); Environment.ExitCode = 1; return; }
+            LiveLocalizationValidation.Enabled = true;
+            Console.WriteLine($"Live shadow validation: {LiveLocalizationValidation.LedgerPath} (WGC authority retained)");
+            args = [];
+        }
         BuildAvaloniaApp().StartWithClassicDesktopLifetime(args);
     }
 

@@ -176,10 +176,16 @@ public sealed partial class MainWindowViewModelTests
         session.RetryManually(); await session.CurrentWork;
         var context=overlay.PlacementContext; var rows=overlay.Badges.ToArray(); var positions=rows.Select(b=>(b.X,b.Y)).ToArray();
         var captures=fake.Captures;
+        var diagnostics = new List<(string Kind, string Data)>();
+        session.ValidationEventObserver = (kind, details) => diagnostics.Add((kind, System.Text.Json.JsonSerializer.Serialize(details)));
         fake.Inspection=fake.Inspection with {Window=fake.Inspection.Window! with {X=450,Y=170}}; events.Emit();
         Assert.Equal(captures,fake.Captures); Assert.Same(context,overlay.PlacementContext);
         Assert.All(overlay.Badges,b=>Assert.True(b.IsPlaced)); Assert.Equal(rows,overlay.Badges);
         Assert.Equal(positions,overlay.Badges.Select(b=>(b.X,b.Y))); Assert.Equal((550,230,800d,480d),moves[^1]);
+        var translation = Assert.Single(diagnostics);
+        Assert.Equal("WindowTranslation", translation.Kind);
+        Assert.Contains("\"PlacementRetained\":true", translation.Data);
+        Assert.Contains("\"FullRelocalizationRequested\":false", translation.Data);
         var count=moves.Count; events.Emit(); Assert.Equal(count,moves.Count); Assert.Equal(captures,fake.Captures);
     }
     [Fact]

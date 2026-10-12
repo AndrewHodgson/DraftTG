@@ -175,6 +175,26 @@ public sealed partial class MainWindowViewModelTests
             Assert.Equal(badges, overlay.Badges.Select(b => (b.VisualSlotIndex, b.X, b.Y, b.IsPlaced)));
             Assert.Contains(shadowLog.ReadLines(), line => line.Contains("stale pack, geometry or frame"));
             Assert.Contains(shadowLog.ReadLines(), line => line.Contains("\"VerifiedCandidateOrderCount\":1"));
+            using var recorded = JsonDocument.Parse(shadowLog.ReadLines().Last());
+            var row = recorded.RootElement;
+            Assert.Equal(3, row.GetProperty("Schema").GetInt32());
+            Assert.False(row.GetProperty("LiveValidationMode").GetBoolean()); // Synthetic observer never becomes live proof.
+            Assert.Equal(13, row.GetProperty("CandidateVerifications")[0].GetProperty("Slots").GetArrayLength());
+            Assert.Equal(13, row.GetProperty("DeterministicSlots").GetArrayLength());
+            Assert.True(row.GetProperty("FullPackVerified").GetBoolean());
+            Assert.False(row.GetProperty("WgcFullyMatched").GetBoolean());
+            Assert.Equal(50, row.GetProperty("ClientRectangle").GetProperty("X").GetInt32());
+            Assert.True(row.GetProperty("CandidateVerifications")[0].GetProperty("Slots")[0].GetProperty("Confidence").GetDouble() >= .94);
+            Assert.True(row.GetProperty("CandidateVerifications")[0].GetProperty("Slots")[0].GetProperty("AmbiguityMargin").GetDouble() >= .07);
+            Assert.False(LiveLocalizationValidationSummaryCommand.CountsForPromotion(row));
+            Assert.True(overlay.ConfirmVisualOrder(context, candidate.Assignments.Select(a => a.Key)));
+            overlay.InvalidateAutomaticLocalization("test geometry invalidation", invalidateManual: true);
+            Assert.False(overlay.HasConfirmedVisualPlacement);
+            shadow.ObserveFrame(observation with { CaptureRequestGeneration = 3 });
+            await shadow.Completion; Drain(); await shadow.Completion;
+            using var afterManual = JsonDocument.Parse(shadowLog.ReadLines().Last());
+            Assert.True(afterManual.RootElement.GetProperty("ManualPlacementInvolved").GetBoolean());
+            Assert.Contains("manual intervention", afterManual.RootElement.GetProperty("FallbackReason").GetString());
         }
         finally { DisposeReferences(references); await shadow.DisposeAsync(); await recorder.DisposeAsync(); directory.Delete(true); }
     }

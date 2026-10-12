@@ -26,6 +26,9 @@ internal sealed record RecognitionFrameObservation(CardVisualLocalizationRequest
     public int FrameY { get; init; }
     public nint FrameWindowHandle { get; init; }
     public CardVisualLocalizationResult? Visual { get; init; }
+    public string Backend { get; init; } = "Unspecified/test capture";
+    public double CaptureMilliseconds { get; init; }
+    public double? PresentationMilliseconds { get; init; }
 }
 
 /// <summary>Arena's window mode from its native style: a captioned window is "Windowed"; borderless or exclusive is not.</summary>
@@ -52,10 +55,11 @@ internal sealed class DeterministicSlotShadowObserver : IAsyncDisposable
 {
     private const int MaximumDetailLines = 12, RetainedPacks = 8;
     private sealed record PredictionEntry(VisualPlacementContext Context, IReadOnlyList<int> LogOrder, ArenaDisplayOrderPrediction Prediction,
-        int Classes, ArenaCardDatabaseInfo? Database, string DraftScope);
+        int Classes, ArenaCardDatabaseInfo? Database, string DraftScope, string? DraftIdentifierDigest, DateTimeOffset PredictedAt);
     private sealed record VerificationEntry(int ClientWidth, int ClientHeight, string Summary, int Accepted, int Count, double Milliseconds, string? Error,
         int VerifiedCandidateOrders = 0, string? FallbackReason = null, long CaptureGeneration = 0, long CaptureRequestGeneration = 0,
-        IReadOnlyList<int>? VerifiedOrder = null, bool GeometryAvailable = false, bool EvidenceEligible = false);
+        IReadOnlyList<int>? VerifiedOrder = null, bool GeometryAvailable = false, bool EvidenceEligible = false, RecognitionFrameObservation? Frame = null,
+        FixedSlotOrderEvidenceResult? Result = null, bool Current = false, bool Manual = false, long CurrentGeneration = 0, DateTimeOffset? VerificationStartedAt = null, DateTimeOffset? AdmittedAt = null);
 
     private readonly OverlayViewModel _presentation;
     private readonly Func<ArenaWindowGeometry?> _window;
@@ -68,6 +72,7 @@ internal sealed class DeterministicSlotShadowObserver : IAsyncDisposable
     private readonly Func<RecognitionFrameObservation, bool> _isCurrentFrame;
     private readonly Action<VisualPlacementContext, RecognitionFrameObservation, FixedSlotOrderEvidenceResult>? _recordEvidence;
     private readonly HashSet<long> _framed = [];
+    private readonly HashSet<long> _manualGenerations = [];
     private readonly ArenaDraftEvidenceScopeTracker _scopes = new(Guid.NewGuid().ToString("N"));
     private readonly CancellationTokenSource _lifetime = new();
     private readonly object _gate = new();
@@ -77,6 +82,7 @@ internal sealed class DeterministicSlotShadowObserver : IAsyncDisposable
     private readonly List<string> _details = [];
     private Task _tail = Task.CompletedTask;
     private bool _disposed;
+    private VisualPlacementContext? _lastContext;
 
     public DeterministicSlotShadowObserver(OverlayViewModel presentation, Func<ArenaWindowGeometry?> window, Func<NormalizedDraftRegion?> anchor,
         Func<ArenaDisplayOrderEvaluation> evaluation, Func<ArenaCardDatabaseReader?>? database = null,
@@ -93,16 +99,50 @@ internal sealed class DeterministicSlotShadowObserver : IAsyncDisposable
         _dispatch = dispatch ?? (action => { if (Dispatcher.UIThread.CheckAccess()) action(); else Dispatcher.UIThread.Post(action); });
         presentation.PropertyChanged += PresentationChanged;
         presentation.AutomaticLocalizationApplied += Applied;
+        presentation.Session.CurrentPackPlacementInvalidated += AcceptedPickRetired;
     }
+
+    private void AcceptedPickRetired() => RecordRuntimeEvent("AcceptedPickBadgeRetirement", new
+    { PlacedBadges = _presentation.Badges.Count(b => b.IsPlaced), PlacementContextCleared = _presentation.PlacementContext is null });
 
     internal static JsonLinesLedgerFile DefaultLog() => new(Path.Combine(
         ApplicationDataPathProviderFactory.CreateDefault().GetApplicationDataDirectory(), "localization", "deterministic-shadow.jsonl"));
 
     internal Task Completion => _tail;
 
+    internal void RecordRuntimeEvent(string kind, object details)
+    {
+        if (!LiveLocalizationValidation.Enabled) return;
+        var line = LiveLocalizationValidation.Event(kind, details);
+        Enqueue(() => _log?.AppendLine(line));
+    }
+
     private void PresentationChanged(object? sender, PropertyChangedEventArgs e)
     {
-        if (_disposed || e.PropertyName != nameof(OverlayViewModel.PlacementContext) || _presentation.PlacementContext is not { } context) return;
+        if (_disposed) return;
+        if (e.PropertyName is nameof(OverlayViewModel.HasManualVisualEdits) or nameof(OverlayViewModel.HasConfirmedVisualPlacement)
+            or nameof(OverlayViewModel.IsCalibrating))
+        {
+            if (_presentation.PlacementContext is { } edited && (_presentation.HasManualVisualEdits
+                || _presentation.HasConfirmedVisualPlacement || _presentation.IsCalibrating))
+                lock (_gate) _manualGenerations.Add(edited.Generation);
+        }
+        if (e.PropertyName != nameof(OverlayViewModel.PlacementContext)) return;
+        var context = _presentation.PlacementContext;
+        if (context is null)
+        {
+            RecordRuntimeEvent("PackRetired", new { Generation = _lastContext?.Generation,
+                Pack = _lastContext?.Pack.Position.Pack.Value, Pick = _lastContext?.Pack.Position.Pick.Value,
+                PlacedBadges = _presentation.Badges.Count(b => b.IsPlaced), Reason = "placement context retired (accepted pick or session clear)" });
+            _lastContext = null;
+            return;
+        }
+        _lastContext = context;
+        RecordRuntimeEvent("PackAccepted", new { context.Generation, Pack = context.Pack.Position.Pack.Value,
+            Pick = context.Pack.Position.Pick.Value, CardCount = context.Pack.AvailableCardIdentifiers.Count,
+            context.ChangedAt, DraftIdentifierDigest = _presentation.Session.CurrentArenaState?.DraftIdentifier is { } id
+                ? ArenaDisplayOrderObservation.ScopeDigest("draft:" + id.Value) : null,
+            Client = _window() is { } w ? new { w.X, w.Y, w.Width, w.Height, w.Scaling } : null });
         try { PackArrived(context); }
         catch (Exception ex) { _presentation.SetDeterministicSlots("Deterministic slots: unavailable (" + ex.GetType().Name + ")", ex.Message); }
     }
@@ -135,9 +175,10 @@ internal sealed class DeterministicSlotShadowObserver : IAsyncDisposable
             }
             lock (_gate)
             {
-                _predictions[context.Generation] = new(context, log ?? [], prediction, evaluation.Classes.Count, database, scope);
+                _predictions[context.Generation] = new(context, log ?? [], prediction, evaluation.Classes.Count, database, scope,
+                    state?.DraftIdentifier is { } id ? ArenaDisplayOrderObservation.ScopeDigest("draft:" + id.Value) : null, DateTimeOffset.UtcNow);
                 foreach (var stale in _predictions.Keys.Where(g => g <= context.Generation - RetainedPacks).ToArray())
-                { _predictions.Remove(stale); _verifications.Remove(stale); _framed.Remove(stale); }
+                { _predictions.Remove(stale); _verifications.Remove(stale); _framed.Remove(stale); _manualGenerations.Remove(stale); }
                 _recorded.RemoveWhere(r => r.Generation <= context.Generation - RetainedPacks);
             }
             var window = _window();
@@ -175,10 +216,17 @@ internal sealed class DeterministicSlotShadowObserver : IAsyncDisposable
             lock (_gate) _verifications[request.PackGeneration] = value;
             return value;
         }
-        if (entry is null || !entry.Context.Pack.Equals(request.Pack)) { Store("not run (order prediction not ready)", error: "prediction"); return; }
+        if (entry is null || !entry.Context.Pack.Equals(request.Pack))
+        {
+            Store("not run (order prediction not ready)", error: "prediction");
+            RecordRuntimeEvent("StaleResultRejected", new { RequestedGeneration = request.PackGeneration,
+                observation.CaptureGeneration, observation.CaptureRequestGeneration, Reason = "prediction missing or pack no longer retained" });
+            return;
+        }
         var mapping = VisualCaptureMapping.FromAnchor(observation.Anchor, window.Width, window.Height);
         var geometry = ArenaDraftSlotGeometry.TryCreateLayout(window.Width, window.Height, request.Occurrences.Count,
             new(ArenaDraftView.DraftPackGrid, _mode(window)));
+        var verificationStartedAt = DateTimeOffset.UtcNow;
         var result = geometry.IsAvailable
             ? FixedSlotOrderEvidence.Verify(request, entry.LogOrder, entry.Prediction, window.Width, window.Height,
                 new(ArenaDraftView.DraftPackGrid, _mode(window)), mapping, frame, references, _lifetime.Token)
@@ -197,16 +245,20 @@ internal sealed class DeterministicSlotShadowObserver : IAsyncDisposable
             var manual = _presentation.HasConfirmedVisualPlacement || _presentation.HasManualVisualEdits || _presentation.IsCalibrating;
             var evidenceGate = FixedSlotOrderEvidence.Gate(request, entry.LogOrder, result,
                 _presentation.PlacementContext?.Generation ?? -1, _presentation.Session.CurrentPackIdentity, current, manual);
-            var fallback = evidenceGate.Accepted ? null : evidenceGate.Reason;
+            bool everManual;
+            lock (_gate) everManual = _manualGenerations.Contains(request.PackGeneration);
+            var fallback = manual || everManual ? "manual intervention during this pack generation"
+                : evidenceGate.Accepted ? null : evidenceGate.Reason;
             var value = new VerificationEntry(window.Width, window.Height,
                 $"{verified}/{result.Candidates.Count} candidate orders fully verified · {accepted}/{count} slots · {ms:F0} ms",
                 accepted, count, ms, result.DeclineReason, verified, fallback, observation.CaptureGeneration, observation.CaptureRequestGeneration,
-                verified == 1 ? result.Candidates.Single(c => c.Verification.FullyVerifies(count)).Order : null, geometry.IsAvailable, evidenceGate.Accepted);
+                verified == 1 ? result.Candidates.Single(c => c.Verification.FullyVerifies(count)).Order : null, geometry.IsAvailable, evidenceGate.Accepted,
+                observation, result, current, manual || everManual, _presentation.PlacementContext?.Generation ?? -1, verificationStartedAt, DateTimeOffset.UtcNow);
             lock (_gate) _verifications[request.PackGeneration] = value;
             try { if (evidenceGate.Accepted) _recordEvidence?.Invoke(entry.Context, observation, result); }
             catch (Exception ex) { System.Diagnostics.Trace.WriteLine("Fast evidence admission failed: " + ex.Message); }
             if (observation.Visual is { } visual)
-                Enqueue(() => Compare(entry.Context, request, visual, window, observation.Anchor));
+                Enqueue(() => Compare(entry.Context, request, visual, window, observation.Anchor, value));
         });
     }
 
@@ -226,18 +278,19 @@ internal sealed class DeterministicSlotShadowObserver : IAsyncDisposable
     }
 
     private void Compare(VisualPlacementContext context, CardVisualLocalizationRequest request, CardVisualLocalizationResult result,
-        ArenaWindowGeometry? window, NormalizedDraftRegion? anchor)
+        ArenaWindowGeometry? window, NormalizedDraftRegion? anchor, VerificationEntry? capturedVerification = null)
     {
         var coordinate = Coordinate(context.Pack);
         PredictionEntry? entry; VerificationEntry? verification;
         lock (_gate) { _predictions.TryGetValue(context.Generation, out entry); _verifications.TryGetValue(context.Generation, out verification); }
+        verification = capturedVerification ?? verification;
         if (entry is null || window is null || anchor is null)
         { Publish($"Deterministic slots: {coordinate} not compared ({(entry is null ? "order prediction not ready" : "Arena client geometry unknown")})", null, context.Generation); return; }
         lock (_gate) if (!_recorded.Add((context.Generation, window.Width, window.Height,
             verification?.CaptureGeneration ?? 0, verification?.CaptureRequestGeneration ?? 0))) return;
         var candidate = Locate(context, entry.LogOrder, entry.Prediction, window);
         if (verification is not null && (verification.ClientWidth != window.Width || verification.ClientHeight != window.Height)) verification = null;
-        var comparisonCandidate = verification?.VerifiedOrder is { } order
+        var comparisonCandidate = !candidate.IsAvailable && verification?.VerifiedOrder is { } order
             ? Locate(context, entry.LogOrder, new(ArenaDisplayOrderPredictionStatus.Unanimous, [new(order, 0)], entry.Prediction.SurvivingRules), window)
             : candidate;
         var comparison = verification?.FallbackReason == "stale pack, geometry or frame"
@@ -245,7 +298,7 @@ internal sealed class DeterministicSlotShadowObserver : IAsyncDisposable
             : DeterministicSlotShadowComparer.Compare(comparisonCandidate, request, result, VisualCaptureMapping.FromAnchor(anchor, window.Width, window.Height));
         var detail = DeterministicSlotPresentation.Detail(coordinate, candidate, comparison) + " · verifier " + (verification?.Summary ?? "not run");
         System.Diagnostics.Trace.WriteLine("Deterministic slots: " + detail);
-        try { _log?.AppendLine(Record(context, entry, candidate, comparison, verification, result)); }
+        try { _log?.AppendLine(Record(context, entry, candidate, comparison, verification, result, request, window, anchor)); }
         catch (Exception ex) when (ex is IOException or UnauthorizedAccessException) { detail += " · log write failed: " + ex.Message; }
         Publish(DeterministicSlotPresentation.ComparisonLine(coordinate, comparison), detail, context.Generation);
     }
@@ -255,13 +308,49 @@ internal sealed class DeterministicSlotShadowObserver : IAsyncDisposable
             new(ArenaDraftView.DraftPackGrid, window is null ? ArenaWindowMode.Unknown : _mode(window))));
 
     /// <summary>One concise structured record: coordinates, sizes, statuses and metrics. No pixels, names, paths or account data.</summary>
-    private static string Record(VisualPlacementContext context, PredictionEntry entry, DeterministicSlotResult candidate,
-        DeterministicShadowComparison comparison, VerificationEntry? verification, CardVisualLocalizationResult visual)
+    private string Record(VisualPlacementContext context, PredictionEntry entry, DeterministicSlotResult candidate,
+        DeterministicShadowComparison comparison, VerificationEntry? verification, CardVisualLocalizationResult visual, CardVisualLocalizationRequest request, ArenaWindowGeometry window, NormalizedDraftRegion anchor)
     {
-        static double? Finite(double value) => double.IsFinite(value) ? Math.Round(value, 2) : null;
+        static double? RawFinite(double value) => double.IsFinite(value) ? value : null;
+        static double? Finite(double value) => double.IsFinite(value) ? value : null;
         return JsonSerializer.Serialize(new
         {
-            Schema = 2, Source = "DraftTG/9E.2A.1 deterministic-slot shadow", RecordedAt = DateTimeOffset.UtcNow,
+            Schema = 3, Source = "DraftTG/9E.2B live deterministic validation", Kind = "PackObservation", RecordedAt = DateTimeOffset.UtcNow,
+            LiveValidationMode = LiveLocalizationValidation.Enabled, LiveLocalizationValidation.SessionId,
+            LiveLocalizationValidation.Build, LiveLocalizationValidation.BuildId,
+            PackGeneration = context.Generation, CurrentPackGeneration = verification?.CurrentGeneration ?? 0,
+            CurrentGenerationFrame = verification?.Current ?? false, ManualPlacementInvolved = verification?.Manual ?? true,
+            FramePackGeneration = verification?.Frame?.FramePackGeneration ?? 0,
+            PredictionExistedBeforeVerification = verification?.VerificationStartedAt is { } started && entry.PredictedAt <= started,
+            entry.PredictedAt, entry.DraftIdentifierDigest, verification?.VerificationStartedAt, verification?.AdmittedAt,
+            WindowMode = _mode(window).ToString(),
+            FrameRevision = verification?.Frame?.Revision ?? 0, CapturedAt = verification?.Frame?.CapturedAt,
+            PackChangedAt = context.ChangedAt, Backend = verification?.Frame?.Backend,
+            ClientRectangle = new { window.X, window.Y, window.Width, window.Height }, DpiScale = window.Scaling,
+            Dpi = window.Scaling * 96, WindowHandle = window.Handle.ToInt64(),
+            PredictedOrderIdentities = entry.Prediction.Orders.Select(o => o.Order),
+            DeterministicSlots = candidate.Assignments.Select(a => new { a.Slot, a.ArenaGrpId, PackIndex = a.Key.PackIndex,
+                CardIdentity = a.Key.CardIdentifier.Value, a.Rectangle }),
+            CandidateVerifications = verification?.Result?.Candidates.Select(c => new { c.Order,
+                FullyVerified = c.Verification.FullyVerifies(candidate.CardCount), c.Verification.Error,
+                Milliseconds = c.Verification.Duration.TotalMilliseconds,
+                Slots = c.Verification.Slots.Select(s => new { s.Slot, s.ExpectedOccurrence,
+                    ArenaId = entry.LogOrder[s.ExpectedOccurrence], CardIdentity = request.Occurrences[s.ExpectedOccurrence].CardIdentifier.Value,
+                    Confidence = RawFinite(s.ExpectedScore), AmbiguityMargin = RawFinite(s.ExpectedScore - s.CompetingScore), s.Accepted, s.Reason }) }),
+            WgcMatches = visual.Matches.Select(m => new { PackIndex = m.Key.PackIndex, CardIdentity = m.Key.CardIdentifier.Value,
+                ArenaId = entry.LogOrder[m.Key.PackIndex], m.VisualSlot, Confidence = RawFinite(m.Confidence), State = m.State.ToString(),
+                ClientRectangle = VisualCaptureMapping.FromAnchor(anchor, window.Width, window.Height).ToClient(m.Rectangle) }),
+            WgcFullyMatched = visual.IsSafeFor(request) && visual.Matches.Count == candidate.CardCount,
+            FullPackVerified = verification?.EvidenceEligible == true,
+            PlacementAgreedWithWgc = comparison.Status is DeterministicShadowStatus.ExactAgreement or DeterministicShadowStatus.GeometryAgreement,
+            ProductionAuthority = "WGC full matcher", WgcFullMatcherInvoked = verification?.Frame?.Backend == "Windows.Graphics.Capture",
+            FallbackInvoked = verification?.EvidenceEligible != true || verification.Manual || !candidate.IsAvailable
+                || comparison.Status is not (DeterministicShadowStatus.ExactAgreement or DeterministicShadowStatus.GeometryAgreement),
+            ComparisonSlots = comparison.Slots,
+            WgcPackGeneration = visual.PackGeneration, WgcCaptureRequestGeneration = visual.CaptureRequestGeneration,
+            CaptureMilliseconds = verification?.Frame?.CaptureMilliseconds, PresentationMilliseconds = verification?.Frame?.PresentationMilliseconds, FullMatcherMilliseconds = visual.Duration.TotalMilliseconds,
+            VerificationMilliseconds = verification?.Milliseconds,
+            AdmissionAgeMilliseconds = verification?.Frame is { } f ? (verification.AdmittedAt!.Value - f.CapturedAt).TotalMilliseconds : (double?)null,
             entry.DraftScope, LiveSynchronizedFrame = verification?.CaptureRequestGeneration > 0,
             Pack = context.Pack.Position.Pack.Value, Pick = context.Pack.Position.Pick.Value, CardCount = candidate.CardCount,
             ClientWidth = candidate.ClientWidth, ClientHeight = candidate.ClientHeight,
@@ -280,7 +369,8 @@ internal sealed class DeterministicSlotShadowObserver : IAsyncDisposable
             FastVerifierResult = verification?.Summary ?? "not run",
             FastEvidenceEligible = verification?.EvidenceEligible ?? false,
             VerifiedCandidateOrderCount = verification?.VerifiedCandidateOrders ?? 0,
-            FallbackReason = verification?.FallbackReason ?? (candidate.IsAvailable ? "shadow only; production uses full visual localization" : candidate.Reason),
+            FallbackReason = verification?.FallbackReason ?? (!candidate.IsAvailable ? candidate.Reason
+                : comparison.Status is not (DeterministicShadowStatus.ExactAgreement or DeterministicShadowStatus.GeometryAgreement) ? comparison.Reason : null),
             CaptureGeneration = verification?.CaptureGeneration ?? 0, CaptureRequestGeneration = verification?.CaptureRequestGeneration ?? 0,
             ArenaData = entry.Database?.DataVersion, ArenaGrp = entry.Database?.GrpVersion, ArenaDatabaseFile = entry.Database?.FileName
         });
@@ -304,7 +394,13 @@ internal sealed class DeterministicSlotShadowObserver : IAsyncDisposable
             {
                 try { if (!_lifetime.IsCancellationRequested) work(); }
                 catch (OperationCanceledException) when (_lifetime.IsCancellationRequested) { }
-                catch (Exception ex) { Publish("Deterministic slots: shadow failed (" + ex.GetType().Name + ")", ex.Message); }
+                catch (Exception ex)
+                {
+                    Publish("Deterministic slots: shadow failed (" + ex.GetType().Name + ")", ex.Message);
+                    if (LiveLocalizationValidation.Enabled)
+                        try { _log?.AppendLine(LiveLocalizationValidation.Event("ShadowFailure", new { Reason = ex.Message })); }
+                        catch (Exception logError) { System.Diagnostics.Trace.WriteLine("Shadow failure logging failed: " + logError.Message); }
+                }
                 finally { cleanup?.Invoke(); }
             }, CancellationToken.None, TaskContinuationOptions.None, TaskScheduler.Default);
         }
@@ -316,6 +412,7 @@ internal sealed class DeterministicSlotShadowObserver : IAsyncDisposable
         _disposed = true;
         _presentation.PropertyChanged -= PresentationChanged;
         _presentation.AutomaticLocalizationApplied -= Applied;
+        _presentation.Session.CurrentPackPlacementInvalidated -= AcceptedPickRetired;
         await _lifetime.CancelAsync();
         await _tail;
         _lifetime.Dispose();

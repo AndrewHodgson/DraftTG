@@ -52,6 +52,8 @@ public sealed class OverlayDesktopSession : ICalibrationSurface
             () => _orderEvidence.Evaluation, log: DeterministicSlotShadowObserver.DefaultLog(),
             isCurrentFrame: _localization.IsCurrentEvidenceFrame, recordEvidence: _orderEvidence.RecordVerified);
         _localization.RecognitionFrameObserver = _deterministicShadow.ObserveFrame;
+        _localization.ValidationEventObserver = _deterministicShadow.RecordRuntimeEvent;
+        _deterministicShadow.RecordRuntimeEvent("SessionStarted", new { Authority = "WGC full matcher" });
         Rail.Opened += OnOpened;
         Rail.Closing += OnClosing;
         Rail.ActionRequested += OnAction;

@@ -1,4 +1,4 @@
-﻿using System.ComponentModel;
+using System.ComponentModel;
 using Avalonia.Threading;
 using DraftTG.Application;
 using DraftTG.App.Platform;
@@ -83,6 +83,12 @@ internal sealed class AutomaticCardLocalizationSession : ICardVisualLocator, IAs
     /// Observers must copy what they need and return quickly; exceptions are contained and the result is unaffected.
     /// </summary>
     internal Action<RecognitionFrameObservation>? RecognitionFrameObserver { get; set; }
+    internal Action<string, object>? ValidationEventObserver { get; set; }
+    private void ValidationEvent(string kind, object details)
+    {
+        try { ValidationEventObserver?.Invoke(kind, details); }
+        catch (Exception ex) { System.Diagnostics.Trace.WriteLine("Validation diagnostic failed: " + ex.Message); }
+    }
     internal Task CurrentWork => _restartWork is { IsCompleted: false } ? _restartWork : _work ?? Task.CompletedTask;
     public void RetryManually()
     {
@@ -141,6 +147,7 @@ internal sealed class AutomaticCardLocalizationSession : ICardVisualLocator, IAs
         try
         {
             var completedPlacement = _work is not { IsCompleted: false } && _presentation.Badges.Any(b => b.IsPlaced);
+            var captureGenerationBefore = _coordinator.Generation;
             var window = _coordinator.Observe(completedPlacement);
             _windowEvents?.Track(window);
             if (_presentation.IsCalibrating) { _coordinator.Note("Waiting for calibration editing to finish"); return; }
@@ -156,6 +163,14 @@ internal sealed class AutomaticCardLocalizationSession : ICardVisualLocator, IAs
                 Retry(); if (immediate) _notBefore = DateTimeOffset.MinValue;
                 _presentation.InvalidateAutomaticLocalization("Arena window/geometry changed; requesting a fresh frame.", changedLayout);
             }
+            if (_window is { } previous && window is { } next && previous != next)
+                ValidationEvent(!ArenaWindowGeometry.SamePlacementGeometry(previous, next) ? "WindowInvalidation"
+                    : previous.X != next.X || previous.Y != next.Y ? "WindowTranslation" : "WindowStateChanged",
+                    new { Previous = new { previous.X, previous.Y, previous.Width, previous.Height, previous.Scaling },
+                        Current = new { next.X, next.Y, next.Width, next.Height, next.Scaling },
+                        PackGeneration = _packContext?.Request.PackGeneration, CaptureGeneration = _coordinator.Generation,
+                        CaptureGenerationBefore = captureGenerationBefore, FullRelocalizationRequested = captureGenerationBefore != _coordinator.Generation,
+                        PlacementRetained = completedPlacement && ArenaWindowGeometry.SamePlacementGeometry(previous, next) });
             _window = window;
             if (window is null || !window.IsVisible || window.IsMinimized)
             {
@@ -232,13 +247,24 @@ internal sealed class AutomaticCardLocalizationSession : ICardVisualLocator, IAs
             var result = await LocateForContextAsync(snapshot, token);
             VerifyCurrent(context, snapshot, revision, token);
             if (_disposed || token.IsCancellationRequested || revision != _revision || generation != _coordinator.Generation
-                || !ArenaWindowGeometry.SameCaptureGeometry(_coordinator.Observe(), window)) return;
-            if (result.PackGeneration != snapshot.Request.PackGeneration) return;
+                || !ArenaWindowGeometry.SameCaptureGeometry(_coordinator.Observe(), window))
+            {
+                ValidationEvent("StaleResultRejected", new { RequestedGeneration = snapshot.Request.PackGeneration,
+                    CurrentGeneration = _packContext?.Request.PackGeneration, Reason = "capture geometry/generation or revision changed" });
+                return;
+            }
+            if (result.PackGeneration != snapshot.Request.PackGeneration)
+            {
+                ValidationEvent("StaleResultRejected", new { RequestedGeneration = snapshot.Request.PackGeneration, ResultGeneration = result.PackGeneration });
+                return;
+            }
             _presentation.ApplyAutomaticLocalization(context, result);
             if (result.Matches.Count < request.Occurrences.Count && ++_retries < 3)
             { _pending = true; _notBefore = DateTimeOffset.UtcNow.AddSeconds(2); }
         }
-        catch (OperationCanceledException) when (token.IsCancellationRequested || revision != _revision || !_synchronizer.IsCurrent(snapshot)) { }
+        catch (OperationCanceledException) when (token.IsCancellationRequested || revision != _revision || !_synchronizer.IsCurrent(snapshot))
+        { ValidationEvent("LocalizationCanceled", new { RequestedGeneration = snapshot.Request.PackGeneration,
+            CurrentGeneration = _packContext?.Request.PackGeneration, revision, CurrentRevision = _revision }); }
         catch (Exception ex)
         {
             if (!_disposed && revision == _revision)
@@ -269,6 +295,8 @@ internal sealed class AutomaticCardLocalizationSession : ICardVisualLocator, IAs
 
     private void ReportFailure(Exception ex)
     {
+        ValidationEvent("LocalizationFailure", new { Reason = ex.Message, Exception = ex.GetType().Name,
+            PackGeneration = _packContext?.Request.PackGeneration, CaptureGeneration = _coordinator?.Generation });
         if (_coordinator?.Diagnostics.Error is null) _coordinator?.Fail(_coordinator.Diagnostics.Stage, ex);
         _presentation.InvalidateAutomaticLocalization(ex.Message);
         _presentation.SetLocalizationStatus("Card placement: Manual fallback", ex.Message);
@@ -359,9 +387,12 @@ internal sealed class AutomaticCardLocalizationSession : ICardVisualLocator, IAs
                     CaptureGeneration = frame.Generation, CaptureRequestGeneration = frame.CaptureRequestGeneration,
                     CapturedAt = frame.CapturedAt, FramePackGeneration = frame.PackGeneration, Revision = revision,
                     FrameX = frame.X, FrameY = frame.Y, FrameWindowHandle = frame.WindowHandle,
+                    Backend = frame.Backend, CaptureMilliseconds = frame.CaptureDuration.TotalMilliseconds,
+                    PresentationMilliseconds = frame.PresentationTime?.TotalMilliseconds,
                     Visual = result with { PackGeneration = request.PackGeneration, CaptureRequestGeneration = frame.CaptureRequestGeneration }
                 };
-                if (!token.IsCancellationRequested && IsCurrentEvidenceFrame(observation)) observer(observation);
+                // Let the observer record declines too; its UI admission still rejects stale/manual evidence.
+                if (LiveLocalizationValidation.Enabled || (!token.IsCancellationRequested && IsCurrentEvidenceFrame(observation))) observer(observation);
             }
             catch (Exception ex) { System.Diagnostics.Trace.WriteLine("Deterministic shadow frame observer failed: " + ex.Message); }
         }
