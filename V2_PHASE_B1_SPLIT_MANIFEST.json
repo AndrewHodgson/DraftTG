@@ -1,0 +1,54 @@
+{
+  "Version": "phase-b1-whole-set-v1",
+  "Calibration": [
+    "KHM",
+    "STX",
+    "AFR",
+    "NEO",
+    "SNC",
+    "DMU",
+    "BRO",
+    "VOW",
+    "WOE"
+  ],
+  "Development": [
+    "LCI",
+    "MKM",
+    "OTJ",
+    "ONE",
+    "MOM"
+  ],
+  "UntouchedHoldout": [
+    "MH3",
+    "DFT"
+  ],
+  "SpentReference": [
+    "BLB",
+    "DSK"
+  ],
+  "Sets": {
+    "KHM": "Calibration",
+    "STX": "Calibration",
+    "AFR": "Calibration",
+    "NEO": "Calibration",
+    "SNC": "Calibration",
+    "DMU": "Calibration",
+    "BRO": "Calibration",
+    "VOW": "Calibration",
+    "WOE": "Calibration",
+    "LCI": "Development",
+    "MKM": "Development",
+    "OTJ": "Development",
+    "ONE": "Development",
+    "MOM": "Development",
+    "MH3": "Holdout",
+    "DFT": "Holdout"
+  },
+  "Status": {
+    "BLB": "SPENT; reference only; excluded from fitting/replay in B.1",
+    "DSK": "SPENT; reference only; excluded from fitting/replay in B.1"
+  },
+  "Rationale": "Add ONE/MOM development for 2023 toxic/oil vs battles/bonus-sheet environments; reserve MH3/DFT for 2024 high-power supplemental vs 2025 artifact/vehicle environments. Calendar/mechanics diversity, not model performance. No new holdout release in B.1.",
+  "HoldoutPolicy": "MH3/DFT quality/performance remains unread. Metadata availability checks only. Explicit future release required; this phase has no release command.",
+  "PriorSplitCommit": "d2cb723216cd39b6be8c36b1e0e8a8634a49e2a3"
+}

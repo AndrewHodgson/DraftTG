@@ -1,0 +1,32 @@
+{
+  "Version": "phase-b1-plan-v1",
+  "RegisteredBeforeNewSetPerformance": true,
+  "Seed": "DraftTG-phase-b1-v1",
+  "WithinSetSplit": "SHA256(seed/provider/set/format/draft_id); disjoint entire-draft evidence/target groups; no outcomes in sample selection",
+  "BulkReplay": "Lowest seed hash 128 whole drafts per supported calibration/development pick dataset; if fewer than 50k fully ranked, extend deterministically to 160, then 192; no outcome filtering",
+  "ProfileSample": "8 hash-selected whole drafts per eligible legacy dataset; detailed equivalence sample 2 drafts each from WOE/LCI/MKM/OTJ before/after optimization",
+  "QualityCountPolicy": "Audit production path/docs/owned caches and reconstructed presence/copy definitions before compatible parameter fits. Unknown or nonmatching cohorts are not exact provider bridges. No mixing count units.",
+  "ShrinkageGrid": [
+    0,
+    50,
+    100,
+    250,
+    500,
+    1000,
+    2000
+  ],
+  "SparseLevels": [
+    50,
+    100,
+    250,
+    500,
+    1000,
+    "full"
+  ],
+  "SelectionPolicy": "Fit count-specific fixed k and existing simple EB option on calibration; development checks only; do not fit BLB/DSK or MH3/DFT. Retain k500 when production compatibility is unidentified.",
+  "PriorContract": "Primary usable wins; credible same-set/different-format semantics-compatible alternate becomes explicitly labeled conservative prior; otherwise neutral; directional reliability stays unqualified without multi-set evidence",
+  "CandidatePolicy": "At most current + one compatible-count research candidate with portable prior; no reopening B/C absent new evidence",
+  "ResourcePolicy": "Reuse Phase B data read-only; acquire ONE/MOM compact public tables only; bounded row-group processing; no full per-card explanation traces in bulk; preserve every candidate and exact optimizer behavior",
+  "HoldoutRelease": "None during B.1; MH3/DFT untouched; BLB/DSK spent",
+  "ProductionChanged": false
+}

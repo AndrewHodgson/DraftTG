@@ -1,0 +1,462 @@
+{
+  "Version": "phase-b1-preservation-v1",
+  "SplitSha256": "6856df32859cd1f81e035de4f4f3ae880e5b0dbebaeda08e78ae0f0e248e0ac0",
+  "RecordedAtUtc": "2026-10-13T20:31:30.624169+00:00",
+  "Files": [
+    {
+      "Path": "docs/evidence/v2-phase-b/cross-format-experiments.json",
+      "Sha256": "50be64fe598f6beda132e8d50746af7fb8912766dbf5d0df2060d3ad03255598",
+      "Bytes": 489
+    },
+    {
+      "Path": "docs/evidence/v2-phase-b/derived-positions.json",
+      "Sha256": "045eb10cc86f961b886d6346fdb836db8724bb235b828d977a071fd56cd9c7cf",
+      "Bytes": 1903569
+    },
+    {
+      "Path": "docs/evidence/v2-phase-b/execution-correction.json",
+      "Sha256": "e90cd8a601c56614788838e6a5fdff6ba27aa3fb21ca01b87c3020f613db50d3",
+      "Bytes": 834
+    },
+    {
+      "Path": "docs/evidence/v2-phase-b/final-summary.json",
+      "Sha256": "ca5d9c76d286900868077be7c64a987551b1183d0ca90784740752b9fdc15594",
+      "Bytes": 11037
+    },
+    {
+      "Path": "docs/evidence/v2-phase-b/golden-sanity.json",
+      "Sha256": "e247c59482c26c94e55f7c673695e70ef59132696585dd1c198e78c787654c48",
+      "Bytes": 4108
+    },
+    {
+      "Path": "docs/evidence/v2-phase-b/holdout-baselines.json",
+      "Sha256": "a1e7dae224ec038de94f2e799a9fd17f511d0dbba48299412e5e3d7a03a6c90d",
+      "Bytes": 8137
+    },
+    {
+      "Path": "docs/evidence/v2-phase-b/holdout-build-association.json",
+      "Sha256": "9ffe699d9f2c2b292de6be78f151e9ce969aade8fa26a5cc8893a6a6c45bb696",
+      "Bytes": 735
+    },
+    {
+      "Path": "docs/evidence/v2-phase-b/holdout-card-features.json",
+      "Sha256": "b1b0d583eebb196e290d6f8d08c46bc7db6e64b2e06fc8ccf8a98b20631918d6",
+      "Bytes": 771713
+    },
+    {
+      "Path": "docs/evidence/v2-phase-b/holdout-experiments.json",
+      "Sha256": "7ac122e4e3e4d59b9653342e07692f47b73e17cd87971b58656afcaab6477dd8",
+      "Bytes": 56838
+    },
+    {
+      "Path": "docs/evidence/v2-phase-b/holdout-human-q-ranking.json",
+      "Sha256": "ff1028aae1ec67f42bcfffd5a996afa7cb2a416150222aff081653a3858c5097",
+      "Bytes": 2372
+    },
+    {
+      "Path": "docs/evidence/v2-phase-b/holdout-production-replay.json",
+      "Sha256": "a1d0085453633b7f9482c3ebc84cfeb6411d80bbee5e6ed204b69953d5ece20e",
+      "Bytes": 570898
+    },
+    {
+      "Path": "docs/evidence/v2-phase-b/holdout-q-values.json",
+      "Sha256": "920e1186d35069684a43c5867adfdcb43985edb2517edcca45199f600730110a",
+      "Bytes": 238629
+    },
+    {
+      "Path": "docs/evidence/v2-phase-b/holdout-release.json",
+      "Sha256": "c21568e99771045b80d9186264c9b3b60d0941a8d29dc9a47dd4cc57f92de3b2",
+      "Bytes": 390
+    },
+    {
+      "Path": "docs/evidence/v2-phase-b/holdout-result.json",
+      "Sha256": "847a31f22b021d4fc8eef75f2e2a5930f24152375592a21d5e79b21ebeec1e8e",
+      "Bytes": 651
+    },
+    {
+      "Path": "docs/evidence/v2-phase-b/identity-summary.json",
+      "Sha256": "431292a65e35786611069a20e1b8247c084a3c4d442397be2c5f013a5b208277",
+      "Bytes": 517
+    },
+    {
+      "Path": "docs/evidence/v2-phase-b/position-audit.json",
+      "Sha256": "3ecc67e7c4c7c59b2599fb5f4fc84b8a25974a79c3bab666d5a408f2b4771e74",
+      "Bytes": 3790
+    },
+    {
+      "Path": "docs/evidence/v2-phase-b/preregistration-hashes.json",
+      "Sha256": "4569f4f5729937f7daa54859ac6ce0710af4079cf5230d7d8db4b49189a37352",
+      "Bytes": 345
+    },
+    {
+      "Path": "docs/evidence/v2-phase-b/preregistration.json",
+      "Sha256": "f60c70caaa3f60a342e2203ccdaf3d0effd6f5261dc032c442149f2a7ca0147d",
+      "Bytes": 2597
+    },
+    {
+      "Path": "docs/evidence/v2-phase-b/qualification.json",
+      "Sha256": "92a4fc89037c13832001edc1163817efa3f7368259881c54af097f53ba1cbb2e",
+      "Bytes": 309217
+    },
+    {
+      "Path": "docs/evidence/v2-phase-b/report-diagnostics.json",
+      "Sha256": "7ce067a170ec64b2d7f54737372b8fc38f44567860c1e59a6ba84c5ba013dd7b",
+      "Bytes": 60689
+    },
+    {
+      "Path": "docs/evidence/v2-phase-b/selection-analysis-freeze.json",
+      "Sha256": "1131a6e4e526b42b87b71d399c91f458209758aae7ef06a0c185a1da3f977d9e",
+      "Bytes": 5182
+    },
+    {
+      "Path": "docs/evidence/v2-phase-b/selection.json",
+      "Sha256": "6646a9b2f7dcece0b87cfeebbc4729bbb95c61e8e4ceed10096139df39beac3c",
+      "Bytes": 5182
+    },
+    {
+      "Path": "docs/evidence/v2-phase-b/source-audit.json",
+      "Sha256": "589e5ce068b5e1d2bd66165d6651b22d2b79cabf68a031dfc2519f042c02edee",
+      "Bytes": 16690
+    },
+    {
+      "Path": "docs/evidence/v2-phase-b/source-provenance.json",
+      "Sha256": "bec70bf5b28d0e3fd205426f1a3c48ecd33ac7b674ba6f15b87bcb412eb50400",
+      "Bytes": 251690
+    },
+    {
+      "Path": "docs/evidence/v2-phase-b/storage.json",
+      "Sha256": "e3f3cf9b80116020313c202e24216f8fda9298709a51ff46d5c64cfb0b4f64fd",
+      "Bytes": 267
+    },
+    {
+      "Path": "docs/evidence/v2-phase-b/training-baselines.json",
+      "Sha256": "39f48c23c75a8ce71eb1d60160e183c38bc9a66bcc6f75a155d0152b02b473c2",
+      "Bytes": 48753
+    },
+    {
+      "Path": "docs/evidence/v2-phase-b/training-build-association.json",
+      "Sha256": "524b9c048d1b02ab73be1bacb18ce2fc528ff3ffd4f26cc8125e74ef9ad868e7",
+      "Bytes": 4392
+    },
+    {
+      "Path": "docs/evidence/v2-phase-b/training-candidate-experiments.json",
+      "Sha256": "462963751b27f2d630973cca3147f114cf47a0e42c5d732dddc6ac7a53aaf599",
+      "Bytes": 333168
+    },
+    {
+      "Path": "docs/evidence/v2-phase-b/training-card-features.json",
+      "Sha256": "066fb55fc005bd8c42404365ba75c3bc89ce676407a39a66e4ade63892a934b4",
+      "Bytes": 4987236
+    },
+    {
+      "Path": "docs/evidence/v2-phase-b/training-experiments.json",
+      "Sha256": "9b1ce0a7029f9404f85dc230decd9f54f40bb9e7f7225339631df7a09a9df2e5",
+      "Bytes": 1545302
+    },
+    {
+      "Path": "docs/evidence/v2-phase-b/training-human-q-ranking.json",
+      "Sha256": "af71cd200d577b5f9274ce279a3a520d4869edfb3c7f48078e47f26707130c5f",
+      "Bytes": 12985
+    },
+    {
+      "Path": "docs/evidence/v2-phase-b/training-production-replay.json",
+      "Sha256": "dea1eb8febe7432122f5ac9ee48bcd913906f8d7751954ab39884fbb74aef881",
+      "Bytes": 825746
+    },
+    {
+      "Path": "docs/evidence/v2-phase-b/training-q-values.json",
+      "Sha256": "dc96a4fb7449ceb88bc09fa3e6198e76c3ded4d4cb64c50e6f7bdf90d4fd31f5",
+      "Bytes": 1555499
+    },
+    {
+      "Path": "docs/evidence/v2-phase-b/training-result.json",
+      "Sha256": "7bf2bf65bae6947f0b5498fe0e0d24a68c6f2695fd484b8a7f8ebc87eb741103",
+      "Bytes": 718
+    },
+    {
+      "Path": "docs/evidence/v2-phase-b/validation.json",
+      "Sha256": "acd1ad2880a271404ce4840d0ad31270a18ae22f03643e509b51634190601d1f",
+      "Bytes": 4372
+    },
+    {
+      "Path": "docs/historical/phase-b-identity-policy.json",
+      "Sha256": "a3166c3cd5a64c68232a89574c32b22417d472e85786118739b31b14fb5d568b",
+      "Bytes": 1728
+    },
+    {
+      "Path": "docs/historical/splits/phase-b-v1.json",
+      "Sha256": "64b9c3f76c44a56b18f32d35b4b29e06b875f1400fe2d92a95eb176b813a80f2",
+      "Bytes": 412
+    },
+    {
+      "Path": "src/DraftTG.HistoricalEvaluation/ExperimentalQualitySubstitution.cs",
+      "Sha256": "8e237417af7d5685f85fee995591ffbd5144dcca5b01f9d61f94da5c5578c569",
+      "Bytes": 3821
+    },
+    {
+      "Path": "src/DraftTG.HistoricalEvaluation/HistoricalEvaluator.cs",
+      "Sha256": "b80f02ac9f233d49853d1ec2cf8e9a0780d7adeb3c2942566362c19d08c470e0",
+      "Bytes": 14132
+    },
+    {
+      "Path": "src/DraftTG.RecommendationEngine/ArchetypeRecommendationEngine.cs",
+      "Sha256": "551574eb82d5d48b6fc4ba71b789052ff5eda9410cf24ac42b3e1e349aa981ad",
+      "Bytes": 11041
+    },
+    {
+      "Path": "src/DraftTG.RecommendationEngine/BaselineDeckBuilder.cs",
+      "Sha256": "729b43b01ec6c3569c41031a59368bae051948ca4a0e1fb8718972e037b3cf94",
+      "Bytes": 13001
+    },
+    {
+      "Path": "src/DraftTG.RecommendationEngine/CandidateDeckImpactEvaluator.cs",
+      "Sha256": "87d8cf07f658d5e2685500b86b4954ee7fe32cec51354cb8d0df1fa9e30b29b2",
+      "Bytes": 34009
+    },
+    {
+      "Path": "src/DraftTG.RecommendationEngine/ColorCommitment.cs",
+      "Sha256": "b2eb5ca0ca11ebf964864a3a3240435766a74e9fa9ef681b5d206033167de3a2",
+      "Bytes": 3814
+    },
+    {
+      "Path": "src/DraftTG.RecommendationEngine/ContextualPickScoreCalibration.cs",
+      "Sha256": "d8c15148c9d45d315d1526a819707c3369fa336029ec2d3eb24900da900cb9e2",
+      "Bytes": 6056
+    },
+    {
+      "Path": "src/DraftTG.RecommendationEngine/ContextualPickScoreEngine.cs",
+      "Sha256": "29f7fd091e558ddec471a353550bc25395aae95600142a5f9a48ecc116590164",
+      "Bytes": 11661
+    },
+    {
+      "Path": "src/DraftTG.RecommendationEngine/ContextualPickScoreModels.cs",
+      "Sha256": "dcf586339e32ed51115cad33520f0f8fde23a7666b16ee86b450e77b87eb866f",
+      "Bytes": 24699
+    },
+    {
+      "Path": "src/DraftTG.RecommendationEngine/ContextualRecommendationEngine.cs",
+      "Sha256": "7d1d4ee77028089edc61d68ded8c72e6b73bbd862c7660c8006cebc92b9277c4",
+      "Bytes": 3428
+    },
+    {
+      "Path": "src/DraftTG.RecommendationEngine/DeckBuildingModels.cs",
+      "Sha256": "b90c324e58633ec73cb30d121f0ad3bb8ecd05713944a50780f8e0a6a665eee3",
+      "Bytes": 7260
+    },
+    {
+      "Path": "src/DraftTG.RecommendationEngine/DeckMana.cs",
+      "Sha256": "e9824dcc1521a7af18b128f16d39633f2875e9de9f53dd653d5a9fa3a0af03e0",
+      "Bytes": 3374
+    },
+    {
+      "Path": "src/DraftTG.RecommendationEngine/DeckPlanSelector.cs",
+      "Sha256": "42d669649f2b05b2dd2f8fd9393a008a3c86a3c43480326418e45b05b6102802",
+      "Bytes": 3481
+    },
+    {
+      "Path": "src/DraftTG.RecommendationEngine/DeckSpellOptimizer.cs",
+      "Sha256": "00832d1d75ade8511fa867418e4d29374cb93e2e096c782b4f5bcbea097d6bb3",
+      "Bytes": 6630
+    },
+    {
+      "Path": "src/DraftTG.RecommendationEngine/DraftPackObservationHistory.cs",
+      "Sha256": "54b0e243c756d85df61d3db2c6a39170a196ed81a7743c4d4f4b01c698d56340",
+      "Bytes": 6079
+    },
+    {
+      "Path": "src/DraftTG.RecommendationEngine/DraftPoolAnalyzer.cs",
+      "Sha256": "8f910b3467567b9c3c3a76ea12b00f4937d2bfc33ce481cecb45986aeca6483c",
+      "Bytes": 3874
+    },
+    {
+      "Path": "src/DraftTG.RecommendationEngine/DraftTG.RecommendationEngine.csproj",
+      "Sha256": "bd73e04e3f8443a292150fc64b8ded0af13db47290f7a4e98f11666aff8cfd0a",
+      "Bytes": 154
+    },
+    {
+      "Path": "src/DraftTG.RecommendationEngine/LaneContextualRecommendationEngine.cs",
+      "Sha256": "bb8c676323c20350ed4902dffe26cb0797f7105f984929aa7d59f49e10476f21",
+      "Bytes": 3717
+    },
+    {
+      "Path": "src/DraftTG.RecommendationEngine/LaneDetectionConfiguration.cs",
+      "Sha256": "3215e5c35a0e64e5876efce136b0f7f455b9f732783a82f9742a4de3ac52bd78",
+      "Bytes": 3950
+    },
+    {
+      "Path": "src/DraftTG.RecommendationEngine/LaneOpennessProfile.cs",
+      "Sha256": "1da07f29ed543c1d000dd117ce3a5800d893548325012ac901f36621cbc53a3d",
+      "Bytes": 4316
+    },
+    {
+      "Path": "src/DraftTG.RecommendationEngine/LimitedCardRoles.cs",
+      "Sha256": "634a32f84df627ce90a200d07254d9a881d0f0bfa0a6fd0b30964adbe0637cf8",
+      "Bytes": 9870
+    },
+    {
+      "Path": "src/DraftTG.RecommendationEngine/LimitedCardStatistics.cs",
+      "Sha256": "7f62e37f381c5d769f1c517667186fde8943b3d99f7f9e72533cc09ea68c7e7f",
+      "Bytes": 1569
+    },
+    {
+      "Path": "src/DraftTG.RecommendationEngine/ProjectedColorCommitment.cs",
+      "Sha256": "63ecceb20dd868b88126d3f7a7fabad52ce8895ce78c3eefc7bbde17dcf56ae7",
+      "Bytes": 2144
+    },
+    {
+      "Path": "src/DraftTG.RecommendationEngine/SparsePrimaryQualityPrior.cs",
+      "Sha256": "dc67c73dba891a2c8a0ac4f184565efe0dc44f3067b7e52c44fccfe87a01aaf3",
+      "Bytes": 3506
+    },
+    {
+      "Path": "src/DraftTG.RecommendationEngine/StatisticalRecommendationEngine.cs",
+      "Sha256": "a6616dcda49baa7ebd85efa27ae4904f6bc14d2a5be385d38a71da0748934fea",
+      "Bytes": 5930
+    },
+    {
+      "Path": "src/DraftTG.RecommendationEngine/SuggestedDeckBuilder.cs",
+      "Sha256": "53eebc9f40437d98e8915712f22915eaceb82f02e80b8617aae7a35c5b0dfac1",
+      "Bytes": 6081
+    },
+    {
+      "Path": "src/DraftTG.RecommendationEngine/SuggestedDeckModels.cs",
+      "Sha256": "8e42d11abbc50986f92ff5d16f8cc19335f5a0d18004cb0354ea3007a4df9965",
+      "Bytes": 8268
+    },
+    {
+      "Path": "src/DraftTG.RecommendationEngine/TrophyRecommendationEngine.cs",
+      "Sha256": "9c5e9d65589a025223af587eeb770b3702a850ea23c5b33887aeb4012d718c9e",
+      "Bytes": 7806
+    },
+    {
+      "Path": "tests/Fixtures/arena-woe-saved-deck-cards.json",
+      "Sha256": "59690d47bf5ca29a9fe9cf51c4525c9b55e26ce239611aeecf0b66a4864e2f73",
+      "Bytes": 18871
+    },
+    {
+      "Path": "tests/Fixtures/arena-woe-saved-deck-live.jsonl",
+      "Sha256": "d2d194c923ce407bb0a83bdf0c65105a0bfc647ac55f747b614dfc12b0634c39",
+      "Bytes": 1494
+    },
+    {
+      "Path": "tests/Fixtures/arena-woe-saved-deck-README.md",
+      "Sha256": "92f1f8e6077c8247a4920d3e3aaa7cbaa3b1c82a2c57d13e8b808ad201ca816f",
+      "Bytes": 1507
+    },
+    {
+      "Path": "tests/Fixtures/deckselect-woe-cards.json",
+      "Sha256": "9ec1f6acc0812b079fc7409545bc89a88939840ae3119e30503df19af3d479dc",
+      "Bytes": 18295
+    },
+    {
+      "Path": "tests/Fixtures/deckselect-woe-completion-live.jsonl",
+      "Sha256": "00d1e42a61ba3221765b51cf15c0b9d43eebd456f1f4badc24032a979a8db230",
+      "Bytes": 1814
+    },
+    {
+      "Path": "tests/Fixtures/deckselect-woe-completion-README.md",
+      "Sha256": "346876a586cbbee7060683569e2d5fba64cd83f56d0990b2d98b29690cde0257",
+      "Bytes": 1201
+    },
+    {
+      "Path": "tests/Fixtures/phase9e2b-p1p8-rg-failure.json",
+      "Sha256": "c8ea0b051ff7a74c02df28f2f8b21e41018684f0e030577f595ab1cf882c9db0",
+      "Bytes": 200668
+    },
+    {
+      "Path": "tests/Fixtures/phase9e2b-p1p8-v1.6.2.json",
+      "Sha256": "b33caa4893bbcbac93c568e0f626caeec353180b6961023fa791ef1021e0f525",
+      "Bytes": 1006386
+    },
+    {
+      "Path": "tests/Fixtures/phase9f2-live-pack-stat-provenance.json",
+      "Sha256": "685280bac2bba899d61437c21aa71ecaf6bf71fd2d4d925127f73986079e40d1",
+      "Bytes": 424888
+    },
+    {
+      "Path": "tests/Fixtures/phase9f2-live-pack-v1.6.1.json",
+      "Sha256": "9b64d8dbc090e03e49c4b8562e5695b74092102a244e38becc4bfd7af4c3c494",
+      "Bytes": 394688
+    },
+    {
+      "Path": "tests/Fixtures/premier-fra-course-cards.json",
+      "Sha256": "255c871a0fec9cad330901bb422a933a986ad7d0296fbcfc4053b22a017eb6c6",
+      "Bytes": 19808
+    },
+    {
+      "Path": "tests/Fixtures/premier-fra-course-snapshot-live.jsonl",
+      "Sha256": "09ed5856f02dce226226aebdbe175b646e33dfe78245fca8c5bef57dd8345ab5",
+      "Bytes": 2472
+    },
+    {
+      "Path": "tests/Fixtures/premier-fra-course-snapshot-README.md",
+      "Sha256": "4a73d7e167763b1aa7f94b9df6a5678fec7c80775fcd522e2ee7a1cbe1b5445b",
+      "Bytes": 2279
+    },
+    {
+      "Path": "tools/DraftTG.HistoricalEvaluation/phase_b.py",
+      "Sha256": "8b9bb9f78a7561bc6006fdc68734a0e145edb24eaefb768ccede9068e97b3c52",
+      "Bytes": 3250
+    },
+    {
+      "Path": "tools/DraftTG.HistoricalEvaluation/phase_b_audit.py",
+      "Sha256": "ce553c155a4b1c5c132afbc5c4c5ea98a4142bb26d6d5d13bfb0eaa894b3fbf3",
+      "Bytes": 5412
+    },
+    {
+      "Path": "tools/DraftTG.HistoricalEvaluation/phase_b_core.py",
+      "Sha256": "bb88f97e15b222ad60b2abe7a4115b58134acc31fe870add4cdf012216d723c1",
+      "Bytes": 7570
+    },
+    {
+      "Path": "tools/DraftTG.HistoricalEvaluation/phase_b_diagnostics.py",
+      "Sha256": "dfc28641927e004030b9c15b20c114d0ef7ad22674f14ef4418be42edd115334",
+      "Bytes": 5008
+    },
+    {
+      "Path": "tools/DraftTG.HistoricalEvaluation/phase_b_golden.py",
+      "Sha256": "1d23d0cef96bdc99eb7d94d24acdfcd8942a1ee0b644b123d85c6a4ec191cc9b",
+      "Bytes": 4184
+    },
+    {
+      "Path": "tools/DraftTG.HistoricalEvaluation/phase_b_qualify.py",
+      "Sha256": "bec76ca82ecd0662794803d28d939fe48a7c209f387fcb8e0b8d22f8ed5c90a1",
+      "Bytes": 26711
+    },
+    {
+      "Path": "tools/DraftTG.HistoricalEvaluation/phase_b_replay.py",
+      "Sha256": "064d4b415cec50403f473b4828ebcdf6485cb99675c674bf6fc519fb86c15f30",
+      "Bytes": 4115
+    },
+    {
+      "Path": "tools/DraftTG.HistoricalEvaluation/phase_b_report.py",
+      "Sha256": "561a59721424e28b3d91a5559748edbcfe9ed0491696e3494ef0bcc176c1f5b0",
+      "Bytes": 48981
+    },
+    {
+      "Path": "tools/DraftTG.HistoricalEvaluation/phase_b_research.py",
+      "Sha256": "b88d7defe0e93d46f7225fe57b7f24e10cacaeca8a69cf4e65f953e8597ee7f6",
+      "Bytes": 22140
+    },
+    {
+      "Path": "tools/DraftTG.HistoricalEvaluation/phase_b_source.py",
+      "Sha256": "aacc212515924308886f5ec551f13afe88611e5a65a851b14b2f1d79d0207177",
+      "Bytes": 4344
+    },
+    {
+      "Path": "tools/DraftTG.HistoricalEvaluation/Program.cs",
+      "Sha256": "a2f915f94e76f85f4552729860c9877fe2f5ea08b92bbaea861b98ac05d2a9bf",
+      "Bytes": 17521
+    },
+    {
+      "Path": "tools/DraftTG.HistoricalEvaluation/test_phase_b.py",
+      "Sha256": "fe3db76443da56ad15dba6126ef71e62b9648d48a4d7235ae92f5b0e33b5a7ac",
+      "Bytes": 5862
+    },
+    {
+      "Path": "V2_PHASE_B_SET_NORMALIZED_QUALITY_RESEARCH.md",
+      "Sha256": "0667fbc83dc2ad89198e49fbd7d16565c2e0ff7cc945ed13739f95faab9206f7",
+      "Bytes": 43097
+    }
+  ]
+}
