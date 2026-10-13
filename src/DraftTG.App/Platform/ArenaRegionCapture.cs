@@ -1,4 +1,4 @@
-﻿using System.ComponentModel;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -14,6 +14,7 @@ internal sealed record ArenaWindowGeometry(nint Handle, int X, int Y, int Width,
     public string WindowClass { get; init; } = "unknown";
     public bool IsVisible { get; init; } = true;
     public bool IsMinimized { get; init; }
+    public bool IsWindowed { get; init; }
     public string ArenaIntegrity { get; init; } = "unknown";
     public string DraftTGIntegrity { get; init; } = "unknown";
     public static bool SameCaptureGeometry(ArenaWindowGeometry? a, ArenaWindowGeometry? b) => a is null ? b is null
@@ -65,55 +66,16 @@ internal interface IArenaRegionCapture : IWindowFrameCapture { }
 /// <summary>Windows-only bounded regional capture. Foreground status is diagnostic, never an acquisition prerequisite.</summary>
 internal sealed class GdiBitBltFrameCapture : IArenaRegionCapture
 {
+    public GdiBitBltFrameCapture() => CaptureFreeSafety.AssertCaptureAllowed("GDI fallback backend");
     public string Backend => "GDI fallback / BitBlt SRCCOPY";
     public ArenaWindowInspection InspectWindow()
     {
-        var processes = DraftTG.ArenaIntegration.ArenaProcessDiscovery.GetCandidates();
-        try
-        {
-            if (processes.Length == 0) return new(false, null, "MTGA process not found.");
-            var ids = processes.Select(p => p.Id).ToHashSet();
-            var candidates = new List<ArenaWindowGeometry>();
-            var rejected = new List<string>();
-            Exception? failure = null;
-            EnumWindow callback = (hwnd, _) =>
-            {
-                try
-                {
-                    GetWindowThreadProcessId(hwnd, out var pid);
-                    if (!ids.Contains((int)pid)) return true;
-                    var title = new StringBuilder(512); var type = new StringBuilder(256);
-                    GetWindowText(hwnd, title, title.Capacity); GetClassName(hwnd, type, type.Capacity);
-                    if (GetWindow(hwnd, 4) != 0 || type.ToString() != "UnityWndClass")
-                    { rejected.Add($"0x{hwnd.ToInt64():X} PID {pid} '{title}' class '{type}' (owned/helper window)"); return true; }
-                    if (!GetClientRect(hwnd, out var rect)) throw NativeFailure("GetClientRect");
-                    var origin = new Point();
-                    if (!ClientToScreen(hwnd, ref origin)) throw NativeFailure("ClientToScreen");
-                    var dpi = GetDpiForWindow(hwnd);
-                    if (dpi == 0) throw NativeFailure("GetDpiForWindow");
-                    candidates.Add(new(hwnd, origin.X, origin.Y, rect.Right - rect.Left, rect.Bottom - rect.Top,
-                        dpi / 96d, GetForegroundWindow() == hwnd)
-                    { ProcessId = (int)pid, Title = title.ToString(), WindowClass = type.ToString(),
-                        IsVisible = IsWindowVisible(hwnd), IsMinimized = IsIconic(hwnd) });
-                    return true;
-                }
-                catch (Exception ex) { failure = ex; return false; }
-            };
-            var enumerated = EnumWindows(callback, 0);
-            if (failure is not null) throw failure;
-            if (!enumerated) throw NativeFailure("EnumWindows");
-            var eligible = candidates.Where(c => c.IsVisible && !c.IsMinimized && c.Width >= 100 && c.Height >= 100).ToArray();
-            if (eligible.Length > 1) return new(true, null, "Multiple MTGA Unity rendering HWNDs found; refusing ambiguous capture: "
-                + string.Join(", ", eligible.Select(w => $"0x{w.Handle.ToInt64():X} PID {w.ProcessId} '{w.Title}'")));
-            var selected = eligible.SingleOrDefault() ?? candidates.OrderByDescending(c => (long)c.Width * c.Height).FirstOrDefault();
-            if (selected is null) return new(true, null, "MTGA PID(s) " + string.Join(",", ids)
-                + "; no Unity rendering HWND found. " + string.Join("; ", rejected));
-            selected = selected with { ArenaIntegrity = Integrity(selected.ProcessId), DraftTGIntegrity = Integrity(Environment.ProcessId) };
-            var diagnostic = selected.ArenaIntegrity != selected.DraftTGIntegrity
-                ? "Integrity levels differ or are unavailable; capture will still be attempted. Elevation is not required by this backend." : null;
-            return new(true, selected, diagnostic);
-        }
-        finally { foreach (var process in processes) process.Dispose(); }
+        var inspection = ArenaWindowInspector.InspectWindow();
+        if (inspection.Window is not { } selected) return inspection;
+        selected = selected with { ArenaIntegrity = Integrity(selected.ProcessId), DraftTGIntegrity = Integrity(Environment.ProcessId) };
+        var diagnostic = selected.ArenaIntegrity != selected.DraftTGIntegrity
+            ? "Integrity levels differ or are unavailable; capture will still be attempted. Elevation is not required by this backend." : null;
+        return inspection with { Window = selected, Diagnostic = diagnostic };
     }
 
     private readonly SemaphoreSlim _captureGate = new(1, 1);

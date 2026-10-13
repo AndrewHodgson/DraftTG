@@ -8,7 +8,13 @@ internal sealed class ArenaMonoRuntime(IRemoteMemory memory, ulong monoBase)
 {
     private readonly Dictionary<(ulong, string), MonoField> fieldCache = [];
     private readonly Dictionary<string, ulong> images = [];
+    private readonly Dictionary<ulong, (string Name, string Namespace)> classNames = [];
     internal ulong RootDomain { get; private set; }
+    internal void CheckRootDomain()
+    {
+        if (memory.Ptr(monoBase + MonoLayout.RootDomainRva) != RootDomain)
+            throw new ArenaMemoryException(ArenaMemoryStatus.TransientReadFailure, "Mono root domain changed; snapshot discarded.") { ResetConnection = true };
+    }
 
     internal void Initialize(ArenaBuildFingerprint build)
     {
@@ -24,7 +30,9 @@ internal sealed class ArenaMonoRuntime(IRemoteMemory memory, ulong monoBase)
             if (seen.Count >= 1024 || !seen.Add(node)) Fail("Loaded-assembly chain exceeds bounds or cycles.");
             var assembly = Require(memory.Ptr(node), "Loaded assembly");
             var image = Require(memory.Ptr(assembly + MonoLayout.AssemblyImage), "Assembly image");
-            var name = Path.GetFileNameWithoutExtension(memory.CString(Require(memory.Ptr(image + MonoLayout.ImageName), "Image name"), 1024));
+            var name = Path.GetFileName(memory.CString(Require(memory.Ptr(image + MonoLayout.ImageName), "Image name"), 1024));
+            // Mono image names can be assembly names or filenames; periods in an assembly name are significant.
+            if (name.EndsWith(".dll", StringComparison.OrdinalIgnoreCase) || name.EndsWith(".exe", StringComparison.OrdinalIgnoreCase)) name = name[..^4];
             if (build.Assemblies.Any(a => a.Name == name))
             {
                 if (!images.TryAdd(name, image)) Fail($"Multiple loaded images named {name}.");
@@ -64,8 +72,15 @@ internal sealed class ArenaMonoRuntime(IRemoteMemory memory, ulong monoBase)
         return Require(found, $"Loaded class {assembly}:{ns}.{name}");
     }
 
-    internal string ClassName(ulong klass) => memory.CString(Require(memory.Ptr(klass + MonoLayout.ClassName), "Class name"));
-    internal string ClassNamespace(ulong klass) => memory.CString(Require(memory.Ptr(klass + MonoLayout.ClassNamespace), "Class namespace"));
+    private (string Name, string Namespace) Names(ulong klass)
+    {
+        if (!classNames.TryGetValue(klass, out var names))
+            classNames[klass] = names = (memory.CString(Require(memory.Ptr(klass + MonoLayout.ClassName), "Class name")),
+                memory.CString(Require(memory.Ptr(klass + MonoLayout.ClassNamespace), "Class namespace")));
+        return names;
+    }
+    internal string ClassName(ulong klass) => Names(klass).Name;
+    internal string ClassNamespace(ulong klass) => Names(klass).Namespace;
     internal ulong ObjectClass(ulong obj)
     {
         if ((obj & 7) != 0) Fail("Object pointer is not aligned.");
@@ -165,6 +180,15 @@ internal sealed class ArenaMonoRuntime(IRemoteMemory memory, ulong monoBase)
         }
         CheckList(state);
         return values;
+    }
+    internal uint[] CardIdentifiers(MonoListState state)
+    {
+        var element = Require(memory.Ptr(ObjectClass(state.Items)), "Int32 array element class");
+        if (ClassName(element) != "Int32" || ClassNamespace(element) != "System" || memory.Ptr(element + MonoLayout.ClassImage) != images["mscorlib"])
+            Fail("Expected framework Int32 card-ID array.");
+        var result = Enumerable.Range(0, state.Count).Select(i => memory.U32(state.Items + MonoLayout.ArrayData + (ulong)i * 4)).ToArray();
+        CheckList(state);
+        return result;
     }
     internal void CheckList(MonoListState state)
     {

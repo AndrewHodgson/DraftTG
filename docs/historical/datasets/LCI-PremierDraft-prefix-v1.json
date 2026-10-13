@@ -1,0 +1,12 @@
+{
+  "DatasetId": "public-prefix-v1-LCI-PremierDraft",
+  "Source": "17LandsPublic",
+  "SourceUri": "https://17lands-public.s3.amazonaws.com/analysis_data/draft_data/draft_data_public.LCI.PremierDraft.csv.gz",
+  "SetCode": "LCI",
+  "Format": "PremierDraft",
+  "Partition": "Development",
+  "BonusSets": [],
+  "PicksPerPack": 15,
+  "SourceSchema": "17lands-wide-draft-v1",
+  "IsPrefixSample": true
+}

@@ -10,6 +10,14 @@ using DraftTG.RecommendationEngine;
 
 if (args.FirstOrDefault() == "--live-failure")
 { await LiveFailureReplay.RunAsync(args.Skip(1).ToArray()); return; }
+if (args.FirstOrDefault() == "--live-pack-provenance")
+{ await LivePackProvenance.RunAsync(args.Skip(1).ToArray()); return; }
+if (args.FirstOrDefault() == "--card-stat-provenance")
+{ await LivePackProvenance.PrintAsync(args.Skip(1).ToArray()); return; }
+if (args.FirstOrDefault() == "--sparse-quality-replay")
+{ await SparseQualityReplay.RunAsync(args.Skip(1).ToArray()); return; }
+if (args.FirstOrDefault() == "--commitment-relevance-audit")
+{ await CommitmentRelevanceAudit.RunAsync(args.Skip(1).ToArray()); return; }
 
 // Offline audit only: cached production data and saved fixtures. No live runtime, no cache writes.
 var root = Path.GetFullPath(args.ElementAtOrDefault(0) ?? ".");
@@ -83,7 +91,7 @@ measured.Add(Benchmark("Synthetic stress / 42 varied colorless spells / all ten 
 Directory.CreateDirectory(Path.GetDirectoryName(output)!);
 await File.WriteAllTextAsync(output, JsonSerializer.Serialize(new
 {
-    ModelVersion = new ContextualPickScoreConfiguration().ModelVersion, NetworkRequests = handler.Requests,
+    ModelVersion = new ContextualPickScoreConfiguration(version: ContextualPickScoreVersion.V1_6).ModelVersion, NetworkRequests = handler.Requests,
     CachedRatings = new { fraRatings.Expansion, Format = fraRatings.Format.ToString(), fraRatings.FetchedAt, Rows = fraRatings.Rows.Count,
         EnvironmentRows = environment.Entries.Count(), Baseline = late.Recommendation!.EnvironmentBaseline },
     SavedFraPool = new { pool.TotalCardCount, Unique = pool.Entries.Count, Status = pool.Completeness.ToString() },
@@ -115,7 +123,8 @@ static LimitedStatisticsUpdate Update(DraftSnapshot snapshot, CardCatalog catalo
     LimitedCardStatisticsCatalog environment, string set, LimitedStatisticsFormat format, DraftPoolSnapshot? pool = null) => new(snapshot, false,
         new(new(set, format), !stats.Entries.Any() ? null : new(set, format), stats,
             !stats.Entries.Any() ? LimitedStatisticsSource.Unavailable : LimitedStatisticsSource.Cache, null, null)
-        { CardCatalog = catalog, EnvironmentCatalog = environment }, draftPool: pool);
+        { CardCatalog = catalog, EnvironmentCatalog = environment }, draftPool: pool,
+        pickScoreConfiguration: new(version: ContextualPickScoreVersion.V1_6));
 static object Benchmark(string name, Func<LimitedStatisticsUpdate> run)
 {
     for (var i = 0; i < 3; i++) run();

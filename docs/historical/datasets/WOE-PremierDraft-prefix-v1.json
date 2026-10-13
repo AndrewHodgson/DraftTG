@@ -1,0 +1,14 @@
+{
+  "DatasetId": "public-prefix-v1-WOE-PremierDraft",
+  "Source": "17LandsPublic",
+  "SourceUri": "https://17lands-public.s3.amazonaws.com/analysis_data/draft_data/draft_data_public.WOE.PremierDraft.csv.gz",
+  "SetCode": "WOE",
+  "Format": "PremierDraft",
+  "Partition": "Calibration",
+  "BonusSets": [
+    "WOT"
+  ],
+  "PicksPerPack": 14,
+  "SourceSchema": "17lands-wide-draft-v1",
+  "IsPrefixSample": true
+}

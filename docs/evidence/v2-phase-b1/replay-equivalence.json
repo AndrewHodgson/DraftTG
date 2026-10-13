@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "decisions": 336,
+  "drafts": 8,
+  "hash": "f3c108c0a59a8a8c90bf8f50427be08218bad674073bd3ffd9c3aa83f92643b2",
+  "before": "f3c108c0a59a8a8c90bf8f50427be08218bad674073bd3ffd9c3aa83f92643b2",
+  "after": "f3c108c0a59a8a8c90bf8f50427be08218bad674073bd3ffd9c3aa83f92643b2",
+  "scope": "All serialized score fields, selected deck projections, commitment, ranks, explanations, provenance, observation history, missing reasons; only timings excluded",
+  "beforeSeconds": 5.6824666,
+  "afterSeconds": 6.2376688
+}

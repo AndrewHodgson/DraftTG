@@ -23,7 +23,9 @@ public sealed record DraftTGRuntime(
     DateTimeOffset? CardDataUpdatedAt,
     string? CardDataDiagnostic,
     LimitedStatisticsCoordinator? Statistics = null,
-    DeckConstructionCoordinator? Decks = null);
+    DeckConstructionCoordinator? Decks = null,
+    CaptureFreeDraftSession? CaptureFree = null,
+    ArenaCardResolver? CardResolver = null);
 
 public interface IDraftTGRuntimeFactory
 {
@@ -31,7 +33,7 @@ public interface IDraftTGRuntimeFactory
 }
 
 /// <summary>Production composition root for card data and Arena log monitoring.</summary>
-public sealed class DraftTGRuntimeFactory : IDraftTGRuntimeFactory
+public sealed class DraftTGRuntimeFactory(bool captureFree = false) : IDraftTGRuntimeFactory
 {
     public async Task<DraftTGRuntime> CreateAsync(
         CancellationToken cancellationToken = default)
@@ -70,7 +72,8 @@ public sealed class DraftTGRuntimeFactory : IDraftTGRuntimeFactory
             MapStatus(bootstrap.DataSource),
             bootstrap.DatasetUpdatedAt,
             bootstrap.RefreshDiagnostic?.Message,
-            statistics, decks);
+            statistics, decks, captureFree ? new CaptureFreeDraftSession(coordinator, bootstrap.SnapshotAdapter,
+                new DraftTG.ArenaIntegration.Memory.ArenaDraftMemoryWatcher()) : null, bootstrap.ArenaCardResolver);
     }
 
     private static DraftTGCardDataStatus MapStatus(ScryfallCardDataLoadSource source) =>

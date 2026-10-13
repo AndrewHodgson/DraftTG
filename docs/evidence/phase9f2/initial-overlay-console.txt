@@ -1,0 +1,28 @@
+Capture-free draft overlay: ENABLED
+Screen capture localization: DISABLED
+WGC: DISABLED
+GDI fallback: DISABLED
+Arena memory: connecting
+Live evidence: C:\Users\Graphics0\Documents\Projects\DraftTG\artifacts\phase9f2-overlay-smoke.jsonl
+Arena memory: Success; ProcessAppeared
+Draft: unavailable; Pack/Pick: 1/1
+View: list; Cards: 0; Memory generation: 1; Stable read: no
+Reconciliation: MemoryUnavailable; Awaiting a second matching coherent read
+Arena memory: CONNECTED; PackAppeared
+Draft: unavailable; Pack/Pick: 1/1
+View: list; Cards: 14; Memory generation: 2; Stable read: yes
+Reconciliation: PackSetAgreement; Memory order retained exactly; history/pool/format retained from Player.log.
+  0  GrpId=106401  Uldaros Theorix  fra 159
+  1  GrpId=106292  Rise of the Deathbringer  fra 63
+  2  GrpId=106451  Tomik, Orzhov Lawmage  fra 206
+  3  GrpId=106486  Yargle, Glutton of Urborg  fra 241
+  4  GrpId=106498  Tomik, Izzet Sparkmage  fra 253
+  5  GrpId=106347  Restore with Empathy  fra 112
+  6  GrpId=106364  Desperate Futurescribe  fra 129
+  7  GrpId=106240  Memory Trap  fra 15
+  8  GrpId=106289  Rampart Hunter  fra 60
+  9  GrpId=106327  Tether Technician  fra 94
+  10  GrpId=106369  Fatehold Chronologist // Peer Review  fra 133
+  11  GrpId=106376  Konstrari Improviser // Soul Tether  fra 139
+  12  GrpId=106418  Medic's Kitesail  fra 173
+  13  GrpId=106423  Formidable Commons  fra 178

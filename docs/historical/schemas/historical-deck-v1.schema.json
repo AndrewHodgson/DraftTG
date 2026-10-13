@@ -1,0 +1,240 @@
+{
+  "type": "object",
+  "properties": {
+    "SetCode": {
+      "type": "string"
+    },
+    "Format": {
+      "type": "string"
+    },
+    "DraftId": {
+      "type": "string"
+    },
+    "BuildId": {
+      "type": "string"
+    },
+    "MainDeck": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Card": {
+            "type": "object",
+            "properties": {
+              "SourceIdentity": {
+                "type": "string"
+              },
+              "CanonicalId": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "PrintingSet": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "Status": {
+                "enum": [
+                  "ExactSet",
+                  "FrontFace",
+                  "ExplicitBonusSheet",
+                  "ExplicitIdentifier",
+                  "Unresolved",
+                  "Ambiguous"
+                ]
+              },
+              "Rule": {
+                "type": "string"
+              },
+              "Candidates": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "SourceIdentity",
+              "CanonicalId",
+              "PrintingSet",
+              "Status",
+              "Rule",
+              "Candidates"
+            ]
+          },
+          "Count": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "Card",
+          "Count"
+        ]
+      }
+    },
+    "Sideboard": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "#/properties/MainDeck/items"
+      }
+    },
+    "FullPool": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "#/properties/MainDeck/items"
+      }
+    },
+    "Wins": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "Losses": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "PlayerRank": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Evidence": {
+      "type": "string"
+    },
+    "Summary": {
+      "type": "object",
+      "properties": {
+        "TotalCards": {
+          "type": "integer"
+        },
+        "UnresolvedCards": {
+          "type": "integer"
+        },
+        "StructuredMetadataCards": {
+          "type": "integer"
+        },
+        "Lands": {
+          "type": "integer"
+        },
+        "Spells": {
+          "type": "integer"
+        },
+        "Creatures": {
+          "type": "integer"
+        },
+        "NonCreatureSpells": {
+          "type": "integer"
+        },
+        "EarlyPlays": {
+          "type": "integer"
+        },
+        "TopEnd": {
+          "type": "integer"
+        },
+        "Fixing": {
+          "type": "integer"
+        },
+        "WeightedRemoval": {
+          "type": "number"
+        },
+        "OracleTextCoveredCards": {
+          "type": "integer"
+        },
+        "CurveBuckets": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer"
+          }
+        },
+        "ColorDistribution": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer"
+          }
+        },
+        "ColoredPips": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number"
+          }
+        },
+        "UnknownManaCards": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "TotalCards",
+        "UnresolvedCards",
+        "StructuredMetadataCards",
+        "Lands",
+        "Spells",
+        "Creatures",
+        "NonCreatureSpells",
+        "EarlyPlays",
+        "TopEnd",
+        "Fixing",
+        "WeightedRemoval",
+        "OracleTextCoveredCards",
+        "CurveBuckets",
+        "ColorDistribution",
+        "ColoredPips",
+        "UnknownManaCards"
+      ]
+    },
+    "Provenance": {
+      "type": "object",
+      "properties": {
+        "Provider": {
+          "type": "string"
+        },
+        "Uri": {
+          "type": "string"
+        },
+        "Sha256": {
+          "type": "string"
+        },
+        "Row": {
+          "type": "integer"
+        },
+        "Schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "Provider",
+        "Uri",
+        "Sha256",
+        "Row",
+        "Schema"
+      ]
+    }
+  },
+  "required": [
+    "SetCode",
+    "Format",
+    "DraftId",
+    "BuildId",
+    "MainDeck",
+    "Sideboard",
+    "FullPool",
+    "Wins",
+    "Losses",
+    "PlayerRank",
+    "Evidence",
+    "Summary",
+    "Provenance"
+  ]
+}

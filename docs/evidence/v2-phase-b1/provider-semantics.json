@@ -1,0 +1,84 @@
+{
+  "documentation": "https://www.17lands.com/metrics_definitions",
+  "auditedProductionPath": [
+    "DraftTG.Data/SeventeenLandsCardRatingsClient.cs: ever_drawn_win_rate -> EverDrawnWinRate; ever_drawn_game_count -> EverDrawnGameCount",
+    "LimitedStatisticsMapper.Attach -> GameInHandWinRate/GameInHandGameCount unchanged",
+    "StatisticalRecommendationEngine: occurrence-weighted environment baseline; (n*p+500*b)/(n+500)",
+    "SparsePrimaryQualityPrior: FRA Quick <- Premier only, .9*n/(n+500) alternate delta, primary wins",
+    "ContextualPickScore: Q=soft-limit(.5+(adjustedRate-primaryBaseline)/.16); commitment affects R, not raw provider GIH"
+  ],
+  "establishedCountSemantics": "opening-plus-draw-instances",
+  "duplicateCopies": "Multiple opening/draw instances weight the same game outcome repeatedly; redraw can exceed deck copies",
+  "changes": [
+    {
+      "date": "2021-03-29",
+      "before": "GIH at most once per card/game"
+    },
+    {
+      "date": "2022-02-27",
+      "backfill": "2022-02-10",
+      "change": "Remove returned-to-hand from draws; GP per deck copy"
+    },
+    {
+      "date": "2022-10-16",
+      "backfill": "2022-09-01",
+      "change": "Remove tutored cards from drawn/GIH"
+    },
+    {
+      "date": "2024-11-12",
+      "change": "OH includes kept seven before bottoming, rather than start-turn-one hand"
+    }
+  ],
+  "compatibleUnitSets": [
+    "DMU",
+    "BRO",
+    "WOE",
+    "LCI",
+    "MKM",
+    "OTJ",
+    "ONE",
+    "MOM"
+  ],
+  "excludedFromModernFit": [
+    "KHM",
+    "STX",
+    "AFR",
+    "NEO",
+    "SNC",
+    "VOW"
+  ],
+  "currentOHCollectionEraNotReconstructed": true,
+  "sourceWholeGameValidityFilterCannotBeFullyReconstructed": true,
+  "ownedCaches": [
+    {
+      "file": "FRA_PremierDraft_ALL_TIME_v3.json",
+      "sha256": "5ff737deae268b69ee20aa2c75f5975164e7320a696f78d2793f92a0b381e693",
+      "bytes": 107931,
+      "set": "FRA",
+      "format": 0,
+      "period": "ALL_TIME",
+      "fetchedAt": "2026-10-05T19:44:35.1684847+00:00",
+      "rows": 290,
+      "countIdentityMatches": 290
+    },
+    {
+      "file": "FRA_QuickDraft_ALL_TIME_v3.json",
+      "sha256": "4aa17e20d560a6c17d21a90ccafd676352b575363a6aa08b0ff51addfd11cc1f",
+      "bytes": 102189,
+      "set": "FRA",
+      "format": 2,
+      "period": "ALL_TIME",
+      "fetchedAt": "2026-10-12T20:42:52.4662422+00:00",
+      "rows": 290,
+      "countIdentityMatches": 290
+    }
+  ],
+  "networkAggregateRequests": 0,
+  "bridge": {
+    "status": "UNAVAILABLE",
+    "historicalOverlapSets": 0,
+    "reason": "Owned aggregates are FRA only; historical games are other sets/time cohorts. No same-cohort rate/count bridge or correlations claimed"
+  },
+  "legitimateCrossFormatPairs": 1,
+  "generalizedReliabilityQualified": false
+}

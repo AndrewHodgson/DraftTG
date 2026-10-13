@@ -23,11 +23,15 @@ public sealed record LimitedStatisticsLoadResult(
     public IReadOnlyDictionary<CardIdentifier, StatisticalIdentityResolution> StatisticsResolutions { get; init; }
         = System.Collections.Frozen.FrozenDictionary<CardIdentifier, StatisticalIdentityResolution>.Empty;
     public string DatasetDiagnosticText { get; init; } = string.Empty;
+    public IReadOnlyDictionary<CardIdentifier, AlternateFormatQualityEvidence> AlternateQualityEvidence { get; init; }
+        = System.Collections.Frozen.FrozenDictionary<CardIdentifier, AlternateFormatQualityEvidence>.Empty;
+    public string? AlternateQualityDiagnostic { get; init; }
 }
 
 internal sealed record LoadedLimitedStatistics(LimitedStatisticsContext Requested,
     LimitedStatisticsContext Actual, SeventeenLandsRatingsResult Ratings,
-    LimitedCardStatisticsCatalog? EnvironmentCatalog = null);
+    LimitedCardStatisticsCatalog? EnvironmentCatalog = null, SeventeenLandsRatingsResult? AlternateQuality = null,
+    double? AlternateQualityBaseline = null);
 
 public sealed class LimitedStatisticsService(ISeventeenLandsCardRatingsClient client, CardCatalog catalog,
     ISetArchetypeProfileCatalog? archetypeProfiles = null, ArchetypeConfiguration? archetypeConfiguration = null,
@@ -112,8 +116,31 @@ public sealed class LimitedStatisticsService(ISeventeenLandsCardRatingsClient cl
     {
         var exact = await client.LoadAsync(context.Expansion, ProviderFormat(context.Format),
             cancellationToken: cancellationToken).ConfigureAwait(false);
-        // An empty or sparse exact-format result is never evidence for another format.
-        return Prepare(context, context, exact);
+        // Quality-only borrowing never replaces the primary rows/context/environment or any contextual input.
+        var prepared = Prepare(context, context, exact);
+        if (SparsePrimaryQualityPrior.SourceFormat(context) is not { } alternate
+            || !IsExactWholeEnvironment(exact, context)
+            || !exact.Rows.Any(row => !UsableGih(row)) || !exact.Rows.Any(UsableGih)) return prepared;
+        try
+        {
+            var evidence = await client.LoadAsync(context.Expansion, ProviderFormat(alternate),
+                cancellationToken: cancellationToken).ConfigureAwait(false);
+            var sourceContext = new LimitedStatisticsContext(context.Expansion, alternate);
+            double? baseline = null;
+            if (IsExactWholeEnvironment(evidence, sourceContext))
+            {
+                var environment = LimitedStatisticsMapper.MapEnvironment(evidence.Rows, catalog, sourceContext);
+                baseline = new StatisticalRecommendationEngine().Recommend(new(new(PackNumber.Create(1), PickNumber.Create(1)), []),
+                    new(), environment).EnvironmentBaseline;
+            }
+            return prepared with { AlternateQuality = evidence, AlternateQualityBaseline = baseline };
+        }
+        catch (OperationCanceledException) when (cancellationToken.IsCancellationRequested) { throw; }
+        catch (Exception ex) when (ex is HttpRequestException or IOException or InvalidDataException)
+        {
+            return prepared with { AlternateQuality = new(context.Expansion, ProviderFormat(alternate), [],
+                SeventeenLandsSource.Unavailable, diagnostic: "Alternate quality provider unavailable; neutral quality fallback retained.") };
+        }
     }
 
     private LoadedLimitedStatistics Prepare(LimitedStatisticsContext requested, LimitedStatisticsContext actual,
@@ -136,6 +163,7 @@ public sealed class LimitedStatisticsService(ISeventeenLandsCardRatingsClient cl
         if (loaded.Ratings.Rows.Count == 0) source = LimitedStatisticsSource.Unavailable;
         var diagnostic = string.Join(" ", new[] { loaded.Ratings.Diagnostic, mapping.Diagnostic }
             .Where(message => !string.IsNullOrEmpty(message)));
+        var quality = MapAlternateQuality(loaded, snapshot, mapping);
         return new(loaded.Requested, source == LimitedStatisticsSource.Unavailable ? null : loaded.Actual,
             mapping.Catalog, source, loaded.Ratings.FetchedAt, diagnostic.Length == 0 ? null : diagnostic)
         {
@@ -143,7 +171,40 @@ public sealed class LimitedStatisticsService(ISeventeenLandsCardRatingsClient cl
             CardCatalog = catalog,
             StatisticsResolvedNames = mapping.ResolvedNames,
             StatisticsResolutions = mapping.Resolutions,
-            DatasetDiagnosticText = loaded.Ratings.DatasetDiagnosticText
+            DatasetDiagnosticText = loaded.Ratings.DatasetDiagnosticText,
+            AlternateQualityEvidence = quality,
+            AlternateQualityDiagnostic = loaded.AlternateQuality?.Diagnostic
         };
     }
+
+    private IReadOnlyDictionary<CardIdentifier, AlternateFormatQualityEvidence> MapAlternateQuality(
+        LoadedLimitedStatistics loaded, DraftSnapshot? snapshot, LimitedStatisticsMappingResult primary)
+    {
+        var result = new Dictionary<CardIdentifier, AlternateFormatQualityEvidence>();
+        var empty = System.Collections.Frozen.FrozenDictionary<CardIdentifier, AlternateFormatQualityEvidence>.Empty;
+        if (snapshot is null || loaded.AlternateQuality is not { } alternate
+            || SparsePrimaryQualityPrior.SourceFormat(loaded.Requested) is not { } sourceFormat
+            || loaded.AlternateQualityBaseline is not { } baseline) return empty;
+        var source = new LimitedStatisticsContext(loaded.Requested.Expansion, sourceFormat);
+        if (!IsExactWholeEnvironment(loaded.Ratings, loaded.Requested) || !IsExactWholeEnvironment(alternate, source)) return empty;
+        var mapped = LimitedStatisticsMapper.Map(alternate.Rows, catalog, source, snapshot);
+        foreach (var id in snapshot.CurrentPack.AvailableCardIdentifiers.Distinct())
+        {
+            if (catalog.Find(id) is not { } card || !string.Equals(card.SetCode.Value, loaded.Requested.Expansion, StringComparison.OrdinalIgnoreCase)
+                || !primary.Resolutions.TryGetValue(id, out var resolution) || !resolution.IsResolved
+                || primary.Catalog.StatisticsFor(id) is not { } primaryRow || SparsePrimaryQualityPrior.HasUsableGih(primaryRow)
+                || mapped.Catalog.StatisticsFor(id) is not { } row || !SparsePrimaryQualityPrior.HasUsableGih(row)) continue;
+            result.Add(id, new(id, loaded.Requested, source, row.GameInHandWinRate!.Value, row.GameInHandGameCount!.Value,
+                baseline, mapped.ResolvedNames[id], alternate.FetchedAt, alternate.Source.ToString(), alternate.Metadata!.TimePeriod));
+        }
+        return System.Collections.Frozen.FrozenDictionary.ToFrozenDictionary(result);
+    }
+
+    private static bool IsExactWholeEnvironment(SeventeenLandsRatingsResult ratings, LimitedStatisticsContext context) =>
+        string.Equals(ratings.Expansion, context.Expansion, StringComparison.OrdinalIgnoreCase)
+        && ratings.Format == ProviderFormat(context.Format) && ratings.ColorPair is null
+        && ratings.Source != SeventeenLandsSource.Unavailable
+        && ratings.Metadata is { SourceEndpoint: "/api/card_data", TimePeriod: "ALL_TIME" };
+    private static bool UsableGih(SeventeenLandsRating row) => row.GameInHandGameCount is > 0
+        && row.GameInHandWinRate is { } rate && double.IsFinite(rate) && rate is >= 0 and <= 1;
 }

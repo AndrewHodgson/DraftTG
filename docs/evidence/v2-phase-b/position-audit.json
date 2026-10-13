@@ -1,0 +1,120 @@
+{
+  "datasets": [
+    {
+      "set": "AFR",
+      "format": "PremierDraft",
+      "cards": 261,
+      "seenCount": 209405,
+      "takenCount": 28511,
+      "featuresSha256": "74b0e1f31c5e53ce15f6920fcde67d88331abf07fdfd4f9d79a8f2eb8a68d55d"
+    },
+    {
+      "set": "BLB",
+      "format": "PremierDraft",
+      "cards": 271,
+      "seenCount": 189895,
+      "takenCount": 27114,
+      "featuresSha256": "b88e650241b9e472bf4769a2d7a9c7ae5af6f34763cbf7db5a6fbfd7cf022e86"
+    },
+    {
+      "set": "BRO",
+      "format": "PremierDraft",
+      "cards": 330,
+      "seenCount": 249397,
+      "takenCount": 31145,
+      "featuresSha256": "0b46fc0aa13ea9b6c8d60576586a72eba208d157c8b71c347731a86aee3ff75a"
+    },
+    {
+      "set": "DMU",
+      "format": "PremierDraft",
+      "cards": 261,
+      "seenCount": 218770,
+      "takenCount": 29157,
+      "featuresSha256": "7a6629d599081166511458f6c409278505c48fe331da976b409a2d5444271ea6"
+    },
+    {
+      "set": "DSK",
+      "format": "PremierDraft",
+      "cards": 286,
+      "seenCount": 219047,
+      "takenCount": 29191,
+      "featuresSha256": "ec0051ab9730cbf1b117a65fe2926582924add2936345587b4551fc67f626b2a"
+    },
+    {
+      "set": "LCI",
+      "format": "PremierDraft",
+      "cards": 291,
+      "seenCount": 251040,
+      "takenCount": 31369,
+      "featuresSha256": "f4874d96d160da447259a44574aedcd6190609875977269af75968245c5c15aa"
+    },
+    {
+      "set": "MKM",
+      "format": "PremierDraft",
+      "cards": 321,
+      "seenCount": 189424,
+      "takenCount": 27040,
+      "featuresSha256": "b73fa6956871abc5276ae804c069c51c6515ee9cb95aa3fc196d1de6474fc0a0"
+    },
+    {
+      "set": "NEO",
+      "format": "PremierDraft",
+      "cards": 287,
+      "seenCount": 250464,
+      "takenCount": 31281,
+      "featuresSha256": "5ee4143058a0eb0cc5a002d009a4b8301d8a0286e5f52c448b0ee47ce953cc16"
+    },
+    {
+      "set": "OTJ",
+      "format": "PremierDraft",
+      "cards": 381,
+      "seenCount": 219125,
+      "takenCount": 29194,
+      "featuresSha256": "95fa5f3bad3a22d6f67aafb8414711028cc39466af71e07f0cb8c95898877930"
+    },
+    {
+      "set": "SNC",
+      "format": "PremierDraft",
+      "cards": 261,
+      "seenCount": 216153,
+      "takenCount": 28765,
+      "featuresSha256": "6242c228dd0c1515b4a160c084bc49cd7594ea1bd195347bec8a048a1b075bbf"
+    },
+    {
+      "set": "STX",
+      "format": "PremierDraft",
+      "cards": 338,
+      "seenCount": 239621,
+      "takenCount": 30539,
+      "featuresSha256": "e70d5cc060ac3f65e2f79e372b455c28ce5bccb8f7c3dedca6dec95b18d5792a"
+    },
+    {
+      "set": "VOW",
+      "format": "PremierDraft",
+      "cards": 267,
+      "seenCount": 219980,
+      "takenCount": 29326,
+      "featuresSha256": "1df9ce5199b362ed085abe158b1ed668b076d7f9c30365cac8ba79dc9a63bbf0"
+    },
+    {
+      "set": "VOW",
+      "format": "QuickDraft",
+      "cards": 267,
+      "seenCount": 220132,
+      "takenCount": 29348,
+      "featuresSha256": "8012f90ad3bac184e53b9f9ebac4a14394d09e4b6cf6ff041d61bfa5cf48d2d4"
+    },
+    {
+      "set": "WOE",
+      "format": "PremierDraft",
+      "cards": 324,
+      "seenCount": 218259,
+      "takenCount": 29074,
+      "featuresSha256": "6ae7ff1ec5a01c98967c998d811f01e4dcf10ec84de334117632159389375af2"
+    }
+  ],
+  "indexing": "Source 0-based pack/pick -> 1-based pack-local pick, never global index; duplicate offered copies each count once; pack-specific histograms retained",
+  "officialALSAComparison": null,
+  "officialATAComparison": null,
+  "reason": "No licensed overlapping published ALSA/ATA aggregate supplied. Current API explicitly forbids outside use. Derived pack-local sample means must not be described as official ALSA/ATA."
+}

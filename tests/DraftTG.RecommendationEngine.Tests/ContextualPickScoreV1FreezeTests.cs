@@ -40,7 +40,7 @@ public sealed class ContextualPickScoreV1FreezeTests
         var colors = new ContextualRecommendationEngine().Recommend(snapshot, catalog, statistical);
         var lane = new LaneContextualRecommendationEngine().Recommend(snapshot, colors, observations ?? DraftPackObservationHistory.Empty, LimitedStatisticsFormat.PremierDraft);
         var archetype = new ArchetypeRecommendationEngine().Recommend(lane, Profile, new("WOE", LimitedStatisticsFormat.PremierDraft), pair);
-        return new ContextualPickScoreEngine().Recommend(snapshot, catalog, archetype, stats, Environment).Cards.ToArray();
+        return new ContextualPickScoreEngine(new(version: ContextualPickScoreVersion.V1_6)).Recommend(snapshot, catalog, archetype, stats, Environment).Cards.ToArray();
     }
     private static ContextualPickScore One(Entry card, IReadOnlyList<Entry>? pool = null, ArchetypePairStatistics? pair = null, DraftPackObservationHistory? obs = null) =>
         Score([card, E("filler", "{2}{W}", 3, .55)], pool, pair, obs)[0];

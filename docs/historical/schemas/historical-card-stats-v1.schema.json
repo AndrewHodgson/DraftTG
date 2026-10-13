@@ -1,0 +1,173 @@
+{
+  "type": "object",
+  "properties": {
+    "SetCode": {
+      "type": "string"
+    },
+    "Format": {
+      "type": "string"
+    },
+    "Regime": {
+      "enum": [
+        "MatureFormatReplay",
+        "ChronologicalBacktest"
+      ]
+    },
+    "AvailableAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "Provenance": {
+      "type": "string"
+    },
+    "Cards": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "SourceIdentity": {
+            "type": "string"
+          },
+          "SetCode": {
+            "type": "string"
+          },
+          "PrimaryFormat": {
+            "type": "string"
+          },
+          "GIHWinRate": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "default": null
+          },
+          "GIHGames": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "default": null
+          },
+          "GamesPlayedWinRate": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "default": null
+          },
+          "OpeningHandWinRate": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "default": null
+          },
+          "DrawnWinRate": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "default": null
+          },
+          "ALSA": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "default": null
+          },
+          "ATA": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "default": null
+          },
+          "GamesPlayed": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "default": null
+          },
+          "DraftedCount": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "default": null
+          },
+          "SetBaseline": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "default": null
+          },
+          "AvailableAt": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time",
+            "default": null
+          },
+          "Period": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "default": null
+          },
+          "Provenance": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "default": null
+          },
+          "SampleAverageSeenPosition": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "default": null
+          },
+          "SampleAverageTakenPosition": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "default": null
+          }
+        },
+        "required": [
+          "SourceIdentity",
+          "SetCode",
+          "PrimaryFormat"
+        ]
+      }
+    },
+    "AlternateQualityCards": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "#/properties/Cards/items"
+      },
+      "default": null
+    }
+  },
+  "required": [
+    "SetCode",
+    "Format",
+    "Regime",
+    "AvailableAt",
+    "Provenance",
+    "Cards"
+  ]
+}

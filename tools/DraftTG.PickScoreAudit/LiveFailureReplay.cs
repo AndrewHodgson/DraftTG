@@ -79,7 +79,8 @@ internal static class LiveFailureReplay
             foreach (var statistic in mapped.Catalog.Entries) participantStatistics[statistic.CardIdentifier] = statistic;
             var result = new LimitedStatisticsLoadResult(context, context, mapped.Catalog, LimitedStatisticsSource.Cache, ratings.FetchedAt, null)
             { CardCatalog = catalog, EnvironmentCatalog = environment };
-            var update = new LimitedStatisticsUpdate(snapshot, false, result, observationHistory: history, draftPool: resolved.DraftPool);
+            var update = new LimitedStatisticsUpdate(snapshot, false, result, observationHistory: history, draftPool: resolved.DraftPool,
+                pickScoreConfiguration: new(version: ContextualPickScoreVersion.V1_6));
             history = update.ObservationHistory;
             var projections = new List<CandidateProjectionAudit>();
             _ = new CandidateDeckImpactEvaluator().Evaluate(snapshot,

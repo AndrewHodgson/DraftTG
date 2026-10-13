@@ -1,0 +1,104 @@
+{
+  "sourceFixtures": {
+    "tests\\Fixtures\\phase9e2b-p1p8-v1.6.2.json": "b33caa4893bbcbac93c568e0f626caeec353180b6961023fa791ef1021e0f525",
+    "tests\\Fixtures\\phase9f2-live-pack-stat-provenance.json": "685280bac2bba899d61437c21aa71ecaf6bf71fd2d4d925127f73986079e40d1"
+  },
+  "usedForFit": false,
+  "parametersFrozen": true,
+  "primaryBaseline": 0.5704692518601339,
+  "aggregateSpread": 0.032323619322689186,
+  "P1P8": [
+    {
+      "name": "Arcane Amphisbaena",
+      "productionQ": 0.5057055995069826,
+      "productionExact": 25.501120969070218,
+      "productionRank": 1,
+      "commitmentStrength": 0.9446064139941691,
+      "playability": 1,
+      "candidates": {
+        "A": {
+          "Q": 0.5060687359318156,
+          "R": 1,
+          "Qeffective": 0.5060687359318156,
+          "exactScore": 25.51849556503526,
+          "evidence": "Illustrative transport of existing published aggregate/count; copy/presence semantics not proven equivalent",
+          "rank": 1
+        },
+        "B": {
+          "Q": 0.5075099708002756,
+          "R": 1,
+          "Qeffective": 0.5075099708002756,
+          "exactScore": 25.587452771797786,
+          "evidence": "Illustrative transport of existing published aggregate/count; copy/presence semantics not proven equivalent",
+          "rank": 1
+        },
+        "C": {
+          "Q": 0.5,
+          "R": 1,
+          "Qeffective": 0.5,
+          "exactScore": 25.228131317267277,
+          "evidence": "Neutral: required direct/independent stratum evidence unavailable",
+          "rank": 1
+        }
+      }
+    },
+    {
+      "name": "Unsummon",
+      "productionQ": 0.5786468825336437,
+      "productionExact": 25.328185285150624,
+      "productionRank": 2,
+      "commitmentStrength": 0.9446064139941691,
+      "playability": 0,
+      "candidates": {
+        "A": {
+          "Q": 0.5813663459684172,
+          "R": 0.10262390670553934,
+          "Qeffective": 0.5083501322976335,
+          "exactScore": 25.34153821808752,
+          "evidence": "Illustrative transport of existing published aggregate/count; copy/presence semantics not proven equivalent",
+          "rank": 2
+        },
+        "B": {
+          "Q": 0.6006896475993369,
+          "R": 0.10262390670553934,
+          "Qeffective": 0.510333165001448,
+          "exactScore": 25.436418240189617,
+          "evidence": "Illustrative transport of existing published aggregate/count; copy/presence semantics not proven equivalent",
+          "rank": 2
+        },
+        "C": {
+          "Q": 0.5,
+          "R": 0.10262390670553934,
+          "Qeffective": 0.5,
+          "exactScore": 24.942018464615543,
+          "evidence": "Neutral: required direct/independent stratum evidence unavailable",
+          "rank": 3
+        }
+      }
+    }
+  ],
+  "Uldaros": {
+    "name": "Uldaros Theorix",
+    "productionQ": 0.9765137572943683,
+    "productionExact": 48.21998625015792,
+    "candidates": {
+      "A": {
+        "Q": 0.5,
+        "exactScore": 25.0,
+        "reason": "Missing usable direct FRA QuickDraft GIH; these research specifications do not retain the existing narrow alternate-format prior"
+      },
+      "B": {
+        "Q": 0.5,
+        "exactScore": 25.0,
+        "reason": "Missing usable direct FRA QuickDraft GIH; these research specifications do not retain the existing narrow alternate-format prior"
+      },
+      "C": {
+        "Q": 0.5,
+        "exactScore": 25.0,
+        "reason": "Missing usable direct FRA QuickDraft GIH; these research specifications do not retain the existing narrow alternate-format prior"
+      }
+    },
+    "portabilityGate": "FAIL: cannot replace production Q with primary-only research missing-data rules; frozen production still retains its FRA alternate prior"
+  },
+  "interpretation": "No new provider requests; known regression fixtures only. Aggregate portability sensitivity, not raw game-presence proof. C cannot reconstruct disjoint OH/drawn strata from aggregate marginal rates. No retuning after these sanity checks."
+}

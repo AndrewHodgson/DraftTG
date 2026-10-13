@@ -1,0 +1,134 @@
+[
+  {
+    "set": "AFR",
+    "format": "PremierDraft",
+    "groupCounts": {
+      "low": 1996,
+      "high": 1025
+    },
+    "cards": 259,
+    "associationCorrelation": 0.5826546830809692,
+    "interpretation": "Unique modal observed 40 builds >=3 observed games, high observed game WR>=.6; build presence once, not copies; noncausal descriptive label"
+  },
+  {
+    "set": "BRO",
+    "format": "PremierDraft",
+    "groupCounts": {
+      "low": 4490,
+      "high": 2382
+    },
+    "cards": 328,
+    "associationCorrelation": 0.6576603628344009,
+    "interpretation": "Unique modal observed 40 builds >=3 observed games, high observed game WR>=.6; build presence once, not copies; noncausal descriptive label"
+  },
+  {
+    "set": "DMU",
+    "format": "PremierDraft",
+    "groupCounts": {
+      "high": 2809,
+      "low": 3849
+    },
+    "cards": 261,
+    "associationCorrelation": 0.6220682663022115,
+    "interpretation": "Unique modal observed 40 builds >=3 observed games, high observed game WR>=.6; build presence once, not copies; noncausal descriptive label"
+  },
+  {
+    "set": "KHM",
+    "format": "PremierDraft",
+    "groupCounts": {
+      "low": 2027,
+      "high": 981
+    },
+    "cards": 279,
+    "associationCorrelation": 0.5138959797633246,
+    "interpretation": "Unique modal observed 40 builds >=3 observed games, high observed game WR>=.6; build presence once, not copies; noncausal descriptive label"
+  },
+  {
+    "set": "LCI",
+    "format": "PremierDraft",
+    "groupCounts": {
+      "low": 4511,
+      "high": 2365
+    },
+    "cards": 286,
+    "associationCorrelation": 0.6304316886853409,
+    "interpretation": "Unique modal observed 40 builds >=3 observed games, high observed game WR>=.6; build presence once, not copies; noncausal descriptive label"
+  },
+  {
+    "set": "MKM",
+    "format": "PremierDraft",
+    "groupCounts": {
+      "high": 2421,
+      "low": 4722
+    },
+    "cards": 320,
+    "associationCorrelation": 0.5740448256126883,
+    "interpretation": "Unique modal observed 40 builds >=3 observed games, high observed game WR>=.6; build presence once, not copies; noncausal descriptive label"
+  },
+  {
+    "set": "NEO",
+    "format": "PremierDraft",
+    "groupCounts": {
+      "low": 4623,
+      "high": 2468
+    },
+    "cards": 282,
+    "associationCorrelation": 0.6980484732559571,
+    "interpretation": "Unique modal observed 40 builds >=3 observed games, high observed game WR>=.6; build presence once, not copies; noncausal descriptive label"
+  },
+  {
+    "set": "OTJ",
+    "format": "PremierDraft",
+    "groupCounts": {
+      "low": 4787,
+      "high": 2242
+    },
+    "cards": 373,
+    "associationCorrelation": 0.5685915981826418,
+    "interpretation": "Unique modal observed 40 builds >=3 observed games, high observed game WR>=.6; build presence once, not copies; noncausal descriptive label"
+  },
+  {
+    "set": "SNC",
+    "format": "PremierDraft",
+    "groupCounts": {
+      "low": 4656,
+      "high": 2362
+    },
+    "cards": 261,
+    "associationCorrelation": 0.6164672711377419,
+    "interpretation": "Unique modal observed 40 builds >=3 observed games, high observed game WR>=.6; build presence once, not copies; noncausal descriptive label"
+  },
+  {
+    "set": "STX",
+    "format": "PremierDraft",
+    "groupCounts": {
+      "low": 2108,
+      "high": 963
+    },
+    "cards": 335,
+    "associationCorrelation": 0.5842378576075834,
+    "interpretation": "Unique modal observed 40 builds >=3 observed games, high observed game WR>=.6; build presence once, not copies; noncausal descriptive label"
+  },
+  {
+    "set": "VOW",
+    "format": "PremierDraft",
+    "groupCounts": {
+      "low": 2081,
+      "high": 962
+    },
+    "cards": 265,
+    "associationCorrelation": 0.5766965015157808,
+    "interpretation": "Unique modal observed 40 builds >=3 observed games, high observed game WR>=.6; build presence once, not copies; noncausal descriptive label"
+  },
+  {
+    "set": "WOE",
+    "format": "PremierDraft",
+    "groupCounts": {
+      "high": 2457,
+      "low": 4540
+    },
+    "cards": 318,
+    "associationCorrelation": 0.6079311795343328,
+    "interpretation": "Unique modal observed 40 builds >=3 observed games, high observed game WR>=.6; build presence once, not copies; noncausal descriptive label"
+  }
+]

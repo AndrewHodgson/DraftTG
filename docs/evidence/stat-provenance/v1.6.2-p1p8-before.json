@@ -1,0 +1,1844 @@
+{
+  "Source": "Exact real FRA QuickDraft P1P8; offline freeze/replay, no live evidence",
+  "Set": "FRA",
+  "Format": "QuickDraft",
+  "Pack": 1,
+  "Pick": 8,
+  "SourceFixtureSha256": "C8EA0B051FF7A74C02DF28F2F8B21E41018684F0E030577F595AB1CF882C9DB0",
+  "SparseFixtureSha256": "9B64D8DBC090E03E49C4B8562E5695B74092102A244E38BECC4BFD7AF4C3C494",
+  "Pool": [
+    {
+      "Identity": "11ba4fdd-cc03-4bb6-a493-91a9785771d0",
+      "Name": "No Admittance",
+      "Colors": {
+        "Colors": [
+          "Red"
+        ],
+        "IsColorless": false,
+        "Count": 1
+      }
+    },
+    {
+      "Identity": "7d17f7e3-7b63-4674-9024-4fd1827f40ec",
+      "Name": "Woodwork Prodigy // Soul Tether",
+      "Colors": {
+        "Colors": [
+          "Red",
+          "Green"
+        ],
+        "IsColorless": false,
+        "Count": 2
+      }
+    },
+    {
+      "Identity": "7d29dfa1-9582-47bc-8f42-62b611bdcc4e",
+      "Name": "Konstrari Charm",
+      "Colors": {
+        "Colors": [
+          "Red",
+          "Green"
+        ],
+        "IsColorless": false,
+        "Count": 2
+      }
+    },
+    {
+      "Identity": "a56e0f91-b128-4693-a949-53cb403f4fbf",
+      "Name": "Greenhouse Propagator",
+      "Colors": {
+        "Colors": [
+          "Green"
+        ],
+        "IsColorless": false,
+        "Count": 1
+      }
+    },
+    {
+      "Identity": "b6331218-dbb8-44a9-8ba5-5fb1ab41c5c0",
+      "Name": "Keeper of the Quiet Hour",
+      "Colors": {
+        "Colors": [],
+        "IsColorless": true,
+        "Count": 0
+      }
+    },
+    {
+      "Identity": "dd3faaf4-45ca-4714-8dbe-37102ec131cf",
+      "Name": "Pia, Determined Rebuilder",
+      "Colors": {
+        "Colors": [
+          "Red"
+        ],
+        "IsColorless": false,
+        "Count": 1
+      }
+    },
+    {
+      "Identity": "f17d2792-b075-4c47-ad38-e7a7eaee5f8c",
+      "Name": "Aerid Konstrari",
+      "Colors": {
+        "Colors": [
+          "Red",
+          "Green"
+        ],
+        "IsColorless": false,
+        "Count": 2
+      }
+    }
+  ],
+  "History": [
+    {
+      "Pack": 1,
+      "Pick": 1,
+      "Card": "f17d2792-b075-4c47-ad38-e7a7eaee5f8c"
+    },
+    {
+      "Pack": 1,
+      "Pick": 2,
+      "Card": "7d17f7e3-7b63-4674-9024-4fd1827f40ec"
+    },
+    {
+      "Pack": 1,
+      "Pick": 3,
+      "Card": "dd3faaf4-45ca-4714-8dbe-37102ec131cf"
+    },
+    {
+      "Pack": 1,
+      "Pick": 4,
+      "Card": "11ba4fdd-cc03-4bb6-a493-91a9785771d0"
+    },
+    {
+      "Pack": 1,
+      "Pick": 5,
+      "Card": "a56e0f91-b128-4693-a949-53cb403f4fbf"
+    },
+    {
+      "Pack": 1,
+      "Pick": 6,
+      "Card": "b6331218-dbb8-44a9-8ba5-5fb1ab41c5c0"
+    },
+    {
+      "Pack": 1,
+      "Pick": 7,
+      "Card": "7d29dfa1-9582-47bc-8f42-62b611bdcc4e"
+    }
+  ],
+  "Commitment": {
+    "Configuration": {
+      "EvidenceScale": 4,
+      "FullCommitmentAfterPicks": 14,
+      "MaxColorAdjustment": 0.025,
+      "ModelVersion": "pool-color-v1"
+    },
+    "Colors": [
+      {
+        "Color": "White",
+        "Evidence": 0,
+        "RawSupport": -0.3,
+        "EffectiveSupport": -0.15
+      },
+      {
+        "Color": "Blue",
+        "Evidence": 0,
+        "RawSupport": -0.3,
+        "EffectiveSupport": -0.15
+      },
+      {
+        "Color": "Black",
+        "Evidence": 0,
+        "RawSupport": -0.3,
+        "EffectiveSupport": -0.15
+      },
+      {
+        "Color": "Red",
+        "Evidence": 3.5,
+        "RawSupport": 0.575,
+        "EffectiveSupport": 0.2875
+      },
+      {
+        "Color": "Green",
+        "Evidence": 2.5,
+        "RawSupport": 0.325,
+        "EffectiveSupport": 0.1625
+      }
+    ],
+    "CompletedPickCount": 7,
+    "UnresolvedPickCount": 0,
+    "MeanEvidence": 1.2,
+    "ProgressFactor": 0.5,
+    "CommitmentStrength": 0.2875,
+    "PrimaryColor": "Red",
+    "SecondaryColor": "Green"
+  },
+  "PairEvidence": [
+    {
+      "Pair": {
+        "Colors": {
+          "Colors": [
+            "Red",
+            "Green"
+          ],
+          "IsColorless": false,
+          "Count": 2
+        },
+        "Code": "RG",
+        "DisplayCode": "RG"
+      },
+      "PoolFit": 0.9583333333333334,
+      "CombinedEvidence": 6,
+      "Balance": 0.8333333333333334,
+      "EligibleNonlands": 7
+    },
+    {
+      "Pair": {
+        "Colors": {
+          "Colors": [
+            "White",
+            "Red"
+          ],
+          "IsColorless": false,
+          "Count": 2
+        },
+        "Code": "WR",
+        "DisplayCode": "RW"
+      },
+      "PoolFit": 0.4375,
+      "CombinedEvidence": 3.5,
+      "Balance": 0,
+      "EligibleNonlands": 3
+    },
+    {
+      "Pair": {
+        "Colors": {
+          "Colors": [
+            "Blue",
+            "Red"
+          ],
+          "IsColorless": false,
+          "Count": 2
+        },
+        "Code": "UR",
+        "DisplayCode": "UR"
+      },
+      "PoolFit": 0.4375,
+      "CombinedEvidence": 3.5,
+      "Balance": 0,
+      "EligibleNonlands": 3
+    },
+    {
+      "Pair": {
+        "Colors": {
+          "Colors": [
+            "Black",
+            "Red"
+          ],
+          "IsColorless": false,
+          "Count": 2
+        },
+        "Code": "BR",
+        "DisplayCode": "BR"
+      },
+      "PoolFit": 0.4375,
+      "CombinedEvidence": 3.5,
+      "Balance": 0,
+      "EligibleNonlands": 3
+    },
+    {
+      "Pair": {
+        "Colors": {
+          "Colors": [
+            "White",
+            "Green"
+          ],
+          "IsColorless": false,
+          "Count": 2
+        },
+        "Code": "WG",
+        "DisplayCode": "GW"
+      },
+      "PoolFit": 0.3125,
+      "CombinedEvidence": 2.5,
+      "Balance": 0,
+      "EligibleNonlands": 2
+    },
+    {
+      "Pair": {
+        "Colors": {
+          "Colors": [
+            "Blue",
+            "Green"
+          ],
+          "IsColorless": false,
+          "Count": 2
+        },
+        "Code": "UG",
+        "DisplayCode": "GU"
+      },
+      "PoolFit": 0.3125,
+      "CombinedEvidence": 2.5,
+      "Balance": 0,
+      "EligibleNonlands": 2
+    },
+    {
+      "Pair": {
+        "Colors": {
+          "Colors": [
+            "Black",
+            "Green"
+          ],
+          "IsColorless": false,
+          "Count": 2
+        },
+        "Code": "BG",
+        "DisplayCode": "BG"
+      },
+      "PoolFit": 0.3125,
+      "CombinedEvidence": 2.5,
+      "Balance": 0,
+      "EligibleNonlands": 2
+    },
+    {
+      "Pair": {
+        "Colors": {
+          "Colors": [
+            "White",
+            "Blue"
+          ],
+          "IsColorless": false,
+          "Count": 2
+        },
+        "Code": "WU",
+        "DisplayCode": "WU"
+      },
+      "PoolFit": 0,
+      "CombinedEvidence": 0,
+      "Balance": 0,
+      "EligibleNonlands": 1
+    },
+    {
+      "Pair": {
+        "Colors": {
+          "Colors": [
+            "White",
+            "Black"
+          ],
+          "IsColorless": false,
+          "Count": 2
+        },
+        "Code": "WB",
+        "DisplayCode": "WB"
+      },
+      "PoolFit": 0,
+      "CombinedEvidence": 0,
+      "Balance": 0,
+      "EligibleNonlands": 1
+    },
+    {
+      "Pair": {
+        "Colors": {
+          "Colors": [
+            "Blue",
+            "Black"
+          ],
+          "IsColorless": false,
+          "Count": 2
+        },
+        "Code": "UB",
+        "DisplayCode": "UB"
+      },
+      "PoolFit": 0,
+      "CombinedEvidence": 0,
+      "Balance": 0,
+      "EligibleNonlands": 1
+    }
+  ],
+  "Cards": [
+    {
+      "Name": "Blessed Ghoul",
+      "Identity": "bb975803-9bf2-401e-9414-d272df314398",
+      "Colors": {
+        "Colors": [
+          "White",
+          "Black"
+        ],
+        "IsColorless": false,
+        "Count": 2
+      },
+      "Score": {
+        "PackIndex": 0,
+        "CardIdentifier": {
+          "Value": "bb975803-9bf2-401e-9414-d272df314398"
+        },
+        "ContextualValue": 0.46611184948053924,
+        "QualityComponent": 0.474950164682197,
+        "LaneComponent": 0.48931065487401465,
+        "ArchetypeComponent": 0.5,
+        "DeckNeedComponent": 0.1,
+        "DraftProgress": 0.16666666666666666,
+        "ColorFit": -0.15,
+        "StatisticalDataWeight": 0.8284734133790738,
+        "Weights": {
+          "Quality": 0.6835131284347649,
+          "Lane": 0.2,
+          "Archetype": 0.10412171789130878,
+          "DeckNeed": 0.01236515367392632
+        },
+        "Availability": "Measured",
+        "ModelVersion": "contextual-pick-score-v1.6.1",
+        "DeckImpact": {
+          "IsAvailable": true,
+          "MakesProjectedDeck": false,
+          "ReplacesCard": null,
+          "CommonDeckQualityDelta": 0,
+          "CreatureCountDelta": 0,
+          "EarlyPlayDelta": 0,
+          "HighCostDelta": 0,
+          "ManaBaseDelta": 0,
+          "ColorPairChanged": false,
+          "ConstraintRelaxationChanged": false,
+          "IsIncompleteProjection": true,
+          "BeforePair": {
+            "Colors": {
+              "Colors": [
+                "Red",
+                "Green"
+              ],
+              "IsColorless": false,
+              "Count": 2
+            },
+            "Code": "RG",
+            "DisplayCode": "RG"
+          },
+          "AfterPair": {
+            "Colors": {
+              "Colors": [
+                "Red",
+                "Green"
+              ],
+              "IsColorless": false,
+              "Count": 2
+            },
+            "Code": "RG",
+            "DisplayCode": "RG"
+          },
+          "StructuralGain": 0,
+          "DeckNeed": 0.1,
+          "Reasons": [
+            "- Cannot enter a realistic projected maindeck (off-colour or blocked by deck constraints).",
+            "\u00B7 Incomplete projected shell, not a finished 40-card deck."
+          ],
+          "CutlineMargin": null,
+          "MembershipValue": 0,
+          "ReplacementLevel": 0.5474692518601338,
+          "RealCutline": null,
+          "ComparedWithFutureFiller": false,
+          "OpenSlots": 16,
+          "ContestedSlots": 16,
+          "ExpectedSupply": 27.200000000000003,
+          "RemainingPicks": 34,
+          "SupplyCoverage": 1.7000000000000002,
+          "SupplyUrgency": 0.43333333333333324,
+          "StructureGate": 0,
+          "SupplyProfile": "provisional-default (provisional: FRA-derived values, not calibrated for this set)",
+          "Playability": 0,
+          "BestPairWeight": 1,
+          "ProjectedPairCount": 1,
+          "DisplacedCard": null,
+          "ProjectedStructure": {
+            "Spells": 7,
+            "Creatures": 5,
+            "EarlyPlays": 2,
+            "HighCost": 0,
+            "Removal": 1.5
+          },
+          "StructureConfidence": 0,
+          "CreatureNeed": 0,
+          "EarlyPlayNeed": 0,
+          "RemovalNeed": 0,
+          "TopEndRedundancy": 0
+        },
+        "Roles": {
+          "ReliableRoles": "Creature, EarlyPlay",
+          "CuratedRoles": "None",
+          "HasStructuredMetadata": true,
+          "Source": "Structured metadata plus high-confidence Oracle rules.",
+          "RuleRoles": "None",
+          "RemovedRoles": "None",
+          "Roles": "Creature, EarlyPlay",
+          "RemovalWeight": 0
+        },
+        "Contributions": [
+          {
+            "Component": "Quality",
+            "Value": 0.474950164682197,
+            "Weight": 0.6835131284347649,
+            "PointsFromNeutral": -1.1985323913393047
+          },
+          {
+            "Component": "Lane",
+            "Value": 0.48931065487401465,
+            "Weight": 0.2,
+            "PointsFromNeutral": -0.1496508317637949
+          },
+          {
+            "Component": "Archetype",
+            "Value": 0.5,
+            "Weight": 0.10412171789130878,
+            "PointsFromNeutral": 0
+          },
+          {
+            "Component": "Deck Need",
+            "Value": 0.1,
+            "Weight": 0.01236515367392632,
+            "PointsFromNeutral": -0.346224302869937
+          },
+          {
+            "Component": "Soft limit",
+            "Value": 0.46611184948053924,
+            "Weight": 0,
+            "PointsFromNeutral": 0
+          }
+        ],
+        "Reasons": [
+          "Near-average intrinsic GIH performance.",
+          "- Cannot enter a realistic projected maindeck (off-colour or blocked by deck constraints).",
+          "\u00B7 Incomplete projected shell, not a finished 40-card deck."
+        ],
+        "Score0To50": 23,
+        "Tier": "Marginal",
+        "CurrentPackRank": 3,
+        "IsContextPick": false,
+        "QualityEvidence": "DirectCardStatistics",
+        "QualityProvenance": "DirectPrimary",
+        "QualityPrior": null,
+        "QualityRelevance": 1,
+        "EffectiveQualityComponent": 0.474950164682197,
+        "IsQualityEstimated": false
+      },
+      "Exact": 23.305592474026962,
+      "Projections": [
+        {
+          "Pair": "RG",
+          "Quality": 0.5673296310068339,
+          "Spells": 7,
+          "Shortfall": 0,
+          "BlendWeight": 1,
+          "CandidateEligibility": 0,
+          "CandidateInDeck": false,
+          "CutlineMargin": null,
+          "Main": [
+            {
+              "Identity": "11ba4fdd-cc03-4bb6-a493-91a9785771d0",
+              "Value": 1
+            },
+            {
+              "Identity": "7d17f7e3-7b63-4674-9024-4fd1827f40ec",
+              "Value": 1
+            },
+            {
+              "Identity": "7d29dfa1-9582-47bc-8f42-62b611bdcc4e",
+              "Value": 1
+            },
+            {
+              "Identity": "a56e0f91-b128-4693-a949-53cb403f4fbf",
+              "Value": 1
+            },
+            {
+              "Identity": "b6331218-dbb8-44a9-8ba5-5fb1ab41c5c0",
+              "Value": 1
+            },
+            {
+              "Identity": "dd3faaf4-45ca-4714-8dbe-37102ec131cf",
+              "Value": 1
+            },
+            {
+              "Identity": "f17d2792-b075-4c47-ad38-e7a7eaee5f8c",
+              "Value": 1
+            }
+          ]
+        }
+      ],
+      "Diagnostics": "Slot: 0; CardIdentifier: bb975803-9bf2-401e-9414-d272df314398; Card: Blessed Ghoul\nStats lookup: Blessed Ghoul; Stats resolved: unavailable; Identity: consistent\n17Lands identity: not evaluated\nGIH: 0.56563147; GIH n: 2415; ALSA: 6.2679484\nPhase 8: 0.5664612782092854; Stats rank: 3\nPhase 9A adjustment: -0.00375; Pool value: 0.5627112782092853; Pool rank: 3\nPhase 9B adjustment: -0.0004275738050394131; Lane value: 0.5622837044042459; Lane rank: 3\nPhase 9C adjustment: 0; Archetype value: 0.5622837044042459; Archetype rank: 3\nPhase 9D adjustment: 0; Final value: 0.5622837044042459; Context rank: 3\nPick Score: 23 / 50; Model: contextual-pick-score-v1.6.1; Measured\nExact score 23.31; tier marginal (pick-score-tiers-v2)\nPick-score ordinal rank: 3; progress 0.167; color fit -0.15; Phase 8 data weight 0.828\nQuality raw 0.475; relevance R 1 (playability 0); effective 0.475\nQuality 0.475; Lane 0.489; Archetype 0.5; Deck Need 0.1\nWeights Q 68 %, L 20 %, A 10 %, D 1 %\nContributions from neutral 25 (before clamp/rounding):\nQuality: -1.20 points\nLane: -0.15 points\nArchetype: 0.00 points\nDeck Need: -0.35 points\nSoft limit: 0.00 points\nDeck: available True; included False; replacement none; quality delta 0.0000; creatures 0; early 0; high 0; mana 0; pair RG -\u003E RG; pair changed False; relaxation changed False; incomplete shell True\nDeck fit: cut-line margin n/a; graded membership 0; real cut line ; virtual cut line 0.5475; best-pair weight 1 of 1 viable pair(s)\nFuture supply: open slots 16; contested slots 16; remaining picks 34; expected playables 27.2; coverage 1.7; urgency 0.43; structure gate 0; structural need 0 at confidence 0; D 0.1\nSupply profile: provisional-default (provisional: FRA-derived values, not calibrated for this set)\nQuality provenance: DirectPrimary\nEvidence:\nIntrinsic quality: average \u00B7 Direct \u2014 17Lands GIH 56.6 % over 2,415 games\nPlayability: realistic for your projected decks\nLane: neutral (no clear signal)\nArchetype: neutral (no clear signal)\nDeck need: weak (D 0.10)\n  - Cannot enter a realistic projected maindeck (off-colour or blocked by deck constraints).\nRoles: Creature, EarlyPlay; Structured metadata plus high-confidence Oracle rules.\nReasons:\nNear-average intrinsic GIH performance.\n- Cannot enter a realistic projected maindeck (off-colour or blocked by deck constraints).\n\u00B7 Incomplete projected shell, not a finished 40-card deck."
+    },
+    {
+      "Name": "Cryotheory Adept",
+      "Identity": "9ba1f7ce-3404-4932-9795-22967707f762",
+      "Colors": {
+        "Colors": [
+          "Blue"
+        ],
+        "IsColorless": false,
+        "Count": 1
+      },
+      "Score": {
+        "PackIndex": 1,
+        "CardIdentifier": {
+          "Value": "9ba1f7ce-3404-4932-9795-22967707f762"
+        },
+        "ContextualValue": 0.443871856762232,
+        "QualityComponent": 0.4425567387042253,
+        "LaneComponent": 0.5205887691061061,
+        "ArchetypeComponent": 0.5,
+        "DeckNeedComponent": 0.1,
+        "DraftProgress": 0.16666666666666666,
+        "ColorFit": -0.15,
+        "StatisticalDataWeight": 0.8350379412735071,
+        "Weights": {
+          "Quality": 0.6835131284347649,
+          "Lane": 0.2,
+          "Archetype": 0.10412171789130878,
+          "DeckNeed": 0.01236515367392632
+        },
+        "Availability": "Measured",
+        "ModelVersion": "contextual-pick-score-v1.6.1",
+        "DeckImpact": {
+          "IsAvailable": true,
+          "MakesProjectedDeck": false,
+          "ReplacesCard": null,
+          "CommonDeckQualityDelta": 0,
+          "CreatureCountDelta": 0,
+          "EarlyPlayDelta": 0,
+          "HighCostDelta": 0,
+          "ManaBaseDelta": 0,
+          "ColorPairChanged": false,
+          "ConstraintRelaxationChanged": false,
+          "IsIncompleteProjection": true,
+          "BeforePair": {
+            "Colors": {
+              "Colors": [
+                "Red",
+                "Green"
+              ],
+              "IsColorless": false,
+              "Count": 2
+            },
+            "Code": "RG",
+            "DisplayCode": "RG"
+          },
+          "AfterPair": {
+            "Colors": {
+              "Colors": [
+                "Red",
+                "Green"
+              ],
+              "IsColorless": false,
+              "Count": 2
+            },
+            "Code": "RG",
+            "DisplayCode": "RG"
+          },
+          "StructuralGain": 0,
+          "DeckNeed": 0.1,
+          "Reasons": [
+            "- Cannot enter a realistic projected maindeck (off-colour or blocked by deck constraints).",
+            "\u00B7 Incomplete projected shell, not a finished 40-card deck."
+          ],
+          "CutlineMargin": null,
+          "MembershipValue": 0,
+          "ReplacementLevel": 0.5474692518601338,
+          "RealCutline": null,
+          "ComparedWithFutureFiller": false,
+          "OpenSlots": 16,
+          "ContestedSlots": 16,
+          "ExpectedSupply": 27.200000000000003,
+          "RemainingPicks": 34,
+          "SupplyCoverage": 1.7000000000000002,
+          "SupplyUrgency": 0.43333333333333324,
+          "StructureGate": 0,
+          "SupplyProfile": "provisional-default (provisional: FRA-derived values, not calibrated for this set)",
+          "Playability": 0,
+          "BestPairWeight": 1,
+          "ProjectedPairCount": 1,
+          "DisplacedCard": null,
+          "ProjectedStructure": {
+            "Spells": 7,
+            "Creatures": 5,
+            "EarlyPlays": 2,
+            "HighCost": 0,
+            "Removal": 1.5
+          },
+          "StructureConfidence": 0,
+          "CreatureNeed": 0,
+          "EarlyPlayNeed": 0,
+          "RemovalNeed": 0,
+          "TopEndRedundancy": 0
+        },
+        "Roles": {
+          "ReliableRoles": "Creature, EarlyPlay",
+          "CuratedRoles": "None",
+          "HasStructuredMetadata": true,
+          "Source": "Structured metadata plus high-confidence Oracle rules.",
+          "RuleRoles": "None",
+          "RemovedRoles": "None",
+          "Roles": "Creature, EarlyPlay",
+          "RemovalWeight": 0
+        },
+        "Contributions": [
+          {
+            "Component": "Quality",
+            "Value": 0.4425567387042253,
+            "Weight": 0.6835131284347649,
+            "PointsFromNeutral": -2.748425626503943
+          },
+          {
+            "Component": "Lane",
+            "Value": 0.5205887691061061,
+            "Weight": 0.2,
+            "PointsFromNeutral": 0.28824276748548505
+          },
+          {
+            "Component": "Archetype",
+            "Value": 0.5,
+            "Weight": 0.10412171789130878,
+            "PointsFromNeutral": 0
+          },
+          {
+            "Component": "Deck Need",
+            "Value": 0.1,
+            "Weight": 0.01236515367392632,
+            "PointsFromNeutral": -0.346224302869937
+          },
+          {
+            "Component": "Soft limit",
+            "Value": 0.443871856762232,
+            "Weight": 0,
+            "PointsFromNeutral": 0
+          }
+        ],
+        "Reasons": [
+          "Near-average intrinsic GIH performance.",
+          "- Cannot enter a realistic projected maindeck (off-colour or blocked by deck constraints).",
+          "\u00B7 Incomplete projected shell, not a finished 40-card deck."
+        ],
+        "Score0To50": 22,
+        "Tier": "Marginal",
+        "CurrentPackRank": 4,
+        "IsContextPick": false,
+        "QualityEvidence": "DirectCardStatistics",
+        "QualityProvenance": "DirectPrimary",
+        "QualityPrior": null,
+        "QualityRelevance": 1,
+        "EffectiveQualityComponent": 0.4425567387042253,
+        "IsQualityEstimated": false
+      },
+      "Exact": 22.193592838111602,
+      "Projections": [
+        {
+          "Pair": "RG",
+          "Quality": 0.5673296310068339,
+          "Spells": 7,
+          "Shortfall": 0,
+          "BlendWeight": 1,
+          "CandidateEligibility": 0,
+          "CandidateInDeck": false,
+          "CutlineMargin": null,
+          "Main": [
+            {
+              "Identity": "11ba4fdd-cc03-4bb6-a493-91a9785771d0",
+              "Value": 1
+            },
+            {
+              "Identity": "7d17f7e3-7b63-4674-9024-4fd1827f40ec",
+              "Value": 1
+            },
+            {
+              "Identity": "7d29dfa1-9582-47bc-8f42-62b611bdcc4e",
+              "Value": 1
+            },
+            {
+              "Identity": "a56e0f91-b128-4693-a949-53cb403f4fbf",
+              "Value": 1
+            },
+            {
+              "Identity": "b6331218-dbb8-44a9-8ba5-5fb1ab41c5c0",
+              "Value": 1
+            },
+            {
+              "Identity": "dd3faaf4-45ca-4714-8dbe-37102ec131cf",
+              "Value": 1
+            },
+            {
+              "Identity": "f17d2792-b075-4c47-ad38-e7a7eaee5f8c",
+              "Value": 1
+            }
+          ]
+        }
+      ],
+      "Diagnostics": "Slot: 1; CardIdentifier: 9ba1f7ce-3404-4932-9795-22967707f762; Card: Cryotheory Adept\nStats lookup: Cryotheory Adept; Stats resolved: unavailable; Identity: consistent\n17Lands identity: not evaluated\nGIH: 0.55946266; GIH n: 2531; ALSA: 7.6055679\nPhase 8: 0.5612783300528099; Stats rank: 4\nPhase 9A adjustment: -0.00375; Pool value: 0.5575283300528099; Pool rank: 4\nPhase 9B adjustment: 0.0008235507642442441; Lane value: 0.5583518808170541; Lane rank: 4\nPhase 9C adjustment: 0; Archetype value: 0.5583518808170541; Archetype rank: 4\nPhase 9D adjustment: 0; Final value: 0.5583518808170541; Context rank: 4\nPick Score: 22 / 50; Model: contextual-pick-score-v1.6.1; Measured\nExact score 22.19; tier marginal (pick-score-tiers-v2)\nPick-score ordinal rank: 4; progress 0.167; color fit -0.15; Phase 8 data weight 0.835\nQuality raw 0.443; relevance R 1 (playability 0); effective 0.443\nQuality 0.443; Lane 0.521; Archetype 0.5; Deck Need 0.1\nWeights Q 68 %, L 20 %, A 10 %, D 1 %\nContributions from neutral 25 (before clamp/rounding):\nQuality: -2.75 points\nLane: \u002B0.29 points\nArchetype: 0.00 points\nDeck Need: -0.35 points\nSoft limit: 0.00 points\nDeck: available True; included False; replacement none; quality delta 0.0000; creatures 0; early 0; high 0; mana 0; pair RG -\u003E RG; pair changed False; relaxation changed False; incomplete shell True\nDeck fit: cut-line margin n/a; graded membership 0; real cut line ; virtual cut line 0.5475; best-pair weight 1 of 1 viable pair(s)\nFuture supply: open slots 16; contested slots 16; remaining picks 34; expected playables 27.2; coverage 1.7; urgency 0.43; structure gate 0; structural need 0 at confidence 0; D 0.1\nSupply profile: provisional-default (provisional: FRA-derived values, not calibrated for this set)\nQuality provenance: DirectPrimary\nEvidence:\nIntrinsic quality: average \u00B7 Direct \u2014 17Lands GIH 55.9 % over 2,531 games\nPlayability: realistic for your projected decks\nLane: neutral (no clear signal)\nArchetype: neutral (no clear signal)\nDeck need: weak (D 0.10)\n  - Cannot enter a realistic projected maindeck (off-colour or blocked by deck constraints).\nRoles: Creature, EarlyPlay; Structured metadata plus high-confidence Oracle rules.\nReasons:\nNear-average intrinsic GIH performance.\n- Cannot enter a realistic projected maindeck (off-colour or blocked by deck constraints).\n\u00B7 Incomplete projected shell, not a finished 40-card deck."
+    },
+    {
+      "Name": "Arcane Amphisbaena",
+      "Identity": "1bf923c4-f0b7-4271-978c-fd2e79fe1cc8",
+      "Colors": {
+        "Colors": [
+          "Green"
+        ],
+        "IsColorless": false,
+        "Count": 1
+      },
+      "Score": {
+        "PackIndex": 2,
+        "CardIdentifier": {
+          "Value": "1bf923c4-f0b7-4271-978c-fd2e79fe1cc8"
+        },
+        "ContextualValue": 0.5100224193814044,
+        "QualityComponent": 0.5057055995069826,
+        "LaneComponent": 0.5011925995257194,
+        "ArchetypeComponent": 0.5,
+        "DeckNeedComponent": 0.7442750808127223,
+        "DraftProgress": 0.16666666666666666,
+        "ColorFit": 0.1625,
+        "StatisticalDataWeight": 0.8803255146002872,
+        "Weights": {
+          "Quality": 0.6835131284347649,
+          "Lane": 0.2,
+          "Archetype": 0.10412171789130878,
+          "DeckNeed": 0.01236515367392632
+        },
+        "Availability": "Measured",
+        "ModelVersion": "contextual-pick-score-v1.6.1",
+        "DeckImpact": {
+          "IsAvailable": true,
+          "MakesProjectedDeck": true,
+          "ReplacesCard": null,
+          "CommonDeckQualityDelta": 0.0005065645968022059,
+          "CreatureCountDelta": 1,
+          "EarlyPlayDelta": 1,
+          "HighCostDelta": 0,
+          "ManaBaseDelta": 0,
+          "ColorPairChanged": false,
+          "ConstraintRelaxationChanged": true,
+          "IsIncompleteProjection": true,
+          "BeforePair": {
+            "Colors": {
+              "Colors": [
+                "Red",
+                "Green"
+              ],
+              "IsColorless": false,
+              "Count": 2
+            },
+            "Code": "RG",
+            "DisplayCode": "RG"
+          },
+          "AfterPair": {
+            "Colors": {
+              "Colors": [
+                "Red",
+                "Green"
+              ],
+              "IsColorless": false,
+              "Count": 2
+            },
+            "Code": "RG",
+            "DisplayCode": "RG"
+          },
+          "StructuralGain": 0,
+          "DeckNeed": 0.7442750808127223,
+          "Reasons": [
+            "\u002B Fills an open slot: 2.4 pp above the expected later filler (54.7 %).",
+            "\u002B Deck still needs 16 playables with only 34 picks remaining.",
+            "\u00B7 Incomplete projected shell, not a finished 40-card deck."
+          ],
+          "CutlineMargin": 0.023912895921117228,
+          "MembershipValue": 0.7865644544667174,
+          "ReplacementLevel": 0.5474692518601338,
+          "RealCutline": null,
+          "ComparedWithFutureFiller": true,
+          "OpenSlots": 16,
+          "ContestedSlots": 16,
+          "ExpectedSupply": 27.200000000000003,
+          "RemainingPicks": 34,
+          "SupplyCoverage": 1.7000000000000002,
+          "SupplyUrgency": 0.43333333333333324,
+          "StructureGate": 0.7677491110219381,
+          "SupplyProfile": "provisional-default (provisional: FRA-derived values, not calibrated for this set)",
+          "Playability": 1,
+          "BestPairWeight": 1,
+          "ProjectedPairCount": 1,
+          "DisplacedCard": null,
+          "ProjectedStructure": {
+            "Spells": 7,
+            "Creatures": 5,
+            "EarlyPlays": 2,
+            "HighCost": 0,
+            "Removal": 1.5
+          },
+          "StructureConfidence": 0.3888888888888889,
+          "CreatureNeed": 0,
+          "EarlyPlayNeed": 0,
+          "RemovalNeed": 0,
+          "TopEndRedundancy": 0
+        },
+        "Roles": {
+          "ReliableRoles": "Creature, EarlyPlay",
+          "CuratedRoles": "None",
+          "HasStructuredMetadata": true,
+          "Source": "Structured metadata plus high-confidence Oracle rules.",
+          "RuleRoles": "None",
+          "RemovedRoles": "None",
+          "Roles": "Creature, EarlyPlay",
+          "RemovalWeight": 0
+        },
+        "Contributions": [
+          {
+            "Component": "Quality",
+            "Value": 0.5057055995069826,
+            "Weight": 0.6835131284347649,
+            "PointsFromNeutral": 0.2729896518029457
+          },
+          {
+            "Component": "Lane",
+            "Value": 0.5011925995257194,
+            "Weight": 0.2,
+            "PointsFromNeutral": 0.016696393360071227
+          },
+          {
+            "Component": "Archetype",
+            "Value": 0.5,
+            "Weight": 0.10412171789130878,
+            "PointsFromNeutral": 0
+          },
+          {
+            "Component": "Deck Need",
+            "Value": 0.7442750808127223,
+            "Weight": 0.01236515367392632,
+            "PointsFromNeutral": 0.21143492390720572
+          },
+          {
+            "Component": "Soft limit",
+            "Value": 0.5100224193814044,
+            "Weight": 0,
+            "PointsFromNeutral": 0
+          }
+        ],
+        "Reasons": [
+          "Near-average intrinsic GIH performance.",
+          "\u002B Fills an open slot: 2.4 pp above the expected later filler (54.7 %).",
+          "\u002B Deck still needs 16 playables with only 34 picks remaining.",
+          "\u00B7 Incomplete projected shell, not a finished 40-card deck."
+        ],
+        "Score0To50": 26,
+        "Tier": "Solid",
+        "CurrentPackRank": 2,
+        "IsContextPick": false,
+        "QualityEvidence": "DirectCardStatistics",
+        "QualityProvenance": "DirectPrimary",
+        "QualityPrior": null,
+        "QualityRelevance": 1,
+        "EffectiveQualityComponent": 0.5057055995069826,
+        "IsQualityEstimated": false
+      },
+      "Exact": 25.501120969070218,
+      "Projections": [
+        {
+          "Pair": "RG",
+          "Quality": 0.5678361956036361,
+          "Spells": 8,
+          "Shortfall": 0,
+          "BlendWeight": 1,
+          "CandidateEligibility": 1,
+          "CandidateInDeck": true,
+          "CutlineMargin": 0.023912895921117228,
+          "Main": [
+            {
+              "Identity": "11ba4fdd-cc03-4bb6-a493-91a9785771d0",
+              "Value": 1
+            },
+            {
+              "Identity": "1bf923c4-f0b7-4271-978c-fd2e79fe1cc8",
+              "Value": 1
+            },
+            {
+              "Identity": "7d17f7e3-7b63-4674-9024-4fd1827f40ec",
+              "Value": 1
+            },
+            {
+              "Identity": "7d29dfa1-9582-47bc-8f42-62b611bdcc4e",
+              "Value": 1
+            },
+            {
+              "Identity": "a56e0f91-b128-4693-a949-53cb403f4fbf",
+              "Value": 1
+            },
+            {
+              "Identity": "b6331218-dbb8-44a9-8ba5-5fb1ab41c5c0",
+              "Value": 1
+            },
+            {
+              "Identity": "dd3faaf4-45ca-4714-8dbe-37102ec131cf",
+              "Value": 1
+            },
+            {
+              "Identity": "f17d2792-b075-4c47-ad38-e7a7eaee5f8c",
+              "Value": 1
+            }
+          ]
+        }
+      ],
+      "Diagnostics": "Slot: 2; CardIdentifier: 1bf923c4-f0b7-4271-978c-fd2e79fe1cc8; Card: Arcane Amphisbaena\nStats lookup: Arcane Amphisbaena; Stats resolved: unavailable; Identity: consistent\n17Lands identity: not evaluated\nGIH: 0.57150625; GIH n: 3678; ALSA: 3.7472598\nPhase 8: 0.5713821477812511; Stats rank: 2\nPhase 9A adjustment: 0.0040625; Pool value: 0.575444647781251; Pool rank: 2\nPhase 9B adjustment: 4.770398102877688E-05; Lane value: 0.5754923517622799; Lane rank: 2\nPhase 9C adjustment: 0; Archetype value: 0.5754923517622799; Archetype rank: 2\nPhase 9D adjustment: 0; Final value: 0.5754923517622799; Context rank: 2\nPick Score: 26 / 50; Model: contextual-pick-score-v1.6.1; Measured\nExact score 25.50; tier solid (pick-score-tiers-v2)\nPick-score ordinal rank: 2; progress 0.167; color fit 0.163; Phase 8 data weight 0.88\nQuality raw 0.506; relevance R 1 (playability 1); effective 0.506\nQuality 0.506; Lane 0.501; Archetype 0.5; Deck Need 0.744\nWeights Q 68 %, L 20 %, A 10 %, D 1 %\nContributions from neutral 25 (before clamp/rounding):\nQuality: \u002B0.27 points\nLane: \u002B0.02 points\nArchetype: 0.00 points\nDeck Need: \u002B0.21 points\nSoft limit: 0.00 points\nDeck: available True; included True; replacement none; quality delta \u002B0.0005; creatures 1; early 1; high 0; mana 0; pair RG -\u003E RG; pair changed False; relaxation changed True; incomplete shell True\nDeck fit: cut-line margin \u002B2.39 pp; graded membership 0.787; real cut line ; virtual cut line 0.5475 (used); best-pair weight 1 of 1 viable pair(s)\nFuture supply: open slots 16; contested slots 16; remaining picks 34; expected playables 27.2; coverage 1.7; urgency 0.43; structure gate 0.768; structural need 0 at confidence 0.39; D 0.744\nSupply profile: provisional-default (provisional: FRA-derived values, not calibrated for this set)\nQuality provenance: DirectPrimary\nEvidence:\nIntrinsic quality: average \u00B7 Direct \u2014 17Lands GIH 57.2 % over 3,678 games\nPlayability: realistic for your projected decks\nLane: neutral (no clear signal)\nArchetype: neutral (no clear signal)\nDeck need: strong (D 0.74)\n  \u002B Fills an open slot: 2.4 pp above the expected later filler (54.7 %).\n  \u002B Deck still needs 16 playables with only 34 picks remaining.\nRoles: Creature, EarlyPlay; Structured metadata plus high-confidence Oracle rules.\nReasons:\nNear-average intrinsic GIH performance.\n\u002B Fills an open slot: 2.4 pp above the expected later filler (54.7 %).\n\u002B Deck still needs 16 playables with only 34 picks remaining.\n\u00B7 Incomplete projected shell, not a finished 40-card deck."
+    },
+    {
+      "Name": "Hallway Heckler // Vicious Verse",
+      "Identity": "7e324816-552f-455d-97c4-5ea6b26d2e6e",
+      "Colors": {
+        "Colors": [
+          "Red"
+        ],
+        "IsColorless": false,
+        "Count": 1
+      },
+      "Score": {
+        "PackIndex": 3,
+        "CardIdentifier": {
+          "Value": "7e324816-552f-455d-97c4-5ea6b26d2e6e"
+        },
+        "ContextualValue": 0.34067108189386897,
+        "QualityComponent": 0.33553167342092627,
+        "LaneComponent": 0.4924666066138767,
+        "ArchetypeComponent": 0.5,
+        "DeckNeedComponent": 0.5094272204765126,
+        "DraftProgress": 0.16666666666666666,
+        "ColorFit": 0.2875,
+        "StatisticalDataWeight": 0.7483643683945647,
+        "Weights": {
+          "Quality": 0.6835131284347649,
+          "Lane": 0.2,
+          "Archetype": 0.10412171789130878,
+          "DeckNeed": 0.01236515367392632
+        },
+        "Availability": "Measured",
+        "ModelVersion": "contextual-pick-score-v1.6.1",
+        "DeckImpact": {
+          "IsAvailable": true,
+          "MakesProjectedDeck": true,
+          "ReplacesCard": null,
+          "CommonDeckQualityDelta": -0.0028969139249189757,
+          "CreatureCountDelta": 1,
+          "EarlyPlayDelta": 0,
+          "HighCostDelta": 0,
+          "ManaBaseDelta": 0,
+          "ColorPairChanged": false,
+          "ConstraintRelaxationChanged": true,
+          "IsIncompleteProjection": true,
+          "BeforePair": {
+            "Colors": {
+              "Colors": [
+                "Red",
+                "Green"
+              ],
+              "IsColorless": false,
+              "Count": 2
+            },
+            "Code": "RG",
+            "DisplayCode": "RG"
+          },
+          "AfterPair": {
+            "Colors": {
+              "Colors": [
+                "Red",
+                "Green"
+              ],
+              "IsColorless": false,
+              "Count": 2
+            },
+            "Code": "RG",
+            "DisplayCode": "RG"
+          },
+          "StructuralGain": 0,
+          "DeckNeed": 0.5094272204765126,
+          "Reasons": [
+            "- Fills an open slot, but later picks should supply better (0.3 pp below the expected filler 54.7 %).",
+            "\u002B Deck still needs 16 playables with only 34 picks remaining.",
+            "\u00B7 Incomplete projected shell, not a finished 40-card deck."
+          ],
+          "CutlineMargin": -0.003314932252651781,
+          "MembershipValue": 0.4549191338627917,
+          "ReplacementLevel": 0.5474692518601338,
+          "RealCutline": null,
+          "ComparedWithFutureFiller": true,
+          "OpenSlots": 16,
+          "ContestedSlots": 16,
+          "ExpectedSupply": 27.200000000000003,
+          "RemainingPicks": 34,
+          "SupplyCoverage": 1.7000000000000002,
+          "SupplyUrgency": 0.43333333333333324,
+          "StructureGate": 0.45865794906243024,
+          "SupplyProfile": "provisional-default (provisional: FRA-derived values, not calibrated for this set)",
+          "Playability": 1,
+          "BestPairWeight": 1,
+          "ProjectedPairCount": 1,
+          "DisplacedCard": null,
+          "ProjectedStructure": {
+            "Spells": 7,
+            "Creatures": 5,
+            "EarlyPlays": 2,
+            "HighCost": 0,
+            "Removal": 1.5
+          },
+          "StructureConfidence": 0.3888888888888889,
+          "CreatureNeed": 0,
+          "EarlyPlayNeed": 0,
+          "RemovalNeed": 0,
+          "TopEndRedundancy": 0
+        },
+        "Roles": {
+          "ReliableRoles": "Creature",
+          "CuratedRoles": "None",
+          "HasStructuredMetadata": true,
+          "Source": "Structured metadata plus high-confidence Oracle rules.",
+          "RuleRoles": "None",
+          "RemovedRoles": "None",
+          "Roles": "Creature",
+          "RemovalWeight": 0
+        },
+        "Contributions": [
+          {
+            "Component": "Quality",
+            "Value": 0.33553167342092627,
+            "Weight": 0.6835131284347649,
+            "PointsFromNeutral": -7.869138229994529
+          },
+          {
+            "Component": "Lane",
+            "Value": 0.4924666066138767,
+            "Weight": 0.2,
+            "PointsFromNeutral": -0.10546750740572619
+          },
+          {
+            "Component": "Archetype",
+            "Value": 0.5,
+            "Weight": 0.10412171789130878,
+            "PointsFromNeutral": 0
+          },
+          {
+            "Component": "Deck Need",
+            "Value": 0.5094272204765126,
+            "Weight": 0.01236515367392632,
+            "PointsFromNeutral": 0.008159832093704394
+          },
+          {
+            "Component": "Soft limit",
+            "Value": 0.34067108189386897,
+            "Weight": 0,
+            "PointsFromNeutral": 0
+          }
+        ],
+        "Reasons": [
+          "Below-baseline intrinsic GIH performance.",
+          "- Fills an open slot, but later picks should supply better (0.3 pp below the expected filler 54.7 %).",
+          "\u002B Deck still needs 16 playables with only 34 picks remaining.",
+          "\u00B7 Incomplete projected shell, not a finished 40-card deck."
+        ],
+        "Score0To50": 17,
+        "Tier": "Marginal",
+        "CurrentPackRank": 5,
+        "IsContextPick": false,
+        "QualityEvidence": "DirectCardStatistics",
+        "QualityProvenance": "DirectPrimary",
+        "QualityPrior": null,
+        "QualityRelevance": 1,
+        "EffectiveQualityComponent": 0.33553167342092627,
+        "IsQualityEstimated": false
+      },
+      "Exact": 17.03355409469345,
+      "Projections": [
+        {
+          "Pair": "RG",
+          "Quality": 0.5644327170819149,
+          "Spells": 8,
+          "Shortfall": 0,
+          "BlendWeight": 1,
+          "CandidateEligibility": 1,
+          "CandidateInDeck": true,
+          "CutlineMargin": -0.003314932252651781,
+          "Main": [
+            {
+              "Identity": "11ba4fdd-cc03-4bb6-a493-91a9785771d0",
+              "Value": 1
+            },
+            {
+              "Identity": "7d17f7e3-7b63-4674-9024-4fd1827f40ec",
+              "Value": 1
+            },
+            {
+              "Identity": "7d29dfa1-9582-47bc-8f42-62b611bdcc4e",
+              "Value": 1
+            },
+            {
+              "Identity": "7e324816-552f-455d-97c4-5ea6b26d2e6e",
+              "Value": 1
+            },
+            {
+              "Identity": "a56e0f91-b128-4693-a949-53cb403f4fbf",
+              "Value": 1
+            },
+            {
+              "Identity": "b6331218-dbb8-44a9-8ba5-5fb1ab41c5c0",
+              "Value": 1
+            },
+            {
+              "Identity": "dd3faaf4-45ca-4714-8dbe-37102ec131cf",
+              "Value": 1
+            },
+            {
+              "Identity": "f17d2792-b075-4c47-ad38-e7a7eaee5f8c",
+              "Value": 1
+            }
+          ]
+        }
+      ],
+      "Diagnostics": "Slot: 3; CardIdentifier: 7e324816-552f-455d-97c4-5ea6b26d2e6e; Card: Hallway Heckler // Vicious Verse\nStats lookup: Hallway Heckler // Vicious Verse; Stats resolved: unavailable; Identity: consistent\n17Lands identity: not evaluated\nGIH: 0.53530599; GIH n: 1487; ALSA: 7.7477938\nPhase 8: 0.5441543196074821; Stats rank: 5\nPhase 9A adjustment: 0.0071874999999999994; Pool value: 0.5513418196074821; Pool rank: 5\nPhase 9B adjustment: -0.0003013357354449327; Lane value: 0.5510404838720372; Lane rank: 5\nPhase 9C adjustment: 0; Archetype value: 0.5510404838720372; Archetype rank: 5\nPhase 9D adjustment: 0; Final value: 0.5510404838720372; Context rank: 5\nPick Score: 17 / 50; Model: contextual-pick-score-v1.6.1; Measured\nExact score 17.03; tier marginal (pick-score-tiers-v2)\nPick-score ordinal rank: 5; progress 0.167; color fit 0.288; Phase 8 data weight 0.748\nQuality raw 0.336; relevance R 1 (playability 1); effective 0.336\nQuality 0.336; Lane 0.492; Archetype 0.5; Deck Need 0.509\nWeights Q 68 %, L 20 %, A 10 %, D 1 %\nContributions from neutral 25 (before clamp/rounding):\nQuality: -7.87 points\nLane: -0.11 points\nArchetype: 0.00 points\nDeck Need: \u002B0.01 points\nSoft limit: 0.00 points\nDeck: available True; included True; replacement none; quality delta -0.0029; creatures 1; early 0; high 0; mana 0; pair RG -\u003E RG; pair changed False; relaxation changed True; incomplete shell True\nDeck fit: cut-line margin -0.33 pp; graded membership 0.455; real cut line ; virtual cut line 0.5475 (used); best-pair weight 1 of 1 viable pair(s)\nFuture supply: open slots 16; contested slots 16; remaining picks 34; expected playables 27.2; coverage 1.7; urgency 0.43; structure gate 0.459; structural need 0 at confidence 0.39; D 0.509\nSupply profile: provisional-default (provisional: FRA-derived values, not calibrated for this set)\nQuality provenance: DirectPrimary\nEvidence:\nIntrinsic quality: below average \u00B7 Direct \u2014 17Lands GIH 53.5 % over 1,487 games\nPlayability: realistic for your projected decks\nLane: neutral (no clear signal)\nArchetype: neutral (no clear signal)\nDeck need: neutral (D 0.51)\n  - Fills an open slot, but later picks should supply better (0.3 pp below the expected filler 54.7 %).\n  \u002B Deck still needs 16 playables with only 34 picks remaining.\nRoles: Creature; Structured metadata plus high-confidence Oracle rules.\nReasons:\nBelow-baseline intrinsic GIH performance.\n- Fills an open slot, but later picks should supply better (0.3 pp below the expected filler 54.7 %).\n\u002B Deck still needs 16 playables with only 34 picks remaining.\n\u00B7 Incomplete projected shell, not a finished 40-card deck."
+    },
+    {
+      "Name": "Unsummon",
+      "Identity": "ddad9f16-52d5-49de-82b0-b1a5294a9c44",
+      "Colors": {
+        "Colors": [
+          "Blue"
+        ],
+        "IsColorless": false,
+        "Count": 1
+      },
+      "Score": {
+        "PackIndex": 4,
+        "CardIdentifier": {
+          "Value": "ddad9f16-52d5-49de-82b0-b1a5294a9c44"
+        },
+        "ContextualValue": 0.5740990167034082,
+        "QualityComponent": 0.5786468825336437,
+        "LaneComponent": 0.5205887691061061,
+        "ArchetypeComponent": 0.5,
+        "DeckNeedComponent": 0.1,
+        "DraftProgress": 0.16666666666666666,
+        "ColorFit": -0.15,
+        "StatisticalDataWeight": 0.9331550802139037,
+        "Weights": {
+          "Quality": 0.6835131284347649,
+          "Lane": 0.2,
+          "Archetype": 0.10412171789130878,
+          "DeckNeed": 0.01236515367392632
+        },
+        "Availability": "Measured",
+        "ModelVersion": "contextual-pick-score-v1.6.1",
+        "DeckImpact": {
+          "IsAvailable": true,
+          "MakesProjectedDeck": false,
+          "ReplacesCard": null,
+          "CommonDeckQualityDelta": 0,
+          "CreatureCountDelta": 0,
+          "EarlyPlayDelta": 0,
+          "HighCostDelta": 0,
+          "ManaBaseDelta": 0,
+          "ColorPairChanged": false,
+          "ConstraintRelaxationChanged": false,
+          "IsIncompleteProjection": true,
+          "BeforePair": {
+            "Colors": {
+              "Colors": [
+                "Red",
+                "Green"
+              ],
+              "IsColorless": false,
+              "Count": 2
+            },
+            "Code": "RG",
+            "DisplayCode": "RG"
+          },
+          "AfterPair": {
+            "Colors": {
+              "Colors": [
+                "Red",
+                "Green"
+              ],
+              "IsColorless": false,
+              "Count": 2
+            },
+            "Code": "RG",
+            "DisplayCode": "RG"
+          },
+          "StructuralGain": 0,
+          "DeckNeed": 0.1,
+          "Reasons": [
+            "- Cannot enter a realistic projected maindeck (off-colour or blocked by deck constraints).",
+            "\u00B7 Incomplete projected shell, not a finished 40-card deck."
+          ],
+          "CutlineMargin": null,
+          "MembershipValue": 0,
+          "ReplacementLevel": 0.5474692518601338,
+          "RealCutline": null,
+          "ComparedWithFutureFiller": false,
+          "OpenSlots": 16,
+          "ContestedSlots": 16,
+          "ExpectedSupply": 27.200000000000003,
+          "RemainingPicks": 34,
+          "SupplyCoverage": 1.7000000000000002,
+          "SupplyUrgency": 0.43333333333333324,
+          "StructureGate": 0,
+          "SupplyProfile": "provisional-default (provisional: FRA-derived values, not calibrated for this set)",
+          "Playability": 0,
+          "BestPairWeight": 1,
+          "ProjectedPairCount": 1,
+          "DisplacedCard": null,
+          "ProjectedStructure": {
+            "Spells": 7,
+            "Creatures": 5,
+            "EarlyPlays": 2,
+            "HighCost": 0,
+            "Removal": 1.5
+          },
+          "StructureConfidence": 0,
+          "CreatureNeed": 0,
+          "EarlyPlayNeed": 0,
+          "RemovalNeed": 0,
+          "TopEndRedundancy": 0
+        },
+        "Roles": {
+          "ReliableRoles": "EarlyPlay",
+          "CuratedRoles": "None",
+          "HasStructuredMetadata": true,
+          "Source": "Structured metadata plus high-confidence Oracle rules.",
+          "RuleRoles": "None",
+          "RemovedRoles": "None",
+          "Roles": "EarlyPlay",
+          "RemovalWeight": 0
+        },
+        "Contributions": [
+          {
+            "Component": "Quality",
+            "Value": 0.5786468825336437,
+            "Weight": 0.6835131284347649,
+            "PointsFromNeutral": 3.7629323705548594
+          },
+          {
+            "Component": "Lane",
+            "Value": 0.5205887691061061,
+            "Weight": 0.2,
+            "PointsFromNeutral": 0.28824276748548505
+          },
+          {
+            "Component": "Archetype",
+            "Value": 0.5,
+            "Weight": 0.10412171789130878,
+            "PointsFromNeutral": 0
+          },
+          {
+            "Component": "Deck Need",
+            "Value": 0.1,
+            "Weight": 0.01236515367392632,
+            "PointsFromNeutral": -0.346224302869937
+          },
+          {
+            "Component": "Soft limit",
+            "Value": 0.5740990167034082,
+            "Weight": 0,
+            "PointsFromNeutral": 0
+          }
+        ],
+        "Reasons": [
+          "Near-average intrinsic GIH performance.",
+          "- Cannot enter a realistic projected maindeck (off-colour or blocked by deck constraints).",
+          "\u00B7 Incomplete projected shell, not a finished 40-card deck."
+        ],
+        "Score0To50": 29,
+        "Tier": "Solid",
+        "CurrentPackRank": 1,
+        "IsContextPick": true,
+        "QualityEvidence": "DirectCardStatistics",
+        "QualityProvenance": "DirectPrimary",
+        "QualityPrior": null,
+        "QualityRelevance": 1,
+        "EffectiveQualityComponent": 0.5786468825336437,
+        "IsQualityEstimated": false
+      },
+      "Exact": 28.70495083517041,
+      "Projections": [
+        {
+          "Pair": "RG",
+          "Quality": 0.5673296310068339,
+          "Spells": 7,
+          "Shortfall": 0,
+          "BlendWeight": 1,
+          "CandidateEligibility": 0,
+          "CandidateInDeck": false,
+          "CutlineMargin": null,
+          "Main": [
+            {
+              "Identity": "11ba4fdd-cc03-4bb6-a493-91a9785771d0",
+              "Value": 1
+            },
+            {
+              "Identity": "7d17f7e3-7b63-4674-9024-4fd1827f40ec",
+              "Value": 1
+            },
+            {
+              "Identity": "7d29dfa1-9582-47bc-8f42-62b611bdcc4e",
+              "Value": 1
+            },
+            {
+              "Identity": "a56e0f91-b128-4693-a949-53cb403f4fbf",
+              "Value": 1
+            },
+            {
+              "Identity": "b6331218-dbb8-44a9-8ba5-5fb1ab41c5c0",
+              "Value": 1
+            },
+            {
+              "Identity": "dd3faaf4-45ca-4714-8dbe-37102ec131cf",
+              "Value": 1
+            },
+            {
+              "Identity": "f17d2792-b075-4c47-ad38-e7a7eaee5f8c",
+              "Value": 1
+            }
+          ]
+        }
+      ],
+      "Diagnostics": "Slot: 4; CardIdentifier: ddad9f16-52d5-49de-82b0-b1a5294a9c44; Card: Unsummon\nStats lookup: Unsummon; Stats resolved: unavailable; Identity: consistent\n17Lands identity: not evaluated\nGIH: 0.58395415; GIH n: 6980; ALSA: 5.613781\nPhase 8: 0.5830527530655168; Stats rank: 1\nPhase 9A adjustment: -0.00375; Pool value: 0.5793027530655168; Pool rank: 1\nPhase 9B adjustment: 0.0008235507642442441; Lane value: 0.580126303829761; Lane rank: 1\nPhase 9C adjustment: 0; Archetype value: 0.580126303829761; Archetype rank: 1\nPhase 9D adjustment: 0; Final value: 0.580126303829761; Context rank: 1\nPick Score: 29 / 50; Model: contextual-pick-score-v1.6.1; Measured\nExact score 28.70; tier solid (pick-score-tiers-v2)\nPick-score ordinal rank: 1; progress 0.167; color fit -0.15; Phase 8 data weight 0.933\nQuality raw 0.579; relevance R 1 (playability 0); effective 0.579\nQuality 0.579; Lane 0.521; Archetype 0.5; Deck Need 0.1\nWeights Q 68 %, L 20 %, A 10 %, D 1 %\nContributions from neutral 25 (before clamp/rounding):\nQuality: \u002B3.76 points\nLane: \u002B0.29 points\nArchetype: 0.00 points\nDeck Need: -0.35 points\nSoft limit: 0.00 points\nDeck: available True; included False; replacement none; quality delta 0.0000; creatures 0; early 0; high 0; mana 0; pair RG -\u003E RG; pair changed False; relaxation changed False; incomplete shell True\nDeck fit: cut-line margin n/a; graded membership 0; real cut line ; virtual cut line 0.5475; best-pair weight 1 of 1 viable pair(s)\nFuture supply: open slots 16; contested slots 16; remaining picks 34; expected playables 27.2; coverage 1.7; urgency 0.43; structure gate 0; structural need 0 at confidence 0; D 0.1\nSupply profile: provisional-default (provisional: FRA-derived values, not calibrated for this set)\nQuality provenance: DirectPrimary\nEvidence:\nIntrinsic quality: average \u00B7 Direct \u2014 17Lands GIH 58.4 % over 6,980 games\nPlayability: realistic for your projected decks\nLane: neutral (no clear signal)\nArchetype: neutral (no clear signal)\nDeck need: weak (D 0.10)\n  - Cannot enter a realistic projected maindeck (off-colour or blocked by deck constraints).\nRoles: EarlyPlay; Structured metadata plus high-confidence Oracle rules.\nReasons:\nNear-average intrinsic GIH performance.\n- Cannot enter a realistic projected maindeck (off-colour or blocked by deck constraints).\n\u00B7 Incomplete projected shell, not a finished 40-card deck."
+    },
+    {
+      "Name": "Way of the Necromancer",
+      "Identity": "a0ff9689-ea49-4fff-b37c-4abbaeb0f73d",
+      "Colors": {
+        "Colors": [
+          "Black"
+        ],
+        "IsColorless": false,
+        "Count": 1
+      },
+      "Score": {
+        "PackIndex": 5,
+        "CardIdentifier": {
+          "Value": "a0ff9689-ea49-4fff-b37c-4abbaeb0f73d"
+        },
+        "ContextualValue": 0.05433437688075404,
+        "QualityComponent": 0.04254748381377049,
+        "LaneComponent": 0.49644136988028315,
+        "ArchetypeComponent": 0.5,
+        "DeckNeedComponent": 0.1,
+        "DraftProgress": 0.16666666666666666,
+        "ColorFit": -0.15,
+        "StatisticalDataWeight": null,
+        "Weights": {
+          "Quality": 0.6835131284347649,
+          "Lane": 0.2,
+          "Archetype": 0.10412171789130878,
+          "DeckNeed": 0.01236515367392632
+        },
+        "Availability": "EstimatedMissingStatistics",
+        "ModelVersion": "contextual-pick-score-v1.6.1",
+        "DeckImpact": {
+          "IsAvailable": true,
+          "MakesProjectedDeck": false,
+          "ReplacesCard": null,
+          "CommonDeckQualityDelta": 0,
+          "CreatureCountDelta": 0,
+          "EarlyPlayDelta": 0,
+          "HighCostDelta": 0,
+          "ManaBaseDelta": 0,
+          "ColorPairChanged": false,
+          "ConstraintRelaxationChanged": false,
+          "IsIncompleteProjection": true,
+          "BeforePair": {
+            "Colors": {
+              "Colors": [
+                "Red",
+                "Green"
+              ],
+              "IsColorless": false,
+              "Count": 2
+            },
+            "Code": "RG",
+            "DisplayCode": "RG"
+          },
+          "AfterPair": {
+            "Colors": {
+              "Colors": [
+                "Red",
+                "Green"
+              ],
+              "IsColorless": false,
+              "Count": 2
+            },
+            "Code": "RG",
+            "DisplayCode": "RG"
+          },
+          "StructuralGain": 0,
+          "DeckNeed": 0.1,
+          "Reasons": [
+            "- Cannot enter a realistic projected maindeck (off-colour or blocked by deck constraints).",
+            "\u00B7 Incomplete projected shell, not a finished 40-card deck."
+          ],
+          "CutlineMargin": null,
+          "MembershipValue": 0,
+          "ReplacementLevel": 0.5474692518601338,
+          "RealCutline": null,
+          "ComparedWithFutureFiller": false,
+          "OpenSlots": 16,
+          "ContestedSlots": 16,
+          "ExpectedSupply": 27.200000000000003,
+          "RemainingPicks": 34,
+          "SupplyCoverage": 1.7000000000000002,
+          "SupplyUrgency": 0.43333333333333324,
+          "StructureGate": 0,
+          "SupplyProfile": "provisional-default (provisional: FRA-derived values, not calibrated for this set)",
+          "Playability": 0,
+          "BestPairWeight": 1,
+          "ProjectedPairCount": 1,
+          "DisplacedCard": null,
+          "ProjectedStructure": {
+            "Spells": 7,
+            "Creatures": 5,
+            "EarlyPlays": 2,
+            "HighCost": 0,
+            "Removal": 1.5
+          },
+          "StructureConfidence": 0,
+          "CreatureNeed": 0,
+          "EarlyPlayNeed": 0,
+          "RemovalNeed": 0,
+          "TopEndRedundancy": 0
+        },
+        "Roles": {
+          "ReliableRoles": "EarlyPlay",
+          "CuratedRoles": "None",
+          "HasStructuredMetadata": true,
+          "Source": "Structured metadata plus high-confidence Oracle rules.",
+          "RuleRoles": "None",
+          "RemovedRoles": "None",
+          "Roles": "EarlyPlay",
+          "RemovalWeight": 0
+        },
+        "Contributions": [
+          {
+            "Component": "Quality",
+            "Value": 0.04254748381377049,
+            "Weight": 0.6835131284347649,
+            "PointsFromNeutral": -21.887236031416325
+          },
+          {
+            "Component": "Lane",
+            "Value": 0.49644136988028315,
+            "Weight": 0.2,
+            "PointsFromNeutral": -0.049820821676035965
+          },
+          {
+            "Component": "Archetype",
+            "Value": 0.5,
+            "Weight": 0.10412171789130878,
+            "PointsFromNeutral": 0
+          },
+          {
+            "Component": "Deck Need",
+            "Value": 0.1,
+            "Weight": 0.01236515367392632,
+            "PointsFromNeutral": -0.346224302869937
+          },
+          {
+            "Component": "Soft limit",
+            "Value": 0.05433437688075404,
+            "Weight": 0,
+            "PointsFromNeutral": 0
+          }
+        ],
+        "Reasons": [
+          "Estimated intrinsic quality: alternate PremierDraft prior; GIH 44.30 %, n=1930, sample weight 0.7942, cross-format reliability 0.90. Primary GIH remains unavailable.",
+          "- Cannot enter a realistic projected maindeck (off-colour or blocked by deck constraints).",
+          "\u00B7 Incomplete projected shell, not a finished 40-card deck."
+        ],
+        "Score0To50": 3,
+        "Tier": "VeryWeak",
+        "CurrentPackRank": 7,
+        "IsContextPick": false,
+        "QualityEvidence": "AlternateFormatPrior",
+        "QualityProvenance": "AlternateFormatPrior",
+        "QualityPrior": {
+          "Evidence": {
+            "CardIdentifier": {
+              "Value": "a0ff9689-ea49-4fff-b37c-4abbaeb0f73d"
+            },
+            "PrimaryContext": {
+              "Expansion": "FRA",
+              "Format": "QuickDraft"
+            },
+            "SourceContext": {
+              "Expansion": "FRA",
+              "Format": "PremierDraft"
+            },
+            "RawGameInHandWinRate": 0.44300518,
+            "GameInHandGameCount": 1930,
+            "SourceEnvironmentBaseline": 0.5636523015032496,
+            "ProviderName": "Way of the Necromancer",
+            "FetchedAt": null,
+            "Source": "Cache",
+            "TimePeriod": "ALL_TIME"
+          },
+          "PrimaryEnvironmentBaseline": 0.5704692518601339,
+          "ShrinkageGames": 500,
+          "SampleWeight": 0.7942386831275721,
+          "CrossFormatReliability": 0.9,
+          "EffectiveReliability": 0.7148148148148149,
+          "EffectiveQualityValue": 0.48422890204484803,
+          "Profile": "fra-quick-from-premier-v1",
+          "ShrinkageAmount": 0.20576131687242794
+        },
+        "QualityRelevance": 1,
+        "EffectiveQualityComponent": 0.04254748381377049,
+        "IsQualityEstimated": true
+      },
+      "Exact": 2.716718844037702,
+      "Projections": [
+        {
+          "Pair": "RG",
+          "Quality": 0.5673296310068339,
+          "Spells": 7,
+          "Shortfall": 0,
+          "BlendWeight": 1,
+          "CandidateEligibility": 0,
+          "CandidateInDeck": false,
+          "CutlineMargin": null,
+          "Main": [
+            {
+              "Identity": "11ba4fdd-cc03-4bb6-a493-91a9785771d0",
+              "Value": 1
+            },
+            {
+              "Identity": "7d17f7e3-7b63-4674-9024-4fd1827f40ec",
+              "Value": 1
+            },
+            {
+              "Identity": "7d29dfa1-9582-47bc-8f42-62b611bdcc4e",
+              "Value": 1
+            },
+            {
+              "Identity": "a56e0f91-b128-4693-a949-53cb403f4fbf",
+              "Value": 1
+            },
+            {
+              "Identity": "b6331218-dbb8-44a9-8ba5-5fb1ab41c5c0",
+              "Value": 1
+            },
+            {
+              "Identity": "dd3faaf4-45ca-4714-8dbe-37102ec131cf",
+              "Value": 1
+            },
+            {
+              "Identity": "f17d2792-b075-4c47-ad38-e7a7eaee5f8c",
+              "Value": 1
+            }
+          ]
+        }
+      ],
+      "Diagnostics": "Slot: 5; CardIdentifier: a0ff9689-ea49-4fff-b37c-4abbaeb0f73d; Card: Way of the Necromancer\nStats lookup: Way of the Necromancer; Stats resolved: unavailable; Identity: consistent\n17Lands identity: not evaluated\nGIH: ; GIH n: 225; ALSA: 7.7958437\nPhase 8: ; Stats rank: \nPhase 9A adjustment: -0.00375; Pool value: ; Pool rank: \nPhase 9B adjustment: -0.00014234520478867527; Lane value: ; Lane rank: \nPhase 9C adjustment: 0; Archetype value: ; Archetype rank: \nPhase 9D adjustment: 0; Final value: ; Context rank: \nPick Score: 3 / 50 (Estimated); Model: contextual-pick-score-v1.6.1; EstimatedMissingStatistics\nExact score 2.72; tier very weak (pick-score-tiers-v2)\nPick-score ordinal rank: 7; progress 0.167; color fit -0.15; Phase 8 data weight \nQuality raw 0.043; relevance R 1 (playability 0); effective 0.043\nQuality 0.043; Lane 0.496; Archetype 0.5; Deck Need 0.1\nWeights Q 68 %, L 20 %, A 10 %, D 1 %\nContributions from neutral 25 (before clamp/rounding):\nQuality: -21.89 points\nLane: -0.05 points\nArchetype: 0.00 points\nDeck Need: -0.35 points\nSoft limit: 0.00 points\nDeck: available True; included False; replacement none; quality delta 0.0000; creatures 0; early 0; high 0; mana 0; pair RG -\u003E RG; pair changed False; relaxation changed False; incomplete shell True\nDeck fit: cut-line margin n/a; graded membership 0; real cut line ; virtual cut line 0.5475; best-pair weight 1 of 1 viable pair(s)\nFuture supply: open slots 16; contested slots 16; remaining picks 34; expected playables 27.2; coverage 1.7; urgency 0.43; structure gate 0; structural need 0 at confidence 0; D 0.1\nSupply profile: provisional-default (provisional: FRA-derived values, not calibrated for this set)\nQuality provenance: AlternateFormatPrior\nAlternate quality: fra-quick-from-premier-v1; source FRA/PremierDraft; name Way of the Necromancer; fetched ; Cache; ALL_TIME\nAlternate raw GIH 0.44300518; n 1930; source baseline 0.5636523015032496; primary baseline 0.5704692518601339\nShrinkage k 500; sample weight 0.7942386831275721; shrinkage amount 0.20576131687242794; cross-format reliability 0.9; effective reliability 0.7148148148148149; prior quality value 0.48422890204484803; resulting Q 0.04254748381377049\nEvidence:\nIntrinsic quality: Estimated \u2014 alternate PremierDraft quality prior; primary GIH remains unavailable\nPlayability: realistic for your projected decks\nLane: neutral (no clear signal)\nArchetype: neutral (no clear signal)\nDeck need: weak (D 0.10)\n  - Cannot enter a realistic projected maindeck (off-colour or blocked by deck constraints).\nRoles: EarlyPlay; Structured metadata plus high-confidence Oracle rules.\nReasons:\nEstimated intrinsic quality: alternate PremierDraft prior; GIH 44.30 %, n=1930, sample weight 0.7942, cross-format reliability 0.90. Primary GIH remains unavailable.\n- Cannot enter a realistic projected maindeck (off-colour or blocked by deck constraints).\n\u00B7 Incomplete projected shell, not a finished 40-card deck."
+    },
+    {
+      "Name": "Dedicated Commons",
+      "Identity": "3223e5db-5cc4-42f9-ae9e-ff58abc7c390",
+      "Colors": {
+        "Colors": [],
+        "IsColorless": true,
+        "Count": 0
+      },
+      "Score": {
+        "PackIndex": 6,
+        "CardIdentifier": {
+          "Value": "3223e5db-5cc4-42f9-ae9e-ff58abc7c390"
+        },
+        "ContextualValue": 0.3004847988463729,
+        "QualityComponent": 0.2987386185071129,
+        "LaneComponent": 0.5,
+        "ArchetypeComponent": 0.5,
+        "DeckNeedComponent": 0.1,
+        "DraftProgress": 0.16666666666666666,
+        "ColorFit": 0,
+        "StatisticalDataWeight": 0.572284003421728,
+        "Weights": {
+          "Quality": 0.6835131284347649,
+          "Lane": 0.2,
+          "Archetype": 0.10412171789130878,
+          "DeckNeed": 0.01236515367392632
+        },
+        "Availability": "Measured",
+        "ModelVersion": "contextual-pick-score-v1.6.1",
+        "DeckImpact": {
+          "IsAvailable": true,
+          "MakesProjectedDeck": true,
+          "ReplacesCard": null,
+          "CommonDeckQualityDelta": 0,
+          "CreatureCountDelta": 0,
+          "EarlyPlayDelta": 0,
+          "HighCostDelta": 0,
+          "ManaBaseDelta": 0,
+          "ColorPairChanged": false,
+          "ConstraintRelaxationChanged": false,
+          "IsIncompleteProjection": true,
+          "BeforePair": {
+            "Colors": {
+              "Colors": [
+                "Red",
+                "Green"
+              ],
+              "IsColorless": false,
+              "Count": 2
+            },
+            "Code": "RG",
+            "DisplayCode": "RG"
+          },
+          "AfterPair": {
+            "Colors": {
+              "Colors": [
+                "Red",
+                "Green"
+              ],
+              "IsColorless": false,
+              "Count": 2
+            },
+            "Code": "RG",
+            "DisplayCode": "RG"
+          },
+          "StructuralGain": 0,
+          "DeckNeed": 0.1,
+          "Reasons": [
+            "- Selected only as a basic substitute: no measured colour shortfall to fix, so no fixing value.",
+            "\u00B7 Incomplete projected shell, not a finished 40-card deck."
+          ],
+          "CutlineMargin": null,
+          "MembershipValue": 1,
+          "ReplacementLevel": 0.5474692518601338,
+          "RealCutline": null,
+          "ComparedWithFutureFiller": false,
+          "OpenSlots": 16,
+          "ContestedSlots": 16,
+          "ExpectedSupply": 27.200000000000003,
+          "RemainingPicks": 34,
+          "SupplyCoverage": 1.7000000000000002,
+          "SupplyUrgency": 0.43333333333333324,
+          "StructureGate": 0,
+          "SupplyProfile": "provisional-default (provisional: FRA-derived values, not calibrated for this set)",
+          "Playability": 1,
+          "BestPairWeight": 1,
+          "ProjectedPairCount": 1,
+          "DisplacedCard": null,
+          "ProjectedStructure": {
+            "Spells": 7,
+            "Creatures": 5,
+            "EarlyPlays": 2,
+            "HighCost": 0,
+            "Removal": 1.5
+          },
+          "StructureConfidence": 0,
+          "CreatureNeed": 0,
+          "EarlyPlayNeed": 0,
+          "RemovalNeed": 0,
+          "TopEndRedundancy": 0
+        },
+        "Roles": {
+          "ReliableRoles": "Land, DirectManaSource, Fixing",
+          "CuratedRoles": "None",
+          "HasStructuredMetadata": true,
+          "Source": "Structured metadata plus high-confidence Oracle rules.",
+          "RuleRoles": "None",
+          "RemovedRoles": "None",
+          "Roles": "Land, DirectManaSource, Fixing",
+          "RemovalWeight": 0
+        },
+        "Contributions": [
+          {
+            "Component": "Quality",
+            "Value": 0.2987386185071129,
+            "Weight": 0.6835131284347649,
+            "PointsFromNeutral": -9.629535754811416
+          },
+          {
+            "Component": "Lane",
+            "Value": 0.5,
+            "Weight": 0.2,
+            "PointsFromNeutral": 0
+          },
+          {
+            "Component": "Archetype",
+            "Value": 0.5,
+            "Weight": 0.10412171789130878,
+            "PointsFromNeutral": 0
+          },
+          {
+            "Component": "Deck Need",
+            "Value": 0.1,
+            "Weight": 0.01236515367392632,
+            "PointsFromNeutral": -0.346224302869937
+          },
+          {
+            "Component": "Soft limit",
+            "Value": 0.3004847988463729,
+            "Weight": 0,
+            "PointsFromNeutral": 0
+          }
+        ],
+        "Reasons": [
+          "Below-baseline intrinsic GIH performance.",
+          "- Selected only as a basic substitute: no measured colour shortfall to fix, so no fixing value.",
+          "\u00B7 Incomplete projected shell, not a finished 40-card deck."
+        ],
+        "Score0To50": 15,
+        "Tier": "Marginal",
+        "CurrentPackRank": 6,
+        "IsContextPick": false,
+        "QualityEvidence": "DirectCardStatistics",
+        "QualityProvenance": "DirectPrimary",
+        "QualityPrior": null,
+        "QualityRelevance": 1,
+        "EffectiveQualityComponent": 0.2987386185071129,
+        "IsQualityEstimated": false
+      },
+      "Exact": 15.024239942318646,
+      "Projections": [
+        {
+          "Pair": "RG",
+          "Quality": 0.5673296310068339,
+          "Spells": 7,
+          "Shortfall": 0,
+          "BlendWeight": 1,
+          "CandidateEligibility": 1,
+          "CandidateInDeck": true,
+          "CutlineMargin": null,
+          "Main": [
+            {
+              "Identity": "11ba4fdd-cc03-4bb6-a493-91a9785771d0",
+              "Value": 1
+            },
+            {
+              "Identity": "3223e5db-5cc4-42f9-ae9e-ff58abc7c390",
+              "Value": 1
+            },
+            {
+              "Identity": "7d17f7e3-7b63-4674-9024-4fd1827f40ec",
+              "Value": 1
+            },
+            {
+              "Identity": "7d29dfa1-9582-47bc-8f42-62b611bdcc4e",
+              "Value": 1
+            },
+            {
+              "Identity": "a56e0f91-b128-4693-a949-53cb403f4fbf",
+              "Value": 1
+            },
+            {
+              "Identity": "b6331218-dbb8-44a9-8ba5-5fb1ab41c5c0",
+              "Value": 1
+            },
+            {
+              "Identity": "dd3faaf4-45ca-4714-8dbe-37102ec131cf",
+              "Value": 1
+            },
+            {
+              "Identity": "f17d2792-b075-4c47-ad38-e7a7eaee5f8c",
+              "Value": 1
+            }
+          ]
+        }
+      ],
+      "Diagnostics": "Slot: 6; CardIdentifier: 3223e5db-5cc4-42f9-ae9e-ff58abc7c390; Card: Dedicated Commons\nStats lookup: Dedicated Commons; Stats resolved: unavailable; Identity: consistent\n17Lands identity: not evaluated\nGIH: 0.5142003; GIH n: 669; ALSA: 4.8813993\nPhase 8: 0.5382674308212719; Stats rank: 6\nPhase 9A adjustment: 0; Pool value: 0.5382674308212719; Pool rank: 6\nPhase 9B adjustment: 0; Lane value: 0.5382674308212719; Lane rank: 6\nPhase 9C adjustment: 0; Archetype value: 0.5382674308212719; Archetype rank: 6\nPhase 9D adjustment: 0; Final value: 0.5382674308212719; Context rank: 6\nPick Score: 15 / 50; Model: contextual-pick-score-v1.6.1; Measured\nExact score 15.02; tier marginal (pick-score-tiers-v2)\nPick-score ordinal rank: 6; progress 0.167; color fit 0; Phase 8 data weight 0.572\nQuality raw 0.299; relevance R 1 (playability 1); effective 0.299\nQuality 0.299; Lane 0.5; Archetype 0.5; Deck Need 0.1\nWeights Q 68 %, L 20 %, A 10 %, D 1 %\nContributions from neutral 25 (before clamp/rounding):\nQuality: -9.63 points\nLane: 0.00 points\nArchetype: 0.00 points\nDeck Need: -0.35 points\nSoft limit: 0.00 points\nDeck: available True; included True; replacement none; quality delta 0.0000; creatures 0; early 0; high 0; mana 0; pair RG -\u003E RG; pair changed False; relaxation changed False; incomplete shell True\nDeck fit: cut-line margin n/a; graded membership 1; real cut line ; virtual cut line 0.5475; best-pair weight 1 of 1 viable pair(s)\nFuture supply: open slots 16; contested slots 16; remaining picks 34; expected playables 27.2; coverage 1.7; urgency 0.43; structure gate 0; structural need 0 at confidence 0; D 0.1\nSupply profile: provisional-default (provisional: FRA-derived values, not calibrated for this set)\nQuality provenance: DirectPrimary\nEvidence:\nIntrinsic quality: below average \u00B7 Direct \u2014 17Lands GIH 51.4 % over 669 games\nPlayability: realistic for your projected decks\nLane: neutral (no clear signal)\nArchetype: neutral (no clear signal)\nDeck need: weak (D 0.10)\n  - Selected only as a basic substitute: no measured colour shortfall to fix, so no fixing value.\nRoles: Land, DirectManaSource, Fixing; Structured metadata plus high-confidence Oracle rules.\nReasons:\nBelow-baseline intrinsic GIH performance.\n- Selected only as a basic substitute: no measured colour shortfall to fix, so no fixing value.\n\u00B7 Incomplete projected shell, not a finished 40-card deck."
+    }
+  ],
+  "NetworkRequests": 0
+}

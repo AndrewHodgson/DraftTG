@@ -4,13 +4,16 @@ using System.Reflection.PortableExecutable;
 
 namespace DraftTG.ArenaIntegration.Memory.Windows;
 
-internal sealed record DraftGraphResult(string ViewMode, uint[] GrpIds, string Identity);
+internal sealed record DraftGraphResult(string ViewMode, uint[] GrpIds, string Identity, string? DraftId, string? EventName,
+    string? DraftKind, int? Pack, int? Pick, string? CourseId);
 
 internal sealed class ArenaDraftObjectGraph(IRemoteMemory memory, ArenaMonoRuntime runtime, string managedDirectory)
 {
     private const string DraftNamespace = "Wotc.Mtga.Wrapper.Draft";
+    private readonly Dictionary<(string, string, string), ulong> classes = [];
     internal DraftGraphResult Read(Action? onActive = null)
     {
+        runtime.CheckRootDomain();
         var wrapperClass = Class("Core", "", "WrapperController");
         var wrapper = ArenaMonoRuntime.Require(runtime.StaticReference(wrapperClass, "<Instance>k__BackingField"), "WrapperController singleton");
         runtime.Expect(wrapper, "Core", "", "WrapperController");
@@ -25,6 +28,12 @@ internal sealed class ArenaDraftObjectGraph(IRemoteMemory memory, ArenaMonoRunti
         if (!memory.Bool(runtime.Address(controller, "_active")))
             throw new ArenaMemoryException(ArenaMemoryStatus.DraftSceneNotActive, "Draft controller is inactive.");
         onActive?.Invoke();
+        var limitedEvent = ArenaMonoRuntime.Require(runtime.Reference(controller, "_limitedEvent"), "Limited event");
+        runtime.Expect(limitedEvent, "Core", "Wotc.Mtga.Events", "LimitedPlayerEvent");
+        var pod = ArenaMonoRuntime.Require(runtime.Reference(limitedEvent, "<DraftPod>k__BackingField"), "Draft pod");
+        var semantic = ReadSemantic(pod);
+        var course = runtime.Reference(limitedEvent, "<CourseData>k__BackingField");
+        var courseId = ReadCourse(course);
         var holder = ArenaMonoRuntime.Require(runtime.Reference(controller, "_draftPackHolder"), "Draft pack holder");
         runtime.Expect(holder, "Core", DraftNamespace, "DraftPackHolder");
         if (!memory.Bool(runtime.Address(holder, "_isInitialized")) || memory.Bool(runtime.Address(holder, "<IsAnimating>k__BackingField")))
@@ -70,6 +79,9 @@ internal sealed class ArenaDraftObjectGraph(IRemoteMemory memory, ArenaMonoRunti
         // No target synchronization is possible. Re-read all observed anchors, list entries, and identities.
         // Duplicate card identities are legal; duplicate view-object pointers are not.
         runtime.CheckList(state);
+        var podState = runtime.ListState(semantic.OfferedList, 32);
+        var ids = runtime.CardIdentifiers(podState);
+        if (!ids.Order().SequenceEqual(cards.Order())) Torn();
         runtime.CheckList(logicalState);
         if (!runtime.References(logicalState).SequenceEqual(logicalItems)) Torn();
         for (var i = 0; i < logicalItems.Length; i++)
@@ -86,17 +98,63 @@ internal sealed class ArenaDraftObjectGraph(IRemoteMemory memory, ArenaMonoRunti
             || runtime.Reference(loader, "<CurrentNavContent>k__BackingField") != controller
             || !memory.Bool(runtime.Address(controller, "_active"))
             || runtime.Reference(controller, "_draftPackHolder") != holder || runtime.Reference(holder, "_allCardViews") != list
+            || runtime.Reference(controller, "_limitedEvent") != limitedEvent || runtime.Reference(limitedEvent, "<DraftPod>k__BackingField") != pod
+            || ReadSemantic(pod) != semantic
+            || runtime.Reference(limitedEvent, "<CourseData>k__BackingField") != course || ReadCourse(course) != courseId
             || runtime.Reference(holder, "_packCollection") != collection || runtime.Reference(collection, "_itemList") != logicalList
             || runtime.Reference(controller, "_activeDeckView") != deckView || memory.Bool(runtime.Address(deckView, "_isColumnView")) != column
             || !memory.Bool(runtime.Address(holder, "_isInitialized"))
             || memory.Bool(runtime.Address(holder, "<IsAnimating>k__BackingField"))) Torn();
         runtime.CheckList(state);
+        runtime.CheckList(podState);
+        if (!runtime.CardIdentifiers(podState).SequenceEqual(ids)) Torn();
         ArenaDraftSnapshotRules.RequireComplete(state.Count, cards);
-        return new(column ? "column" : "list", cards, $"scene:{controller:X}/holder:{holder:X}/list:{list:X}/version:{state.Version}/count:{state.Count}");
+        runtime.CheckRootDomain();
+        return new(column ? "column" : "list", cards, $"scene:{controller:X}/pod:{pod:X}/holder:{holder:X}/list:{list:X}/version:{state.Version}/count:{state.Count}",
+            semantic.DraftId, semantic.EventName, semantic.Kind, semantic.Pack, semantic.Pick, courseId);
+    }
+    private string? ReadCourse(ulong course)
+    {
+        if (course == 0) return null;
+        runtime.Expect(course, "Core", "Wotc.Mtga.Events", "CourseData");
+        // Local CourseData.Id is sequential System.Guid (mscorlib in the pinned fingerprint), 16 inline bytes.
+        var id = new Guid(memory.Read(runtime.Address(course, "Id"), 16));
+        return id == Guid.Empty ? null : id.ToString();
+    }
+
+    private (string? DraftId, string? EventName, string? Kind, int? Pack, int? Pick, ulong PickInfo, ulong OfferedList) ReadSemantic(ulong pod)
+    {
+        var kind = runtime.ClassName(runtime.ObjectClass(pod));
+        if (kind is not ("BotDraftPod" or "HumanDraftPod"))
+            throw new ArenaMemoryException(ArenaMemoryStatus.MetadataUnavailable, "Unsupported draft pod type.");
+        runtime.Expect(pod, "Core", DraftNamespace, kind);
+        var id = ArenaMonoRuntime.Require(runtime.Reference(pod, "<DraftId>k__BackingField"), "Draft ID");
+        var draftId = memory.ManagedString(id, 256);
+        if (string.IsNullOrWhiteSpace(draftId)) draftId = null;
+        var eventName = ArenaMonoRuntime.Require(runtime.Reference(pod, "<InternalEventName>k__BackingField"), "Draft event name");
+        if (kind == "HumanDraftPod")
+        {
+            var info = ArenaMonoRuntime.Require(runtime.Reference(pod, "_currentPickInfo"), "Human current pick info");
+            runtime.Expect(info, "Wizards.Arena.Models", "Wizards.Unification.Models.Draft", "PickInfo");
+            var humanPack = memory.I32(runtime.Address(info, "SelfPack"));
+            var humanPick = memory.I32(runtime.Address(info, "SelfPick"));
+            if (humanPack is < 1 or > 3 || humanPick is < 1 or > 32)
+                throw new ArenaMemoryException(ArenaMemoryStatus.TransientReadFailure, "Human pick-info coordinates outside active bounds.");
+            return (draftId, memory.ManagedString(eventName, 256), "Human", humanPack, humanPick, info,
+                ArenaMonoRuntime.Require(runtime.Reference(info, "PackCards"), "Human offered cards"));
+        }
+        var pack = memory.I32(runtime.Address(pod, "_currentPack"));
+        var pick = memory.I32(runtime.Address(pod, "_currentPick"));
+        if (pack is < 0 or > 2 || pick is < 0 or > 31)
+            throw new ArenaMemoryException(ArenaMemoryStatus.TransientReadFailure, "Bot pod pack/pick outside active bounds.");
+        // Local BotDraftPod.GetCurrentDraftStateVisualData IL adds one to these fields for UI numbers.
+        return (draftId, memory.ManagedString(eventName, 256), "Quick", pack + 1, pick + 1, 0,
+            ArenaMonoRuntime.Require(runtime.Reference(pod, "_currentPackCards"), "Bot offered cards"));
     }
 
     private ulong Class(string assembly, string ns, string name)
     {
+        if (classes.TryGetValue((assembly, ns, name), out var cached)) return cached;
         // Read TypeDef tokens from independently inspected, exact-fingerprint local metadata.
         using var stream = File.OpenRead(Path.Combine(managedDirectory, assembly + ".dll"));
         using var pe = new PEReader(stream);
@@ -105,7 +163,7 @@ internal sealed class ArenaDraftObjectGraph(IRemoteMemory memory, ArenaMonoRunti
         {
             var t = metadata.GetTypeDefinition(h);
             if (metadata.GetString(t.Name) == name && metadata.GetString(t.Namespace) == ns)
-                return runtime.FindClass(assembly, ns, name, MetadataTokens.GetToken(h));
+                return classes[(assembly, ns, name)] = runtime.FindClass(assembly, ns, name, MetadataTokens.GetToken(h));
         }
         throw new ArenaMemoryException(ArenaMemoryStatus.MetadataUnavailable, $"Local type {assembly}:{ns}.{name} unavailable.");
     }

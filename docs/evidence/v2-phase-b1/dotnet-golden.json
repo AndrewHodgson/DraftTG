@@ -1,0 +1,27 @@
+{
+  "Passed": true,
+  "Tested": 40,
+  "Failed": 0,
+  "ExitCode": 0,
+  "RunDirectory": "C:\\Users\\Graphics0\\Documents\\Projects\\DraftTG\\data\\historical\\evaluation\\phase-b1\\validation\\golden\\run-20261013T2101358076212",
+  "Build": "git=46aec50260d59efea8ba1ae3c4c440e29c450f84; evaluationAssemblySha256=2ADAB3425B1726802F60225F35F1AA7BD3FB007EF61A64A46CA3DC17A70693BD; scoreAssemblySha256=DA89FEF042040AC4E4335112824214F2309C0888E592444EC50C8A8E3A187BF6; runtime=10.0.12; working-tree build (see baseline-freeze.json)",
+  "Interpretation": "Golden must-not-regress tests, separate from historical human agreement.",
+  "Fixtures": [
+    {
+      "Path": "phase9e2b-p1p8-rg-failure.json",
+      "Sha256": "C8EA0B051FF7A74C02DF28F2F8B21E41018684F0E030577F595AB1CF882C9DB0"
+    },
+    {
+      "Path": "phase9e2b-p1p8-v1.6.2.json",
+      "Sha256": "B33CAA4893BBCBAC93C568E0F626CAEEC353180B6961023FA791EF1021E0F525"
+    },
+    {
+      "Path": "phase9f2-live-pack-stat-provenance.json",
+      "Sha256": "685280BAC2BBA899D61437C21AA71ECAF6BF71FD2D4D925127F73986079E40D1"
+    },
+    {
+      "Path": "phase9f2-live-pack-v1.6.1.json",
+      "Sha256": "9B64D8DBC090E03E49C4B8562E5695B74092102A244E38BECC4BFD7AF4C3C494"
+    }
+  ]
+}

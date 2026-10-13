@@ -1,0 +1,58 @@
+{
+  "selected": {
+    "version": "research-q-phase-b1-v1",
+    "k": 250,
+    "policy": "250",
+    "ebCalibrationK": 69.24519479572696,
+    "selectionMetric": "Equal-set/equal-six-level unweighted card MAE; calibration fits only",
+    "semantics": "opening-plus-draw-instances",
+    "calibrationSets": [
+      "DMU",
+      "BRO",
+      "WOE"
+    ],
+    "developmentSets": [
+      "LCI",
+      "MKM",
+      "OTJ",
+      "ONE",
+      "MOM"
+    ],
+    "fingerprint": "81c227d5315a655c9160317d3c467bc494eee8e1cc9deadf6046a6377ab2cb8a",
+    "splitHash": "6856df32859cd1f81e035de4f4f3ae880e5b0dbebaeda08e78ae0f0e248e0ac0",
+    "limitations": [
+      "Modern unit compatible, but pre-2024-11-12 OH collection era differs from current provider",
+      "No matching provider historical cohort bridge",
+      "Copy instances sharing game outcomes are not independent Bernoulli trials"
+    ],
+    "alternatePrior": {
+      "reliability": 0.9,
+      "shrinkage": 500,
+      "status": "Reference policy only; generalized reliability unqualified"
+    }
+  },
+  "calibration": {
+    "0": 0.03765917711420076,
+    "50": 0.029643545592777286,
+    "100": 0.027476219775570822,
+    "250": 0.0264111386106929,
+    "500": 0.02702791468130361,
+    "1000": 0.02833056955823657,
+    "2000": 0.02967073281251016,
+    "EB-count-adjusted": 0.028501492824692037
+  },
+  "development": {
+    "0": 0.03680365963156699,
+    "50": 0.02934957725090489,
+    "100": 0.027410975378712635,
+    "250": 0.02682580135461523,
+    "500": 0.027789261282956532,
+    "1000": 0.029282045732999376,
+    "2000": 0.03074552888107456,
+    "EB-count-adjusted": 0.028316981816725005
+  },
+  "seconds": 82.51969999982975,
+  "statsHash": "c97ae75ddb06a1aae6dad99bb756755dc9538c586d12bb92471d7f31cd1c9e9a",
+  "effectiveSampling": "Nested SHA-ordered whole card/game clusters until requested copy/draw count reached; overshoot and shortfalls reported, no game outcome split",
+  "eb": "Moment variance subtracts cluster-weighted p(1-p)/n_eff, n_eff=(sum weights)^2/sum weights\u00b2; converts effective-count k using median count/n_eff, freezes calibration median"
+}

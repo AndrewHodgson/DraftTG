@@ -17,4 +17,5 @@
   <ItemGroup>
     <Using Include="Xunit" />
   </ItemGroup>
+  <ItemGroup><Compile Include="../Shared/CommitmentRelevanceScenarios.cs" Link="Shared/CommitmentRelevanceScenarios.cs" /></ItemGroup>
 </Project>

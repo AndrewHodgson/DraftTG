@@ -1,0 +1,4 @@
+{
+  "Version": "cross-set-pilot-v1",
+  "Sets": { "WOE": "Calibration", "VOW": "Calibration", "LCI": "Development", "MKM": "Development", "OTJ": "Holdout" }
+}

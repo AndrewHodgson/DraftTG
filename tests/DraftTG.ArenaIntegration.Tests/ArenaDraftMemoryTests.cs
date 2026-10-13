@@ -58,6 +58,9 @@ public sealed class ArenaDraftMemoryTests
         fixture.Memory.CString(fixture.GuidAddresses[0], Guid.Empty.ToString());
         Assert.Equal(ArenaMemoryStatus.MetadataUnavailable,
             Assert.Throws<ArenaMemoryException>(() => fixture.Runtime.Initialize(ArenaMemoryCompatibility.Supported)).Status);
+        var initialized = new MonoFixture();
+        initialized.Memory.U64(initialized.MonoBase + MonoLayout.RootDomainRva, 0x200100);
+        Assert.True(Assert.Throws<ArenaMemoryException>(() => initialized.Runtime.CheckRootDomain()).ResetConnection);
     }
 
     [Fact]
@@ -178,25 +181,25 @@ public sealed class ArenaDraftMemoryTests
         internal void CString(ulong address, string value) => Bytes(address, Encoding.UTF8.GetBytes(value + '\0'));
     }
 
-    // Only bootstrap identity + one generic List/array + three field descriptors, not an MTGA mock.
+    // Only fingerprinted bootstrap images + one generic List/array + three field descriptors, not an MTGA mock.
     private sealed class MonoFixture
     {
         internal FixtureMemory Memory { get; } = new();
         internal ArenaMonoRuntime Runtime { get; }
         internal ulong MonoBase = 0x1000000, List = 0x500000, Array = 0x510000, ListClass = 0x400000, SizeField = 0x430020;
-        internal ulong[] GuidAddresses = new ulong[4];
+        internal ulong[] GuidAddresses = new ulong[ArenaMemoryCompatibility.Supported.Assemblies.Count];
         internal MonoFixture(bool initialize = true)
         {
             Memory.U64(MonoBase + MonoLayout.RootDomainRva, 0x200000);
             Memory.I32(0x200000 + MonoLayout.DomainId, 0);
             Memory.U64(MonoBase + MonoLayout.LoadedAssembliesRva, 0x300000);
             ulong frameworkImage = 0;
-            for (var i = 0; i < 4; i++)
+            for (var i = 0; i < ArenaMemoryCompatibility.Supported.Assemblies.Count; i++)
             {
                 var assembly = ArenaMemoryCompatibility.Supported.Assemblies[i];
                 var node = 0x300000ul + (ulong)i * 0x100;
                 var a = node + 0x1000; var image = node + 0x2000;
-                Memory.U64(node, a); Memory.U64(node + 8, i < 3 ? node + 0x100 : 0);
+                Memory.U64(node, a); Memory.U64(node + 8, i < ArenaMemoryCompatibility.Supported.Assemblies.Count - 1 ? node + 0x100 : 0);
                 Memory.U64(a + MonoLayout.AssemblyImage, image);
                 Memory.U64(image + MonoLayout.ImageName, node + 0x3000);
                 Memory.CString(node + 0x3000, assembly.Name);

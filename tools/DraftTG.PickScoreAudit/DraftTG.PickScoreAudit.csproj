@@ -1,4 +1,5 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup><OutputType>Exe</OutputType></PropertyGroup>
   <ItemGroup><ProjectReference Include="../../src/DraftTG.Application/DraftTG.Application.csproj" /></ItemGroup>
+  <ItemGroup><Compile Include="../../tests/Shared/CommitmentRelevanceScenarios.cs" Link="CommitmentRelevanceScenarios.cs" /></ItemGroup>
 </Project>

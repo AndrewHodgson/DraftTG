@@ -18,6 +18,13 @@ internal static class ArenaMemoryDraftCommand
         }
         var snapshot = new ArenaDraftMemoryReader().ReadOnce(pid);
         Console.WriteLine(json ? JsonSerializer.Serialize(snapshot, new JsonSerializerOptions { WriteIndented = true, Converters = { new System.Text.Json.Serialization.JsonStringEnumConverter() } }) : ArenaDraftMemoryFormatter.Format(snapshot));
+        if (!json && snapshot.Status == ArenaMemoryStatus.Success)
+        {
+            MemoryCardNames names;
+            try { names = MemoryCardNames.LoadAsync(CancellationToken.None).GetAwaiter().GetResult(); }
+            catch (Exception ex) { Console.WriteLine("Catalog unavailable: " + ex.Message); names = new(null, null); }
+            Console.WriteLine("Resolved memory order:"); MemoryCardNames.Print(names.Resolve(snapshot));
+        }
         return snapshot.Status is ArenaMemoryStatus.Success or ArenaMemoryStatus.DraftSceneNotActive or ArenaMemoryStatus.NotRunning ? 0 : 2;
     }
 }

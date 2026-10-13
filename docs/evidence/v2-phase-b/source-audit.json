@@ -1,0 +1,442 @@
+{
+  "verifiedFiles": [
+    {
+      "path": "game_cards/expansion=AFR/event=PremierDraft/data.parquet",
+      "sha256": "920bdfd1de60d0e254b03f23b62a7ec5f80ed154c795e4b501681df86d00e849",
+      "bytes": 21074036
+    },
+    {
+      "path": "game_cards/expansion=BLB/event=PremierDraft/data.parquet",
+      "sha256": "60feec7bd2238236d5f728a395ca4aece06b883f4c287e1dea095906b89565fc",
+      "bytes": 51319615
+    },
+    {
+      "path": "game_cards/expansion=BRO/event=PremierDraft/data.parquet",
+      "sha256": "075a7e798cda92b64adebe611238b8d628b57edcf8454d6d06e46c1a30527fad",
+      "bytes": 35688352
+    },
+    {
+      "path": "game_cards/expansion=DMU/event=PremierDraft/data.parquet",
+      "sha256": "27ccdaf7a0a6ac0b583dc7c45255d57356c3dce46d0a57fff078bfd0183771da",
+      "bytes": 56136573
+    },
+    {
+      "path": "game_cards/expansion=DSK/event=PremierDraft/data.parquet",
+      "sha256": "6d408ef0d8d911f48d6aa45d1b7fe5feb94d0be1f73e930ca6f0903653aca0b6",
+      "bytes": 57415165
+    },
+    {
+      "path": "game_cards/expansion=KHM/event=PremierDraft/data.parquet",
+      "sha256": "9c5030ddf1149f2820aa6ab7d837518cca97e0d6650d8a7d564570a56fdaa022",
+      "bytes": 26089824
+    },
+    {
+      "path": "game_cards/expansion=LCI/event=PremierDraft/data.parquet",
+      "sha256": "46a7ce8da36fc92574b70e2544ae8403157046935f313333967e2e370c95291e",
+      "bytes": 50165380
+    },
+    {
+      "path": "game_cards/expansion=MKM/event=PremierDraft/data.parquet",
+      "sha256": "8c2bac5ed55fa7fe7da54b581201904d6c1f7f40e587b2cfbc10da4f147cef76",
+      "bytes": 53785942
+    },
+    {
+      "path": "game_cards/expansion=NEO/event=PremierDraft/data.parquet",
+      "sha256": "fa1d18c4727b7b3530ec7c788eb406c6b43d320b1e2182af65d9eb177cfb43a4",
+      "bytes": 39445210
+    },
+    {
+      "path": "game_cards/expansion=OTJ/event=PremierDraft/data.parquet",
+      "sha256": "5eb678a457f088f5d951cdcd90e6d2da0167888e63a474063c62034bd147d474",
+      "bytes": 68688120
+    },
+    {
+      "path": "game_cards/expansion=SNC/event=PremierDraft/data.parquet",
+      "sha256": "2c4519e1032445630f1a911187864c5ec7899ae622ef471683f5a8a1c36c34af",
+      "bytes": 45467898
+    },
+    {
+      "path": "game_cards/expansion=STX/event=PremierDraft/data.parquet",
+      "sha256": "44d298101c6b27fcc05bf136247045f8415238f598057e3ec49e5ff766717e7c",
+      "bytes": 27972563
+    },
+    {
+      "path": "game_cards/expansion=VOW/event=PremierDraft/data.parquet",
+      "sha256": "6ef0e780c5ebacca54f68c1c4a34c78e447458e257480d90f5f9ee8089982f24",
+      "bytes": 28179285
+    },
+    {
+      "path": "game_cards/expansion=WOE/event=PremierDraft/data.parquet",
+      "sha256": "9770d421d33f86494cf848354bff91331ebb6bf5e320eb0b1b1291767b38cec9",
+      "bytes": 61676003
+    },
+    {
+      "path": "games/expansion=AFR/event=PremierDraft/data.parquet",
+      "sha256": "a4614b5983c74fe1e041cd3665dd757d8f6d57af6951d3e2f62d456d6cb48bea",
+      "bytes": 3792810
+    },
+    {
+      "path": "games/expansion=BLB/event=PremierDraft/data.parquet",
+      "sha256": "a025f54a3a9918322ac0adcdc0c11c8228620ae8e8e45120b4b8494a33da8320",
+      "bytes": 12838362
+    },
+    {
+      "path": "games/expansion=BRO/event=PremierDraft/data.parquet",
+      "sha256": "6302b50346eda3e2bf7161286e86d6874b768fa605b4dd39e37a4251797baa56",
+      "bytes": 4743455
+    },
+    {
+      "path": "games/expansion=DMU/event=PremierDraft/data.parquet",
+      "sha256": "299644f509f351ed35ca9074469d330cd48735e68044fbc9e4fc937a42b12ce3",
+      "bytes": 9489221
+    },
+    {
+      "path": "games/expansion=DSK/event=PremierDraft/data.parquet",
+      "sha256": "b2af953ff4c801459011d00442577763eaa0555d7b524d048771af33c67d8c56",
+      "bytes": 13863760
+    },
+    {
+      "path": "games/expansion=KHM/event=PremierDraft/data.parquet",
+      "sha256": "ead0d5751316ac10c4d825a58f8c0a1877826c8a250f5e55466d32efd5f6e788",
+      "bytes": 3926989
+    },
+    {
+      "path": "games/expansion=LCI/event=PremierDraft/data.parquet",
+      "sha256": "83f1bf6916eaadc2f9d52888909871e9c5183d3ee2ad989c5700731ec9a36ccd",
+      "bytes": 11154304
+    },
+    {
+      "path": "games/expansion=MKM/event=PremierDraft/data.parquet",
+      "sha256": "58d5db06b20065e19f397fd85ed8ebb5eb29074eee95d88868cf41b4b549c7de",
+      "bytes": 13381240
+    },
+    {
+      "path": "games/expansion=NEO/event=PremierDraft/data.parquet",
+      "sha256": "3bf723f8491647da63c61b28a6eb68e162edaee0b28cec7e09416474330a1233",
+      "bytes": 6493523
+    },
+    {
+      "path": "games/expansion=OTJ/event=PremierDraft/data.parquet",
+      "sha256": "ebf5635f7638bcd9fabf76cb909defa133a5771e19ac123e276ab29a12d328bb",
+      "bytes": 16054868
+    },
+    {
+      "path": "games/expansion=SNC/event=PremierDraft/data.parquet",
+      "sha256": "858151d8acef60bf45094132f6f434898245a97a2ad79242f5102f108010029c",
+      "bytes": 8388817
+    },
+    {
+      "path": "games/expansion=STX/event=PremierDraft/data.parquet",
+      "sha256": "d88e07a30f0805ddc02d29775fd811a84e1e423624f6f8605a0a58aeb424c68d",
+      "bytes": 4568361
+    },
+    {
+      "path": "games/expansion=VOW/event=PremierDraft/data.parquet",
+      "sha256": "6afdc937e7177fffe1741c9b00355b13220987bb2e1f6567d98daca8ca21eefa",
+      "bytes": 4941003
+    },
+    {
+      "path": "games/expansion=WOE/event=PremierDraft/data.parquet",
+      "sha256": "27767d39edfa9f1ed5572349ce771a40158205d0f8dae6631578e7b93b50e087",
+      "bytes": 13995309
+    },
+    {
+      "path": "pack_cards/expansion=AFR/event=PremierDraft/data.parquet",
+      "sha256": "a26292481a5a5dd59fd6f24c0152dafdb04c66e73f7876401759a94b781fb6ba",
+      "bytes": 9406596
+    },
+    {
+      "path": "pack_cards/expansion=BLB/event=PremierDraft/data.parquet",
+      "sha256": "0a54119ea04d48d3418234c04bb52727b743adb9070f86230428ef08e57e7304",
+      "bytes": 53703450
+    },
+    {
+      "path": "pack_cards/expansion=BRO/event=PremierDraft/data.parquet",
+      "sha256": "a817366829679dabc611eca86c245acbd9ef5538274a7d18cf0d7ad6363c17b9",
+      "bytes": 38764318
+    },
+    {
+      "path": "pack_cards/expansion=DMU/event=PremierDraft/data.parquet",
+      "sha256": "ba57ecc9aa2897fa49b25546c98e1bfacb78362a44ac1e041f4015d150f52a36",
+      "bytes": 67784580
+    },
+    {
+      "path": "pack_cards/expansion=DSK/event=PremierDraft/data.parquet",
+      "sha256": "1c50e46161e25bca04c8659e762c885c1d8e36aa14b842b7e3173c508cd309cb",
+      "bytes": 66361729
+    },
+    {
+      "path": "pack_cards/expansion=LCI/event=PremierDraft/data.parquet",
+      "sha256": "dcff2c467ca502339ef79024606fd7a5da109485ebb3f50a2bf2823023dcf267",
+      "bytes": 58930140
+    },
+    {
+      "path": "pack_cards/expansion=MKM/event=PremierDraft/data.parquet",
+      "sha256": "af9ecbb1c849340906737d9b56fd28206d514b74eb43d3e0f7b7e0555116db3f",
+      "bytes": 55092798
+    },
+    {
+      "path": "pack_cards/expansion=NEO/event=PremierDraft/data.parquet",
+      "sha256": "9d31d1fab9e69c2e9e2f353ab9e12844756447ece280e7e35a7be6f369ae5dd9",
+      "bytes": 45536142
+    },
+    {
+      "path": "pack_cards/expansion=OTJ/event=PremierDraft/data.parquet",
+      "sha256": "7d7dd4606c2ceef15bbc877e76a9171ed1308165bba6edd9e62bfa4f896e6d75",
+      "bytes": 78172337
+    },
+    {
+      "path": "pack_cards/expansion=SNC/event=PremierDraft/data.parquet",
+      "sha256": "f6f953cff3c15b04da31d449bf12ea73cc6f329324ba77b281c4ea8035f78845",
+      "bytes": 50667550
+    },
+    {
+      "path": "pack_cards/expansion=STX/event=PremierDraft/data.parquet",
+      "sha256": "84f42ca9867b5a91284eb1b55198226b8b7dab7ba4f630d670a9264e7727c92e",
+      "bytes": 31848683
+    },
+    {
+      "path": "pack_cards/expansion=VOW/event=PremierDraft/data.parquet",
+      "sha256": "d78bd453c141d120662b7cc1d52e40edbfd6d2159325d7702280948a29a68603",
+      "bytes": 37223210
+    },
+    {
+      "path": "pack_cards/expansion=VOW/event=QuickDraft/data.parquet",
+      "sha256": "e704b17f3a848a5dab0ca6ada2e8df424be820731ffea4db4d49f12ab3971cbf",
+      "bytes": 2911142
+    },
+    {
+      "path": "pack_cards/expansion=WOE/event=PremierDraft/data.parquet",
+      "sha256": "0b464c72c8ad6238125aba36170354ddb82c045d7a0e0f795c81ac8d6280503b",
+      "bytes": 64348569
+    },
+    {
+      "path": "picks/expansion=AFR/event=PremierDraft/data.parquet",
+      "sha256": "4394e5f23111795d81b4c3d76c8c89f350f879e10682e9b3de00973ffbdd8aef",
+      "bytes": 2093493
+    },
+    {
+      "path": "picks/expansion=BLB/event=PremierDraft/data.parquet",
+      "sha256": "71be2bdd53a7fb9d869441543897312bc8e3c4b7c62dd2f1d194e1da7e82ec2b",
+      "bytes": 13541895
+    },
+    {
+      "path": "picks/expansion=BRO/event=PremierDraft/data.parquet",
+      "sha256": "e39b09a213ea7698fd90f4a5fa16258b9a2e8959efb2c1580b96e52063a8e007",
+      "bytes": 8687413
+    },
+    {
+      "path": "picks/expansion=DMU/event=PremierDraft/data.parquet",
+      "sha256": "b21eb53b0f9e10e145b6f8d6b86351c5cad5a84fe7b3aa30f33c105c30887954",
+      "bytes": 16349958
+    },
+    {
+      "path": "picks/expansion=DSK/event=PremierDraft/data.parquet",
+      "sha256": "55846d258b7f322071dee06b0d0193d29e7085ed2a9f4998936b4f45beb8a77c",
+      "bytes": 15447293
+    },
+    {
+      "path": "picks/expansion=LCI/event=PremierDraft/data.parquet",
+      "sha256": "135b11d6e80ef2a3b8fb365a1292369918a1eca990ad75ef80b284c1d764816b",
+      "bytes": 13102411
+    },
+    {
+      "path": "picks/expansion=MKM/event=PremierDraft/data.parquet",
+      "sha256": "00928fbf7807dcccb171a623f745b3b3ae4aee569f56c57f871895fad30ebfb3",
+      "bytes": 13829422
+    },
+    {
+      "path": "picks/expansion=NEO/event=PremierDraft/data.parquet",
+      "sha256": "807505ca49a02abdd69b23bf0abada3f6b658db9f17c11b43b7c26015faad073",
+      "bytes": 10146853
+    },
+    {
+      "path": "picks/expansion=OTJ/event=PremierDraft/data.parquet",
+      "sha256": "6e84962646b20d274c1632016e518f5dc8c8e022dc4babe30b74397fb1f647b1",
+      "bytes": 18126250
+    },
+    {
+      "path": "picks/expansion=SNC/event=PremierDraft/data.parquet",
+      "sha256": "f9ca0c284c83b478b094fcfeab92611a30479f34c68e59d2caaf12f76962326f",
+      "bytes": 12328898
+    },
+    {
+      "path": "picks/expansion=STX/event=PremierDraft/data.parquet",
+      "sha256": "8e4342a654d0e3663513bc419ff17d3c6d193bbd3ce3e26396989d9ec874a904",
+      "bytes": 7199063
+    },
+    {
+      "path": "picks/expansion=VOW/event=PremierDraft/data.parquet",
+      "sha256": "b07728a520f30416cca7aba29947eaeec737cb4f4eff31e605c84921c5629778",
+      "bytes": 9014604
+    },
+    {
+      "path": "picks/expansion=VOW/event=QuickDraft/data.parquet",
+      "sha256": "5cac2f22164b9963bbf530200329cac69b2ad3be4c71260c98b5c9bfc01aba07",
+      "bytes": 727121
+    },
+    {
+      "path": "picks/expansion=WOE/event=PremierDraft/data.parquet",
+      "sha256": "0495247f263831d581001dc231640270a88d412a70034d1a330b13e45274b0bf",
+      "bytes": 15575083
+    },
+    {
+      "path": "pool_cards/expansion=AFR/event=PremierDraft/data.parquet",
+      "sha256": "4a1eb70f79f05d77039288b82d478a6d25c3f0e04bc5f52d2177d042a2c9d494",
+      "bytes": 17223608
+    },
+    {
+      "path": "pool_cards/expansion=BLB/event=PremierDraft/data.parquet",
+      "sha256": "795d27f2f16f692166ec5fc839e3ba2e89f93d8c3bfae4ed27d315ec577aa0d2",
+      "bytes": 93144339
+    },
+    {
+      "path": "pool_cards/expansion=BRO/event=PremierDraft/data.parquet",
+      "sha256": "d410e2009a8c8637e3bf0157853506bf47f6cd3e622fce2818d13d1fb9414eb4",
+      "bytes": 67035954
+    },
+    {
+      "path": "pool_cards/expansion=DMU/event=PremierDraft/data.parquet",
+      "sha256": "de492c9519e57a05188d704260433215182e69e27073ec05d7e6316c819e38b0",
+      "bytes": 118808174
+    },
+    {
+      "path": "pool_cards/expansion=DSK/event=PremierDraft/data.parquet",
+      "sha256": "b56891b8120400daa183c239cab9932ab10c80a5940a1b6be2861891aecefbc0",
+      "bytes": 114438137
+    },
+    {
+      "path": "pool_cards/expansion=LCI/event=PremierDraft/data.parquet",
+      "sha256": "95dc6624dd42c9a0ed1daf628af253af30c60e2a8c19f79cc91a78134c476b45",
+      "bytes": 102890117
+    },
+    {
+      "path": "pool_cards/expansion=MKM/event=PremierDraft/data.parquet",
+      "sha256": "3559fcae0a68ff8b46971f379c4eabbd0b2ed160c19032531cb6342e4a1b2069",
+      "bytes": 95693465
+    },
+    {
+      "path": "pool_cards/expansion=NEO/event=PremierDraft/data.parquet",
+      "sha256": "d3eab5e2b5d4a782b41aa17c2b80245a3d5e2f99d18c3aa3b458a5bd47b68d54",
+      "bytes": 79914684
+    },
+    {
+      "path": "pool_cards/expansion=OTJ/event=PremierDraft/data.parquet",
+      "sha256": "6015817353c62489762cfbe9d5bbc4530595f3ada23d1ecdd8cc64197da21670",
+      "bytes": 137245160
+    },
+    {
+      "path": "pool_cards/expansion=SNC/event=PremierDraft/data.parquet",
+      "sha256": "f0c289f04d9f23c55cb129d681b2362e18a156d25222e154a764a504609c21c5",
+      "bytes": 88639787
+    },
+    {
+      "path": "pool_cards/expansion=STX/event=PremierDraft/data.parquet",
+      "sha256": "0e6b7de3c7d16468e19315634fd1f8aeeb85673125567a729c727565c56bb73c",
+      "bytes": 57708033
+    },
+    {
+      "path": "pool_cards/expansion=VOW/event=PremierDraft/data.parquet",
+      "sha256": "dc0ff8b1222644646bd38b1a5d51eccec98eacfacfed094a9198f34430bc5b82",
+      "bytes": 65350169
+    },
+    {
+      "path": "pool_cards/expansion=VOW/event=QuickDraft/data.parquet",
+      "sha256": "2bfe0e252f09739f3a88dc980a1ea3e379ae5a329079d3b94322024527b50a6c",
+      "bytes": 5133147
+    },
+    {
+      "path": "pool_cards/expansion=WOE/event=PremierDraft/data.parquet",
+      "sha256": "d2e8d76e4b092ad60ffc952912d095337bb31e2529785e8d099c3dd72f42869c",
+      "bytes": 114010089
+    },
+    {
+      "path": "ref/card_names.parquet",
+      "sha256": "9c0343fd00b0f7b4e059fb96cef890a151bcf3440435c34173fdfc120c6130bd",
+      "bytes": 3229817
+    },
+    {
+      "path": "ref/cards.parquet",
+      "sha256": "25912a78265ef5917bf0156017d32b8db88eb8800a6544f95f2d92ed45d4f285",
+      "bytes": 9066932
+    }
+  ],
+  "originalSpotChecks": [
+    {
+      "set": "WOE",
+      "format": "PremierDraft",
+      "originalSha256": "eb01d16151aa4bb617e6db76815d9eb26f04bb929d758b81e3de7dc9c3bbd9cc",
+      "originalRows": 1000,
+      "compared": 1000,
+      "missing": 0,
+      "mismatches": 0,
+      "checkedFields": [
+        "draft/pack/pick keys",
+        "picked name",
+        "all offered occurrence counts",
+        "all pre-pick pool occurrence counts"
+      ]
+    },
+    {
+      "set": "LCI",
+      "format": "PremierDraft",
+      "originalSha256": "c85903491825e38ed757f9c779bf3b58384e75394069508379b7e6e8a6101fdf",
+      "originalRows": 1000,
+      "compared": 1000,
+      "missing": 0,
+      "mismatches": 0,
+      "checkedFields": [
+        "draft/pack/pick keys",
+        "picked name",
+        "all offered occurrence counts",
+        "all pre-pick pool occurrence counts"
+      ]
+    },
+    {
+      "set": "MKM",
+      "format": "PremierDraft",
+      "originalSha256": "f56c1dd395a57c3b97e86762a7cca46a46fd546a44fa6a55615f775ecb21703e",
+      "originalRows": 1000,
+      "compared": 1000,
+      "missing": 0,
+      "mismatches": 0,
+      "checkedFields": [
+        "draft/pack/pick keys",
+        "picked name",
+        "all offered occurrence counts",
+        "all pre-pick pool occurrence counts"
+      ]
+    },
+    {
+      "set": "OTJ",
+      "format": "PremierDraft",
+      "originalSha256": "a1663a833bce404fc66eb3e623f1fe31b6c7702d1932c2ed7c73fb57dbcf75aa",
+      "originalRows": 1000,
+      "compared": 1000,
+      "missing": 0,
+      "mismatches": 0,
+      "checkedFields": [
+        "draft/pack/pick keys",
+        "picked name",
+        "all offered occurrence counts",
+        "all pre-pick pool occurrence counts"
+      ]
+    },
+    {
+      "set": "VOW",
+      "format": "PremierDraft",
+      "originalSha256": "70bac80b11eabeb039d360f31843617fddd128df33aaf6cced6b456f4a454b65",
+      "originalRows": 1000,
+      "compared": 1000,
+      "missing": 0,
+      "mismatches": 0,
+      "checkedFields": [
+        "draft/pack/pick keys",
+        "picked name",
+        "all offered occurrence counts",
+        "all pre-pick pool occurrence counts"
+      ]
+    }
+  ],
+  "limitation": "Spot checks establish transformed draft semantics in five sets, not exhaustive ETL verification. Lost old-game keys explicitly declined; originals used for 2021 games. No provider-derived targets/embeddings/aggregate ratings used."
+}

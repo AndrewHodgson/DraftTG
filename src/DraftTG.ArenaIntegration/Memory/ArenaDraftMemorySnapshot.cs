@@ -14,4 +14,15 @@ public sealed record ArenaBuildFingerprint(string Architecture, string UnityVers
 public sealed record ArenaDraftMemorySnapshot(ArenaMemoryStatus Status, string Detail, int? ProcessId,
     ArenaBuildFingerprint? Build, string? RuntimeProfile, DateTimeOffset ReadTimestamp,
     bool IsDraftSceneActive, string? ViewMode, IReadOnlyList<uint> OrderedOfferedGrpIds,
-    string? Identity, TimeSpan Duration, long BytesRead);
+    string? Identity, TimeSpan Duration, long BytesRead)
+{
+    public string? ProcessInstance { get; init; }
+    public string? DraftSessionId { get; init; }
+    public string? CourseId { get; init; }
+    public string? EventName { get; init; }
+    public string? DraftKind { get; init; }
+    public int? PackNumber { get; init; }
+    public int? PickNumber { get; init; }
+    public bool IsFirstAttach { get; init; }
+    public TimeSpan TraversalDuration { get; init; }
+}

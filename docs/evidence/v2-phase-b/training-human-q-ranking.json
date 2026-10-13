@@ -1,0 +1,431 @@
+[
+  {
+    "set": "AFR",
+    "format": "PremierDraft",
+    "interpretation": "Q-only ranking, not contextual score; human picks are secondary revealed preferences",
+    "models": {
+      "currentQ": {
+        "eligible": 26428,
+        "top1": 0.22748599969729075,
+        "top3": 0.5606932041773877,
+        "MRR": 0.44599069346309633,
+        "normalizedRank": 0.4482626483383287,
+        "neutralOccurrences": 165
+      },
+      "A": {
+        "eligible": 26428,
+        "top1": 0.22801574088088392,
+        "top3": 0.5645149084304526,
+        "MRR": 0.4479773415542549,
+        "normalizedRank": 0.4419521486997308,
+        "neutralOccurrences": 165
+      },
+      "B": {
+        "eligible": 26428,
+        "top1": 0.22801574088088392,
+        "top3": 0.5645149084304526,
+        "MRR": 0.4479773415542549,
+        "normalizedRank": 0.4419521486997308,
+        "neutralOccurrences": 165
+      },
+      "C": {
+        "eligible": 26428,
+        "top1": 0.2250643257151506,
+        "top3": 0.5615634932647192,
+        "MRR": 0.4452100978247736,
+        "normalizedRank": 0.4446394927617505,
+        "neutralOccurrences": 165
+      }
+    }
+  },
+  {
+    "set": "BRO",
+    "format": "PremierDraft",
+    "interpretation": "Q-only ranking, not contextual score; human picks are secondary revealed preferences",
+    "models": {
+      "currentQ": {
+        "eligible": 29075,
+        "top1": 0.2604299226139295,
+        "top3": 0.6062596732588134,
+        "MRR": 0.4782302904891447,
+        "normalizedRank": 0.39424313996885435,
+        "neutralOccurrences": 0
+      },
+      "A": {
+        "eligible": 29075,
+        "top1": 0.26589853826311266,
+        "top3": 0.6137575236457438,
+        "MRR": 0.48405584861307,
+        "normalizedRank": 0.38371022070506616,
+        "neutralOccurrences": 0
+      },
+      "B": {
+        "eligible": 29075,
+        "top1": 0.26589853826311266,
+        "top3": 0.6137575236457438,
+        "MRR": 0.48405584861307,
+        "normalizedRank": 0.38371022070506616,
+        "neutralOccurrences": 0
+      },
+      "C": {
+        "eligible": 29075,
+        "top1": 0.26311263972484955,
+        "top3": 0.6140326741186587,
+        "MRR": 0.48234866509247293,
+        "normalizedRank": 0.3836542656731864,
+        "neutralOccurrences": 0
+      }
+    }
+  },
+  {
+    "set": "DMU",
+    "format": "PremierDraft",
+    "interpretation": "Q-only ranking, not contextual score; human picks are secondary revealed preferences",
+    "models": {
+      "currentQ": {
+        "eligible": 27076,
+        "top1": 0.27533609100310236,
+        "top3": 0.6311493573644557,
+        "MRR": 0.49640894737478153,
+        "normalizedRank": 0.369097322508093,
+        "neutralOccurrences": 0
+      },
+      "A": {
+        "eligible": 27076,
+        "top1": 0.2799157925838381,
+        "top3": 0.6384621066627272,
+        "MRR": 0.5011368348826238,
+        "normalizedRank": 0.36099101486160134,
+        "neutralOccurrences": 0
+      },
+      "B": {
+        "eligible": 27076,
+        "top1": 0.2799157925838381,
+        "top3": 0.6384621066627272,
+        "MRR": 0.5011368348826238,
+        "normalizedRank": 0.36099101486160134,
+        "neutralOccurrences": 0
+      },
+      "C": {
+        "eligible": 27076,
+        "top1": 0.2797311271975181,
+        "top3": 0.6384251735854631,
+        "MRR": 0.5008440983271452,
+        "normalizedRank": 0.3609796064599203,
+        "neutralOccurrences": 0
+      }
+    }
+  },
+  {
+    "set": "LCI",
+    "format": "PremierDraft",
+    "interpretation": "Q-only ranking, not contextual score; human picks are secondary revealed preferences",
+    "models": {
+      "currentQ": {
+        "eligible": 29279,
+        "top1": 0.2608012568735271,
+        "top3": 0.5991324840329246,
+        "MRR": 0.4780763800752944,
+        "normalizedRank": 0.4057265174875091,
+        "neutralOccurrences": 12121
+      },
+      "A": {
+        "eligible": 29279,
+        "top1": 0.26394344069128045,
+        "top3": 0.608012568735271,
+        "MRR": 0.48248247951452156,
+        "normalizedRank": 0.3980630784867644,
+        "neutralOccurrences": 12121
+      },
+      "B": {
+        "eligible": 29279,
+        "top1": 0.26394344069128045,
+        "top3": 0.608012568735271,
+        "MRR": 0.48248247951452156,
+        "normalizedRank": 0.3980630784867644,
+        "neutralOccurrences": 12121
+      },
+      "C": {
+        "eligible": 29279,
+        "top1": 0.26452406161412617,
+        "top3": 0.6068854810615116,
+        "MRR": 0.482701365807898,
+        "normalizedRank": 0.3975819253817177,
+        "neutralOccurrences": 12121
+      }
+    }
+  },
+  {
+    "set": "MKM",
+    "format": "PremierDraft",
+    "interpretation": "Q-only ranking, not contextual score; human picks are secondary revealed preferences",
+    "models": {
+      "currentQ": {
+        "eligible": 24964,
+        "top1": 0.30720237141483736,
+        "top3": 0.663875981413235,
+        "MRR": 0.5238374389101716,
+        "normalizedRank": 0.3720525840037963,
+        "neutralOccurrences": 0
+      },
+      "A": {
+        "eligible": 24964,
+        "top1": 0.3083640442236821,
+        "top3": 0.6688030764300593,
+        "MRR": 0.5259936440787157,
+        "normalizedRank": 0.3664716528019706,
+        "neutralOccurrences": 0
+      },
+      "B": {
+        "eligible": 24964,
+        "top1": 0.3083640442236821,
+        "top3": 0.6688030764300593,
+        "MRR": 0.5259936440787157,
+        "normalizedRank": 0.3664716528019706,
+        "neutralOccurrences": 0
+      },
+      "C": {
+        "eligible": 24964,
+        "top1": 0.3088046787373818,
+        "top3": 0.6695641724082679,
+        "MRR": 0.5261775047977472,
+        "normalizedRank": 0.36643605897832193,
+        "neutralOccurrences": 0
+      }
+    }
+  },
+  {
+    "set": "NEO",
+    "format": "PremierDraft",
+    "interpretation": "Q-only ranking, not contextual score; human picks are secondary revealed preferences",
+    "models": {
+      "currentQ": {
+        "eligible": 29199,
+        "top1": 0.25007705743347375,
+        "top3": 0.5826911880543855,
+        "MRR": 0.46603668610504784,
+        "normalizedRank": 0.4380841339024884,
+        "neutralOccurrences": 19329
+      },
+      "A": {
+        "eligible": 29199,
+        "top1": 0.2518921880886332,
+        "top3": 0.5901571971642865,
+        "MRR": 0.46993736720186347,
+        "normalizedRank": 0.42743416250557265,
+        "neutralOccurrences": 19329
+      },
+      "B": {
+        "eligible": 29199,
+        "top1": 0.2518921880886332,
+        "top3": 0.5901571971642865,
+        "MRR": 0.46993736720186347,
+        "normalizedRank": 0.42743416250557265,
+        "neutralOccurrences": 19329
+      },
+      "C": {
+        "eligible": 29199,
+        "top1": 0.25733758005411145,
+        "top3": 0.5891640124661803,
+        "MRR": 0.47276259801178505,
+        "normalizedRank": 0.4244508041513133,
+        "neutralOccurrences": 19329
+      }
+    }
+  },
+  {
+    "set": "OTJ",
+    "format": "PremierDraft",
+    "interpretation": "Q-only ranking, not contextual score; human picks are secondary revealed preferences",
+    "models": {
+      "currentQ": {
+        "eligible": 27113,
+        "top1": 0.276288127466529,
+        "top3": 0.6412790912108582,
+        "MRR": 0.49866704149524216,
+        "normalizedRank": 0.39301605523897853,
+        "neutralOccurrences": 13656
+      },
+      "A": {
+        "eligible": 27113,
+        "top1": 0.2778371998672224,
+        "top3": 0.6440084092501752,
+        "MRR": 0.5006708187701077,
+        "normalizedRank": 0.3897968091445442,
+        "neutralOccurrences": 13656
+      },
+      "B": {
+        "eligible": 27113,
+        "top1": 0.2778371998672224,
+        "top3": 0.6440084092501752,
+        "MRR": 0.5006708187701077,
+        "normalizedRank": 0.3897968091445442,
+        "neutralOccurrences": 13656
+      },
+      "C": {
+        "eligible": 27113,
+        "top1": 0.27765278648618746,
+        "top3": 0.6439346438977612,
+        "MRR": 0.5007165505865762,
+        "normalizedRank": 0.3892547222342944,
+        "neutralOccurrences": 13656
+      }
+    }
+  },
+  {
+    "set": "SNC",
+    "format": "PremierDraft",
+    "interpretation": "Q-only ranking, not contextual score; human picks are secondary revealed preferences",
+    "models": {
+      "currentQ": {
+        "eligible": 26719,
+        "top1": 0.3315243833975822,
+        "top3": 0.6748007036191475,
+        "MRR": 0.5398854460908038,
+        "normalizedRank": 0.34460956058882647,
+        "neutralOccurrences": 0
+      },
+      "A": {
+        "eligible": 26719,
+        "top1": 0.3397207979340544,
+        "top3": 0.6847187394737827,
+        "MRR": 0.5477990617863376,
+        "normalizedRank": 0.3306661845791294,
+        "neutralOccurrences": 0
+      },
+      "B": {
+        "eligible": 26719,
+        "top1": 0.3397207979340544,
+        "top3": 0.6847187394737827,
+        "MRR": 0.5477990617863376,
+        "normalizedRank": 0.3306661845791294,
+        "neutralOccurrences": 0
+      },
+      "C": {
+        "eligible": 26719,
+        "top1": 0.338822560724578,
+        "top3": 0.6834462367603578,
+        "MRR": 0.5468829573352948,
+        "normalizedRank": 0.3323633768579306,
+        "neutralOccurrences": 0
+      }
+    }
+  },
+  {
+    "set": "STX",
+    "format": "PremierDraft",
+    "interpretation": "Q-only ranking, not contextual score; human picks are secondary revealed preferences",
+    "models": {
+      "currentQ": {
+        "eligible": 28463,
+        "top1": 0.24386045040930332,
+        "top3": 0.581913361205776,
+        "MRR": 0.462382999309925,
+        "normalizedRank": 0.4101600715546914,
+        "neutralOccurrences": 415
+      },
+      "A": {
+        "eligible": 28463,
+        "top1": 0.2457225169518322,
+        "top3": 0.5851104943259671,
+        "MRR": 0.4639267584196469,
+        "normalizedRank": 0.4073836735274403,
+        "neutralOccurrences": 415
+      },
+      "B": {
+        "eligible": 28463,
+        "top1": 0.2457225169518322,
+        "top3": 0.5851104943259671,
+        "MRR": 0.4639267584196469,
+        "normalizedRank": 0.4073836735274403,
+        "neutralOccurrences": 415
+      },
+      "C": {
+        "eligible": 28463,
+        "top1": 0.24842778343814778,
+        "top3": 0.5866212275585848,
+        "MRR": 0.46608681529547535,
+        "normalizedRank": 0.40578903796941385,
+        "neutralOccurrences": 415
+      }
+    }
+  },
+  {
+    "set": "VOW",
+    "format": "PremierDraft",
+    "interpretation": "Q-only ranking, not contextual score; human picks are secondary revealed preferences",
+    "models": {
+      "currentQ": {
+        "eligible": 27233,
+        "top1": 0.2477141703080821,
+        "top3": 0.5798846987111226,
+        "MRR": 0.4651091306601453,
+        "normalizedRank": 0.4148753809257635,
+        "neutralOccurrences": 185
+      },
+      "A": {
+        "eligible": 27233,
+        "top1": 0.25153306650020196,
+        "top3": 0.5864943267359454,
+        "MRR": 0.4693570792908272,
+        "normalizedRank": 0.40603000878402284,
+        "neutralOccurrences": 185
+      },
+      "B": {
+        "eligible": 27233,
+        "top1": 0.25153306650020196,
+        "top3": 0.5864943267359454,
+        "MRR": 0.4693570792908272,
+        "normalizedRank": 0.40603000878402284,
+        "neutralOccurrences": 185
+      },
+      "C": {
+        "eligible": 27233,
+        "top1": 0.2513127455660412,
+        "top3": 0.5891381779458745,
+        "MRR": 0.4698185600207332,
+        "normalizedRank": 0.4050946113214334,
+        "neutralOccurrences": 185
+      }
+    }
+  },
+  {
+    "set": "WOE",
+    "format": "PremierDraft",
+    "interpretation": "Q-only ranking, not contextual score; human picks are secondary revealed preferences",
+    "models": {
+      "currentQ": {
+        "eligible": 27002,
+        "top1": 0.2870898451966521,
+        "top3": 0.6362121324346345,
+        "MRR": 0.503017858064743,
+        "normalizedRank": 0.3811822330283951,
+        "neutralOccurrences": 507
+      },
+      "A": {
+        "eligible": 27002,
+        "top1": 0.28979334864084144,
+        "top3": 0.6439152655358862,
+        "MRR": 0.5069886756373322,
+        "normalizedRank": 0.3729813226794931,
+        "neutralOccurrences": 507
+      },
+      "B": {
+        "eligible": 27002,
+        "top1": 0.28979334864084144,
+        "top3": 0.6439152655358862,
+        "MRR": 0.5069886756373322,
+        "normalizedRank": 0.3729813226794931,
+        "neutralOccurrences": 507
+      },
+      "C": {
+        "eligible": 27002,
+        "top1": 0.28908969705947707,
+        "top3": 0.6411747277979409,
+        "MRR": 0.5060069243194955,
+        "normalizedRank": 0.37415756015211665,
+        "neutralOccurrences": 507
+      }
+    }
+  }
+]

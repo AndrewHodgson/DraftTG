@@ -1,0 +1,131 @@
+[
+  {
+    "set": "DMU",
+    "format": "PremierDraft",
+    "baseline": 0.5750394880229868,
+    "targetBaseline": 0.570156467600557,
+    "ebK": 177.00560018751142,
+    "games": 41528,
+    "evidenceGames": 20805,
+    "targetGames": 20723,
+    "exclusions": {
+      "sideboardOnly": 528326,
+      "basic": 116755
+    },
+    "sourceHash": "c5925b990aa663e079d761636439ca4cb020f9dd4f94ff11f312d1f955542a89",
+    "sourceBytes": 3189043
+  },
+  {
+    "set": "BRO",
+    "format": "PremierDraft",
+    "baseline": 0.5599253015296534,
+    "targetBaseline": 0.5564490202860806,
+    "ebK": 60.75312081741477,
+    "games": 46850,
+    "evidenceGames": 23731,
+    "targetGames": 23119,
+    "exclusions": {
+      "sideboardOnly": 810571,
+      "basic": 106360
+    },
+    "sourceHash": "6c7ec4dc07bedd00491e1a7feaacbce4e02a795a0285bcd8b9c85be78449ebc2",
+    "sourceBytes": 3743287
+  },
+  {
+    "set": "WOE",
+    "format": "PremierDraft",
+    "baseline": 0.559953546482865,
+    "targetBaseline": 0.5653317204162699,
+    "ebK": 69.24519479572696,
+    "games": 46885,
+    "evidenceGames": 23646,
+    "targetGames": 23239,
+    "exclusions": {
+      "sideboardOnly": 710708,
+      "basic": 115255
+    },
+    "sourceHash": "ca93d6a563311225b2fcbf95064ab52f734ac18c903415b97c3ae3b649a0e3f3",
+    "sourceBytes": 3622672
+  },
+  {
+    "set": "LCI",
+    "format": "PremierDraft",
+    "baseline": 0.5624997423073593,
+    "targetBaseline": 0.558772318862005,
+    "ebK": 103.81071304322387,
+    "games": 46988,
+    "evidenceGames": 23463,
+    "targetGames": 23525,
+    "exclusions": {
+      "sideboardOnly": 734500,
+      "basic": 105427
+    },
+    "sourceHash": "b134ee7c081c474db3be54551bade301c5e1a5bac1698f6490613eab63f1bbe6",
+    "sourceBytes": 3660594
+  },
+  {
+    "set": "MKM",
+    "format": "PremierDraft",
+    "baseline": 0.5552626880138762,
+    "targetBaseline": 0.5532883536162432,
+    "ebK": 44.91901568259922,
+    "games": 46639,
+    "evidenceGames": 23190,
+    "targetGames": 23449,
+    "exclusions": {
+      "sideboardOnly": 596424,
+      "basic": 122519
+    },
+    "sourceHash": "3219e56950d11f1ab871c8ee61d912c1a2d456feb40716fb2f4866e6587d5d79",
+    "sourceBytes": 3345081
+  },
+  {
+    "set": "OTJ",
+    "format": "PremierDraft",
+    "baseline": 0.5549020401554404,
+    "targetBaseline": 0.5523891720978253,
+    "ebK": 52.02393603208849,
+    "games": 46260,
+    "evidenceGames": 23027,
+    "targetGames": 23233,
+    "exclusions": {
+      "sideboardOnly": 600030,
+      "basic": 123351
+    },
+    "sourceHash": "68096b646ad5c00213082b410b1ddb7845c6fdddd687f18cb9e565be58d74c82",
+    "sourceBytes": 3418567
+  },
+  {
+    "set": "ONE",
+    "format": "PremierDraft",
+    "baseline": 0.5492982576839064,
+    "targetBaseline": 0.555432069363958,
+    "ebK": 104.6248929675589,
+    "games": 46859,
+    "evidenceGames": 23770,
+    "targetGames": 23089,
+    "exclusions": {
+      "sideboardOnly": 663154,
+      "basic": 103488,
+      "unresolved": 2139
+    },
+    "sourceHash": "b2c2d8b043aec7d8e9336b46a55566703bb97c9ca6f2c343f7aeb07cc901e436",
+    "sourceBytes": 3541520
+  },
+  {
+    "set": "MOM",
+    "format": "PremierDraft",
+    "baseline": 0.5537287414965987,
+    "targetBaseline": 0.5542613539572757,
+    "ebK": 152.5636852676096,
+    "games": 46566,
+    "evidenceGames": 23376,
+    "targetGames": 23190,
+    "exclusions": {
+      "sideboardOnly": 767458,
+      "basic": 117455
+    },
+    "sourceHash": "92d5192d9c6725bffe25e738f1d61858a95c45c013f7f0a4a68abe4514a4c0d2",
+    "sourceBytes": 3757947
+  }
+]

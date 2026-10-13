@@ -1,0 +1,12 @@
+{
+  "scope": "CLI import log parsing only; stderr progress precedes stdout JSON",
+  "file": "tools\\DraftTG.HistoricalEvaluation\\phase_b_replay.py",
+  "beforeSha256": "5b417128baeb7322a1ea1234a7488ef0b5eaa4baee5e8eb0ba6e59722f88bf4c",
+  "afterSha256": "064d4b415cec50403f473b4828ebcdf6485cb99675c674bf6fc519fb86c15f30",
+  "originalSelectionSha256": "1131a6e4e526b42b87b71d399c91f458209758aae7ef06a0c185a1da3f977d9e",
+  "previousResearchFingerprint": "bc1c872c6e5cc072a4803f36b65d18cf5ed8f1ccfa7300b6d66028365c019eea",
+  "currentResearchFingerprint": "1874648d366137d0bc15a54b83b687b77ee43ed3df6f061bbf51711924ba98d0",
+  "formulasParametersMissingRulesMetricsAndProductionSourcesUnchanged": true,
+  "holdoutReleased": false,
+  "correctedSelectionSha256": "6646a9b2f7dcece0b87cfeebbc4729bbb95c61e8e4ceed10096139df39beac3c"
+}

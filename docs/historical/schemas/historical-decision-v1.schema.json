@@ -1,0 +1,395 @@
+{
+  "type": "object",
+  "properties": {
+    "DatasetVersion": {
+      "type": "string"
+    },
+    "DatasetId": {
+      "type": "string"
+    },
+    "Inputs": {
+      "type": "object",
+      "properties": {
+        "SetCode": {
+          "type": "string"
+        },
+        "Format": {
+          "type": "string"
+        },
+        "DraftId": {
+          "type": "string"
+        },
+        "DraftTimestamp": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "PackNumber": {
+          "type": "integer"
+        },
+        "PickNumber": {
+          "type": "integer"
+        },
+        "GlobalPickIndex": {
+          "type": "integer"
+        },
+        "OfferedCards": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "Card": {
+                "type": "object",
+                "properties": {
+                  "SourceIdentity": {
+                    "type": "string"
+                  },
+                  "CanonicalId": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "PrintingSet": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "Status": {
+                    "enum": [
+                      "ExactSet",
+                      "FrontFace",
+                      "ExplicitBonusSheet",
+                      "ExplicitIdentifier",
+                      "Unresolved",
+                      "Ambiguous"
+                    ]
+                  },
+                  "Rule": {
+                    "type": "string"
+                  },
+                  "Candidates": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": [
+                  "SourceIdentity",
+                  "CanonicalId",
+                  "PrintingSet",
+                  "Status",
+                  "Rule",
+                  "Candidates"
+                ]
+              },
+              "Count": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "Card",
+              "Count"
+            ]
+          }
+        },
+        "PoolBeforePick": {
+          "type": "array",
+          "items": {
+            "$ref": "#/properties/Inputs/properties/OfferedCards/items"
+          }
+        },
+        "PriorPicks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "Pack": {
+                "type": "integer"
+              },
+              "Pick": {
+                "type": "integer"
+              },
+              "Card": {
+                "type": "object",
+                "properties": {
+                  "SourceIdentity": {
+                    "type": "string"
+                  },
+                  "CanonicalId": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "PrintingSet": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "Status": {
+                    "enum": [
+                      "ExactSet",
+                      "FrontFace",
+                      "ExplicitBonusSheet",
+                      "ExplicitIdentifier",
+                      "Unresolved",
+                      "Ambiguous"
+                    ]
+                  },
+                  "Rule": {
+                    "type": "string"
+                  },
+                  "Candidates": {
+                    "$ref": "#/properties/Inputs/properties/OfferedCards/items/properties/Card/properties/Candidates"
+                  }
+                },
+                "required": [
+                  "SourceIdentity",
+                  "CanonicalId",
+                  "PrintingSet",
+                  "Status",
+                  "Rule",
+                  "Candidates"
+                ]
+              }
+            },
+            "required": [
+              "Pack",
+              "Pick",
+              "Card"
+            ]
+          }
+        },
+        "PoolIsComplete": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "SetCode",
+        "Format",
+        "DraftId",
+        "DraftTimestamp",
+        "PackNumber",
+        "PickNumber",
+        "GlobalPickIndex",
+        "OfferedCards",
+        "PoolBeforePick",
+        "PriorPicks",
+        "PoolIsComplete"
+      ]
+    },
+    "Label": {
+      "type": "object",
+      "properties": {
+        "ActualPickedCard": {
+          "type": "object",
+          "properties": {
+            "SourceIdentity": {
+              "type": "string"
+            },
+            "CanonicalId": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "PrintingSet": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "Status": {
+              "enum": [
+                "ExactSet",
+                "FrontFace",
+                "ExplicitBonusSheet",
+                "ExplicitIdentifier",
+                "Unresolved",
+                "Ambiguous"
+              ]
+            },
+            "Rule": {
+              "type": "string"
+            },
+            "Candidates": {
+              "$ref": "#/properties/Inputs/properties/OfferedCards/items/properties/Card/properties/Candidates"
+            }
+          },
+          "required": [
+            "SourceIdentity",
+            "CanonicalId",
+            "PrintingSet",
+            "Status",
+            "Rule",
+            "Candidates"
+          ]
+        },
+        "ObservedMaindeckRate": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "default": null
+        },
+        "ObservedSideboardInRate": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "ActualPickedCard"
+      ]
+    },
+    "Outcome": {
+      "type": "object",
+      "properties": {
+        "FinalWins": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "default": null
+        },
+        "FinalLosses": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "default": null
+        },
+        "FinalPool": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/properties/Inputs/properties/OfferedCards/items"
+          },
+          "default": null
+        },
+        "FinalMainDeck": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/properties/Inputs/properties/OfferedCards/items"
+          },
+          "default": null
+        },
+        "FinalSideboard": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/properties/Inputs/properties/OfferedCards/items"
+          },
+          "default": null
+        },
+        "DeckEvidence": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": null
+        },
+        "ReportedEventWins": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "default": null
+        },
+        "ReportedEventLosses": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "default": null
+        },
+        "OutcomeEvidence": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": null
+        }
+      }
+    },
+    "Provenance": {
+      "type": "object",
+      "properties": {
+        "Provider": {
+          "type": "string"
+        },
+        "Uri": {
+          "type": "string"
+        },
+        "Sha256": {
+          "type": "string"
+        },
+        "Row": {
+          "type": "integer"
+        },
+        "Schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "Provider",
+        "Uri",
+        "Sha256",
+        "Row",
+        "Schema"
+      ]
+    },
+    "PlayerMetadata": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "SourceRank": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LifetimeBuckets": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "TemporalScope": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "SourceRank",
+        "LifetimeBuckets",
+        "TemporalScope"
+      ],
+      "default": null
+    }
+  },
+  "required": [
+    "DatasetVersion",
+    "DatasetId",
+    "Inputs",
+    "Label",
+    "Outcome",
+    "Provenance"
+  ]
+}

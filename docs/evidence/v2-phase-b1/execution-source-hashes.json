@@ -1,0 +1,20 @@
+{
+  "files": {
+    "tools\\DraftTG.HistoricalEvaluation\\phase_b1.py": "3a6da7f905a45698cb40373b65ace08cfbaace8e520382d7789c08906aadf3fa",
+    "tools\\DraftTG.HistoricalEvaluation\\phase_b1_core.py": "c0a182f91df192d41af39bca8b8380fd73e32d132fe81d2ae77a748763e5a161",
+    "tools\\DraftTG.HistoricalEvaluation\\phase_b1_prior.py": "8b9ee4128952829d934d4f45c9f48eaed685ae30df67ea4f099e190a78d949ca",
+    "tools\\DraftTG.HistoricalEvaluation\\phase_b1_replay.py": "2bcf534239513cb8efa7a321ebc239149b9eac972cf82475c55ffebb714955a8",
+    "tools\\DraftTG.HistoricalEvaluation\\phase_b1_report.py": "91f2a8305cca4699744fad9a52553065e8b4a248ce885327e5180f6a59129326",
+    "tools\\DraftTG.HistoricalEvaluation\\phase_b1_research.py": "4b43536ccea8574ea8085e7df8356cd13f89a786687ba3caeb7e299c980ee921",
+    "tools\\DraftTG.HistoricalEvaluation\\phase_b1_source.py": "e815ccdcc78fd1b7075870b904122237aea72b139959ea3b78637afd3c275945",
+    "tools\\DraftTG.HistoricalEvaluation\\phase_b1_tests.py": "790bb4328a04284801f98814eea16bb67d9e6b3627549135ee25cc33f4713b7d",
+    "tools\\DraftTG.HistoricalEvaluation\\phase_b1_validate.py": "efff9a10c3c3ee74ae63ad8ccab6357d9eedd23963a1e75c0f4af4e0610b1c4e",
+    "tools\\DraftTG.QualityEvidenceResearch\\DraftTG.QualityEvidenceResearch.csproj": "608870806a96238e83b44d7d73e8310c918dc13f8ccd360c1d2c4f4223119a49",
+    "tools\\DraftTG.QualityEvidenceResearch\\Program.cs": "46cb9b2e0be94dfcca5261b00f42a0e247451cffaa00dd4fb84cbadebef57853",
+    "src/DraftTG.HistoricalEvaluation/HistoricalReplay.cs": "77c8a946f8a9bd9a2893a152c2c04f451a6598b185b870557d59a6b2e34dbb02",
+    "tests/DraftTG.HistoricalEvaluation.Tests/HistoricalEvaluationTests.cs": "31401e779234f3f5ec8f1ed09c5005de7a65f0354bfef6e6709d6ba9afa00bba"
+  },
+  "sourceFingerprint": "ae1fe82c9134b3c06fa6759749ebd878eb3d6e983a65346c8348defe0c1f64bd",
+  "selectionFingerprint": "81c227d5315a655c9160317d3c467bc494eee8e1cc9deadf6046a6377ab2cb8a",
+  "note": "Report rendering correction and removal of unused duplicate prior diagnostics; analytical methods unchanged; final prior/equivalence tests rerun."
+}

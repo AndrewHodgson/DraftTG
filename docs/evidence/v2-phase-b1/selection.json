@@ -1,0 +1,32 @@
+{
+  "version": "research-q-phase-b1-v1",
+  "k": 250,
+  "policy": "250",
+  "ebCalibrationK": 69.24519479572696,
+  "selectionMetric": "Equal-set/equal-six-level unweighted card MAE; calibration fits only",
+  "semantics": "opening-plus-draw-instances",
+  "calibrationSets": [
+    "DMU",
+    "BRO",
+    "WOE"
+  ],
+  "developmentSets": [
+    "LCI",
+    "MKM",
+    "OTJ",
+    "ONE",
+    "MOM"
+  ],
+  "fingerprint": "81c227d5315a655c9160317d3c467bc494eee8e1cc9deadf6046a6377ab2cb8a",
+  "splitHash": "6856df32859cd1f81e035de4f4f3ae880e5b0dbebaeda08e78ae0f0e248e0ac0",
+  "limitations": [
+    "Modern unit compatible, but pre-2024-11-12 OH collection era differs from current provider",
+    "No matching provider historical cohort bridge",
+    "Copy instances sharing game outcomes are not independent Bernoulli trials"
+  ],
+  "alternatePrior": {
+    "reliability": 0.9,
+    "shrinkage": 500,
+    "status": "Reference policy only; generalized reliability unqualified"
+  }
+}

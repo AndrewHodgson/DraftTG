@@ -1,0 +1,80 @@
+[
+  {
+    "set": "BLB",
+    "format": "PremierDraft",
+    "interpretation": "Q-only ranking, not contextual score; human picks are secondary revealed preferences",
+    "models": {
+      "currentQ": {
+        "eligible": 25030,
+        "top1": 0.3145425489412705,
+        "top3": 0.6821813823411905,
+        "MRR": 0.5334637950499244,
+        "normalizedRank": 0.3475629965542084,
+        "neutralOccurrences": 24
+      },
+      "A": {
+        "eligible": 25030,
+        "top1": 0.31546144626448264,
+        "top3": 0.6853775469436676,
+        "MRR": 0.5348444777799877,
+        "normalizedRank": 0.34587845090941505,
+        "neutralOccurrences": 24
+      },
+      "B": {
+        "eligible": 25030,
+        "top1": 0.31546144626448264,
+        "top3": 0.6853775469436676,
+        "MRR": 0.5348444777799877,
+        "normalizedRank": 0.34587845090941505,
+        "neutralOccurrences": 24
+      },
+      "C": {
+        "eligible": 25030,
+        "top1": 0.31414302836596086,
+        "top3": 0.6854174990011985,
+        "MRR": 0.5341439107570078,
+        "normalizedRank": 0.34616694166134937,
+        "neutralOccurrences": 24
+      }
+    }
+  },
+  {
+    "set": "DSK",
+    "format": "PremierDraft",
+    "interpretation": "Q-only ranking, not contextual score; human picks are secondary revealed preferences",
+    "models": {
+      "currentQ": {
+        "eligible": 27109,
+        "top1": 0.26902504703235086,
+        "top3": 0.6393448670183334,
+        "MRR": 0.4953943696898413,
+        "normalizedRank": 0.3965999825382352,
+        "neutralOccurrences": 13761
+      },
+      "A": {
+        "eligible": 27109,
+        "top1": 0.2699103618724409,
+        "top3": 0.6425172451953226,
+        "MRR": 0.49680490772566904,
+        "normalizedRank": 0.3938220772141268,
+        "neutralOccurrences": 13761
+      },
+      "B": {
+        "eligible": 27109,
+        "top1": 0.2699103618724409,
+        "top3": 0.6425172451953226,
+        "MRR": 0.49680490772566904,
+        "normalizedRank": 0.3938220772141268,
+        "neutralOccurrences": 13761
+      },
+      "C": {
+        "eligible": 27109,
+        "top1": 0.2715334390792726,
+        "top3": 0.6430705669703788,
+        "MRR": 0.497518544693872,
+        "normalizedRank": 0.39344320964447443,
+        "neutralOccurrences": 13761
+      }
+    }
+  }
+]

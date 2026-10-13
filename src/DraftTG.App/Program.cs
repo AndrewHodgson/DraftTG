@@ -4,9 +4,21 @@ namespace DraftTG.App;
 
 internal static class Program
 {
+    internal static CaptureFreeOptions? CaptureFreeOverlayOptions { get; private set; }
     [STAThread]
     public static void Main(string[] args)
     {
+        if (args.Length > 0 && args[0] == "--arena-memory-draft-watch")
+        { Environment.ExitCode = ArenaMemoryWatchCommand.Run(args); return; }
+        if (args.Length > 0 && args[0] == "--capture-free-draft-summary")
+        { Environment.ExitCode = CaptureFreeSummaryCommand.Run(args); return; }
+        if (args.Length > 0 && args[0] == "--capture-free-draft-overlay")
+        {
+            try { CaptureFreeOverlayOptions = CaptureFreeOptions.Parse(args); }
+            catch (ArgumentException ex) { Console.Error.WriteLine(ex.Message); Environment.ExitCode = 1; return; }
+            if (!OperatingSystem.IsWindows() || !Environment.Is64BitProcess) { Console.Error.WriteLine("Capture-free overlay requires Windows x64."); Environment.ExitCode = 2; return; }
+            CaptureFreeSafety.EnableForProcess(); args = [];
+        }
         if (args.Length > 0 && args[0] is "--arena-memory-draft" or "--arena-memory-draft-once")
         { Environment.ExitCode = ArenaMemoryDraftCommand.Run(args); return; }
         if (args.Length > 0 && args[0] == "--capture-deck-builder")

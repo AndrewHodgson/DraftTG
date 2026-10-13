@@ -1,0 +1,12 @@
+{
+  "provenance": {
+    "helperSha256": "c1d4b32fc84cfbdac4ec805fe486732b73ee04b7d757134479848e75e96cd82b",
+    "scryfallSha256": "d44936533bb112d7f004acf8939224b759e7bcbd450db60f387b83b048539b52",
+    "policySha256": "a3166c3cd5a64c68232a89574c32b22417d472e85786118739b31b14fb5d568b",
+    "metadataCards": 5015
+  },
+  "vocabulary": 4209,
+  "unresolved": {},
+  "consensusLogicalIdentities": 595,
+  "scope": "Score-relevant logical identity; exact original printing remains ambiguous for consensus groups"
+}

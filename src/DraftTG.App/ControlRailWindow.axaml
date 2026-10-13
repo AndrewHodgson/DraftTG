@@ -31,7 +31,7 @@
       <Button Classes="rail" Click="History_OnClick" ToolTip.Tip="Drafted cards">
         <TextBlock Text="≡" FontSize="23" />
       </Button>
-      <Button Classes="rail" Click="Calibration_OnClick" ToolTip.Tip="{Binding CalibrationLabel}">
+      <Button Classes="rail" Click="Calibration_OnClick" IsVisible="{Binding !IsCaptureFree}" ToolTip.Tip="{Binding CalibrationLabel}">
         <TextBlock Text="⌖" FontSize="22" />
       </Button>
       <TextBlock Text="Set&#10;position" IsVisible="{Binding NeedsCalibration}" Foreground="#FFD8C79A"

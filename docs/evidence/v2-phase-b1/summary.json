@@ -1,0 +1,38 @@
+{
+  "version": "research-q-phase-b1-v1",
+  "productionChanged": false,
+  "selectedResearchK": 250,
+  "calibrationMAE": {
+    "0": 0.03765917711420076,
+    "50": 0.029643545592777286,
+    "100": 0.027476219775570822,
+    "250": 0.0264111386106929,
+    "500": 0.02702791468130361,
+    "1000": 0.02833056955823657,
+    "2000": 0.02967073281251016,
+    "EB-count-adjusted": 0.028501492824692037
+  },
+  "developmentMAE": {
+    "0": 0.03680365963156699,
+    "50": 0.02934957725090489,
+    "100": 0.027410975378712635,
+    "250": 0.02682580135461523,
+    "500": 0.027789261282956532,
+    "1000": 0.029282045732999376,
+    "2000": 0.03074552888107456,
+    "EB-count-adjusted": 0.028316981816725005
+  },
+  "pairedSets": 1,
+  "generalizedReliabilityQualified": false,
+  "UldarosPortability": true,
+  "contextualDecisions": 54283,
+  "comparativeDecisions": 50466,
+  "newHoldouts": [
+    "MH3",
+    "DFT"
+  ],
+  "newHoldoutsUntouched": true,
+  "V2Qualified": false,
+  "PhaseCAutomaticallyStarted": false,
+  "recommendation": "Retain v1.6.2/k500/FRA-only prior. Generalized Q needs permitted multi-set paired evidence, current OH-era/cohort bridge and an explicit future holdout release. Separately scoped preregistered lane research is possible; production V2 integration is not qualified."
+}

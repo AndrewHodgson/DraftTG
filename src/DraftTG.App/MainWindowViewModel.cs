@@ -84,6 +84,11 @@ public sealed class MainWindowViewModel : INotifyPropertyChanged, IAsyncDisposab
     // Emitted after a whole pack presentation is ready; statistics updates retain slot objects.
     public event Action<bool>? PackPresentationChanged;
     public event Action? CurrentPackPlacementInvalidated;
+    internal CaptureFreeDraftSession? CaptureFreeSession { get; private set; }
+    internal ArenaCardResolver? CardResolver { get; private set; }
+    internal CardCatalog? CardCatalog => _catalog;
+    internal long CaptureFreePresentationGeneration { get; private set; }
+    internal event Action? CaptureFreeStaleResultRejected;
     private bool _submittedPackInvalidated;
     internal void InvalidateSubmittedPack(ArenaDraftStateSnapshot acceptedState)
     {
@@ -313,14 +318,21 @@ public sealed class MainWindowViewModel : INotifyPropertyChanged, IAsyncDisposab
         var decksTask = runtime.Decks is { } decks ? ReadDecksAsync(decks, statisticsCancellation.Token) : Task.CompletedTask;
         Task RetireSubmittedPack(ArenaDraftStateSnapshot state) => _dispatcher.InvokeAsync(() => InvalidateSubmittedPack(state));
         runtime.Coordinator.CurrentPackPickAccepted += RetireSubmittedPack;
+        Task RetireMemoryPack() => _dispatcher.InvokeAsync(() =>
+        { CurrentPackPlacementInvalidated?.Invoke(); ClearCurrentPack(); });
+        if (runtime.CaptureFree is { } memorySession) memorySession.Invalidated += RetireMemoryPack;
         try
         {
-            await foreach (var update in runtime.Coordinator
-                .RunAsync(cancellationToken)
+            await foreach (var update in (runtime.CaptureFree?.RunAsync(cancellationToken) ?? runtime.Coordinator.RunAsync(cancellationToken))
                 .ConfigureAwait(false))
             {
                 await _dispatcher.InvokeAsync(() =>
                 {
+                    if (runtime.CaptureFree is { } source)
+                    {
+                        if (!source.IsCurrent(update)) { CaptureFreeStaleResultRejected?.Invoke(); return; }
+                        CaptureFreePresentationGeneration = source.Generation;
+                    }
                     if (runtime.Decks is { } deckCoordinator) _deckBuildGeneration = deckCoordinator.Observe(update);
                     ApplySessionUpdate(update);
                     runtime.Statistics?.Observe(update);
@@ -343,6 +355,7 @@ public sealed class MainWindowViewModel : INotifyPropertyChanged, IAsyncDisposab
         finally
         {
             runtime.Coordinator.CurrentPackPickAccepted -= RetireSubmittedPack;
+            if (runtime.CaptureFree is { } source) { source.Invalidated -= RetireMemoryPack; await source.DisposeAsync(); }
             await statisticsCancellation.CancelAsync().ConfigureAwait(false);
             if (runtime.Decks is not null) await runtime.Decks.DisposeAsync().ConfigureAwait(false);
             await decksTask.ConfigureAwait(false);
@@ -364,6 +377,8 @@ public sealed class MainWindowViewModel : INotifyPropertyChanged, IAsyncDisposab
 
     internal void ApplyStatisticsUpdate(LimitedStatisticsUpdate update)
     {
+        if (CaptureFreeSession is { } source && CaptureFreePresentationGeneration != source.Generation)
+        { CaptureFreeStaleResultRejected?.Invoke(); return; }
         // A queued UI callback for a previous pack/environment cannot overwrite current rows.
         var snapshot = _currentSnapshot;
         if (!ReferenceEquals(update.Snapshot, snapshot)
@@ -450,6 +465,9 @@ public sealed class MainWindowViewModel : INotifyPropertyChanged, IAsyncDisposab
     {
         ArgumentNullException.ThrowIfNull(runtime);
         _catalog = runtime.Catalog;
+        CardResolver = runtime.CardResolver;
+        CaptureFreeSession = runtime.CaptureFree;
+        OnPropertyChanged(nameof(CaptureFreeSession));
         _statisticsEnabled = runtime.Statistics is not null;
         StatusText = "Waiting for MTG Arena…";
         CardDataWarningText = runtime.CardDataStatus == DraftTGCardDataStatus.CacheAfterRefreshFailure

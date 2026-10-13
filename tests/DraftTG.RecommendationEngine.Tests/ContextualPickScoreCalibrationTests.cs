@@ -82,7 +82,7 @@ public sealed class ContextualPickScoreCalibrationTests
         // V = SoftLimit(.5 + 1.4(w − .5), knee .45), score = 50V.
         var configuration = new ContextualPickScoreConfiguration();
         Assert.Equal(1.4, configuration.CalibrationGain); Assert.Equal(.45, configuration.CalibrationSoftKnee);
-        Assert.Equal("contextual-pick-score-v1.6", configuration.ModelVersion);
+        Assert.Equal("contextual-pick-score-v1.6.2", configuration.ModelVersion);
         Assert.Equal(.5, ContextualPickScoreCalibration.Calibrate(.5), 12);
         Assert.Equal(.64, ContextualPickScoreCalibration.Calibrate(.6), 12);
         Assert.Equal(32, ContextualPickScoreCalibration.DisplayScore(.64));

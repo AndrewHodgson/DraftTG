@@ -122,12 +122,14 @@ public sealed class OverlayViewModel : PresentationModel, IDisposable
     private DraftCardLayout _layout = DraftCardLayout.Grid(7);
     private VisualCardPlacement? _visualPlacement;
     private CardVisualLocalizationResult? _automaticPlacement;
+    private (VisualPlacementContext Context, IReadOnlyList<NormalizedDraftRegion> Rectangles)? _memoryPlacement;
     private long _visualGeneration;
     private string? _placementError;
     private bool _waitingForNextPack;
     private bool _showCardNames = true;
-    public OverlayViewModel(MainWindowViewModel session)
+    public OverlayViewModel(MainWindowViewModel session, bool captureFree = false)
     {
+        IsCaptureFree = captureFree;
         Session = session;
         session.PackPresentationChanged += RefreshPack;
         session.CurrentPackPlacementInvalidated += InvalidateSubmittedPack;
@@ -135,6 +137,7 @@ public sealed class OverlayViewModel : PresentationModel, IDisposable
         RefreshPack(true);
     }
     public MainWindowViewModel Session { get; }
+    public bool IsCaptureFree { get; }
     public IReadOnlyList<CardBadgeViewModel> Badges { get; private set; } = [];
     public bool ShowCardNames => _showCardNames;
     public void SetCardNamesVisible(bool visible)
@@ -147,6 +150,7 @@ public sealed class OverlayViewModel : PresentationModel, IDisposable
     public VisualPlacementContext? PlacementContext { get; private set; }
     public IReadOnlyList<VisualSlotAssignmentViewModel> VisualSlots { get; private set; } = [];
     public bool HasVisualSlots => VisualSlots.Count > 0;
+    public bool CanUseManualPositions => !IsCaptureFree && HasVisualSlots;
     public bool CanConfirmVisualPlacement => HasVisualSlots && VisualSlots.All(slot => slot.SelectedCard is not null);
     public bool HasConfirmedVisualPlacement => _visualPlacement is not null;
     public bool HasAutomaticVisualPlacement => _automaticPlacement?.Matches.Count == Badges.Count && Badges.Count > 0;
@@ -250,6 +254,22 @@ public sealed class OverlayViewModel : PresentationModel, IDisposable
         AutomaticLocalizationApplied?.Invoke(context, result);
         return true;
     }
+    internal bool ApplyMemoryPlacement(VisualPlacementContext context, CaptureFreeDraftLayoutResult layout)
+    {
+        if (!ReferenceEquals(context, PlacementContext) || !layout.IsAvailable || layout.Rectangles.Count != Badges.Count
+            || !Equals(context.Pack, Session.CurrentPackIdentity) || Badges.Count == 0
+            || Badges.Any(b => b.Presentation?.IsIdentityConsistent != true)
+            || layout.Rectangles.Any(r => !r.IsValid)) return false;
+        _memoryPlacement = (context, layout.Rectangles);
+        SetLocalizationStatus($"Capture-free slots: {Badges.Count}/{Badges.Count}", "Memory index -> measured slot; " + layout.Profile);
+        PlaceAll(); return true;
+    }
+    internal void RetireMemoryPlacement(string reason)
+    {
+        _memoryPlacement = null;
+        SetLocalizationStatus("Capture-free slots: withheld", reason);
+        PlaceAll();
+    }
     /// <summary>Raised after a safe automatic result has been applied. Observers cannot alter placement.</summary>
     public event Action<VisualPlacementContext, CardVisualLocalizationResult>? AutomaticLocalizationApplied;
     /// <summary>Phase 9E.1 diagnostic only; never read by placement, badges or matching.</summary>
@@ -305,6 +325,7 @@ public sealed class OverlayViewModel : PresentationModel, IDisposable
         && ConfirmVisualOrder(context, VisualSlots.Select(slot => slot.SelectedCard!.Key));
     private void ResetVisualPlacement()
     {
+        _memoryPlacement = null;
         _waitingForNextPack = false;
         _visualPlacement = null;
         _automaticPlacement = null;
@@ -333,7 +354,7 @@ public sealed class OverlayViewModel : PresentationModel, IDisposable
     }
     private void NotifyPlacement()
     {
-        Notify(nameof(HasVisualSlots)); Notify(nameof(CanConfirmVisualPlacement)); Notify(nameof(HasConfirmedVisualPlacement));
+        Notify(nameof(HasVisualSlots)); Notify(nameof(CanUseManualPositions)); Notify(nameof(CanConfirmVisualPlacement)); Notify(nameof(HasConfirmedVisualPlacement));
         Notify(nameof(PlacementDiagnostic)); Notify(nameof(Diagnostics)); Notify(nameof(HasWarning));
         Notify(nameof(HasAutomaticVisualPlacement));
         Notify(nameof(HasManualVisualEdits));
@@ -357,6 +378,7 @@ public sealed class OverlayViewModel : PresentationModel, IDisposable
     }
     private void InvalidateSubmittedPack()
     {
+        _memoryPlacement = null;
         if (PlacementContext is null) return;
         _waitingForNextPack = true;
         ++_visualGeneration;
@@ -379,7 +401,13 @@ public sealed class OverlayViewModel : PresentationModel, IDisposable
     private void PlaceAll()
     {
         foreach (var badge in Badges)
-            if (_visualPlacement is { } mapping && Equals(mapping.Pack, Session.CurrentPackIdentity)
+            if (_memoryPlacement is { } memory && ReferenceEquals(memory.Context, PlacementContext)
+                && Equals(memory.Context.Pack, Session.CurrentPackIdentity) && badge.Index < memory.Rectangles.Count)
+            {
+                var rect = memory.Rectangles[badge.Index];
+                badge.Place(new(badge.Index, rect.X, rect.Y, rect.Width, rect.Height), _width, _height);
+            }
+            else if (_visualPlacement is { } mapping && Equals(mapping.Pack, Session.CurrentPackIdentity)
                 && badge.OccurrenceKey is { } key && mapping.Slots.TryGetValue(key, out var visualSlot))
             {
                 var rectangle = _automaticPlacement?.Rectangles.ElementAtOrDefault(visualSlot);

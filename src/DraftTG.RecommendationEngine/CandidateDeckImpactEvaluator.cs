@@ -19,6 +19,8 @@ public sealed class CandidateDeckImpactEvaluator(ContextualPickScoreConfiguratio
     private readonly LimitedCardRoleClassifier _roles = roles ?? new();
     public int OptimizerCalls { get; private set; }
     public double ElapsedMilliseconds { get; private set; }
+    /// <summary>The unchanged existing projections and playability weights before any offered card is added.</summary>
+    public IReadOnlyList<PoolProjectionEvidence> PoolProjections { get; private set; } = [];
     private sealed record Projection(ArchetypeColorPair Pair, IReadOnlyDictionary<CardIdentifier, int> Main,
         double? Quality, int Spells, int Creatures, int Early, int High, double ManaShortfall, int Relaxations, string ConstraintSignature,
         IReadOnlyList<DeckCardDecision> Decisions, DeckCompositionDiagnostics Composition, int Shortfall = 0);
@@ -38,6 +40,8 @@ public sealed class CandidateDeckImpactEvaluator(ContextualPickScoreConfiguratio
         var projections = new Dictionary<string, Projection>(StringComparer.Ordinal);
         var impacts = new Dictionary<CardIdentifier, CandidateDeckImpact>();
         var befores = Project(input);
+        var poolWeights = PlayabilityWeights(befores);
+        PoolProjections = Array.AsReadOnly(befores.Select((p,i) => new PoolProjectionEvidence(p.Pair,p.Quality,p.Spells,p.Shortfall,poolWeights[i])).ToArray());
         var before = befores.FirstOrDefault();
         // Same stage definition as the score engine: completed picks, or the coordinate when history is partial.
         var position = snapshot.CurrentPack.Position;
@@ -279,12 +283,18 @@ public sealed class CandidateDeckImpactEvaluator(ContextualPickScoreConfiguratio
         double Playability(Card card, IReadOnlyList<Projection> pairs)
         {
             if (pairs.Count == 0) return 1;
+            var weights = PlayabilityWeights(pairs);
+            return Math.Clamp(pairs.Select((p, i) => weights[i] * Eligibility(card, p.Pair)).Sum(), 0, 1);
+        }
+        double[] PlayabilityWeights(IReadOnlyList<Projection> pairs)
+        {
+            if (pairs.Count == 0) return [];
             var measured = pairs.All(p => p.Quality is not null);
             var top = measured ? pairs.Max(p => p.Quality!.Value) : 0;
             var raw = pairs.Select(p => measured ? Math.Exp((p.Quality!.Value - top) / _score.PlayabilityTemperature) : 1d).ToArray();
             var total = raw.Sum();
             var weights = Tapered(pairs, raw.Select(w => w / total).ToArray());
-            return Math.Clamp(pairs.Select((p, i) => weights[i] * Eligibility(card, p.Pair)).Sum(), 0, 1);
+            return weights;
         }
         // Phase 10 builds no splashes, so an off-pair card is playable only as a splash: exactly one colour outside the
         // pair, needing one pip of it, with drafted lands producing it (full support at three).

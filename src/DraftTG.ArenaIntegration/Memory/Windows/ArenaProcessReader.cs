@@ -20,6 +20,7 @@ internal sealed class ArenaProcessReader : IRemoteMemory, IDisposable
     internal long BytesRead { get; private set; }
     internal string Architecture { get; }
     internal IReadOnlyList<ArenaRemoteModule> Modules { get; }
+    internal void BeginSnapshot() { BytesRead = 0; budget.Restart(); }
 
     internal ArenaProcessReader(int pid)
     {

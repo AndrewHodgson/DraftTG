@@ -1,0 +1,164 @@
+﻿{
+    "GitCommit":  "d1d09f6b216f23b8e0ce69a77afc552e84b9a014",
+    "WorkingTreeDirty":  true,
+    "Baseline":  "contextual-pick-score-v1.6.2",
+    "Runtime":  "10.0.112",
+    "Files":  [
+                  {
+                      "Path":  "src/DraftTG.RecommendationEngine/ArchetypeRecommendationEngine.cs",
+                      "Sha256":  "551574EB82D5D48B6FC4BA71B789052FF5EDA9410CF24AC42B3E1E349AA981AD"
+                  },
+                  {
+                      "Path":  "src/DraftTG.RecommendationEngine/BaselineDeckBuilder.cs",
+                      "Sha256":  "729B43B01EC6C3569C41031A59368BAE051948CA4A0E1FB8718972E037B3CF94"
+                  },
+                  {
+                      "Path":  "src/DraftTG.RecommendationEngine/CandidateDeckImpactEvaluator.cs",
+                      "Sha256":  "87D8CF07F658D5E2685500B86B4954EE7FE32CEC51354CB8D0DF1FA9E30B29B2"
+                  },
+                  {
+                      "Path":  "src/DraftTG.RecommendationEngine/ColorCommitment.cs",
+                      "Sha256":  "B2EB5CA0CA11EBF964864A3A3240435766A74E9FA9EF681B5D206033167DE3A2"
+                  },
+                  {
+                      "Path":  "src/DraftTG.RecommendationEngine/ContextualPickScoreCalibration.cs",
+                      "Sha256":  "D8C15148C9D45D315D1526A819707C3369FA336029EC2D3EB24900DA900CB9E2"
+                  },
+                  {
+                      "Path":  "src/DraftTG.RecommendationEngine/ContextualPickScoreEngine.cs",
+                      "Sha256":  "29F7FD091E558DDEC471A353550BC25395AAE95600142A5F9A48ECC116590164"
+                  },
+                  {
+                      "Path":  "src/DraftTG.RecommendationEngine/ContextualPickScoreModels.cs",
+                      "Sha256":  "DCF586339E32ED51115CAD33520F0F8FDE23A7666B16EE86B450E77B87EB866F"
+                  },
+                  {
+                      "Path":  "src/DraftTG.RecommendationEngine/ContextualRecommendationEngine.cs",
+                      "Sha256":  "7D1D4EE77028089EDC61D68DED8C72E6B73BBD862C7660C8006CEBC92B9277C4"
+                  },
+                  {
+                      "Path":  "src/DraftTG.RecommendationEngine/DeckBuildingModels.cs",
+                      "Sha256":  "B90C324E58633EC73CB30D121F0AD3BB8ECD05713944A50780F8E0A6A665EEE3"
+                  },
+                  {
+                      "Path":  "src/DraftTG.RecommendationEngine/DeckMana.cs",
+                      "Sha256":  "E9824DCC1521A7AF18B128F16D39633F2875E9DE9F53DD653D5A9FA3A0AF03E0"
+                  },
+                  {
+                      "Path":  "src/DraftTG.RecommendationEngine/DeckPlanSelector.cs",
+                      "Sha256":  "42D669649F2B05B2DD2F8FD9393A008A3C86A3C43480326418E45B05B6102802"
+                  },
+                  {
+                      "Path":  "src/DraftTG.RecommendationEngine/DeckSpellOptimizer.cs",
+                      "Sha256":  "00832D1D75ADE8511FA867418E4D29374CB93E2E096C782B4F5BCBEA097D6BB3"
+                  },
+                  {
+                      "Path":  "src/DraftTG.RecommendationEngine/DraftPackObservationHistory.cs",
+                      "Sha256":  "54B0E243C756D85DF61D3DB2C6A39170A196ED81A7743C4D4F4B01C698D56340"
+                  },
+                  {
+                      "Path":  "src/DraftTG.RecommendationEngine/DraftPoolAnalyzer.cs",
+                      "Sha256":  "8F910B3467567B9C3C3A76EA12B00F4937D2BFC33CE481CECB45986AECA6483C"
+                  },
+                  {
+                      "Path":  "src/DraftTG.RecommendationEngine/DraftTG.RecommendationEngine.csproj",
+                      "Sha256":  "BD73E04E3F8443A292150FC64B8DED0AF13DB47290F7A4E98F11666AFF8CFD0A"
+                  },
+                  {
+                      "Path":  "src/DraftTG.RecommendationEngine/LaneContextualRecommendationEngine.cs",
+                      "Sha256":  "BB8C676323C20350ED4902DFFE26CB0797F7105F984929AA7D59F49E10476F21"
+                  },
+                  {
+                      "Path":  "src/DraftTG.RecommendationEngine/LaneDetectionConfiguration.cs",
+                      "Sha256":  "3215E5C35A0E64E5876EFCE136B0F7F455B9F732783A82F9742A4DE3AC52BD78"
+                  },
+                  {
+                      "Path":  "src/DraftTG.RecommendationEngine/LaneOpennessProfile.cs",
+                      "Sha256":  "1DA07F29ED543C1D000DD117CE3A5800D893548325012AC901F36621CBC53A3D"
+                  },
+                  {
+                      "Path":  "src/DraftTG.RecommendationEngine/LimitedCardRoles.cs",
+                      "Sha256":  "634A32F84DF627CE90A200D07254D9A881D0F0BFA0A6FD0B30964ADBE0637CF8"
+                  },
+                  {
+                      "Path":  "src/DraftTG.RecommendationEngine/LimitedCardStatistics.cs",
+                      "Sha256":  "7F62E37F381C5D769F1C517667186FDE8943B3D99F7F9E72533CC09EA68C7E7F"
+                  },
+                  {
+                      "Path":  "src/DraftTG.RecommendationEngine/ProjectedColorCommitment.cs",
+                      "Sha256":  "63ECCEB20DD868B88126D3F7A7FABAD52CE8895CE78C3EEFC7BBDE17DCF56AE7"
+                  },
+                  {
+                      "Path":  "src/DraftTG.RecommendationEngine/SparsePrimaryQualityPrior.cs",
+                      "Sha256":  "DC67C73DBA891A2C8A0AC4F184565EFE0DC44F3067B7E52C44FCCFE87A01AAF3"
+                  },
+                  {
+                      "Path":  "src/DraftTG.RecommendationEngine/StatisticalRecommendationEngine.cs",
+                      "Sha256":  "A6616DCDA49BAA7EBD85EFA27AE4904F6BC14D2A5BE385D38A71DA0748934FEA"
+                  },
+                  {
+                      "Path":  "src/DraftTG.RecommendationEngine/SuggestedDeckBuilder.cs",
+                      "Sha256":  "53EEBC9F40437D98E8915712F22915EACEB82F02E80B8617AAE7A35C5B0DFAC1"
+                  },
+                  {
+                      "Path":  "src/DraftTG.RecommendationEngine/SuggestedDeckModels.cs",
+                      "Sha256":  "8E42D11ABBC50986F92FF5D16F8CC19335F5A0D18004CB0354EA3007A4DF9965"
+                  },
+                  {
+                      "Path":  "src/DraftTG.RecommendationEngine/TrophyRecommendationEngine.cs",
+                      "Sha256":  "9C5E9D65589A025223AF587EEB770B3702A850EA23C5B33887AEB4012D718C9E"
+                  },
+                  {
+                      "Path":  "tests/Fixtures/arena-woe-saved-deck-cards.json",
+                      "Sha256":  "59690D47BF5CA29A9FE9CF51C4525C9B55E26CE239611AEECF0B66A4864E2F73"
+                  },
+                  {
+                      "Path":  "tests/Fixtures/arena-woe-saved-deck-live.jsonl",
+                      "Sha256":  "D2D194C923CE407BB0A83BDF0C65105A0BFC647AC55F747B614DFC12B0634C39"
+                  },
+                  {
+                      "Path":  "tests/Fixtures/arena-woe-saved-deck-README.md",
+                      "Sha256":  "92F1F8E6077C8247A4920D3E3AAA7CBAA3B1C82A2C57D13E8B808AD201CA816F"
+                  },
+                  {
+                      "Path":  "tests/Fixtures/deckselect-woe-cards.json",
+                      "Sha256":  "9EC1F6ACC0812B079FC7409545BC89A88939840AE3119E30503DF19AF3D479DC"
+                  },
+                  {
+                      "Path":  "tests/Fixtures/deckselect-woe-completion-live.jsonl",
+                      "Sha256":  "00D1E42A61BA3221765B51CF15C0B9D43EEBD456F1F4BADC24032A979A8DB230"
+                  },
+                  {
+                      "Path":  "tests/Fixtures/deckselect-woe-completion-README.md",
+                      "Sha256":  "346876A586CBBEE7060683569E2D5FBA64CD83F56D0990B2D98B29690CDE0257"
+                  },
+                  {
+                      "Path":  "tests/Fixtures/phase9e2b-p1p8-rg-failure.json",
+                      "Sha256":  "C8EA0B051FF7A74C02DF28F2F8B21E41018684F0E030577F595AB1CF882C9DB0"
+                  },
+                  {
+                      "Path":  "tests/Fixtures/phase9e2b-p1p8-v1.6.2.json",
+                      "Sha256":  "B33CAA4893BBCBAC93C568E0F626CAEEC353180B6961023FA791EF1021E0F525"
+                  },
+                  {
+                      "Path":  "tests/Fixtures/phase9f2-live-pack-stat-provenance.json",
+                      "Sha256":  "685280BAC2BBA899D61437C21AA71ECAF6BF71FD2D4D925127F73986079E40D1"
+                  },
+                  {
+                      "Path":  "tests/Fixtures/phase9f2-live-pack-v1.6.1.json",
+                      "Sha256":  "9B64D8DBC090E03E49C4B8562E5695B74092102A244E38BECC4BFD7AF4C3C494"
+                  },
+                  {
+                      "Path":  "tests/Fixtures/premier-fra-course-cards.json",
+                      "Sha256":  "255C871A0FEC9CAD330901BB422A933A986AD7D0296FBCFC4053B22A017EB6C6"
+                  },
+                  {
+                      "Path":  "tests/Fixtures/premier-fra-course-snapshot-live.jsonl",
+                      "Sha256":  "09ED5856F02DCE226226AEBDBE175B646E33DFE78245FCA8C5BEF57DD8345AB5"
+                  },
+                  {
+                      "Path":  "tests/Fixtures/premier-fra-course-snapshot-README.md",
+                      "Sha256":  "4A73D7E167763B1AA7F94B9DF6A5678FEC7C80775FCD522E2EE7A1CBE1B5445B"
+                  }
+              ]
+}

@@ -5,6 +5,9 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="../Fixtures/phase9e2b-p1p8-rg-failure.json" Link="Fixtures/phase9e2b-p1p8-rg-failure.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="../Fixtures/phase9f2-live-pack-stat-provenance.json" Link="Fixtures/phase9f2-live-pack-stat-provenance.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="../Fixtures/phase9f2-live-pack-v1.6.1.json" Link="Fixtures/phase9f2-live-pack-v1.6.1.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="../Fixtures/phase9e2b-p1p8-v1.6.2.json" Link="Fixtures/phase9e2b-p1p8-v1.6.2.json" CopyToOutputDirectory="PreserveNewest" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
     <PackageReference Include="xunit" Version="2.9.3" />
     <PackageReference Include="xunit.runner.visualstudio" Version="3.1.4">

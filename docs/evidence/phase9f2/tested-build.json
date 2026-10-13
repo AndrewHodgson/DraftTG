@@ -1,0 +1,22 @@
+﻿{
+    "BaselineCommit":  "d1d09f6b216f23b8e0ce69a77afc552e84b9a014",
+    "UncommittedPhase9F2Changes":  true,
+    "TestedAtUTC":  "2026-10-13T14:50:51.8086434+00:00",
+    "TestsPassed":  1265,
+    "Warnings":  0,
+    "Errors":  0,
+    "Files":  [
+                  {
+                      "Path":  "src/DraftTG.App/bin/Debug/net10.0-windows10.0.19041.0/DraftTG.App.dll",
+                      "SHA256":  "B831BDD846E06C96CCC40666DAD2A5BDC1B8ECE86438DC6A6337A217F620E15A"
+                  },
+                  {
+                      "Path":  "src/DraftTG.App/bin/Debug/net10.0-windows10.0.19041.0/DraftTG.Application.dll",
+                      "SHA256":  "9F9C4727E0604539A509EA6F812528C180AE7B2522D6D561106FD09FB8C8DD51"
+                  },
+                  {
+                      "Path":  "src/DraftTG.App/bin/Debug/net10.0-windows10.0.19041.0/DraftTG.ArenaIntegration.dll",
+                      "SHA256":  "1CC02179DA5261374C011C21D1328371F0D682A68190A5CD0942B3AB8DF8FE95"
+                  }
+              ]
+}

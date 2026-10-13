@@ -1,0 +1,22 @@
+{
+  "publicHelperUri": "https://17lands-public.s3.amazonaws.com/analysis_data/cards/cards.csv",
+  "helperSha256": "c1d4b32fc84cfbdac4ec805fe486732b73ee04b7d757134479848e75e96cd82b",
+  "scryfallCacheSha256": "d44936533bb112d7f004acf8939224b759e7bcbd450db60f387b83b048539b52",
+  "filter": "Only exact Arena ids from public helper in declared sets/sheets; all matching printings retained, ambiguity not first-matched.",
+  "catalogCards": 1730,
+  "bonusSets": {
+    "WOE": [
+      "WOT"
+    ],
+    "LCI": [],
+    "MKM": [
+      "SPG"
+    ],
+    "OTJ": [
+      "OTP",
+      "BIG",
+      "SPG"
+    ],
+    "VOW": []
+  }
+}

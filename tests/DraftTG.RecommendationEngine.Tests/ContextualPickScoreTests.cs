@@ -105,11 +105,13 @@ public sealed class ContextualPickScoreTests
         Assert.InRange(result.Score0To50!.Value, 10, 25); Assert.True(result.ColorFit < 0);
         Assert.Contains(result.Reasons, r => r.Contains("Outside your established colors"));
     }
-    [Fact] public void EarlySpeculativeBombKeepsFlexibilityAndSkipsAllDeckOptimization()
+    [Fact] public void EarlySpeculativeBombKeepsFlexibilityAcrossVersions()
     {
         var f = Fixture([(Card("blue", "U", 6), .66, 10000), (Card("ordinary"), .56, 10000)], [Green, Red], 2);
-        var result = f.Score(); Assert.Equal(0, result.Metrics.OptimizerCalls);
+        var result = f.Score(new(new(version:ContextualPickScoreVersion.V1_6_1))); Assert.Equal(0, result.Metrics.OptimizerCalls);
         Assert.Equal(0, result.Cards[0].Weights.DeckNeed); Assert.InRange(result.Cards[0].Score0To50!.Value, 45, 50);
+        var current=f.Score();Assert.True(current.Metrics.OptimizerCalls>0);
+        Assert.Equal(0,current.Cards[0].Weights.DeckNeed);Assert.InRange(current.Cards[0].Score0To50!.Value,45,50);
     }
     [Fact] public void LaneReusesPositiveLateEvidenceWithHalfStrengthForQuickDraft()
     {

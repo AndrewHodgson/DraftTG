@@ -1,0 +1,8 @@
+{
+  "state": "consumed",
+  "selectionHash": "a1ceeec31e5001ba6f0024ed8e885b88ebd7de117e4de80647fe7d406513eccd",
+  "releaseProcessId": 17604,
+  "completedAt": "2026-10-13T19:43:42.064662+00:00",
+  "qualityResultSha256": "847a31f22b021d4fc8eef75f2e2a5930f24152375592a21d5e79b21ebeec1e8e",
+  "contextualResultSha256": "a1d0085453633b7f9482c3ebc84cfeb6411d80bbee5e6ed204b69953d5ece20e"
+}

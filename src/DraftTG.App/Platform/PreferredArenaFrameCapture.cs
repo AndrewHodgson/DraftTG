@@ -52,6 +52,7 @@ internal static class WindowsCaptureFactory
     internal static IArenaRegionCapture Create(string? selector, bool allowGdiFallback,
         IArenaRegionCapture? primary = null, IArenaRegionCapture? fallback = null)
     {
+        CaptureFreeSafety.AssertCaptureAllowed("Windows capture factory");
         fallback ??= new GdiBitBltFrameCapture();
         if (string.Equals(selector, "gdi", StringComparison.OrdinalIgnoreCase)) return fallback;
         if (!string.IsNullOrEmpty(selector) && !string.Equals(selector, "wgc", StringComparison.OrdinalIgnoreCase))

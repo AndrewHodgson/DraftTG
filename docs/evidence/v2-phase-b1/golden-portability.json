@@ -1,0 +1,30 @@
+{
+  "Uldaros": {
+    "effective_rate": 0.6709705429277599,
+    "q": 0.9765137572943683,
+    "primary_source": "primary fixture",
+    "alternate_source": "alternate fixture",
+    "reliability": 0.9,
+    "shrinkage": 0.8814322978420678,
+    "mode": "alternate-prior",
+    "reason": "Explicit same-set alternate prior",
+    "provenance": [
+      "frozen primary",
+      "frozen alternate"
+    ]
+  },
+  "productionQ": 0.9765137572943683,
+  "productionExact": 48.21998625015792,
+  "portableExact": 48.21998625015792,
+  "passed": true,
+  "goldenUsedForFit": false,
+  "formula": "Generic identity/set/direction contract; preregistered reference .9/500, no FRA/card branch",
+  "Unsummon": {
+    "commitment": 0.9446064139941691,
+    "relevance": 0.10262390670553934,
+    "playability": 0,
+    "productionQ": 0.5786468825336437,
+    "productionExact": 25.328185285150624,
+    "unchanged": true
+  }
+}

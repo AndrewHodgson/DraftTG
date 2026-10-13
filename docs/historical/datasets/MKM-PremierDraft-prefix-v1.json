@@ -1,0 +1,14 @@
+{
+  "DatasetId": "public-prefix-v1-MKM-PremierDraft",
+  "Source": "17LandsPublic",
+  "SourceUri": "https://17lands-public.s3.amazonaws.com/analysis_data/draft_data/draft_data_public.MKM.PremierDraft.csv.gz",
+  "SetCode": "MKM",
+  "Format": "PremierDraft",
+  "Partition": "Development",
+  "BonusSets": [
+    "SPG"
+  ],
+  "PicksPerPack": 13,
+  "SourceSchema": "17lands-wide-draft-v1",
+  "IsPrefixSample": true
+}

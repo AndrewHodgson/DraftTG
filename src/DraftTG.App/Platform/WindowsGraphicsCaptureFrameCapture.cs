@@ -27,6 +27,7 @@ internal sealed class WindowsGraphicsCaptureFrameCapture : IArenaRegionCapture, 
         ;
     public WindowsGraphicsCaptureFrameCapture(Func<ArenaWindowInspection>? inspect = null, Func<IWgcCaptureRequest>? factory = null)
     {
+        CaptureFreeSafety.AssertCaptureAllowed("WGC backend");
         _inspect = inspect ?? new GdiBitBltFrameCapture().InspectWindow;
 #if WINDOWS
         if (factory is null) _worker = new(ResetRetainedResources);

@@ -1,0 +1,11 @@
+{
+  "files": {
+    "phase_b1_core.py": "2cf1f52b268699b7ac68242c1dafa53381e5a9d4e63eb62696e867cb91bb5fa2",
+    "phase_b1_research.py": "5d5cd15d3c14ae41a9fcbce317cf90f63b5e376d83103a7bd671b2337be81bb9",
+    "phase_b1_replay.py": "2bcf534239513cb8efa7a321ebc239149b9eac972cf82475c55ffebb714955a8",
+    "phase_b1_source.py": "e815ccdcc78fd1b7075870b904122237aea72b139959ea3b78637afd3c275945"
+  },
+  "selectionFingerprint": "81c227d5315a655c9160317d3c467bc494eee8e1cc9deadf6046a6377ab2cb8a",
+  "parametersUnchanged": true,
+  "scope": "Calibrator, count transformation and replay infrastructure bytes before final contract boundary hardening. New diagnostic/entry-point files added after selection. No recalibration or holdout release."
+}

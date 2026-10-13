@@ -26,6 +26,9 @@ public static class PickScorePresentation
                 : "Direct — 17Lands GIH",
             PickScoreQualityEvidence.NoProviderRow => "Estimated — no 17Lands row for this card in this set/format; neutral format prior used",
             PickScoreQualityEvidence.ProviderRowWithoutUsableGih => "Estimated — this card's 17Lands row has no usable GIH win rate; neutral format prior used",
+            PickScoreQualityEvidence.AlternateFormatPrior => score.QualityPrior is { } prior
+                ? $"Estimated — alternate {prior.Evidence.SourceContext.Format} quality prior; primary GIH remains unavailable"
+                : "Estimated — alternate format prior",
             PickScoreQualityEvidence.NoEnvironmentBaseline => "Unavailable — no format baseline",
             _ => score.IsQualityEstimated ? "Estimated — neutral format prior used" : "Direct"
         };
@@ -70,6 +73,21 @@ public static class PickScorePresentation
             + $"expected playables {score.DeckImpact.ExpectedSupply:0.#}; coverage {score.DeckImpact.SupplyCoverage:0.##}; urgency {score.DeckImpact.SupplyUrgency:0.##}; "
             + $"structure gate {score.DeckImpact.StructureGate:0.###}; structural need {score.DeckImpact.StructuralGain:+0.###;-0.###;0} at confidence {score.DeckImpact.StructureConfidence:0.##}; D {score.DeckNeedComponent:0.###}");
         if (score.DeckImpact.SupplyProfile is { } profile) text += "\nSupply profile: " + profile;
+        if (score.ColorCommitment is { } commitment) text += string.Create(CultureInfo.InvariantCulture,
+            $"\nColor commitment: {commitment.Pair?.Code ?? "open"}; strength {commitment.Strength:R}; "
+            + $"projection confidence {commitment.ProjectionConfidence:R}; best/second probability {commitment.BestPairProbability:R}/{commitment.SecondPairProbability:R}; "
+            + $"colored support {commitment.ColoredSupport:R}; maturity {commitment.EvidenceMaturity:R}; inventory coverage {commitment.InventoryCoverage:R}\n"
+            + $"Quality relevance: base {score.BaseQualityRelevance:R}; context {score.QualityRelevance:R}; "
+            + $"projected playability {score.DeckImpact.Playability:R}; intrinsic Q {score.QualityComponent:R}; effective Q {score.EffectiveQualityComponent:R}");
+        text += $"\nQuality provenance: {score.QualityProvenance}";
+        if (score.QualityPrior is { } prior) text += string.Create(CultureInfo.InvariantCulture,
+            $"\nAlternate quality: {prior.Profile}; source {prior.Evidence.SourceContext.Expansion}/{prior.Evidence.SourceContext.Format}; "
+            + $"name {prior.Evidence.ProviderName}; fetched {prior.Evidence.FetchedAt:O}; {prior.Evidence.Source}; {prior.Evidence.TimePeriod}\n"
+            + $"Alternate raw GIH {prior.Evidence.RawGameInHandWinRate:R}; n {prior.Evidence.GameInHandGameCount}; "
+            + $"source baseline {prior.Evidence.SourceEnvironmentBaseline:R}; primary baseline {prior.PrimaryEnvironmentBaseline:R}\n"
+            + $"Shrinkage k {prior.ShrinkageGames:R}; sample weight {prior.SampleWeight:R}; shrinkage amount {prior.ShrinkageAmount:R}; "
+            + $"cross-format reliability {prior.CrossFormatReliability:R}; effective reliability {prior.EffectiveReliability:R}; "
+            + $"prior quality value {prior.EffectiveQualityValue:R}; resulting Q {score.QualityComponent:R}");
         return text + "\n" + Evidence(score, statistics) + $"\nRoles: {score.Roles.Roles}; {score.Roles.Source}\nReasons:\n" + string.Join("\n", score.Reasons);
     }
 }

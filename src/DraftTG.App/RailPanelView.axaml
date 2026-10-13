@@ -58,7 +58,7 @@
                 </Expander>
               </StackPanel>
             </Expander>
-            <Expander Header="Match card positions" IsVisible="{Binding HasVisualSlots}" Foreground="#FFB5BFCD" FontSize="12">
+            <Expander Header="Match card positions" IsVisible="{Binding CanUseManualPositions}" Foreground="#FFB5BFCD" FontSize="12">
               <StackPanel Spacing="6">
                 <TextBlock Text="Choose the card shown in each numbered slot, left to right, then top to bottom. Set the overlay columns to match Arena if needed."
                            TextWrapping="Wrap" />
@@ -77,7 +77,7 @@
                     </DataTemplate>
                   </ItemsControl.ItemTemplate>
                 </ItemsControl>
-                <Button Content="Confirm card positions" IsEnabled="{Binding CanConfirmVisualPlacement}"
+                <Button Content="Confirm card positions" IsVisible="{Binding !IsCaptureFree}" IsEnabled="{Binding CanConfirmVisualPlacement}"
                         Tag="confirm-card-positions" Click="Action_OnClick" />
                 <TextBlock Text="{Binding PlacementDiagnostic}" TextWrapping="Wrap" />
               </StackPanel>
@@ -95,11 +95,14 @@
                 <TextBlock Text="{Binding OrderEvidenceDiagnostics}" TextWrapping="Wrap" />
                 <TextBlock Text="{Binding DeterministicSlotDiagnostics}" TextWrapping="Wrap" />
                 <TextBlock Text="{Binding CaptureRuntimeDiagnosticsText}" TextWrapping="Wrap" />
-                <Button Content="Retry automatic placement" Tag="retry-card-localization" Click="Action_OnClick" />
-                <Button Content="Save current Arena capture for debugging" Tag="save-card-capture" Click="Action_OnClick" />
+                <Button Content="Retry automatic placement" IsVisible="{Binding !IsCaptureFree}" Tag="retry-card-localization" Click="Action_OnClick" />
+                <Button Content="Save current Arena capture for debugging" IsVisible="{Binding !IsCaptureFree}" Tag="save-card-capture" Click="Action_OnClick" />
+                <TextBlock IsVisible="{Binding IsCaptureFree}" Text="Compare the current memory order and visible badge positions with Arena. Confirm only after checking every card; unsupported geometry has no badges." TextWrapping="Wrap" />
+                <Button Content="I checked this pack: order / supported placements correct" IsVisible="{Binding IsCaptureFree}" Tag="capture-free-confirm" Click="Action_OnClick" />
+                <Button Content="Mismatch observed: withhold this pack" IsVisible="{Binding IsCaptureFree}" Tag="capture-free-mismatch" Click="Action_OnClick" />
               </StackPanel>
             </Expander>
-            <TextBlock Text="{Binding CalibrationLabel}" Foreground="#FFB5BFCD" FontSize="12" />
+            <TextBlock Text="{Binding CalibrationLabel}" IsVisible="{Binding !IsCaptureFree}" Foreground="#FFB5BFCD" FontSize="12" />
             <TextBlock Text="{Binding Diagnostics}" Foreground="#FFF0C67A" FontSize="12" TextWrapping="Wrap" />
           </StackPanel>
           <StackPanel IsVisible="{Binding IsHistoryPanel}" Spacing="8">

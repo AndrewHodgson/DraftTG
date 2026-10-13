@@ -1,0 +1,119 @@
+{
+  "version": "research-q-phase-b-v1",
+  "selectedCandidate": "A",
+  "selectedPolicy": "fixed-250",
+  "candidates": [
+    {
+      "version": "research-q-phase-b-v1",
+      "missing": "No valid same-format evidence -> Q=.5, explicit neutral provenance; no generalized alternate prior",
+      "format": "Exact set + format only; same-set alternate experiments blocked without legitimate paired games",
+      "range": "(0,1), soft knee .35 around .5; no rarity input",
+      "provenance": "Public game-presence opening-or-drawn outcomes; whole-draft disjoint samples",
+      "id": "A",
+      "family": "delta",
+      "k": 250,
+      "ebCalibrationK": 87.21420529618074,
+      "formula": "Q=SoftLimit(.5+(shrunk_GIH-weighted_set_format_baseline)/.16,.35)",
+      "shrinkage": "(n*p+k*b)/(n+k); adaptive uses k*sqrt(500/n); EB uses frozen calibration median k",
+      "early": "Strong shrinkage toward neutral; evidence weight grows continuously"
+    },
+    {
+      "version": "research-q-phase-b-v1",
+      "missing": "No valid same-format evidence -> Q=.5, explicit neutral provenance; no generalized alternate prior",
+      "format": "Exact set + format only; same-set alternate experiments blocked without legitimate paired games",
+      "range": "(0,1), soft knee .35 around .5; no rarity input",
+      "provenance": "Public game-presence opening-or-drawn outcomes; whole-draft disjoint samples",
+      "id": "B",
+      "family": "delta",
+      "k": 250,
+      "ebCalibrationK": 87.21420529618074,
+      "formula": "Q=SoftLimit(.5+(shrunk_GIH-b)/(4*max(.005,set_format_card_rate_SD)),.35)",
+      "shrinkage": "Same as A; SD from evidence group only",
+      "early": "May amplify noisy early between-card spread; .005 floor"
+    },
+    {
+      "version": "research-q-phase-b-v1",
+      "missing": "No valid same-format evidence -> Q=.5, explicit neutral provenance; no generalized alternate prior",
+      "format": "Exact set + format only; same-set alternate experiments blocked without legitimate paired games",
+      "range": "(0,1), soft knee .35 around .5; no rarity input",
+      "provenance": "Public game-presence opening-or-drawn outcomes; whole-draft disjoint samples",
+      "id": "C",
+      "family": "decomposition",
+      "k": 250,
+      "formula": "Disjoint OH-presence vs drawn-without-OH strata; shrink each to b with k/2; mix by observed stratum frequency; delta/.16 soft limit",
+      "shrinkage": "No double weighting of GIH/OH/drawn/GP/IWD; missing stratum has zero mixture mass",
+      "early": "Separate strata noisier at low n; shrink each separately"
+    }
+  ],
+  "EBcalibrationMedian": 87.21420529618074,
+  "developmentMacroMAE": {
+    "fixed-0": 0.0358228150886327,
+    "fixed-50": 0.02867793561056921,
+    "fixed-100": 0.02680296088666288,
+    "fixed-250": 0.02627374280392305,
+    "fixed-500": 0.027222642837907544,
+    "fixed-1000": 0.02871062806770517,
+    "fixed-2000": 0.030090454354799477,
+    "adaptive-250": 0.02709330694560646,
+    "adaptive-500": 0.02813585330076797,
+    "adaptive-1000": 0.029352990964876834,
+    "EB-calibration-median": 0.027086581509779103,
+    "decomposition-0": 0.0358228150886327,
+    "decomposition-50": 0.028778560679241748,
+    "decomposition-100": 0.026883769951366602,
+    "decomposition-250": 0.02628122974925642,
+    "decomposition-500": 0.027222994032053766,
+    "decomposition-1000": 0.028706731781200936,
+    "decomposition-2000": 0.030082982399742348
+  },
+  "calibrationSets": [
+    "AFR",
+    "BRO",
+    "DMU",
+    "KHM",
+    "NEO",
+    "SNC",
+    "STX",
+    "VOW",
+    "WOE"
+  ],
+  "developmentSets": [
+    "LCI",
+    "MKM",
+    "OTJ"
+  ],
+  "untouchedHoldouts": [
+    "BLB",
+    "DSK"
+  ],
+  "calibrationMacroMAE": {
+    "fixed-0": 0.037306018765668,
+    "fixed-50": 0.030212321558929944,
+    "fixed-100": 0.02834803597320398,
+    "fixed-250": 0.02776942078844022,
+    "fixed-500": 0.0285798713161031,
+    "fixed-1000": 0.02986293190625964,
+    "fixed-2000": 0.031071874203113053,
+    "adaptive-250": 0.028371277080782607,
+    "adaptive-500": 0.029360152566436926,
+    "adaptive-1000": 0.030432595073966253,
+    "EB-calibration-median": 0.028636849789980955,
+    "decomposition-0": 0.037306018765668,
+    "decomposition-50": 0.030347598263777843,
+    "decomposition-100": 0.028502548308425305,
+    "decomposition-250": 0.027875577003289603,
+    "decomposition-500": 0.02863646861513471,
+    "decomposition-1000": 0.02988307557147846,
+    "decomposition-2000": 0.031065197068943836
+  },
+  "fittedFamilies": {
+    "fixed": "fixed-250",
+    "adaptive": "adaptive-250",
+    "empiricalBayes": "EB-calibration-median",
+    "multi": "decomposition-250"
+  },
+  "researchFingerprint": "bc1c872c6e5cc072a4803f36b65d18cf5ed8f1ccfa7300b6d66028365c019eea",
+  "selectionRule": "Fit k within fixed/adaptive/decomposition families using calibration set-macro MAE; choose fitted family on development set-macro MAE, averaged equally over six levels. Tie lower k then lexical; B shares prediction, A wins complexity tie.",
+  "frozenAt": "2026-10-13T19:33:32.559802+00:00",
+  "productionPromotion": false
+}

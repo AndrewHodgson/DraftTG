@@ -1,0 +1,2013 @@
+[
+  {
+    "set": "BLB",
+    "format": "PremierDraft",
+    "level": "50",
+    "policy": "current-k500",
+    "family": "delta",
+    "k": 500,
+    "actualSampleMinimum": 50,
+    "actualSampleMedian": 50,
+    "fullySupportedCards": 249,
+    "cards": 249,
+    "targetObservations": 214218,
+    "MAE": 0.027671306416284406,
+    "observationWeightedMAE": 0.020826000156977418,
+    "RMSE": 0.03643708641579592,
+    "bias": -0.001820715778007268,
+    "Brier": 0.24592714735193827,
+    "rankCorrelation": 0.3067639432269387,
+    "overestimate2pp": 0.26907630522088355,
+    "overestimate5pp": 0.05622489959839357,
+    "calibrationECE": 0.0018430625956780133,
+    "calibrationBins": [
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 214218,
+        "prediction": 0.5614569402052071,
+        "observed": 0.5633000028008851
+      }
+    ],
+    "signAccuracy": 0.570281124497992,
+    "QMAE": 0.16666668152217892
+  },
+  {
+    "set": "BLB",
+    "format": "PremierDraft",
+    "level": "50",
+    "policy": "A",
+    "family": "delta",
+    "k": 250,
+    "actualSampleMinimum": 50,
+    "actualSampleMedian": 50,
+    "fullySupportedCards": 249,
+    "cards": 249,
+    "targetObservations": 214218,
+    "MAE": 0.027399463121226354,
+    "observationWeightedMAE": 0.021042796267877226,
+    "RMSE": 0.03624147464822177,
+    "bias": -0.0019775831235949973,
+    "Brier": 0.24594444196168674,
+    "rankCorrelation": 0.3067639432269387,
+    "overestimate2pp": 0.2570281124497992,
+    "overestimate5pp": 0.060240963855421686,
+    "calibrationECE": 0.0015512737080649597,
+    "calibrationBins": [
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 214218,
+        "prediction": 0.5617487290928201,
+        "observed": 0.5633000028008851
+      }
+    ],
+    "signAccuracy": 0.570281124497992,
+    "QMAE": 0.16495551010087808
+  },
+  {
+    "set": "BLB",
+    "format": "PremierDraft",
+    "level": "50",
+    "policy": "B",
+    "family": "delta",
+    "k": 250,
+    "actualSampleMinimum": 50,
+    "actualSampleMedian": 50,
+    "fullySupportedCards": 249,
+    "cards": 249,
+    "targetObservations": 214218,
+    "MAE": 0.027399463121226354,
+    "observationWeightedMAE": 0.021042796267877226,
+    "RMSE": 0.03624147464822177,
+    "bias": -0.0019775831235949973,
+    "Brier": 0.24594444196168674,
+    "rankCorrelation": 0.3067639432269387,
+    "overestimate2pp": 0.2570281124497992,
+    "overestimate5pp": 0.060240963855421686,
+    "calibrationECE": 0.0015512737080649597,
+    "calibrationBins": [
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 214218,
+        "prediction": 0.5617487290928201,
+        "observed": 0.5633000028008851
+      }
+    ],
+    "signAccuracy": 0.570281124497992,
+    "QMAE": 0.16563751366729781
+  },
+  {
+    "set": "BLB",
+    "format": "PremierDraft",
+    "level": "50",
+    "policy": "C",
+    "family": "decomposition",
+    "k": 250,
+    "actualSampleMinimum": 50,
+    "actualSampleMedian": 50,
+    "fullySupportedCards": 249,
+    "cards": 249,
+    "targetObservations": 214218,
+    "MAE": 0.027661495622523128,
+    "observationWeightedMAE": 0.021319488598306225,
+    "RMSE": 0.036454971361333306,
+    "bias": -0.0016772967635336486,
+    "Brier": 0.24595566061914,
+    "rankCorrelation": 0.28758307488519413,
+    "overestimate2pp": 0.2570281124497992,
+    "overestimate5pp": 0.0642570281124498,
+    "calibrationECE": 0.001320073674728084,
+    "calibrationBins": [
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 214218,
+        "prediction": 0.561979929126157,
+        "observed": 0.5633000028008851
+      }
+    ],
+    "signAccuracy": 0.5742971887550201,
+    "QMAE": 0.16684689415589937
+  },
+  {
+    "set": "BLB",
+    "format": "PremierDraft",
+    "level": "100",
+    "policy": "current-k500",
+    "family": "delta",
+    "k": 500,
+    "actualSampleMinimum": 100,
+    "actualSampleMedian": 100,
+    "fullySupportedCards": 249,
+    "cards": 249,
+    "targetObservations": 214218,
+    "MAE": 0.026237887789784912,
+    "observationWeightedMAE": 0.02007881899935567,
+    "RMSE": 0.034839942791634666,
+    "bias": -0.0028410369388560453,
+    "Brier": 0.24586347753252122,
+    "rankCorrelation": 0.45654263838712655,
+    "overestimate2pp": 0.24497991967871485,
+    "overestimate5pp": 0.05220883534136546,
+    "calibrationECE": 0.0023937254783795714,
+    "calibrationBins": [
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 214218,
+        "prediction": 0.5609062773225055,
+        "observed": 0.5633000028008851
+      }
+    ],
+    "signAccuracy": 0.6465863453815262,
+    "QMAE": 0.15777567555675406
+  },
+  {
+    "set": "BLB",
+    "format": "PremierDraft",
+    "level": "100",
+    "policy": "A",
+    "family": "delta",
+    "k": 250,
+    "actualSampleMinimum": 100,
+    "actualSampleMedian": 100,
+    "fullySupportedCards": 249,
+    "cards": 249,
+    "targetObservations": 214218,
+    "MAE": 0.026167177596074905,
+    "observationWeightedMAE": 0.020768996900207514,
+    "RMSE": 0.03432767571523652,
+    "bias": -0.0037042954928232226,
+    "Brier": 0.24587894116500986,
+    "rankCorrelation": 0.45654263838712655,
+    "overestimate2pp": 0.22088353413654618,
+    "overestimate5pp": 0.040160642570281124,
+    "calibrationECE": 0.003151329378857272,
+    "calibrationBins": [
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 210673,
+        "prediction": 0.560046773623671,
+        "observed": 0.5629387724103231
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "observations": 3545,
+        "prediction": 0.6033301598024488,
+        "observed": 0.5847672778561354
+      }
+    ],
+    "signAccuracy": 0.6465863453815262,
+    "QMAE": 0.156735257238959
+  },
+  {
+    "set": "BLB",
+    "format": "PremierDraft",
+    "level": "100",
+    "policy": "B",
+    "family": "delta",
+    "k": 250,
+    "actualSampleMinimum": 100,
+    "actualSampleMedian": 100,
+    "fullySupportedCards": 249,
+    "cards": 249,
+    "targetObservations": 214218,
+    "MAE": 0.026167177596074905,
+    "observationWeightedMAE": 0.020768996900207514,
+    "RMSE": 0.03432767571523652,
+    "bias": -0.0037042954928232226,
+    "Brier": 0.24587894116500986,
+    "rankCorrelation": 0.45654263838712655,
+    "overestimate2pp": 0.22088353413654618,
+    "overestimate5pp": 0.040160642570281124,
+    "calibrationECE": 0.003151329378857272,
+    "calibrationBins": [
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 210673,
+        "prediction": 0.560046773623671,
+        "observed": 0.5629387724103231
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "observations": 3545,
+        "prediction": 0.6033301598024488,
+        "observed": 0.5847672778561354
+      }
+    ],
+    "signAccuracy": 0.6465863453815262,
+    "QMAE": 0.15654769993104894
+  },
+  {
+    "set": "BLB",
+    "format": "PremierDraft",
+    "level": "100",
+    "policy": "C",
+    "family": "decomposition",
+    "k": 250,
+    "actualSampleMinimum": 100,
+    "actualSampleMedian": 100,
+    "fullySupportedCards": 249,
+    "cards": 249,
+    "targetObservations": 214218,
+    "MAE": 0.026476952344406387,
+    "observationWeightedMAE": 0.02105340704194496,
+    "RMSE": 0.03455024462399127,
+    "bias": -0.0033545021874165247,
+    "Brier": 0.2458893434841581,
+    "rankCorrelation": 0.44777726799611506,
+    "overestimate2pp": 0.22088353413654618,
+    "overestimate5pp": 0.04417670682730924,
+    "calibrationECE": 0.0028817834103279033,
+    "calibrationBins": [
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 210673,
+        "prediction": 0.5603362743058388,
+        "observed": 0.5629387724103231
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "observations": 3545,
+        "prediction": 0.6042464867214662,
+        "observed": 0.5847672778561354
+      }
+    ],
+    "signAccuracy": 0.6305220883534136,
+    "QMAE": 0.15884299340478528
+  },
+  {
+    "set": "BLB",
+    "format": "PremierDraft",
+    "level": "250",
+    "policy": "current-k500",
+    "family": "delta",
+    "k": 500,
+    "actualSampleMinimum": 106,
+    "actualSampleMedian": 250,
+    "fullySupportedCards": 225,
+    "cards": 249,
+    "targetObservations": 214218,
+    "MAE": 0.023849175886101946,
+    "observationWeightedMAE": 0.018882235550818874,
+    "RMSE": 0.03184457140763158,
+    "bias": -0.001458544587252447,
+    "Brier": 0.24577620409103978,
+    "rankCorrelation": 0.5962786390531434,
+    "overestimate2pp": 0.22088353413654618,
+    "overestimate5pp": 0.04819277108433735,
+    "calibrationECE": 0.000879024491144296,
+    "calibrationBins": [
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 213074,
+        "prediction": 0.5621969254047083,
+        "observed": 0.5629968930981725
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "observations": 1144,
+        "prediction": 0.6041516152738005,
+        "observed": 0.6197552447552448
+      }
+    ],
+    "signAccuracy": 0.7028112449799196,
+    "QMAE": 0.14281682949985686
+  },
+  {
+    "set": "BLB",
+    "format": "PremierDraft",
+    "level": "250",
+    "policy": "A",
+    "family": "delta",
+    "k": 250,
+    "actualSampleMinimum": 106,
+    "actualSampleMedian": 250,
+    "fullySupportedCards": 225,
+    "cards": 249,
+    "targetObservations": 214218,
+    "MAE": 0.023802783454849256,
+    "observationWeightedMAE": 0.020183825062687358,
+    "RMSE": 0.030960171156722487,
+    "bias": -0.0014064352408149326,
+    "Brier": 0.24580603255018346,
+    "rankCorrelation": 0.5976989434889003,
+    "overestimate2pp": 0.2248995983935743,
+    "overestimate5pp": 0.040160642570281124,
+    "calibrationECE": 0.0016591917495074706,
+    "calibrationBins": [
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "observations": 215,
+        "prediction": 0.4973916809915092,
+        "observed": 0.5348837209302325
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 204904,
+        "prediction": 0.5611511489978805,
+        "observed": 0.5620973724280639
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "observations": 9099,
+        "prediction": 0.607922077576753,
+        "observed": 0.5910539619738433
+      }
+    ],
+    "signAccuracy": 0.7028112449799196,
+    "QMAE": 0.1422640289593045
+  },
+  {
+    "set": "BLB",
+    "format": "PremierDraft",
+    "level": "250",
+    "policy": "B",
+    "family": "delta",
+    "k": 250,
+    "actualSampleMinimum": 106,
+    "actualSampleMedian": 250,
+    "fullySupportedCards": 225,
+    "cards": 249,
+    "targetObservations": 214218,
+    "MAE": 0.023802783454849256,
+    "observationWeightedMAE": 0.020183825062687358,
+    "RMSE": 0.030960171156722487,
+    "bias": -0.0014064352408149326,
+    "Brier": 0.24580603255018346,
+    "rankCorrelation": 0.5976989434889003,
+    "overestimate2pp": 0.2248995983935743,
+    "overestimate5pp": 0.040160642570281124,
+    "calibrationECE": 0.0016591917495074706,
+    "calibrationBins": [
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "observations": 215,
+        "prediction": 0.4973916809915092,
+        "observed": 0.5348837209302325
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 204904,
+        "prediction": 0.5611511489978805,
+        "observed": 0.5620973724280639
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "observations": 9099,
+        "prediction": 0.607922077576753,
+        "observed": 0.5910539619738433
+      }
+    ],
+    "signAccuracy": 0.7028112449799196,
+    "QMAE": 0.1427133991295503
+  },
+  {
+    "set": "BLB",
+    "format": "PremierDraft",
+    "level": "250",
+    "policy": "C",
+    "family": "decomposition",
+    "k": 250,
+    "actualSampleMinimum": 106,
+    "actualSampleMedian": 250,
+    "fullySupportedCards": 225,
+    "cards": 249,
+    "targetObservations": 214218,
+    "MAE": 0.023921222462459268,
+    "observationWeightedMAE": 0.020299189295951738,
+    "RMSE": 0.03095690880509339,
+    "bias": -0.0010103352661493276,
+    "Brier": 0.24580479068480218,
+    "rankCorrelation": 0.5929861960612199,
+    "overestimate2pp": 0.21686746987951808,
+    "overestimate5pp": 0.04417670682730924,
+    "calibrationECE": 0.0013701617939217638,
+    "calibrationBins": [
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "observations": 215,
+        "prediction": 0.49794584291075195,
+        "observed": 0.5348837209302325
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 204904,
+        "prediction": 0.5614628329250061,
+        "observed": 0.5620973724280639
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "observations": 9099,
+        "prediction": 0.6081494662118461,
+        "observed": 0.5910539619738433
+      }
+    ],
+    "signAccuracy": 0.6987951807228916,
+    "QMAE": 0.14283731671401503
+  },
+  {
+    "set": "BLB",
+    "format": "PremierDraft",
+    "level": "500",
+    "policy": "current-k500",
+    "family": "delta",
+    "k": 500,
+    "actualSampleMinimum": 106,
+    "actualSampleMedian": 500,
+    "fullySupportedCards": 158,
+    "cards": 249,
+    "targetObservations": 214218,
+    "MAE": 0.022652535261263762,
+    "observationWeightedMAE": 0.01798475926463963,
+    "RMSE": 0.030471551691085758,
+    "bias": -0.0018132943124793061,
+    "Brier": 0.24570014140102117,
+    "rankCorrelation": 0.636853819893298,
+    "overestimate2pp": 0.20883534136546184,
+    "overestimate5pp": 0.04417670682730924,
+    "calibrationECE": 0.0012809888807270792,
+    "calibrationBins": [
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 212506,
+        "prediction": 0.5616541123608425,
+        "observed": 0.5628923418632885
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "observations": 1712,
+        "prediction": 0.6073132725439241,
+        "observed": 0.6139018691588785
+      }
+    ],
+    "signAccuracy": 0.7028112449799196,
+    "QMAE": 0.134730267328384
+  },
+  {
+    "set": "BLB",
+    "format": "PremierDraft",
+    "level": "500",
+    "policy": "A",
+    "family": "delta",
+    "k": 250,
+    "actualSampleMinimum": 106,
+    "actualSampleMedian": 500,
+    "fullySupportedCards": 158,
+    "cards": 249,
+    "targetObservations": 214218,
+    "MAE": 0.022641074304830415,
+    "observationWeightedMAE": 0.01879907825302864,
+    "RMSE": 0.029537658483658576,
+    "bias": -0.0018718200277710077,
+    "Brier": 0.24570848400021703,
+    "rankCorrelation": 0.6455206605872406,
+    "overestimate2pp": 0.21285140562248997,
+    "overestimate5pp": 0.0321285140562249,
+    "calibrationECE": 0.000960542544202191,
+    "calibrationBins": [
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "observations": 215,
+        "prediction": 0.4973916809915092,
+        "observed": 0.5348837209302325
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 209857,
+        "prediction": 0.5613524040896646,
+        "observed": 0.5622018803280329
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "observations": 4146,
+        "prediction": 0.6156690354095933,
+        "observed": 0.6203569705740473
+      }
+    ],
+    "signAccuracy": 0.7028112449799196,
+    "QMAE": 0.1341707094283828
+  },
+  {
+    "set": "BLB",
+    "format": "PremierDraft",
+    "level": "500",
+    "policy": "B",
+    "family": "delta",
+    "k": 250,
+    "actualSampleMinimum": 106,
+    "actualSampleMedian": 500,
+    "fullySupportedCards": 158,
+    "cards": 249,
+    "targetObservations": 214218,
+    "MAE": 0.022641074304830415,
+    "observationWeightedMAE": 0.01879907825302864,
+    "RMSE": 0.029537658483658576,
+    "bias": -0.0018718200277710077,
+    "Brier": 0.24570848400021703,
+    "rankCorrelation": 0.6455206605872406,
+    "overestimate2pp": 0.21285140562248997,
+    "overestimate5pp": 0.0321285140562249,
+    "calibrationECE": 0.000960542544202191,
+    "calibrationBins": [
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "observations": 215,
+        "prediction": 0.4973916809915092,
+        "observed": 0.5348837209302325
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 209857,
+        "prediction": 0.5613524040896646,
+        "observed": 0.5622018803280329
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "observations": 4146,
+        "prediction": 0.6156690354095933,
+        "observed": 0.6203569705740473
+      }
+    ],
+    "signAccuracy": 0.7028112449799196,
+    "QMAE": 0.1359162160360648
+  },
+  {
+    "set": "BLB",
+    "format": "PremierDraft",
+    "level": "500",
+    "policy": "C",
+    "family": "decomposition",
+    "k": 250,
+    "actualSampleMinimum": 106,
+    "actualSampleMedian": 500,
+    "fullySupportedCards": 158,
+    "cards": 249,
+    "targetObservations": 214218,
+    "MAE": 0.022640071797152894,
+    "observationWeightedMAE": 0.018769669127623408,
+    "RMSE": 0.029555434257831067,
+    "bias": -0.0014548201167963474,
+    "Brier": 0.24570761116415024,
+    "rankCorrelation": 0.6429758898032902,
+    "overestimate2pp": 0.21686746987951808,
+    "overestimate5pp": 0.03614457831325301,
+    "calibrationECE": 0.0006423633691737245,
+    "calibrationBins": [
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "observations": 215,
+        "prediction": 0.49794584291075195,
+        "observed": 0.5348837209302325
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 209857,
+        "prediction": 0.5616722660425217,
+        "observed": 0.5622018803280329
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "observations": 4146,
+        "prediction": 0.6158898004512879,
+        "observed": 0.6203569705740473
+      }
+    ],
+    "signAccuracy": 0.7068273092369478,
+    "QMAE": 0.13442064665545386
+  },
+  {
+    "set": "BLB",
+    "format": "PremierDraft",
+    "level": "1000",
+    "policy": "current-k500",
+    "family": "delta",
+    "k": 500,
+    "actualSampleMinimum": 106,
+    "actualSampleMedian": 661,
+    "fullySupportedCards": 74,
+    "cards": 249,
+    "targetObservations": 214218,
+    "MAE": 0.021834316054388066,
+    "observationWeightedMAE": 0.016512819840333773,
+    "RMSE": 0.029730565952986298,
+    "bias": -0.0020811752374549383,
+    "Brier": 0.245630364588229,
+    "rankCorrelation": 0.6767176229710472,
+    "overestimate2pp": 0.20080321285140562,
+    "overestimate5pp": 0.03614457831325301,
+    "calibrationECE": 0.0015453492443422922,
+    "calibrationBins": [
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 209108,
+        "prediction": 0.5608154202234119,
+        "observed": 0.5623601201293111
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "observations": 5110,
+        "prediction": 0.6033331734837067,
+        "observed": 0.601761252446184
+      }
+    ],
+    "signAccuracy": 0.7590361445783133,
+    "QMAE": 0.13004713813258645
+  },
+  {
+    "set": "BLB",
+    "format": "PremierDraft",
+    "level": "1000",
+    "policy": "A",
+    "family": "delta",
+    "k": 250,
+    "actualSampleMinimum": 106,
+    "actualSampleMedian": 661,
+    "fullySupportedCards": 74,
+    "cards": 249,
+    "targetObservations": 214218,
+    "MAE": 0.021728687323167087,
+    "observationWeightedMAE": 0.01697938640328604,
+    "RMSE": 0.02875996342180309,
+    "bias": -0.002169403360429411,
+    "Brier": 0.24562955658387445,
+    "rankCorrelation": 0.6897316700579974,
+    "overestimate2pp": 0.20481927710843373,
+    "overestimate5pp": 0.028112449799196786,
+    "calibrationECE": 0.0020466193653865417,
+    "calibrationBins": [
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "observations": 215,
+        "prediction": 0.4973916809915092,
+        "observed": 0.5348837209302325
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 199146,
+        "prediction": 0.5585551115587587,
+        "observed": 0.5603376417301879
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "observations": 14857,
+        "prediction": 0.6084928427749962,
+        "observed": 0.6034192636467658
+      }
+    ],
+    "signAccuracy": 0.7590361445783133,
+    "QMAE": 0.12864601150289254
+  },
+  {
+    "set": "BLB",
+    "format": "PremierDraft",
+    "level": "1000",
+    "policy": "B",
+    "family": "delta",
+    "k": 250,
+    "actualSampleMinimum": 106,
+    "actualSampleMedian": 661,
+    "fullySupportedCards": 74,
+    "cards": 249,
+    "targetObservations": 214218,
+    "MAE": 0.021728687323167087,
+    "observationWeightedMAE": 0.01697938640328604,
+    "RMSE": 0.02875996342180309,
+    "bias": -0.002169403360429411,
+    "Brier": 0.24562955658387445,
+    "rankCorrelation": 0.6897316700579974,
+    "overestimate2pp": 0.20481927710843373,
+    "overestimate5pp": 0.028112449799196786,
+    "calibrationECE": 0.0020466193653865417,
+    "calibrationBins": [
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "observations": 215,
+        "prediction": 0.4973916809915092,
+        "observed": 0.5348837209302325
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 199146,
+        "prediction": 0.5585551115587587,
+        "observed": 0.5603376417301879
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "observations": 14857,
+        "prediction": 0.6084928427749962,
+        "observed": 0.6034192636467658
+      }
+    ],
+    "signAccuracy": 0.7590361445783133,
+    "QMAE": 0.13122064168704475
+  },
+  {
+    "set": "BLB",
+    "format": "PremierDraft",
+    "level": "1000",
+    "policy": "C",
+    "family": "decomposition",
+    "k": 250,
+    "actualSampleMinimum": 106,
+    "actualSampleMedian": 661,
+    "fullySupportedCards": 74,
+    "cards": 249,
+    "targetObservations": 214218,
+    "MAE": 0.021750183080857504,
+    "observationWeightedMAE": 0.016998239868676587,
+    "RMSE": 0.028780572513282185,
+    "bias": -0.0017915809377347916,
+    "Brier": 0.24562955666244388,
+    "rankCorrelation": 0.6874573212038301,
+    "overestimate2pp": 0.20883534136546184,
+    "overestimate5pp": 0.0321285140562249,
+    "calibrationECE": 0.0018208463777309213,
+    "calibrationBins": [
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "observations": 215,
+        "prediction": 0.49794584291075195,
+        "observed": 0.5348837209302325
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 199146,
+        "prediction": 0.5588185008107697,
+        "observed": 0.5603376417301879
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "observations": 14857,
+        "prediction": 0.6087760374255987,
+        "observed": 0.6034192636467658
+      }
+    ],
+    "signAccuracy": 0.7590361445783133,
+    "QMAE": 0.12904679173506844
+  },
+  {
+    "set": "BLB",
+    "format": "PremierDraft",
+    "level": "full",
+    "policy": "current-k500",
+    "family": "delta",
+    "k": 500,
+    "actualSampleMinimum": 106,
+    "actualSampleMedian": 661,
+    "fullySupportedCards": 249,
+    "cards": 249,
+    "targetObservations": 214218,
+    "MAE": 0.02153271289357114,
+    "observationWeightedMAE": 0.015707153558965795,
+    "RMSE": 0.02960036092564055,
+    "bias": -0.002171259415031075,
+    "Brier": 0.24561217678993566,
+    "rankCorrelation": 0.6799225339769398,
+    "overestimate2pp": 0.18875502008032127,
+    "overestimate5pp": 0.03614457831325301,
+    "calibrationECE": 0.0018857277196200018,
+    "calibrationBins": [
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 210509,
+        "prediction": 0.5606285878059997,
+        "observed": 0.5622799975297968
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "observations": 3709,
+        "prediction": 0.6060069530615431,
+        "observed": 0.6211916958748989
+      }
+    ],
+    "signAccuracy": 0.751004016064257,
+    "QMAE": 0.12818768066205283
+  },
+  {
+    "set": "BLB",
+    "format": "PremierDraft",
+    "level": "full",
+    "policy": "A",
+    "family": "delta",
+    "k": 250,
+    "actualSampleMinimum": 106,
+    "actualSampleMedian": 661,
+    "fullySupportedCards": 249,
+    "cards": 249,
+    "targetObservations": 214218,
+    "MAE": 0.021337118223858198,
+    "observationWeightedMAE": 0.015924341725119997,
+    "RMSE": 0.028559647076574036,
+    "bias": -0.002331894077856581,
+    "Brier": 0.24559969581470614,
+    "rankCorrelation": 0.6929987147294401,
+    "overestimate2pp": 0.1927710843373494,
+    "overestimate5pp": 0.028112449799196786,
+    "calibrationECE": 0.002017158530112175,
+    "calibrationBins": [
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "observations": 215,
+        "prediction": 0.4973916809915092,
+        "observed": 0.5348837209302325
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 205109,
+        "prediction": 0.559173925869653,
+        "observed": 0.5610919072298144
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "observations": 8894,
+        "prediction": 0.611462149919564,
+        "observed": 0.6149089273667641
+      }
+    ],
+    "signAccuracy": 0.751004016064257,
+    "QMAE": 0.12640389102085856
+  },
+  {
+    "set": "BLB",
+    "format": "PremierDraft",
+    "level": "full",
+    "policy": "B",
+    "family": "delta",
+    "k": 250,
+    "actualSampleMinimum": 106,
+    "actualSampleMedian": 661,
+    "fullySupportedCards": 249,
+    "cards": 249,
+    "targetObservations": 214218,
+    "MAE": 0.021337118223858198,
+    "observationWeightedMAE": 0.015924341725119997,
+    "RMSE": 0.028559647076574036,
+    "bias": -0.002331894077856581,
+    "Brier": 0.24559969581470614,
+    "rankCorrelation": 0.6929987147294401,
+    "overestimate2pp": 0.1927710843373494,
+    "overestimate5pp": 0.028112449799196786,
+    "calibrationECE": 0.002017158530112175,
+    "calibrationBins": [
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "observations": 215,
+        "prediction": 0.4973916809915092,
+        "observed": 0.5348837209302325
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 205109,
+        "prediction": 0.559173925869653,
+        "observed": 0.5610919072298144
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "observations": 8894,
+        "prediction": 0.611462149919564,
+        "observed": 0.6149089273667641
+      }
+    ],
+    "signAccuracy": 0.751004016064257,
+    "QMAE": 0.12938149210504726
+  },
+  {
+    "set": "BLB",
+    "format": "PremierDraft",
+    "level": "full",
+    "policy": "C",
+    "family": "decomposition",
+    "k": 250,
+    "actualSampleMinimum": 106,
+    "actualSampleMedian": 661,
+    "fullySupportedCards": 249,
+    "cards": 249,
+    "targetObservations": 214218,
+    "MAE": 0.02135174372413542,
+    "observationWeightedMAE": 0.015921878610788434,
+    "RMSE": 0.028578888407874894,
+    "bias": -0.0019661135122968167,
+    "Brier": 0.2455991531976614,
+    "rankCorrelation": 0.6907767939280716,
+    "overestimate2pp": 0.19678714859437751,
+    "overestimate5pp": 0.0321285140562249,
+    "calibrationECE": 0.001783541812253834,
+    "calibrationBins": [
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "observations": 215,
+        "prediction": 0.49794584291075195,
+        "observed": 0.5348837209302325
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 205109,
+        "prediction": 0.5594081442393842,
+        "observed": 0.5610919072298144
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "observations": 8894,
+        "prediction": 0.611674142909932,
+        "observed": 0.6149089273667641
+      }
+    ],
+    "signAccuracy": 0.751004016064257,
+    "QMAE": 0.12676379630815865
+  },
+  {
+    "set": "DSK",
+    "format": "PremierDraft",
+    "level": "50",
+    "policy": "current-k500",
+    "family": "delta",
+    "k": 500,
+    "actualSampleMinimum": 50,
+    "actualSampleMedian": 50.0,
+    "fullySupportedCards": 254,
+    "cards": 254,
+    "targetObservations": 217673,
+    "MAE": 0.029071297768932622,
+    "observationWeightedMAE": 0.022564715067596816,
+    "RMSE": 0.03805334487312032,
+    "bias": 0.0017032880832458482,
+    "Brier": 0.24635725584980125,
+    "rankCorrelation": 0.40224159876311016,
+    "overestimate2pp": 0.3228346456692913,
+    "overestimate5pp": 0.08661417322834646,
+    "calibrationECE": 0.0011976098069437224,
+    "calibrationBins": [
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 217673,
+        "prediction": 0.5584400117630259,
+        "observed": 0.5596376215699697
+      }
+    ],
+    "signAccuracy": 0.6535433070866141,
+    "QMAE": 0.17186826784691875
+  },
+  {
+    "set": "DSK",
+    "format": "PremierDraft",
+    "level": "50",
+    "policy": "A",
+    "family": "delta",
+    "k": 250,
+    "actualSampleMinimum": 50,
+    "actualSampleMedian": 50.0,
+    "fullySupportedCards": 254,
+    "cards": 254,
+    "targetObservations": 217673,
+    "MAE": 0.028452957690372337,
+    "observationWeightedMAE": 0.022524331335819544,
+    "RMSE": 0.03702863862409724,
+    "bias": 0.0011572245271271866,
+    "Brier": 0.24635074448969133,
+    "rankCorrelation": 0.40224159876311016,
+    "overestimate2pp": 0.29133858267716534,
+    "overestimate5pp": 0.07874015748031496,
+    "calibrationECE": 0.00108960095899846,
+    "calibrationBins": [
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 217673,
+        "prediction": 0.5585480206109712,
+        "observed": 0.5596376215699697
+      }
+    ],
+    "signAccuracy": 0.6535433070866141,
+    "QMAE": 0.1680581279145874
+  },
+  {
+    "set": "DSK",
+    "format": "PremierDraft",
+    "level": "50",
+    "policy": "B",
+    "family": "delta",
+    "k": 250,
+    "actualSampleMinimum": 50,
+    "actualSampleMedian": 50.0,
+    "fullySupportedCards": 254,
+    "cards": 254,
+    "targetObservations": 217673,
+    "MAE": 0.028452957690372337,
+    "observationWeightedMAE": 0.022524331335819544,
+    "RMSE": 0.03702863862409724,
+    "bias": 0.0011572245271271866,
+    "Brier": 0.24635074448969133,
+    "rankCorrelation": 0.40224159876311016,
+    "overestimate2pp": 0.29133858267716534,
+    "overestimate5pp": 0.07874015748031496,
+    "calibrationECE": 0.00108960095899846,
+    "calibrationBins": [
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 217673,
+        "prediction": 0.5585480206109712,
+        "observed": 0.5596376215699697
+      }
+    ],
+    "signAccuracy": 0.6535433070866141,
+    "QMAE": 0.17094638790231764
+  },
+  {
+    "set": "DSK",
+    "format": "PremierDraft",
+    "level": "50",
+    "policy": "C",
+    "family": "decomposition",
+    "k": 250,
+    "actualSampleMinimum": 50,
+    "actualSampleMedian": 50.0,
+    "fullySupportedCards": 254,
+    "cards": 254,
+    "targetObservations": 217673,
+    "MAE": 0.02854978274338524,
+    "observationWeightedMAE": 0.02274026524056456,
+    "RMSE": 0.03702004847648675,
+    "bias": 0.0015767542653969918,
+    "Brier": 0.24635169010662222,
+    "rankCorrelation": 0.4027848491377811,
+    "overestimate2pp": 0.3031496062992126,
+    "overestimate5pp": 0.07874015748031496,
+    "calibrationECE": 0.000739662259841456,
+    "calibrationBins": [
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 217673,
+        "prediction": 0.5588979593101282,
+        "observed": 0.5596376215699697
+      }
+    ],
+    "signAccuracy": 0.65748031496063,
+    "QMAE": 0.16875152931395312
+  },
+  {
+    "set": "DSK",
+    "format": "PremierDraft",
+    "level": "100",
+    "policy": "current-k500",
+    "family": "delta",
+    "k": 500,
+    "actualSampleMinimum": 97,
+    "actualSampleMedian": 100.0,
+    "fullySupportedCards": 253,
+    "cards": 254,
+    "targetObservations": 217673,
+    "MAE": 0.02816146346149848,
+    "observationWeightedMAE": 0.02204238014406573,
+    "RMSE": 0.036522577252003974,
+    "bias": 0.0011812012084528643,
+    "Brier": 0.24629444520396104,
+    "rankCorrelation": 0.45667978590606073,
+    "overestimate2pp": 0.3110236220472441,
+    "overestimate5pp": 0.08661417322834646,
+    "calibrationECE": 0.0014194692699830425,
+    "calibrationBins": [
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 217673,
+        "prediction": 0.5582181522999866,
+        "observed": 0.5596376215699697
+      }
+    ],
+    "signAccuracy": 0.6338582677165354,
+    "QMAE": 0.1659361053792184
+  },
+  {
+    "set": "DSK",
+    "format": "PremierDraft",
+    "level": "100",
+    "policy": "A",
+    "family": "delta",
+    "k": 250,
+    "actualSampleMinimum": 97,
+    "actualSampleMedian": 100.0,
+    "fullySupportedCards": 253,
+    "cards": 254,
+    "targetObservations": 217673,
+    "MAE": 0.027799980797701802,
+    "observationWeightedMAE": 0.022356934950149773,
+    "RMSE": 0.0352763334658924,
+    "bias": 0.00034005828006677735,
+    "Brier": 0.24628319877449634,
+    "rankCorrelation": 0.45667978590606073,
+    "overestimate2pp": 0.31496062992125984,
+    "overestimate5pp": 0.07480314960629922,
+    "calibrationECE": 0.0014853830277202578,
+    "calibrationBins": [
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 217093,
+        "prediction": 0.5580207596205493,
+        "observed": 0.5593455339416747
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "observations": 580,
+        "prediction": 0.6073645722467791,
+        "observed": 0.6689655172413793
+      }
+    ],
+    "signAccuracy": 0.6338582677165354,
+    "QMAE": 0.1637289531613853
+  },
+  {
+    "set": "DSK",
+    "format": "PremierDraft",
+    "level": "100",
+    "policy": "B",
+    "family": "delta",
+    "k": 250,
+    "actualSampleMinimum": 97,
+    "actualSampleMedian": 100.0,
+    "fullySupportedCards": 253,
+    "cards": 254,
+    "targetObservations": 217673,
+    "MAE": 0.027799980797701802,
+    "observationWeightedMAE": 0.022356934950149773,
+    "RMSE": 0.0352763334658924,
+    "bias": 0.00034005828006677735,
+    "Brier": 0.24628319877449634,
+    "rankCorrelation": 0.45667978590606073,
+    "overestimate2pp": 0.31496062992125984,
+    "overestimate5pp": 0.07480314960629922,
+    "calibrationECE": 0.0014853830277202578,
+    "calibrationBins": [
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 217093,
+        "prediction": 0.5580207596205493,
+        "observed": 0.5593455339416747
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "observations": 580,
+        "prediction": 0.6073645722467791,
+        "observed": 0.6689655172413793
+      }
+    ],
+    "signAccuracy": 0.6338582677165354,
+    "QMAE": 0.16545991244098163
+  },
+  {
+    "set": "DSK",
+    "format": "PremierDraft",
+    "level": "100",
+    "policy": "C",
+    "family": "decomposition",
+    "k": 250,
+    "actualSampleMinimum": 97,
+    "actualSampleMedian": 100.0,
+    "fullySupportedCards": 253,
+    "cards": 254,
+    "targetObservations": 217673,
+    "MAE": 0.028019761367499153,
+    "observationWeightedMAE": 0.022518283339537194,
+    "RMSE": 0.03542892580606249,
+    "bias": 0.0007490857939041814,
+    "Brier": 0.24629336522154915,
+    "rankCorrelation": 0.44958529955496884,
+    "overestimate2pp": 0.3228346456692913,
+    "overestimate5pp": 0.07480314960629922,
+    "calibrationECE": 0.0010821015847430567,
+    "calibrationBins": [
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 216841,
+        "prediction": 0.5583734174185713,
+        "observed": 0.5592484816063383
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "observations": 832,
+        "prediction": 0.606016220293055,
+        "observed": 0.6610576923076923
+      }
+    ],
+    "signAccuracy": 0.6338582677165354,
+    "QMAE": 0.16516327290929514
+  },
+  {
+    "set": "DSK",
+    "format": "PremierDraft",
+    "level": "250",
+    "policy": "current-k500",
+    "family": "delta",
+    "k": 500,
+    "actualSampleMinimum": 97,
+    "actualSampleMedian": 250.0,
+    "fullySupportedCards": 225,
+    "cards": 254,
+    "targetObservations": 217673,
+    "MAE": 0.025603217926996814,
+    "observationWeightedMAE": 0.020486206715777992,
+    "RMSE": 0.033265622290482647,
+    "bias": 0.0006067671453829736,
+    "Brier": 0.24615638106539234,
+    "rankCorrelation": 0.6239393292832381,
+    "overestimate2pp": 0.27165354330708663,
+    "overestimate5pp": 0.05905511811023622,
+    "calibrationECE": 0.0018727318290149286,
+    "calibrationBins": [
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 217673,
+        "prediction": 0.5577648897409547,
+        "observed": 0.5596376215699697
+      }
+    ],
+    "signAccuracy": 0.7401574803149606,
+    "QMAE": 0.1499470341932118
+  },
+  {
+    "set": "DSK",
+    "format": "PremierDraft",
+    "level": "250",
+    "policy": "A",
+    "family": "delta",
+    "k": 250,
+    "actualSampleMinimum": 97,
+    "actualSampleMedian": 250.0,
+    "fullySupportedCards": 225,
+    "cards": 254,
+    "targetObservations": 217673,
+    "MAE": 0.02467762244784077,
+    "observationWeightedMAE": 0.020665607229426355,
+    "RMSE": 0.03185218437354825,
+    "bias": -0.00031700665512275595,
+    "Brier": 0.2461555380339548,
+    "rankCorrelation": 0.6253531871651706,
+    "overestimate2pp": 0.24803149606299213,
+    "overestimate5pp": 0.04330708661417323,
+    "calibrationECE": 0.0024815490214511564,
+    "calibrationBins": [
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "observations": 1098,
+        "prediction": 0.4941679510281188,
+        "observed": 0.5027322404371585
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 210252,
+        "prediction": 0.5564169265810754,
+        "observed": 0.5587723303464414
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "observations": 6323,
+        "prediction": 0.6039117947018026,
+        "observed": 0.5982919500237229
+      }
+    ],
+    "signAccuracy": 0.7401574803149606,
+    "QMAE": 0.1441073479089108
+  },
+  {
+    "set": "DSK",
+    "format": "PremierDraft",
+    "level": "250",
+    "policy": "B",
+    "family": "delta",
+    "k": 250,
+    "actualSampleMinimum": 97,
+    "actualSampleMedian": 250.0,
+    "fullySupportedCards": 225,
+    "cards": 254,
+    "targetObservations": 217673,
+    "MAE": 0.02467762244784077,
+    "observationWeightedMAE": 0.020665607229426355,
+    "RMSE": 0.03185218437354825,
+    "bias": -0.00031700665512275595,
+    "Brier": 0.2461555380339548,
+    "rankCorrelation": 0.6253531871651706,
+    "overestimate2pp": 0.24803149606299213,
+    "overestimate5pp": 0.04330708661417323,
+    "calibrationECE": 0.0024815490214511564,
+    "calibrationBins": [
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "observations": 1098,
+        "prediction": 0.4941679510281188,
+        "observed": 0.5027322404371585
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 210252,
+        "prediction": 0.5564169265810754,
+        "observed": 0.5587723303464414
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "observations": 6323,
+        "prediction": 0.6039117947018026,
+        "observed": 0.5982919500237229
+      }
+    ],
+    "signAccuracy": 0.7401574803149606,
+    "QMAE": 0.1514293082759138
+  },
+  {
+    "set": "DSK",
+    "format": "PremierDraft",
+    "level": "250",
+    "policy": "C",
+    "family": "decomposition",
+    "k": 250,
+    "actualSampleMinimum": 97,
+    "actualSampleMedian": 250.0,
+    "fullySupportedCards": 225,
+    "cards": 254,
+    "targetObservations": 217673,
+    "MAE": 0.024802623442825505,
+    "observationWeightedMAE": 0.020723983717242246,
+    "RMSE": 0.03203815756547959,
+    "bias": 0.00016688430409433994,
+    "Brier": 0.24616275627534867,
+    "rankCorrelation": 0.6177045871788056,
+    "overestimate2pp": 0.25984251968503935,
+    "overestimate5pp": 0.051181102362204724,
+    "calibrationECE": 0.0021113531545914055,
+    "calibrationBins": [
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "observations": 1098,
+        "prediction": 0.49330209664073327,
+        "observed": 0.5027322404371585
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 210252,
+        "prediction": 0.556844958606982,
+        "observed": 0.5587723303464414
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "observations": 6323,
+        "prediction": 0.6052501208866196,
+        "observed": 0.5982919500237229
+      }
+    ],
+    "signAccuracy": 0.7362204724409449,
+    "QMAE": 0.1449388265050915
+  },
+  {
+    "set": "DSK",
+    "format": "PremierDraft",
+    "level": "500",
+    "policy": "current-k500",
+    "family": "delta",
+    "k": 500,
+    "actualSampleMinimum": 97,
+    "actualSampleMedian": 500.0,
+    "fullySupportedCards": 174,
+    "cards": 254,
+    "targetObservations": 217673,
+    "MAE": 0.023359348605924698,
+    "observationWeightedMAE": 0.018129867960410932,
+    "RMSE": 0.03082131056331503,
+    "bias": 0.001416748081737379,
+    "Brier": 0.24602125995297847,
+    "rankCorrelation": 0.6818765800736732,
+    "overestimate2pp": 0.25984251968503935,
+    "overestimate5pp": 0.05511811023622047,
+    "calibrationECE": 0.0008718892288263389,
+    "calibrationBins": [
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 215073,
+        "prediction": 0.558203087161453,
+        "observed": 0.5586661273149117
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "observations": 2600,
+        "prediction": 0.6053079580071241,
+        "observed": 0.64
+      }
+    ],
+    "signAccuracy": 0.7559055118110236,
+    "QMAE": 0.1358887014894031
+  },
+  {
+    "set": "DSK",
+    "format": "PremierDraft",
+    "level": "500",
+    "policy": "A",
+    "family": "delta",
+    "k": 250,
+    "actualSampleMinimum": 97,
+    "actualSampleMedian": 500.0,
+    "fullySupportedCards": 174,
+    "cards": 254,
+    "targetObservations": 217673,
+    "MAE": 0.022234527189824858,
+    "observationWeightedMAE": 0.017814344888687363,
+    "RMSE": 0.029132363246759167,
+    "bias": 0.0009045457264345991,
+    "Brier": 0.24599382942362913,
+    "rankCorrelation": 0.6875511860890444,
+    "overestimate2pp": 0.23622047244094488,
+    "overestimate5pp": 0.047244094488188976,
+    "calibrationECE": 0.0007605312896056259,
+    "calibrationBins": [
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "observations": 1480,
+        "prediction": 0.49582091626540586,
+        "observed": 0.4966216216216216
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 209589,
+        "prediction": 0.5576226837270172,
+        "observed": 0.5579491290096331
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "observations": 6604,
+        "prediction": 0.6128190879562486,
+        "observed": 0.6273470623864325
+      }
+    ],
+    "signAccuracy": 0.7559055118110236,
+    "QMAE": 0.12895454248026386
+  },
+  {
+    "set": "DSK",
+    "format": "PremierDraft",
+    "level": "500",
+    "policy": "B",
+    "family": "delta",
+    "k": 250,
+    "actualSampleMinimum": 97,
+    "actualSampleMedian": 500.0,
+    "fullySupportedCards": 174,
+    "cards": 254,
+    "targetObservations": 217673,
+    "MAE": 0.022234527189824858,
+    "observationWeightedMAE": 0.017814344888687363,
+    "RMSE": 0.029132363246759167,
+    "bias": 0.0009045457264345991,
+    "Brier": 0.24599382942362913,
+    "rankCorrelation": 0.6875511860890444,
+    "overestimate2pp": 0.23622047244094488,
+    "overestimate5pp": 0.047244094488188976,
+    "calibrationECE": 0.0007605312896056259,
+    "calibrationBins": [
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "observations": 1480,
+        "prediction": 0.49582091626540586,
+        "observed": 0.4966216216216216
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 209589,
+        "prediction": 0.5576226837270172,
+        "observed": 0.5579491290096331
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "observations": 6604,
+        "prediction": 0.6128190879562486,
+        "observed": 0.6273470623864325
+      }
+    ],
+    "signAccuracy": 0.7559055118110236,
+    "QMAE": 0.1404789199271781
+  },
+  {
+    "set": "DSK",
+    "format": "PremierDraft",
+    "level": "500",
+    "policy": "C",
+    "family": "decomposition",
+    "k": 250,
+    "actualSampleMinimum": 97,
+    "actualSampleMedian": 500.0,
+    "fullySupportedCards": 174,
+    "cards": 254,
+    "targetObservations": 217673,
+    "MAE": 0.022359617423710225,
+    "observationWeightedMAE": 0.0178966199441691,
+    "RMSE": 0.029310041256406818,
+    "bias": 0.0013602534924581047,
+    "Brier": 0.24599902557569364,
+    "rankCorrelation": 0.6816134467196805,
+    "overestimate2pp": 0.24015748031496062,
+    "overestimate5pp": 0.047244094488188976,
+    "calibrationECE": 0.0004642454167066976,
+    "calibrationBins": [
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "observations": 1480,
+        "prediction": 0.4967202863293706,
+        "observed": 0.4966216216216216
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 209589,
+        "prediction": 0.5579926192823828,
+        "observed": 0.5579491290096331
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "observations": 6604,
+        "prediction": 0.61344751876923,
+        "observed": 0.6273470623864325
+      }
+    ],
+    "signAccuracy": 0.7637795275590551,
+    "QMAE": 0.12979252935598481
+  },
+  {
+    "set": "DSK",
+    "format": "PremierDraft",
+    "level": "1000",
+    "policy": "current-k500",
+    "family": "delta",
+    "k": 500,
+    "actualSampleMinimum": 97,
+    "actualSampleMedian": 697.5,
+    "fullySupportedCards": 78,
+    "cards": 254,
+    "targetObservations": 217673,
+    "MAE": 0.022626977575646894,
+    "observationWeightedMAE": 0.01733692966697602,
+    "RMSE": 0.03021308293521578,
+    "bias": 0.0012484158068767474,
+    "Brier": 0.24598609137573618,
+    "rankCorrelation": 0.709045110159764,
+    "overestimate2pp": 0.23228346456692914,
+    "overestimate5pp": 0.05511811023622047,
+    "calibrationECE": 0.00108780505799561,
+    "calibrationBins": [
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 214217,
+        "prediction": 0.5578029281213809,
+        "observed": 0.55836838346163
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "observations": 3456,
+        "prediction": 0.6048450104841039,
+        "observed": 0.6383101851851852
+      }
+    ],
+    "signAccuracy": 0.7401574803149606,
+    "QMAE": 0.13119565524878132
+  },
+  {
+    "set": "DSK",
+    "format": "PremierDraft",
+    "level": "1000",
+    "policy": "A",
+    "family": "delta",
+    "k": 250,
+    "actualSampleMinimum": 97,
+    "actualSampleMedian": 697.5,
+    "fullySupportedCards": 78,
+    "cards": 254,
+    "targetObservations": 217673,
+    "MAE": 0.021349829401924696,
+    "observationWeightedMAE": 0.016715337391114884,
+    "RMSE": 0.028401367277252614,
+    "bias": 0.0006742512154697225,
+    "Brier": 0.2459488769505323,
+    "rankCorrelation": 0.7153198586090396,
+    "overestimate2pp": 0.20078740157480315,
+    "overestimate5pp": 0.03937007874015748,
+    "calibrationECE": 0.0011494170194008468,
+    "calibrationBins": [
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "observations": 1480,
+        "prediction": 0.49504071643762326,
+        "observed": 0.4966216216216216
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 209788,
+        "prediction": 0.5573055128160992,
+        "observed": 0.5580776784182127
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "observations": 6405,
+        "prediction": 0.61188661454246,
+        "observed": 0.6252927400468384
+      }
+    ],
+    "signAccuracy": 0.7401574803149606,
+    "QMAE": 0.12335716492388696
+  },
+  {
+    "set": "DSK",
+    "format": "PremierDraft",
+    "level": "1000",
+    "policy": "B",
+    "family": "delta",
+    "k": 250,
+    "actualSampleMinimum": 97,
+    "actualSampleMedian": 697.5,
+    "fullySupportedCards": 78,
+    "cards": 254,
+    "targetObservations": 217673,
+    "MAE": 0.021349829401924696,
+    "observationWeightedMAE": 0.016715337391114884,
+    "RMSE": 0.028401367277252614,
+    "bias": 0.0006742512154697225,
+    "Brier": 0.2459488769505323,
+    "rankCorrelation": 0.7153198586090396,
+    "overestimate2pp": 0.20078740157480315,
+    "overestimate5pp": 0.03937007874015748,
+    "calibrationECE": 0.0011494170194008468,
+    "calibrationBins": [
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "observations": 1480,
+        "prediction": 0.49504071643762326,
+        "observed": 0.4966216216216216
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 209788,
+        "prediction": 0.5573055128160992,
+        "observed": 0.5580776784182127
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "observations": 6405,
+        "prediction": 0.61188661454246,
+        "observed": 0.6252927400468384
+      }
+    ],
+    "signAccuracy": 0.7401574803149606,
+    "QMAE": 0.13792142177021022
+  },
+  {
+    "set": "DSK",
+    "format": "PremierDraft",
+    "level": "1000",
+    "policy": "C",
+    "family": "decomposition",
+    "k": 250,
+    "actualSampleMinimum": 97,
+    "actualSampleMedian": 697.5,
+    "fullySupportedCards": 78,
+    "cards": 254,
+    "targetObservations": 217673,
+    "MAE": 0.0214381642710564,
+    "observationWeightedMAE": 0.01670919149310346,
+    "RMSE": 0.028548997626140733,
+    "bias": 0.0010773141239439645,
+    "Brier": 0.24595156887779876,
+    "rankCorrelation": 0.7122351535598238,
+    "overestimate2pp": 0.20866141732283464,
+    "overestimate5pp": 0.04330708661417323,
+    "calibrationECE": 0.0008511739726816233,
+    "calibrationBins": [
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "observations": 1480,
+        "prediction": 0.4958030923202839,
+        "observed": 0.4966216216216216
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 209788,
+        "prediction": 0.5575971280531403,
+        "observed": 0.5580776784182127
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "observations": 6405,
+        "prediction": 0.6122946965180713,
+        "observed": 0.6252927400468384
+      }
+    ],
+    "signAccuracy": 0.7519685039370079,
+    "QMAE": 0.12394192008443122
+  },
+  {
+    "set": "DSK",
+    "format": "PremierDraft",
+    "level": "full",
+    "policy": "current-k500",
+    "family": "delta",
+    "k": 500,
+    "actualSampleMinimum": 97,
+    "actualSampleMedian": 697.5,
+    "fullySupportedCards": 254,
+    "cards": 254,
+    "targetObservations": 217673,
+    "MAE": 0.022183421712175303,
+    "observationWeightedMAE": 0.016264700101615952,
+    "RMSE": 0.029881265839130006,
+    "bias": 0.001436041102767305,
+    "Brier": 0.24594596173809255,
+    "rankCorrelation": 0.7256057876314891,
+    "overestimate2pp": 0.2283464566929134,
+    "overestimate5pp": 0.05511811023622047,
+    "calibrationECE": 0.0005632972745673176,
+    "calibrationBins": [
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 215365,
+        "prediction": 0.558558539299755,
+        "observed": 0.5586376616441855
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "observations": 2308,
+        "prediction": 0.6072034558324908,
+        "observed": 0.652946273830156
+      }
+    ],
+    "signAccuracy": 0.7677165354330708,
+    "QMAE": 0.1283909633264362
+  },
+  {
+    "set": "DSK",
+    "format": "PremierDraft",
+    "level": "full",
+    "policy": "A",
+    "family": "delta",
+    "k": 250,
+    "actualSampleMinimum": 97,
+    "actualSampleMedian": 697.5,
+    "fullySupportedCards": 254,
+    "cards": 254,
+    "targetObservations": 217673,
+    "MAE": 0.02086443116640012,
+    "observationWeightedMAE": 0.015551629207223965,
+    "RMSE": 0.02800534076135891,
+    "bias": 0.0008500923549721128,
+    "Brier": 0.24590277672494038,
+    "rankCorrelation": 0.7338851308860964,
+    "overestimate2pp": 0.20866141732283464,
+    "overestimate5pp": 0.03937007874015748,
+    "calibrationECE": 0.0006635493167339899,
+    "calibrationBins": [
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "observations": 1480,
+        "prediction": 0.49504071643762326,
+        "observed": 0.4966216216216216
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 209788,
+        "prediction": 0.5578213367299513,
+        "observed": 0.5580776784182127
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "observations": 6405,
+        "prediction": 0.6115035721073941,
+        "observed": 0.6252927400468384
+      }
+    ],
+    "signAccuracy": 0.7677165354330708,
+    "QMAE": 0.12044536953263563
+  },
+  {
+    "set": "DSK",
+    "format": "PremierDraft",
+    "level": "full",
+    "policy": "B",
+    "family": "delta",
+    "k": 250,
+    "actualSampleMinimum": 97,
+    "actualSampleMedian": 697.5,
+    "fullySupportedCards": 254,
+    "cards": 254,
+    "targetObservations": 217673,
+    "MAE": 0.02086443116640012,
+    "observationWeightedMAE": 0.015551629207223965,
+    "RMSE": 0.02800534076135891,
+    "bias": 0.0008500923549721128,
+    "Brier": 0.24590277672494038,
+    "rankCorrelation": 0.7338851308860964,
+    "overestimate2pp": 0.20866141732283464,
+    "overestimate5pp": 0.03937007874015748,
+    "calibrationECE": 0.0006635493167339899,
+    "calibrationBins": [
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "observations": 1480,
+        "prediction": 0.49504071643762326,
+        "observed": 0.4966216216216216
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 209788,
+        "prediction": 0.5578213367299513,
+        "observed": 0.5580776784182127
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "observations": 6405,
+        "prediction": 0.6115035721073941,
+        "observed": 0.6252927400468384
+      }
+    ],
+    "signAccuracy": 0.7677165354330708,
+    "QMAE": 0.13565329219869668
+  },
+  {
+    "set": "DSK",
+    "format": "PremierDraft",
+    "level": "full",
+    "policy": "C",
+    "family": "decomposition",
+    "k": 250,
+    "actualSampleMinimum": 97,
+    "actualSampleMedian": 697.5,
+    "fullySupportedCards": 254,
+    "cards": 254,
+    "targetObservations": 217673,
+    "MAE": 0.02098235265534805,
+    "observationWeightedMAE": 0.015604493061598924,
+    "RMSE": 0.028152523418684103,
+    "bias": 0.001234466536009704,
+    "Brier": 0.24590541424801413,
+    "rankCorrelation": 0.7299032691359701,
+    "overestimate2pp": 0.2125984251968504,
+    "overestimate5pp": 0.04330708661417323,
+    "calibrationECE": 0.00040680872941746825,
+    "calibrationBins": [
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "observations": 1480,
+        "prediction": 0.4958030923202839,
+        "observed": 0.4966216216216216
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "observations": 209788,
+        "prediction": 0.5580704402120105,
+        "observed": 0.5580776784182127
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "observations": 6405,
+        "prediction": 0.6118936199235341,
+        "observed": 0.6252927400468384
+      }
+    ],
+    "signAccuracy": 0.7716535433070866,
+    "QMAE": 0.12115186886582681
+  }
+]

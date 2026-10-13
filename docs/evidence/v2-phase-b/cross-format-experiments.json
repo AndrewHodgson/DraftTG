@@ -1,0 +1,12 @@
+{
+  "pairs": 0,
+  "evaluatedCards": 0,
+  "metrics": null,
+  "methods": [
+    "neutral Q=.5",
+    "v1.6.1-style same-set reliability .9/k500",
+    "generalized direction/sample reliability"
+  ],
+  "reason": "Only VOW QuickDraft draft rows are available in permitted public dump; no QuickDraft game table. Current aggregate API forbids outside use. No legitimate card-quality pairs. General reliability cannot be fitted or validated.",
+  "productionFRAOnlyPolicyUnchanged": true
+}

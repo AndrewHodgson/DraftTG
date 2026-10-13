@@ -11,7 +11,7 @@ public sealed class ContextualPickScorePlayabilityTests
         new[] { "WU", "UB", "BR", "RG", "GW", "WB", "UR", "BG", "RW", "GU" }
             .Select(p => new ArchetypeDefinition("WOE", ArchetypeColorPair.Create(p), p, "Fixture")));
     private static readonly LimitedCardStatisticsCatalog Environment = new([new(CardIdentifier.Create("environment"), 1000000, GameInHandWinRate: .56)]);
-    private static readonly ContextualPickScoreConfiguration Configuration = new();
+    private static readonly ContextualPickScoreConfiguration Configuration = new(version:ContextualPickScoreVersion.V1_6_1);
 
     private sealed record Entry(Card Card, double? Rate, int Games = 10000);
     private static Entry E(string id, string cost, int mv, double? rate = .56, string type = "Creature", int games = 10000, IEnumerable<ManaKind>? produced = null)
@@ -41,7 +41,7 @@ public sealed class ContextualPickScorePlayabilityTests
         var colors = new ContextualRecommendationEngine().Recommend(snapshot, catalog, statistical);
         var lane = new LaneContextualRecommendationEngine().Recommend(snapshot, colors, DraftPackObservationHistory.Empty, LimitedStatisticsFormat.PremierDraft);
         var archetype = new ArchetypeRecommendationEngine().Recommend(lane, Profile, new("WOE", LimitedStatisticsFormat.PremierDraft));
-        return new ContextualPickScoreEngine().Recommend(snapshot, catalog, archetype, stats, Environment).Cards.ToArray();
+        return new ContextualPickScoreEngine(Configuration).Recommend(snapshot, catalog, archetype, stats, Environment).Cards.ToArray();
     }
     private static ContextualPickScore One(Entry card, IReadOnlyList<Entry>? pool = null, int? completed = null) => Score([card, E("filler", "{2}{W}", 3, .55)], pool, completed)[0];
     private static int Display(ContextualPickScore score) => score.Score0To50!.Value;

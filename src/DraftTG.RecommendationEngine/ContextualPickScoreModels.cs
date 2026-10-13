@@ -14,7 +14,8 @@ public enum PickScoreQualityEvidence
     NoProviderRow,
     /// <summary>The card's row exists but has no usable GIH rate or sample (other fields such as ALSA may exist).</summary>
     ProviderRowWithoutUsableGih,
-    NoEnvironmentBaseline
+    NoEnvironmentBaseline,
+    AlternateFormatPrior
 }
 public sealed record PickScoreWeights(double Quality, double Lane, double Archetype, double DeckNeed)
 {
@@ -53,7 +54,8 @@ public sealed record ContextualPickScoreConfiguration
 {
     public ContextualPickScoreConfiguration(double qualityRelativeSpan = .16, double calibrationGain = ContextualPickScoreCalibration.DefaultGain,
         double marginalQualityScale = .01, int expectedDraftPicks = 42, int picksPerPack = 14,
-        int earlyAnchor = 4, int middleAnchor = 21, int lateAnchor = 35, FuturePickSupplyProfile? supplyProfile = null)
+        int earlyAnchor = 4, int middleAnchor = 21, int lateAnchor = 35, FuturePickSupplyProfile? supplyProfile = null,
+        ContextualPickScoreVersion version = ContextualPickScoreVersion.V1_6_2)
     {
         SupplyProfile = supplyProfile ?? FuturePickSupplyProfile.ProvisionalDefault;
         if (!SupplyProfile.IsValid) throw new ArgumentOutOfRangeException(nameof(supplyProfile), "Invalid future-pick supply profile.");
@@ -65,8 +67,16 @@ public sealed record ContextualPickScoreConfiguration
         QualityRelativeSpan = qualityRelativeSpan; CalibrationGain = calibrationGain; MarginalQualityScale = marginalQualityScale;
         ExpectedDraftPicks = expectedDraftPicks; PicksPerPack = picksPerPack;
         EarlyAnchor = earlyAnchor; MiddleAnchor = middleAnchor; LateAnchor = lateAnchor;
+        if (!Enum.IsDefined(version)) throw new ArgumentOutOfRangeException(nameof(version));
+        Version = version;
     }
-    public string ModelVersion => "contextual-pick-score-v1.6";
+    public ContextualPickScoreVersion Version { get; }
+    public string ModelVersion => Version switch
+    {
+        ContextualPickScoreVersion.V1_6 => "contextual-pick-score-v1.6",
+        ContextualPickScoreVersion.V1_6_1 => "contextual-pick-score-v1.6.1",
+        _ => "contextual-pick-score-v1.6.2"
+    };
     public double QualityRelativeSpan { get; }
     public double CalibrationGain { get; }
     /// <summary>Retained for configuration compatibility; phase 4 D no longer adds a separate average-quality gain
@@ -173,6 +183,25 @@ public sealed record ContextualPickScoreConfiguration
     /// <summary>Only strength above neutral is scaled: an unplayable card's excellence is less actionable, but a
     /// weak card is never made to look better. Continuous and non-decreasing in Q for any R in (0, 1].</summary>
     public static double EffectiveQuality(double quality, double relevance) => quality > .5 ? .5 + Math.Clamp(relevance, 0, 1) * (quality - .5) : quality;
+    public const double OrdinaryCommitmentRelevanceFloor = .05;
+    public const double PremiumCommitmentRelevanceFloor = .20;
+    public const double QualityTailStart = .65;
+    public const double QualityTailFull = .95;
+    public static double SmoothStep(double value)
+    {
+        var t = Math.Clamp(double.IsFinite(value) ? value : 0, 0, 1);
+        return t*t*(3-2*t);
+    }
+    /// <summary>v1.6.2: preserve Q, consume actual playability and pre-candidate commitment; premium statistical
+    /// quality keeps the existing .20 tail. The min preserves the old later-stage relevance bound.</summary>
+    public double CommitmentQualityRelevance(double quality, double baseRelevance, double commitment, double playability)
+    {
+        var c = Math.Clamp(double.IsFinite(commitment) ? commitment : 0, 0, 1);
+        var p = Math.Clamp(double.IsFinite(playability) ? playability : 1, 0, 1);
+        var floor = OrdinaryCommitmentRelevanceFloor + (PremiumCommitmentRelevanceFloor-OrdinaryCommitmentRelevanceFloor)
+            * SmoothStep((quality-QualityTailStart)/(QualityTailFull-QualityTailStart));
+        return Math.Min(baseRelevance, 1-c*(1-p)*(1-floor));
+    }
     /// <summary>Phase 7: pairs up to this many eligible spells short of the leading shell are still projected (at their own
     /// size) as near-viable alternatives, so a pair does not switch on or off at a one-card count threshold.</summary>
     public int ViabilityTolerance => 2;
@@ -268,10 +297,14 @@ public sealed record ContextualPickScore(int PackIndex, CardIdentifier CardIdent
     public int? CurrentPackRank { get; init; }
     public bool IsContextPick { get; init; }
     public PickScoreQualityEvidence QualityEvidence { get; init; }
+    public PickScoreQualityProvenance QualityProvenance { get; init; }
+    public AlternateFormatQualityPrior? QualityPrior { get; init; }
     /// <summary>Phase 6 quality relevance R in [floor, 1]; QualityComponent stays the intrinsic (raw) Q.</summary>
     public double QualityRelevance { get; init; } = 1;
     /// <summary>Q as composed: .5 + R·(Q − .5) above neutral, unchanged below.</summary>
     public double? EffectiveQualityComponent { get; init; }
+    public double BaseQualityRelevance { get; init; } = 1;
+    public ProjectedColorCommitment? ColorCommitment { get; init; }
     public bool IsQualityEstimated => Availability == PickScoreAvailability.EstimatedMissingStatistics;
 }
 

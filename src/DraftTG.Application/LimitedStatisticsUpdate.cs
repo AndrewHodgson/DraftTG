@@ -61,7 +61,10 @@ public sealed class LimitedStatisticsUpdate
             ? new ContextualPickScoreEngine(pickScoreConfiguration
                 ?? new ContextualPickScoreConfiguration(supplyProfile: FuturePickSupplyProfile.For(result!.RequestedContext.Expansion)))
                 .Recommend(snapshot!, result!.CardCatalog,
-                ArchetypeRecommendation, result.Catalog, result.EnvironmentCatalog, draftPool) : null;
+                ArchetypeRecommendation, result.Catalog, result.EnvironmentCatalog, draftPool,
+                alternateQuality: result.AlternateQualityEvidence,
+                primaryFrontFaces: result.StatisticsResolutions.Where(p => p.Value.Kind == StatisticalIdentityKind.MultifaceFrontFace)
+                    .Select(p => p.Key).ToHashSet()) : null;
         Cards = new ReadOnlyDictionary<CardIdentifier, LimitedCardStatisticsPresentation>(
             (snapshot?.CurrentPack.AvailableCardIdentifiers ?? []).Distinct().ToDictionary(id => id,
                 id => isLoading ? LimitedCardStatisticsPresentation.Loading

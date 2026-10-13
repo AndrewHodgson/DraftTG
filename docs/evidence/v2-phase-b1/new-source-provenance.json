@@ -1,0 +1,207 @@
+{
+  "repository": "TrevorJS/17lands-corpus",
+  "revision": "766a56bbdb5ebe1ed4c0d3441df694c81ec9f774",
+  "license": "CC-BY-4.0 per pinned README",
+  "files": [
+    {
+      "type": "file",
+      "oid": "d5a980bf3231b14f03e682f087172de88c654092",
+      "size": 8887870,
+      "lfs": {
+        "oid": "b1b33d02f42e5684abbc8e1afdee2f8330a11eaff1ca6423d136b55b8382edfa",
+        "size": 8887870,
+        "pointerSize": 132
+      },
+      "xetHash": "c520443af4d1eef0b3724a953e37359a5f3f75efb95ad2545ff723b710218f5c",
+      "path": "picks/expansion=ONE/event=PremierDraft/data.parquet",
+      "set": "ONE",
+      "format": "PremierDraft",
+      "table": "picks",
+      "url": "https://huggingface.co/datasets/TrevorJS/17lands-corpus/resolve/766a56bbdb5ebe1ed4c0d3441df694c81ec9f774/picks/expansion=ONE/event=PremierDraft/data.parquet",
+      "sha256": "b1b33d02f42e5684abbc8e1afdee2f8330a11eaff1ca6423d136b55b8382edfa",
+      "bytes": 8887870,
+      "cacheHit": false,
+      "seconds": 1.4046434999909252
+    },
+    {
+      "type": "file",
+      "oid": "baa500d6a75daa2fdcf75738a41429f59fc6eb71",
+      "size": 36795575,
+      "lfs": {
+        "oid": "a87876fbead649e4b29edc4cd819d49452e093ba25017e0a68d6b15c1a0031d4",
+        "size": 36795575,
+        "pointerSize": 133
+      },
+      "xetHash": "5bfddd9aed5aca448aa7357523c02b1bc2404851398ccc019432ef64fa84ea57",
+      "path": "pack_cards/expansion=ONE/event=PremierDraft/data.parquet",
+      "set": "ONE",
+      "format": "PremierDraft",
+      "table": "pack_cards",
+      "url": "https://huggingface.co/datasets/TrevorJS/17lands-corpus/resolve/766a56bbdb5ebe1ed4c0d3441df694c81ec9f774/pack_cards/expansion=ONE/event=PremierDraft/data.parquet",
+      "sha256": "a87876fbead649e4b29edc4cd819d49452e093ba25017e0a68d6b15c1a0031d4",
+      "bytes": 36795575,
+      "cacheHit": false,
+      "seconds": 1.6629492999054492
+    },
+    {
+      "type": "file",
+      "oid": "6ea63bee8e30fdeb042e11bd48c81450befd3a0b",
+      "size": 64523820,
+      "lfs": {
+        "oid": "6fd2431a2b2f3fd449b91efd4eae668e8b92f0a33af7b70486ff06a074298f85",
+        "size": 64523820,
+        "pointerSize": 133
+      },
+      "xetHash": "9e22170d60dc7761b909a91e18662c0c9482a471e572541e10d6d3dd845ef2c6",
+      "path": "pool_cards/expansion=ONE/event=PremierDraft/data.parquet",
+      "set": "ONE",
+      "format": "PremierDraft",
+      "table": "pool_cards",
+      "url": "https://huggingface.co/datasets/TrevorJS/17lands-corpus/resolve/766a56bbdb5ebe1ed4c0d3441df694c81ec9f774/pool_cards/expansion=ONE/event=PremierDraft/data.parquet",
+      "sha256": "6fd2431a2b2f3fd449b91efd4eae668e8b92f0a33af7b70486ff06a074298f85",
+      "bytes": 64523820,
+      "cacheHit": false,
+      "seconds": 2.2459297999739647
+    },
+    {
+      "type": "file",
+      "oid": "d15fbb7dc4327e59db622fcfc705c761a9fe1af2",
+      "size": 5187507,
+      "lfs": {
+        "oid": "14ae6c5eb3ab5dcc94c23165cc4dbc4448f064ccd8d9c255d4aef2e0b4ec86b6",
+        "size": 5187507,
+        "pointerSize": 132
+      },
+      "xetHash": "867432ebf11110b36b9a05db4cf96d6658e2c4405eb3e08132a622003ce8a9f3",
+      "path": "games/expansion=ONE/event=PremierDraft/data.parquet",
+      "set": "ONE",
+      "format": "PremierDraft",
+      "table": "games",
+      "url": "https://huggingface.co/datasets/TrevorJS/17lands-corpus/resolve/766a56bbdb5ebe1ed4c0d3441df694c81ec9f774/games/expansion=ONE/event=PremierDraft/data.parquet",
+      "sha256": "14ae6c5eb3ab5dcc94c23165cc4dbc4448f064ccd8d9c255d4aef2e0b4ec86b6",
+      "bytes": 5187507,
+      "cacheHit": false,
+      "seconds": 1.2473804999608546
+    },
+    {
+      "type": "file",
+      "oid": "33dd561918c71965ff390e22d44fb5c42de8b1f7",
+      "size": 34610347,
+      "lfs": {
+        "oid": "8ec7753d8fcff0f48cbaa9a3f47f84b872b243eca6f639309e58eabbca350103",
+        "size": 34610347,
+        "pointerSize": 133
+      },
+      "xetHash": "ff43365d24a17c437652689788703017cb628252b5fe64b79fe0150f50f3dc39",
+      "path": "game_cards/expansion=ONE/event=PremierDraft/data.parquet",
+      "set": "ONE",
+      "format": "PremierDraft",
+      "table": "game_cards",
+      "url": "https://huggingface.co/datasets/TrevorJS/17lands-corpus/resolve/766a56bbdb5ebe1ed4c0d3441df694c81ec9f774/game_cards/expansion=ONE/event=PremierDraft/data.parquet",
+      "sha256": "8ec7753d8fcff0f48cbaa9a3f47f84b872b243eca6f639309e58eabbca350103",
+      "bytes": 34610347,
+      "cacheHit": false,
+      "seconds": 1.534399800002575
+    },
+    {
+      "type": "file",
+      "oid": "83714f9e255a5592ab643c5f7ab7ccdea7a11ec6",
+      "size": 20182747,
+      "lfs": {
+        "oid": "c0c6e784de4bf79df1cf20af87aa727f1184cbe0526a68d670654719ba460c94",
+        "size": 20182747,
+        "pointerSize": 133
+      },
+      "xetHash": "749533d9c46e46f841abaf0c6741d54fcb60ed19b30f247aeb2a72614364d0b5",
+      "path": "picks/expansion=MOM/event=PremierDraft/data.parquet",
+      "set": "MOM",
+      "format": "PremierDraft",
+      "table": "picks",
+      "url": "https://huggingface.co/datasets/TrevorJS/17lands-corpus/resolve/766a56bbdb5ebe1ed4c0d3441df694c81ec9f774/picks/expansion=MOM/event=PremierDraft/data.parquet",
+      "sha256": "c0c6e784de4bf79df1cf20af87aa727f1184cbe0526a68d670654719ba460c94",
+      "bytes": 20182747,
+      "cacheHit": false,
+      "seconds": 1.51373209990561
+    },
+    {
+      "type": "file",
+      "oid": "5b29ba9c62ad6664b584d7623d17bd9b2de54248",
+      "size": 90972421,
+      "lfs": {
+        "oid": "e2e35af45f5f0d48857227ad73877ae987641205ed6dc51f0c78e40501ec5b19",
+        "size": 90972421,
+        "pointerSize": 133
+      },
+      "xetHash": "7ab4734f71eda675a3b4807e6de6b77f2558f8859f2fdc5097a698e5e1867c4e",
+      "path": "pack_cards/expansion=MOM/event=PremierDraft/data.parquet",
+      "set": "MOM",
+      "format": "PremierDraft",
+      "table": "pack_cards",
+      "url": "https://huggingface.co/datasets/TrevorJS/17lands-corpus/resolve/766a56bbdb5ebe1ed4c0d3441df694c81ec9f774/pack_cards/expansion=MOM/event=PremierDraft/data.parquet",
+      "sha256": "e2e35af45f5f0d48857227ad73877ae987641205ed6dc51f0c78e40501ec5b19",
+      "bytes": 90972421,
+      "cacheHit": false,
+      "seconds": 2.3447181000374258
+    },
+    {
+      "type": "file",
+      "oid": "1d4e32a349032f91513c2040abc967ba3ffbac70",
+      "size": 161000935,
+      "lfs": {
+        "oid": "1add03dd7f88287e5be50293549dcf246c41b6fe24aecc86f19177b9340e35e6",
+        "size": 161000935,
+        "pointerSize": 134
+      },
+      "xetHash": "c57a67ec36015259123852182271d028c93f455d39173619b6b01e293620d560",
+      "path": "pool_cards/expansion=MOM/event=PremierDraft/data.parquet",
+      "set": "MOM",
+      "format": "PremierDraft",
+      "table": "pool_cards",
+      "url": "https://huggingface.co/datasets/TrevorJS/17lands-corpus/resolve/766a56bbdb5ebe1ed4c0d3441df694c81ec9f774/pool_cards/expansion=MOM/event=PremierDraft/data.parquet",
+      "sha256": "1add03dd7f88287e5be50293549dcf246c41b6fe24aecc86f19177b9340e35e6",
+      "bytes": 161000935,
+      "cacheHit": false,
+      "seconds": 4.067973899887875
+    },
+    {
+      "type": "file",
+      "oid": "96428f204037670da332715b42cb4351f434fe55",
+      "size": 11210091,
+      "lfs": {
+        "oid": "a3bf929c5f8a47c6bcdab05ff75ec1ec3346323254274b9a8e12d6759edfefde",
+        "size": 11210091,
+        "pointerSize": 133
+      },
+      "xetHash": "ac5d91e57c7085c52f8f86fee6e69f58cfd57cc808271488385a38d0d106c67c",
+      "path": "games/expansion=MOM/event=PremierDraft/data.parquet",
+      "set": "MOM",
+      "format": "PremierDraft",
+      "table": "games",
+      "url": "https://huggingface.co/datasets/TrevorJS/17lands-corpus/resolve/766a56bbdb5ebe1ed4c0d3441df694c81ec9f774/games/expansion=MOM/event=PremierDraft/data.parquet",
+      "sha256": "a3bf929c5f8a47c6bcdab05ff75ec1ec3346323254274b9a8e12d6759edfefde",
+      "bytes": 11210091,
+      "cacheHit": false,
+      "seconds": 1.410098300082609
+    },
+    {
+      "type": "file",
+      "oid": "992652db2dad61bd97d6b20d69c243bd962f4aa1",
+      "size": 79451939,
+      "lfs": {
+        "oid": "97a85aa7840fa76c65246dcb8ea230202ab3fe1e8f0cc305415bcaf88452d84d",
+        "size": 79451939,
+        "pointerSize": 133
+      },
+      "xetHash": "e42aafaa1c478faa446d2b293a386bf954258296b317d7ce30d0ee59032cf3c6",
+      "path": "game_cards/expansion=MOM/event=PremierDraft/data.parquet",
+      "set": "MOM",
+      "format": "PremierDraft",
+      "table": "game_cards",
+      "url": "https://huggingface.co/datasets/TrevorJS/17lands-corpus/resolve/766a56bbdb5ebe1ed4c0d3441df694c81ec9f774/game_cards/expansion=MOM/event=PremierDraft/data.parquet",
+      "sha256": "97a85aa7840fa76c65246dcb8ea230202ab3fe1e8f0cc305415bcaf88452d84d",
+      "bytes": 79451939,
+      "cacheHit": false,
+      "seconds": 3.313847200013697
+    }
+  ]
+}

@@ -6,6 +6,7 @@ namespace DraftTG.App.Platform;
 /// <summary>Opt-in benchmark backend. Owns only its own native session; the production factory is unchanged.</summary>
 internal sealed class DesktopDuplicationFrameCapture : IArenaRegionCapture, IDisposable
 {
+    public DesktopDuplicationFrameCapture() => CaptureFreeSafety.AssertCaptureAllowed("DXGI capture backend");
     public string Backend => "DXGI Desktop Duplication";
     private readonly SemaphoreSlim _gate = new(1, 1);
     private readonly CancellationTokenSource _lifetime = new();

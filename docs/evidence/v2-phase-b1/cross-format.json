@@ -1,0 +1,417 @@
+{
+  "pairs": 1,
+  "qualifiedIdentityPairs": 1,
+  "targetPairs": 5,
+  "generalizedQualified": false,
+  "metadataAudit": {
+    "metadataSha256": "d44936533bb112d7f004acf8939224b759e7bcbd450db60f387b83b048539b52",
+    "addedCurrentArenaPrintings": 0,
+    "historicalHelperNotUsedAsCurrentCacheWhitelist": true
+  },
+  "baselines": {
+    "PremierDraft": 0.5636523015032496,
+    "QuickDraft": 0.5704692518601339
+  },
+  "identityAudit": {
+    "PremierDraft": {
+      "statisticalIdentities": 290,
+      "printingIdentities": 0,
+      "excludedNames": []
+    },
+    "QuickDraft": {
+      "statisticalIdentities": 290,
+      "printingIdentities": 0,
+      "excludedNames": []
+    }
+  },
+  "matchedCards": 186,
+  "rateCorrelation": 0.894456891990273,
+  "rankCorrelation": 0.9002746061569591,
+  "residuals": {
+    "0.05": -0.029766924999999944,
+    "0.5": -0.007962289999999983,
+    "0.95": 0.017098977500000043
+  },
+  "results": [
+    {
+      "set": "FRA",
+      "direction": "PremierDraft->QuickDraft",
+      "policy": "neutral",
+      "n": 186,
+      "mae": 0.02653336879223573,
+      "rmse": 0.03338161703088838,
+      "bias": 0.007815528265224978,
+      "over2pp": 0.3387096774193548,
+      "over5pp": 0.10215053763440861,
+      "correlation": -0.7813028153781714,
+      "rankCorrelation": -0.9290798129507807,
+      "QMAE": 0.11756553472363429,
+      "rawRelativeQMAE": 0.16344896518548083,
+      "signAccuracy": 0.5860215053763441,
+      "catastrophicRankFraction": 0.5161290322580645,
+      "sampleBuckets": {
+        "0-1000": {
+          "n": 46,
+          "mae": 0.04151022966415976,
+          "rmse": 0.04693282130460933,
+          "bias": 0.01524160144363989,
+          "over2pp": 0.5,
+          "over5pp": 0.21739130434782608,
+          "correlation": -0.9710559682745776,
+          "rankCorrelation": -0.9631205673758865
+        },
+        "1000-5000": {
+          "n": 131,
+          "mae": 0.021445186706578277,
+          "rmse": 0.027462828999361408,
+          "bias": 0.007350212695643153,
+          "over2pp": 0.3053435114503817,
+          "over5pp": 0.06870229007633588,
+          "correlation": -0.9244672807627292,
+          "rankCorrelation": -0.9696845139593231
+        },
+        "5000-100000000": {
+          "n": 9,
+          "mae": 0.024046285804749174,
+          "rmse": 0.028168101111472273,
+          "bias": -0.023367030244982448,
+          "over2pp": 0,
+          "over5pp": 0,
+          "correlation": -0.9750572122447939,
+          "rankCorrelation": -0.95
+        }
+      }
+    },
+    {
+      "set": "FRA",
+      "direction": "PremierDraft->QuickDraft",
+      "policy": "reference",
+      "n": 186,
+      "mae": 0.012110855560342141,
+      "rmse": 0.015063545668945017,
+      "bias": 0.0019247059628978668,
+      "over2pp": 0.12365591397849462,
+      "over5pp": 0,
+      "correlation": 0.8931160804296208,
+      "rankCorrelation": 0.8992973998666598,
+      "QMAE": 0.060487068920098266,
+      "rawRelativeQMAE": 0.07322795559003685,
+      "signAccuracy": 0.8494623655913979,
+      "catastrophicRankFraction": 0,
+      "sampleBuckets": {
+        "0-1000": {
+          "n": 46,
+          "mae": 0.01563612316932961,
+          "rmse": 0.01960035326892169,
+          "bias": 0.005764466076812744,
+          "over2pp": 0.2608695652173913,
+          "over5pp": 0,
+          "correlation": 0.9156298760238428,
+          "rankCorrelation": 0.8727104532839963
+        },
+        "1000-5000": {
+          "n": 131,
+          "mae": 0.011231337509932377,
+          "rmse": 0.013503365517060073,
+          "bias": 0.0011823062915950508,
+          "over2pp": 0.08396946564885496,
+          "over5pp": 0,
+          "correlation": 0.8619074438418892,
+          "rankCorrelation": 0.8644317514546522
+        },
+        "5000-100000000": {
+          "n": 9,
+          "mae": 0.006894694959259404,
+          "rmse": 0.008476657966260806,
+          "bias": -0.006894694959259404,
+          "over2pp": 0,
+          "over5pp": 0,
+          "correlation": 0.9483204784641027,
+          "rankCorrelation": 0.9333333333333333
+        }
+      }
+    },
+    {
+      "set": "FRA",
+      "direction": "PremierDraft->QuickDraft",
+      "policy": "bounded",
+      "n": 186,
+      "mae": 0.012110855560342141,
+      "rmse": 0.015063545668945017,
+      "bias": 0.0019247059628978668,
+      "over2pp": 0.12365591397849462,
+      "over5pp": 0,
+      "correlation": 0.8931160804296208,
+      "rankCorrelation": 0.8992973998666598,
+      "QMAE": 0.060487068920098266,
+      "rawRelativeQMAE": 0.07322795559003685,
+      "signAccuracy": 0.8494623655913979,
+      "catastrophicRankFraction": 0,
+      "sampleBuckets": {
+        "0-1000": {
+          "n": 46,
+          "mae": 0.01563612316932961,
+          "rmse": 0.01960035326892169,
+          "bias": 0.005764466076812744,
+          "over2pp": 0.2608695652173913,
+          "over5pp": 0,
+          "correlation": 0.9156298760238428,
+          "rankCorrelation": 0.8727104532839963
+        },
+        "1000-5000": {
+          "n": 131,
+          "mae": 0.011231337509932377,
+          "rmse": 0.013503365517060073,
+          "bias": 0.0011823062915950508,
+          "over2pp": 0.08396946564885496,
+          "over5pp": 0,
+          "correlation": 0.8619074438418892,
+          "rankCorrelation": 0.8644317514546522
+        },
+        "5000-100000000": {
+          "n": 9,
+          "mae": 0.006894694959259404,
+          "rmse": 0.008476657966260806,
+          "bias": -0.006894694959259404,
+          "over2pp": 0,
+          "over5pp": 0,
+          "correlation": 0.9483204784641027,
+          "rankCorrelation": 0.9333333333333333
+        }
+      }
+    },
+    {
+      "set": "FRA",
+      "direction": "PremierDraft->QuickDraft",
+      "policy": "generalized-unqualified",
+      "n": 186,
+      "mae": 0.02653336879223573,
+      "rmse": 0.03338161703088838,
+      "bias": 0.007815528265224978,
+      "over2pp": 0.3387096774193548,
+      "over5pp": 0.10215053763440861,
+      "correlation": -0.7813028153781714,
+      "rankCorrelation": -0.9290798129507807,
+      "QMAE": 0.11756553472363429,
+      "rawRelativeQMAE": 0.16344896518548083,
+      "signAccuracy": 0.5860215053763441,
+      "catastrophicRankFraction": 0.5161290322580645,
+      "sampleBuckets": {
+        "0-1000": {
+          "n": 46,
+          "mae": 0.04151022966415976,
+          "rmse": 0.04693282130460933,
+          "bias": 0.01524160144363989,
+          "over2pp": 0.5,
+          "over5pp": 0.21739130434782608,
+          "correlation": -0.9710559682745776,
+          "rankCorrelation": -0.9631205673758865
+        },
+        "1000-5000": {
+          "n": 131,
+          "mae": 0.021445186706578277,
+          "rmse": 0.027462828999361408,
+          "bias": 0.007350212695643153,
+          "over2pp": 0.3053435114503817,
+          "over5pp": 0.06870229007633588,
+          "correlation": -0.9244672807627292,
+          "rankCorrelation": -0.9696845139593231
+        },
+        "5000-100000000": {
+          "n": 9,
+          "mae": 0.024046285804749174,
+          "rmse": 0.028168101111472273,
+          "bias": -0.023367030244982448,
+          "over2pp": 0,
+          "over5pp": 0,
+          "correlation": -0.9750572122447939,
+          "rankCorrelation": -0.95
+        }
+      }
+    },
+    {
+      "set": "FRA",
+      "direction": "QuickDraft->PremierDraft",
+      "policy": "neutral",
+      "n": 186,
+      "mae": 0.024434785911037784,
+      "rmse": 0.03112777872167266,
+      "bias": 0.00715308943270272,
+      "over2pp": 0.3333333333333333,
+      "over5pp": 0.05913978494623656,
+      "correlation": -0.8220580202201117,
+      "rankCorrelation": -0.9307283823412855,
+      "QMAE": 0.14349045192693224,
+      "rawRelativeQMAE": 0.15130452383678736,
+      "signAccuracy": 0.6075268817204301,
+      "catastrophicRankFraction": 0.5053763440860215,
+      "sampleBuckets": {
+        "0-1000": {
+          "n": 0,
+          "mae": null
+        },
+        "1000-5000": {
+          "n": 8,
+          "mae": 0.04797933135022992,
+          "rmse": 0.04942826056142701,
+          "bias": 0.035707383572201774,
+          "over2pp": 0.875,
+          "over5pp": 0.375,
+          "correlation": -0.9934134325429193,
+          "rankCorrelation": -1.0
+        },
+        "5000-100000000": {
+          "n": 178,
+          "mae": 0.023376604093546,
+          "rmse": 0.03004466315581164,
+          "bias": 0.005869750370253324,
+          "over2pp": 0.3089887640449438,
+          "over5pp": 0.0449438202247191,
+          "correlation": -0.8390101560843577,
+          "rankCorrelation": -0.950523922551597
+        }
+      }
+    },
+    {
+      "set": "FRA",
+      "direction": "QuickDraft->PremierDraft",
+      "policy": "reference",
+      "n": 186,
+      "mae": 0.012072500446429525,
+      "rmse": 0.016045875669111517,
+      "bias": 0.0028323687118131068,
+      "over2pp": 0.12365591397849462,
+      "over5pp": 0,
+      "correlation": 0.8791466410009511,
+      "rankCorrelation": 0.8886637543184033,
+      "QMAE": 0.06795833291545603,
+      "rawRelativeQMAE": 0.07404023968298576,
+      "signAccuracy": 0.8494623655913979,
+      "catastrophicRankFraction": 0,
+      "sampleBuckets": {
+        "0-1000": {
+          "n": 0,
+          "mae": null
+        },
+        "1000-5000": {
+          "n": 8,
+          "mae": 0.025338481300395822,
+          "rmse": 0.027196297851922607,
+          "bias": 0.014789130598894286,
+          "over2pp": 0.625,
+          "over5pp": 0,
+          "correlation": 0.8263202164908003,
+          "rankCorrelation": 0.9047619047619048
+        },
+        "5000-100000000": {
+          "n": 178,
+          "mae": 0.011476276587824298,
+          "rmse": 0.015355768688582912,
+          "bias": 0.0022949861550903574,
+          "over2pp": 0.10112359550561797,
+          "over5pp": 0,
+          "correlation": 0.8795472154160174,
+          "rankCorrelation": 0.8894256906638693
+        }
+      }
+    },
+    {
+      "set": "FRA",
+      "direction": "QuickDraft->PremierDraft",
+      "policy": "bounded",
+      "n": 186,
+      "mae": 0.012072500446429525,
+      "rmse": 0.016045875669111517,
+      "bias": 0.0028323687118131068,
+      "over2pp": 0.12365591397849462,
+      "over5pp": 0,
+      "correlation": 0.8791466410009511,
+      "rankCorrelation": 0.8886637543184033,
+      "QMAE": 0.06795833291545603,
+      "rawRelativeQMAE": 0.07404023968298576,
+      "signAccuracy": 0.8494623655913979,
+      "catastrophicRankFraction": 0,
+      "sampleBuckets": {
+        "0-1000": {
+          "n": 0,
+          "mae": null
+        },
+        "1000-5000": {
+          "n": 8,
+          "mae": 0.025338481300395822,
+          "rmse": 0.027196297851922607,
+          "bias": 0.014789130598894286,
+          "over2pp": 0.625,
+          "over5pp": 0,
+          "correlation": 0.8263202164908003,
+          "rankCorrelation": 0.9047619047619048
+        },
+        "5000-100000000": {
+          "n": 178,
+          "mae": 0.011476276587824298,
+          "rmse": 0.015355768688582912,
+          "bias": 0.0022949861550903574,
+          "over2pp": 0.10112359550561797,
+          "over5pp": 0,
+          "correlation": 0.8795472154160174,
+          "rankCorrelation": 0.8894256906638693
+        }
+      }
+    },
+    {
+      "set": "FRA",
+      "direction": "QuickDraft->PremierDraft",
+      "policy": "generalized-unqualified",
+      "n": 186,
+      "mae": 0.024434785911037784,
+      "rmse": 0.03112777872167266,
+      "bias": 0.00715308943270272,
+      "over2pp": 0.3333333333333333,
+      "over5pp": 0.05913978494623656,
+      "correlation": -0.8220580202201117,
+      "rankCorrelation": -0.9307283823412855,
+      "QMAE": 0.14349045192693224,
+      "rawRelativeQMAE": 0.15130452383678736,
+      "signAccuracy": 0.6075268817204301,
+      "catastrophicRankFraction": 0.5053763440860215,
+      "sampleBuckets": {
+        "0-1000": {
+          "n": 0,
+          "mae": null
+        },
+        "1000-5000": {
+          "n": 8,
+          "mae": 0.04797933135022992,
+          "rmse": 0.04942826056142701,
+          "bias": 0.035707383572201774,
+          "over2pp": 0.875,
+          "over5pp": 0.375,
+          "correlation": -0.9934134325429193,
+          "rankCorrelation": -1.0
+        },
+        "5000-100000000": {
+          "n": 178,
+          "mae": 0.023376604093546,
+          "rmse": 0.03004466315581164,
+          "bias": 0.005869750370253324,
+          "over2pp": 0.3089887640449438,
+          "over5pp": 0.0449438202247191,
+          "correlation": -0.8390101560843577,
+          "rankCorrelation": -0.950523922551597
+        }
+      }
+    }
+  ],
+  "cacheHashes": {
+    "PremierDraft": "5ff737deae268b69ee20aa2c75f5975164e7320a696f78d2793f92a0b381e693",
+    "QuickDraft": "4aa17e20d560a6c17d21a90ccafd676352b575363a6aa08b0ff51addfd11cc1f"
+  },
+  "maskedPrimaryBaseline": true,
+  "qTarget": "Held true primary recomposed with k500 using focal-card-excluded primary baseline; raw-relative Q error also reported",
+  "interpretation": "Owned caches only, no new provider aggregate request. Exact same-expansion provider names are statistical identities, not recovered printings/Oracle IDs. One previously observed set; observational populations and ALL_TIME windows. Leave-primary-rate-out diagnostics, not multi-set validation or fitted reliability",
+  "policies": {
+    "reference": ".9*n_alt/(n_alt+500)*alternate delta",
+    "bounded": "Reference delta clipped to +/- .08",
+    "generalized": "Declines to neutral; fewer than five independent paired sets"
+  }
+}

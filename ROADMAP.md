@@ -381,6 +381,8 @@ Validation covered:
 
 **Next:** return to live Arena validation and localization.
 
+**Phase 9F.2 experimental setup (2026-10-13):** continuous read-only memory tracking and an opt-in capture-free overlay reuse existing scoring/badges. One initial live P1P1 smoke run succeeded without capture; final supported-profile inactive/restart attachment was checked. The two-draft/30-pack/two-size physical gate is NOT passed and final active-draft recheck is pending. Default WGC and scoring remain unchanged; no 9F.3 or production promotion. See [the 9F.2 report](PHASE9F_2_CAPTURE_FREE_LIVE_DRAFT_OVERLAY.md).
+
 **Phase 9F.1 foundation completed (debug only, 2026-10-13):** a read-only Windows x64 adapter printed 14 live Quick Draft offered GrpIds directly in `_allCardViews` order and returned list view mode on one explicitly fingerprinted build. Production WGC and scoring remain unchanged. Physical transition/count/mode/restart validation and any provider integration remain future work; Phase 9F.2 has not started. See [the Phase 9F.1 report](PHASE9F_1_CAPTURE_FREE_ARENA_DRAFT_ADAPTER.md).
 
 **Post-V1 (not started; any score change needs a version bump and a golden/replay comparison):**

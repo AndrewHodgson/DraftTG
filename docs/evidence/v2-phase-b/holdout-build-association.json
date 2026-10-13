@@ -1,0 +1,24 @@
+[
+  {
+    "set": "BLB",
+    "format": "PremierDraft",
+    "groupCounts": {
+      "low": 4741,
+      "high": 2393
+    },
+    "cards": 269,
+    "associationCorrelation": 0.6738704109307314,
+    "interpretation": "Unique modal observed 40 builds >=3 observed games, high observed game WR>=.6; build presence once, not copies; noncausal descriptive label"
+  },
+  {
+    "set": "DSK",
+    "format": "PremierDraft",
+    "groupCounts": {
+      "high": 2288,
+      "low": 4722
+    },
+    "cards": 280,
+    "associationCorrelation": 0.6159455249814243,
+    "interpretation": "Unique modal observed 40 builds >=3 observed games, high observed game WR>=.6; build presence once, not copies; noncausal descriptive label"
+  }
+]

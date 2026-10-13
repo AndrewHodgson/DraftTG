@@ -1,0 +1,22 @@
+{
+  "version": "research-q-phase-b-v1",
+  "sets": [
+    "BLB",
+    "DSK"
+  ],
+  "datasets": 2,
+  "seconds": 15.19168149982579,
+  "cardCount": 550,
+  "games": 93525,
+  "evidenceGames": 46712,
+  "targetGames": 46813,
+  "peakWorkingSetBytes": 425955328,
+  "interpretation": "Sample-size simulation, not chronological backtest; card-game presence, disjoint whole-draft evidence/target; target rates are noisy and selected-deck empirical associations",
+  "selectedCandidate": "A",
+  "macroMAE": {
+    "current-k500": 0.024565305112714087,
+    "A": 0.024037971059839233,
+    "B": 0.024037971059839233,
+    "C": 0.02416283091127993
+  }
+}

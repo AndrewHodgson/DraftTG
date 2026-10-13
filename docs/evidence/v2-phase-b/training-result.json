@@ -1,0 +1,26 @@
+{
+  "version": "research-q-phase-b-v1",
+  "sets": [
+    "AFR",
+    "BRO",
+    "DMU",
+    "KHM",
+    "LCI",
+    "MKM",
+    "NEO",
+    "OTJ",
+    "SNC",
+    "STX",
+    "VOW",
+    "WOE"
+  ],
+  "datasets": 12,
+  "cardCount": 3572,
+  "games": 449193,
+  "evidenceGames": 223342,
+  "targetGames": 225851,
+  "seconds": null,
+  "peakWorkingSetBytes": null,
+  "telemetryRecoveryOnly": true,
+  "reason": "All training analysis and exports completed; final metadata write failed because the Win32 telemetry API lacked a 64-bit HANDLE argument prototype. Supported launcher supplies the prototype. Training wall time/peak were not recovered or invented. Selection and analytical source hashes unchanged."
+}

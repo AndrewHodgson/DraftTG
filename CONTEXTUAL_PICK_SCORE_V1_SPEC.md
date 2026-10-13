@@ -2,6 +2,16 @@
 
 **Status: FROZEN** (Phase 7, 2026-10-08). This is the authoritative V1 reference.
 
+The v1.6 behavior below remains frozen and selectable with `new ContextualPickScoreConfiguration(version: ContextualPickScoreVersion.V1_6)`.
+The frozen v1.6.1 quality-only FRA QuickDraft supplement is specified in
+[CONTEXTUAL_PICK_SCORE_V1_6_1_SPARSE_QUALITY_PRIOR.md](CONTEXTUAL_PICK_SCORE_V1_6_1_SPARSE_QUALITY_PRIOR.md).
+That supplement extends EST to alternate-format quality priors; it does not alter the v1.6 direct-quality path,
+contextual components, calibration, or tiers documented here.
+The current default is v1.6.2, specified in
+[CONTEXTUAL_PICK_SCORE_V1_6_2_COMMITMENT_RELEVANCE.md](CONTEXTUAL_PICK_SCORE_V1_6_2_COMMITMENT_RELEVANCE.md).
+Select `ContextualPickScoreVersion.V1_6_1` to reproduce the frozen sparse-prior model; v1.6.2 only changes
+contextual quality relevance, retaining the prior and all stage weights/tier boundaries.
+
 | Item | Value |
 |---|---|
 | Model version | `contextual-pick-score-v1.6` |
@@ -254,3 +264,5 @@ Each fixture is checked to ±0.01 points on the exact score and ±0.001 on compo
 | v1.4 / tiers v2 | Tier alignment, no score change |
 | v1.5 | Playability relevance and expected-future cut line |
 | **v1.6** | **Near-viable pair taper and per-build cut line (frozen V1)** |
+| v1.6.1 | Explicit, calibrated sparse-quality prior: FRA QuickDraft may borrow quality from PremierDraft only when its own resolved provider row lacks usable GIH; v1.6 remains selectable |
+| v1.6.2 | Commitment-aware relevance consumes existing pre-candidate projections and colored-pool evidence; intrinsic Q and v1.6.1 prior remain unchanged |

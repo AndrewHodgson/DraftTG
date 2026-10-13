@@ -1,0 +1,16 @@
+{
+  "DatasetId": "public-prefix-v1-OTJ-PremierDraft",
+  "Source": "17LandsPublic",
+  "SourceUri": "https://17lands-public.s3.amazonaws.com/analysis_data/draft_data/draft_data_public.OTJ.PremierDraft.csv.gz",
+  "SetCode": "OTJ",
+  "Format": "PremierDraft",
+  "Partition": "Holdout",
+  "BonusSets": [
+    "OTP",
+    "BIG",
+    "SPG"
+  ],
+  "PicksPerPack": 14,
+  "SourceSchema": "17lands-wide-draft-v1",
+  "IsPrefixSample": true
+}

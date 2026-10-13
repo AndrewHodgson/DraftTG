@@ -1,0 +1,166 @@
+{
+  "type": "object",
+  "properties": {
+    "DatasetId": {
+      "type": "string"
+    },
+    "Source": {
+      "type": "string"
+    },
+    "SourceUri": {
+      "type": "string"
+    },
+    "SetCode": {
+      "type": "string"
+    },
+    "Format": {
+      "type": "string"
+    },
+    "SourceSchemaVersion": {
+      "type": "string"
+    },
+    "ObservedColumns": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "FileHash": {
+      "type": "string"
+    },
+    "FileSize": {
+      "type": "integer"
+    },
+    "ImportTimestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "RawRows": {
+      "type": "integer"
+    },
+    "PickCount": {
+      "type": "integer"
+    },
+    "DraftCount": {
+      "type": "integer"
+    },
+    "MinDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "MaxDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "IdentityResolvedCount": {
+      "type": "integer"
+    },
+    "IdentityUnresolvedCount": {
+      "type": "integer"
+    },
+    "IdentityAmbiguousCount": {
+      "type": "integer"
+    },
+    "MalformedRows": {
+      "type": "integer"
+    },
+    "DuplicateRows": {
+      "type": "integer"
+    },
+    "ConflictingRows": {
+      "type": "integer"
+    },
+    "OutcomeCoveredPicks": {
+      "type": "integer"
+    },
+    "FinalDeckCoveredPicks": {
+      "type": "integer"
+    },
+    "MaindeckRateCoveredPicks": {
+      "type": "integer"
+    },
+    "Partition": {
+      "enum": [
+        "Calibration",
+        "Development",
+        "Holdout"
+      ]
+    },
+    "IsPrefixSample": {
+      "type": "boolean"
+    },
+    "Seconds": {
+      "type": "number"
+    },
+    "RowsPerSecond": {
+      "type": "number"
+    },
+    "PeakWorkingSetBytes": {
+      "type": "integer"
+    },
+    "IdentityIssues": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer"
+      }
+    },
+    "IdentityCatalogHash": {
+      "type": "string"
+    },
+    "SplitHash": {
+      "type": "string"
+    },
+    "ImportOptionsHash": {
+      "type": "string"
+    },
+    "PicksPerPack": {
+      "type": "integer"
+    },
+    "FinalPoolCoveredPicks": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "DatasetId",
+    "Source",
+    "SourceUri",
+    "SetCode",
+    "Format",
+    "SourceSchemaVersion",
+    "ObservedColumns",
+    "FileHash",
+    "FileSize",
+    "ImportTimestamp",
+    "RawRows",
+    "PickCount",
+    "DraftCount",
+    "MinDate",
+    "MaxDate",
+    "IdentityResolvedCount",
+    "IdentityUnresolvedCount",
+    "IdentityAmbiguousCount",
+    "MalformedRows",
+    "DuplicateRows",
+    "ConflictingRows",
+    "OutcomeCoveredPicks",
+    "FinalDeckCoveredPicks",
+    "MaindeckRateCoveredPicks",
+    "Partition",
+    "IsPrefixSample",
+    "Seconds",
+    "RowsPerSecond",
+    "PeakWorkingSetBytes",
+    "IdentityIssues",
+    "IdentityCatalogHash",
+    "SplitHash",
+    "ImportOptionsHash",
+    "PicksPerPack",
+    "FinalPoolCoveredPicks"
+  ]
+}

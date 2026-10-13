@@ -1,0 +1,185 @@
+{
+  "revision": "766a56bbdb5ebe1ed4c0d3441df694c81ec9f774",
+  "metadataOnlyHoldouts": [
+    "MH3",
+    "DFT"
+  ],
+  "entries": [
+    {
+      "set": "ONE",
+      "table": "picks",
+      "events": [
+        "picks/expansion=ONE/event=PremierDraft",
+        "picks/expansion=ONE/event=TradDraft"
+      ]
+    },
+    {
+      "set": "ONE",
+      "table": "pack_cards",
+      "events": [
+        "pack_cards/expansion=ONE/event=PremierDraft",
+        "pack_cards/expansion=ONE/event=TradDraft"
+      ]
+    },
+    {
+      "set": "ONE",
+      "table": "pool_cards",
+      "events": [
+        "pool_cards/expansion=ONE/event=PremierDraft",
+        "pool_cards/expansion=ONE/event=TradDraft"
+      ]
+    },
+    {
+      "set": "ONE",
+      "table": "games",
+      "events": [
+        "games/expansion=ONE/event=PremierDraft",
+        "games/expansion=ONE/event=Sealed",
+        "games/expansion=ONE/event=TradDraft",
+        "games/expansion=ONE/event=TradSealed"
+      ]
+    },
+    {
+      "set": "ONE",
+      "table": "game_cards",
+      "events": [
+        "game_cards/expansion=ONE/event=PremierDraft",
+        "game_cards/expansion=ONE/event=Sealed",
+        "game_cards/expansion=ONE/event=TradDraft",
+        "game_cards/expansion=ONE/event=TradSealed"
+      ]
+    },
+    {
+      "set": "MOM",
+      "table": "picks",
+      "events": [
+        "picks/expansion=MOM/event=PremierDraft",
+        "picks/expansion=MOM/event=TradDraft"
+      ]
+    },
+    {
+      "set": "MOM",
+      "table": "pack_cards",
+      "events": [
+        "pack_cards/expansion=MOM/event=PremierDraft",
+        "pack_cards/expansion=MOM/event=TradDraft"
+      ]
+    },
+    {
+      "set": "MOM",
+      "table": "pool_cards",
+      "events": [
+        "pool_cards/expansion=MOM/event=PremierDraft",
+        "pool_cards/expansion=MOM/event=TradDraft"
+      ]
+    },
+    {
+      "set": "MOM",
+      "table": "games",
+      "events": [
+        "games/expansion=MOM/event=PremierDraft",
+        "games/expansion=MOM/event=Sealed",
+        "games/expansion=MOM/event=TradDraft",
+        "games/expansion=MOM/event=TradSealed"
+      ]
+    },
+    {
+      "set": "MOM",
+      "table": "game_cards",
+      "events": [
+        "game_cards/expansion=MOM/event=PremierDraft",
+        "game_cards/expansion=MOM/event=Sealed",
+        "game_cards/expansion=MOM/event=TradDraft",
+        "game_cards/expansion=MOM/event=TradSealed"
+      ]
+    },
+    {
+      "set": "MH3",
+      "table": "picks",
+      "events": [
+        "picks/expansion=MH3/event=PremierDraft",
+        "picks/expansion=MH3/event=TradDraft"
+      ]
+    },
+    {
+      "set": "MH3",
+      "table": "pack_cards",
+      "events": [
+        "pack_cards/expansion=MH3/event=PremierDraft",
+        "pack_cards/expansion=MH3/event=TradDraft"
+      ]
+    },
+    {
+      "set": "MH3",
+      "table": "pool_cards",
+      "events": [
+        "pool_cards/expansion=MH3/event=PremierDraft",
+        "pool_cards/expansion=MH3/event=TradDraft"
+      ]
+    },
+    {
+      "set": "MH3",
+      "table": "games",
+      "events": [
+        "games/expansion=MH3/event=PremierDraft",
+        "games/expansion=MH3/event=Sealed",
+        "games/expansion=MH3/event=TradDraft",
+        "games/expansion=MH3/event=TradSealed"
+      ]
+    },
+    {
+      "set": "MH3",
+      "table": "game_cards",
+      "events": [
+        "game_cards/expansion=MH3/event=PremierDraft",
+        "game_cards/expansion=MH3/event=Sealed",
+        "game_cards/expansion=MH3/event=TradDraft",
+        "game_cards/expansion=MH3/event=TradSealed"
+      ]
+    },
+    {
+      "set": "DFT",
+      "table": "picks",
+      "events": [
+        "picks/expansion=DFT/event=PremierDraft",
+        "picks/expansion=DFT/event=TradDraft"
+      ]
+    },
+    {
+      "set": "DFT",
+      "table": "pack_cards",
+      "events": [
+        "pack_cards/expansion=DFT/event=PremierDraft",
+        "pack_cards/expansion=DFT/event=TradDraft"
+      ]
+    },
+    {
+      "set": "DFT",
+      "table": "pool_cards",
+      "events": [
+        "pool_cards/expansion=DFT/event=PremierDraft",
+        "pool_cards/expansion=DFT/event=TradDraft"
+      ]
+    },
+    {
+      "set": "DFT",
+      "table": "games",
+      "events": [
+        "games/expansion=DFT/event=PremierDraft",
+        "games/expansion=DFT/event=Sealed",
+        "games/expansion=DFT/event=TradDraft",
+        "games/expansion=DFT/event=TradSealed"
+      ]
+    },
+    {
+      "set": "DFT",
+      "table": "game_cards",
+      "events": [
+        "game_cards/expansion=DFT/event=PremierDraft",
+        "game_cards/expansion=DFT/event=Sealed",
+        "game_cards/expansion=DFT/event=TradDraft",
+        "game_cards/expansion=DFT/event=TradSealed"
+      ]
+    }
+  ]
+}

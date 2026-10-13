@@ -20,8 +20,15 @@ public sealed partial class App : Avalonia.Application
                 base.OnFrameworkInitializationCompleted(); return;
             }
             var viewModel = new MainWindowViewModel(
-                new DraftTGRuntimeFactory(),
+                new DraftTGRuntimeFactory(captureFree: Program.CaptureFreeOverlayOptions is not null),
                 new AvaloniaUiDispatcher());
+            if (Program.CaptureFreeOverlayOptions is { } captureFree)
+            {
+                var experiment = new CaptureFreeDesktopSession(viewModel, captureFree);
+                desktop.ShutdownMode = Avalonia.Controls.ShutdownMode.OnMainWindowClose;
+                desktop.MainWindow = experiment.Rail;
+                base.OnFrameworkInitializationCompleted(); return;
+            }
             var session = new OverlayDesktopSession(viewModel, OverlayCalibrationService.CreateDefault());
             desktop.ShutdownMode = Avalonia.Controls.ShutdownMode.OnMainWindowClose;
             desktop.MainWindow = session.Rail;

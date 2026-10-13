@@ -47,6 +47,7 @@ internal sealed class AutomaticCardLocalizationSession : ICardVisualLocator, IAs
         string? debugPath = null, Action<Action>? dispatch = null, PackFrameTiming? timing = null,
         Func<TimeSpan, CancellationToken, Task>? delay = null, IArenaWindowEvents? windowEvents = null)
     {
+        CaptureFreeSafety.AssertCaptureAllowed("automatic visual localization / artwork matcher / visual verifier");
         _presentation = presentation; _calibration = calibration; _moveOverlay = moveOverlay; _captureVisibility = captureVisibility;
         var nativeWindowEvents = capture is null && OperatingSystem.IsWindows();
         capture ??= WindowsCaptureFactory.CreateForCurrentPlatform();

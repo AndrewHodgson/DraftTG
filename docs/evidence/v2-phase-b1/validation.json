@@ -1,0 +1,23 @@
+{
+  "commit": "46aec50260d59efea8ba1ae3c4c440e29c450f84",
+  "dirtyTree": true,
+  "buildPassed": true,
+  "warnings": 0,
+  "errors": 0,
+  "CSharpPassed": 1293,
+  "CSharpFailed": 0,
+  "CSharpSkipped": 0,
+  "PythonB1Passed": 7,
+  "PythonExistingPassed": 10,
+  "GoldenPassed": 40,
+  "preservedFiles": 91,
+  "baselineHashesPreserved": 39,
+  "sourceFingerprint": "ae1fe82c9134b3c06fa6759749ebd878eb3d6e983a65346c8348defe0c1f64bd",
+  "productionScoreAssemblySha256": "da89fef042040ac4e4335112824214f2309c0888e592444ec50c8a8e3a187bf6",
+  "logs": "data\\historical\\evaluation\\phase-b1\\validation",
+  "newHoldoutsUntouched": true,
+  "productionChanged": false,
+  "BuildTestSourceFingerprint": "a7a85486db8b8805d75e3b979b1e30302145d59907d3cc33ba884b22abc90dc7",
+  "PostValidationPythonB1Passed": 7,
+  "PostValidationChanges": "Report rendering correction and removal of unused duplicate prior diagnostics; analytical methods unchanged; final prior/equivalence tests rerun."
+}

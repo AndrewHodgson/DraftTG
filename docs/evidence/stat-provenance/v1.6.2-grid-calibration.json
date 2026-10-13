@@ -1,0 +1,1440 @@
+{
+  "Scope": "Structured behavioral calibration; not observational outcome calibration",
+  "Criterion": "At C=.95,P=0,Q=.60 an ordinary off-plan advantage loses to playable Q=.51 with identical other components. At C=1 an extreme Q=.95 keeps a tail that can beat playable Q=.55.",
+  "Selection": "Largest ordinary floor satisfying the general criterion, with the frozen .20 late relevance floor retained as the premium endpoint. Strong-quality .65 and near-extreme .95 are semantic knots, not rarity thresholds.",
+  "Chosen": {
+    "OrdinaryFloor": 0.05,
+    "PremiumFloor": 0.2,
+    "OrdinaryAtStrongCommitment": 0.50975,
+    "PremiumAtFullCommitment": 0.59,
+    "OrdinaryLosesToPlayableQ051": true,
+    "PremiumCanBeatPlayableQ055": true,
+    "PreservesFrozenLatePremiumFloor": true
+  },
+  "Candidates": [
+    {
+      "OrdinaryFloor": 0.025,
+      "PremiumFloor": 0.1,
+      "OrdinaryAtStrongCommitment": 0.507375,
+      "PremiumAtFullCommitment": 0.5449999999999999,
+      "OrdinaryLosesToPlayableQ051": true,
+      "PremiumCanBeatPlayableQ055": false,
+      "PreservesFrozenLatePremiumFloor": false
+    },
+    {
+      "OrdinaryFloor": 0.025,
+      "PremiumFloor": 0.15,
+      "OrdinaryAtStrongCommitment": 0.507375,
+      "PremiumAtFullCommitment": 0.5675,
+      "OrdinaryLosesToPlayableQ051": true,
+      "PremiumCanBeatPlayableQ055": true,
+      "PreservesFrozenLatePremiumFloor": false
+    },
+    {
+      "OrdinaryFloor": 0.025,
+      "PremiumFloor": 0.2,
+      "OrdinaryAtStrongCommitment": 0.507375,
+      "PremiumAtFullCommitment": 0.59,
+      "OrdinaryLosesToPlayableQ051": true,
+      "PremiumCanBeatPlayableQ055": true,
+      "PreservesFrozenLatePremiumFloor": true
+    },
+    {
+      "OrdinaryFloor": 0.025,
+      "PremiumFloor": 0.3,
+      "OrdinaryAtStrongCommitment": 0.507375,
+      "PremiumAtFullCommitment": 0.635,
+      "OrdinaryLosesToPlayableQ051": true,
+      "PremiumCanBeatPlayableQ055": true,
+      "PreservesFrozenLatePremiumFloor": true
+    },
+    {
+      "OrdinaryFloor": 0.025,
+      "PremiumFloor": 0.4,
+      "OrdinaryAtStrongCommitment": 0.507375,
+      "PremiumAtFullCommitment": 0.6799999999999999,
+      "OrdinaryLosesToPlayableQ051": true,
+      "PremiumCanBeatPlayableQ055": true,
+      "PreservesFrozenLatePremiumFloor": true
+    },
+    {
+      "OrdinaryFloor": 0.05,
+      "PremiumFloor": 0.1,
+      "OrdinaryAtStrongCommitment": 0.50975,
+      "PremiumAtFullCommitment": 0.5449999999999999,
+      "OrdinaryLosesToPlayableQ051": true,
+      "PremiumCanBeatPlayableQ055": false,
+      "PreservesFrozenLatePremiumFloor": false
+    },
+    {
+      "OrdinaryFloor": 0.05,
+      "PremiumFloor": 0.15,
+      "OrdinaryAtStrongCommitment": 0.50975,
+      "PremiumAtFullCommitment": 0.5675,
+      "OrdinaryLosesToPlayableQ051": true,
+      "PremiumCanBeatPlayableQ055": true,
+      "PreservesFrozenLatePremiumFloor": false
+    },
+    {
+      "OrdinaryFloor": 0.05,
+      "PremiumFloor": 0.2,
+      "OrdinaryAtStrongCommitment": 0.50975,
+      "PremiumAtFullCommitment": 0.59,
+      "OrdinaryLosesToPlayableQ051": true,
+      "PremiumCanBeatPlayableQ055": true,
+      "PreservesFrozenLatePremiumFloor": true
+    },
+    {
+      "OrdinaryFloor": 0.05,
+      "PremiumFloor": 0.3,
+      "OrdinaryAtStrongCommitment": 0.50975,
+      "PremiumAtFullCommitment": 0.635,
+      "OrdinaryLosesToPlayableQ051": true,
+      "PremiumCanBeatPlayableQ055": true,
+      "PreservesFrozenLatePremiumFloor": true
+    },
+    {
+      "OrdinaryFloor": 0.05,
+      "PremiumFloor": 0.4,
+      "OrdinaryAtStrongCommitment": 0.50975,
+      "PremiumAtFullCommitment": 0.6799999999999999,
+      "OrdinaryLosesToPlayableQ051": true,
+      "PremiumCanBeatPlayableQ055": true,
+      "PreservesFrozenLatePremiumFloor": true
+    },
+    {
+      "OrdinaryFloor": 0.075,
+      "PremiumFloor": 0.1,
+      "OrdinaryAtStrongCommitment": 0.5121249999999999,
+      "PremiumAtFullCommitment": 0.5449999999999999,
+      "OrdinaryLosesToPlayableQ051": false,
+      "PremiumCanBeatPlayableQ055": false,
+      "PreservesFrozenLatePremiumFloor": false
+    },
+    {
+      "OrdinaryFloor": 0.075,
+      "PremiumFloor": 0.15,
+      "OrdinaryAtStrongCommitment": 0.5121249999999999,
+      "PremiumAtFullCommitment": 0.5675,
+      "OrdinaryLosesToPlayableQ051": false,
+      "PremiumCanBeatPlayableQ055": true,
+      "PreservesFrozenLatePremiumFloor": false
+    },
+    {
+      "OrdinaryFloor": 0.075,
+      "PremiumFloor": 0.2,
+      "OrdinaryAtStrongCommitment": 0.5121249999999999,
+      "PremiumAtFullCommitment": 0.59,
+      "OrdinaryLosesToPlayableQ051": false,
+      "PremiumCanBeatPlayableQ055": true,
+      "PreservesFrozenLatePremiumFloor": true
+    },
+    {
+      "OrdinaryFloor": 0.075,
+      "PremiumFloor": 0.3,
+      "OrdinaryAtStrongCommitment": 0.5121249999999999,
+      "PremiumAtFullCommitment": 0.635,
+      "OrdinaryLosesToPlayableQ051": false,
+      "PremiumCanBeatPlayableQ055": true,
+      "PreservesFrozenLatePremiumFloor": true
+    },
+    {
+      "OrdinaryFloor": 0.075,
+      "PremiumFloor": 0.4,
+      "OrdinaryAtStrongCommitment": 0.5121249999999999,
+      "PremiumAtFullCommitment": 0.6799999999999999,
+      "OrdinaryLosesToPlayableQ051": false,
+      "PremiumCanBeatPlayableQ055": true,
+      "PreservesFrozenLatePremiumFloor": true
+    },
+    {
+      "OrdinaryFloor": 0.1,
+      "PremiumFloor": 0.1,
+      "OrdinaryAtStrongCommitment": 0.5145,
+      "PremiumAtFullCommitment": 0.5449999999999999,
+      "OrdinaryLosesToPlayableQ051": false,
+      "PremiumCanBeatPlayableQ055": false,
+      "PreservesFrozenLatePremiumFloor": false
+    },
+    {
+      "OrdinaryFloor": 0.1,
+      "PremiumFloor": 0.15,
+      "OrdinaryAtStrongCommitment": 0.5145,
+      "PremiumAtFullCommitment": 0.5675,
+      "OrdinaryLosesToPlayableQ051": false,
+      "PremiumCanBeatPlayableQ055": true,
+      "PreservesFrozenLatePremiumFloor": false
+    },
+    {
+      "OrdinaryFloor": 0.1,
+      "PremiumFloor": 0.2,
+      "OrdinaryAtStrongCommitment": 0.5145,
+      "PremiumAtFullCommitment": 0.59,
+      "OrdinaryLosesToPlayableQ051": false,
+      "PremiumCanBeatPlayableQ055": true,
+      "PreservesFrozenLatePremiumFloor": true
+    },
+    {
+      "OrdinaryFloor": 0.1,
+      "PremiumFloor": 0.3,
+      "OrdinaryAtStrongCommitment": 0.5145,
+      "PremiumAtFullCommitment": 0.635,
+      "OrdinaryLosesToPlayableQ051": false,
+      "PremiumCanBeatPlayableQ055": true,
+      "PreservesFrozenLatePremiumFloor": true
+    },
+    {
+      "OrdinaryFloor": 0.1,
+      "PremiumFloor": 0.4,
+      "OrdinaryAtStrongCommitment": 0.5145,
+      "PremiumAtFullCommitment": 0.6799999999999999,
+      "OrdinaryLosesToPlayableQ051": false,
+      "PremiumCanBeatPlayableQ055": true,
+      "PreservesFrozenLatePremiumFloor": true
+    },
+    {
+      "OrdinaryFloor": 0.15,
+      "PremiumFloor": 0.1,
+      "OrdinaryAtStrongCommitment": 0.51925,
+      "PremiumAtFullCommitment": 0.5449999999999999,
+      "OrdinaryLosesToPlayableQ051": false,
+      "PremiumCanBeatPlayableQ055": false,
+      "PreservesFrozenLatePremiumFloor": false
+    },
+    {
+      "OrdinaryFloor": 0.15,
+      "PremiumFloor": 0.15,
+      "OrdinaryAtStrongCommitment": 0.51925,
+      "PremiumAtFullCommitment": 0.5675,
+      "OrdinaryLosesToPlayableQ051": false,
+      "PremiumCanBeatPlayableQ055": true,
+      "PreservesFrozenLatePremiumFloor": false
+    },
+    {
+      "OrdinaryFloor": 0.15,
+      "PremiumFloor": 0.2,
+      "OrdinaryAtStrongCommitment": 0.51925,
+      "PremiumAtFullCommitment": 0.59,
+      "OrdinaryLosesToPlayableQ051": false,
+      "PremiumCanBeatPlayableQ055": true,
+      "PreservesFrozenLatePremiumFloor": true
+    },
+    {
+      "OrdinaryFloor": 0.15,
+      "PremiumFloor": 0.3,
+      "OrdinaryAtStrongCommitment": 0.51925,
+      "PremiumAtFullCommitment": 0.635,
+      "OrdinaryLosesToPlayableQ051": false,
+      "PremiumCanBeatPlayableQ055": true,
+      "PreservesFrozenLatePremiumFloor": true
+    },
+    {
+      "OrdinaryFloor": 0.15,
+      "PremiumFloor": 0.4,
+      "OrdinaryAtStrongCommitment": 0.51925,
+      "PremiumAtFullCommitment": 0.6799999999999999,
+      "OrdinaryLosesToPlayableQ051": false,
+      "PremiumCanBeatPlayableQ055": true,
+      "PreservesFrozenLatePremiumFloor": true
+    },
+    {
+      "OrdinaryFloor": 0.2,
+      "PremiumFloor": 0.1,
+      "OrdinaryAtStrongCommitment": 0.524,
+      "PremiumAtFullCommitment": 0.5449999999999999,
+      "OrdinaryLosesToPlayableQ051": false,
+      "PremiumCanBeatPlayableQ055": false,
+      "PreservesFrozenLatePremiumFloor": false
+    },
+    {
+      "OrdinaryFloor": 0.2,
+      "PremiumFloor": 0.15,
+      "OrdinaryAtStrongCommitment": 0.524,
+      "PremiumAtFullCommitment": 0.5675,
+      "OrdinaryLosesToPlayableQ051": false,
+      "PremiumCanBeatPlayableQ055": true,
+      "PreservesFrozenLatePremiumFloor": false
+    },
+    {
+      "OrdinaryFloor": 0.2,
+      "PremiumFloor": 0.2,
+      "OrdinaryAtStrongCommitment": 0.524,
+      "PremiumAtFullCommitment": 0.59,
+      "OrdinaryLosesToPlayableQ051": false,
+      "PremiumCanBeatPlayableQ055": true,
+      "PreservesFrozenLatePremiumFloor": true
+    },
+    {
+      "OrdinaryFloor": 0.2,
+      "PremiumFloor": 0.3,
+      "OrdinaryAtStrongCommitment": 0.524,
+      "PremiumAtFullCommitment": 0.635,
+      "OrdinaryLosesToPlayableQ051": false,
+      "PremiumCanBeatPlayableQ055": true,
+      "PreservesFrozenLatePremiumFloor": true
+    },
+    {
+      "OrdinaryFloor": 0.2,
+      "PremiumFloor": 0.4,
+      "OrdinaryAtStrongCommitment": 0.524,
+      "PremiumAtFullCommitment": 0.6799999999999999,
+      "OrdinaryLosesToPlayableQ051": false,
+      "PremiumCanBeatPlayableQ055": true,
+      "PreservesFrozenLatePremiumFloor": true
+    }
+  ],
+  "Grid": [
+    {
+      "Commitment": 0,
+      "Playability": 0,
+      "Quality": 0.3,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.3
+    },
+    {
+      "Commitment": 0,
+      "Playability": 0,
+      "Quality": 0.5,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.5
+    },
+    {
+      "Commitment": 0,
+      "Playability": 0,
+      "Quality": 0.6,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.6
+    },
+    {
+      "Commitment": 0,
+      "Playability": 0,
+      "Quality": 0.8,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.8
+    },
+    {
+      "Commitment": 0,
+      "Playability": 0,
+      "Quality": 0.95,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.95
+    },
+    {
+      "Commitment": 0,
+      "Playability": 0.25,
+      "Quality": 0.3,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.3
+    },
+    {
+      "Commitment": 0,
+      "Playability": 0.25,
+      "Quality": 0.5,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.5
+    },
+    {
+      "Commitment": 0,
+      "Playability": 0.25,
+      "Quality": 0.6,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.6
+    },
+    {
+      "Commitment": 0,
+      "Playability": 0.25,
+      "Quality": 0.8,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.8
+    },
+    {
+      "Commitment": 0,
+      "Playability": 0.25,
+      "Quality": 0.95,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.95
+    },
+    {
+      "Commitment": 0,
+      "Playability": 0.5,
+      "Quality": 0.3,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.3
+    },
+    {
+      "Commitment": 0,
+      "Playability": 0.5,
+      "Quality": 0.5,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.5
+    },
+    {
+      "Commitment": 0,
+      "Playability": 0.5,
+      "Quality": 0.6,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.6
+    },
+    {
+      "Commitment": 0,
+      "Playability": 0.5,
+      "Quality": 0.8,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.8
+    },
+    {
+      "Commitment": 0,
+      "Playability": 0.5,
+      "Quality": 0.95,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.95
+    },
+    {
+      "Commitment": 0,
+      "Playability": 0.75,
+      "Quality": 0.3,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.3
+    },
+    {
+      "Commitment": 0,
+      "Playability": 0.75,
+      "Quality": 0.5,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.5
+    },
+    {
+      "Commitment": 0,
+      "Playability": 0.75,
+      "Quality": 0.6,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.6
+    },
+    {
+      "Commitment": 0,
+      "Playability": 0.75,
+      "Quality": 0.8,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.8
+    },
+    {
+      "Commitment": 0,
+      "Playability": 0.75,
+      "Quality": 0.95,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.95
+    },
+    {
+      "Commitment": 0,
+      "Playability": 1,
+      "Quality": 0.3,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.3
+    },
+    {
+      "Commitment": 0,
+      "Playability": 1,
+      "Quality": 0.5,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.5
+    },
+    {
+      "Commitment": 0,
+      "Playability": 1,
+      "Quality": 0.6,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.6
+    },
+    {
+      "Commitment": 0,
+      "Playability": 1,
+      "Quality": 0.8,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.8
+    },
+    {
+      "Commitment": 0,
+      "Playability": 1,
+      "Quality": 0.95,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.95
+    },
+    {
+      "Commitment": 0.25,
+      "Playability": 0,
+      "Quality": 0.3,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.7625,
+      "EffectiveQ": 0.3
+    },
+    {
+      "Commitment": 0.25,
+      "Playability": 0,
+      "Quality": 0.5,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.7625,
+      "EffectiveQ": 0.5
+    },
+    {
+      "Commitment": 0.25,
+      "Playability": 0,
+      "Quality": 0.6,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.7625,
+      "EffectiveQ": 0.5762499999999999
+    },
+    {
+      "Commitment": 0.25,
+      "Playability": 0,
+      "Quality": 0.8,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.78125,
+      "EffectiveQ": 0.734375
+    },
+    {
+      "Commitment": 0.25,
+      "Playability": 0,
+      "Quality": 0.95,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.8,
+      "EffectiveQ": 0.86
+    },
+    {
+      "Commitment": 0.25,
+      "Playability": 0.25,
+      "Quality": 0.3,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.821875,
+      "EffectiveQ": 0.3
+    },
+    {
+      "Commitment": 0.25,
+      "Playability": 0.25,
+      "Quality": 0.5,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.821875,
+      "EffectiveQ": 0.5
+    },
+    {
+      "Commitment": 0.25,
+      "Playability": 0.25,
+      "Quality": 0.6,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.821875,
+      "EffectiveQ": 0.5821875
+    },
+    {
+      "Commitment": 0.25,
+      "Playability": 0.25,
+      "Quality": 0.8,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.8359375,
+      "EffectiveQ": 0.75078125
+    },
+    {
+      "Commitment": 0.25,
+      "Playability": 0.25,
+      "Quality": 0.95,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.85,
+      "EffectiveQ": 0.8825
+    },
+    {
+      "Commitment": 0.25,
+      "Playability": 0.5,
+      "Quality": 0.3,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.88125,
+      "EffectiveQ": 0.3
+    },
+    {
+      "Commitment": 0.25,
+      "Playability": 0.5,
+      "Quality": 0.5,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.88125,
+      "EffectiveQ": 0.5
+    },
+    {
+      "Commitment": 0.25,
+      "Playability": 0.5,
+      "Quality": 0.6,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.88125,
+      "EffectiveQ": 0.588125
+    },
+    {
+      "Commitment": 0.25,
+      "Playability": 0.5,
+      "Quality": 0.8,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.890625,
+      "EffectiveQ": 0.7671875
+    },
+    {
+      "Commitment": 0.25,
+      "Playability": 0.5,
+      "Quality": 0.95,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.9,
+      "EffectiveQ": 0.905
+    },
+    {
+      "Commitment": 0.25,
+      "Playability": 0.75,
+      "Quality": 0.3,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.940625,
+      "EffectiveQ": 0.3
+    },
+    {
+      "Commitment": 0.25,
+      "Playability": 0.75,
+      "Quality": 0.5,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.940625,
+      "EffectiveQ": 0.5
+    },
+    {
+      "Commitment": 0.25,
+      "Playability": 0.75,
+      "Quality": 0.6,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.940625,
+      "EffectiveQ": 0.5940624999999999
+    },
+    {
+      "Commitment": 0.25,
+      "Playability": 0.75,
+      "Quality": 0.8,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.9453125,
+      "EffectiveQ": 0.7835937500000001
+    },
+    {
+      "Commitment": 0.25,
+      "Playability": 0.75,
+      "Quality": 0.95,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.95,
+      "EffectiveQ": 0.9275
+    },
+    {
+      "Commitment": 0.25,
+      "Playability": 1,
+      "Quality": 0.3,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.3
+    },
+    {
+      "Commitment": 0.25,
+      "Playability": 1,
+      "Quality": 0.5,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.5
+    },
+    {
+      "Commitment": 0.25,
+      "Playability": 1,
+      "Quality": 0.6,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.6
+    },
+    {
+      "Commitment": 0.25,
+      "Playability": 1,
+      "Quality": 0.8,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.8
+    },
+    {
+      "Commitment": 0.25,
+      "Playability": 1,
+      "Quality": 0.95,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.95
+    },
+    {
+      "Commitment": 0.5,
+      "Playability": 0,
+      "Quality": 0.3,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.525,
+      "EffectiveQ": 0.3
+    },
+    {
+      "Commitment": 0.5,
+      "Playability": 0,
+      "Quality": 0.5,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.525,
+      "EffectiveQ": 0.5
+    },
+    {
+      "Commitment": 0.5,
+      "Playability": 0,
+      "Quality": 0.6,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.525,
+      "EffectiveQ": 0.5525
+    },
+    {
+      "Commitment": 0.5,
+      "Playability": 0,
+      "Quality": 0.8,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.5625,
+      "EffectiveQ": 0.66875
+    },
+    {
+      "Commitment": 0.5,
+      "Playability": 0,
+      "Quality": 0.95,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.6,
+      "EffectiveQ": 0.77
+    },
+    {
+      "Commitment": 0.5,
+      "Playability": 0.25,
+      "Quality": 0.3,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.64375,
+      "EffectiveQ": 0.3
+    },
+    {
+      "Commitment": 0.5,
+      "Playability": 0.25,
+      "Quality": 0.5,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.64375,
+      "EffectiveQ": 0.5
+    },
+    {
+      "Commitment": 0.5,
+      "Playability": 0.25,
+      "Quality": 0.6,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.64375,
+      "EffectiveQ": 0.564375
+    },
+    {
+      "Commitment": 0.5,
+      "Playability": 0.25,
+      "Quality": 0.8,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.671875,
+      "EffectiveQ": 0.7015625000000001
+    },
+    {
+      "Commitment": 0.5,
+      "Playability": 0.25,
+      "Quality": 0.95,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.7,
+      "EffectiveQ": 0.815
+    },
+    {
+      "Commitment": 0.5,
+      "Playability": 0.5,
+      "Quality": 0.3,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.7625,
+      "EffectiveQ": 0.3
+    },
+    {
+      "Commitment": 0.5,
+      "Playability": 0.5,
+      "Quality": 0.5,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.7625,
+      "EffectiveQ": 0.5
+    },
+    {
+      "Commitment": 0.5,
+      "Playability": 0.5,
+      "Quality": 0.6,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.7625,
+      "EffectiveQ": 0.5762499999999999
+    },
+    {
+      "Commitment": 0.5,
+      "Playability": 0.5,
+      "Quality": 0.8,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.78125,
+      "EffectiveQ": 0.734375
+    },
+    {
+      "Commitment": 0.5,
+      "Playability": 0.5,
+      "Quality": 0.95,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.8,
+      "EffectiveQ": 0.86
+    },
+    {
+      "Commitment": 0.5,
+      "Playability": 0.75,
+      "Quality": 0.3,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.88125,
+      "EffectiveQ": 0.3
+    },
+    {
+      "Commitment": 0.5,
+      "Playability": 0.75,
+      "Quality": 0.5,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.88125,
+      "EffectiveQ": 0.5
+    },
+    {
+      "Commitment": 0.5,
+      "Playability": 0.75,
+      "Quality": 0.6,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.88125,
+      "EffectiveQ": 0.588125
+    },
+    {
+      "Commitment": 0.5,
+      "Playability": 0.75,
+      "Quality": 0.8,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.890625,
+      "EffectiveQ": 0.7671875
+    },
+    {
+      "Commitment": 0.5,
+      "Playability": 0.75,
+      "Quality": 0.95,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.9,
+      "EffectiveQ": 0.905
+    },
+    {
+      "Commitment": 0.5,
+      "Playability": 1,
+      "Quality": 0.3,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.3
+    },
+    {
+      "Commitment": 0.5,
+      "Playability": 1,
+      "Quality": 0.5,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.5
+    },
+    {
+      "Commitment": 0.5,
+      "Playability": 1,
+      "Quality": 0.6,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.6
+    },
+    {
+      "Commitment": 0.5,
+      "Playability": 1,
+      "Quality": 0.8,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.8
+    },
+    {
+      "Commitment": 0.5,
+      "Playability": 1,
+      "Quality": 0.95,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.95
+    },
+    {
+      "Commitment": 0.75,
+      "Playability": 0,
+      "Quality": 0.3,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.2875000000000001,
+      "EffectiveQ": 0.3
+    },
+    {
+      "Commitment": 0.75,
+      "Playability": 0,
+      "Quality": 0.5,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.2875000000000001,
+      "EffectiveQ": 0.5
+    },
+    {
+      "Commitment": 0.75,
+      "Playability": 0,
+      "Quality": 0.6,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.2875000000000001,
+      "EffectiveQ": 0.52875
+    },
+    {
+      "Commitment": 0.75,
+      "Playability": 0,
+      "Quality": 0.8,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.34375,
+      "EffectiveQ": 0.603125
+    },
+    {
+      "Commitment": 0.75,
+      "Playability": 0,
+      "Quality": 0.95,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.3999999999999999,
+      "EffectiveQ": 0.6799999999999999
+    },
+    {
+      "Commitment": 0.75,
+      "Playability": 0.25,
+      "Quality": 0.3,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.46562500000000007,
+      "EffectiveQ": 0.3
+    },
+    {
+      "Commitment": 0.75,
+      "Playability": 0.25,
+      "Quality": 0.5,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.46562500000000007,
+      "EffectiveQ": 0.5
+    },
+    {
+      "Commitment": 0.75,
+      "Playability": 0.25,
+      "Quality": 0.6,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.46562500000000007,
+      "EffectiveQ": 0.5465625
+    },
+    {
+      "Commitment": 0.75,
+      "Playability": 0.25,
+      "Quality": 0.8,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.5078125,
+      "EffectiveQ": 0.65234375
+    },
+    {
+      "Commitment": 0.75,
+      "Playability": 0.25,
+      "Quality": 0.95,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.55,
+      "EffectiveQ": 0.7475
+    },
+    {
+      "Commitment": 0.75,
+      "Playability": 0.5,
+      "Quality": 0.3,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.64375,
+      "EffectiveQ": 0.3
+    },
+    {
+      "Commitment": 0.75,
+      "Playability": 0.5,
+      "Quality": 0.5,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.64375,
+      "EffectiveQ": 0.5
+    },
+    {
+      "Commitment": 0.75,
+      "Playability": 0.5,
+      "Quality": 0.6,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.64375,
+      "EffectiveQ": 0.564375
+    },
+    {
+      "Commitment": 0.75,
+      "Playability": 0.5,
+      "Quality": 0.8,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.671875,
+      "EffectiveQ": 0.7015625000000001
+    },
+    {
+      "Commitment": 0.75,
+      "Playability": 0.5,
+      "Quality": 0.95,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.7,
+      "EffectiveQ": 0.815
+    },
+    {
+      "Commitment": 0.75,
+      "Playability": 0.75,
+      "Quality": 0.3,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.821875,
+      "EffectiveQ": 0.3
+    },
+    {
+      "Commitment": 0.75,
+      "Playability": 0.75,
+      "Quality": 0.5,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.821875,
+      "EffectiveQ": 0.5
+    },
+    {
+      "Commitment": 0.75,
+      "Playability": 0.75,
+      "Quality": 0.6,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.821875,
+      "EffectiveQ": 0.5821875
+    },
+    {
+      "Commitment": 0.75,
+      "Playability": 0.75,
+      "Quality": 0.8,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.8359375,
+      "EffectiveQ": 0.75078125
+    },
+    {
+      "Commitment": 0.75,
+      "Playability": 0.75,
+      "Quality": 0.95,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.85,
+      "EffectiveQ": 0.8825
+    },
+    {
+      "Commitment": 0.75,
+      "Playability": 1,
+      "Quality": 0.3,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.3
+    },
+    {
+      "Commitment": 0.75,
+      "Playability": 1,
+      "Quality": 0.5,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.5
+    },
+    {
+      "Commitment": 0.75,
+      "Playability": 1,
+      "Quality": 0.6,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.6
+    },
+    {
+      "Commitment": 0.75,
+      "Playability": 1,
+      "Quality": 0.8,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.8
+    },
+    {
+      "Commitment": 0.75,
+      "Playability": 1,
+      "Quality": 0.95,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.95
+    },
+    {
+      "Commitment": 1,
+      "Playability": 0,
+      "Quality": 0.3,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.050000000000000044,
+      "EffectiveQ": 0.3
+    },
+    {
+      "Commitment": 1,
+      "Playability": 0,
+      "Quality": 0.5,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.050000000000000044,
+      "EffectiveQ": 0.5
+    },
+    {
+      "Commitment": 1,
+      "Playability": 0,
+      "Quality": 0.6,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.050000000000000044,
+      "EffectiveQ": 0.505
+    },
+    {
+      "Commitment": 1,
+      "Playability": 0,
+      "Quality": 0.8,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.125,
+      "EffectiveQ": 0.5375
+    },
+    {
+      "Commitment": 1,
+      "Playability": 0,
+      "Quality": 0.95,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.19999999999999996,
+      "EffectiveQ": 0.59
+    },
+    {
+      "Commitment": 1,
+      "Playability": 0.25,
+      "Quality": 0.3,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.2875000000000001,
+      "EffectiveQ": 0.3
+    },
+    {
+      "Commitment": 1,
+      "Playability": 0.25,
+      "Quality": 0.5,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.2875000000000001,
+      "EffectiveQ": 0.5
+    },
+    {
+      "Commitment": 1,
+      "Playability": 0.25,
+      "Quality": 0.6,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.2875000000000001,
+      "EffectiveQ": 0.52875
+    },
+    {
+      "Commitment": 1,
+      "Playability": 0.25,
+      "Quality": 0.8,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.34375,
+      "EffectiveQ": 0.603125
+    },
+    {
+      "Commitment": 1,
+      "Playability": 0.25,
+      "Quality": 0.95,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.3999999999999999,
+      "EffectiveQ": 0.6799999999999999
+    },
+    {
+      "Commitment": 1,
+      "Playability": 0.5,
+      "Quality": 0.3,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.525,
+      "EffectiveQ": 0.3
+    },
+    {
+      "Commitment": 1,
+      "Playability": 0.5,
+      "Quality": 0.5,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.525,
+      "EffectiveQ": 0.5
+    },
+    {
+      "Commitment": 1,
+      "Playability": 0.5,
+      "Quality": 0.6,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.525,
+      "EffectiveQ": 0.5525
+    },
+    {
+      "Commitment": 1,
+      "Playability": 0.5,
+      "Quality": 0.8,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.5625,
+      "EffectiveQ": 0.66875
+    },
+    {
+      "Commitment": 1,
+      "Playability": 0.5,
+      "Quality": 0.95,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.6,
+      "EffectiveQ": 0.77
+    },
+    {
+      "Commitment": 1,
+      "Playability": 0.75,
+      "Quality": 0.3,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.7625,
+      "EffectiveQ": 0.3
+    },
+    {
+      "Commitment": 1,
+      "Playability": 0.75,
+      "Quality": 0.5,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.7625,
+      "EffectiveQ": 0.5
+    },
+    {
+      "Commitment": 1,
+      "Playability": 0.75,
+      "Quality": 0.6,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.7625,
+      "EffectiveQ": 0.5762499999999999
+    },
+    {
+      "Commitment": 1,
+      "Playability": 0.75,
+      "Quality": 0.8,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.78125,
+      "EffectiveQ": 0.734375
+    },
+    {
+      "Commitment": 1,
+      "Playability": 0.75,
+      "Quality": 0.95,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 0.8,
+      "EffectiveQ": 0.86
+    },
+    {
+      "Commitment": 1,
+      "Playability": 1,
+      "Quality": 0.3,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.3
+    },
+    {
+      "Commitment": 1,
+      "Playability": 1,
+      "Quality": 0.5,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.5
+    },
+    {
+      "Commitment": 1,
+      "Playability": 1,
+      "Quality": 0.6,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.6
+    },
+    {
+      "Commitment": 1,
+      "Playability": 1,
+      "Quality": 0.8,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.8
+    },
+    {
+      "Commitment": 1,
+      "Playability": 1,
+      "Quality": 0.95,
+      "StagePicks": 7,
+      "BaseR": 1.0,
+      "NewR": 1.0,
+      "EffectiveQ": 0.95
+    }
+  ],
+  "Continuity": {
+    "Commitment": {
+      "Samples": 10001,
+      "Step": 0.0001,
+      "MaximumEffectiveQStep": 9.500000000106645e-06,
+      "Monotone": true
+    },
+    "Playability": {
+      "Samples": 10001,
+      "Step": 0.0001,
+      "MaximumEffectiveQStep": 9.500000000106645e-06,
+      "Monotone": true
+    },
+    "Quality": {
+      "Samples": 10001,
+      "Step": 0.0001,
+      "MaximumEffectiveQStep": 0.0001000000000000445,
+      "Monotone": true
+    },
+    "Stage": {
+      "Samples": 10001,
+      "Step": 0.0001,
+      "MaximumEffectiveQStep": 1.316303231457816e-05,
+      "Monotone": true
+    }
+  },
+  "Limit": "Synthetic grid demonstrates behavior/smoothness, not draft win-rate improvements. Real P1P8 is a separate regression; no single-card target was fit."
+}

@@ -6,6 +6,7 @@ namespace DraftTG.ArenaIntegration.Memory.Windows;
 internal sealed class ArenaMemoryException(ArenaMemoryStatus status, string message) : Exception(message)
 {
     public ArenaMemoryStatus Status { get; } = status;
+    public bool ResetConnection { get; init; }
 }
 
 internal interface IRemoteMemory
