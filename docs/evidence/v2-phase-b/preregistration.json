@@ -1,0 +1,20 @@
+{
+  "Version": "phase-b-research-plan-v1",
+  "RegisteredBeforeCandidateAnalysis": true,
+  "SplitFile": "docs/historical/splits/phase-b-v1.json",
+  "SelectionRationale": "Calendar/mechanical diversity, not prior model agreement: 2021 snow/foretell (KHM), spells/lesson (STX), dice/dungeons (AFR), graveyard/vampires (VOW); 2022 enchantment/artifact (NEO), three-color (SNC), domain (DMU), artifacts (BRO); 2023 adventure (WOE), artifact/typal/discovery (LCI); 2024 investigate (MKM), multicolor/outlaws (OTJ), typal (BLB), enchantments/survival (DSK). Fast/slow and synergy/power differences will be diagnostic, not outcome-based selection criteria.",
+  "PreviouslyViewedSets": ["WOE", "LCI", "MKM", "OTJ", "VOW"],
+  "UntouchedHoldouts": ["BLB", "DSK"],
+  "HoldoutPolicy": "Qualification may inspect schema/identity/missingness metadata. Do not compute holdout performance, quality distributions or candidate metrics before selection. Select using calibration/development, freeze selection, then release exactly one final holdout evaluation; no retuning afterward.",
+  "WithinSetObservationSplit": "SHA256(provider/set/format/draft_id), seed=DraftTG-phase-b-v1: disjoint evidence and target draft groups, independent of outcomes; all games from one draft stay together.",
+  "SparseSampleLevels": [50, 100, 250, 500, 1000, "full"],
+  "FixedShrinkageGrid": [0, 50, 100, 250, 500, 1000, 2000],
+  "PrimaryObjective": "Held-out game-presence GIH prediction MAE with Brier/calibration diagnostics and set macro-average; sparse evidence and target games are disjoint. Copy-weighted counts are separately audited, not silently interchangeable.",
+  "SecondaryObjectives": ["held-out card ranking", "observed-build associations", "human revealed-preference agreement", "golden sanity checks"],
+  "CandidateFamilies": ["shrunk baseline delta", "standardized shrunk delta", "small interpretable distinct-signal decomposition"],
+  "CrossFormatDirections": ["PremierDraft-to-QuickDraft", "QuickDraft-to-PremierDraft"],
+  "CrossFormatMissingDataPolicy": "Measure only legitimately available same-set pairs; unavailable multiple-Quick evidence is a reported limitation, never synthesized from Premier or Traditional.",
+  "ResourcePolicy": "Prefer bounded stratified seekable row-group samples; cap retained data to a few GiB and avoid full multi-gigabyte CSV downloads. Report effective coverage and selection bias. Full production replay can use a preregistered deterministic subset if full replay is impractical.",
+  "ProductionBaseline": "contextual-pick-score-v1.6.2",
+  "ProductionMutationProhibited": true
+}

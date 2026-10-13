@@ -1,0 +1,19 @@
+{
+  "Version": "phase-b-whole-set-v1",
+  "Sets": {
+    "KHM": "Calibration",
+    "STX": "Calibration",
+    "AFR": "Calibration",
+    "NEO": "Calibration",
+    "SNC": "Calibration",
+    "DMU": "Calibration",
+    "BRO": "Calibration",
+    "VOW": "Calibration",
+    "WOE": "Calibration",
+    "LCI": "Development",
+    "MKM": "Development",
+    "OTJ": "Development",
+    "BLB": "Holdout",
+    "DSK": "Holdout"
+  }
+}
