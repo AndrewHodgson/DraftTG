@@ -14,7 +14,7 @@
       </ItemsControl.Styles>
       <ItemsControl.ItemTemplate>
         <DataTemplate x:DataType="vm:CardBadgeViewModel">
-          <Grid IsVisible="{Binding IsPlaced}" Width="{Binding Width}" Height="42">
+          <Grid x:Name="BadgeRoot" IsVisible="{Binding IsPlaced}" Width="{Binding Width}" Height="42">
             <Canvas IsHitTestVisible="False">
               <Border Canvas.Left="{Binding NameX}" Canvas.Top="-17" Width="{Binding NameWidth}" Height="15"
                       IsVisible="{Binding HasDisplayName}" Background="#B3171B22" CornerRadius="3" Padding="3,0">

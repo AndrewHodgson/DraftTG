@@ -381,6 +381,8 @@ Validation covered:
 
 **Next:** return to live Arena validation and localization.
 
+**Phase 9F.1 foundation completed (debug only, 2026-10-13):** a read-only Windows x64 adapter printed 14 live Quick Draft offered GrpIds directly in `_allCardViews` order and returned list view mode on one explicitly fingerprinted build. Production WGC and scoring remain unchanged. Physical transition/count/mode/restart validation and any provider integration remain future work; Phase 9F.2 has not started. See [the Phase 9F.1 report](PHASE9F_1_CAPTURE_FREE_ARENA_DRAFT_ADAPTER.md).
+
 **Post-V1 (not started; any score change needs a version bump and a golden/replay comparison):**
 - per-set supply calibration;
 - splash deck construction;

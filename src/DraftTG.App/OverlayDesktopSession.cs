@@ -53,6 +53,7 @@ public sealed class OverlayDesktopSession : ICalibrationSurface
             isCurrentFrame: _localization.IsCurrentEvidenceFrame, recordEvidence: _orderEvidence.RecordVerified);
         _localization.RecognitionFrameObserver = _deterministicShadow.ObserveFrame;
         _localization.ValidationEventObserver = _deterministicShadow.RecordRuntimeEvent;
+        _presentation.AutomaticLocalizationApplied += RecordBadgeRender;
         _deterministicShadow.RecordRuntimeEvent("SessionStarted", new { Authority = "WGC full matcher" });
         Rail.Opened += OnOpened;
         Rail.Closing += OnClosing;
@@ -62,6 +63,16 @@ public sealed class OverlayDesktopSession : ICalibrationSurface
         Rail.Screens.Changed += ScreensChanged;
     }
     public ControlRailWindow Rail { get; }
+    private void RecordBadgeRender(VisualPlacementContext context, CardVisualLocalizationResult result)
+    {
+        if (!LiveLocalizationValidation.Enabled) return;
+        Avalonia.Threading.Dispatcher.UIThread.Post(() =>
+        {
+            if (_closing || !ReferenceEquals(context, _presentation.PlacementContext)) return;
+            _deterministicShadow.RecordRuntimeEvent("BadgeRenderSnapshot", new
+            { PackGeneration = context.Generation, result.CaptureRequestGeneration, Evidence = _cards.ReadBadgeRenderDiagnostics() });
+        }, Avalonia.Threading.DispatcherPriority.Background);
+    }
 
     private async void OnOpened(object? sender, EventArgs e)
     {
@@ -231,6 +242,7 @@ public sealed class OverlayDesktopSession : ICalibrationSurface
         finally
         {
             _presentation.PropertyChanged -= PresentationChanged;
+            _presentation.AutomaticLocalizationApplied -= RecordBadgeRender;
             Rail.Screens.Changed -= ScreensChanged;
             _presentation.Dispose();
             _allowClose = true;

@@ -8,6 +8,9 @@ using DraftTG.Data;
 using DraftTG.Domain;
 using DraftTG.RecommendationEngine;
 
+if (args.FirstOrDefault() == "--live-failure")
+{ await LiveFailureReplay.RunAsync(args.Skip(1).ToArray()); return; }
+
 // Offline audit only: cached production data and saved fixtures. No live runtime, no cache writes.
 var root = Path.GetFullPath(args.ElementAtOrDefault(0) ?? ".");
 var output = Path.GetFullPath(args.ElementAtOrDefault(1) ?? Path.Combine(root, "artifacts", "pick-score-v1", "audit.json"));

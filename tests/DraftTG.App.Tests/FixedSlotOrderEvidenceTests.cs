@@ -181,6 +181,12 @@ public sealed partial class MainWindowViewModelTests
             Assert.False(row.GetProperty("LiveValidationMode").GetBoolean()); // Synthetic observer never becomes live proof.
             Assert.Equal(13, row.GetProperty("CandidateVerifications")[0].GetProperty("Slots").GetArrayLength());
             Assert.Equal(13, row.GetProperty("DeterministicSlots").GetArrayLength());
+            Assert.Equal(references.Count, row.GetProperty("ReferenceIdentities").GetArrayLength());
+            Assert.Equal(frame.Width, row.GetProperty("FrameWidth").GetInt32());
+            Assert.True(row.GetProperty("ObserverQueueMilliseconds").GetDouble() >= 0);
+            Assert.True(row.GetProperty("FrameCopyMilliseconds").GetDouble() >= 0);
+            Assert.Equal(candidate.Assignments[0].Rectangle.X,
+                row.GetProperty("CandidateVerifications")[0].GetProperty("Slots")[0].GetProperty("PredictedClientRectangle").GetProperty("X").GetDouble());
             Assert.True(row.GetProperty("FullPackVerified").GetBoolean());
             Assert.False(row.GetProperty("WgcFullyMatched").GetBoolean());
             Assert.Equal(50, row.GetProperty("ClientRectangle").GetProperty("X").GetInt32());

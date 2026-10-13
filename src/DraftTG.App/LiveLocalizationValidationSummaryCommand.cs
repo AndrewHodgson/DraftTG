@@ -10,7 +10,7 @@ namespace DraftTG.App;
 internal static class LiveLocalizationValidationSummaryCommand
 {
     internal const string Source = "DraftTG/9E.2B live deterministic validation";
-    private const string Usage = "Usage: DraftTG.App --live-localization-validation-summary [--ledger <jsonl>] [--build-id <MVID>] [--output <report.md>]";
+    private const string Usage = "Usage: DraftTG.App --live-localization-validation-summary [--ledger <jsonl>] [--build-id <MVID>] [--session-id <runtime session>] [--output <report.md>]";
 
     public static int Run(string[] args)
     {
@@ -18,7 +18,7 @@ internal static class LiveLocalizationValidationSummaryCommand
         {
             var ledger = LiveLocalizationValidation.LedgerPath;
             var buildId = LiveLocalizationValidation.BuildId;
-            string? output = null;
+            string? output = null, sessionId = null;
             for (var i = 1; i < args.Length; i += 2)
             {
                 if (i + 1 >= args.Length) throw new ArgumentException(Usage);
@@ -26,11 +26,12 @@ internal static class LiveLocalizationValidationSummaryCommand
                 {
                     case "--ledger": ledger = args[i + 1]; break;
                     case "--build-id": buildId = args[i + 1]; break;
+                    case "--session-id": sessionId = args[i + 1]; break;
                     case "--output": output = args[i + 1]; break;
                     default: throw new ArgumentException(Usage);
                 }
             }
-            var report = Summarize(new JsonLinesLedgerFile(ledger).ReadLines(), buildId);
+            var report = Summarize(new JsonLinesLedgerFile(ledger).ReadLines(), buildId, sessionId);
             if (output is not null) File.WriteAllText(output, report);
             Console.WriteLine(report);
             return 0;
@@ -124,7 +125,7 @@ internal static class LiveLocalizationValidationSummaryCommand
                 <= 6 * Number(row, "ClientHeight") / ArenaDraftSlotGeometry.ReferenceClientHeight;
     }
 
-    internal static string Summarize(IEnumerable<string> lines, string buildId)
+    internal static string Summarize(IEnumerable<string> lines, string buildId, string? sessionId = null)
     {
         var rows = new List<JsonElement>(); var malformed = 0; var excluded = 0;
         foreach (var line in lines)
@@ -134,7 +135,7 @@ internal static class LiveLocalizationValidationSummaryCommand
                 using var json = JsonDocument.Parse(line);
                 var row = json.RootElement;
                 if (Number(row, "Schema") == 3 && Text(row, "Source") == Source && Flag(row, "LiveValidationMode")
-                    && Text(row, "BuildId") == buildId) rows.Add(row.Clone());
+                    && Text(row, "BuildId") == buildId && (sessionId is null || Text(row, "SessionId") == sessionId)) rows.Add(row.Clone());
                 else excluded++;
             }
             catch (JsonException) { malformed++; }
@@ -143,6 +144,7 @@ internal static class LiveLocalizationValidationSummaryCommand
         var observations = rows.Where(r => Text(r, "Kind") == "PackObservation").ToArray();
         var live = observations.Where(IsLive).ToArray();
         var eligible = live.Where(IsEligible).ToArray();
+        var supported = live.Where(r => Flag(r, "GeometryAvailable")).ToArray();
         // One semantic pack per draft, even across retries, moves, resizes or app restarts.
         // Reobserving a pack at another size adds size coverage but never another pack observation.
         string PackKey(JsonElement r) => $"{Text(r, "DraftScope")}/{Number(r, "Pack")}/{Number(r, "Pick")}";
@@ -171,6 +173,7 @@ internal static class LiveLocalizationValidationSummaryCommand
         report.AppendLine($"\nTotal live observation attempts: {live.Length}; eligible attempts: {eligible.Length}; fully verified promotion-counting distinct packs: {promotionCount}.");
         report.AppendLine($"Accepted pack generation events: {acceptedPacks.Length}; accepted-event card counts (including packs with no recognized frame): "
             + (acceptedPacks.Length == 0 ? "none observed" : string.Join("; ", acceptedPacks.GroupBy(r => Number(Get(r, "Details"), "CardCount")).Select(g => $"{g.Key}: {g.Count()}"))));
+        report.AppendLine($"Supported-geometry live attempts: {supported.Length}; supported attempts with any fully verified fast candidate: {supported.Count(r => Number(r, "VerifiedCandidateOrderCount") > 0)}; supported non-unanimous predictions: {supported.Count(r => Text(r, "OrderStatus") != "Unanimous")}.");
         report.AppendLine($"Fully verified attempts: {verified.Length}; qualifying identified real drafts: {drafts}; qualifying client sizes: {sizes}.");
         report.AppendLine($"Comparator/order mismatches: {orderMismatches}; geometry mismatches: {geometryMismatches}; verifier failures on eligible attempts: {eligible.Count(r => !StrictlyVerified(r))}.");
         report.AppendLine($"False deterministic proposals against complete WGC evidence: {falseProposals}; actual production deterministic placements: 0 (shadow only).");

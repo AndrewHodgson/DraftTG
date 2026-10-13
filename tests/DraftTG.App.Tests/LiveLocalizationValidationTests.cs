@@ -100,6 +100,11 @@ public sealed class LiveLocalizationValidationTests
         rows.Add(fallback.ToJsonString());
         Assert.Contains("**NOT PASSED**", LiveLocalizationValidationSummaryCommand.Summarize(rows, "test-build"));
         Assert.Contains("unclean/missing fallback diagnostics: 1", LiveLocalizationValidationSummaryCommand.Summarize(rows, "test-build"));
+        rows.RemoveAt(rows.Count - 1);
+        rows.Add(JsonSerializer.Serialize(new { Schema = 3, Source = LiveLocalizationValidationSummaryCommand.Source,
+            Kind = "LocalizationFailure", LiveValidationMode = true, BuildId = "test-build", SessionId = "earlier-startup" }));
+        Assert.Contains("**NOT PASSED**", LiveLocalizationValidationSummaryCommand.Summarize(rows, "test-build"));
+        Assert.Contains("**PASS**", LiveLocalizationValidationSummaryCommand.Summarize(rows, "test-build", "test-session"));
         rows.RemoveAt(rows.Count - 1); rows.Add("{torn ledger row");
         Assert.Contains("malformed rows: 1", LiveLocalizationValidationSummaryCommand.Summarize(rows, "test-build"));
         Assert.Contains("**NOT PASSED**", LiveLocalizationValidationSummaryCommand.Summarize(rows, "test-build"));

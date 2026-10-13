@@ -1211,3 +1211,7 @@ Also in this phase:
 
 The authoritative reference is [CONTEXTUAL_PICK_SCORE_V1_SPEC.md](CONTEXTUAL_PICK_SCORE_V1_SPEC.md); see [CONTEXTUAL_PICK_SCORE_PHASE7_REPORT.md](CONTEXTUAL_PICK_SCORE_PHASE7_REPORT.md).
 
+## Phase 9F.1 capture-free memory foundation (debug only)
+
+`DraftTG.ArenaIntegration/Memory/Windows` owns a separate passive Windows x64 Mono reader. An exact executable/player/Mono/managed-assembly fingerprint gates runtime traversal; game and framework field offsets come from initialized Mono metadata. `--arena-memory-draft-once` returns before the Avalonia lifetime starts and prints the current draft view mode and `_allCardViews` ordered GrpIds. A live 14-card Quick Draft read succeeded on the profiled build. This reader is not connected to the production overlay, log provider or scoring. WGC remains production localization authority. See [Phase 9F.1 report](PHASE9F_1_CAPTURE_FREE_ARENA_DRAFT_ADAPTER.md) for provenance, limits and outstanding transition validation.
+

@@ -7,6 +7,8 @@ internal static class Program
     [STAThread]
     public static void Main(string[] args)
     {
+        if (args.Length > 0 && args[0] is "--arena-memory-draft" or "--arena-memory-draft-once")
+        { Environment.ExitCode = ArenaMemoryDraftCommand.Run(args); return; }
         if (args.Length > 0 && args[0] == "--capture-deck-builder")
         { Environment.ExitCode = DeckBuilderCaptureAuditCommand.Run(args); return; }
         if (args.Length > 0 && args[0] == "--localize-image")

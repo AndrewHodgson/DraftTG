@@ -1,0 +1,57 @@
+﻿{
+    "Status":  "Success",
+    "Detail":  "Complete ordered offered list; passive consistency checks passed.",
+    "ProcessId":  46632,
+    "Build":  {
+                  "Architecture":  "x64",
+                  "UnityVersion":  "6000.3.14.14060607",
+                  "ExecutableSha256":  "E22C729EEF75383888CB3D26A8CB4C2372BC6ACDAE7D7D9215C5020BA257FA37",
+                  "UnityPlayerSha256":  "BBDF3E73522223EA45C3A54049B716F9DA3E632994636734C5D53326AA2C36D0",
+                  "MonoSha256":  "69DD7CA153D9BD718ED6176C1E6FF065721A9408964384A421602F7D5527A294",
+                  "Assemblies":  [
+                                     {
+                                         "Name":  "Core",
+                                         "Sha256":  "947441EECC9A9231503AF434AD7970E6AF0BC2C56148D56991BBA5B6C76458E6",
+                                         "Mvid":  "304dcc50-070c-4610-9196-b6124619943f"
+                                     },
+                                     {
+                                         "Name":  "SharedClientCore",
+                                         "Sha256":  "FF02A80282F36C45D6A639C6DC5013EFF16406BCE6EB0EF9985B59E1C3244B33",
+                                         "Mvid":  "5028378c-e315-416c-92ef-a565601d5b8d"
+                                     },
+                                     {
+                                         "Name":  "Assembly-CSharp",
+                                         "Sha256":  "9B155EAAF58561B739AF6AC175E4CF3E59094E901D256B880912306F6ED4BE42",
+                                         "Mvid":  "dfb5e0ff-0b6c-4d9f-aa38-10f3cbf5ce2e"
+                                     },
+                                     {
+                                         "Name":  "mscorlib",
+                                         "Sha256":  "6C76E06E6D44CF0F39BF59E6A90770968B70093AD4C1572DFBC5E46E431C5FBF",
+                                         "Mvid":  "41d29b35-2f6a-475a-b1bf-7c6628b82790"
+                                     }
+                                 ]
+              },
+    "RuntimeProfile":  "unity-mono-x64-69dd7ca1-arena-2026-10-13-v1",
+    "ReadTimestamp":  "2026-10-13T13:10:51.8682489+00:00",
+    "IsDraftSceneActive":  true,
+    "ViewMode":  "list",
+    "OrderedOfferedGrpIds":  [
+                                 106401,
+                                 106292,
+                                 106451,
+                                 106486,
+                                 106498,
+                                 106347,
+                                 106364,
+                                 106240,
+                                 106289,
+                                 106327,
+                                 106369,
+                                 106376,
+                                 106418,
+                                 106423
+                             ],
+    "Identity":  "scene:1B26743F540/holder:1B26743F380/list:1B273F93D50/version:14/count:14",
+    "Duration":  "00:00:00.4190563",
+    "BytesRead":  398007
+}

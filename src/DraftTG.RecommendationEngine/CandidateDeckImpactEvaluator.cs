@@ -4,6 +4,11 @@ using DraftTG.Domain;
 
 namespace DraftTG.RecommendationEngine;
 
+public sealed record ProjectedPairAudit(string Pair, double? Quality, int Spells, int Shortfall,
+    double BlendWeight, double CandidateEligibility, bool CandidateInDeck, double? CutlineMargin,
+    IReadOnlyDictionary<CardIdentifier, int> Main);
+public sealed record CandidateProjectionAudit(CardIdentifier Candidate, IReadOnlyList<ProjectedPairAudit> Pairs);
+
 /// <summary>Per-pack immutable counterfactuals using the unchanged Phase 10 optimizer. No I/O.</summary>
 public sealed class CandidateDeckImpactEvaluator(ContextualPickScoreConfiguration? configuration = null,
     BaselineDeckConfiguration? deckConfiguration = null, bool reuseEquivalentPairProjections = true,
@@ -24,7 +29,8 @@ public sealed class CandidateDeckImpactEvaluator(ContextualPickScoreConfiguratio
 
     /// <param name="environmentBaseline">Phase 8 environment baseline; derived from the inputs when omitted.</param>
     public IReadOnlyList<CandidateDeckImpact> Evaluate(DraftSnapshot snapshot, DeckBuildInput input,
-        ColorCommitmentProfile commitment, CancellationToken token = default, double? environmentBaseline = null)
+        ColorCommitmentProfile commitment, CancellationToken token = default, double? environmentBaseline = null,
+        Action<CandidateProjectionAudit>? diagnostic = null)
     {
         OptimizerCalls = 0;
         var clock = Stopwatch.StartNew();
@@ -123,6 +129,13 @@ public sealed class CandidateDeckImpactEvaluator(ContextualPickScoreConfiguratio
             if (after.Spells < _deck.TargetNonlandCount) reasons.Add("· Incomplete projected shell, not a finished 40-card deck.");
             if (input.Pool.Completeness != DraftPoolCompleteness.Complete) reasons.Add("· Projection uses a partial/unknown inventory.");
             if (commitment.Fit(card.Colors) < -.25 && !makes) reasons.Add("- Outside your established colors.");
+            if (diagnostic is not null)
+            {
+                var auditWeights = PairWeights(afters);
+                diagnostic(new(id, afters.Select((p, i) => new ProjectedPairAudit(p.Pair.Code, p.Quality, p.Spells,
+                    p.Shortfall, auditWeights[i], Eligibility(card, p.Pair), p.Main.ContainsKey(id),
+                    fits.ElementAtOrDefault(i)?.Margin, p.Main)).ToArray()));
+            }
             impacts[id] = new(true, makes, replaced, delta, after.Creatures - (before?.Creatures ?? 0), after.Early - (before?.Early ?? 0),
                 after.High - (before?.High ?? 0), mana, before is not null && before.Pair != after.Pair,
                 before is not null && before.ConstraintSignature != after.ConstraintSignature,

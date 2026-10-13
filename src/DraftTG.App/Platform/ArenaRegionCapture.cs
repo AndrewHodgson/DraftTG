@@ -68,7 +68,7 @@ internal sealed class GdiBitBltFrameCapture : IArenaRegionCapture
     public string Backend => "GDI fallback / BitBlt SRCCOPY";
     public ArenaWindowInspection InspectWindow()
     {
-        var processes = Process.GetProcessesByName("MTGA");
+        var processes = DraftTG.ArenaIntegration.ArenaProcessDiscovery.GetCandidates();
         try
         {
             if (processes.Length == 0) return new(false, null, "MTGA process not found.");

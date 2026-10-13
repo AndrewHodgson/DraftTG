@@ -258,7 +258,11 @@ internal sealed class AutomaticCardLocalizationSession : ICardVisualLocator, IAs
                 ValidationEvent("StaleResultRejected", new { RequestedGeneration = snapshot.Request.PackGeneration, ResultGeneration = result.PackGeneration });
                 return;
             }
-            _presentation.ApplyAutomaticLocalization(context, result);
+            var applied = _presentation.ApplyAutomaticLocalization(context, result);
+            ValidationEvent("ProductionPlacementAdmission", new { PackGeneration = request.PackGeneration,
+                result.CaptureRequestGeneration, Accepted = applied, Matched = result.Matches.Count,
+                Expected = request.Occurrences.Count, Manual = _presentation.HasManualVisualEdits || _presentation.HasConfirmedVisualPlacement,
+                Reason = applied ? "current safe full-matcher result admitted (may be partial)" : "placement context/manual/safety gate declined" });
             if (result.Matches.Count < request.Occurrences.Count && ++_retries < 3)
             { _pending = true; _notBefore = DateTimeOffset.UtcNow.AddSeconds(2); }
         }
@@ -296,7 +300,8 @@ internal sealed class AutomaticCardLocalizationSession : ICardVisualLocator, IAs
     private void ReportFailure(Exception ex)
     {
         ValidationEvent("LocalizationFailure", new { Reason = ex.Message, Exception = ex.GetType().Name,
-            PackGeneration = _packContext?.Request.PackGeneration, CaptureGeneration = _coordinator?.Generation });
+            PackGeneration = _packContext?.Request.PackGeneration, CaptureGeneration = _coordinator?.Generation,
+            Client = _coordinator?.Window, SavedCalibration = _calibration(), CaptureAnchor = _anchor });
         if (_coordinator?.Diagnostics.Error is null) _coordinator?.Fail(_coordinator.Diagnostics.Stage, ex);
         _presentation.InvalidateAutomaticLocalization(ex.Message);
         _presentation.SetLocalizationStatus("Card placement: Manual fallback", ex.Message);
@@ -374,10 +379,16 @@ internal sealed class AutomaticCardLocalizationSession : ICardVisualLocator, IAs
         var anchor = _anchor;
         var revision = _revision;
         _coordinator!.Note("Preparing artwork references after fresh draft crop", frame.Generation);
+        var referenceStartedAt = DateTimeOffset.UtcNow;
         var references = await Task.Run(() => _references.GetAsync(request.Occurrences.Select(c => c.CardIdentifier), token), token);
+        var referenceCompletedAt = DateTimeOffset.UtcNow;
         token.ThrowIfCancellationRequested();
         _coordinator.LocalizationStarted(frame.Generation);
-        var result = await Task.Run(() => new CardTemplateRecognizer().Recognize(request, frame.Image, references, token), token);
+        CardRecognitionAudit? matcherAudit = null;
+        var matcherStartedAt = DateTimeOffset.UtcNow;
+        var result = await Task.Run(() => new CardTemplateRecognizer().Recognize(request, frame.Image, references, token,
+            diagnostic: LiveLocalizationValidation.Enabled ? audit => matcherAudit = audit : null), token);
+        var matcherCompletedAt = DateTimeOffset.UtcNow;
         if (RecognitionFrameObserver is { } observer && window is not null && anchor is not null)
         {
             try
@@ -387,6 +398,8 @@ internal sealed class AutomaticCardLocalizationSession : ICardVisualLocator, IAs
                     CaptureGeneration = frame.Generation, CaptureRequestGeneration = frame.CaptureRequestGeneration,
                     CapturedAt = frame.CapturedAt, FramePackGeneration = frame.PackGeneration, Revision = revision,
                     FrameX = frame.X, FrameY = frame.Y, FrameWindowHandle = frame.WindowHandle,
+                    PixelHash = frame.ImageHash, ReferenceStartedAt = referenceStartedAt, ReferenceCompletedAt = referenceCompletedAt,
+                    MatcherStartedAt = matcherStartedAt, MatcherCompletedAt = matcherCompletedAt, MatcherAudit = matcherAudit,
                     Backend = frame.Backend, CaptureMilliseconds = frame.CaptureDuration.TotalMilliseconds,
                     PresentationMilliseconds = frame.PresentationTime?.TotalMilliseconds,
                     Visual = result with { PackGeneration = request.PackGeneration, CaptureRequestGeneration = frame.CaptureRequestGeneration }
