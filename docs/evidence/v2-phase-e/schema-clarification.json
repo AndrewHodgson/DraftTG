@@ -1,0 +1,7 @@
+{
+ "reason": "Non-performance schema correction before model fitting, baseline metrics or candidate analysis: 689 of 700 existing MKM histories contain three complete 13-pick packs, each opening source pack also has 13 cards. ONE has 14, MOM has 15.",
+ "correction": "Complete source sequences may have 39, 42 or 45 picks: three contiguous equal-length packs of 13, 14 or 15, with opening source pack counts equal to that length. Historical pick 15 remains excluded from production replay/features.",
+ "unchanged": "All pool equality, identity, exact build subset, source join, duplicate, support and evaluation gates; no threshold or match relaxation.",
+ "performanceRead": false,
+ "originalPreregistrationPreserved": true
+}
