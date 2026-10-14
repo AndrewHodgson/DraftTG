@@ -1,0 +1,8 @@
+{
+  "version": "phase-c-confidence-clarification-v1",
+  "beforeAnyTemporalOrDevelopmentMetrics": true,
+  "reason": "CDF forecast pooling selected lambda0, which preserves card-specific distributions but cannot fulfill explicit user requirement for sample-sensitive signal confidence.",
+  "forecastPooling": "Retain position-audit selected lambda0; global seen CDF. No refitting on target metrics.",
+  "signalConfidence": "n_independent_seen_drafts/(n_independent_seen_drafts+lambda_signal); positive lambda_signal20/100/400; fit jointly with preregistered temporal parameters on calibration next-3 availability only.",
+  "scope": "No new families, no extra development tuning, no outcomes/holdouts used. Sample-confidence and forecast-pooling are distinct statistical tasks."
+}
