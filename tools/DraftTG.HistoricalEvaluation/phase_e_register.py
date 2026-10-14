@@ -1,0 +1,56 @@
+"""One-time prospective Phase E registration; no performance reads."""
+import pathlib,json,hashlib,subprocess
+ROOT=pathlib.Path('.'); OUT=ROOT/'docs/evidence/v2-phase-e'
+def sha(p):
+    with open(p,'rb') as f:return hashlib.file_digest(f,'sha256').hexdigest()
+def dump(p,v):p.write_text(json.dumps(v,indent=2,allow_nan=False)+'\n',encoding='utf8')
+OUT.mkdir(parents=True,exist_ok=True)
+if (OUT/'registration.json').exists():raise SystemExit('Already registered')
+plan=dict(version='research-d-phase-e-v1',seed='DraftTG-phase-e-v1',
+ calibration=['DMU','BRO','WOE'],development=['LCI','MKM','OTJ','ONE','MOM'],untouched=['MH3','DFT'],spent=['BLB','DSK'],
+ corpus='Existing canonical Premier decisions and uniquely modal observed builds only; exact set/format/provider/draft joins. No acquisition.',
+ integrity=['Contiguous zero-based global pick sequence, exactly three complete packs of 14 or 15 source picks; historical pick 15 may reconstruct pools but is excluded from production replay/features.',
+ 'Every source PoolBeforePick must equal accumulated earlier actual picks; complete/resolved quantities; picked identity in offered pack.',
+ 'Unique observed build; >=3 games; Configurations==1 (modal support otherwise unavailable); 40 positive integer copies; 12-20 lands.',
+ 'All nonbasic observed copies must be contained in completed drafted pool. Generated ordinary basics alone are explicitly exempt; no repairs.',
+ 'Same source set/format namespaces, no approximate joins. Wins and completed builds are labels only.'],
+ splits='Existing evidence_group SHA partition; evidence calibration drafts split hash 80% training/20% validation. All development target drafts remain evaluation only. Whole drafts grouped.',
+ labels='For m build copies of n drafted copies use exchangeable fractional label m/n per picked occurrence; never invent copy assignment. Report identity presence and copy counts; identifiable marginal occurrence labels unavailable.',
+ candidates={
+ 'E-A':'Frozen optimizer-derived heuristic: bounded blend of playability, membership, curve/creature/role deficits and measured replacement delta; no learned inclusion model.',
+ 'E-B':'Ridge logistic generic inclusion probability; no set/card IDs; transform centered residual relative to Q+playability+stage baseline into bounded D.',
+ 'E-C':'Ridge logistic incremental hybrid of generic probability and optimizer marginal/structural features; no independent summing of correlated votes.'},
+ features='NO-Q structural, Q-CONTEXT candidate-minus-cutline, FULL raw frozen Q plus structure. Role missingness explicit. Generic mana/type/pips/color compatibility, pool/curve counts, legal before/after deltas. No outcome/build/future features.',
+ fitting=dict(ridge=[1,10,100],selection='Calibration-validation set-macro fractional log loss; ties prefer fewer features, then stronger ridge.',
+ probabilityCalibration='Validation-only intercept/slope logistic recalibration, regularized toward identity; evaluate untouched development target drafts once.',
+ ablations=['no roles','basic roles','all known roles','no curve','broad early/mid/top','detailed curve','no mana'],
+ builder='A actual production BaselineDeckBuilder; B structural pair optimizer 15-19 lands, creature/curve/mana/role objective; C B plus generic calibrated inclusion. B tuning only calibration validation; C coefficients frozen before development.'),
+ matching=dict(task='Within same completed pool, nonbasic nonland copy-eligible included identity versus wholly excluded identity; one nearest eligible excluded identity per included identity, unique unordered pair.',
+ color='Same compatibility with pool-only two leading spell colors; no observed color feature.',qCaliper=.10,manaCaliper=2,creature='same creature/noncreature',
+ distance='abs(Qdiff)/.10 + abs(MVdiff)/2 + abs(copy-count difference)/3; canonical-ID/hash tie break; no candidate scores.',
+ coverage='>=500 distinct pairs and >=100 distinct drafts per development set; if unavailable report FAIL, never relax. All pairs used; macro-average sets, draft-cluster uncertainty descriptive.',
+ stage='Final-pool task is explicitly hindsight reconstruction. Separate picked-card probabilities stratified by source pack; completed pool never pick-time.'),
+ primary=dict(pair='Set-macro tie-aware accuracy >=2 percentage points above both production D and Q+color control, positive in >=4/5 sets, no set loss >2pp.',
+ reconstruction='Mean nonland copy F1 >=1pp over both current and strongest simple baseline; positive >=4/5 sets; 40-card/subset integrity all; main-color agreement loss <=2pp and land MAE increase <=.25.',
+ inclusion='Macro fractional log loss >=2% relative and Brier >=1% relative improvement over Q+color+stage; both improve >=4/5 sets; ECE no >1pp regression.',
+ coverage='>=100 qualified target drafts and >=1000 legal picked occurrences per development set; pair coverage above; no fabricated completeness.'),
+ secondary='Human Top1/Top3/MRR/normalized rank, conditioned actual picked inclusion, observed record strata, roles and timing are secondary, not selection targets.',
+ contextual='Actual frozen v1.6.2 replay >=50000 complete comparable decisions. D-only recomposition with exact Q/L/A/R/weights/projections. Missing features decline substitution. No Top1 or MRR loss >.005 absolute macro; production baseline equality checked.',
+ cold='No new-set training or set/card ID features; pooled calibration-only model tested on all five development sets; calibration leave-one-set-out Brier/logloss versus generic baseline must not worsen macro. No adaptation in primary.',
+ probes='After selection freeze results for fifth-five-drop, early hole, shortage/saturation creatures, known removal, fixing need/no need, off-color bomb, modest/huge cutline upgrade, narrow sideboard metadata decline, smooth transitions. No retuning to probes/goldens.',
+ holdout='Only if every frozen primary/per-set/coverage/cold/contextual/probe/golden gate passes; otherwise no read/acquisition/release lock. Single exclusive MH3/DFT release with no tuning if qualified.',
+ production='All production v1.6.2 source, tiers, Phase9F and prior research unchanged. No integration/Phase F.')
+dump(OUT/'preregistration.json',plan)
+paths=set()
+for root in ('src','tests','docs/evidence'):
+ for p in pathlib.Path(root).rglob('*'):
+  if p.is_file() and 'v2-phase-e' not in str(p) and not any(x in p.parts for x in ('bin','obj','.git')):paths.add(p)
+for p in pathlib.Path('tools/DraftTG.HistoricalEvaluation').glob('*.py'):
+ if not p.name.startswith('phase_e'):paths.add(p)
+paths.update(pathlib.Path('tools/DraftTG.QualityEvidenceResearch').glob('*.cs'))
+paths.update(pathlib.Path('.').glob('V2_PHASE_*'))
+for dirname in ('phase-d-v1','phase-d1'):
+ for p in pathlib.Path('data/historical/normalized',dirname).rglob('*.json'):paths.add(p)
+dump(OUT/'preservation.json',dict(files={p.as_posix():sha(p) for p in sorted(paths)}))
+dump(OUT/'registration.json',dict(planSha256=sha(OUT/'preregistration.json'),preservationSha256=sha(OUT/'preservation.json'),splitSha256=sha('V2_PHASE_B1_SPLIT_MANIFEST.json'),baseCommit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),performanceNotRead=True))
+print('Prospective registration written; commit these three files before analysis.')
