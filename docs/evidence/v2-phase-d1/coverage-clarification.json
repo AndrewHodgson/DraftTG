@@ -1,0 +1,9 @@
+{
+  "timing": "Prospective before residual candidate fitting/testing; baseline-only qualification exposed sparse stronger matches",
+  "primaryUnchanged": "Exact stronger matching, four distractors and >=300 tasks per development set remain unchanged. Missing-set MRR is unavailable, never imputed or used to pass the gate.",
+  "baselineAggregate": "Freeze strongest control using macro MRR over available target development sets, explicitly mark incomplete coverage. The complete five-set primary gate is unavailable/FAIL under any missing or undercovered set.",
+  "utilityAndConfidence": "Missing utility tasks yields weight0. Any calibration set without task support cannot justify a nonzero cold alpha; safe alpha0. Empty confidence buckets cannot prove calibration.",
+  "secondaryOnly": "Reevaluate the existing frozen Phase D matched target tasks as nongating diagnostics with all new frozen controls/candidates. They never select hyperparameters or qualify integration. No relaxation of D1 primary matching.",
+  "fitting": "Method/rank/pool choice uses preregistered calibration-only masked-card log loss on disjoint audit structures. No target/OTJ performance chooses parameters.",
+  "execution": "If a null-metric aggregation fails, recover only baseline aggregates from saved tasks/generic coefficients. Do not refit coefficients or regenerate matches to improve coverage."
+}
