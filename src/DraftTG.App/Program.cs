@@ -8,6 +8,8 @@ internal static class Program
     [STAThread]
     public static void Main(string[] args)
     {
+        if (args.Length > 0 && args[0] == "--arena-ui-localization-debug")
+        { Environment.ExitCode = ArenaUiLocalizationDebugCommand.Run(args); return; }
         if (args.Length > 0 && args[0] == "--arena-memory-draft-watch")
         { Environment.ExitCode = ArenaMemoryWatchCommand.Run(args); return; }
         if (args.Length > 0 && args[0] == "--capture-free-draft-summary")

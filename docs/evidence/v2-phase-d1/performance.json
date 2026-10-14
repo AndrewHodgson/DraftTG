@@ -1,0 +1,19 @@
+{
+  "picks": 500,
+  "candidates": 3770,
+  "inferenceMeanMs": 3.6750570037402213,
+  "inferenceP95Ms": 4.247340082656592,
+  "candidateAmortizedMs": 0.06144050383984805,
+  "perSetModelBytes": {
+    "DMU": 1098420,
+    "BRO": 1340532,
+    "WOE": 1253051,
+    "LCI": 1149727,
+    "MKM": 1034335,
+    "OTJ": 1345437,
+    "ONE": 1044376,
+    "MOM": 1167813
+  },
+  "totalModelBytes": 9433691,
+  "noRawRowsInArtifacts": true
+}

@@ -1,0 +1,779 @@
+{
+  "results": [
+    {
+      "set": "DMU",
+      "utility": {
+        "B": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "BG": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "BR": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "R": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "RG": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "U": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "UB": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "UG": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "UR": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "W": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "WB": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "WG": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "WR": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "WU": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        }
+      },
+      "unmatchedAuditLogLoss": 0.13736075446977453
+    },
+    {
+      "set": "BRO",
+      "utility": {
+        "B": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "BG": {
+          "n": 2,
+          "mean": 0.5433333333333333,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "BR": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "G": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "R": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "RG": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "U": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "UB": {
+          "n": 1,
+          "mean": -0.25666666666666665,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "UG": {
+          "n": 2,
+          "mean": 0.29333333333333333,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "UR": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "W": {
+          "n": 2,
+          "mean": 0.14333333333333334,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "WB": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "WG": {
+          "n": 1,
+          "mean": -0.25666666666666665,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "WR": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "WU": {
+          "n": 2,
+          "mean": 0.16833333333333333,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        }
+      },
+      "unmatchedAuditLogLoss": 0.10797082260288628
+    },
+    {
+      "set": "WOE",
+      "utility": {
+        "B": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "BG": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "BR": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "G": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "R": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "RG": {
+          "n": 1,
+          "mean": -0.25666666666666665,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "UB": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "UG": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "UR": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "W": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "WB": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "WG": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "WR": {
+          "n": 2,
+          "mean": -0.20666666666666667,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "WU": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        }
+      },
+      "unmatchedAuditLogLoss": 0.11528412290282948
+    },
+    {
+      "set": "LCI",
+      "utility": {
+        "B": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "BG": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "BR": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "G": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "RG": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "U": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "UB": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "UG": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "UR": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "W": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "WB": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "WG": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "WR": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "WU": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        }
+      },
+      "unmatchedAuditLogLoss": 0.12279197506306823
+    },
+    {
+      "set": "MKM",
+      "utility": {
+        "BG": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "BR": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "RG": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "UB": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "UG": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "UR": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "WB": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "WG": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "WR": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "WU": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        }
+      },
+      "unmatchedAuditLogLoss": 0.11421262973269833
+    },
+    {
+      "set": "OTJ",
+      "utility": {
+        "BG": {
+          "n": 10,
+          "mean": 0.06916666666666664,
+          "se": 0.10347884020595886,
+          "lower": -0.017755559106338803,
+          "weight": 0.0
+        },
+        "BR": {
+          "n": 3,
+          "mean": 0.3169444444444444,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "G": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "RG": {
+          "n": 4,
+          "mean": -0.19833333333333333,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "U": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "UB": {
+          "n": 2,
+          "mean": -0.19,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "UG": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "UR": {
+          "n": 7,
+          "mean": -0.05607142857142857,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "WB": {
+          "n": 5,
+          "mean": 0.5433333333333333,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "WG": {
+          "n": 2,
+          "mean": 0.21,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "WR": {
+          "n": 1,
+          "mean": -0.20666666666666667,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "WU": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        }
+      },
+      "unmatchedAuditLogLoss": 0.1057353462259738
+    },
+    {
+      "set": "ONE",
+      "utility": {
+        "B": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "BG": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "BR": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "R": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "RG": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "UB": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "UG": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "UR": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "W": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "WB": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "WG": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "WR": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "WU": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        }
+      },
+      "unmatchedAuditLogLoss": 0.1256099782790356
+    },
+    {
+      "set": "MOM",
+      "utility": {
+        "BG": {
+          "n": 4,
+          "mean": -0.11291666666666669,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "BR": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "RG": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "UB": {
+          "n": 1,
+          "mean": 0.043333333333333335,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "UG": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "UR": {
+          "n": 1,
+          "mean": 0.5433333333333333,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "WB": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "WG": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "WR": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        },
+        "WU": {
+          "n": 0,
+          "mean": null,
+          "se": null,
+          "lower": null,
+          "weight": 0.0
+        }
+      },
+      "unmatchedAuditLogLoss": 0.1079683498262386
+    }
+  ],
+  "formula": "clip((pairedMeanMRR-.84*SE)/.02,0,1), n>=10 else0",
+  "auditDisjoint": true,
+  "targetNotUsed": true,
+  "modelHashes": {
+    "DMU": "fe5ff30be637593bacd8a680b1b06ed4096385fc7826190f7127183e2778323c",
+    "BRO": "14e320b3658a5d77e4d28dcc4cb7ff16d184d569ce1ec88c8fdfc999d0e35204",
+    "WOE": "ac715e3deebe87b42902cdcd9a6023e2b5256491a0c66cae6d0d66d46bad4686",
+    "LCI": "5d51b24efac19b946d22e9db443b0bd9e649e33eb79ed613fb54e6f21ecac725",
+    "MKM": "63b02e10ebb98cf5915a5102ab8cb65e450cc17236a65caa3531c43297b26825",
+    "OTJ": "3d52bd240bd49ef2ac3a298532b3bf3e33d930c495a737a5703ee33ffd0f00e6",
+    "ONE": "63643376bae2b76648839a178ff4a7e446a95db6eb058165b841af9c36c9b309",
+    "MOM": "3aace494030d25612d33921f5c46b3a57bf471a4f3fd8763cf09d9c5f07a696a"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "reason": "Null MRR aggregation on zero-task MKM",
+  "noRefit": true,
+  "noTaskRegeneration": true,
+  "genericFitSha256": "ae5bf07cd8a29d43c9fb7b61baa729590b8262ed8f4c6f8105093a0ac86af43b",
+  "missingMetricsRemainUnavailable": true
+}

@@ -1,0 +1,199 @@
+{
+  "sets": [
+    {
+      "set": "DMU",
+      "n": 2126,
+      "mean": {
+        "lands": 16.846660395108184,
+        "creatures": 14.206020696142991,
+        "noncreatures": 8.947318908748825,
+        "earlyPlays": 10.818908748824082,
+        "unknownMana": 0.0,
+        "assignedRemovalLowerBound": 2.1589840075258704,
+        "untaggedRemovalUnknown": 20.439322671683914,
+        "assignedFixingLowerBound": 3.601128880526811
+      },
+      "meanCurve": {
+        "0": 0.0,
+        "1": 2.779397930385701,
+        "2": 8.039510818438382,
+        "3": 5.841486359360301,
+        "4": 3.4190968955785515,
+        "5": 1.5879586077140169,
+        "6": 1.4858889934148636
+      },
+      "splashBuilds": 1324
+    },
+    {
+      "set": "BRO",
+      "n": 2088,
+      "mean": {
+        "lands": 16.450191570881227,
+        "creatures": 14.32567049808429,
+        "noncreatures": 9.224137931034482,
+        "earlyPlays": 10.99712643678161,
+        "unknownMana": 0.0,
+        "assignedRemovalLowerBound": 2.2612547892720305,
+        "untaggedRemovalUnknown": 20.81992337164751,
+        "assignedFixingLowerBound": 0.09913793103448276
+      },
+      "meanCurve": {
+        "0": 0.09913793103448276,
+        "1": 3.078065134099617,
+        "2": 7.819923371647509,
+        "3": 5.652298850574713,
+        "4": 2.8726053639846745,
+        "5": 2.128352490421456,
+        "6": 1.8994252873563218
+      },
+      "splashBuilds": 488
+    },
+    {
+      "set": "WOE",
+      "n": 2234,
+      "mean": {
+        "lands": 16.62399283795882,
+        "creatures": 13.82408236347359,
+        "noncreatures": 9.551924798567592,
+        "earlyPlays": 10.721575649059982,
+        "unknownMana": 0.0,
+        "assignedRemovalLowerBound": 2.653983885407341,
+        "untaggedRemovalUnknown": 19.886750223813788,
+        "assignedFixingLowerBound": 0.5622202327663384
+      },
+      "meanCurve": {
+        "0": 0.0,
+        "1": 3.551477170993733,
+        "2": 7.170098478066249,
+        "3": 6.402864816472695,
+        "4": 3.478961504028648,
+        "5": 1.8384064458370635,
+        "6": 0.9341987466427932
+      },
+      "splashBuilds": 834
+    },
+    {
+      "set": "LCI",
+      "n": 2165,
+      "mean": {
+        "lands": 16.60877598152425,
+        "creatures": 14.32055427251732,
+        "noncreatures": 9.07066974595843,
+        "earlyPlays": 11.907621247113164,
+        "unknownMana": 0.0,
+        "assignedRemovalLowerBound": 1.7722863741339492,
+        "untaggedRemovalUnknown": 21.02448036951501,
+        "assignedFixingLowerBound": 0.418013856812933
+      },
+      "meanCurve": {
+        "0": 0.0,
+        "1": 3.6060046189376442,
+        "2": 8.30161662817552,
+        "3": 5.5889145496535795,
+        "4": 3.0554272517321017,
+        "5": 1.3353348729792147,
+        "6": 1.5039260969976904
+      },
+      "splashBuilds": 533
+    },
+    {
+      "set": "MKM",
+      "n": 2288,
+      "mean": {
+        "lands": 16.916958041958043,
+        "creatures": 14.660839160839162,
+        "noncreatures": 8.422202797202797,
+        "earlyPlays": 10.696678321678322,
+        "unknownMana": 0.0,
+        "assignedRemovalLowerBound": 2.3975087412587412,
+        "untaggedRemovalUnknown": 20.052447552447553,
+        "assignedFixingLowerBound": 0.6866258741258742
+      },
+      "meanCurve": {
+        "0": 0.0017482517482517483,
+        "1": 2.726835664335664,
+        "2": 7.968094405594406,
+        "3": 4.104458041958042,
+        "4": 4.391608391608392,
+        "5": 2.1770104895104896,
+        "6": 1.7132867132867133
+      },
+      "splashBuilds": 1943
+    },
+    {
+      "set": "OTJ",
+      "n": 2313,
+      "mean": {
+        "lands": 16.912235192390835,
+        "creatures": 14.086035451794206,
+        "noncreatures": 9.001729355814959,
+        "earlyPlays": 10.520968439256377,
+        "unknownMana": 0.0,
+        "assignedRemovalLowerBound": 2.8067444876783396,
+        "untaggedRemovalUnknown": 19.189364461738002,
+        "assignedFixingLowerBound": 2.389969736273238
+      },
+      "meanCurve": {
+        "0": 0.0,
+        "1": 2.675313445741461,
+        "2": 7.845654993514915,
+        "3": 6.204928664072633,
+        "4": 3.167315175097276,
+        "5": 1.95157803718115,
+        "6": 1.2429744920017294
+      },
+      "splashBuilds": 1452
+    },
+    {
+      "set": "ONE",
+      "n": 2205,
+      "mean": {
+        "lands": 16.612698412698414,
+        "creatures": 13.686621315192744,
+        "noncreatures": 9.700680272108844,
+        "earlyPlays": 12.07891156462585,
+        "unknownMana": 0.0,
+        "assignedRemovalLowerBound": 2.0308390022675735,
+        "untaggedRemovalUnknown": 20.89251700680272,
+        "assignedFixingLowerBound": 0.14512471655328799
+      },
+      "meanCurve": {
+        "0": 0.0,
+        "1": 4.126077097505669,
+        "2": 7.952834467120182,
+        "3": 5.592743764172336,
+        "4": 3.109297052154195,
+        "5": 1.9755102040816326,
+        "6": 0.6308390022675737
+      },
+      "splashBuilds": 431
+    },
+    {
+      "set": "MOM",
+      "n": 2287,
+      "mean": {
+        "lands": 16.774376912986444,
+        "creatures": 13.467424573677306,
+        "noncreatures": 9.758198513336248,
+        "earlyPlays": 9.25273283777875,
+        "unknownMana": 0.0,
+        "assignedRemovalLowerBound": 1.939440314822912,
+        "untaggedRemovalUnknown": 20.819851333624836,
+        "assignedFixingLowerBound": 1.0782684739833843
+      },
+      "meanCurve": {
+        "0": 0.0,
+        "1": 1.674682990817665,
+        "2": 7.578049846961084,
+        "3": 6.271534761696546,
+        "4": 3.7533887188456494,
+        "5": 1.9580236117184084,
+        "6": 1.989943156974202
+      },
+      "splashBuilds": 2015
+    }
+  ],
+  "roleMissingIsUnknown": true,
+  "removalFixingAreAssignedLowerBounds": true,
+  "featuresUsedForDescriptionsOnly": true
+}

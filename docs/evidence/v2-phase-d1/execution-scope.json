@@ -1,0 +1,13 @@
+{
+  "version": "research-a-phase-d1-v1",
+  "rawHelperVersion": "research-a-phase-d-v1",
+  "runner": "Unmodified DraftTG.QualityEvidenceResearch and ExperimentalAffinitySubstitution from Phase D",
+  "families": {
+    "A": "D1-A",
+    "B": "D1-B",
+    "C": "D1-C"
+  },
+  "sourceSha256": "aba846d740b3f3d46c3951db87b1f2e7094fa8fad74d18e2a0803cb3329e0dd4",
+  "predictionSpecSha256": "0b7a384f06872eafa9bf7615f6749d5e371ef8e036265a1374f292fe79594263",
+  "sourceAndProductionUnchanged": true
+}

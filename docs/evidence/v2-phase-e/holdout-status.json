@@ -1,0 +1,8 @@
+{
+  "MH3": "untouched",
+  "DFT": "untouched",
+  "consumed": false,
+  "releaseLockCreated": false,
+  "results": null,
+  "reason": "No release unless all frozen gates pass. Production unchanged."
+}

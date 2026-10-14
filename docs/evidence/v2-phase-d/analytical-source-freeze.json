@@ -1,0 +1,11 @@
+{
+  "files": {
+    "tools\\DraftTG.HistoricalEvaluation\\phase_d_core.py": "0150d3c337769cf18e2a1fbda1afdc84a79f276d8ad1d8feb1bad07288a769be",
+    "tools\\DraftTG.HistoricalEvaluation\\phase_d_models.py": "b418e9d2f6c1d6a8d7fabec0b6c4eb101ea79dfb735b0b4e0d73d52d79c38246",
+    "tools\\DraftTG.HistoricalEvaluation\\phase_d_research.py": "56f5df14ed2ebe7b87501567e8c76a09781c4c1521e570f3b9823a9efafc3518"
+  },
+  "selectionSha256": "86400eee0d5449e88634995c101a5bc530a59e54771ab0a4268558bf5c1393f4",
+  "numpy": "2.3.4",
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "parametersNotChangedAfterSelection": true
+}

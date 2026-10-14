@@ -1,0 +1,1497 @@
+{
+  "exact": false,
+  "distinctIdentities": 148,
+  "offeredOccurrences": 15517,
+  "maxDifference": 0.3975554995557067,
+  "bySet": {
+    "LCI": 3576,
+    "MKM": 15,
+    "MOM": 5592,
+    "WOE": 6334
+  },
+  "affected": [
+    {
+      "set": "WOE",
+      "id": "4dbaa855-3f8e-42e6-8ec8-5ffbc5c8acf0",
+      "name": "Imodane's Recruiter // Train Troops",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.8975554995557067,
+      "actualProductionQ": 0.8975554995557067,
+      "delta": -0.3975554995557067,
+      "offeredOccurrences": 65
+    },
+    {
+      "set": "LCI",
+      "id": "d70f48e7-582c-4dd2-a64e-6fd03fa6b77e",
+      "name": "Unstable Glyphbridge // Sandswirl Wanderglyph",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.8953950094299807,
+      "actualProductionQ": 0.8953950094299807,
+      "delta": -0.39539500942998074,
+      "offeredOccurrences": 8
+    },
+    {
+      "set": "MOM",
+      "id": "981f091a-17f8-412e-9752-69070ebed4ea",
+      "name": "Invasion of Amonkhet // Lazotep Convert",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.824110371017617,
+      "actualProductionQ": 0.824110371017617,
+      "delta": -0.32411037101761697,
+      "offeredOccurrences": 69
+    },
+    {
+      "set": "LCI",
+      "id": "81b8b9c9-725d-476d-a3cf-55e3dc3e433d",
+      "name": "Grasping Shadows // Shadows' Lair",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.22663947092062015,
+      "actualProductionQ": 0.22663947092062015,
+      "delta": 0.27336052907937985,
+      "offeredOccurrences": 145
+    },
+    {
+      "set": "LCI",
+      "id": "78b1b412-228a-4e05-a4b3-8159ebf54dc6",
+      "name": "Kaslem's Stonetree // Kaslem's Strider",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.22762933354488296,
+      "actualProductionQ": 0.22762933354488296,
+      "delta": 0.27237066645511704,
+      "offeredOccurrences": 474
+    },
+    {
+      "set": "MOM",
+      "id": "3140320d-b932-441f-bff3-9bdf4419b88a",
+      "name": "Invasion of Kamigawa // Rooftop Saboteurs",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.22906927334751204,
+      "actualProductionQ": 0.22906927334751204,
+      "delta": 0.27093072665248796,
+      "offeredOccurrences": 137
+    },
+    {
+      "set": "WOE",
+      "id": "9869ac70-5907-45fa-952c-31aef70c5066",
+      "name": "Mosswood Dreadknight // Dread Whispers",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.7602547760988311,
+      "actualProductionQ": 0.7602547760988311,
+      "delta": -0.2602547760988311,
+      "offeredOccurrences": 16
+    },
+    {
+      "set": "WOE",
+      "id": "0001e77a-7fff-49d2-a55c-42f6fdf6db08",
+      "name": "Obyra's Attendants // Desperate Parry",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.24081335919825142,
+      "actualProductionQ": 0.24081335919825142,
+      "delta": 0.2591866408017486,
+      "offeredOccurrences": 360
+    },
+    {
+      "set": "WOE",
+      "id": "e77a8fd4-af5f-42b3-a87e-788baf2562dd",
+      "name": "Gingerbread Hunter // Puny Snack",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.7496137257327988,
+      "actualProductionQ": 0.7496137257327988,
+      "delta": -0.24961372573279883,
+      "offeredOccurrences": 65
+    },
+    {
+      "set": "WOE",
+      "id": "f1e5cafb-b0e6-4ee5-8c58-6f8e5ef2b9da",
+      "name": "Virtue of Persistence // Locthwain Scorn",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.7485062331508316,
+      "actualProductionQ": 0.7485062331508316,
+      "delta": -0.24850623315083165,
+      "offeredOccurrences": 8
+    },
+    {
+      "set": "LCI",
+      "id": "0cbc43a3-8cba-4988-9de1-c89aedd79ada",
+      "name": "Ojer Kaslem, Deepest Growth // Temple of Cultivation",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.730962717771669,
+      "actualProductionQ": 0.730962717771669,
+      "delta": -0.230962717771669,
+      "offeredOccurrences": 3
+    },
+    {
+      "set": "MOM",
+      "id": "93f623da-616e-4067-9ea8-5dfbeef8ce0b",
+      "name": "Invasion of Lorwyn // Winnowing Forces",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.27881108854485953,
+      "actualProductionQ": 0.27881108854485953,
+      "delta": 0.22118891145514047,
+      "offeredOccurrences": 110
+    },
+    {
+      "set": "MOM",
+      "id": "f7cedd62-efc8-464d-8387-220bb55e07e9",
+      "name": "Invasion of Kaldheim // Pyre of the World Tree",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.284881044165577,
+      "actualProductionQ": 0.284881044165577,
+      "delta": 0.21511895583442298,
+      "offeredOccurrences": 11
+    },
+    {
+      "set": "LCI",
+      "id": "627c392c-4d18-4eb2-a4e8-c668f61f5487",
+      "name": "Aclazotz, Deepest Betrayal // Temple of the Dead",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.7083337237767282,
+      "actualProductionQ": 0.7083337237767282,
+      "delta": -0.2083337237767282,
+      "offeredOccurrences": 3
+    },
+    {
+      "set": "MOM",
+      "id": "0ee40c4b-2ca3-4cda-bc9e-451455c17adc",
+      "name": "Pyretic Prankster // Glistening Goremonger",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.2920307139266924,
+      "actualProductionQ": 0.2920307139266924,
+      "delta": 0.2079692860733076,
+      "offeredOccurrences": 346
+    },
+    {
+      "set": "MOM",
+      "id": "103295ed-5ddc-4528-8848-4fd2cfec4b88",
+      "name": "Order of the Mirror // Order of the Alabaster Host",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.2979514546676619,
+      "actualProductionQ": 0.2979514546676619,
+      "delta": 0.20204854533233813,
+      "offeredOccurrences": 322
+    },
+    {
+      "set": "LCI",
+      "id": "8aece300-656b-4e0d-a45f-aa7feaff0a4e",
+      "name": "Clay-Fired Bricks // Cosmium Kiln",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.7018179496420379,
+      "actualProductionQ": 0.7018179496420379,
+      "delta": -0.20181794964203792,
+      "offeredOccurrences": 85
+    },
+    {
+      "set": "MOM",
+      "id": "cd1c8e1a-bd38-47a2-a55a-682ebaede960",
+      "name": "Skyclave Aerialist // Skyclave Invader",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.6975623005340765,
+      "actualProductionQ": 0.6975623005340765,
+      "delta": -0.19756230053407653,
+      "offeredOccurrences": 91
+    },
+    {
+      "set": "WOE",
+      "id": "96a05063-0556-42e4-8d4c-8e92be160ef5",
+      "name": "Horned Loch-Whale // Lagoon Breach",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.6927100276006337,
+      "actualProductionQ": 0.6927100276006337,
+      "delta": -0.19271002760063372,
+      "offeredOccurrences": 12
+    },
+    {
+      "set": "MOM",
+      "id": "a7113c93-6c6d-410f-aeec-abc5ee121cdf",
+      "name": "Heliod, the Radiant Dawn // Heliod, the Warped Eclipse",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.30816435691593,
+      "actualProductionQ": 0.30816435691593,
+      "delta": 0.19183564308406997,
+      "offeredOccurrences": 13
+    },
+    {
+      "set": "WOE",
+      "id": "26ece013-f3ef-4c12-9dea-b2789f61f8a0",
+      "name": "Bellowing Bruiser // Beat a Path",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.3235306960892542,
+      "actualProductionQ": 0.3235306960892542,
+      "delta": 0.17646930391074578,
+      "offeredOccurrences": 374
+    },
+    {
+      "set": "MOM",
+      "id": "1b83af86-e1a9-4be1-83dc-0c1ab81b129e",
+      "name": "Invasion of New Phyrexia // Teferi Akosa of Zhalfir",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.6747194754931742,
+      "actualProductionQ": 0.6747194754931742,
+      "delta": -0.17471947549317424,
+      "offeredOccurrences": 2
+    },
+    {
+      "set": "LCI",
+      "id": "57df2563-18d4-4526-a8bc-0c114e6fd4d9",
+      "name": "Huatli, Poet of Unity // Roar of the Fifth People",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.6739956293260514,
+      "actualProductionQ": 0.6739956293260514,
+      "delta": -0.1739956293260514,
+      "offeredOccurrences": 2
+    },
+    {
+      "set": "WOE",
+      "id": "19f20c0a-22be-4a9c-96ce-4047f7a2d424",
+      "name": "Beanstalk Wurm // Plant Beans",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.32777223628760827,
+      "actualProductionQ": 0.32777223628760827,
+      "delta": 0.17222776371239173,
+      "offeredOccurrences": 329
+    },
+    {
+      "set": "MOM",
+      "id": "95c14c4d-6c16-4826-8d93-d89ad04aee09",
+      "name": "Etali, Primal Conqueror // Etali, Primal Sickness",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.6713248947964479,
+      "actualProductionQ": 0.6713248947964479,
+      "delta": -0.17132489479644786,
+      "offeredOccurrences": 19
+    },
+    {
+      "set": "WOE",
+      "id": "5cb01d4d-91c2-41c6-981e-b4135a1e1e36",
+      "name": "Gumdrop Poisoner // Tempt with Treats",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.6689012702881243,
+      "actualProductionQ": 0.6689012702881243,
+      "delta": -0.1689012702881243,
+      "offeredOccurrences": 14
+    },
+    {
+      "set": "WOE",
+      "id": "dd6ed252-c262-4062-97ba-75c50d6b5579",
+      "name": "Threadbind Clique // Rip the Seams",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.6671974027469671,
+      "actualProductionQ": 0.6671974027469671,
+      "delta": -0.16719740274696715,
+      "offeredOccurrences": 69
+    },
+    {
+      "set": "WOE",
+      "id": "11507fa1-ef9e-41c9-b987-be57a03bd0df",
+      "name": "Vantress Transmuter // Croaking Curse",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.33630048693019554,
+      "actualProductionQ": 0.33630048693019554,
+      "delta": 0.16369951306980446,
+      "offeredOccurrences": 371
+    },
+    {
+      "set": "MOM",
+      "id": "a7ac3a39-b6a6-4647-bb6e-e82057704f8b",
+      "name": "Invasion of Kylem // Valor's Reach Tag Team",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.33649832425254067,
+      "actualProductionQ": 0.33649832425254067,
+      "delta": 0.16350167574745933,
+      "offeredOccurrences": 182
+    },
+    {
+      "set": "MOM",
+      "id": "318c363b-61cc-4e2f-8f86-a4287539ea07",
+      "name": "Invasion of Alara // Awaken the Maelstrom",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.34494704623975564,
+      "actualProductionQ": 0.34494704623975564,
+      "delta": 0.15505295376024436,
+      "offeredOccurrences": 38
+    },
+    {
+      "set": "MOM",
+      "id": "fa20fc16-e106-4953-ace4-5ac9c7fec97b",
+      "name": "Invasion of Ixalan // Belligerent Regisaur",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.654803060284582,
+      "actualProductionQ": 0.654803060284582,
+      "delta": -0.15480306028458202,
+      "offeredOccurrences": 12
+    },
+    {
+      "set": "MOM",
+      "id": "b3e0fc49-f765-4bd1-a2b9-23e703388b50",
+      "name": "Invasion of Ergamon // Truga Cliffcharger",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.3519602450258774,
+      "actualProductionQ": 0.3519602450258774,
+      "delta": 0.14803975497412258,
+      "offeredOccurrences": 132
+    },
+    {
+      "set": "MOM",
+      "id": "70668650-0fb1-4486-a4e6-ab9a12be5626",
+      "name": "Captive Weird // Compleated Conjurer",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.6445430282486879,
+      "actualProductionQ": 0.6445430282486879,
+      "delta": -0.14454302824868792,
+      "offeredOccurrences": 101
+    },
+    {
+      "set": "LCI",
+      "id": "e0b6d40a-fded-4625-b03c-765c88d75766",
+      "name": "Sunbird Standard // Sunbird Effigy",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.35876498702905624,
+      "actualProductionQ": 0.35876498702905624,
+      "delta": 0.14123501297094376,
+      "offeredOccurrences": 193
+    },
+    {
+      "set": "LCI",
+      "id": "a924fe1e-a85e-4e14-88d2-ac55130638ab",
+      "name": "Treasure Map // Treasure Cove",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.36301563748172794,
+      "actualProductionQ": 0.36301563748172794,
+      "delta": 0.13698436251827206,
+      "offeredOccurrences": 8
+    },
+    {
+      "set": "MOM",
+      "id": "47f7d313-8333-41fe-8bfa-c96774dac228",
+      "name": "Polukranos Reborn // Polukranos, Engine of Ruin",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.6345753135499943,
+      "actualProductionQ": 0.6345753135499943,
+      "delta": -0.1345753135499943,
+      "offeredOccurrences": 12
+    },
+    {
+      "set": "MOM",
+      "id": "ae2e1244-f05b-45f9-8afc-59f190524798",
+      "name": "Invasion of Azgol // Ashen Reaper",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.631749695507176,
+      "actualProductionQ": 0.631749695507176,
+      "delta": -0.13174969550717597,
+      "offeredOccurrences": 125
+    },
+    {
+      "set": "MOM",
+      "id": "9df3e743-7bb8-482a-afd1-4d51119d416c",
+      "name": "Invasion of Segovia // Caetus, Sea Tyrant of Segovia",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.6297095630629643,
+      "actualProductionQ": 0.6297095630629643,
+      "delta": -0.12970956306296433,
+      "offeredOccurrences": 23
+    },
+    {
+      "set": "MOM",
+      "id": "40ab763d-05ee-408d-aeba-eaf18c4f2e21",
+      "name": "Herbology Instructor // Malady Invoker",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.6289310143329601,
+      "actualProductionQ": 0.6289310143329601,
+      "delta": -0.12893101433296006,
+      "offeredOccurrences": 83
+    },
+    {
+      "set": "WOE",
+      "id": "58e72bfb-6f64-4647-afb6-b5ad4737121c",
+      "name": "Scalding Viper // Steam Clean",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.6289174755556372,
+      "actualProductionQ": 0.6289174755556372,
+      "delta": -0.12891747555563715,
+      "offeredOccurrences": 16
+    },
+    {
+      "set": "MOM",
+      "id": "f1150ea9-02b5-4767-a529-6149d758830e",
+      "name": "Blightreaper Thallid // Blightsower Thallid",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.6274758476070461,
+      "actualProductionQ": 0.6274758476070461,
+      "delta": -0.1274758476070461,
+      "offeredOccurrences": 70
+    },
+    {
+      "set": "LCI",
+      "id": "3cdf691e-96a5-45c7-9b94-6f04af81c8e4",
+      "name": "Twists and Turns // Mycoid Maze",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.37317461465735763,
+      "actualProductionQ": 0.37317461465735763,
+      "delta": 0.12682538534264237,
+      "offeredOccurrences": 106
+    },
+    {
+      "set": "MOM",
+      "id": "d8999135-ddb1-4e4c-b885-e25f23dac3d3",
+      "name": "Elesh Norn // The Argent Etchings",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.6248906234791215,
+      "actualProductionQ": 0.6248906234791215,
+      "delta": -0.1248906234791215,
+      "offeredOccurrences": 6
+    },
+    {
+      "set": "LCI",
+      "id": "24417388-f2bb-4783-bdce-264774531838",
+      "name": "Spring-Loaded Sawblades // Bladewheel Chariot",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.6229718509373673,
+      "actualProductionQ": 0.6229718509373673,
+      "delta": -0.12297185093736729,
+      "offeredOccurrences": 65
+    },
+    {
+      "set": "WOE",
+      "id": "43bb3890-4013-48be-8cb5-54fd8fd8ec52",
+      "name": "Fell Horseman // Deathly Ride",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.37727806352111604,
+      "actualProductionQ": 0.37727806352111604,
+      "delta": 0.12272193647888396,
+      "offeredOccurrences": 368
+    },
+    {
+      "set": "MOM",
+      "id": "b3af679b-6ee6-4a1d-8ec3-b659bdd90b4a",
+      "name": "Invasion of Fiora // Marchesa, Resolute Monarch",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.6222432243685803,
+      "actualProductionQ": 0.6222432243685803,
+      "delta": -0.12224322436858026,
+      "offeredOccurrences": 8
+    },
+    {
+      "set": "LCI",
+      "id": "bf573fb7-fa6c-4df7-8e5e-1e071585361e",
+      "name": "The Everflowing Well // The Myriad Pools",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.6191412289671269,
+      "actualProductionQ": 0.6191412289671269,
+      "delta": -0.11914122896712687,
+      "offeredOccurrences": 18
+    },
+    {
+      "set": "MOM",
+      "id": "50180fda-6d67-41e9-8b2b-2e7c5876b8ab",
+      "name": "Invasion of Pyrulea // Gargantuan Slabhorn",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.3847121901758811,
+      "actualProductionQ": 0.3847121901758811,
+      "delta": 0.1152878098241189,
+      "offeredOccurrences": 149
+    },
+    {
+      "set": "MOM",
+      "id": "e454bf31-5aa0-4109-a3f5-c3f9cc838682",
+      "name": "Invasion of Moag // Bloomwielder Dryads",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.38720710304884176,
+      "actualProductionQ": 0.38720710304884176,
+      "delta": 0.11279289695115824,
+      "offeredOccurrences": 143
+    },
+    {
+      "set": "MOM",
+      "id": "76b5e289-6bc4-48ee-8d5b-6989bab9f901",
+      "name": "Nezumi Freewheeler // Hideous Fleshwheeler",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.38762114750352406,
+      "actualProductionQ": 0.38762114750352406,
+      "delta": 0.11237885249647594,
+      "offeredOccurrences": 114
+    },
+    {
+      "set": "MOM",
+      "id": "a98f71a0-7c99-4cee-8f70-877e698cca84",
+      "name": "Invasion of Tarkir // Defiant Thundermaw",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.6119451081488934,
+      "actualProductionQ": 0.6119451081488934,
+      "delta": -0.11194510814889336,
+      "offeredOccurrences": 7
+    },
+    {
+      "set": "LCI",
+      "id": "099a1d1c-72ba-468e-9385-8f93e1fce001",
+      "name": "Oteclan Landmark // Oteclan Levitator",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.3893742878175825,
+      "actualProductionQ": 0.3893742878175825,
+      "delta": 0.11062571218241751,
+      "offeredOccurrences": 431
+    },
+    {
+      "set": "WOE",
+      "id": "5ebac73a-1ecf-4e6d-87b1-ea560bfeb064",
+      "name": "Picklock Prankster // Free the Fae",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.6104077367320606,
+      "actualProductionQ": 0.6104077367320606,
+      "delta": -0.11040773673206061,
+      "offeredOccurrences": 103
+    },
+    {
+      "set": "WOE",
+      "id": "559bacc8-facc-4d93-90b5-8ac21d3246f5",
+      "name": "Tempest Hart // Scan the Clouds",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.3898614427041531,
+      "actualProductionQ": 0.3898614427041531,
+      "delta": 0.11013855729584687,
+      "offeredOccurrences": 146
+    },
+    {
+      "set": "MOM",
+      "id": "fdc37acc-05ba-4457-8a03-d635497bfb1b",
+      "name": "Tarkir Duneshaper // Burnished Dunestomper",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.3916799255339778,
+      "actualProductionQ": 0.3916799255339778,
+      "delta": 0.10832007446602221,
+      "offeredOccurrences": 411
+    },
+    {
+      "set": "WOE",
+      "id": "ab03c342-2bf4-41bf-8bb8-472d978d238a",
+      "name": "Shrouded Shepherd // Cleave Shadows",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.6081506154944012,
+      "actualProductionQ": 0.6081506154944012,
+      "delta": -0.10815061549440119,
+      "offeredOccurrences": 88
+    },
+    {
+      "set": "MOM",
+      "id": "61972ddb-3421-4f22-a47a-89cea944dd02",
+      "name": "Bonded Herdbeast // Plated Kilnbeast",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.3922122890231745,
+      "actualProductionQ": 0.3922122890231745,
+      "delta": 0.10778771097682549,
+      "offeredOccurrences": 435
+    },
+    {
+      "set": "WOE",
+      "id": "66485c3e-3b21-4db4-ac12-af04e35b49b1",
+      "name": "Picnic Ruiner // Stolen Goodies",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.6062567462088583,
+      "actualProductionQ": 0.6062567462088583,
+      "delta": -0.10625674620885828,
+      "offeredOccurrences": 85
+    },
+    {
+      "set": "WOE",
+      "id": "ac1907e8-0713-47dd-ac42-bf1323c5bec0",
+      "name": "Ferocious Werefox // Guard Change",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.3941534030128628,
+      "actualProductionQ": 0.3941534030128628,
+      "delta": 0.10584659698713722,
+      "offeredOccurrences": 301
+    },
+    {
+      "set": "MOM",
+      "id": "712fb9e5-bd67-4173-a2d4-061aeb6253b5",
+      "name": "Urabrask // The Great Work",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.3978390731292514,
+      "actualProductionQ": 0.3978390731292514,
+      "delta": 0.10216092687074863,
+      "offeredOccurrences": 13
+    },
+    {
+      "set": "WOE",
+      "id": "ec5e2680-8b42-4571-ab45-4936aec51901",
+      "name": "Kellan, the Fae-Blooded // Birthright Boon",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.6008199356148598,
+      "actualProductionQ": 0.6008199356148598,
+      "delta": -0.1008199356148598,
+      "offeredOccurrences": 4
+    },
+    {
+      "set": "WOE",
+      "id": "5980a930-c7f8-45e1-a18a-87734d9ed09e",
+      "name": "Besotted Knight // Betroth the Beast",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.39945209631023515,
+      "actualProductionQ": 0.39945209631023515,
+      "delta": 0.10054790368976485,
+      "offeredOccurrences": 299
+    },
+    {
+      "set": "WOE",
+      "id": "60976109-30ad-4f12-99eb-c5ef560fcf1b",
+      "name": "Galvanic Giant // Storm Reading",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.40048807746926274,
+      "actualProductionQ": 0.40048807746926274,
+      "delta": 0.09951192253073726,
+      "offeredOccurrences": 125
+    },
+    {
+      "set": "MOM",
+      "id": "bf2249e6-af74-4b88-8eb7-144ce8fa7f6b",
+      "name": "Sheoldred // The True Scriptures",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.5966378794901364,
+      "actualProductionQ": 0.5966378794901364,
+      "delta": -0.09663787949013636,
+      "offeredOccurrences": 6
+    },
+    {
+      "set": "MOM",
+      "id": "f5926c8e-8049-418e-9a84-f8558e5ba9d1",
+      "name": "Invasion of New Capenna // Holy Frazzle-Cannon",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.4047093624381565,
+      "actualProductionQ": 0.4047093624381565,
+      "delta": 0.09529063756184353,
+      "offeredOccurrences": 166
+    },
+    {
+      "set": "LCI",
+      "id": "7ea89d3c-8d47-4bbb-9271-8cdfd9296e2f",
+      "name": "Waterlogged Hulk // Watertight Gondola",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.40936093885992086,
+      "actualProductionQ": 0.40936093885992086,
+      "delta": 0.09063906114007914,
+      "offeredOccurrences": 205
+    },
+    {
+      "set": "WOE",
+      "id": "e6f03f21-aeb9-428b-9167-b2604919bdd8",
+      "name": "Aquatic Alchemist // Bubble Up",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.41083056714819766,
+      "actualProductionQ": 0.41083056714819766,
+      "delta": 0.08916943285180234,
+      "offeredOccurrences": 464
+    },
+    {
+      "set": "WOE",
+      "id": "b9f10623-4783-4773-b9c8-a5a2bcfdb5d9",
+      "name": "Woodland Acolyte // Mend the Wilds",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.5886916744682199,
+      "actualProductionQ": 0.5886916744682199,
+      "delta": -0.0886916744682199,
+      "offeredOccurrences": 83
+    },
+    {
+      "set": "LCI",
+      "id": "004524bf-b249-4dac-9c10-44d57143feb9",
+      "name": "Growing Rites of Itlimoc // Itlimoc, Cradle of the Sun",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.41280073891021657,
+      "actualProductionQ": 0.41280073891021657,
+      "delta": 0.08719926108978343,
+      "offeredOccurrences": 29
+    },
+    {
+      "set": "LCI",
+      "id": "3d4b61c6-3e88-49f5-9e16-aa8a59653327",
+      "name": "Visage of Dread // Dread Osseosaur",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.4154563572484819,
+      "actualProductionQ": 0.4154563572484819,
+      "delta": 0.0845436427515181,
+      "offeredOccurrences": 121
+    },
+    {
+      "set": "MOM",
+      "id": "fbd9ed1d-1972-4db8-bc43-b05b94956aa0",
+      "name": "Seraph of New Capenna // Seraph of New Phyrexia",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.4155703034039236,
+      "actualProductionQ": 0.4155703034039236,
+      "delta": 0.08442969659607641,
+      "offeredOccurrences": 136
+    },
+    {
+      "set": "LCI",
+      "id": "dedd7a22-92e2-41fd-aa80-944c69653a5e",
+      "name": "Lodestone Needle // Guidestone Compass",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.5838321857218244,
+      "actualProductionQ": 0.5838321857218244,
+      "delta": -0.08383218572182438,
+      "offeredOccurrences": 107
+    },
+    {
+      "set": "MOM",
+      "id": "5f80764e-8fa2-44e2-84c6-3b55f1c40ee7",
+      "name": "Invasion of Shandalar // Leyline Surge",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.41640144021771075,
+      "actualProductionQ": 0.41640144021771075,
+      "delta": 0.08359855978228925,
+      "offeredOccurrences": 14
+    },
+    {
+      "set": "MOM",
+      "id": "7e784d3d-0c6d-4ce5-beb5-edd2adb32385",
+      "name": "Invasion of Dominaria // Serra Faithkeeper",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.42158412306038073,
+      "actualProductionQ": 0.42158412306038073,
+      "delta": 0.07841587693961927,
+      "offeredOccurrences": 112
+    },
+    {
+      "set": "MOM",
+      "id": "8fed056f-a8f5-41ec-a7d2-a80a238872d1",
+      "name": "Invasion of Zendikar // Awakened Skyclave",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.4219432572184152,
+      "actualProductionQ": 0.4219432572184152,
+      "delta": 0.07805674278158481,
+      "offeredOccurrences": 67
+    },
+    {
+      "set": "WOE",
+      "id": "bc9bdf96-3e3b-4dca-aae2-e81d4cbeafe8",
+      "name": "Elusive Otter // Grove's Bounty",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.5771043404159504,
+      "actualProductionQ": 0.5771043404159504,
+      "delta": -0.07710434041595038,
+      "offeredOccurrences": 17
+    },
+    {
+      "set": "LCI",
+      "id": "f7a41343-7cdb-49aa-a9d1-7460195355d8",
+      "name": "Master's Guide-Mural // Master's Manufactory",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.5757251299114498,
+      "actualProductionQ": 0.5757251299114498,
+      "delta": -0.07572512991144975,
+      "offeredOccurrences": 94
+    },
+    {
+      "set": "LCI",
+      "id": "01739030-c280-492b-a5c9-b3e9f6debc6d",
+      "name": "Kellan, Daring Traveler // Journey On",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.5749214775397979,
+      "actualProductionQ": 0.5749214775397979,
+      "delta": -0.07492147753979794,
+      "offeredOccurrences": 11
+    },
+    {
+      "set": "MOM",
+      "id": "41c83142-b948-4ee5-a486-41306d2bb411",
+      "name": "Jin-Gitaxias // The Great Synthesis",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.5705755354678101,
+      "actualProductionQ": 0.5705755354678101,
+      "delta": -0.07057553546781015,
+      "offeredOccurrences": 1
+    },
+    {
+      "set": "MOM",
+      "id": "73f8fc4f-2f36-4932-8d04-3c2651c116dc",
+      "name": "Invasion of Ravnica // Guildpact Paragon",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.4294928909063622,
+      "actualProductionQ": 0.4294928909063622,
+      "delta": 0.07050710909363778,
+      "offeredOccurrences": 3
+    },
+    {
+      "set": "LCI",
+      "id": "99255a66-b868-45fc-a2a9-0c89bd851b69",
+      "name": "Tarrian's Journal // The Tomb of Aclazotz",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.42962686477025525,
+      "actualProductionQ": 0.42962686477025525,
+      "delta": 0.07037313522974475,
+      "offeredOccurrences": 11
+    },
+    {
+      "set": "MOM",
+      "id": "f487b582-e73f-4325-939f-95fc5a9aba49",
+      "name": "Rona, Herald of Invasion // Rona, Tolarian Obliterator",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.568494176879294,
+      "actualProductionQ": 0.568494176879294,
+      "delta": -0.06849417687929404,
+      "offeredOccurrences": 10
+    },
+    {
+      "set": "LCI",
+      "id": "3d715e9f-223d-462e-8ce3-eebbaf1cd021",
+      "name": "Dowsing Device // Geode Grotto",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.43160867683363247,
+      "actualProductionQ": 0.43160867683363247,
+      "delta": 0.06839132316636753,
+      "offeredOccurrences": 172
+    },
+    {
+      "set": "MOM",
+      "id": "433e9f1c-9d6c-4c7e-89d0-79595b4331f2",
+      "name": "Invasion of Theros // Ephara, Ever-Sheltering",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.5682672434833165,
+      "actualProductionQ": 0.5682672434833165,
+      "delta": -0.06826724348331648,
+      "offeredOccurrences": 36
+    },
+    {
+      "set": "LCI",
+      "id": "ac5e9a53-cc4f-4ced-8088-5a73d619eae3",
+      "name": "Inverted Iceberg // Iceberg Titan",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.5667045914885062,
+      "actualProductionQ": 0.5667045914885062,
+      "delta": -0.06670459148850616,
+      "offeredOccurrences": 323
+    },
+    {
+      "set": "LCI",
+      "id": "1ca79dd4-67fc-496c-96fc-489b039c4932",
+      "name": "Ojer Taq, Deepest Foundation // Temple of Civilization",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.565524505273356,
+      "actualProductionQ": 0.565524505273356,
+      "delta": -0.06552450527335596,
+      "offeredOccurrences": 3
+    },
+    {
+      "set": "MOM",
+      "id": "77720d2e-2b7b-492b-852c-eea5061eb31b",
+      "name": "Invasion of Innistrad // Deluge of the Dead",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.5616951148600726,
+      "actualProductionQ": 0.5616951148600726,
+      "delta": -0.06169511486007262,
+      "offeredOccurrences": 2
+    },
+    {
+      "set": "LCI",
+      "id": "bb95ffc2-ef35-49bf-8211-c5354d176051",
+      "name": "Jade Seedstones // Jadeheart Attendant",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.4406693590065273,
+      "actualProductionQ": 0.4406693590065273,
+      "delta": 0.05933064099347268,
+      "offeredOccurrences": 152
+    },
+    {
+      "set": "MOM",
+      "id": "6c8c9c33-569c-4b67-a18d-4cd0f18d01f4",
+      "name": "Invasion of Xerex // Vertex Paladin",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.4420820065351309,
+      "actualProductionQ": 0.4420820065351309,
+      "delta": 0.05791799346486909,
+      "offeredOccurrences": 124
+    },
+    {
+      "set": "MOM",
+      "id": "4f7231f6-8adc-4a68-9984-e56b974c087b",
+      "name": "Invasion of Kaladesh // Aetherwing, Golden-Scale Flagship",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.5547387528414316,
+      "actualProductionQ": 0.5547387528414316,
+      "delta": -0.05473875284143159,
+      "offeredOccurrences": 182
+    },
+    {
+      "set": "WOE",
+      "id": "f8a0c0f6-fef9-42c5-934d-a2855c11b440",
+      "name": "Conceited Witch // Price of Beauty",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.44535781394136353,
+      "actualProductionQ": 0.44535781394136353,
+      "delta": 0.054642186058636466,
+      "offeredOccurrences": 295
+    },
+    {
+      "set": "MOM",
+      "id": "70b2cdc5-35b9-443d-b499-c8b75c0d0a64",
+      "name": "Gnottvold Hermit // Chrome Host Hulk",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.446471044673587,
+      "actualProductionQ": 0.446471044673587,
+      "delta": 0.053528955326413,
+      "offeredOccurrences": 129
+    },
+    {
+      "set": "WOE",
+      "id": "1f3013bf-9647-4bdb-a638-d299ae00f88e",
+      "name": "Cheeky House-Mouse // Squeak By",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.4468215752845654,
+      "actualProductionQ": 0.4468215752845654,
+      "delta": 0.0531784247154346,
+      "offeredOccurrences": 113
+    },
+    {
+      "set": "WOE",
+      "id": "bacb1fe5-0adf-461f-b698-9d09a8728c63",
+      "name": "Stormkeld Vanguard // Bear Down",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.552174712540809,
+      "actualProductionQ": 0.552174712540809,
+      "delta": -0.052174712540808965,
+      "offeredOccurrences": 71
+    },
+    {
+      "set": "MOM",
+      "id": "93345804-dda4-42a2-84d4-8fcd376dd2d4",
+      "name": "Invasion of Muraganda // Primordial Plasm",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.44800649395143427,
+      "actualProductionQ": 0.44800649395143427,
+      "delta": 0.05199350604856573,
+      "offeredOccurrences": 113
+    },
+    {
+      "set": "MOM",
+      "id": "e24b5289-d3b5-4b4d-bb37-69bf2c3b48bc",
+      "name": "Vorinclex // The Grand Evolution",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.551718126286613,
+      "actualProductionQ": 0.551718126286613,
+      "delta": -0.051718126286612986,
+      "offeredOccurrences": 3
+    },
+    {
+      "set": "MOM",
+      "id": "92f5b177-b0c6-4573-b860-f75dad1941bd",
+      "name": "Invasion of Eldraine // Prickle Faeries",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.5513699579848703,
+      "actualProductionQ": 0.5513699579848703,
+      "delta": -0.05136995798487032,
+      "offeredOccurrences": 110
+    },
+    {
+      "set": "WOE",
+      "id": "315cbbf7-a2ad-4565-9877-1e903d7fd797",
+      "name": "Decadent Dragon // Expensive Taste",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.5500215107528755,
+      "actualProductionQ": 0.5500215107528755,
+      "delta": -0.05002151075287553,
+      "offeredOccurrences": 11
+    },
+    {
+      "set": "WOE",
+      "id": "3f5acc0d-33a6-476f-95ca-a1ad788334dd",
+      "name": "Beluna Grandsquall // Seek Thrills",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.45029931730542716,
+      "actualProductionQ": 0.45029931730542716,
+      "delta": 0.04970068269457284,
+      "offeredOccurrences": 15
+    },
+    {
+      "set": "MOM",
+      "id": "630ce82b-0d09-4a12-8cba-0b0ed8415128",
+      "name": "Sun-Blessed Guardian // Furnace-Blessed Conqueror",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.45092727887568484,
+      "actualProductionQ": 0.45092727887568484,
+      "delta": 0.049072721124315155,
+      "offeredOccurrences": 122
+    },
+    {
+      "set": "MOM",
+      "id": "5d59c8f2-f6af-40a6-8dfe-8cc45bf231ce",
+      "name": "Invasion of Ikoria // Zilortha, Apex of Ikoria",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.4510701103066924,
+      "actualProductionQ": 0.4510701103066924,
+      "delta": 0.04892988969330758,
+      "offeredOccurrences": 13
+    },
+    {
+      "set": "MOM",
+      "id": "00255899-aaaf-46c6-8037-bd0e3c06250c",
+      "name": "Invasion of Tolvada // The Broken Sky",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.5485816086605244,
+      "actualProductionQ": 0.5485816086605244,
+      "delta": -0.04858160866052441,
+      "offeredOccurrences": 11
+    },
+    {
+      "set": "WOE",
+      "id": "64c432d5-4f5b-44ac-9d61-891e78460d58",
+      "name": "Frolicking Familiar // Blow Off Steam",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.5447412960623651,
+      "actualProductionQ": 0.5447412960623651,
+      "delta": -0.0447412960623651,
+      "offeredOccurrences": 97
+    },
+    {
+      "set": "MOM",
+      "id": "a21b1734-a773-4107-95c1-b44d5ccdfd82",
+      "name": "Ayara, Widow of the Realm // Ayara, Furnace Queen",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.4573157387955179,
+      "actualProductionQ": 0.4573157387955179,
+      "delta": 0.0426842612044821,
+      "offeredOccurrences": 15
+    },
+    {
+      "set": "WOE",
+      "id": "72c130e2-1e17-4996-a5ae-231155d68261",
+      "name": "Questing Druid // Seek the Beast",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.4583529325377258,
+      "actualProductionQ": 0.4583529325377258,
+      "delta": 0.0416470674622742,
+      "offeredOccurrences": 19
+    },
+    {
+      "set": "WOE",
+      "id": "58c7f52e-a97d-4475-ae00-3149991e723e",
+      "name": "Devouring Sugarmaw // Have for Dinner",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.5405849388277042,
+      "actualProductionQ": 0.5405849388277042,
+      "delta": -0.0405849388277042,
+      "offeredOccurrences": 5
+    },
+    {
+      "set": "MOM",
+      "id": "1c3f661d-b9f7-48e7-afe3-3eaea1022bc1",
+      "name": "Invasion of Arcavios // Invocation of the Founders",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.4598794766693083,
+      "actualProductionQ": 0.4598794766693083,
+      "delta": 0.040120523330691715,
+      "offeredOccurrences": 51
+    },
+    {
+      "set": "LCI",
+      "id": "0d2d98ae-fe02-4a86-9e80-7b95e08de21c",
+      "name": "Dire Flail // Dire Blunderbuss",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.5384074195843978,
+      "actualProductionQ": 0.5384074195843978,
+      "delta": -0.03840741958439775,
+      "offeredOccurrences": 7
+    },
+    {
+      "set": "MOM",
+      "id": "73e92389-4bd2-492e-b4d6-d7cb6baedc41",
+      "name": "Harried Artisan // Phyrexian Skyflayer",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.4618551108506462,
+      "actualProductionQ": 0.4618551108506462,
+      "delta": 0.03814488914935382,
+      "offeredOccurrences": 128
+    },
+    {
+      "set": "WOE",
+      "id": "139f31f5-28f0-4e90-abdf-3f6ed0992dea",
+      "name": "Pollen-Shield Hare // Hare Raising",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.46281404550665384,
+      "actualProductionQ": 0.46281404550665384,
+      "delta": 0.03718595449334616,
+      "offeredOccurrences": 23
+    },
+    {
+      "set": "MOM",
+      "id": "ada79e04-bb69-4c92-a829-014f02b1e06a",
+      "name": "Invasion of Regatha // Disciples of the Inferno",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.46369804611901777,
+      "actualProductionQ": 0.46369804611901777,
+      "delta": 0.03630195388098223,
+      "offeredOccurrences": 108
+    },
+    {
+      "set": "MOM",
+      "id": "c0ef6737-8e85-42ca-8ee6-6a34f9462de3",
+      "name": "Invasion of Vryn // Overloaded Mage-Ring",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.5340051098628329,
+      "actualProductionQ": 0.5340051098628329,
+      "delta": -0.034005109862832894,
+      "offeredOccurrences": 147
+    },
+    {
+      "set": "LCI",
+      "id": "d61d8895-7f2e-4c77-951f-4f1a49e96f57",
+      "name": "Brass's Tunnel-Grinder // Tecutlan, the Searing Rift",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.532640350081023,
+      "actualProductionQ": 0.532640350081023,
+      "delta": -0.03264035008102295,
+      "offeredOccurrences": 14
+    },
+    {
+      "set": "WOE",
+      "id": "39b11ff0-9946-4337-86fb-42e967f3d2e4",
+      "name": "Cruel Somnophage // Can't Wake Up",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.4678449573968724,
+      "actualProductionQ": 0.4678449573968724,
+      "delta": 0.032155042603127626,
+      "offeredOccurrences": 16
+    },
+    {
+      "set": "MKM",
+      "id": "c49690c7-c282-4eb4-8da3-5e0c46a80fc4",
+      "name": "Kellan, Inquisitive Prodigy // Tail the Suspect",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.46799088813194334,
+      "actualProductionQ": 0.46799088813194334,
+      "delta": 0.03200911186805666,
+      "offeredOccurrences": 15
+    },
+    {
+      "set": "LCI",
+      "id": "0bdc79c6-1193-46bd-931d-2c2a0381e420",
+      "name": "Saheeli's Lattice // Mastercraft Raptor",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.5317023978627033,
+      "actualProductionQ": 0.5317023978627033,
+      "delta": -0.031702397862703346,
+      "offeredOccurrences": 122
+    },
+    {
+      "set": "LCI",
+      "id": "dbaa9a2d-e9fd-4746-a26c-f99ae731f024",
+      "name": "Tithing Blade // Consuming Sepulcher",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.4693544830200571,
+      "actualProductionQ": 0.4693544830200571,
+      "delta": 0.03064551697994289,
+      "offeredOccurrences": 277
+    },
+    {
+      "set": "LCI",
+      "id": "68a6ede0-6d57-4e29-9e3b-3569ab7f0bcd",
+      "name": "Braided Net // Braided Quipu",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.5266054697254887,
+      "actualProductionQ": 0.5266054697254887,
+      "delta": -0.026605469725488717,
+      "offeredOccurrences": 18
+    },
+    {
+      "set": "WOE",
+      "id": "70c12e75-7e65-4706-b976-e47835910928",
+      "name": "Two-Headed Hunter // Twice the Rage",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.5263866792141916,
+      "actualProductionQ": 0.5263866792141916,
+      "delta": -0.026386679214191577,
+      "offeredOccurrences": 87
+    },
+    {
+      "set": "WOE",
+      "id": "df606cf5-67dc-46f4-8c79-1d2f1d054391",
+      "name": "Virtue of Knowledge // Vantress Visions",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.4749135637464821,
+      "actualProductionQ": 0.4749135637464821,
+      "delta": 0.02508643625351792,
+      "offeredOccurrences": 16
+    },
+    {
+      "set": "WOE",
+      "id": "ea7e7daf-7c06-4c74-8bcf-e42c1f611861",
+      "name": "Virtue of Loyalty // Ardenvale Fealty",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.4751932843561647,
+      "actualProductionQ": 0.4751932843561647,
+      "delta": 0.024806715643835298,
+      "offeredOccurrences": 5
+    },
+    {
+      "set": "LCI",
+      "id": "b4c31b29-06ba-436d-a3d9-18f4796c39be",
+      "name": "Matzalantli, the Great Door // The Core",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.5247232556251129,
+      "actualProductionQ": 0.5247232556251129,
+      "delta": -0.024723255625112905,
+      "offeredOccurrences": 25
+    },
+    {
+      "set": "LCI",
+      "id": "c13e8e3d-2a6b-4782-a3c9-71af7336a881",
+      "name": "Throne of the Grim Captain // The Grim Captain",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.5241290224496183,
+      "actualProductionQ": 0.5241290224496183,
+      "delta": -0.024129022449618343,
+      "offeredOccurrences": 26
+    },
+    {
+      "set": "MOM",
+      "id": "dad34ae5-56b4-4394-be02-e043dc1cc23d",
+      "name": "Aetherblade Agent // Gitaxian Mindstinger",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.47639476890046795,
+      "actualProductionQ": 0.47639476890046795,
+      "delta": 0.023605231099532054,
+      "offeredOccurrences": 231
+    },
+    {
+      "set": "LCI",
+      "id": "a9d71007-bc04-4dff-ad3f-e2c0b5b4400e",
+      "name": "Ojer Pakpatiq, Deepest Epoch // Temple of Cyclical Time",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.5235051130295747,
+      "actualProductionQ": 0.5235051130295747,
+      "delta": -0.023505113029574698,
+      "offeredOccurrences": 1
+    },
+    {
+      "set": "LCI",
+      "id": "50f8e2b6-98c7-4f28-bb39-e1fbe841f1ee",
+      "name": "Ojer Axonil, Deepest Might // Temple of Power",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.523047858249954,
+      "actualProductionQ": 0.523047858249954,
+      "delta": -0.023047858249954034,
+      "offeredOccurrences": 6
+    },
+    {
+      "set": "MOM",
+      "id": "dc1454ce-bb49-4b4f-bbca-d77387fa4966",
+      "name": "Khenra Spellspear // Gitaxian Spellstalker",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.5207577622395108,
+      "actualProductionQ": 0.5207577622395108,
+      "delta": -0.020757762239510757,
+      "offeredOccurrences": 79
+    },
+    {
+      "set": "MOM",
+      "id": "49ec5e00-22f4-486e-8e99-e950725f6fbc",
+      "name": "Invasion of Ulgrotha // Grandmother Ravi Sengir",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.4801521798118667,
+      "actualProductionQ": 0.4801521798118667,
+      "delta": 0.019847820188133303,
+      "offeredOccurrences": 69
+    },
+    {
+      "set": "MOM",
+      "id": "4fb0eb2d-9cb7-4e72-a970-5009b046df2a",
+      "name": "Invasion of Belenon // Belenon War Anthem",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.482249123835637,
+      "actualProductionQ": 0.482249123835637,
+      "delta": 0.017750876164362994,
+      "offeredOccurrences": 87
+    },
+    {
+      "set": "LCI",
+      "id": "4a6bec46-1acd-4726-b8d9-3045ac6a2ea2",
+      "name": "Thousand Moons Smithy // Barracks of the Thousand",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.5171930841823799,
+      "actualProductionQ": 0.5171930841823799,
+      "delta": -0.01719308418237986,
+      "offeredOccurrences": 8
+    },
+    {
+      "set": "WOE",
+      "id": "7f4c0959-a107-4d61-9e51-256b2955f6ba",
+      "name": "Ratcatcher Trainee // Pest Problem",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.5160961425431948,
+      "actualProductionQ": 0.5160961425431948,
+      "delta": -0.016096142543194802,
+      "offeredOccurrences": 235
+    },
+    {
+      "set": "WOE",
+      "id": "770ee3da-d33e-466f-9a2e-ad2d08ef5012",
+      "name": "Callous Sell-Sword // Burn Together",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.515210298530003,
+      "actualProductionQ": 0.515210298530003,
+      "delta": -0.015210298530002997,
+      "offeredOccurrences": 92
+    },
+    {
+      "set": "WOE",
+      "id": "8b0e6daf-0dec-4718-af79-b7ce137c3135",
+      "name": "Virtue of Courage // Embereth Blaze",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.5149994503093643,
+      "actualProductionQ": 0.5149994503093643,
+      "delta": -0.014999450309364337,
+      "offeredOccurrences": 11
+    },
+    {
+      "set": "WOE",
+      "id": "ff857d41-767d-4e99-83cc-444738341b92",
+      "name": "Virtue of Strength // Garenbrig Growth",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.5141129663088512,
+      "actualProductionQ": 0.5141129663088512,
+      "delta": -0.014112966308851171,
+      "offeredOccurrences": 14
+    },
+    {
+      "set": "WOE",
+      "id": "811b283f-22f3-47b1-a802-11dc8c25d0ee",
+      "name": "Heartflame Duelist // Heartflame Slash",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.5132954215967811,
+      "actualProductionQ": 0.5132954215967811,
+      "delta": -0.013295421596781098,
+      "offeredOccurrences": 10
+    },
+    {
+      "set": "WOE",
+      "id": "a8f5f102-cc75-4cee-a117-4bdaaf86c2e9",
+      "name": "Hearth Elemental // Stoke Genius",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.48716409600965777,
+      "actualProductionQ": 0.48716409600965777,
+      "delta": 0.012835903990342235,
+      "offeredOccurrences": 92
+    },
+    {
+      "set": "WOE",
+      "id": "fab7646a-61e8-446b-9dba-ac6e0db82f10",
+      "name": "Grabby Giant // That's Mine",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.5122729999576368,
+      "actualProductionQ": 0.5122729999576368,
+      "delta": -0.012272999957636754,
+      "offeredOccurrences": 289
+    },
+    {
+      "set": "LCI",
+      "id": "2e98970d-06a8-4c91-ba47-4a02c5b949f2",
+      "name": "The Enigma Jewel // Locus of Enlightenment",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.4884430695740692,
+      "actualProductionQ": 0.4884430695740692,
+      "delta": 0.011556930425930811,
+      "offeredOccurrences": 11
+    },
+    {
+      "set": "MOM",
+      "id": "776b8951-cf15-47ff-b36f-f47706eddb6f",
+      "name": "Invasion of Karsus // Refraction Elemental",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.48861244530364223,
+      "actualProductionQ": 0.48861244530364223,
+      "delta": 0.011387554696357771,
+      "offeredOccurrences": 10
+    },
+    {
+      "set": "WOE",
+      "id": "5c1d410e-4237-4963-b015-54d26730e63d",
+      "name": "Beluna's Gatekeeper // Entry Denied",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.5110475821524174,
+      "actualProductionQ": 0.5110475821524174,
+      "delta": -0.011047582152417412,
+      "offeredOccurrences": 296
+    },
+    {
+      "set": "WOE",
+      "id": "475d7e9a-759d-4523-a5cd-2a6e0d1b14ea",
+      "name": "Bramble Familiar // Fetch Quest",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.5098441444807785,
+      "actualProductionQ": 0.5098441444807785,
+      "delta": -0.009844144480778527,
+      "offeredOccurrences": 21
+    },
+    {
+      "set": "WOE",
+      "id": "8c112f62-6034-4636-a75b-4a45bc916a91",
+      "name": "Spellscorn Coven // Take It Back",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.5091823820369652,
+      "actualProductionQ": 0.5091823820369652,
+      "delta": -0.009182382036965198,
+      "offeredOccurrences": 79
+    },
+    {
+      "set": "LCI",
+      "id": "d1d8d8ef-c8b2-4e7c-89e4-b381dff20584",
+      "name": "Idol of the Deep King // Sovereign's Macuahuitl",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.5047773866851536,
+      "actualProductionQ": 0.5047773866851536,
+      "delta": -0.004777386685153595,
+      "offeredOccurrences": 292
+    },
+    {
+      "set": "WOE",
+      "id": "043718ea-59f6-4d1a-94c5-271704c1a38a",
+      "name": "Twining Twins // Swift Spiral",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.4956254635347326,
+      "actualProductionQ": 0.4956254635347326,
+      "delta": 0.00437453646526742,
+      "offeredOccurrences": 12
+    },
+    {
+      "set": "MOM",
+      "id": "11798730-6788-4e0b-a828-b46cab1a4fa7",
+      "name": "Invasion of Gobakhan // Lightshield Array",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.5022474550220607,
+      "actualProductionQ": 0.5022474550220607,
+      "delta": -0.002247455022060696,
+      "offeredOccurrences": 13
+    },
+    {
+      "set": "MOM",
+      "id": "407d6723-bf58-403e-b2ac-ba52c51d356f",
+      "name": "Invasion of Mercadia // Kyren Flamewright",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.49780808590797365,
+      "actualProductionQ": 0.49780808590797365,
+      "delta": 0.002191914092026348,
+      "offeredOccurrences": 110
+    },
+    {
+      "set": "WOE",
+      "id": "0ad345b6-7077-4dd2-b515-c774a3185fe4",
+      "name": "Hollow Scavenger // Bakery Raid",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.5020597006830464,
+      "actualProductionQ": 0.5020597006830464,
+      "delta": -0.002059700683046395,
+      "offeredOccurrences": 282
+    },
+    {
+      "set": "WOE",
+      "id": "5b2a02f3-3921-4f40-9ffa-70bc08b052e1",
+      "name": "Minecart Daredevil // Ride the Rails",
+      "FResearchQ": 0.5,
+      "frozenELookupQ": 0.5007749102535648,
+      "actualProductionQ": 0.5007749102535648,
+      "delta": -0.0007749102535647978,
+      "offeredOccurrences": 346
+    }
+  ],
+  "productionCompositionQUnchanged": true,
+  "noPostDevelopmentInputRepair": true,
+  "diagnosis": "F preparation attempted exact full-display-name filtering, but production allows qualified front-face/name aliases. The transport rule over-neutralized legitimate measured Q rows. This is an F research-input bug, not a production Q change or evidence that marginal-value theory itself cannot work. Results are retained as unqualified compatibility-failing experiment."
+}

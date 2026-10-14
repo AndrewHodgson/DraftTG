@@ -25,4 +25,7 @@ public sealed record ArenaDraftMemorySnapshot(ArenaMemoryStatus Status, string D
     public int? PickNumber { get; init; }
     public bool IsFirstAttach { get; init; }
     public TimeSpan TraversalDuration { get; init; }
+    public ArenaUiMemorySnapshot? Ui { get; init; }
+    public IReadOnlyList<ArenaOfferedCardIdentity> PrintingIdentities { get; init; } = [];
 }
+public sealed record ArenaOfferedCardIdentity(uint PodGrpId,uint VisibleGrpId,string? LogicalIdentity,bool Accepted,bool Reconciled,string Reason);

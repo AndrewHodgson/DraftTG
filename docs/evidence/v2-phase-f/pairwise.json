@@ -1,0 +1,1088 @@
+{
+  "bySet": {
+    "DMU": {
+      "controls": {
+        "A": {
+          "n": 2681,
+          "accuracy": 0.6063036180529653,
+          "margin": 0.014119531575450386,
+          "pairLogLoss": 0.749881417859358
+        },
+        "B": {
+          "n": 2681,
+          "accuracy": 0.6113390525923162,
+          "margin": 0.022915494057681802,
+          "pairLogLoss": 0.6554209653330118
+        },
+        "C": {
+          "n": 2681,
+          "accuracy": 0.6135770234986945,
+          "margin": 0.022055172089929728,
+          "pairLogLoss": 0.6575867933117382
+        },
+        "generic": {
+          "n": 2681,
+          "accuracy": 0.660574412532637,
+          "margin": 0.038190765821108384,
+          "pairLogLoss": 0.6424522037736576
+        },
+        "current-optimizer": {
+          "n": 2681,
+          "accuracy": 0.5102573666542335,
+          "margin": 0.02051473330846699,
+          "pairLogLoss": 0.8512882127066141
+        },
+        "current-D": {
+          "n": 2681,
+          "accuracy": 0.583177918687057,
+          "margin": 0.02512360576381513,
+          "pairLogLoss": 0.7047573160604692
+        }
+      },
+      "families": {
+        "A": {
+          "n": 2681,
+          "accuracy": 0.5542707944796718,
+          "declinedPairs": 13,
+          "fullyExperimentalPairs": 2668
+        },
+        "B": {
+          "n": 2681,
+          "accuracy": 0.5516598284222305,
+          "declinedPairs": 13,
+          "fullyExperimentalPairs": 2668
+        },
+        "C": {
+          "n": 2681,
+          "accuracy": 0.5747855277881387,
+          "declinedPairs": 13,
+          "fullyExperimentalPairs": 2668
+        }
+      },
+      "drafts": 231
+    },
+    "BRO": {
+      "controls": {
+        "A": {
+          "n": 2947,
+          "accuracy": 0.6016287750254496,
+          "margin": 0.032708838464369346,
+          "pairLogLoss": 0.7189039684424727
+        },
+        "B": {
+          "n": 2947,
+          "accuracy": 0.6196131659314558,
+          "margin": 0.026008601791216907,
+          "pairLogLoss": 0.6499550458022768
+        },
+        "C": {
+          "n": 2947,
+          "accuracy": 0.6450627757041059,
+          "margin": 0.026555312136433088,
+          "pairLogLoss": 0.6493101160537972
+        },
+        "generic": {
+          "n": 2947,
+          "accuracy": 0.6274177129284018,
+          "margin": 0.033422626232072566,
+          "pairLogLoss": 0.6525693055102646
+        },
+        "current-optimizer": {
+          "n": 2947,
+          "accuracy": 0.5252799457074991,
+          "margin": 0.0505598914149983,
+          "pairLogLoss": 0.8433597817723804
+        },
+        "current-D": {
+          "n": 2947,
+          "accuracy": 0.5524261961316593,
+          "margin": 0.020294446894953525,
+          "pairLogLoss": 0.7181292984379549
+        }
+      },
+      "families": {
+        "A": {
+          "n": 2947,
+          "accuracy": 0.5663386494740414,
+          "declinedPairs": 24,
+          "fullyExperimentalPairs": 2923
+        },
+        "B": {
+          "n": 2947,
+          "accuracy": 0.5663386494740414,
+          "declinedPairs": 24,
+          "fullyExperimentalPairs": 2923
+        },
+        "C": {
+          "n": 2947,
+          "accuracy": 0.5831353919239906,
+          "declinedPairs": 24,
+          "fullyExperimentalPairs": 2923
+        }
+      },
+      "drafts": 217
+    },
+    "WOE": {
+      "controls": {
+        "A": {
+          "n": 2776,
+          "accuracy": 0.6125720461095101,
+          "margin": 0.027623085800517574,
+          "pairLogLoss": 0.7238405420685492
+        },
+        "B": {
+          "n": 2776,
+          "accuracy": 0.5770893371757925,
+          "margin": 0.02240806622917348,
+          "pairLogLoss": 0.6560910325897622
+        },
+        "C": {
+          "n": 2776,
+          "accuracy": 0.5943804034582133,
+          "margin": 0.023243804044122216,
+          "pairLogLoss": 0.6548769459986106
+        },
+        "generic": {
+          "n": 2776,
+          "accuracy": 0.6372478386167147,
+          "margin": 0.028265993714750887,
+          "pairLogLoss": 0.6578522793608608
+        },
+        "current-optimizer": {
+          "n": 2776,
+          "accuracy": 0.514949567723343,
+          "margin": 0.02989913544668588,
+          "pairLogLoss": 0.8591148676998118
+        },
+        "current-D": {
+          "n": 2776,
+          "accuracy": 0.598342939481268,
+          "margin": 0.03291938110386599,
+          "pairLogLoss": 0.6976697059827215
+        }
+      },
+      "families": {
+        "A": {
+          "n": 2776,
+          "accuracy": 0.5857348703170029,
+          "declinedPairs": 72,
+          "fullyExperimentalPairs": 2704
+        },
+        "B": {
+          "n": 2776,
+          "accuracy": 0.5815922190201729,
+          "declinedPairs": 72,
+          "fullyExperimentalPairs": 2704
+        },
+        "C": {
+          "n": 2776,
+          "accuracy": 0.5887968299711815,
+          "declinedPairs": 72,
+          "fullyExperimentalPairs": 2704
+        }
+      },
+      "drafts": 218
+    },
+    "LCI": {
+      "controls": {
+        "A": {
+          "n": 2792,
+          "accuracy": 0.6214183381088825,
+          "margin": 0.024293455216238553,
+          "pairLogLoss": 0.7325459466786948
+        },
+        "B": {
+          "n": 2792,
+          "accuracy": 0.6042263610315186,
+          "margin": 0.021157143631459027,
+          "pairLogLoss": 0.6584153502747508
+        },
+        "C": {
+          "n": 2792,
+          "accuracy": 0.6049426934097422,
+          "margin": 0.020782128985336518,
+          "pairLogLoss": 0.6595137564592022
+        },
+        "generic": {
+          "n": 2792,
+          "accuracy": 0.6658309455587392,
+          "margin": 0.04052087892676946,
+          "pairLogLoss": 0.6372517410921734
+        },
+        "current-optimizer": {
+          "n": 2792,
+          "accuracy": 0.5216690544412608,
+          "margin": 0.04333810888252149,
+          "pairLogLoss": 0.8470785533788697
+        },
+        "current-D": {
+          "n": 2792,
+          "accuracy": 0.5977793696275072,
+          "margin": 0.03192266164518113,
+          "pairLogLoss": 0.6960541103815087
+        }
+      },
+      "families": {
+        "A": {
+          "n": 2792,
+          "accuracy": 0.589541547277937,
+          "declinedPairs": 12,
+          "fullyExperimentalPairs": 2780
+        },
+        "B": {
+          "n": 2792,
+          "accuracy": 0.58810888252149,
+          "declinedPairs": 12,
+          "fullyExperimentalPairs": 2780
+        },
+        "C": {
+          "n": 2792,
+          "accuracy": 0.5947349570200573,
+          "declinedPairs": 12,
+          "fullyExperimentalPairs": 2780
+        }
+      },
+      "drafts": 239
+    },
+    "MKM": {
+      "controls": {
+        "A": {
+          "n": 2392,
+          "accuracy": 0.6158026755852842,
+          "margin": 0.026247584462848375,
+          "pairLogLoss": 0.7166759321870557
+        },
+        "B": {
+          "n": 2392,
+          "accuracy": 0.5882107023411371,
+          "margin": 0.021759604910312032,
+          "pairLogLoss": 0.6581019135159699
+        },
+        "C": {
+          "n": 2392,
+          "accuracy": 0.6316889632107023,
+          "margin": 0.02326894988213623,
+          "pairLogLoss": 0.6551879355309627
+        },
+        "generic": {
+          "n": 2392,
+          "accuracy": 0.68561872909699,
+          "margin": 0.052257901799030136,
+          "pairLogLoss": 0.6181836330208688
+        },
+        "current-optimizer": {
+          "n": 2392,
+          "accuracy": 0.5150501672240803,
+          "margin": 0.030100334448160536,
+          "pairLogLoss": 0.8090965424578553
+        },
+        "current-D": {
+          "n": 2392,
+          "accuracy": 0.618938127090301,
+          "margin": 0.041262991654720034,
+          "pairLogLoss": 0.6617958401194706
+        }
+      },
+      "families": {
+        "A": {
+          "n": 2392,
+          "accuracy": 0.5842391304347826,
+          "declinedPairs": 65,
+          "fullyExperimentalPairs": 2327
+        },
+        "B": {
+          "n": 2392,
+          "accuracy": 0.5854933110367893,
+          "declinedPairs": 65,
+          "fullyExperimentalPairs": 2327
+        },
+        "C": {
+          "n": 2392,
+          "accuracy": 0.5986622073578596,
+          "declinedPairs": 65,
+          "fullyExperimentalPairs": 2327
+        }
+      },
+      "drafts": 245
+    },
+    "OTJ": {
+      "controls": {
+        "A": {
+          "n": 3112,
+          "accuracy": 0.6042737789203085,
+          "margin": 0.029553383434755873,
+          "pairLogLoss": 0.7175202209991351
+        },
+        "B": {
+          "n": 3112,
+          "accuracy": 0.5886889460154242,
+          "margin": 0.020909699375315196,
+          "pairLogLoss": 0.6599302331813173
+        },
+        "C": {
+          "n": 3112,
+          "accuracy": 0.6118251928020566,
+          "margin": 0.02232666305080297,
+          "pairLogLoss": 0.657813429281658
+        },
+        "generic": {
+          "n": 3112,
+          "accuracy": 0.6744858611825193,
+          "margin": 0.04857038998139747,
+          "pairLogLoss": 0.6248373973566127
+        },
+        "current-optimizer": {
+          "n": 3112,
+          "accuracy": 0.5187982005141388,
+          "margin": 0.03759640102827763,
+          "pairLogLoss": 0.8244538426642397
+        },
+        "current-D": {
+          "n": 3112,
+          "accuracy": 0.5898136246786633,
+          "margin": 0.0350068776167461,
+          "pairLogLoss": 0.6896967924455384
+        }
+      },
+      "families": {
+        "A": {
+          "n": 3112,
+          "accuracy": 0.5713367609254498,
+          "declinedPairs": 67,
+          "fullyExperimentalPairs": 3045
+        },
+        "B": {
+          "n": 3112,
+          "accuracy": 0.5703727506426736,
+          "declinedPairs": 67,
+          "fullyExperimentalPairs": 3045
+        },
+        "C": {
+          "n": 3112,
+          "accuracy": 0.5931876606683805,
+          "declinedPairs": 67,
+          "fullyExperimentalPairs": 3045
+        }
+      },
+      "drafts": 262
+    },
+    "ONE": {
+      "controls": {
+        "A": {
+          "n": 2253,
+          "accuracy": 0.5945406125166445,
+          "margin": 0.04489061408962099,
+          "pairLogLoss": 0.7024891034445074
+        },
+        "B": {
+          "n": 2253,
+          "accuracy": 0.5832223701731025,
+          "margin": 0.01809707959113329,
+          "pairLogLoss": 0.6649202113230168
+        },
+        "C": {
+          "n": 2253,
+          "accuracy": 0.6120727918331114,
+          "margin": 0.020258989783559864,
+          "pairLogLoss": 0.6607635767679629
+        },
+        "generic": {
+          "n": 2253,
+          "accuracy": 0.6249445184198846,
+          "margin": 0.036817467596798,
+          "pairLogLoss": 0.6484663224199407
+        },
+        "current-optimizer": {
+          "n": 2253,
+          "accuracy": 0.5130936529072347,
+          "margin": 0.026187305814469597,
+          "pairLogLoss": 0.8777792742950626
+        },
+        "current-D": {
+          "n": 2253,
+          "accuracy": 0.5719041278295606,
+          "margin": 0.032110005806549775,
+          "pairLogLoss": 0.714790323791282
+        }
+      },
+      "families": {
+        "A": {
+          "n": 2253,
+          "accuracy": 0.560363959165557,
+          "declinedPairs": 40,
+          "fullyExperimentalPairs": 2213
+        },
+        "B": {
+          "n": 2253,
+          "accuracy": 0.5616955170883267,
+          "declinedPairs": 40,
+          "fullyExperimentalPairs": 2213
+        },
+        "C": {
+          "n": 2253,
+          "accuracy": 0.571682201509099,
+          "declinedPairs": 40,
+          "fullyExperimentalPairs": 2213
+        }
+      },
+      "drafts": 207
+    },
+    "MOM": {
+      "controls": {
+        "A": {
+          "n": 2965,
+          "accuracy": 0.5983136593591906,
+          "margin": 0.014891242294069108,
+          "pairLogLoss": 0.7360845633356224
+        },
+        "B": {
+          "n": 2965,
+          "accuracy": 0.5581787521079258,
+          "margin": 0.014614618939427285,
+          "pairLogLoss": 0.6707941210708213
+        },
+        "C": {
+          "n": 2965,
+          "accuracy": 0.5699831365935919,
+          "margin": 0.014908181437517294,
+          "pairLogLoss": 0.6706180907604052
+        },
+        "generic": {
+          "n": 2965,
+          "accuracy": 0.6600337268128161,
+          "margin": 0.04476639002390181,
+          "pairLogLoss": 0.6348494003046379
+        },
+        "current-optimizer": {
+          "n": 2965,
+          "accuracy": 0.502866779089376,
+          "margin": 0.005733558178752108,
+          "pairLogLoss": 0.8689232854985439
+        },
+        "current-D": {
+          "n": 2965,
+          "accuracy": 0.5563237774030354,
+          "margin": 0.019163729347090167,
+          "pairLogLoss": 0.7323019190022402
+        }
+      },
+      "families": {
+        "A": {
+          "n": 2965,
+          "accuracy": 0.5495784148397976,
+          "declinedPairs": 68,
+          "fullyExperimentalPairs": 2897
+        },
+        "B": {
+          "n": 2965,
+          "accuracy": 0.5549747048903878,
+          "declinedPairs": 68,
+          "fullyExperimentalPairs": 2897
+        },
+        "C": {
+          "n": 2965,
+          "accuracy": 0.5674536256323778,
+          "declinedPairs": 68,
+          "fullyExperimentalPairs": 2897
+        }
+      },
+      "drafts": 219
+    }
+  },
+  "clustered": {
+    "DMU": {
+      "A": {
+        "draftMacro": 0.5676036692192556,
+        "accuracyInterval": [
+          0.5471066600295609,
+          0.5913888094636255
+        ],
+        "pairedControls": {
+          "current-D": {
+            "draftMacroGain": -0.02284698759031315,
+            "gainInterval": [
+              -0.045677110306328324,
+              -0.0017214821709011826
+            ]
+          },
+          "generic": {
+            "draftMacroGain": -0.10001242422109093,
+            "gainInterval": [
+              -0.1203898640205609,
+              -0.07846516270384682
+            ]
+          }
+        },
+        "interpretation": "500 paired whole-draft resamples; equal draft weighting within each set, distinct from primary pair-weighted set mean. Shared cards/pairs stay in the draft cluster; no independent-pair significance claim."
+      },
+      "B": {
+        "draftMacro": 0.5613370186726203,
+        "accuracyInterval": [
+          0.5407692848244721,
+          0.5828241318138752
+        ],
+        "pairedControls": {
+          "current-D": {
+            "draftMacroGain": -0.029113638136948415,
+            "gainInterval": [
+              -0.054562857229492064,
+              -0.005417989915943116
+            ]
+          },
+          "generic": {
+            "draftMacroGain": -0.1062790747677262,
+            "gainInterval": [
+              -0.12591162657494304,
+              -0.08467944678136141
+            ]
+          }
+        },
+        "interpretation": "500 paired whole-draft resamples; equal draft weighting within each set, distinct from primary pair-weighted set mean. Shared cards/pairs stay in the draft cluster; no independent-pair significance claim."
+      },
+      "C": {
+        "draftMacro": 0.5817910695579466,
+        "accuracyInterval": [
+          0.5614586226369404,
+          0.6034581814970683
+        ],
+        "pairedControls": {
+          "current-D": {
+            "draftMacroGain": -0.00865958725162215,
+            "gainInterval": [
+              -0.033410043052931604,
+              0.014460943678663346
+            ]
+          },
+          "generic": {
+            "draftMacroGain": -0.08582502388239993,
+            "gainInterval": [
+              -0.10831848622283516,
+              -0.062169767424550854
+            ]
+          }
+        },
+        "interpretation": "500 paired whole-draft resamples; equal draft weighting within each set, distinct from primary pair-weighted set mean. Shared cards/pairs stay in the draft cluster; no independent-pair significance claim."
+      }
+    },
+    "BRO": {
+      "A": {
+        "draftMacro": 0.5638486584949041,
+        "accuracyInterval": [
+          0.545811552046654,
+          0.5828149527379546
+        ],
+        "pairedControls": {
+          "current-D": {
+            "draftMacroGain": 0.012991843576726092,
+            "gainInterval": [
+              -0.007464766970906756,
+              0.031220780587623783
+            ]
+          },
+          "generic": {
+            "draftMacroGain": -0.06579455744130952,
+            "gainInterval": [
+              -0.08931004983044029,
+              -0.04301414676428945
+            ]
+          }
+        },
+        "interpretation": "500 paired whole-draft resamples; equal draft weighting within each set, distinct from primary pair-weighted set mean. Shared cards/pairs stay in the draft cluster; no independent-pair significance claim."
+      },
+      "B": {
+        "draftMacro": 0.5637829393969626,
+        "accuracyInterval": [
+          0.5452388975430406,
+          0.5829186695593938
+        ],
+        "pairedControls": {
+          "current-D": {
+            "draftMacroGain": 0.012926124478784596,
+            "gainInterval": [
+              -0.00836134396918324,
+              0.03255775428673651
+            ]
+          },
+          "generic": {
+            "draftMacroGain": -0.06586027653925101,
+            "gainInterval": [
+              -0.08847966395865733,
+              -0.04360095618525508
+            ]
+          }
+        },
+        "interpretation": "500 paired whole-draft resamples; equal draft weighting within each set, distinct from primary pair-weighted set mean. Shared cards/pairs stay in the draft cluster; no independent-pair significance claim."
+      },
+      "C": {
+        "draftMacro": 0.5831633292660743,
+        "accuracyInterval": [
+          0.5651938807738122,
+          0.602732348056099
+        ],
+        "pairedControls": {
+          "current-D": {
+            "draftMacroGain": 0.03230651434789627,
+            "gainInterval": [
+              0.013005097740840833,
+              0.05331143667995492
+            ]
+          },
+          "generic": {
+            "draftMacroGain": -0.04647988667013934,
+            "gainInterval": [
+              -0.06912893495401413,
+              -0.02494019637311037
+            ]
+          }
+        },
+        "interpretation": "500 paired whole-draft resamples; equal draft weighting within each set, distinct from primary pair-weighted set mean. Shared cards/pairs stay in the draft cluster; no independent-pair significance claim."
+      }
+    },
+    "WOE": {
+      "A": {
+        "draftMacro": 0.5943671625640056,
+        "accuracyInterval": [
+          0.5724311274422315,
+          0.6175728975423639
+        ],
+        "pairedControls": {
+          "current-D": {
+            "draftMacroGain": -0.008476939943693711,
+            "gainInterval": [
+              -0.030610423192380436,
+              0.014892766172538749
+            ]
+          },
+          "generic": {
+            "draftMacroGain": -0.05072784871670747,
+            "gainInterval": [
+              -0.07212694980197047,
+              -0.029464420128113195
+            ]
+          }
+        },
+        "interpretation": "500 paired whole-draft resamples; equal draft weighting within each set, distinct from primary pair-weighted set mean. Shared cards/pairs stay in the draft cluster; no independent-pair significance claim."
+      },
+      "B": {
+        "draftMacro": 0.5906400900086459,
+        "accuracyInterval": [
+          0.5678155368541535,
+          0.6141452687470302
+        ],
+        "pairedControls": {
+          "current-D": {
+            "draftMacroGain": -0.012204012499053256,
+            "gainInterval": [
+              -0.034401373886241954,
+              0.011770421664308172
+            ]
+          },
+          "generic": {
+            "draftMacroGain": -0.054454921272067004,
+            "gainInterval": [
+              -0.0763913697932035,
+              -0.03226315075471273
+            ]
+          }
+        },
+        "interpretation": "500 paired whole-draft resamples; equal draft weighting within each set, distinct from primary pair-weighted set mean. Shared cards/pairs stay in the draft cluster; no independent-pair significance claim."
+      },
+      "C": {
+        "draftMacro": 0.5948053813515582,
+        "accuracyInterval": [
+          0.5730826953895498,
+          0.6173258556391039
+        ],
+        "pairedControls": {
+          "current-D": {
+            "draftMacroGain": -0.008038721156140991,
+            "gainInterval": [
+              -0.030392059843167753,
+              0.016186615091353936
+            ]
+          },
+          "generic": {
+            "draftMacroGain": -0.05028962992915474,
+            "gainInterval": [
+              -0.07233671025217718,
+              -0.02783409440663325
+            ]
+          }
+        },
+        "interpretation": "500 paired whole-draft resamples; equal draft weighting within each set, distinct from primary pair-weighted set mean. Shared cards/pairs stay in the draft cluster; no independent-pair significance claim."
+      }
+    },
+    "LCI": {
+      "A": {
+        "draftMacro": 0.5904902309632254,
+        "accuracyInterval": [
+          0.5732424470632157,
+          0.6090979319850705
+        ],
+        "pairedControls": {
+          "current-D": {
+            "draftMacroGain": -0.012077164762097468,
+            "gainInterval": [
+              -0.033692426262413595,
+              0.00897739254680748
+            ]
+          },
+          "generic": {
+            "draftMacroGain": -0.07692376357423251,
+            "gainInterval": [
+              -0.09776309044328285,
+              -0.055146360508911044
+            ]
+          }
+        },
+        "interpretation": "500 paired whole-draft resamples; equal draft weighting within each set, distinct from primary pair-weighted set mean. Shared cards/pairs stay in the draft cluster; no independent-pair significance claim."
+      },
+      "B": {
+        "draftMacro": 0.5886162158569928,
+        "accuracyInterval": [
+          0.5705313797372751,
+          0.607267413546323
+        ],
+        "pairedControls": {
+          "current-D": {
+            "draftMacroGain": -0.013951179868330154,
+            "gainInterval": [
+              -0.03557570825652406,
+              0.006405661154194122
+            ]
+          },
+          "generic": {
+            "draftMacroGain": -0.07879777868046518,
+            "gainInterval": [
+              -0.09947147974730815,
+              -0.05755172459164763
+            ]
+          }
+        },
+        "interpretation": "500 paired whole-draft resamples; equal draft weighting within each set, distinct from primary pair-weighted set mean. Shared cards/pairs stay in the draft cluster; no independent-pair significance claim."
+      },
+      "C": {
+        "draftMacro": 0.593192227677457,
+        "accuracyInterval": [
+          0.5733337307578413,
+          0.613559253532532
+        ],
+        "pairedControls": {
+          "current-D": {
+            "draftMacroGain": -0.00937516804786582,
+            "gainInterval": [
+              -0.035921718343814975,
+              0.014678034559607808
+            ]
+          },
+          "generic": {
+            "draftMacroGain": -0.07422176686000086,
+            "gainInterval": [
+              -0.09702874517239674,
+              -0.05206537720206484
+            ]
+          }
+        },
+        "interpretation": "500 paired whole-draft resamples; equal draft weighting within each set, distinct from primary pair-weighted set mean. Shared cards/pairs stay in the draft cluster; no independent-pair significance claim."
+      }
+    },
+    "MKM": {
+      "A": {
+        "draftMacro": 0.5802550357472327,
+        "accuracyInterval": [
+          0.5580805797218987,
+          0.6006449116734607
+        ],
+        "pairedControls": {
+          "current-D": {
+            "draftMacroGain": -0.039126455277415664,
+            "gainInterval": [
+              -0.05765488987386496,
+              -0.02046346190823983
+            ]
+          },
+          "generic": {
+            "draftMacroGain": -0.10344627827821104,
+            "gainInterval": [
+              -0.12602828857567003,
+              -0.08137191040252266
+            ]
+          }
+        },
+        "interpretation": "500 paired whole-draft resamples; equal draft weighting within each set, distinct from primary pair-weighted set mean. Shared cards/pairs stay in the draft cluster; no independent-pair significance claim."
+      },
+      "B": {
+        "draftMacro": 0.5806728718793545,
+        "accuracyInterval": [
+          0.5587510446611211,
+          0.6018293676403296
+        ],
+        "pairedControls": {
+          "current-D": {
+            "draftMacroGain": -0.03870861914529382,
+            "gainInterval": [
+              -0.05711569999711506,
+              -0.019982552948751946
+            ]
+          },
+          "generic": {
+            "draftMacroGain": -0.10302844214608921,
+            "gainInterval": [
+              -0.1255603475864205,
+              -0.08066627937388743
+            ]
+          }
+        },
+        "interpretation": "500 paired whole-draft resamples; equal draft weighting within each set, distinct from primary pair-weighted set mean. Shared cards/pairs stay in the draft cluster; no independent-pair significance claim."
+      },
+      "C": {
+        "draftMacro": 0.5961713773088322,
+        "accuracyInterval": [
+          0.5744823159491902,
+          0.6204759201091359
+        ],
+        "pairedControls": {
+          "current-D": {
+            "draftMacroGain": -0.023210113715815994,
+            "gainInterval": [
+              -0.04528563636576843,
+              -0.0022763043029399594
+            ]
+          },
+          "generic": {
+            "draftMacroGain": -0.08752993671661137,
+            "gainInterval": [
+              -0.11547588409323102,
+              -0.06252496306547929
+            ]
+          }
+        },
+        "interpretation": "500 paired whole-draft resamples; equal draft weighting within each set, distinct from primary pair-weighted set mean. Shared cards/pairs stay in the draft cluster; no independent-pair significance claim."
+      }
+    },
+    "OTJ": {
+      "A": {
+        "draftMacro": 0.5862408781514612,
+        "accuracyInterval": [
+          0.5666392444659596,
+          0.6052530606214997
+        ],
+        "pairedControls": {
+          "current-D": {
+            "draftMacroGain": -0.017579761661515494,
+            "gainInterval": [
+              -0.037084017748118106,
+              0.0016533065386346965
+            ]
+          },
+          "generic": {
+            "draftMacroGain": -0.09509529528273768,
+            "gainInterval": [
+              -0.11912526996736118,
+              -0.07006687659871226
+            ]
+          }
+        },
+        "interpretation": "500 paired whole-draft resamples; equal draft weighting within each set, distinct from primary pair-weighted set mean. Shared cards/pairs stay in the draft cluster; no independent-pair significance claim."
+      },
+      "B": {
+        "draftMacro": 0.5855276620229176,
+        "accuracyInterval": [
+          0.56476094099413,
+          0.603697034613355
+        ],
+        "pairedControls": {
+          "current-D": {
+            "draftMacroGain": -0.018292977790059065,
+            "gainInterval": [
+              -0.03941153214249322,
+              0.0011098722694154195
+            ]
+          },
+          "generic": {
+            "draftMacroGain": -0.09580851141128124,
+            "gainInterval": [
+              -0.11975245395399589,
+              -0.07152234507004504
+            ]
+          }
+        },
+        "interpretation": "500 paired whole-draft resamples; equal draft weighting within each set, distinct from primary pair-weighted set mean. Shared cards/pairs stay in the draft cluster; no independent-pair significance claim."
+      },
+      "C": {
+        "draftMacro": 0.5989638830109695,
+        "accuracyInterval": [
+          0.5781963164262839,
+          0.6207435057670136
+        ],
+        "pairedControls": {
+          "current-D": {
+            "draftMacroGain": -0.004856756802007078,
+            "gainInterval": [
+              -0.030159801948462493,
+              0.02036100974645829
+            ]
+          },
+          "generic": {
+            "draftMacroGain": -0.08237229042322926,
+            "gainInterval": [
+              -0.1068006881809396,
+              -0.053465906303642396
+            ]
+          }
+        },
+        "interpretation": "500 paired whole-draft resamples; equal draft weighting within each set, distinct from primary pair-weighted set mean. Shared cards/pairs stay in the draft cluster; no independent-pair significance claim."
+      }
+    },
+    "ONE": {
+      "A": {
+        "draftMacro": 0.5716873306527589,
+        "accuracyInterval": [
+          0.5435493331397123,
+          0.6001744319002768
+        ],
+        "pairedControls": {
+          "current-D": {
+            "draftMacroGain": -0.010795774811512688,
+            "gainInterval": [
+              -0.03600614594710788,
+              0.014054417961614413
+            ]
+          },
+          "generic": {
+            "draftMacroGain": -0.06546125432808253,
+            "gainInterval": [
+              -0.09152336170665241,
+              -0.039038299666412486
+            ]
+          }
+        },
+        "interpretation": "500 paired whole-draft resamples; equal draft weighting within each set, distinct from primary pair-weighted set mean. Shared cards/pairs stay in the draft cluster; no independent-pair significance claim."
+      },
+      "B": {
+        "draftMacro": 0.5719833731376335,
+        "accuracyInterval": [
+          0.5439162006075944,
+          0.600797626758606
+        ],
+        "pairedControls": {
+          "current-D": {
+            "draftMacroGain": -0.010499732326638147,
+            "gainInterval": [
+              -0.03569683127481676,
+              0.012899602134729387
+            ]
+          },
+          "generic": {
+            "draftMacroGain": -0.06516521184320799,
+            "gainInterval": [
+              -0.09070585904747916,
+              -0.038887114604706424
+            ]
+          }
+        },
+        "interpretation": "500 paired whole-draft resamples; equal draft weighting within each set, distinct from primary pair-weighted set mean. Shared cards/pairs stay in the draft cluster; no independent-pair significance claim."
+      },
+      "C": {
+        "draftMacro": 0.5783614086615837,
+        "accuracyInterval": [
+          0.5536227701323174,
+          0.6078579938576307
+        ],
+        "pairedControls": {
+          "current-D": {
+            "draftMacroGain": -0.004121696802687967,
+            "gainInterval": [
+              -0.03030682670249738,
+              0.023537203364183485
+            ]
+          },
+          "generic": {
+            "draftMacroGain": -0.058787176319257804,
+            "gainInterval": [
+              -0.0833025611536697,
+              -0.029512605050888315
+            ]
+          }
+        },
+        "interpretation": "500 paired whole-draft resamples; equal draft weighting within each set, distinct from primary pair-weighted set mean. Shared cards/pairs stay in the draft cluster; no independent-pair significance claim."
+      }
+    },
+    "MOM": {
+      "A": {
+        "draftMacro": 0.5561460400604873,
+        "accuracyInterval": [
+          0.5339004204765316,
+          0.5764627650494841
+        ],
+        "pairedControls": {
+          "current-D": {
+            "draftMacroGain": -0.004828658707640003,
+            "gainInterval": [
+              -0.02600481814176998,
+              0.014899149717771424
+            ]
+          },
+          "generic": {
+            "draftMacroGain": -0.1069438307618998,
+            "gainInterval": [
+              -0.1283403103672994,
+              -0.0858929267883674
+            ]
+          }
+        },
+        "interpretation": "500 paired whole-draft resamples; equal draft weighting within each set, distinct from primary pair-weighted set mean. Shared cards/pairs stay in the draft cluster; no independent-pair significance claim."
+      },
+      "B": {
+        "draftMacro": 0.5608995169533678,
+        "accuracyInterval": [
+          0.538527436096857,
+          0.5815317871798016
+        ],
+        "pairedControls": {
+          "current-D": {
+            "draftMacroGain": -7.51818147594038e-05,
+            "gainInterval": [
+              -0.019599113823025992,
+              0.021247107273802104
+            ]
+          },
+          "generic": {
+            "draftMacroGain": -0.10219035386901919,
+            "gainInterval": [
+              -0.12335112366596952,
+              -0.08130763444344916
+            ]
+          }
+        },
+        "interpretation": "500 paired whole-draft resamples; equal draft weighting within each set, distinct from primary pair-weighted set mean. Shared cards/pairs stay in the draft cluster; no independent-pair significance claim."
+      },
+      "C": {
+        "draftMacro": 0.5740272426412636,
+        "accuracyInterval": [
+          0.5527421434668947,
+          0.5943791302898254
+        ],
+        "pairedControls": {
+          "current-D": {
+            "draftMacroGain": 0.013052543873136348,
+            "gainInterval": [
+              -0.01097038645443741,
+              0.038084322835949015
+            ]
+          },
+          "generic": {
+            "draftMacroGain": -0.08906262818112347,
+            "gainInterval": [
+              -0.11206810351787742,
+              -0.06651580092555777
+            ]
+          }
+        },
+        "interpretation": "500 paired whole-draft resamples; equal draft weighting within each set, distinct from primary pair-weighted set mean. Shared cards/pairs stay in the draft cluster; no independent-pair significance claim."
+      }
+    }
+  },
+  "seconds": 221.9904283999931,
+  "coverageFrozen": true
+}

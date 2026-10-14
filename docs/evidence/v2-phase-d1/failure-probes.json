@@ -1,0 +1,18 @@
+{
+  "emptyPoolExactFallback": true,
+  "missingCardDeclined": true,
+  "candidateNeverChangesPool": true,
+  "twentyObservationCardConfidenceAtMost20Over70": true,
+  "zeroObservedCardConfidence": true,
+  "twoOfTwoPairZero": true,
+  "boundedFitConfidence": true,
+  "falseFactorNoUtilitySuppressed": true,
+  "unstableFactorSuppressed": true,
+  "hybridBeliefsSoft": "True",
+  "splashDoesNotChangeBaseShell": true,
+  "baselineUtilityNotGuaranteedByStableFactors": true,
+  "goodStuffRequiresUtility": true,
+  "noSetNameBranch": true,
+  "activeMultiArchetypeBenefitDemonstrated": false,
+  "offArchetypeSameColorSeparationQualified": false
+}

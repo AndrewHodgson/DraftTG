@@ -1,0 +1,47 @@
+{
+  "datasets": [
+    {
+      "set": "DMU",
+      "jobs": 277,
+      "originalPairsSha256": "562c5ebfd6c871900a810afae4c46d663fd6804b164ff48b477a62199f679cb7"
+    },
+    {
+      "set": "BRO",
+      "jobs": 249,
+      "originalPairsSha256": "c39cb6f3534a3976b4ce874b883b5b5d57255444e439876cada2f788d5c7c476"
+    },
+    {
+      "set": "WOE",
+      "jobs": 256,
+      "originalPairsSha256": "6548d9790c444c4c6a6795d24eaf831beef10f3bbea10b548d7b304bb3ec5648"
+    },
+    {
+      "set": "LCI",
+      "jobs": 239,
+      "originalPairsSha256": "76b7b228814dc4978c272b095972c085ef1583c668dd04bfae94f2ddea806b52"
+    },
+    {
+      "set": "MKM",
+      "jobs": 245,
+      "originalPairsSha256": "978136ca94227526ba3bad607b613b401af15cb7a37196f913c03041558ab336"
+    },
+    {
+      "set": "OTJ",
+      "jobs": 262,
+      "originalPairsSha256": "353fcab77814ee28b13b713cac08f8b2d7a79822eb669cec5c4143f6168cea9a"
+    },
+    {
+      "set": "ONE",
+      "jobs": 207,
+      "originalPairsSha256": "df42fa3ca4183cbf2ed815460035994fcc36ff748a900de8aa9a50724ff2966f"
+    },
+    {
+      "set": "MOM",
+      "jobs": 219,
+      "originalPairsSha256": "6b297f13a9b4d037d82a8f3361cb040908971e0973e499bab53b9191bff12c99"
+    }
+  ],
+  "frozenEModelSha256": "9f9f906aec7e9d0e6b5b1c8e3a70b0656ca136f2d9935b2f3830f694f3d1ec35",
+  "noNewMatching": true,
+  "labelsOutsideWorkers": true
+}

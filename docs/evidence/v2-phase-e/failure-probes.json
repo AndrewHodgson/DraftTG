@@ -1,0 +1,1729 @@
+{
+  "cases": {
+    "fifth-five-drop": {
+      "before": {
+        "D": {
+          "A": 0.4576032081694072,
+          "B": 0.5899663080248181,
+          "C": 0.5707998301377118
+        },
+        "P": {
+          "generic": 0.6026297031929919,
+          "A": 0.4576032081694072,
+          "B": 0.782562319242628,
+          "C": 0.7442293634684156
+        },
+        "features": {
+          "intercept": 1,
+          "Q": -0.12912664622383718,
+          "playable": 1.0,
+          "stage": 0.36363636363636365,
+          "mana": 0.5,
+          "manaUnknown": 0.0,
+          "creature": 1.0,
+          "land": 0.0,
+          "colorless": 0.0,
+          "multicolor": 0.0,
+          "pips": 0.5,
+          "pipUnknown": 0.0,
+          "offPips": 0.0,
+          "copyCount": 0.0,
+          "poolSize": 0.35555555555555557,
+          "projectedSpells": 0.6956521739130435,
+          "creatureCount": 1.0,
+          "early": 0.0,
+          "top": 0.0,
+          "earlyHole": 1.0,
+          "creatureHole": 0.0,
+          "topSaturation": 0.0,
+          "roleUnknown": 1.0,
+          "removal": 0,
+          "fixing": 0.0,
+          "roleKnown": 0.0,
+          "membership": 1.0,
+          "cutDelta": -0.12495766162247746,
+          "creatureDelta": 0.5,
+          "earlyDelta": 0.0,
+          "topDelta": 0.5,
+          "qualityDelta": 0.3708733537761635,
+          "colorChange": 0.0,
+          "curve0": 0.0,
+          "curve1": 0.0,
+          "curve2": 0.0,
+          "curve3": 2.6666666666666665,
+          "curve4": 0.0,
+          "curve5": 0.0,
+          "curve6": 0.0,
+          "curve7": 0.0,
+          "removalUnknown": 1.0,
+          "fixingUnknown": 1.0,
+          "tagCombatTrick": 0.0,
+          "unknownCombatTrick": 1.0,
+          "tagCardAdvantage": 0.0,
+          "unknownCardAdvantage": 1.0,
+          "tagRamp": 0.0,
+          "unknownRamp": 1.0,
+          "tagFinisher": 0.0,
+          "unknownFinisher": 1.0,
+          "tagDefensive": 0.0,
+          "unknownDefensive": 1.0,
+          "tagAggressive": 0.0,
+          "unknownAggressive": 1.0,
+          "tagFixing": 0.0,
+          "unknownFixing": 1.0,
+          "projectedRemoval": 0.0,
+          "removalHole": 1.0
+        },
+        "audit": {
+          "pair": [
+            0,
+            2
+          ],
+          "afterPair": [
+            0,
+            2
+          ],
+          "displaced": [],
+          "cutQ": 0.4958310153986403,
+          "selected": {
+            "335f3146-743c-4a25-86b5-c45e9c66eb15": 16
+          }
+        }
+      },
+      "after": {
+        "D": {
+          "A": 0.55,
+          "B": 0.6816071092101075,
+          "C": 0.678191091667389
+        },
+        "P": {
+          "generic": 0.6026297031929919,
+          "A": 0.55,
+          "B": 0.9658439216132068,
+          "C": 0.95901188652777
+        },
+        "features": {
+          "intercept": 1,
+          "Q": -0.12912664622383718,
+          "playable": 1.0,
+          "stage": 0.36363636363636365,
+          "mana": 0.5,
+          "manaUnknown": 0.0,
+          "creature": 1.0,
+          "land": 0.0,
+          "colorless": 0.0,
+          "multicolor": 0.0,
+          "pips": 0.5,
+          "pipUnknown": 0.0,
+          "offPips": 0.0,
+          "copyCount": 0.8,
+          "poolSize": 0.35555555555555557,
+          "projectedSpells": 0.6956521739130435,
+          "creatureCount": 1.0,
+          "early": 0.0,
+          "top": 0.6666666666666666,
+          "earlyHole": 1.0,
+          "creatureHole": 0.0,
+          "topSaturation": 0.0,
+          "roleUnknown": 1.0,
+          "removal": 0,
+          "fixing": 0.0,
+          "roleKnown": 0.0,
+          "membership": 1.0,
+          "cutDelta": 0.0,
+          "creatureDelta": 0.5,
+          "earlyDelta": 0.0,
+          "topDelta": 0.5,
+          "qualityDelta": 0.3708733537761626,
+          "colorChange": 0.0,
+          "curve0": 0.0,
+          "curve1": 0.0,
+          "curve2": 0.0,
+          "curve3": 2.0,
+          "curve4": 0.0,
+          "curve5": 0.6666666666666666,
+          "curve6": 0.0,
+          "curve7": 0.0,
+          "removalUnknown": 1.0,
+          "fixingUnknown": 1.0,
+          "tagCombatTrick": 0.0,
+          "unknownCombatTrick": 1.0,
+          "tagCardAdvantage": 0.0,
+          "unknownCardAdvantage": 1.0,
+          "tagRamp": 0.0,
+          "unknownRamp": 1.0,
+          "tagFinisher": 0.0,
+          "unknownFinisher": 1.0,
+          "tagDefensive": 0.0,
+          "unknownDefensive": 1.0,
+          "tagAggressive": 0.0,
+          "unknownAggressive": 1.0,
+          "tagFixing": 0.0,
+          "unknownFixing": 1.0,
+          "projectedRemoval": 0.0,
+          "removalHole": 1.0
+        },
+        "audit": {
+          "pair": [
+            0,
+            2
+          ],
+          "afterPair": [
+            0,
+            2
+          ],
+          "displaced": [],
+          "cutQ": 0.3708733537761628,
+          "selected": {
+            "335f3146-743c-4a25-86b5-c45e9c66eb15": 12,
+            "7c9231f0-7733-46d9-b9c6-c6c5b7fe65dd": 4
+          }
+        }
+      }
+    },
+    "missing-two-drop": {
+      "before": {
+        "D": {
+          "A": 0.8041082888238539,
+          "B": 0.5388398541001365,
+          "C": 0.5274935428753834
+        },
+        "P": {
+          "generic": 0.7608762047684411,
+          "A": 0.8041082888238539,
+          "B": 0.8385559129687139,
+          "C": 0.8158632905192079
+        },
+        "features": {
+          "intercept": 1,
+          "Q": 0.015143891902187567,
+          "playable": 1.0,
+          "stage": 0.36363636363636365,
+          "mana": 0.2,
+          "manaUnknown": 0.0,
+          "creature": 1.0,
+          "land": 0.0,
+          "colorless": 0.0,
+          "multicolor": 0.0,
+          "pips": 0.25,
+          "pipUnknown": 0.0,
+          "offPips": 0.0,
+          "copyCount": 0.0,
+          "poolSize": 0.35555555555555557,
+          "projectedSpells": 0.6956521739130435,
+          "creatureCount": 1.0,
+          "early": 0.0,
+          "top": 1.3333333333333333,
+          "earlyHole": 1.0,
+          "creatureHole": 0.0,
+          "topSaturation": 1.3333333333333333,
+          "roleUnknown": 1.0,
+          "removal": 0,
+          "fixing": 0.0,
+          "roleKnown": 0.0,
+          "membership": 1.0,
+          "cutDelta": 0.14427053812602475,
+          "creatureDelta": 0.5,
+          "earlyDelta": 0.5,
+          "topDelta": 0.0,
+          "qualityDelta": 0.5151438919021878,
+          "colorChange": 0.0,
+          "curve0": 0.0,
+          "curve1": 0.0,
+          "curve2": 0.0,
+          "curve3": 1.3333333333333333,
+          "curve4": 0.0,
+          "curve5": 1.3333333333333333,
+          "curve6": 0.0,
+          "curve7": 0.0,
+          "removalUnknown": 1.0,
+          "fixingUnknown": 1.0,
+          "tagCombatTrick": 0.0,
+          "unknownCombatTrick": 1.0,
+          "tagCardAdvantage": 0.0,
+          "unknownCardAdvantage": 1.0,
+          "tagRamp": 0.0,
+          "unknownRamp": 1.0,
+          "tagFinisher": 0.0,
+          "unknownFinisher": 1.0,
+          "tagDefensive": 0.0,
+          "unknownDefensive": 1.0,
+          "tagAggressive": 0.0,
+          "unknownAggressive": 1.0,
+          "tagFixing": 0.0,
+          "unknownFixing": 1.0,
+          "projectedRemoval": 0.0,
+          "removalHole": 1.0
+        },
+        "audit": {
+          "pair": [
+            0,
+            2
+          ],
+          "afterPair": [
+            0,
+            2
+          ],
+          "displaced": [],
+          "cutQ": 0.3708733537761628,
+          "selected": {
+            "335f3146-743c-4a25-86b5-c45e9c66eb15": 8,
+            "7c9231f0-7733-46d9-b9c6-c6c5b7fe65dd": 8
+          }
+        }
+      },
+      "after": {
+        "D": {
+          "A": 0.6541082888238539,
+          "B": 0.5990481633030965,
+          "C": 0.5949437231386638
+        },
+        "P": {
+          "generic": 0.7608762047684411,
+          "A": 0.6541082888238539,
+          "B": 0.9589725313746341,
+          "C": 0.9507636510457688
+        },
+        "features": {
+          "intercept": 1,
+          "Q": 0.015143891902187567,
+          "playable": 1.0,
+          "stage": 0.36363636363636365,
+          "mana": 0.2,
+          "manaUnknown": 0.0,
+          "creature": 1.0,
+          "land": 0.0,
+          "colorless": 0.0,
+          "multicolor": 0.0,
+          "pips": 0.25,
+          "pipUnknown": 0.0,
+          "offPips": 0.0,
+          "copyCount": 0.8,
+          "poolSize": 0.35555555555555557,
+          "projectedSpells": 0.6956521739130435,
+          "creatureCount": 1.0,
+          "early": 1.0,
+          "top": 1.3333333333333333,
+          "earlyHole": 0.0,
+          "creatureHole": 0.0,
+          "topSaturation": 1.3333333333333333,
+          "roleUnknown": 1.0,
+          "removal": 0,
+          "fixing": 0.0,
+          "roleKnown": 0.0,
+          "membership": 1.0,
+          "cutDelta": 0.14427053812602475,
+          "creatureDelta": 0.5,
+          "earlyDelta": 0.5,
+          "topDelta": 0.0,
+          "qualityDelta": 0.5151438919021878,
+          "colorChange": 0.0,
+          "curve0": 0.0,
+          "curve1": 0.0,
+          "curve2": 0.6666666666666666,
+          "curve3": 0.6666666666666666,
+          "curve4": 0.0,
+          "curve5": 1.3333333333333333,
+          "curve6": 0.0,
+          "curve7": 0.0,
+          "removalUnknown": 1.0,
+          "fixingUnknown": 1.0,
+          "tagCombatTrick": 0.0,
+          "unknownCombatTrick": 1.0,
+          "tagCardAdvantage": 0.0,
+          "unknownCardAdvantage": 1.0,
+          "tagRamp": 0.0,
+          "unknownRamp": 1.0,
+          "tagFinisher": 0.0,
+          "unknownFinisher": 1.0,
+          "tagDefensive": 0.0,
+          "unknownDefensive": 1.0,
+          "tagAggressive": 0.0,
+          "unknownAggressive": 1.0,
+          "tagFixing": 0.0,
+          "unknownFixing": 1.0,
+          "projectedRemoval": 0.0,
+          "removalHole": 1.0
+        },
+        "audit": {
+          "pair": [
+            0,
+            2
+          ],
+          "afterPair": [
+            0,
+            2
+          ],
+          "displaced": [],
+          "cutQ": 0.3708733537761628,
+          "selected": {
+            "c9e43116-a489-4557-a47f-623d915a2b79": 4,
+            "335f3146-743c-4a25-86b5-c45e9c66eb15": 4,
+            "7c9231f0-7733-46d9-b9c6-c6c5b7fe65dd": 8
+          }
+        }
+      }
+    },
+    "off-color-bomb": {
+      "D": {
+        "A": 0.2518804842514741,
+        "B": 0.48609401729909674,
+        "C": 0.5488839416525484
+      },
+      "P": {
+        "generic": 0.6050321686627644,
+        "A": 0.2518804842514741,
+        "B": 0.5772202032609579,
+        "C": 0.7028000519678613
+      },
+      "features": {
+        "intercept": 1,
+        "Q": 0.24453148501427724,
+        "playable": 0.0,
+        "stage": 0.5454545454545454,
+        "mana": 0.3,
+        "manaUnknown": 0.0,
+        "creature": 1.0,
+        "land": 0.0,
+        "colorless": 0.0,
+        "multicolor": 0.0,
+        "pips": 0.5,
+        "pipUnknown": 0.0,
+        "offPips": 0.5,
+        "copyCount": 0.0,
+        "poolSize": 0.5333333333333333,
+        "projectedSpells": 1.0,
+        "creatureCount": 1.4375,
+        "early": 1.0,
+        "top": 0.0,
+        "earlyHole": 0.0,
+        "creatureHole": 0.0,
+        "topSaturation": 0.0,
+        "roleUnknown": 1.0,
+        "removal": 0,
+        "fixing": 0.0,
+        "roleKnown": 0.0,
+        "membership": 1.0,
+        "cutDelta": 0.24870046961563697,
+        "creatureDelta": 0.0,
+        "earlyDelta": 0.0,
+        "topDelta": 0.0,
+        "qualityDelta": 0.2487004696156383,
+        "colorChange": 1.0,
+        "curve0": 0.0,
+        "curve1": 0.0,
+        "curve2": 0.6666666666666666,
+        "curve3": 3.1666666666666665,
+        "curve4": 0.0,
+        "curve5": 0.0,
+        "curve6": 0.0,
+        "curve7": 0.0,
+        "removalUnknown": 1.0,
+        "fixingUnknown": 1.0,
+        "tagCombatTrick": 0.0,
+        "unknownCombatTrick": 1.0,
+        "tagCardAdvantage": 0.0,
+        "unknownCardAdvantage": 1.0,
+        "tagRamp": 0.0,
+        "unknownRamp": 1.0,
+        "tagFinisher": 0.0,
+        "unknownFinisher": 1.0,
+        "tagDefensive": 0.0,
+        "unknownDefensive": 1.0,
+        "tagAggressive": 0.0,
+        "unknownAggressive": 1.0,
+        "tagFixing": 0.0,
+        "unknownFixing": 1.0,
+        "projectedRemoval": 0.0,
+        "removalHole": 1.0
+      },
+      "audit": {
+        "pair": [
+          0,
+          2
+        ],
+        "afterPair": [
+          1,
+          2
+        ],
+        "displaced": [
+          "335f3146-743c-4a25-86b5-c45e9c66eb15"
+        ],
+        "cutQ": 0.4958310153986403,
+        "selected": {
+          "c9e43116-a489-4557-a47f-623d915a2b79": 4,
+          "335f3146-743c-4a25-86b5-c45e9c66eb15": 19
+        }
+      }
+    },
+    "creature-saturation": {
+      "before": {
+        "D": {
+          "A": 0.7797053539348648,
+          "B": 0.5255718786442717,
+          "C": 0.5129434726041211
+        },
+        "P": {
+          "generic": 0.802499582719923,
+          "A": 0.7797053539348648,
+          "B": 0.8536433400084664,
+          "C": 0.8283865279281651
+        },
+        "features": {
+          "intercept": 1,
+          "Q": 0.015143891902187567,
+          "playable": 1.0,
+          "stage": 0.18181818181818182,
+          "mana": 0.2,
+          "manaUnknown": 0.0,
+          "creature": 1.0,
+          "land": 0.0,
+          "colorless": 0.0,
+          "multicolor": 0.0,
+          "pips": 0.25,
+          "pipUnknown": 0.0,
+          "offPips": 0.0,
+          "copyCount": 0.0,
+          "poolSize": 0.17777777777777778,
+          "projectedSpells": 0.34782608695652173,
+          "creatureCount": 0.5,
+          "early": 0.0,
+          "top": 0.0,
+          "earlyHole": 1.0,
+          "creatureHole": 0.42857142857142855,
+          "topSaturation": 0.0,
+          "roleUnknown": 1.0,
+          "removal": 0,
+          "fixing": 0.0,
+          "roleKnown": 0.0,
+          "membership": 1.0,
+          "cutDelta": 0.019312876503547294,
+          "creatureDelta": 0.5,
+          "earlyDelta": 0.5,
+          "topDelta": 0.0,
+          "qualityDelta": 0.5151438919021878,
+          "colorChange": 0.0,
+          "curve0": 0.0,
+          "curve1": 0.0,
+          "curve2": 0.0,
+          "curve3": 1.3333333333333333,
+          "curve4": 0.0,
+          "curve5": 0.0,
+          "curve6": 0.0,
+          "curve7": 0.0,
+          "removalUnknown": 1.0,
+          "fixingUnknown": 1.0,
+          "tagCombatTrick": 0.0,
+          "unknownCombatTrick": 1.0,
+          "tagCardAdvantage": 0.0,
+          "unknownCardAdvantage": 1.0,
+          "tagRamp": 0.0,
+          "unknownRamp": 1.0,
+          "tagFinisher": 0.0,
+          "unknownFinisher": 1.0,
+          "tagDefensive": 0.0,
+          "unknownDefensive": 1.0,
+          "tagAggressive": 0.0,
+          "unknownAggressive": 1.0,
+          "tagFixing": 0.0,
+          "unknownFixing": 1.0,
+          "projectedRemoval": 0.0,
+          "removalHole": 1.0
+        },
+        "audit": {
+          "pair": [
+            0,
+            2
+          ],
+          "afterPair": [
+            0,
+            2
+          ],
+          "displaced": [],
+          "cutQ": 0.4958310153986403,
+          "selected": {
+            "335f3146-743c-4a25-86b5-c45e9c66eb15": 8
+          }
+        }
+      },
+      "after": {
+        "D": {
+          "A": 0.5654196396491505,
+          "B": 0.6278141062049416,
+          "C": 0.6243886379172251
+        },
+        "P": {
+          "generic": 0.7073245410740764,
+          "A": 0.5654196396491505,
+          "B": 0.9629527534839596,
+          "C": 0.9561018169085266
+        },
+        "features": {
+          "intercept": 1,
+          "Q": 0.015143891902187567,
+          "playable": 1.0,
+          "stage": 0.5681818181818182,
+          "mana": 0.2,
+          "manaUnknown": 0.0,
+          "creature": 1.0,
+          "land": 0.0,
+          "colorless": 0.0,
+          "multicolor": 0.0,
+          "pips": 0.25,
+          "pipUnknown": 0.0,
+          "offPips": 0.0,
+          "copyCount": 1.0,
+          "poolSize": 0.5555555555555556,
+          "projectedSpells": 1.0,
+          "creatureCount": 1.4375,
+          "early": 1.25,
+          "top": 0.0,
+          "earlyHole": 0.0,
+          "creatureHole": 0.0,
+          "topSaturation": 0.0,
+          "roleUnknown": 1.0,
+          "removal": 0,
+          "fixing": 0.0,
+          "roleKnown": 0.0,
+          "membership": 1.0,
+          "cutDelta": 0.019312876503547294,
+          "creatureDelta": 0.0,
+          "earlyDelta": 0.5,
+          "topDelta": 0.0,
+          "qualityDelta": 0.019312876503546406,
+          "colorChange": 0.0,
+          "curve0": 0.0,
+          "curve1": 0.0,
+          "curve2": 0.8333333333333334,
+          "curve3": 3.0,
+          "curve4": 0.0,
+          "curve5": 0.0,
+          "curve6": 0.0,
+          "curve7": 0.0,
+          "removalUnknown": 1.0,
+          "fixingUnknown": 1.0,
+          "tagCombatTrick": 0.0,
+          "unknownCombatTrick": 1.0,
+          "tagCardAdvantage": 0.0,
+          "unknownCardAdvantage": 1.0,
+          "tagRamp": 0.0,
+          "unknownRamp": 1.0,
+          "tagFinisher": 0.0,
+          "unknownFinisher": 1.0,
+          "tagDefensive": 0.0,
+          "unknownDefensive": 1.0,
+          "tagAggressive": 0.0,
+          "unknownAggressive": 1.0,
+          "tagFixing": 0.0,
+          "unknownFixing": 1.0,
+          "projectedRemoval": 0.0,
+          "removalHole": 1.0
+        },
+        "audit": {
+          "pair": [
+            0,
+            2
+          ],
+          "afterPair": [
+            0,
+            2
+          ],
+          "displaced": [
+            "335f3146-743c-4a25-86b5-c45e9c66eb15"
+          ],
+          "cutQ": 0.4958310153986403,
+          "selected": {
+            "c9e43116-a489-4557-a47f-623d915a2b79": 5,
+            "335f3146-743c-4a25-86b5-c45e9c66eb15": 18
+          }
+        }
+      }
+    },
+    "creature-shortage": {
+      "creature": {
+        "D": {
+          "A": 0.7088720235112999,
+          "B": 0.48197252973926363,
+          "C": 0.4817979499976733
+        },
+        "P": {
+          "generic": 0.7379302468820383,
+          "A": 0.7088720235112999,
+          "B": 0.7018753063605656,
+          "C": 0.7015261468773849
+        },
+        "features": {
+          "intercept": 1,
+          "Q": 0.015143891902187567,
+          "playable": 1.0,
+          "stage": 0.45454545454545453,
+          "mana": 0.2,
+          "manaUnknown": 0.0,
+          "creature": 1.0,
+          "land": 0.0,
+          "colorless": 0.0,
+          "multicolor": 0.0,
+          "pips": 0.25,
+          "pipUnknown": 0.0,
+          "offPips": 0.0,
+          "copyCount": 0.0,
+          "poolSize": 0.4444444444444444,
+          "projectedSpells": 0.8695652173913043,
+          "creatureCount": 0.0,
+          "early": 5.0,
+          "top": 0.0,
+          "earlyHole": 0.0,
+          "creatureHole": 1.0,
+          "topSaturation": 0.0,
+          "roleUnknown": 1.0,
+          "removal": 0,
+          "fixing": 0.0,
+          "roleKnown": 0.0,
+          "membership": 1.0,
+          "cutDelta": 0.011097312384021563,
+          "creatureDelta": 0.5,
+          "earlyDelta": 0.5,
+          "topDelta": 0.0,
+          "qualityDelta": 0.5151438919021878,
+          "colorChange": 0.0,
+          "curve0": 0.0,
+          "curve1": 0.0,
+          "curve2": 3.3333333333333335,
+          "curve3": 0.0,
+          "curve4": 0.0,
+          "curve5": 0.0,
+          "curve6": 0.0,
+          "curve7": 0.0,
+          "removalUnknown": 1.0,
+          "fixingUnknown": 1.0,
+          "tagCombatTrick": 0.0,
+          "unknownCombatTrick": 1.0,
+          "tagCardAdvantage": 0.0,
+          "unknownCardAdvantage": 1.0,
+          "tagRamp": 0.0,
+          "unknownRamp": 1.0,
+          "tagFinisher": 0.0,
+          "unknownFinisher": 1.0,
+          "tagDefensive": 0.0,
+          "unknownDefensive": 1.0,
+          "tagAggressive": 0.0,
+          "unknownAggressive": 1.0,
+          "tagFixing": 0.0,
+          "unknownFixing": 1.0,
+          "projectedRemoval": 0.0,
+          "removalHole": 1.0
+        },
+        "audit": {
+          "pair": [
+            0,
+            2
+          ],
+          "afterPair": [
+            0,
+            2
+          ],
+          "displaced": [],
+          "cutQ": 0.504046579518166,
+          "selected": {
+            "6d872c10-4126-4130-a74a-1331ed418ca8": 20
+          }
+        }
+      },
+      "noncreature": {
+        "D": {
+          "A": 0.55,
+          "B": 0.6051496013823011,
+          "C": 0.6030344688618524
+        },
+        "P": {
+          "generic": 0.7267581671385193,
+          "A": 0.55,
+          "B": 0.9370573699031215,
+          "C": 0.9328271048622241
+        },
+        "features": {
+          "intercept": 1,
+          "Q": 0.004046579518166005,
+          "playable": 1.0,
+          "stage": 0.45454545454545453,
+          "mana": 0.2,
+          "manaUnknown": 0.0,
+          "creature": 0.0,
+          "land": 0.0,
+          "colorless": 0.0,
+          "multicolor": 0.0,
+          "pips": 0.25,
+          "pipUnknown": 0.0,
+          "offPips": 0.0,
+          "copyCount": 1.0,
+          "poolSize": 0.4444444444444444,
+          "projectedSpells": 0.8695652173913043,
+          "creatureCount": 0.0,
+          "early": 5.0,
+          "top": 0.0,
+          "earlyHole": 0.0,
+          "creatureHole": 1.0,
+          "topSaturation": 0.0,
+          "roleUnknown": 1.0,
+          "removal": 0,
+          "fixing": 0.0,
+          "roleKnown": 0.0,
+          "membership": 1.0,
+          "cutDelta": 0.0,
+          "creatureDelta": 0.0,
+          "earlyDelta": 0.5,
+          "topDelta": 0.0,
+          "qualityDelta": 0.5040465795181657,
+          "colorChange": 0.0,
+          "curve0": 0.0,
+          "curve1": 0.0,
+          "curve2": 3.3333333333333335,
+          "curve3": 0.0,
+          "curve4": 0.0,
+          "curve5": 0.0,
+          "curve6": 0.0,
+          "curve7": 0.0,
+          "removalUnknown": 1.0,
+          "fixingUnknown": 1.0,
+          "tagCombatTrick": 0.0,
+          "unknownCombatTrick": 1.0,
+          "tagCardAdvantage": 0.0,
+          "unknownCardAdvantage": 1.0,
+          "tagRamp": 0.0,
+          "unknownRamp": 1.0,
+          "tagFinisher": 0.0,
+          "unknownFinisher": 1.0,
+          "tagDefensive": 0.0,
+          "unknownDefensive": 1.0,
+          "tagAggressive": 0.0,
+          "unknownAggressive": 1.0,
+          "tagFixing": 0.0,
+          "unknownFixing": 1.0,
+          "projectedRemoval": 0.0,
+          "removalHole": 1.0
+        },
+        "audit": {
+          "pair": [
+            0,
+            2
+          ],
+          "afterPair": [
+            0,
+            2
+          ],
+          "displaced": [],
+          "cutQ": 0.504046579518166,
+          "selected": {
+            "6d872c10-4126-4130-a74a-1331ed418ca8": 20
+          }
+        }
+      }
+    },
+    "fixing-with-no-need": {
+      "observed": "Metadata-supported lands only; heuristic has no explicit castability-unlocking term. Fixing gain is not established by these probes.",
+      "qualified": false,
+      "result": {
+        "D": {
+          "A": 0.09765306899653257,
+          "B": 0.5860444661184033,
+          "C": 0.5786010325129873
+        },
+        "P": {
+          "generic": 0.620519913001652,
+          "A": 0.09765306899653257,
+          "B": 0.7926088452384586,
+          "C": 0.7777219780276268
+        },
+        "features": {
+          "intercept": 1,
+          "Q": -0.007102783024068304,
+          "playable": 1.0,
+          "stage": 0.5454545454545454,
+          "mana": 0.0,
+          "manaUnknown": 0.0,
+          "creature": 0.0,
+          "land": 1.0,
+          "colorless": 1.0,
+          "multicolor": 0.0,
+          "pips": 0.0,
+          "pipUnknown": 0.0,
+          "offPips": 0.0,
+          "copyCount": 0.0,
+          "poolSize": 0.5333333333333333,
+          "projectedSpells": 1.0,
+          "creatureCount": 1.4375,
+          "early": 1.0,
+          "top": 0.0,
+          "earlyHole": 0.0,
+          "creatureHole": 0.0,
+          "topSaturation": 0.0,
+          "roleUnknown": 0.0,
+          "removal": 0,
+          "fixing": 1.0,
+          "roleKnown": 1.0,
+          "membership": 0.0,
+          "cutDelta": -0.002933798422708578,
+          "creatureDelta": 0.0,
+          "earlyDelta": 0.0,
+          "topDelta": 0.0,
+          "qualityDelta": 0.0,
+          "colorChange": 0.0,
+          "curve0": 0.0,
+          "curve1": 0.0,
+          "curve2": 0.6666666666666666,
+          "curve3": 3.1666666666666665,
+          "curve4": 0.0,
+          "curve5": 0.0,
+          "curve6": 0.0,
+          "curve7": 0.0,
+          "removalUnknown": 1.0,
+          "fixingUnknown": 0.0,
+          "tagCombatTrick": 0.0,
+          "unknownCombatTrick": 1.0,
+          "tagCardAdvantage": 0.0,
+          "unknownCardAdvantage": 1.0,
+          "tagRamp": 0.0,
+          "unknownRamp": 1.0,
+          "tagFinisher": 0.0,
+          "unknownFinisher": 1.0,
+          "tagDefensive": 0.0,
+          "unknownDefensive": 1.0,
+          "tagAggressive": 0.0,
+          "unknownAggressive": 1.0,
+          "tagFixing": 1.0,
+          "unknownFixing": 0.0,
+          "projectedRemoval": 0.0,
+          "removalHole": 1.0
+        },
+        "audit": {
+          "pair": [
+            0,
+            2
+          ],
+          "afterPair": [
+            0,
+            2
+          ],
+          "displaced": [],
+          "cutQ": 0.4958310153986403,
+          "selected": {
+            "c9e43116-a489-4557-a47f-623d915a2b79": 4,
+            "335f3146-743c-4a25-86b5-c45e9c66eb15": 19
+          }
+        }
+      }
+    },
+    "fixing-enables-splash": {
+      "qualified": false,
+      "reason": "Experimental structural projections are conservative two-color builds; cannot establish multiple newly castable splash cards.",
+      "withoutSources": {
+        "D": {
+          "A": 0.24765306899653255,
+          "B": 0.6164518970240446,
+          "C": 0.6075851661430525
+        },
+        "P": {
+          "generic": 0.6488541395036563,
+          "A": 0.24765306899653255,
+          "B": 0.8817579335517455,
+          "C": 0.8640244717897614
+        },
+        "features": {
+          "intercept": 1,
+          "Q": -0.007102783024068304,
+          "playable": 1.0,
+          "stage": 0.45454545454545453,
+          "mana": 0.0,
+          "manaUnknown": 0.0,
+          "creature": 0.0,
+          "land": 1.0,
+          "colorless": 1.0,
+          "multicolor": 0.0,
+          "pips": 0.0,
+          "pipUnknown": 0.0,
+          "offPips": 0.0,
+          "copyCount": 0.0,
+          "poolSize": 0.4444444444444444,
+          "projectedSpells": 0.8695652173913043,
+          "creatureCount": 1.25,
+          "early": 0.0,
+          "top": 0.0,
+          "earlyHole": 1.0,
+          "creatureHole": 0.0,
+          "topSaturation": 0.0,
+          "roleUnknown": 0.0,
+          "removal": 0,
+          "fixing": 1.0,
+          "roleKnown": 1.0,
+          "membership": 0.0,
+          "cutDelta": -0.002933798422708578,
+          "creatureDelta": 0.0,
+          "earlyDelta": 0.0,
+          "topDelta": 0.0,
+          "qualityDelta": 0.0,
+          "colorChange": 0.0,
+          "curve0": 0.0,
+          "curve1": 0.0,
+          "curve2": 0.0,
+          "curve3": 3.3333333333333335,
+          "curve4": 0.0,
+          "curve5": 0.0,
+          "curve6": 0.0,
+          "curve7": 0.0,
+          "removalUnknown": 1.0,
+          "fixingUnknown": 0.0,
+          "tagCombatTrick": 0.0,
+          "unknownCombatTrick": 1.0,
+          "tagCardAdvantage": 0.0,
+          "unknownCardAdvantage": 1.0,
+          "tagRamp": 0.0,
+          "unknownRamp": 1.0,
+          "tagFinisher": 0.0,
+          "unknownFinisher": 1.0,
+          "tagDefensive": 0.0,
+          "unknownDefensive": 1.0,
+          "tagAggressive": 0.0,
+          "unknownAggressive": 1.0,
+          "tagFixing": 1.0,
+          "unknownFixing": 0.0,
+          "projectedRemoval": 0.0,
+          "removalHole": 1.0
+        },
+        "audit": {
+          "pair": [
+            1,
+            2
+          ],
+          "afterPair": [
+            1,
+            2
+          ],
+          "displaced": [],
+          "cutQ": 0.4958310153986403,
+          "selected": {
+            "211a9db2-8b5f-419d-8032-ac2a571dbb53": 4,
+            "335f3146-743c-4a25-86b5-c45e9c66eb15": 16
+          }
+        }
+      },
+      "withSources": {
+        "D": {
+          "A": 0.24765306899653255,
+          "B": 0.6714972693119862,
+          "C": 0.6688731857094209
+        },
+        "P": {
+          "generic": 0.6276896888154218,
+          "A": 0.24765306899653255,
+          "B": 0.9706842274393941,
+          "C": 0.9654360602342635
+        },
+        "features": {
+          "intercept": 1,
+          "Q": -0.007102783024068304,
+          "playable": 1.0,
+          "stage": 0.5227272727272727,
+          "mana": 0.0,
+          "manaUnknown": 0.0,
+          "creature": 0.0,
+          "land": 1.0,
+          "colorless": 1.0,
+          "multicolor": 0.0,
+          "pips": 0.0,
+          "pipUnknown": 0.0,
+          "offPips": 0.0,
+          "copyCount": 0.6,
+          "poolSize": 0.5111111111111111,
+          "projectedSpells": 0.8695652173913043,
+          "creatureCount": 1.25,
+          "early": 0.0,
+          "top": 0.0,
+          "earlyHole": 1.0,
+          "creatureHole": 0.0,
+          "topSaturation": 0.0,
+          "roleUnknown": 0.0,
+          "removal": 0,
+          "fixing": 1.0,
+          "roleKnown": 1.0,
+          "membership": 0.0,
+          "cutDelta": -0.002933798422708578,
+          "creatureDelta": 0.0,
+          "earlyDelta": 0.0,
+          "topDelta": 0.0,
+          "qualityDelta": 0.0,
+          "colorChange": 0.0,
+          "curve0": 0.0,
+          "curve1": 0.0,
+          "curve2": 0.0,
+          "curve3": 3.3333333333333335,
+          "curve4": 0.0,
+          "curve5": 0.0,
+          "curve6": 0.0,
+          "curve7": 0.0,
+          "removalUnknown": 1.0,
+          "fixingUnknown": 0.0,
+          "tagCombatTrick": 0.0,
+          "unknownCombatTrick": 1.0,
+          "tagCardAdvantage": 0.0,
+          "unknownCardAdvantage": 1.0,
+          "tagRamp": 0.0,
+          "unknownRamp": 1.0,
+          "tagFinisher": 0.0,
+          "unknownFinisher": 1.0,
+          "tagDefensive": 0.0,
+          "unknownDefensive": 1.0,
+          "tagAggressive": 0.0,
+          "unknownAggressive": 1.0,
+          "tagFixing": 1.0,
+          "unknownFixing": 0.0,
+          "projectedRemoval": 0.0,
+          "removalHole": 1.0
+        },
+        "audit": {
+          "pair": [
+            1,
+            2
+          ],
+          "afterPair": [
+            1,
+            2
+          ],
+          "displaced": [],
+          "cutQ": 0.4958310153986403,
+          "selected": {
+            "211a9db2-8b5f-419d-8032-ac2a571dbb53": 4,
+            "335f3146-743c-4a25-86b5-c45e9c66eb15": 16
+          }
+        }
+      }
+    },
+    "sideboard-card": {
+      "qualified": false,
+      "reason": "No reliable narrow-sideboard-only tag; missingness cannot distinguish this effect.",
+      "result": {
+        "D": {
+          "A": 0.0,
+          "B": 0.46239806245673665,
+          "C": 0.44827401296072134
+        },
+        "P": {
+          "generic": 0.16278039239202463,
+          "A": 0.0,
+          "B": 0.08757651730549791,
+          "C": 0.05932841831346729
+        },
+        "features": {
+          "intercept": 1,
+          "Q": -0.1573249791143344,
+          "playable": 0.0,
+          "stage": 0.5454545454545454,
+          "mana": 0.2,
+          "manaUnknown": 0.0,
+          "creature": 0.0,
+          "land": 0.0,
+          "colorless": 0.0,
+          "multicolor": 0.0,
+          "pips": 0.25,
+          "pipUnknown": 0.0,
+          "offPips": 0.25,
+          "copyCount": 0.0,
+          "poolSize": 0.5333333333333333,
+          "projectedSpells": 1.0,
+          "creatureCount": 1.4375,
+          "early": 1.0,
+          "top": 0.0,
+          "earlyHole": 0.0,
+          "creatureHole": 0.0,
+          "topSaturation": 0.0,
+          "roleUnknown": 1.0,
+          "removal": 0,
+          "fixing": 0.0,
+          "roleKnown": 0.0,
+          "membership": 0.0,
+          "cutDelta": -0.15315599451297468,
+          "creatureDelta": 0.0,
+          "earlyDelta": 0.0,
+          "topDelta": 0.0,
+          "qualityDelta": 0.0,
+          "colorChange": 0.0,
+          "curve0": 0.0,
+          "curve1": 0.0,
+          "curve2": 0.6666666666666666,
+          "curve3": 3.1666666666666665,
+          "curve4": 0.0,
+          "curve5": 0.0,
+          "curve6": 0.0,
+          "curve7": 0.0,
+          "removalUnknown": 1.0,
+          "fixingUnknown": 1.0,
+          "tagCombatTrick": 0.0,
+          "unknownCombatTrick": 1.0,
+          "tagCardAdvantage": 0.0,
+          "unknownCardAdvantage": 1.0,
+          "tagRamp": 0.0,
+          "unknownRamp": 1.0,
+          "tagFinisher": 0.0,
+          "unknownFinisher": 1.0,
+          "tagDefensive": 0.0,
+          "unknownDefensive": 1.0,
+          "tagAggressive": 0.0,
+          "unknownAggressive": 1.0,
+          "tagFixing": 0.0,
+          "unknownFixing": 1.0,
+          "projectedRemoval": 0.0,
+          "removalHole": 1.0
+        },
+        "audit": {
+          "pair": [
+            0,
+            2
+          ],
+          "afterPair": [
+            0,
+            2
+          ],
+          "displaced": [],
+          "cutQ": 0.4958310153986403,
+          "selected": {
+            "c9e43116-a489-4557-a47f-623d915a2b79": 4,
+            "335f3146-743c-4a25-86b5-c45e9c66eb15": 19
+          }
+        }
+      }
+    },
+    "removal-shortage": {
+      "qualified": false,
+      "reason": "Positive precision-first removal tags exist; a causal incremental shortage response is not established by tag correlations.",
+      "shortage": {
+        "D": {
+          "A": 0.6598652424925098,
+          "B": 0.5538448191859746,
+          "C": 0.5503602147166637
+        },
+        "P": {
+          "generic": 0.8492698510213729,
+          "A": 0.6598652424925098,
+          "B": 0.9569594893933222,
+          "C": 0.9499902804547005
+        },
+        "features": {
+          "intercept": 1,
+          "Q": 0.15018497104955641,
+          "playable": 1.0,
+          "stage": 0.45454545454545453,
+          "mana": 0.4,
+          "manaUnknown": 0.0,
+          "creature": 0.0,
+          "land": 0.0,
+          "colorless": 0.0,
+          "multicolor": 0.0,
+          "pips": 0.5,
+          "pipUnknown": 0.0,
+          "offPips": 0.0,
+          "copyCount": 0.0,
+          "poolSize": 0.4444444444444444,
+          "projectedSpells": 0.8695652173913043,
+          "creatureCount": 1.25,
+          "early": 0.0,
+          "top": 0.0,
+          "earlyHole": 1.0,
+          "creatureHole": 0.0,
+          "topSaturation": 0.0,
+          "roleUnknown": 0.0,
+          "removal": 1,
+          "fixing": 0.0,
+          "roleKnown": 1.0,
+          "membership": 1.0,
+          "cutDelta": 0.15435395565091614,
+          "creatureDelta": 0.0,
+          "earlyDelta": 0.0,
+          "topDelta": 0.0,
+          "qualityDelta": 0.6501849710495566,
+          "colorChange": 0.0,
+          "curve0": 0.0,
+          "curve1": 0.0,
+          "curve2": 0.0,
+          "curve3": 3.3333333333333335,
+          "curve4": 0.0,
+          "curve5": 0.0,
+          "curve6": 0.0,
+          "curve7": 0.0,
+          "removalUnknown": 0.0,
+          "fixingUnknown": 1.0,
+          "tagCombatTrick": 0.0,
+          "unknownCombatTrick": 1.0,
+          "tagCardAdvantage": 0.0,
+          "unknownCardAdvantage": 1.0,
+          "tagRamp": 0.0,
+          "unknownRamp": 1.0,
+          "tagFinisher": 0.0,
+          "unknownFinisher": 1.0,
+          "tagDefensive": 0.0,
+          "unknownDefensive": 1.0,
+          "tagAggressive": 0.0,
+          "unknownAggressive": 1.0,
+          "tagFixing": 0.0,
+          "unknownFixing": 1.0,
+          "projectedRemoval": 0.0,
+          "removalHole": 1.0
+        },
+        "audit": {
+          "pair": [
+            0,
+            2
+          ],
+          "afterPair": [
+            0,
+            2
+          ],
+          "displaced": [],
+          "cutQ": 0.4958310153986403,
+          "selected": {
+            "335f3146-743c-4a25-86b5-c45e9c66eb15": 20
+          }
+        }
+      },
+      "covered": {
+        "D": {
+          "A": 0.6598652424925098,
+          "B": 0.5707796320246163,
+          "C": 0.5695267841485255
+        },
+        "P": {
+          "generic": 0.8492698510213729,
+          "A": 0.6598652424925098,
+          "B": 0.9908291150706056,
+          "C": 0.9883234193184239
+        },
+        "features": {
+          "intercept": 1,
+          "Q": 0.15018497104955641,
+          "playable": 1.0,
+          "stage": 0.45454545454545453,
+          "mana": 0.4,
+          "manaUnknown": 0.0,
+          "creature": 0.0,
+          "land": 0.0,
+          "colorless": 0.0,
+          "multicolor": 0.0,
+          "pips": 0.5,
+          "pipUnknown": 0.0,
+          "offPips": 0.0,
+          "copyCount": 0.6,
+          "poolSize": 0.4444444444444444,
+          "projectedSpells": 0.8695652173913043,
+          "creatureCount": 1.0625,
+          "early": 0.0,
+          "top": 0.0,
+          "earlyHole": 1.0,
+          "creatureHole": 0.0,
+          "topSaturation": 0.0,
+          "roleUnknown": 0.0,
+          "removal": 1,
+          "fixing": 0.0,
+          "roleKnown": 1.0,
+          "membership": 1.0,
+          "cutDelta": 0.15435395565091614,
+          "creatureDelta": 0.0,
+          "earlyDelta": 0.0,
+          "topDelta": 0.0,
+          "qualityDelta": 0.6501849710495566,
+          "colorChange": 0.0,
+          "curve0": 0.0,
+          "curve1": 0.0,
+          "curve2": 0.0,
+          "curve3": 2.8333333333333335,
+          "curve4": 0.5,
+          "curve5": 0.0,
+          "curve6": 0.0,
+          "curve7": 0.0,
+          "removalUnknown": 0.0,
+          "fixingUnknown": 1.0,
+          "tagCombatTrick": 0.0,
+          "unknownCombatTrick": 1.0,
+          "tagCardAdvantage": 0.0,
+          "unknownCardAdvantage": 1.0,
+          "tagRamp": 0.0,
+          "unknownRamp": 1.0,
+          "tagFinisher": 0.0,
+          "unknownFinisher": 1.0,
+          "tagDefensive": 0.0,
+          "unknownDefensive": 1.0,
+          "tagAggressive": 0.0,
+          "unknownAggressive": 1.0,
+          "tagFixing": 0.0,
+          "unknownFixing": 1.0,
+          "projectedRemoval": 1.0,
+          "removalHole": 0
+        },
+        "audit": {
+          "pair": [
+            0,
+            2
+          ],
+          "afterPair": [
+            0,
+            2
+          ],
+          "displaced": [],
+          "cutQ": 0.4958310153986403,
+          "selected": {
+            "01a51d08-f90e-4b72-8dce-fb2a6c72f181": 3,
+            "335f3146-743c-4a25-86b5-c45e9c66eb15": 17
+          }
+        }
+      }
+    },
+    "cutline-upgrades": {
+      "weak": {
+        "D": {
+          "A": 0.6911094962539738,
+          "B": 0.4542530588689501,
+          "C": 0.4579630634280691
+        },
+        "P": {
+          "generic": 0.7198163024360767,
+          "A": 0.6911094962539738,
+          "B": 0.628322420173977,
+          "C": 0.6357424292922149
+        },
+        "features": {
+          "intercept": 1,
+          "Q": 0.015143891902187567,
+          "playable": 1.0,
+          "stage": 0.5227272727272727,
+          "mana": 0.2,
+          "manaUnknown": 0.0,
+          "creature": 1.0,
+          "land": 0.0,
+          "colorless": 0.0,
+          "multicolor": 0.0,
+          "pips": 0.25,
+          "pipUnknown": 0.0,
+          "offPips": 0.0,
+          "copyCount": 0.0,
+          "poolSize": 0.5111111111111111,
+          "projectedSpells": 1.0,
+          "creatureCount": 1.4375,
+          "early": 5.75,
+          "top": 0.0,
+          "earlyHole": 0.0,
+          "creatureHole": 0.0,
+          "topSaturation": 0.0,
+          "roleUnknown": 1.0,
+          "removal": 0,
+          "fixing": 0.0,
+          "roleKnown": 0.0,
+          "membership": 1.0,
+          "cutDelta": 0.21956545977358033,
+          "creatureDelta": 0.0,
+          "earlyDelta": 0.0,
+          "topDelta": 0.0,
+          "qualityDelta": 0.21956545977358033,
+          "colorChange": 0.0,
+          "curve0": 0.0,
+          "curve1": 0.0,
+          "curve2": 3.8333333333333335,
+          "curve3": 0.0,
+          "curve4": 0.0,
+          "curve5": 0.0,
+          "curve6": 0.0,
+          "curve7": 0.0,
+          "removalUnknown": 1.0,
+          "fixingUnknown": 1.0,
+          "tagCombatTrick": 0.0,
+          "unknownCombatTrick": 1.0,
+          "tagCardAdvantage": 0.0,
+          "unknownCardAdvantage": 1.0,
+          "tagRamp": 0.0,
+          "unknownRamp": 1.0,
+          "tagFinisher": 0.0,
+          "unknownFinisher": 1.0,
+          "tagDefensive": 0.0,
+          "unknownDefensive": 1.0,
+          "tagAggressive": 0.0,
+          "unknownAggressive": 1.0,
+          "tagFixing": 0.0,
+          "unknownFixing": 1.0,
+          "projectedRemoval": 0.0,
+          "removalHole": 1.0
+        },
+        "audit": {
+          "pair": [
+            0,
+            2
+          ],
+          "afterPair": [
+            0,
+            2
+          ],
+          "displaced": [
+            "f435329e-6de7-4b05-ba70-cb63d121116e"
+          ],
+          "cutQ": 0.29557843212860724,
+          "selected": {
+            "f435329e-6de7-4b05-ba70-cb63d121116e": 23
+          }
+        }
+      },
+      "huge": {
+        "D": {
+          "A": 0.7336162539211674,
+          "B": 0.49526405165690685,
+          "C": 0.49456933785144214
+        },
+        "P": {
+          "generic": 0.8629976140897929,
+          "A": 0.7336162539211674,
+          "B": 0.8535257174036066,
+          "C": 0.8521362897926772
+        },
+        "features": {
+          "intercept": 1,
+          "Q": 0.1897475525723571,
+          "playable": 1.0,
+          "stage": 0.5227272727272727,
+          "mana": 0.4,
+          "manaUnknown": 0.0,
+          "creature": 1.0,
+          "land": 0.0,
+          "colorless": 0.0,
+          "multicolor": 0.0,
+          "pips": 0.5,
+          "pipUnknown": 0.0,
+          "offPips": 0.0,
+          "copyCount": 0.0,
+          "poolSize": 0.5111111111111111,
+          "projectedSpells": 1.0,
+          "creatureCount": 1.4375,
+          "early": 5.75,
+          "top": 0.0,
+          "earlyHole": 0.0,
+          "creatureHole": 0.0,
+          "topSaturation": 0.0,
+          "roleUnknown": 1.0,
+          "removal": 0,
+          "fixing": 0.0,
+          "roleKnown": 0.0,
+          "membership": 1.0,
+          "cutDelta": 0.39416912044374985,
+          "creatureDelta": 0.0,
+          "earlyDelta": -0.5,
+          "topDelta": 0.0,
+          "qualityDelta": 0.39416912044374985,
+          "colorChange": 0.0,
+          "curve0": 0.0,
+          "curve1": 0.0,
+          "curve2": 3.8333333333333335,
+          "curve3": 0.0,
+          "curve4": 0.0,
+          "curve5": 0.0,
+          "curve6": 0.0,
+          "curve7": 0.0,
+          "removalUnknown": 1.0,
+          "fixingUnknown": 1.0,
+          "tagCombatTrick": 0.0,
+          "unknownCombatTrick": 1.0,
+          "tagCardAdvantage": 0.0,
+          "unknownCardAdvantage": 1.0,
+          "tagRamp": 0.0,
+          "unknownRamp": 1.0,
+          "tagFinisher": 0.0,
+          "unknownFinisher": 1.0,
+          "tagDefensive": 0.0,
+          "unknownDefensive": 1.0,
+          "tagAggressive": 0.0,
+          "unknownAggressive": 1.0,
+          "tagFixing": 0.0,
+          "unknownFixing": 1.0,
+          "projectedRemoval": 0.0,
+          "removalHole": 1.0
+        },
+        "audit": {
+          "pair": [
+            0,
+            2
+          ],
+          "afterPair": [
+            0,
+            2
+          ],
+          "displaced": [
+            "f435329e-6de7-4b05-ba70-cb63d121116e"
+          ],
+          "cutQ": 0.29557843212860724,
+          "selected": {
+            "f435329e-6de7-4b05-ba70-cb63d121116e": 23
+          }
+        }
+      }
+    }
+  },
+  "transition": [
+    {
+      "n": 0,
+      "A": 0.11210031684261411,
+      "B": 0.5530825840128373,
+      "C": 0.6155011047465038
+    },
+    {
+      "n": 1,
+      "A": 0.8547053539348648,
+      "B": 0.5214080718113268,
+      "C": 0.5088788166871767
+    },
+    {
+      "n": 2,
+      "A": 0.8439910682205791,
+      "B": 0.5219754713394901,
+      "C": 0.5094137365372622
+    },
+    {
+      "n": 3,
+      "A": 0.8332767825062934,
+      "B": 0.5225522895208282,
+      "C": 0.5099638309919465
+    },
+    {
+      "n": 4,
+      "A": 0.8225624967920078,
+      "B": 0.52313838129226,
+      "C": 0.510529164478982
+    },
+    {
+      "n": 5,
+      "A": 0.811848211077722,
+      "B": 0.5237335818423675,
+      "C": 0.5111097819038452
+    },
+    {
+      "n": 6,
+      "A": 0.8011339253634362,
+      "B": 0.5243377059750377,
+      "C": 0.5117057076276634
+    },
+    {
+      "n": 7,
+      "A": 0.7904196396491505,
+      "B": 0.5249505474985532,
+      "C": 0.5123169444504763
+    },
+    {
+      "n": 8,
+      "A": 0.7797053539348648,
+      "B": 0.5255718786442717,
+      "C": 0.5129434726041211
+    },
+    {
+      "n": 9,
+      "A": 0.7689910682205792,
+      "B": 0.5262014495191726,
+      "C": 0.5135852487592811
+    },
+    {
+      "n": 10,
+      "A": 0.7582767825062934,
+      "B": 0.5268389875966826,
+      "C": 0.5142422050514575
+    },
+    {
+      "n": 11,
+      "A": 0.7475624967920077,
+      "B": 0.527484197250295,
+      "C": 0.5149142481308485
+    },
+    {
+      "n": 12,
+      "A": 0.7368482110777219,
+      "B": 0.5281367593345855,
+      "C": 0.5156012582413187
+    },
+    {
+      "n": 13,
+      "A": 0.7261339253634362,
+      "B": 0.5287963308182855,
+      "C": 0.5163030883338223
+    },
+    {
+      "n": 14,
+      "A": 0.7154196396491506,
+      "B": 0.5294625444741168,
+      "C": 0.5170195632198051
+    },
+    {
+      "n": 15,
+      "A": 0.7154196396491506,
+      "B": 0.5297548127879544,
+      "C": 0.5178942971966357
+    },
+    {
+      "n": 16,
+      "A": 0.7154196396491506,
+      "B": 0.5300372802917483,
+      "C": 0.5187874545388012
+    },
+    {
+      "n": 17,
+      "A": 0.7154196396491506,
+      "B": 0.5303093668683276,
+      "C": 0.5196987796277275
+    },
+    {
+      "n": 18,
+      "A": 0.7154196396491506,
+      "B": 0.5305704918864182,
+      "C": 0.5206279811242585
+    },
+    {
+      "n": 19,
+      "A": 0.7154196396491506,
+      "B": 0.5308200758116774,
+      "C": 0.5215747312296203
+    },
+    {
+      "n": 20,
+      "A": 0.7154196396491506,
+      "B": 0.5310575418943193,
+      "C": 0.5225386650251411
+    },
+    {
+      "n": 21,
+      "A": 0.7154196396491506,
+      "B": 0.5312823179289337,
+      "C": 0.5235193798972257
+    },
+    {
+      "n": 22,
+      "A": 0.7154196396491506,
+      "B": 0.5314938380813183,
+      "C": 0.5245164350539776
+    },
+    {
+      "n": 23,
+      "A": 0.7154196396491506,
+      "B": 0.5316915447763606,
+      "C": 0.5179731361056964
+    },
+    {
+      "n": 24,
+      "A": 0.7154196396491506,
+      "B": 0.5333815606127661,
+      "C": 0.5206221620752887
+    },
+    {
+      "n": 25,
+      "A": 0.7154196396491506,
+      "B": 0.5350991718159837,
+      "C": 0.5233108253225599
+    }
+  ],
+  "largestTransition": {
+    "A": 0.7426050370922507,
+    "B": 0.03167451220151052,
+    "C": 0.10662228805932705
+  },
+  "bounded": true,
+  "mainStructuralChecksPass": false,
+  "allRequiredStrategicBehaviorQualified": false,
+  "synthetic": "Controlled generic structural states using real card metadata; not historical win evidence. No tuning follows."
+}

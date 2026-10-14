@@ -1,0 +1,78 @@
+{
+  "datasets": [
+    {
+      "set": "DMU",
+      "n": 18732,
+      "partitions": {
+        "target": 9744,
+        "train": 7056,
+        "validation": 1932
+      }
+    },
+    {
+      "set": "BRO",
+      "n": 17640,
+      "partitions": {
+        "train": 7182,
+        "target": 9114,
+        "validation": 1344
+      }
+    },
+    {
+      "set": "WOE",
+      "n": 18690,
+      "partitions": {
+        "train": 7938,
+        "target": 9156,
+        "validation": 1596
+      }
+    },
+    {
+      "set": "LCI",
+      "n": 20723,
+      "partitions": {
+        "validation": 2138,
+        "target": 10069,
+        "train": 8516
+      }
+    },
+    {
+      "set": "MKM",
+      "n": 19110,
+      "partitions": {
+        "target": 9555,
+        "validation": 1755,
+        "train": 7800
+      }
+    },
+    {
+      "set": "OTJ",
+      "n": 20739,
+      "partitions": {
+        "validation": 2153,
+        "target": 10761,
+        "train": 7825
+      }
+    },
+    {
+      "set": "ONE",
+      "n": 17598,
+      "partitions": {
+        "validation": 1890,
+        "train": 6972,
+        "target": 8736
+      }
+    },
+    {
+      "set": "MOM",
+      "n": 20218,
+      "partitions": {
+        "train": 9230,
+        "target": 9184,
+        "validation": 1804
+      }
+    }
+  ],
+  "legalBoundary": "feature(poolBefore,candidate,metadata,frozenQ,index); labels attached afterward",
+  "unknownRoles": "HasAssignedRoles false remains unknown"
+}

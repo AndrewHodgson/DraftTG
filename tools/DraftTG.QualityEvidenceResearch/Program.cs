@@ -24,6 +24,16 @@ try
     var output=Required("output");Directory.CreateDirectory(Path.GetDirectoryName(Path.GetFullPath(output))!);
     var setup=Stopwatch.StartNew();
     var catalog=new ScryfallCardCatalogDecoder().Decode(File.ReadAllText(Required("catalog")));
+    if(options.TryGetValue("export-affinity-metadata",out var affinityMetadataPath))
+    {
+        var classifier=new LimitedCardRoleClassifier();
+        File.WriteAllText(affinityMetadataPath,HistoricalJson.Serialize(catalog.Cards.ToDictionary(c=>c.Identifier.Value,c=>new
+        {colors=c.Colors.Colors.Select(x=>(int)x).ToArray(),land=c.GameplayMetadata.IsLand,
+            basic=c.GameplayMetadata.CardTypes.IsBasic,known=c.GameplayMetadata.CardTypes.IsKnown,
+            manaValue=c.GameplayMetadata.ManaValue,creature=c.GameplayMetadata.IsCreature,
+            roleProfile=classifier.Classify(c),name=c.Name,rarity=c.Rarity.ToString()})));
+        return;
+    }
     if(options.TryGetValue("export-card-metadata",out var metadataPath))
     {
         File.WriteAllText(metadataPath,HistoricalJson.Serialize(catalog.Cards.ToDictionary(c=>c.Identifier.Value,c=>new
@@ -49,6 +59,9 @@ try
     }
     using var store=new HistoricalStore(Required("db"));
     using var experimentalLane=options.TryGetValue("lane",out var lanePath)?new ExperimentalLaneSubstitution(lanePath,Required("lane-alsa")):null;
+    using var experimentalAffinity=options.TryGetValue("affinity",out var affinityPath)?new ExperimentalAffinitySubstitution(affinityPath):null;
+    if(experimentalAffinity is not null&&(experimentalLane is not null||qvalues.Count>0))throw new ArgumentException("A-only ablation cannot combine Q or L substitution.");
+    using var affinityTrace=experimentalAffinity is not null?new StreamWriter(output+".affinity.jsonl"):null;
     if(experimentalLane is not null&&qvalues.Count>0)throw new ArgumentException("Q and L ablations cannot be combined.");
     using var laneTrace=experimentalLane is not null?new StreamWriter(output+".lanes.jsonl"):null;
     var setupSeconds=setup.Elapsed.TotalSeconds;
@@ -81,6 +94,35 @@ try
             history=baseline.ObservationHistory;calls+=baseline.OptimizerCalls;engineMs+=baseline.TotalMilliseconds;cardScores+=baseline.Cards.Count(c=>c.ContextualValue.HasValue);
             if(baseline.UnscorableCards==0&&baseline.Cards.Length==input.OfferedCards.Sum(c=>c.Count))scored++;
             var a=HistoricalEvaluator.Agreement(d,baseline);Record("current",baseline,a);
+            if(experimentalAffinity is not null)
+            {
+                var prediction=experimentalAffinity.Read(input);
+                var complete=input.PoolIsComplete&&input.PoolBeforePick.All(c=>c.Card.Identifier is not null)
+                    &&input.OfferedCards.All(c=>c.Card.Identifier is not null)&&a.Rank is not null;
+                var results=new Dictionary<string,HistoricalReplayResult>{{"current",baseline}};
+                if(complete)
+                {
+                    Record("complete-baseline",baseline,a);
+                    foreach(var pair in prediction.Models)
+                    {
+                        var substituted=ExperimentalAffinitySubstitution.Apply(baseline,pair.Value,pair.Key);results[pair.Key]=substituted;
+                        var b=HistoricalEvaluator.Agreement(d,substituted);var confidence=pair.Value.Values.Select(v=>v.Confidence).DefaultIfEmpty(0).Average();
+                        Record("affinity-"+pair.Key,substituted,b);
+                        var changed=!baseline.Cards.OrderBy(c=>c.CurrentPackRank).Select(c=>c.PackIndex).SequenceEqual(substituted.Cards.OrderBy(c=>c.CurrentPackRank).Select(c=>c.PackIndex));
+                        foreach(var key in Strata(input,d.Outcome,baseline.InputColorCommitment).Append("affinity-confidence="+(confidence<.25?"0-.25":confidence<.5?".25-.5":confidence<.75?".5-.75":".75-1")))
+                        {
+                            var name=pair.Key+" | "+key;if(!changes.TryGetValue(name,out var count))changes[name]=count=new long[4];
+                            count[0]++;count[1]+=changed?1:0;count[2]+=b.Rank<a.Rank?1:0;count[3]+=b.Rank>a.Rank?1:0;
+                            var metric="affinity-"+pair.Key+" | "+key;
+                            if(key.StartsWith("affinity-confidence=",StringComparison.Ordinal))
+                            {if(!metrics.TryGetValue(metric,out var accumulator))metrics[metric]=accumulator=new();accumulator.Add(b.Rank,b.Occurrences,b.ScoreGap,0,null,false,0);}
+                        }
+                    }
+                }
+                affinityTrace!.WriteLine(HistoricalJson.Serialize(new {input.SetCode,input.DraftId,input.PackNumber,input.PickNumber,Complete=complete,
+                    Commitment=baseline.InputColorCommitment,ActualPicked=d.Label.ActualPickedCard.CanonicalId,
+                    Models=results.ToDictionary(p=>p.Key,p=>p.Value.Cards.Select(c=>new {Id=c.CardIdentifier.Value,c.CurrentPackRank,c.QualityComponent,c.ArchetypeComponent,c.ContextualValue}).ToArray())}));
+            }
             if(experimentalLane is not null)
             {
                 var prediction=experimentalLane.Read(input);var currentLane=experimentalLane.Current(input,baseline,catalog);
@@ -153,7 +195,8 @@ try
     }
     finally {trace?.Dispose();}
     experimentalLane?.Complete();
-    var result=new {Version="research-q-phase-b1-v1",Cache=cached,Detailed=detailed,Decisions=decisions,Drafts=drafts,FullyScoredDecisions=scored,CardScores=cardScores,
+    experimentalAffinity?.Complete();
+    var result=new {Version=experimentalAffinity is not null?ExperimentalAffinitySubstitution.Version:"research-q-phase-b1-v1",Cache=cached,Detailed=detailed,Decisions=decisions,Drafts=drafts,FullyScoredDecisions=scored,CardScores=cardScores,
         Seconds=timer.Elapsed.TotalSeconds,SetupSeconds=setupSeconds,ReadMilliseconds=readMs,ReplayMilliseconds=replayMs,EngineMilliseconds=engineMs,SerializationMilliseconds=serializationMs,AblationMilliseconds=ablationMs,
         OptimizerCalls=calls,PeakWorkingSetBytes=Process.GetCurrentProcess().PeakWorkingSet64,OutputHash=detailed?Convert.ToHexString(hash.GetHashAndReset()).ToLowerInvariant():null,
         Metrics=metrics.ToDictionary(p=>p.Key,p=>p.Value.Summary()),Changes=changes.ToDictionary(p=>p.Key,p=>new {Compared=p.Value[0],Changed=p.Value[1],Improved=p.Value[2],Regressed=p.Value[3]}),MissingInputs=missing,

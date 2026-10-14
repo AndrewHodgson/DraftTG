@@ -1,0 +1,72 @@
+{
+  "datasets": [
+    {
+      "set": "DMU",
+      "pairs": 2681,
+      "drafts": 231,
+      "allPairs": 5117,
+      "meanDistance": 0.9187322914756715
+    },
+    {
+      "set": "BRO",
+      "pairs": 2947,
+      "drafts": 217,
+      "allPairs": 5765,
+      "meanDistance": 0.8950524881145335
+    },
+    {
+      "set": "WOE",
+      "pairs": 2776,
+      "drafts": 218,
+      "allPairs": 5760,
+      "meanDistance": 0.8628541883936299
+    },
+    {
+      "set": "LCI",
+      "pairs": 2792,
+      "drafts": 239,
+      "allPairs": 5802,
+      "meanDistance": 0.9331821651093237
+    },
+    {
+      "set": "MKM",
+      "pairs": 2392,
+      "drafts": 245,
+      "allPairs": 4801,
+      "meanDistance": 0.9614120827826169
+    },
+    {
+      "set": "OTJ",
+      "pairs": 3112,
+      "drafts": 262,
+      "allPairs": 6007,
+      "meanDistance": 0.9419308207946375
+    },
+    {
+      "set": "ONE",
+      "pairs": 2253,
+      "drafts": 207,
+      "allPairs": 4430,
+      "meanDistance": 0.9920653893656075
+    },
+    {
+      "set": "MOM",
+      "pairs": 2965,
+      "drafts": 219,
+      "allPairs": 6580,
+      "meanDistance": 0.8958229990236126
+    }
+  ],
+  "healthyCoverage": true,
+  "matchingSha256": {
+    "DMU": "562c5ebfd6c871900a810afae4c46d663fd6804b164ff48b477a62199f679cb7",
+    "BRO": "c39cb6f3534a3976b4ce874b883b5b5d57255444e439876cada2f788d5c7c476",
+    "WOE": "6548d9790c444c4c6a6795d24eaf831beef10f3bbea10b548d7b304bb3ec5648",
+    "LCI": "76b7b228814dc4978c272b095972c085ef1583c668dd04bfae94f2ddea806b52",
+    "MKM": "978136ca94227526ba3bad607b613b401af15cb7a37196f913c03041558ab336",
+    "OTJ": "353fcab77814ee28b13b713cac08f8b2d7a79822eb669cec5c4143f6168cea9a",
+    "ONE": "df42fa3ca4183cbf2ed815460035994fcc36ff748a900de8aa9a50724ff2966f",
+    "MOM": "6b297f13a9b4d037d82a8f3361cb040908971e0973e499bab53b9191bff12c99"
+  },
+  "candidatePerformanceNotRead": true
+}

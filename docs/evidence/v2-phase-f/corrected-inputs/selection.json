@@ -1,0 +1,876 @@
+{
+  "version": "research-d-phase-f-v1",
+  "results": {
+    "A": [
+      {
+        "params": {
+          "scale": 0.05,
+          "structureWeight": 0.02,
+          "virtualBase": 0.45
+        },
+        "bySet": {
+          "DMU": {
+            "n": 566,
+            "accuracy": 0.5097173144876325
+          },
+          "BRO": {
+            "n": 447,
+            "accuracy": 0.5592841163310962
+          },
+          "WOE": {
+            "n": 476,
+            "accuracy": 0.5136554621848739
+          }
+        },
+        "macro": 0.5275522976678676
+      },
+      {
+        "params": {
+          "scale": 0.05,
+          "structureWeight": 0.02,
+          "virtualBase": 0.5
+        },
+        "bySet": {
+          "DMU": {
+            "n": 566,
+            "accuracy": 0.5097173144876325
+          },
+          "BRO": {
+            "n": 447,
+            "accuracy": 0.5592841163310962
+          },
+          "WOE": {
+            "n": 476,
+            "accuracy": 0.5136554621848739
+          }
+        },
+        "macro": 0.5275522976678676
+      },
+      {
+        "params": {
+          "scale": 0.05,
+          "structureWeight": 0.02,
+          "virtualBase": 0.55
+        },
+        "bySet": {
+          "DMU": {
+            "n": 566,
+            "accuracy": 0.5097173144876325
+          },
+          "BRO": {
+            "n": 447,
+            "accuracy": 0.5592841163310962
+          },
+          "WOE": {
+            "n": 476,
+            "accuracy": 0.5136554621848739
+          }
+        },
+        "macro": 0.5275522976678676
+      },
+      {
+        "params": {
+          "scale": 0.05,
+          "structureWeight": 0.04,
+          "virtualBase": 0.45
+        },
+        "bySet": {
+          "DMU": {
+            "n": 566,
+            "accuracy": 0.5123674911660777
+          },
+          "BRO": {
+            "n": 447,
+            "accuracy": 0.5570469798657718
+          },
+          "WOE": {
+            "n": 476,
+            "accuracy": 0.5168067226890757
+          }
+        },
+        "macro": 0.528740397906975
+      },
+      {
+        "params": {
+          "scale": 0.05,
+          "structureWeight": 0.04,
+          "virtualBase": 0.5
+        },
+        "bySet": {
+          "DMU": {
+            "n": 566,
+            "accuracy": 0.5123674911660777
+          },
+          "BRO": {
+            "n": 447,
+            "accuracy": 0.5570469798657718
+          },
+          "WOE": {
+            "n": 476,
+            "accuracy": 0.5168067226890757
+          }
+        },
+        "macro": 0.528740397906975
+      },
+      {
+        "params": {
+          "scale": 0.05,
+          "structureWeight": 0.04,
+          "virtualBase": 0.55
+        },
+        "bySet": {
+          "DMU": {
+            "n": 566,
+            "accuracy": 0.5123674911660777
+          },
+          "BRO": {
+            "n": 447,
+            "accuracy": 0.5570469798657718
+          },
+          "WOE": {
+            "n": 476,
+            "accuracy": 0.5168067226890757
+          }
+        },
+        "macro": 0.528740397906975
+      },
+      {
+        "params": {
+          "scale": 0.1,
+          "structureWeight": 0.02,
+          "virtualBase": 0.45
+        },
+        "bySet": {
+          "DMU": {
+            "n": 566,
+            "accuracy": 0.5379858657243817
+          },
+          "BRO": {
+            "n": 447,
+            "accuracy": 0.5615212527964206
+          },
+          "WOE": {
+            "n": 476,
+            "accuracy": 0.5682773109243697
+          }
+        },
+        "macro": 0.5559281431483907
+      },
+      {
+        "params": {
+          "scale": 0.1,
+          "structureWeight": 0.02,
+          "virtualBase": 0.5
+        },
+        "bySet": {
+          "DMU": {
+            "n": 566,
+            "accuracy": 0.5379858657243817
+          },
+          "BRO": {
+            "n": 447,
+            "accuracy": 0.5615212527964206
+          },
+          "WOE": {
+            "n": 476,
+            "accuracy": 0.5682773109243697
+          }
+        },
+        "macro": 0.5559281431483907
+      },
+      {
+        "params": {
+          "scale": 0.1,
+          "structureWeight": 0.02,
+          "virtualBase": 0.55
+        },
+        "bySet": {
+          "DMU": {
+            "n": 566,
+            "accuracy": 0.5379858657243817
+          },
+          "BRO": {
+            "n": 447,
+            "accuracy": 0.5615212527964206
+          },
+          "WOE": {
+            "n": 476,
+            "accuracy": 0.5682773109243697
+          }
+        },
+        "macro": 0.5559281431483907
+      },
+      {
+        "params": {
+          "scale": 0.1,
+          "structureWeight": 0.04,
+          "virtualBase": 0.45
+        },
+        "bySet": {
+          "DMU": {
+            "n": 566,
+            "accuracy": 0.5424028268551236
+          },
+          "BRO": {
+            "n": 447,
+            "accuracy": 0.5682326621923938
+          },
+          "WOE": {
+            "n": 476,
+            "accuracy": 0.569327731092437
+          }
+        },
+        "macro": 0.5599877400466514
+      },
+      {
+        "params": {
+          "scale": 0.1,
+          "structureWeight": 0.04,
+          "virtualBase": 0.5
+        },
+        "bySet": {
+          "DMU": {
+            "n": 566,
+            "accuracy": 0.5424028268551236
+          },
+          "BRO": {
+            "n": 447,
+            "accuracy": 0.5682326621923938
+          },
+          "WOE": {
+            "n": 476,
+            "accuracy": 0.569327731092437
+          }
+        },
+        "macro": 0.5599877400466514
+      },
+      {
+        "params": {
+          "scale": 0.1,
+          "structureWeight": 0.04,
+          "virtualBase": 0.55
+        },
+        "bySet": {
+          "DMU": {
+            "n": 566,
+            "accuracy": 0.5424028268551236
+          },
+          "BRO": {
+            "n": 447,
+            "accuracy": 0.5682326621923938
+          },
+          "WOE": {
+            "n": 476,
+            "accuracy": 0.569327731092437
+          }
+        },
+        "macro": 0.5599877400466514
+      }
+    ],
+    "B": [
+      {
+        "params": {
+          "scale": 0.05,
+          "structureWeight": 0.02,
+          "virtualBase": 0.45
+        },
+        "bySet": {
+          "DMU": {
+            "n": 566,
+            "accuracy": 0.5061837455830389
+          },
+          "BRO": {
+            "n": 447,
+            "accuracy": 0.5570469798657718
+          },
+          "WOE": {
+            "n": 476,
+            "accuracy": 0.5136554621848739
+          }
+        },
+        "macro": 0.5256287292112282
+      },
+      {
+        "params": {
+          "scale": 0.05,
+          "structureWeight": 0.02,
+          "virtualBase": 0.5
+        },
+        "bySet": {
+          "DMU": {
+            "n": 566,
+            "accuracy": 0.5061837455830389
+          },
+          "BRO": {
+            "n": 447,
+            "accuracy": 0.5570469798657718
+          },
+          "WOE": {
+            "n": 476,
+            "accuracy": 0.5136554621848739
+          }
+        },
+        "macro": 0.5256287292112282
+      },
+      {
+        "params": {
+          "scale": 0.05,
+          "structureWeight": 0.02,
+          "virtualBase": 0.55
+        },
+        "bySet": {
+          "DMU": {
+            "n": 566,
+            "accuracy": 0.5061837455830389
+          },
+          "BRO": {
+            "n": 447,
+            "accuracy": 0.5570469798657718
+          },
+          "WOE": {
+            "n": 476,
+            "accuracy": 0.5136554621848739
+          }
+        },
+        "macro": 0.5256287292112282
+      },
+      {
+        "params": {
+          "scale": 0.05,
+          "structureWeight": 0.04,
+          "virtualBase": 0.45
+        },
+        "bySet": {
+          "DMU": {
+            "n": 566,
+            "accuracy": 0.508833922261484
+          },
+          "BRO": {
+            "n": 447,
+            "accuracy": 0.5570469798657718
+          },
+          "WOE": {
+            "n": 476,
+            "accuracy": 0.5189075630252101
+          }
+        },
+        "macro": 0.5282628217174886
+      },
+      {
+        "params": {
+          "scale": 0.05,
+          "structureWeight": 0.04,
+          "virtualBase": 0.5
+        },
+        "bySet": {
+          "DMU": {
+            "n": 566,
+            "accuracy": 0.508833922261484
+          },
+          "BRO": {
+            "n": 447,
+            "accuracy": 0.5570469798657718
+          },
+          "WOE": {
+            "n": 476,
+            "accuracy": 0.5189075630252101
+          }
+        },
+        "macro": 0.5282628217174886
+      },
+      {
+        "params": {
+          "scale": 0.05,
+          "structureWeight": 0.04,
+          "virtualBase": 0.55
+        },
+        "bySet": {
+          "DMU": {
+            "n": 566,
+            "accuracy": 0.508833922261484
+          },
+          "BRO": {
+            "n": 447,
+            "accuracy": 0.5570469798657718
+          },
+          "WOE": {
+            "n": 476,
+            "accuracy": 0.5189075630252101
+          }
+        },
+        "macro": 0.5282628217174886
+      },
+      {
+        "params": {
+          "scale": 0.1,
+          "structureWeight": 0.02,
+          "virtualBase": 0.45
+        },
+        "bySet": {
+          "DMU": {
+            "n": 566,
+            "accuracy": 0.5362190812720848
+          },
+          "BRO": {
+            "n": 447,
+            "accuracy": 0.5592841163310962
+          },
+          "WOE": {
+            "n": 476,
+            "accuracy": 0.5682773109243697
+          }
+        },
+        "macro": 0.554593502842517
+      },
+      {
+        "params": {
+          "scale": 0.1,
+          "structureWeight": 0.02,
+          "virtualBase": 0.5
+        },
+        "bySet": {
+          "DMU": {
+            "n": 566,
+            "accuracy": 0.5362190812720848
+          },
+          "BRO": {
+            "n": 447,
+            "accuracy": 0.5592841163310962
+          },
+          "WOE": {
+            "n": 476,
+            "accuracy": 0.5682773109243697
+          }
+        },
+        "macro": 0.554593502842517
+      },
+      {
+        "params": {
+          "scale": 0.1,
+          "structureWeight": 0.02,
+          "virtualBase": 0.55
+        },
+        "bySet": {
+          "DMU": {
+            "n": 566,
+            "accuracy": 0.5362190812720848
+          },
+          "BRO": {
+            "n": 447,
+            "accuracy": 0.5592841163310962
+          },
+          "WOE": {
+            "n": 476,
+            "accuracy": 0.5682773109243697
+          }
+        },
+        "macro": 0.554593502842517
+      },
+      {
+        "params": {
+          "scale": 0.1,
+          "structureWeight": 0.04,
+          "virtualBase": 0.45
+        },
+        "bySet": {
+          "DMU": {
+            "n": 566,
+            "accuracy": 0.5388692579505301
+          },
+          "BRO": {
+            "n": 447,
+            "accuracy": 0.5592841163310962
+          },
+          "WOE": {
+            "n": 476,
+            "accuracy": 0.569327731092437
+          }
+        },
+        "macro": 0.5558270351246878
+      },
+      {
+        "params": {
+          "scale": 0.1,
+          "structureWeight": 0.04,
+          "virtualBase": 0.5
+        },
+        "bySet": {
+          "DMU": {
+            "n": 566,
+            "accuracy": 0.5388692579505301
+          },
+          "BRO": {
+            "n": 447,
+            "accuracy": 0.5592841163310962
+          },
+          "WOE": {
+            "n": 476,
+            "accuracy": 0.569327731092437
+          }
+        },
+        "macro": 0.5558270351246878
+      },
+      {
+        "params": {
+          "scale": 0.1,
+          "structureWeight": 0.04,
+          "virtualBase": 0.55
+        },
+        "bySet": {
+          "DMU": {
+            "n": 566,
+            "accuracy": 0.5388692579505301
+          },
+          "BRO": {
+            "n": 447,
+            "accuracy": 0.5592841163310962
+          },
+          "WOE": {
+            "n": 476,
+            "accuracy": 0.569327731092437
+          }
+        },
+        "macro": 0.5558270351246878
+      }
+    ],
+    "C": [
+      {
+        "params": {
+          "scale": 0.05,
+          "structureWeight": 0.02,
+          "virtualBase": 0.45
+        },
+        "bySet": {
+          "DMU": {
+            "n": 566,
+            "accuracy": 0.5468197879858657
+          },
+          "BRO": {
+            "n": 447,
+            "accuracy": 0.5928411633109619
+          },
+          "WOE": {
+            "n": 476,
+            "accuracy": 0.5934873949579832
+          }
+        },
+        "macro": 0.5777161154182703
+      },
+      {
+        "params": {
+          "scale": 0.05,
+          "structureWeight": 0.02,
+          "virtualBase": 0.5
+        },
+        "bySet": {
+          "DMU": {
+            "n": 566,
+            "accuracy": 0.5468197879858657
+          },
+          "BRO": {
+            "n": 447,
+            "accuracy": 0.5928411633109619
+          },
+          "WOE": {
+            "n": 476,
+            "accuracy": 0.5934873949579832
+          }
+        },
+        "macro": 0.5777161154182703
+      },
+      {
+        "params": {
+          "scale": 0.05,
+          "structureWeight": 0.02,
+          "virtualBase": 0.55
+        },
+        "bySet": {
+          "DMU": {
+            "n": 566,
+            "accuracy": 0.5468197879858657
+          },
+          "BRO": {
+            "n": 447,
+            "accuracy": 0.5928411633109619
+          },
+          "WOE": {
+            "n": 476,
+            "accuracy": 0.5934873949579832
+          }
+        },
+        "macro": 0.5777161154182703
+      },
+      {
+        "params": {
+          "scale": 0.05,
+          "structureWeight": 0.04,
+          "virtualBase": 0.45
+        },
+        "bySet": {
+          "DMU": {
+            "n": 566,
+            "accuracy": 0.5424028268551236
+          },
+          "BRO": {
+            "n": 447,
+            "accuracy": 0.6040268456375839
+          },
+          "WOE": {
+            "n": 476,
+            "accuracy": 0.5861344537815126
+          }
+        },
+        "macro": 0.5775213754247401
+      },
+      {
+        "params": {
+          "scale": 0.05,
+          "structureWeight": 0.04,
+          "virtualBase": 0.5
+        },
+        "bySet": {
+          "DMU": {
+            "n": 566,
+            "accuracy": 0.5424028268551236
+          },
+          "BRO": {
+            "n": 447,
+            "accuracy": 0.6040268456375839
+          },
+          "WOE": {
+            "n": 476,
+            "accuracy": 0.5861344537815126
+          }
+        },
+        "macro": 0.5775213754247401
+      },
+      {
+        "params": {
+          "scale": 0.05,
+          "structureWeight": 0.04,
+          "virtualBase": 0.55
+        },
+        "bySet": {
+          "DMU": {
+            "n": 566,
+            "accuracy": 0.5424028268551236
+          },
+          "BRO": {
+            "n": 447,
+            "accuracy": 0.6040268456375839
+          },
+          "WOE": {
+            "n": 476,
+            "accuracy": 0.5861344537815126
+          }
+        },
+        "macro": 0.5775213754247401
+      },
+      {
+        "params": {
+          "scale": 0.1,
+          "structureWeight": 0.02,
+          "virtualBase": 0.45
+        },
+        "bySet": {
+          "DMU": {
+            "n": 566,
+            "accuracy": 0.5362190812720848
+          },
+          "BRO": {
+            "n": 447,
+            "accuracy": 0.5838926174496645
+          },
+          "WOE": {
+            "n": 476,
+            "accuracy": 0.5850840336134454
+          }
+        },
+        "macro": 0.568398577445065
+      },
+      {
+        "params": {
+          "scale": 0.1,
+          "structureWeight": 0.02,
+          "virtualBase": 0.5
+        },
+        "bySet": {
+          "DMU": {
+            "n": 566,
+            "accuracy": 0.5362190812720848
+          },
+          "BRO": {
+            "n": 447,
+            "accuracy": 0.5838926174496645
+          },
+          "WOE": {
+            "n": 476,
+            "accuracy": 0.5850840336134454
+          }
+        },
+        "macro": 0.568398577445065
+      },
+      {
+        "params": {
+          "scale": 0.1,
+          "structureWeight": 0.02,
+          "virtualBase": 0.55
+        },
+        "bySet": {
+          "DMU": {
+            "n": 566,
+            "accuracy": 0.5362190812720848
+          },
+          "BRO": {
+            "n": 447,
+            "accuracy": 0.5838926174496645
+          },
+          "WOE": {
+            "n": 476,
+            "accuracy": 0.5850840336134454
+          }
+        },
+        "macro": 0.568398577445065
+      },
+      {
+        "params": {
+          "scale": 0.1,
+          "structureWeight": 0.04,
+          "virtualBase": 0.45
+        },
+        "bySet": {
+          "DMU": {
+            "n": 566,
+            "accuracy": 0.5318021201413428
+          },
+          "BRO": {
+            "n": 447,
+            "accuracy": 0.5883668903803132
+          },
+          "WOE": {
+            "n": 476,
+            "accuracy": 0.5840336134453782
+          }
+        },
+        "macro": 0.5680675413223447
+      },
+      {
+        "params": {
+          "scale": 0.1,
+          "structureWeight": 0.04,
+          "virtualBase": 0.5
+        },
+        "bySet": {
+          "DMU": {
+            "n": 566,
+            "accuracy": 0.5318021201413428
+          },
+          "BRO": {
+            "n": 447,
+            "accuracy": 0.5883668903803132
+          },
+          "WOE": {
+            "n": 476,
+            "accuracy": 0.5840336134453782
+          }
+        },
+        "macro": 0.5680675413223447
+      },
+      {
+        "params": {
+          "scale": 0.1,
+          "structureWeight": 0.04,
+          "virtualBase": 0.55
+        },
+        "bySet": {
+          "DMU": {
+            "n": 566,
+            "accuracy": 0.5318021201413428
+          },
+          "BRO": {
+            "n": 447,
+            "accuracy": 0.5883668903803132
+          },
+          "WOE": {
+            "n": 476,
+            "accuracy": 0.5840336134453782
+          }
+        },
+        "macro": 0.5680675413223447
+      }
+    ]
+  },
+  "families": {
+    "A": {
+      "params": {
+        "scale": 0.1,
+        "structureWeight": 0.04,
+        "virtualBase": 0.5
+      },
+      "bySet": {
+        "DMU": {
+          "n": 566,
+          "accuracy": 0.5424028268551236
+        },
+        "BRO": {
+          "n": 447,
+          "accuracy": 0.5682326621923938
+        },
+        "WOE": {
+          "n": 476,
+          "accuracy": 0.569327731092437
+        }
+      },
+      "macro": 0.5599877400466514
+    },
+    "B": {
+      "params": {
+        "scale": 0.1,
+        "structureWeight": 0.04,
+        "virtualBase": 0.5
+      },
+      "bySet": {
+        "DMU": {
+          "n": 566,
+          "accuracy": 0.5388692579505301
+        },
+        "BRO": {
+          "n": 447,
+          "accuracy": 0.5592841163310962
+        },
+        "WOE": {
+          "n": 476,
+          "accuracy": 0.569327731092437
+        }
+      },
+      "macro": 0.5558270351246878
+    },
+    "C": {
+      "params": {
+        "scale": 0.05,
+        "structureWeight": 0.02,
+        "virtualBase": 0.5
+      },
+      "bySet": {
+        "DMU": {
+          "n": 566,
+          "accuracy": 0.5468197879858657
+        },
+        "BRO": {
+          "n": 447,
+          "accuracy": 0.5928411633109619
+        },
+        "WOE": {
+          "n": 476,
+          "accuracy": 0.5934873949579832
+        }
+      },
+      "macro": 0.5777161154182703
+    }
+  },
+  "selectedFamily": "C",
+  "seconds": 86.86972119985148,
+  "calibrationOnly": true,
+  "developmentNotRead": true,
+  "frozenEProbability": true
+}

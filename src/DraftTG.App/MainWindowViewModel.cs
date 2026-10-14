@@ -375,6 +375,7 @@ public sealed class MainWindowViewModel : INotifyPropertyChanged, IAsyncDisposab
         catch (OperationCanceledException) when (cancellationToken.IsCancellationRequested) { }
     }
 
+    internal LimitedStatisticsUpdate? CurrentStatisticsDiagnostic { get; private set; }
     internal void ApplyStatisticsUpdate(LimitedStatisticsUpdate update)
     {
         if (CaptureFreeSession is { } source && CaptureFreePresentationGeneration != source.Generation)
@@ -383,6 +384,7 @@ public sealed class MainWindowViewModel : INotifyPropertyChanged, IAsyncDisposab
         var snapshot = _currentSnapshot;
         if (!ReferenceEquals(update.Snapshot, snapshot)
             || !Equals(update.PackIdentity, snapshot?.CurrentPack)) return;
+        CurrentStatisticsDiagnostic = update;
         StatisticsStatusText = update.StatusText;
         StatisticsDiagnosticText = update.Diagnostic ?? string.Empty;
         StatisticsCoverageText = update.CoverageText;

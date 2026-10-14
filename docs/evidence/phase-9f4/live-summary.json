@@ -1,0 +1,768 @@
+{
+  "schema": "phase9f4-live-summary-v1",
+  "asOf": "2026-10-14T21:12:44.449826+00:00",
+  "ledger": "artifacts/phase9f4/live-matrix.jsonl",
+  "snapshot": "artifacts/phase9f4/ledger-review-snapshot.jsonl",
+  "snapshotPrefixBytes": 25571307,
+  "snapshotSha256": "36a095781ec670b378fed164eee08b989f77d53c1623ed55b5761a736cca397e",
+  "latestRun": "d02cc2f35566481b93a8a559843492ec",
+  "arenaBuild": {
+    "Architecture": "x64",
+    "UnityVersion": "6000.3.14.14060607",
+    "ExecutableSha256": "E22C729EEF75383888CB3D26A8CB4C2372BC6ACDAE7D7D9215C5020BA257FA37",
+    "UnityPlayerSha256": "BBDF3E73522223EA45C3A54049B716F9DA3E632994636734C5D53326AA2C36D0",
+    "MonoSha256": "69DD7CA153D9BD718ED6176C1E6FF065721A9408964384A421602F7D5527A294",
+    "Assemblies": [
+      {
+        "Name": "Core",
+        "Sha256": "3E85D45E88B10A2FD3841E3ABE6F5B37A17E0C42D360C93988E2270B4FDC858A",
+        "Mvid": "ee80c82e-c3e1-4b1f-a368-411a84d10f78"
+      },
+      {
+        "Name": "SharedClientCore",
+        "Sha256": "42F2FB5F062CCC6098182A902D411746070759A404E875B6E0AAC44D3B7CCC6E",
+        "Mvid": "c162c20f-ba79-438b-abd6-058f915926a3"
+      },
+      {
+        "Name": "Assembly-CSharp",
+        "Sha256": "909B532F1684ECC12F05C275869C0E7951B82DF63F8C63E3C73AD8E076C2E08A",
+        "Mvid": "fcbefd0d-6e5c-4294-8514-1dfe7644a5fe"
+      },
+      {
+        "Name": "mscorlib",
+        "Sha256": "6C76E06E6D44CF0F39BF59E6A90770968B70093AD4C1572DFBC5E46E431C5FBF",
+        "Mvid": "41d29b35-2f6a-475a-b1bf-7c6628b82790"
+      },
+      {
+        "Name": "Wizards.Arena.Models",
+        "Sha256": "7C955BD48BF8C136686D145244B9889AF258A48F338A3E2A77ED0CED1FD9A725",
+        "Mvid": "6180f80c-8973-4ed3-b3df-93c49402ff53"
+      }
+    ]
+  },
+  "eventCounts": {
+    "RunStarted": 6,
+    "Placement": 28,
+    "UiPlacementTiming": 28,
+    "BadgeStages": 1751,
+    "SourceDiagnostic": 6,
+    "PickAccepted": 41,
+    "UiLocalization": 883,
+    "Memory": 11,
+    "DeckPlacement": 389,
+    "RatingAudit": 5,
+    "Performance": 131,
+    "RunEnded": 1,
+    "StaleUiRejected": 58,
+    "HistoricalOrUnplacedPickRetired": 42,
+    "DeckTiming": 108
+  },
+  "latestRunEventCounts": {
+    "RunStarted": 1,
+    "Placement": 5,
+    "UiPlacementTiming": 5,
+    "BadgeStages": 4,
+    "SourceDiagnostic": 1,
+    "HistoricalOrUnplacedPickRetired": 14,
+    "StaleUiRejected": 9,
+    "UiLocalization": 59,
+    "Memory": 2,
+    "DeckPlacement": 20,
+    "DeckTiming": 20,
+    "RatingAudit": 1,
+    "Performance": 6
+  },
+  "windows": [
+    {
+      "Handle": 5518712,
+      "ProcessId": 71480,
+      "X": 3869,
+      "Y": 31,
+      "Width": 1600,
+      "Height": 900,
+      "Scaling": 1,
+      "IsWindowed": true,
+      "IsVisible": true,
+      "IsMinimized": false
+    }
+  ],
+  "observedPackCounts": [
+    1,
+    14
+  ],
+  "printings": [
+    {
+      "PodGrpId": 106535,
+      "VisibleGrpId": 75903,
+      "LogicalIdentity": "ordinary-basic:Forest",
+      "Accepted": true,
+      "Reconciled": true,
+      "Reason": "Independently resolved ordinary basic; full normalized gameplay metadata agrees; pod printing retained for history/stats"
+    }
+  ],
+  "measured": {
+    "latestRunOnly": true,
+    "firstAttach": {
+      "samples": 1,
+      "minMs": 780.658,
+      "medianMs": 780.658,
+      "p95Ms": 780.658,
+      "maxMs": 780.658
+    },
+    "packRead": {
+      "samples": 299,
+      "minMs": 78.0365,
+      "medianMs": 186.0028,
+      "p95Ms": 207.1121,
+      "maxMs": 313.6903
+    },
+    "totalDeckTraversal": {
+      "samples": 300,
+      "minMs": 55.2893,
+      "medianMs": 160.2004,
+      "p95Ms": 180.4675,
+      "maxMs": 266.8255
+    },
+    "DeckIdentityMs": {
+      "samples": 59,
+      "minMs": 7.3644,
+      "medianMs": 7.8333,
+      "p95Ms": 9.7391,
+      "maxMs": 26.2796
+    },
+    "DeckGeometryMs": {
+      "samples": 59,
+      "minMs": 39.9932,
+      "medianMs": 110.5018,
+      "p95Ms": 169.8925,
+      "maxMs": 187.1205
+    },
+    "ProjectionMs": {
+      "samples": 20,
+      "minMs": 0.0081,
+      "medianMs": 0.0133,
+      "p95Ms": 0.0216,
+      "maxMs": 0.0507
+    },
+    "ModelMs": {
+      "samples": 20,
+      "minMs": 0.0873,
+      "medianMs": 0.1142,
+      "p95Ms": 0.2013,
+      "maxMs": 2.1613
+    }
+  },
+  "unsupportedReasons": {
+    "Awaiting two stable UI/window reads": 1,
+    "UI native transform/state changed during read": 11,
+    "Main: UI native transform/state changed during read": 3,
+    "Sideboard: UI native transform/state changed during read": 5
+  },
+  "physical": {
+    "schema": "phase9f4-physical-v1",
+    "draft": "761fac89-894a-4de8-afa2-4507fc4eb55f",
+    "source": "Explicit user observations; no screenshots or synthetic tests",
+    "checks": [
+      {
+        "kind": "MainDeck",
+        "pack": 1,
+        "pick": 12,
+        "client": "1600x900",
+        "dpi": 96,
+        "mainGroups": 8,
+        "mainCopies": 9,
+        "quantityTwo": true,
+        "confirmed": [
+          "vertical alignment",
+          "visual order",
+          "names",
+          "quantities",
+          "grouped quantity two"
+        ],
+        "quote": "All main rows aligned, including \u00c3\u20142"
+      },
+      {
+        "kind": "Pack",
+        "pack": 1,
+        "pick": 14,
+        "cards": 1,
+        "client": "1600x900",
+        "dpi": 96,
+        "confirmed": [
+          "outline alignment"
+        ],
+        "quote": "Yes both old Pack 1 pick 14 aligned and so does pack 2 outlines"
+      },
+      {
+        "kind": "Pack",
+        "pack": 2,
+        "pick": 1,
+        "cards": 14,
+        "client": "1600x900",
+        "dpi": 96,
+        "confirmed": [
+          "outline alignment"
+        ],
+        "quote": "Yes both old Pack 1 pick 14 aligned and so does pack 2 outlines"
+      }
+    ],
+    "previousPhase": {
+      "cards": 3,
+      "client": "1600x900",
+      "dpi": 96,
+      "evidence": "docs/evidence/phase-9f3/physical-confirmation.json",
+      "preserved": true
+    },
+    "timedSessionCaveat": "P1P14\u00e2\u2020\u2019P2P1 occurred after timed overlay exited; disappearing old outline is not live accepted-pick retirement evidence.",
+    "pending": [
+      "10-card pack",
+      "5-card pack",
+      "second client size",
+      "movement",
+      "resize retirement",
+      "live pick retirement",
+      "next-pack redisplay while running",
+      "10+ main rows",
+      "top/middle/bottom and rapid scroll",
+      "deck pick update",
+      "deck resize"
+    ],
+    "dpiTransition": "Not physically observed",
+    "sideboard": "Not supported for display; no physical qualification claimed",
+    "packMatrixPassed": false,
+    "deckScrollablePassed": false
+  },
+  "staleEvents": [
+    {
+      "Schema": 1,
+      "RunId": "3576b06284a54585b895f95d442fc740",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T20:47:09.386762+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "3576b06284a54585b895f95d442fc740",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T20:47:09.4094028+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "3576b06284a54585b895f95d442fc740",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T20:47:09.4180505+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "3576b06284a54585b895f95d442fc740",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T20:47:09.4417079+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "3576b06284a54585b895f95d442fc740",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T20:47:09.4448777+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "3576b06284a54585b895f95d442fc740",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T20:47:09.4482692+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "3576b06284a54585b895f95d442fc740",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T20:47:09.4534489+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "3576b06284a54585b895f95d442fc740",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T20:47:09.4564058+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "3576b06284a54585b895f95d442fc740",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T20:47:09.4595833+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "df6f0cda167f4c64b75f9336215077cb",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T20:48:13.397655+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "df6f0cda167f4c64b75f9336215077cb",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T20:48:13.4051837+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "df6f0cda167f4c64b75f9336215077cb",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T20:48:13.4131141+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "df6f0cda167f4c64b75f9336215077cb",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T20:48:13.4192373+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "df6f0cda167f4c64b75f9336215077cb",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T20:48:13.4219982+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "df6f0cda167f4c64b75f9336215077cb",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T20:48:13.4220479+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "df6f0cda167f4c64b75f9336215077cb",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T20:48:13.4253904+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "df6f0cda167f4c64b75f9336215077cb",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T20:48:13.4289712+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "df6f0cda167f4c64b75f9336215077cb",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T20:48:13.4321011+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "df6f0cda167f4c64b75f9336215077cb",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T20:48:13.4352893+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "df6f0cda167f4c64b75f9336215077cb",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T20:48:14.7203475+00:00",
+      "Data": {
+        "Generation": 2
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "df6f0cda167f4c64b75f9336215077cb",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T20:48:14.7204286+00:00",
+      "Data": {
+        "Generation": 2
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "df6f0cda167f4c64b75f9336215077cb",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T20:48:14.72044+00:00",
+      "Data": {
+        "Generation": 2
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "df6f0cda167f4c64b75f9336215077cb",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T20:48:14.7204778+00:00",
+      "Data": {
+        "Generation": 2
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "df6f0cda167f4c64b75f9336215077cb",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T20:48:14.7205227+00:00",
+      "Data": {
+        "Generation": 2
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "f60d65c652c74e14be3e6858bc1a67a7",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T20:59:34.8877883+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "f60d65c652c74e14be3e6858bc1a67a7",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T20:59:34.8951296+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "f60d65c652c74e14be3e6858bc1a67a7",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T20:59:34.9028016+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "f60d65c652c74e14be3e6858bc1a67a7",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T20:59:34.9101053+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "f60d65c652c74e14be3e6858bc1a67a7",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T20:59:34.9161809+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "f60d65c652c74e14be3e6858bc1a67a7",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T20:59:34.9188235+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "f60d65c652c74e14be3e6858bc1a67a7",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T20:59:34.9221825+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "f60d65c652c74e14be3e6858bc1a67a7",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T20:59:34.9258529+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "f60d65c652c74e14be3e6858bc1a67a7",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T20:59:34.929028+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "f60d65c652c74e14be3e6858bc1a67a7",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T20:59:34.9324286+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "f60d65c652c74e14be3e6858bc1a67a7",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T20:59:34.9360151+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "f60d65c652c74e14be3e6858bc1a67a7",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T20:59:34.9360435+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "f60d65c652c74e14be3e6858bc1a67a7",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T21:03:20.4231343+00:00",
+      "Data": {
+        "Generation": 2
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "a93d1327a633444daff3e681d193df43",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T21:08:50.4649609+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "a93d1327a633444daff3e681d193df43",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T21:08:50.4724516+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "a93d1327a633444daff3e681d193df43",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T21:08:50.4798298+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "a93d1327a633444daff3e681d193df43",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T21:08:50.4869515+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "a93d1327a633444daff3e681d193df43",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T21:08:50.4924905+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "a93d1327a633444daff3e681d193df43",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T21:08:50.4956244+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "a93d1327a633444daff3e681d193df43",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T21:08:50.4990809+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "a93d1327a633444daff3e681d193df43",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T21:08:50.5039123+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "a93d1327a633444daff3e681d193df43",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T21:08:50.5039489+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "a93d1327a633444daff3e681d193df43",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T21:08:50.5065194+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "a93d1327a633444daff3e681d193df43",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T21:08:50.5097003+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "a93d1327a633444daff3e681d193df43",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T21:08:50.5130589+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "d02cc2f35566481b93a8a559843492ec",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T21:11:11.9384062+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "d02cc2f35566481b93a8a559843492ec",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T21:11:11.9458183+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "d02cc2f35566481b93a8a559843492ec",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T21:11:11.9536256+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "d02cc2f35566481b93a8a559843492ec",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T21:11:11.9611506+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "d02cc2f35566481b93a8a559843492ec",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T21:11:11.9700404+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "d02cc2f35566481b93a8a559843492ec",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T21:11:11.9733916+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "d02cc2f35566481b93a8a559843492ec",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T21:11:11.9770217+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "d02cc2f35566481b93a8a559843492ec",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T21:11:11.9802826+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    },
+    {
+      "Schema": 1,
+      "RunId": "d02cc2f35566481b93a8a559843492ec",
+      "Kind": "StaleUiRejected",
+      "Time": "2026-10-14T21:11:11.9870018+00:00",
+      "Data": {
+        "Generation": 0
+      }
+    }
+  ],
+  "moveEvents": [],
+  "resizeEvents": [],
+  "dpiEvents": [],
+  "caveats": [
+    "Non-attach pack reads include native deck traversal and declines; detailed UI timings sample state-change events, not all polls.",
+    "Run-start historical/unplaced picks do not prove live retirement. Older ledger PickAccepted generation=0 events are startup replay.",
+    "Deferred stale diagnostic rejection is not a physical false placement or live stale-badge proof.",
+    "Live scroll-response latency and compositor timing unavailable unless explicitly measured."
+  ]
+}

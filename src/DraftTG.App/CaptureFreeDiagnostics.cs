@@ -7,15 +7,19 @@ using DraftTG.Domain;
 
 namespace DraftTG.App;
 
-internal sealed record MemoryCardName(int Index, uint GrpId, bool Resolved, string Name, string? Set, string? Collector, string? Reason);
+internal sealed record MemoryCardName(int Index, uint GrpId, bool Resolved, string Name, string? Set, string? Collector, string? Reason)
+{ public string? LogicalIdentity { get; init; } }
 internal sealed class MemoryCardNames(ArenaCardResolver? resolver, CardCatalog? catalog)
 {
-    internal MemoryCardName[] Resolve(ArenaDraftMemorySnapshot snapshot) => snapshot.OrderedOfferedGrpIds.Select((id, index) =>
+    internal Func<uint,uint,ArenaOfferedCardIdentity>? PrintingReconciler=>resolver is not null&&catalog is not null?new PreferredBasicPrintingReconciler(resolver,catalog).Reconcile:null;
+    internal MemoryCardName[] Resolve(ArenaDraftMemorySnapshot snapshot) => ResolveIds(snapshot.OrderedOfferedGrpIds);
+    internal MemoryCardName[] ResolveIds(IEnumerable<uint> ids) => ids.Select((id, index) =>
     {
         var resolution = resolver?.Resolve(ArenaCardIdentifier.Create((int)id));
         var card = resolution?.CardIdentifier is { } key ? catalog?.Find(key) : null;
         return new MemoryCardName(index, id, card is not null, card?.Name ?? "<unresolved>", card?.SetCode.Value,
-            card?.CollectorNumber.Value, card is not null ? null : resolution?.Diagnostic ?? resolution?.Status.ToString() ?? "Catalog not available");
+            card?.CollectorNumber.Value, card is not null ? null : resolution?.Diagnostic ?? resolution?.Status.ToString() ?? "Catalog not available")
+            {LogicalIdentity=card?.Identifier.Value};
     }).ToArray();
     internal static async Task<MemoryCardNames> LoadAsync(CancellationToken token)
     {
@@ -33,19 +37,21 @@ internal sealed class MemoryCardNames(ArenaCardResolver? resolver, CardCatalog? 
 
 internal sealed record CaptureFreeOptions(string Ledger, bool Verbose, int? Seconds)
 {
+    internal bool LocalizationDebug { get; init; }
     internal static string DefaultLedger => Path.Combine(ApplicationDataPathProviderFactory.CreateDefault().GetApplicationDataDirectory(), "capture-free-draft", "phase9f2-live.jsonl");
     internal static CaptureFreeOptions Parse(string[] args)
     {
-        var path = DefaultLedger; var verbose = false; int? seconds = null;
+        var path = DefaultLedger; var verbose = false; int? seconds = null; var debug = false;
         for (var i = 1; i < args.Length; i++)
             switch (args[i])
             {
                 case "--ledger" when i + 1 < args.Length: path = Path.GetFullPath(args[++i]); break;
                 case "--verbose": verbose = true; break;
+                case "--localization-debug": debug = true; break;
                 case "--seconds" when i + 1 < args.Length && int.TryParse(args[++i], out var n) && n is > 0 and <= 86400: seconds = n; break;
                 default: throw new ArgumentException("Options: [--ledger <path>] [--verbose] [--seconds <1..86400>]");
             }
-        return new(path, verbose, seconds);
+        return new(path, verbose, seconds) { LocalizationDebug = debug };
     }
 }
 
@@ -54,7 +60,7 @@ internal sealed class CaptureFreeEvidenceLedger : IDisposable
 {
     private readonly object gate = new();
     private readonly StreamWriter writer;
-    private readonly List<(double Ms, double Traversal, bool First, string Status)> polls = [];
+    private readonly List<(double Ms, double Traversal, double? Ui, double? Deck, bool First, string Status)> polls = [];
     internal string RunId { get; } = Guid.NewGuid().ToString("N");
     internal CaptureFreeEvidenceLedger(string path, string mode, bool live = true)
     {
@@ -70,7 +76,7 @@ internal sealed class CaptureFreeEvidenceLedger : IDisposable
     {
         lock (gate)
         {
-            polls.Add((s.Duration.TotalMilliseconds, s.TraversalDuration.TotalMilliseconds, s.IsFirstAttach, s.Status.ToString()));
+            polls.Add((s.Duration.TotalMilliseconds, s.TraversalDuration.TotalMilliseconds, s.Ui?.ReadMilliseconds, s.Ui?.DeckReadMilliseconds, s.IsFirstAttach, s.Status.ToString()));
             if (polls.Count >= 50) FlushPolls();
         }
     }
@@ -78,6 +84,7 @@ internal sealed class CaptureFreeEvidenceLedger : IDisposable
     {
         if (polls.Count == 0) return;
         Record("Performance", new { ReadMs = polls.Select(p => p.Ms).ToArray(), TraversalMs = polls.Select(p => p.Traversal).ToArray(),
+            UiReadMs = polls.Select(p => p.Ui).ToArray(), DeckReadMs = polls.Select(p => p.Deck).ToArray(),
             FirstAttach = polls.Select(p => p.First).ToArray(), Statuses = polls.GroupBy(p => p.Status).ToDictionary(g => g.Key, g => g.Count()) });
         polls.Clear();
     }
@@ -91,6 +98,7 @@ internal sealed class CaptureFreeEvidenceLedger : IDisposable
             DraftIdSource = s.DraftSessionId is not null ? "Memory draft ID" : s.CourseId is not null ? "Memory course ID" : "Player.log or unavailable",
             s.EventName, s.PackNumber, s.PickNumber, CardCount = update.CurrentPack?.OrderedOfferedGrpIds.Count ?? 0,
             OrderedGrpIds = update.CurrentPack?.OrderedOfferedGrpIds ?? [], Names = names, s.ViewMode, s.RuntimeProfile, s.Build,
+            s.PrintingIdentities,
             SnapshotTime = s.ReadTimestamp, ReadMs = s.Duration.TotalMilliseconds, s.BytesRead,
             Consistency = update.CurrentPack is not null ? "Full checks + two coherent reads" : "Not current",
             Reconciliation = reconciliation?.Status, ReconciliationReason = reconciliation?.Reason,

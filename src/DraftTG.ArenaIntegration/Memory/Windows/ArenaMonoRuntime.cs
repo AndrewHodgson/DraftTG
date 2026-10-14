@@ -81,6 +81,14 @@ internal sealed class ArenaMonoRuntime(IRemoteMemory memory, ulong monoBase)
     }
     internal string ClassName(ulong klass) => Names(klass).Name;
     internal string ClassNamespace(ulong klass) => Names(klass).Namespace;
+    internal void ExpectAssembly(ulong obj,string assembly,Guid mvid)
+    {
+        var image=Require(memory.Ptr(ObjectClass(obj)+MonoLayout.ClassImage),"UI class image");
+        var name=Path.GetFileName(memory.CString(Require(memory.Ptr(image+MonoLayout.ImageName),"UI image name"),1024));
+        if(name.EndsWith(".dll",StringComparison.OrdinalIgnoreCase))name=name[..^4];
+        var guid=memory.CString(Require(memory.Ptr(image+MonoLayout.ImageGuid),"UI loaded MVID"),64);
+        if(name!=assembly||!Guid.TryParse(guid,out var loaded)||loaded!=mvid)Fail("UI loaded image does not match exact supplemental file fingerprint");
+    }
     internal ulong ObjectClass(ulong obj)
     {
         if ((obj & 7) != 0) Fail("Object pointer is not aligned.");

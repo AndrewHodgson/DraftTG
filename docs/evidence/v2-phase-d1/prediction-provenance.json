@@ -1,0 +1,28 @@
+{
+  "version": "research-a-phase-d1-v1",
+  "decisions": 54283,
+  "sha256": "0c07d06f5dd6ca667e94ff67951ec9ddd4d682502231c19981c0d55d9b70e5f8",
+  "selectionSha256": "9b724c7e189b059eac540fadfe6288c51df34a41aa1ecdaf1860b02088e304ac",
+  "features": "Current PoolBeforePick, offered identity, disjoint model, frozen metadata/Q only; SELECT inputs column, no labels/outcomes",
+  "meanThreeFamilyMilliseconds": 24.61206973224618,
+  "p95ThreeFamilyMilliseconds": 33.60319999046624,
+  "amortizedActualCandidateMilliseconds": 1.0742838383251672,
+  "activity": {
+    "BRO/active": 0,
+    "BRO/proposed": 57294,
+    "DMU/active": 0,
+    "DMU/proposed": 49866,
+    "LCI/active": 0,
+    "LCI/proposed": 57302,
+    "MKM/active": 0,
+    "MKM/proposed": 43191,
+    "MOM/active": 0,
+    "MOM/proposed": 56805,
+    "ONE/active": 0,
+    "ONE/proposed": 49687,
+    "OTJ/active": 0,
+    "OTJ/proposed": 50183,
+    "WOE/active": 0,
+    "WOE/proposed": 50217
+  }
+}

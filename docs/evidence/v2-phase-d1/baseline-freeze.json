@@ -1,0 +1,1212 @@
+{
+  "version": "research-a-phase-d1-v1",
+  "strongest": "color-only",
+  "developmentMRR": {
+    "color-only": 0.45666666666666667,
+    "uniform-frequency": 0.3312928737928738,
+    "quality-frequency": 0.3294207875457875,
+    "frequency-Q": 0.30588827838827837,
+    "frequency-Q-mana": 0.4098655511155511,
+    "generic-logistic": 0.35320325507825506
+  },
+  "results": [
+    {
+      "set": "DMU",
+      "partition": "utility",
+      "tasks": 0,
+      "metrics": {
+        "color-only": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "uniform-frequency": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "quality-frequency": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "frequency-Q": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "frequency-Q-mana": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "generic-logistic": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        }
+      }
+    },
+    {
+      "set": "DMU",
+      "partition": "confidence",
+      "tasks": 0,
+      "metrics": {
+        "color-only": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "uniform-frequency": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "quality-frequency": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "frequency-Q": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "frequency-Q-mana": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "generic-logistic": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        }
+      }
+    },
+    {
+      "set": "DMU",
+      "partition": "target",
+      "tasks": 7,
+      "metrics": {
+        "color-only": {
+          "n": 7,
+          "Top1": 0.19999999999999998,
+          "Top3": 0.6,
+          "MRR": 0.4566666666666666,
+          "normalizedRank": 0.5
+        },
+        "uniform-frequency": {
+          "n": 7,
+          "Top1": 0.2857142857142857,
+          "Top3": 0.8571428571428571,
+          "MRR": 0.5595238095238095,
+          "normalizedRank": 0.32142857142857145
+        },
+        "quality-frequency": {
+          "n": 7,
+          "Top1": 0.2857142857142857,
+          "Top3": 0.8571428571428571,
+          "MRR": 0.5523809523809524,
+          "normalizedRank": 0.35714285714285715
+        },
+        "frequency-Q": {
+          "n": 7,
+          "Top1": 0.2857142857142857,
+          "Top3": 0.5714285714285714,
+          "MRR": 0.5285714285714286,
+          "normalizedRank": 0.42857142857142855
+        },
+        "frequency-Q-mana": {
+          "n": 7,
+          "Top1": 0.14285714285714285,
+          "Top3": 0.5714285714285714,
+          "MRR": 0.4023809523809524,
+          "normalizedRank": 0.5714285714285714
+        },
+        "generic-logistic": {
+          "n": 7,
+          "Top1": 0.2857142857142857,
+          "Top3": 0.7142857142857143,
+          "MRR": 0.5238095238095238,
+          "normalizedRank": 0.39285714285714285
+        }
+      }
+    },
+    {
+      "set": "BRO",
+      "partition": "utility",
+      "tasks": 10,
+      "metrics": {
+        "color-only": {
+          "n": 10,
+          "Top1": 0.2,
+          "Top3": 0.5999999999999999,
+          "MRR": 0.4566666666666667,
+          "normalizedRank": 0.5
+        },
+        "uniform-frequency": {
+          "n": 10,
+          "Top1": 0.0,
+          "Top3": 0.7,
+          "MRR": 0.375,
+          "normalizedRank": 0.475
+        },
+        "quality-frequency": {
+          "n": 10,
+          "Top1": 0.0,
+          "Top3": 0.6,
+          "MRR": 0.36666666666666664,
+          "normalizedRank": 0.5
+        },
+        "frequency-Q": {
+          "n": 10,
+          "Top1": 0.0,
+          "Top3": 0.7,
+          "MRR": 0.375,
+          "normalizedRank": 0.475
+        },
+        "frequency-Q-mana": {
+          "n": 10,
+          "Top1": 0.0,
+          "Top3": 0.5,
+          "MRR": 0.30333333333333334,
+          "normalizedRank": 0.625
+        },
+        "generic-logistic": {
+          "n": 10,
+          "Top1": 0.0,
+          "Top3": 0.7,
+          "MRR": 0.35833333333333334,
+          "normalizedRank": 0.5
+        }
+      }
+    },
+    {
+      "set": "BRO",
+      "partition": "confidence",
+      "tasks": 10,
+      "metrics": {
+        "color-only": {
+          "n": 10,
+          "Top1": 0.2,
+          "Top3": 0.5999999999999999,
+          "MRR": 0.4566666666666667,
+          "normalizedRank": 0.5
+        },
+        "uniform-frequency": {
+          "n": 10,
+          "Top1": 0.0,
+          "Top3": 0.7,
+          "MRR": 0.38666666666666666,
+          "normalizedRank": 0.475
+        },
+        "quality-frequency": {
+          "n": 10,
+          "Top1": 0.0,
+          "Top3": 0.8,
+          "MRR": 0.39499999999999996,
+          "normalizedRank": 0.45
+        },
+        "frequency-Q": {
+          "n": 10,
+          "Top1": 0.0,
+          "Top3": 0.7,
+          "MRR": 0.35333333333333333,
+          "normalizedRank": 0.525
+        },
+        "frequency-Q-mana": {
+          "n": 10,
+          "Top1": 0.0,
+          "Top3": 0.6,
+          "MRR": 0.32333333333333336,
+          "normalizedRank": 0.6
+        },
+        "generic-logistic": {
+          "n": 10,
+          "Top1": 0.0,
+          "Top3": 0.7,
+          "MRR": 0.35833333333333334,
+          "normalizedRank": 0.5
+        }
+      }
+    },
+    {
+      "set": "BRO",
+      "partition": "target",
+      "tasks": 74,
+      "metrics": {
+        "color-only": {
+          "n": 74,
+          "Top1": 0.19999999999999996,
+          "Top3": 0.6,
+          "MRR": 0.4566666666666665,
+          "normalizedRank": 0.5
+        },
+        "uniform-frequency": {
+          "n": 74,
+          "Top1": 0.05405405405405406,
+          "Top3": 0.5540540540540541,
+          "MRR": 0.3725225225225225,
+          "normalizedRank": 0.5405405405405406
+        },
+        "quality-frequency": {
+          "n": 74,
+          "Top1": 0.04054054054054054,
+          "Top3": 0.5405405405405406,
+          "MRR": 0.3689189189189189,
+          "normalizedRank": 0.5337837837837838
+        },
+        "frequency-Q": {
+          "n": 74,
+          "Top1": 0.02702702702702703,
+          "Top3": 0.5405405405405406,
+          "MRR": 0.35135135135135137,
+          "normalizedRank": 0.5675675675675675
+        },
+        "frequency-Q-mana": {
+          "n": 74,
+          "Top1": 0.04054054054054054,
+          "Top3": 0.47297297297297297,
+          "MRR": 0.3518018018018018,
+          "normalizedRank": 0.5844594594594594
+        },
+        "generic-logistic": {
+          "n": 74,
+          "Top1": 0.05405405405405406,
+          "Top3": 0.5540540540540541,
+          "MRR": 0.3702702702702703,
+          "normalizedRank": 0.543918918918919
+        }
+      }
+    },
+    {
+      "set": "WOE",
+      "partition": "utility",
+      "tasks": 3,
+      "metrics": {
+        "color-only": {
+          "n": 3,
+          "Top1": 0.20000000000000004,
+          "Top3": 0.6,
+          "MRR": 0.4566666666666667,
+          "normalizedRank": 0.5
+        },
+        "uniform-frequency": {
+          "n": 3,
+          "Top1": 0.0,
+          "Top3": 1.0,
+          "MRR": 0.4444444444444444,
+          "normalizedRank": 0.3333333333333333
+        },
+        "quality-frequency": {
+          "n": 3,
+          "Top1": 0.0,
+          "Top3": 1.0,
+          "MRR": 0.4444444444444444,
+          "normalizedRank": 0.3333333333333333
+        },
+        "frequency-Q": {
+          "n": 3,
+          "Top1": 0.0,
+          "Top3": 1.0,
+          "MRR": 0.4444444444444444,
+          "normalizedRank": 0.3333333333333333
+        },
+        "frequency-Q-mana": {
+          "n": 3,
+          "Top1": 0.0,
+          "Top3": 1.0,
+          "MRR": 0.4444444444444444,
+          "normalizedRank": 0.3333333333333333
+        },
+        "generic-logistic": {
+          "n": 3,
+          "Top1": 0.0,
+          "Top3": 1.0,
+          "MRR": 0.4444444444444444,
+          "normalizedRank": 0.3333333333333333
+        }
+      }
+    },
+    {
+      "set": "WOE",
+      "partition": "confidence",
+      "tasks": 3,
+      "metrics": {
+        "color-only": {
+          "n": 3,
+          "Top1": 0.20000000000000004,
+          "Top3": 0.6,
+          "MRR": 0.4566666666666667,
+          "normalizedRank": 0.5
+        },
+        "uniform-frequency": {
+          "n": 3,
+          "Top1": 0.0,
+          "Top3": 1.0,
+          "MRR": 0.3333333333333333,
+          "normalizedRank": 0.5
+        },
+        "quality-frequency": {
+          "n": 3,
+          "Top1": 0.0,
+          "Top3": 1.0,
+          "MRR": 0.3333333333333333,
+          "normalizedRank": 0.5
+        },
+        "frequency-Q": {
+          "n": 3,
+          "Top1": 0.0,
+          "Top3": 1.0,
+          "MRR": 0.3333333333333333,
+          "normalizedRank": 0.5
+        },
+        "frequency-Q-mana": {
+          "n": 3,
+          "Top1": 0.0,
+          "Top3": 1.0,
+          "MRR": 0.3333333333333333,
+          "normalizedRank": 0.5
+        },
+        "generic-logistic": {
+          "n": 3,
+          "Top1": 0.0,
+          "Top3": 1.0,
+          "MRR": 0.3333333333333333,
+          "normalizedRank": 0.5
+        }
+      }
+    },
+    {
+      "set": "WOE",
+      "partition": "target",
+      "tasks": 57,
+      "metrics": {
+        "color-only": {
+          "n": 57,
+          "Top1": 0.19999999999999998,
+          "Top3": 0.6000000000000001,
+          "MRR": 0.4566666666666666,
+          "normalizedRank": 0.5
+        },
+        "uniform-frequency": {
+          "n": 57,
+          "Top1": 0.0,
+          "Top3": 0.9122807017543859,
+          "MRR": 0.43128654970760233,
+          "normalizedRank": 0.36403508771929827
+        },
+        "quality-frequency": {
+          "n": 57,
+          "Top1": 0.0,
+          "Top3": 0.9122807017543859,
+          "MRR": 0.42836257309941517,
+          "normalizedRank": 0.3684210526315789
+        },
+        "frequency-Q": {
+          "n": 57,
+          "Top1": 0.0,
+          "Top3": 0.8947368421052632,
+          "MRR": 0.4269005847953216,
+          "normalizedRank": 0.37280701754385964
+        },
+        "frequency-Q-mana": {
+          "n": 57,
+          "Top1": 0.0,
+          "Top3": 0.9473684210526315,
+          "MRR": 0.43128654970760233,
+          "normalizedRank": 0.35964912280701755
+        },
+        "generic-logistic": {
+          "n": 57,
+          "Top1": 0.03508771929824561,
+          "Top3": 0.9298245614035088,
+          "MRR": 0.45321637426900585,
+          "normalizedRank": 0.34649122807017546
+        }
+      }
+    },
+    {
+      "set": "LCI",
+      "partition": "utility",
+      "tasks": 0,
+      "metrics": {
+        "color-only": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "uniform-frequency": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "quality-frequency": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "frequency-Q": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "frequency-Q-mana": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "generic-logistic": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        }
+      }
+    },
+    {
+      "set": "LCI",
+      "partition": "confidence",
+      "tasks": 2,
+      "metrics": {
+        "color-only": {
+          "n": 2,
+          "Top1": 0.2,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "uniform-frequency": {
+          "n": 2,
+          "Top1": 0.5,
+          "Top3": 1.0,
+          "MRR": 0.75,
+          "normalizedRank": 0.125
+        },
+        "quality-frequency": {
+          "n": 2,
+          "Top1": 0.5,
+          "Top3": 1.0,
+          "MRR": 0.75,
+          "normalizedRank": 0.125
+        },
+        "frequency-Q": {
+          "n": 2,
+          "Top1": 0.0,
+          "Top3": 1.0,
+          "MRR": 0.41666666666666663,
+          "normalizedRank": 0.375
+        },
+        "frequency-Q-mana": {
+          "n": 2,
+          "Top1": 0.0,
+          "Top3": 1.0,
+          "MRR": 0.3333333333333333,
+          "normalizedRank": 0.5
+        },
+        "generic-logistic": {
+          "n": 2,
+          "Top1": 0.5,
+          "Top3": 1.0,
+          "MRR": 0.6666666666666666,
+          "normalizedRank": 0.25
+        }
+      }
+    },
+    {
+      "set": "LCI",
+      "partition": "target",
+      "tasks": 4,
+      "metrics": {
+        "color-only": {
+          "n": 4,
+          "Top1": 0.2,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "uniform-frequency": {
+          "n": 4,
+          "Top1": 0.0,
+          "Top3": 1.0,
+          "MRR": 0.3333333333333333,
+          "normalizedRank": 0.5
+        },
+        "quality-frequency": {
+          "n": 4,
+          "Top1": 0.0,
+          "Top3": 1.0,
+          "MRR": 0.3333333333333333,
+          "normalizedRank": 0.5
+        },
+        "frequency-Q": {
+          "n": 4,
+          "Top1": 0.0,
+          "Top3": 1.0,
+          "MRR": 0.3333333333333333,
+          "normalizedRank": 0.5
+        },
+        "frequency-Q-mana": {
+          "n": 4,
+          "Top1": 0.0,
+          "Top3": 1.0,
+          "MRR": 0.3333333333333333,
+          "normalizedRank": 0.5
+        },
+        "generic-logistic": {
+          "n": 4,
+          "Top1": 0.0,
+          "Top3": 1.0,
+          "MRR": 0.3333333333333333,
+          "normalizedRank": 0.5
+        }
+      }
+    },
+    {
+      "set": "MKM",
+      "partition": "utility",
+      "tasks": 0,
+      "metrics": {
+        "color-only": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "uniform-frequency": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "quality-frequency": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "frequency-Q": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "frequency-Q-mana": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "generic-logistic": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        }
+      }
+    },
+    {
+      "set": "MKM",
+      "partition": "confidence",
+      "tasks": 0,
+      "metrics": {
+        "color-only": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "uniform-frequency": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "quality-frequency": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "frequency-Q": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "frequency-Q-mana": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "generic-logistic": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        }
+      }
+    },
+    {
+      "set": "MKM",
+      "partition": "target",
+      "tasks": 0,
+      "metrics": {
+        "color-only": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "uniform-frequency": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "quality-frequency": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "frequency-Q": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "frequency-Q-mana": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "generic-logistic": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        }
+      }
+    },
+    {
+      "set": "OTJ",
+      "partition": "utility",
+      "tasks": 34,
+      "metrics": {
+        "color-only": {
+          "n": 34,
+          "Top1": 0.2,
+          "Top3": 0.6000000000000001,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "uniform-frequency": {
+          "n": 34,
+          "Top1": 0.20588235294117646,
+          "Top3": 0.6470588235294118,
+          "MRR": 0.48039215686274506,
+          "normalizedRank": 0.4264705882352941
+        },
+        "quality-frequency": {
+          "n": 34,
+          "Top1": 0.23529411764705882,
+          "Top3": 0.7058823529411765,
+          "MRR": 0.5,
+          "normalizedRank": 0.40441176470588236
+        },
+        "frequency-Q": {
+          "n": 34,
+          "Top1": 0.08823529411764706,
+          "Top3": 0.6764705882352942,
+          "MRR": 0.42892156862745096,
+          "normalizedRank": 0.4411764705882353
+        },
+        "frequency-Q-mana": {
+          "n": 34,
+          "Top1": 0.14705882352941177,
+          "Top3": 0.7352941176470589,
+          "MRR": 0.4730392156862745,
+          "normalizedRank": 0.39705882352941174
+        },
+        "generic-logistic": {
+          "n": 34,
+          "Top1": 0.20588235294117646,
+          "Top3": 0.7058823529411765,
+          "MRR": 0.47892156862745094,
+          "normalizedRank": 0.4264705882352941
+        }
+      }
+    },
+    {
+      "set": "OTJ",
+      "partition": "confidence",
+      "tasks": 41,
+      "metrics": {
+        "color-only": {
+          "n": 41,
+          "Top1": 0.19999999999999998,
+          "Top3": 0.6000000000000001,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "uniform-frequency": {
+          "n": 41,
+          "Top1": 0.17073170731707318,
+          "Top3": 0.7073170731707317,
+          "MRR": 0.4634146341463415,
+          "normalizedRank": 0.4268292682926829
+        },
+        "quality-frequency": {
+          "n": 41,
+          "Top1": 0.14634146341463414,
+          "Top3": 0.7073170731707317,
+          "MRR": 0.44715447154471544,
+          "normalizedRank": 0.43902439024390244
+        },
+        "frequency-Q": {
+          "n": 41,
+          "Top1": 0.0975609756097561,
+          "Top3": 0.7073170731707317,
+          "MRR": 0.4227642276422764,
+          "normalizedRank": 0.45121951219512196
+        },
+        "frequency-Q-mana": {
+          "n": 41,
+          "Top1": 0.21951219512195122,
+          "Top3": 0.7317073170731707,
+          "MRR": 0.5101626016260162,
+          "normalizedRank": 0.3780487804878049
+        },
+        "generic-logistic": {
+          "n": 41,
+          "Top1": 0.21951219512195122,
+          "Top3": 0.7073170731707317,
+          "MRR": 0.5,
+          "normalizedRank": 0.39634146341463417
+        }
+      }
+    },
+    {
+      "set": "OTJ",
+      "partition": "target",
+      "tasks": 364,
+      "metrics": {
+        "color-only": {
+          "n": 364,
+          "Top1": 0.19999999999999996,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "uniform-frequency": {
+          "n": 364,
+          "Top1": 0.08791208791208792,
+          "Top3": 0.6318681318681318,
+          "MRR": 0.3902472527472528,
+          "normalizedRank": 0.5089285714285714
+        },
+        "quality-frequency": {
+          "n": 364,
+          "Top1": 0.09340659340659341,
+          "Top3": 0.6291208791208791,
+          "MRR": 0.39184981684981685,
+          "normalizedRank": 0.5096153846153846
+        },
+        "frequency-Q": {
+          "n": 364,
+          "Top1": 0.03296703296703297,
+          "Top3": 0.6346153846153846,
+          "MRR": 0.3677197802197803,
+          "normalizedRank": 0.5144230769230769
+        },
+        "frequency-Q-mana": {
+          "n": 364,
+          "Top1": 0.11813186813186813,
+          "Top3": 0.6895604395604396,
+          "MRR": 0.43438644688644684,
+          "normalizedRank": 0.4491758241758242
+        },
+        "generic-logistic": {
+          "n": 364,
+          "Top1": 0.10714285714285714,
+          "Top3": 0.6565934065934066,
+          "MRR": 0.4097069597069597,
+          "normalizedRank": 0.48626373626373626
+        }
+      }
+    },
+    {
+      "set": "ONE",
+      "partition": "utility",
+      "tasks": 0,
+      "metrics": {
+        "color-only": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "uniform-frequency": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "quality-frequency": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "frequency-Q": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "frequency-Q-mana": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "generic-logistic": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        }
+      }
+    },
+    {
+      "set": "ONE",
+      "partition": "confidence",
+      "tasks": 2,
+      "metrics": {
+        "color-only": {
+          "n": 2,
+          "Top1": 0.2,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "uniform-frequency": {
+          "n": 2,
+          "Top1": 0.5,
+          "Top3": 0.5,
+          "MRR": 0.625,
+          "normalizedRank": 0.375
+        },
+        "quality-frequency": {
+          "n": 2,
+          "Top1": 0.5,
+          "Top3": 0.5,
+          "MRR": 0.625,
+          "normalizedRank": 0.375
+        },
+        "frequency-Q": {
+          "n": 2,
+          "Top1": 0.0,
+          "Top3": 0.5,
+          "MRR": 0.375,
+          "normalizedRank": 0.5
+        },
+        "frequency-Q-mana": {
+          "n": 2,
+          "Top1": 0.5,
+          "Top3": 1.0,
+          "MRR": 0.75,
+          "normalizedRank": 0.125
+        },
+        "generic-logistic": {
+          "n": 2,
+          "Top1": 0.0,
+          "Top3": 0.5,
+          "MRR": 0.375,
+          "normalizedRank": 0.5
+        }
+      }
+    },
+    {
+      "set": "ONE",
+      "partition": "target",
+      "tasks": 4,
+      "metrics": {
+        "color-only": {
+          "n": 4,
+          "Top1": 0.2,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "uniform-frequency": {
+          "n": 4,
+          "Top1": 0.0,
+          "Top3": 0.0,
+          "MRR": 0.21250000000000002,
+          "normalizedRank": 0.9375
+        },
+        "quality-frequency": {
+          "n": 4,
+          "Top1": 0.0,
+          "Top3": 0.0,
+          "MRR": 0.21250000000000002,
+          "normalizedRank": 0.9375
+        },
+        "frequency-Q": {
+          "n": 4,
+          "Top1": 0.0,
+          "Top3": 0.0,
+          "MRR": 0.21250000000000002,
+          "normalizedRank": 0.9375
+        },
+        "frequency-Q-mana": {
+          "n": 4,
+          "Top1": 0.0,
+          "Top3": 0.5,
+          "MRR": 0.3208333333333333,
+          "normalizedRank": 0.625
+        },
+        "generic-logistic": {
+          "n": 4,
+          "Top1": 0.0,
+          "Top3": 0.0,
+          "MRR": 0.21250000000000002,
+          "normalizedRank": 0.9375
+        }
+      }
+    },
+    {
+      "set": "MOM",
+      "partition": "utility",
+      "tasks": 6,
+      "metrics": {
+        "color-only": {
+          "n": 6,
+          "Top1": 0.19999999999999998,
+          "Top3": 0.6,
+          "MRR": 0.4566666666666666,
+          "normalizedRank": 0.5
+        },
+        "uniform-frequency": {
+          "n": 6,
+          "Top1": 0.0,
+          "Top3": 0.8333333333333334,
+          "MRR": 0.375,
+          "normalizedRank": 0.4583333333333333
+        },
+        "quality-frequency": {
+          "n": 6,
+          "Top1": 0.0,
+          "Top3": 0.8333333333333334,
+          "MRR": 0.375,
+          "normalizedRank": 0.4583333333333333
+        },
+        "frequency-Q": {
+          "n": 6,
+          "Top1": 0.0,
+          "Top3": 0.5,
+          "MRR": 0.33888888888888885,
+          "normalizedRank": 0.5833333333333334
+        },
+        "frequency-Q-mana": {
+          "n": 6,
+          "Top1": 0.3333333333333333,
+          "Top3": 0.6666666666666666,
+          "MRR": 0.5388888888888889,
+          "normalizedRank": 0.4583333333333333
+        },
+        "generic-logistic": {
+          "n": 6,
+          "Top1": 0.0,
+          "Top3": 0.8333333333333334,
+          "MRR": 0.375,
+          "normalizedRank": 0.4583333333333333
+        }
+      }
+    },
+    {
+      "set": "MOM",
+      "partition": "confidence",
+      "tasks": 4,
+      "metrics": {
+        "color-only": {
+          "n": 4,
+          "Top1": 0.2,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "uniform-frequency": {
+          "n": 4,
+          "Top1": 0.0,
+          "Top3": 1.0,
+          "MRR": 0.4583333333333333,
+          "normalizedRank": 0.3125
+        },
+        "quality-frequency": {
+          "n": 4,
+          "Top1": 0.0,
+          "Top3": 1.0,
+          "MRR": 0.4583333333333333,
+          "normalizedRank": 0.3125
+        },
+        "frequency-Q": {
+          "n": 4,
+          "Top1": 0.0,
+          "Top3": 0.5,
+          "MRR": 0.29166666666666663,
+          "normalizedRank": 0.625
+        },
+        "frequency-Q-mana": {
+          "n": 4,
+          "Top1": 0.5,
+          "Top3": 1.0,
+          "MRR": 0.7083333333333333,
+          "normalizedRank": 0.1875
+        },
+        "generic-logistic": {
+          "n": 4,
+          "Top1": 0.0,
+          "Top3": 1.0,
+          "MRR": 0.3333333333333333,
+          "normalizedRank": 0.5
+        }
+      }
+    },
+    {
+      "set": "MOM",
+      "partition": "target",
+      "tasks": 55,
+      "metrics": {
+        "color-only": {
+          "n": 55,
+          "Top1": 0.1999999999999999,
+          "Top3": 0.6000000000000001,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "uniform-frequency": {
+          "n": 55,
+          "Top1": 0.0,
+          "Top3": 0.8909090909090909,
+          "MRR": 0.389090909090909,
+          "normalizedRank": 0.43636363636363634
+        },
+        "quality-frequency": {
+          "n": 55,
+          "Top1": 0.0,
+          "Top3": 0.8909090909090909,
+          "MRR": 0.3799999999999999,
+          "normalizedRank": 0.45
+        },
+        "frequency-Q": {
+          "n": 55,
+          "Top1": 0.0,
+          "Top3": 0.5818181818181818,
+          "MRR": 0.30999999999999994,
+          "normalizedRank": 0.6
+        },
+        "frequency-Q-mana": {
+          "n": 55,
+          "Top1": 0.3090909090909091,
+          "Top3": 0.7454545454545455,
+          "MRR": 0.5509090909090909,
+          "normalizedRank": 0.40454545454545454
+        },
+        "generic-logistic": {
+          "n": 55,
+          "Top1": 0.16363636363636364,
+          "Top3": 0.9454545454545454,
+          "MRR": 0.4572727272727271,
+          "normalizedRank": 0.4090909090909091
+        }
+      }
+    }
+  ],
+  "inputs": {
+    "docs\\evidence\\v2-phase-d1\\generic-fit.json": "ae5bf07cd8a29d43c9fb7b61baa729590b8262ed8f4c6f8105093a0ac86af43b",
+    "data\\historical\\normalized\\phase-d1\\DMU.generic.json": "8cd65694c87e49f52f112c76df7c4bcd5089f56a1b15162004859dcdb7cbd223",
+    "data\\historical\\normalized\\phase-d1\\BRO.generic.json": "ae47f0399883fa25430ca77d06a5d24d25b4a80f34411e767822672f22fb9a3f",
+    "data\\historical\\normalized\\phase-d1\\WOE.generic.json": "1cf51950131cc6e96006849cd9fd367a66d9ebaa3bb957dbba3a856c948594fb",
+    "data\\historical\\normalized\\phase-d1\\LCI.generic.json": "5a7d578efda20e5da8a933bd915d121893c8be04a4c914838999563d9bae7be5",
+    "data\\historical\\normalized\\phase-d1\\MKM.generic.json": "829264050f22c81a624d6d8e4156a905417d4ba344ee3fff56af491943a25897",
+    "data\\historical\\normalized\\phase-d1\\OTJ.generic.json": "7b6d412767f256c37140249ce0adcf33694537d273cc14eb92287a022677c719",
+    "data\\historical\\normalized\\phase-d1\\ONE.generic.json": "a98c35bf896215de5c5adabb7d192af0ddaf15c924181ed9dfb84cc7ca20e5aa",
+    "data\\historical\\normalized\\phase-d1\\MOM.generic.json": "bc0323b8b0d524b553d804a54f3fe2733e31837779ddc013571c35cdcac72848"
+  },
+  "coverage": {
+    "LCI": 4,
+    "MKM": 0,
+    "OTJ": 364,
+    "ONE": 4,
+    "MOM": 55
+  },
+  "fullPrimaryCoverage": false,
+  "aggregateScope": "Available development sets only; MKM unavailable, complete primary gate FAIL",
+  "stage": "Frozen before residual candidates; generic controls only",
+  "noCandidateAnalysis": true
+}

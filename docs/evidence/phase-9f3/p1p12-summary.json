@@ -1,0 +1,397 @@
+{
+  "schema": "drafttg-phase9f3-summary-v1",
+  "runs": 1,
+  "events": {
+    "RunStarted": 1,
+    "UiLocalization": 2,
+    "Performance": 1,
+    "RunEnded": 1
+  },
+  "stateChanges": 2,
+  "clientSizes": [
+    "1600x900@96"
+  ],
+  "suppressionReasons": {
+    "Native active state and viewport/client transform unresolved; deck badges suppressed. Scroll values are normalized scrollbar state, not pixel offsets.": 2,
+    "Awaiting two stable UI/window reads": 1
+  },
+  "packCounts": [
+    3
+  ],
+  "deckRowsObserved": [
+    10
+  ],
+  "moveEvents": 0,
+  "resizeInvalidations": 0,
+  "dpiEvents": 0,
+  "staleRejections": 0,
+  "performance": {
+    "firstAttach": {
+      "n": 1,
+      "meanMs": 573.0001,
+      "p95Ms": 573.0001,
+      "maxMs": 573.0001
+    },
+    "steadyRead": {
+      "n": 16,
+      "meanMs": 20.90930625,
+      "p95Ms": 21.5636,
+      "maxMs": 21.5636
+    },
+    "combinedUiTraversal": {
+      "n": 17,
+      "meanMs": 15.522941176470587,
+      "p95Ms": 158.9757,
+      "maxMs": 158.9757
+    },
+    "deckTraversal": {
+      "n": 17,
+      "meanMs": 8.032564705882352,
+      "p95Ms": 33.3834,
+      "maxMs": 33.3834
+    },
+    "placementUpdate": null
+  },
+  "captureAttempts": 0,
+  "physicalValidation": "Not inferred; use PHASE_9F3_PHYSICAL_VALIDATION.md and explicit human confirmation.",
+  "localizationComplete": false,
+  "productionScoringChanged": false,
+  "latestSnapshot": {
+    "ArenaBuild": {
+      "Architecture": "x64",
+      "UnityVersion": "6000.3.14.14060607",
+      "ExecutableSha256": "E22C729EEF75383888CB3D26A8CB4C2372BC6ACDAE7D7D9215C5020BA257FA37",
+      "UnityPlayerSha256": "BBDF3E73522223EA45C3A54049B716F9DA3E632994636734C5D53326AA2C36D0",
+      "MonoSha256": "69DD7CA153D9BD718ED6176C1E6FF065721A9408964384A421602F7D5527A294",
+      "Assemblies": [
+        {
+          "Name": "Core",
+          "Sha256": "3E85D45E88B10A2FD3841E3ABE6F5B37A17E0C42D360C93988E2270B4FDC858A",
+          "Mvid": "ee80c82e-c3e1-4b1f-a368-411a84d10f78"
+        },
+        {
+          "Name": "SharedClientCore",
+          "Sha256": "42F2FB5F062CCC6098182A902D411746070759A404E875B6E0AAC44D3B7CCC6E",
+          "Mvid": "c162c20f-ba79-438b-abd6-058f915926a3"
+        },
+        {
+          "Name": "Assembly-CSharp",
+          "Sha256": "909B532F1684ECC12F05C275869C0E7951B82DF63F8C63E3C73AD8E076C2E08A",
+          "Mvid": "fcbefd0d-6e5c-4294-8514-1dfe7644a5fe"
+        },
+        {
+          "Name": "mscorlib",
+          "Sha256": "6C76E06E6D44CF0F39BF59E6A90770968B70093AD4C1572DFBC5E46E431C5FBF",
+          "Mvid": "41d29b35-2f6a-475a-b1bf-7c6628b82790"
+        },
+        {
+          "Name": "Wizards.Arena.Models",
+          "Sha256": "7C955BD48BF8C136686D145244B9889AF258A48F338A3E2A77ED0CED1FD9A725",
+          "Mvid": "6180f80c-8973-4ed3-b3df-93c49402ff53"
+        }
+      ]
+    },
+    "Window": {
+      "Handle": 5518712,
+      "ProcessId": 71480,
+      "X": 3896,
+      "Y": 177,
+      "Width": 1600,
+      "Height": 900,
+      "Scaling": 1,
+      "IsWindowed": true,
+      "IsVisible": true,
+      "IsMinimized": false
+    },
+    "Dpi": 96,
+    "DraftPack": {
+      "Status": 0,
+      "Detail": "Complete pack; scene/list/occurrence/logical-count/pod checks passed.",
+      "DraftSessionId": null,
+      "PackNumber": 1,
+      "PickNumber": 12,
+      "ViewMode": "list",
+      "OrderedGrpIds": [
+        106426,
+        106371,
+        106418
+      ],
+      "Names": [
+        {
+          "Index": 0,
+          "GrpId": 106426,
+          "Resolved": true,
+          "Name": "Hexhaven Dueling Arena",
+          "Set": "fra",
+          "Collector": "181",
+          "Reason": null
+        },
+        {
+          "Index": 1,
+          "GrpId": 106371,
+          "Resolved": true,
+          "Name": "Ferocity of the Hunt",
+          "Set": "fra",
+          "Collector": "134",
+          "Reason": null
+        },
+        {
+          "Index": 2,
+          "GrpId": 106418,
+          "Resolved": true,
+          "Name": "Medic's Kitesail",
+          "Set": "fra",
+          "Collector": "173",
+          "Reason": null
+        }
+      ],
+      "PackGeneration": 2
+    },
+    "DeckView": {
+      "DeckGeneration": 1,
+      "Stable": true,
+      "Memory": {
+        "Entries": [
+          {
+            "Index": 0,
+            "GrpId": 106260,
+            "Quantity": 1,
+            "Area": "Main",
+            "Visible": null,
+            "SourcePath": "DraftContentController._activeDeckView._mainHolderInstance._tiles[0]._cardData._printing.Record.GrpId"
+          },
+          {
+            "Index": 1,
+            "GrpId": 106273,
+            "Quantity": 1,
+            "Area": "Main",
+            "Visible": null,
+            "SourcePath": "DraftContentController._activeDeckView._mainHolderInstance._tiles[1]._cardData._printing.Record.GrpId"
+          },
+          {
+            "Index": 2,
+            "GrpId": 106255,
+            "Quantity": 1,
+            "Area": "Main",
+            "Visible": null,
+            "SourcePath": "DraftContentController._activeDeckView._mainHolderInstance._tiles[2]._cardData._printing.Record.GrpId"
+          },
+          {
+            "Index": 3,
+            "GrpId": 106460,
+            "Quantity": 1,
+            "Area": "Main",
+            "Visible": null,
+            "SourcePath": "DraftContentController._activeDeckView._mainHolderInstance._tiles[3]._cardData._printing.Record.GrpId"
+          },
+          {
+            "Index": 4,
+            "GrpId": 106261,
+            "Quantity": 1,
+            "Area": "Main",
+            "Visible": null,
+            "SourcePath": "DraftContentController._activeDeckView._mainHolderInstance._tiles[4]._cardData._printing.Record.GrpId"
+          },
+          {
+            "Index": 5,
+            "GrpId": 106265,
+            "Quantity": 1,
+            "Area": "Main",
+            "Visible": null,
+            "SourcePath": "DraftContentController._activeDeckView._mainHolderInstance._tiles[5]._cardData._printing.Record.GrpId"
+          },
+          {
+            "Index": 6,
+            "GrpId": 106467,
+            "Quantity": 1,
+            "Area": "Main",
+            "Visible": null,
+            "SourcePath": "DraftContentController._activeDeckView._mainHolderInstance._tiles[6]._cardData._printing.Record.GrpId"
+          },
+          {
+            "Index": 7,
+            "GrpId": 106520,
+            "Quantity": 2,
+            "Area": "Main",
+            "Visible": null,
+            "SourcePath": "DraftContentController._activeDeckView._mainHolderInstance._tiles[7]._cardData._printing.Record.GrpId"
+          },
+          {
+            "Index": 0,
+            "GrpId": 106303,
+            "Quantity": 1,
+            "Area": "Sideboard",
+            "Visible": null,
+            "SourcePath": "DraftContentController._activeDeckView._sideHolderInstance._tiles[0]._cardData._printing.Record.GrpId"
+          },
+          {
+            "Index": 1,
+            "GrpId": 106381,
+            "Quantity": 1,
+            "Area": "Sideboard",
+            "Visible": null,
+            "SourcePath": "DraftContentController._activeDeckView._sideHolderInstance._tiles[1]._cardData._printing.Record.GrpId"
+          }
+        ],
+        "MainScroll": 0,
+        "SideScroll": 1,
+        "SideboardExpanded": null,
+        "UnsupportedReason": "Native active state and viewport/client transform unresolved; deck badges suppressed. Scroll values are normalized scrollbar state, not pixel offsets."
+      },
+      "Rows": [
+        {
+          "Index": 0,
+          "GrpId": 106260,
+          "Quantity": 1,
+          "Area": "Main",
+          "Visible": null,
+          "Rectangle": null,
+          "Culled": null,
+          "SourcePath": "DraftContentController._activeDeckView._mainHolderInstance._tiles[0]._cardData._printing.Record.GrpId"
+        },
+        {
+          "Index": 1,
+          "GrpId": 106273,
+          "Quantity": 1,
+          "Area": "Main",
+          "Visible": null,
+          "Rectangle": null,
+          "Culled": null,
+          "SourcePath": "DraftContentController._activeDeckView._mainHolderInstance._tiles[1]._cardData._printing.Record.GrpId"
+        },
+        {
+          "Index": 2,
+          "GrpId": 106255,
+          "Quantity": 1,
+          "Area": "Main",
+          "Visible": null,
+          "Rectangle": null,
+          "Culled": null,
+          "SourcePath": "DraftContentController._activeDeckView._mainHolderInstance._tiles[2]._cardData._printing.Record.GrpId"
+        },
+        {
+          "Index": 3,
+          "GrpId": 106460,
+          "Quantity": 1,
+          "Area": "Main",
+          "Visible": null,
+          "Rectangle": null,
+          "Culled": null,
+          "SourcePath": "DraftContentController._activeDeckView._mainHolderInstance._tiles[3]._cardData._printing.Record.GrpId"
+        },
+        {
+          "Index": 4,
+          "GrpId": 106261,
+          "Quantity": 1,
+          "Area": "Main",
+          "Visible": null,
+          "Rectangle": null,
+          "Culled": null,
+          "SourcePath": "DraftContentController._activeDeckView._mainHolderInstance._tiles[4]._cardData._printing.Record.GrpId"
+        },
+        {
+          "Index": 5,
+          "GrpId": 106265,
+          "Quantity": 1,
+          "Area": "Main",
+          "Visible": null,
+          "Rectangle": null,
+          "Culled": null,
+          "SourcePath": "DraftContentController._activeDeckView._mainHolderInstance._tiles[5]._cardData._printing.Record.GrpId"
+        },
+        {
+          "Index": 6,
+          "GrpId": 106467,
+          "Quantity": 1,
+          "Area": "Main",
+          "Visible": null,
+          "Rectangle": null,
+          "Culled": null,
+          "SourcePath": "DraftContentController._activeDeckView._mainHolderInstance._tiles[6]._cardData._printing.Record.GrpId"
+        },
+        {
+          "Index": 7,
+          "GrpId": 106520,
+          "Quantity": 2,
+          "Area": "Main",
+          "Visible": null,
+          "Rectangle": null,
+          "Culled": null,
+          "SourcePath": "DraftContentController._activeDeckView._mainHolderInstance._tiles[7]._cardData._printing.Record.GrpId"
+        },
+        {
+          "Index": 0,
+          "GrpId": 106303,
+          "Quantity": 1,
+          "Area": "Sideboard",
+          "Visible": null,
+          "Rectangle": null,
+          "Culled": null,
+          "SourcePath": "DraftContentController._activeDeckView._sideHolderInstance._tiles[0]._cardData._printing.Record.GrpId"
+        },
+        {
+          "Index": 1,
+          "GrpId": 106381,
+          "Quantity": 1,
+          "Area": "Sideboard",
+          "Visible": null,
+          "Rectangle": null,
+          "Culled": null,
+          "SourcePath": "DraftContentController._activeDeckView._sideHolderInstance._tiles[1]._cardData._printing.Record.GrpId"
+        }
+      ]
+    },
+    "Scroll": {
+      "MainNormalized": 0,
+      "SideNormalized": 1,
+      "PixelOffset": null
+    },
+    "Geometry": {
+      "Generation": 1,
+      "IsStable": true,
+      "PackLayout": {
+        "Columns": 5,
+        "Rows": 0,
+        "Scale": 43,
+        "OffsetX": 196,
+        "OffsetY": -268,
+        "SourcePath": "DraftPackHolder._currentPackLayoutData"
+      },
+      "Profile": "arena-list-compact-index-1-14-v1",
+      "Rectangles": [
+        {
+          "X": 0.1462772547076313,
+          "Y": 0.17353815659068383,
+          "Width": 0.08836100099108027,
+          "Height": 0.21486620416253718,
+          "IsValid": true
+        },
+        {
+          "X": 0.2484359514370664,
+          "Y": 0.17353815659068383,
+          "Width": 0.08836100099108027,
+          "Height": 0.21486620416253718,
+          "IsValid": true
+        },
+        {
+          "X": 0.3505946481665015,
+          "Y": 0.17353815659068383,
+          "Width": 0.08836100099108027,
+          "Height": 0.21486620416253718,
+          "IsValid": true
+        }
+      ]
+    },
+    "UnsupportedReasons": [
+      "Native active state and viewport/client transform unresolved; deck badges suppressed. Scroll values are normalized scrollbar state, not pixel offsets."
+    ],
+    "Timings": {
+      "FirstAttach": false,
+      "ReadMs": 20.4525,
+      "TraversalMs": 13.2004,
+      "UiReadMs": 6.4845,
+      "DeckReadMs": 6.3628
+    },
+    "ScreenCaptureInitialized": false
+  }
+}

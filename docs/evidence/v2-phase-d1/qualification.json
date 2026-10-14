@@ -1,0 +1,72 @@
+{
+  "inheritedQualificationSha256": "eae0d1df42f47a4dba186b2570f20366421efb5206c8e01892a298bc4e7c9884",
+  "datasets": [
+    {
+      "set": "DMU",
+      "fit": 2126,
+      "utility": 281,
+      "confidence": 239,
+      "target": 2653,
+      "sourceSha256": "86e2765a7f5b221679344fc94b6b6c2c50d14bb4f035cd8db67ce3204ac27d4a"
+    },
+    {
+      "set": "BRO",
+      "fit": 2088,
+      "utility": 244,
+      "confidence": 237,
+      "target": 2530,
+      "sourceSha256": "d247abaa5c02949c6603f5045752c3a3e46c1b35c9cd828acc867ef54679b40a"
+    },
+    {
+      "set": "WOE",
+      "fit": 2234,
+      "utility": 257,
+      "confidence": 268,
+      "target": 2733,
+      "sourceSha256": "049eef5c30314c15d9f2958d95906a507ed8cc6a5f39f7f11da887ef631f7591"
+    },
+    {
+      "set": "LCI",
+      "fit": 2165,
+      "utility": 265,
+      "confidence": 266,
+      "target": 2734,
+      "sourceSha256": "b4fddf1bed7bf4dc187cde7a58cb7b4f300486314238d63e741cfe3a81726571"
+    },
+    {
+      "set": "MKM",
+      "fit": 2288,
+      "utility": 298,
+      "confidence": 299,
+      "target": 2874,
+      "sourceSha256": "5f01ee3ba4a418682c5852ffcc2d20ff7e3598452dfbe1e0808e4bf3a86e3967"
+    },
+    {
+      "set": "OTJ",
+      "fit": 2313,
+      "utility": 284,
+      "confidence": 289,
+      "target": 2836,
+      "sourceSha256": "5e3f883c78f3a31c6f08be21afdcf968396e542abb7c185f62e205520647b3f1"
+    },
+    {
+      "set": "ONE",
+      "fit": 2205,
+      "utility": 294,
+      "confidence": 277,
+      "target": 2667,
+      "sourceSha256": "e7e1bc069bb1eb49f4f45e9c84228ac5924860f4106cfa8024678de8aba00828"
+    },
+    {
+      "set": "MOM",
+      "fit": 2287,
+      "utility": 239,
+      "confidence": 303,
+      "target": 2779,
+      "sourceSha256": "e0bed3251cb603ab29acd997718ce2dd86b0a15f4679dd937bcc1d08993b2e58"
+    }
+  ],
+  "metadataSha256": "90b749985b6f6319bd0e674477bf89b5d63db7dd962d0691c4828390f7b023e9",
+  "noAcquisition": true,
+  "noOutcomeSelection": true
+}

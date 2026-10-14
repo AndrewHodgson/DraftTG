@@ -1,0 +1,18 @@
+{
+  "Model": "contextual-pick-score-v1.6.2",
+  "Set": "FRA",
+  "Format": "QuickDraft",
+  "FetchedAt": "2026-10-14T20:01:18.5299959+00:00",
+  "PrimarySource": "Cache",
+  "AlternateSource": "Cache",
+  "InputHashes": {
+    "Catalog": "D44936533BB112D7F004ACF8939224B759E7BCBD450DB60F387B83B048539B52",
+    "Database": "1BE0105411AD989CA60E233F1341EAAA9276E3A679C89F1EF6F07E07EDE10D25",
+    "PrimaryCache": "27483A6C89CF721F6D11A9AF16D2CC310ECB9E841F80C77392C909C6357B263B",
+    "AlternateCache": "E7732F4A9114D922B1F182B3472DC24AFE529512A1E8475ED70B41FF96D95C42"
+  },
+  "PrimaryBaseline": 0.5681364169465147,
+  "AlternateBaseline": 0.561555046095775,
+  "NoNetworkAcquisition": true,
+  "ScoringChanged": false
+}

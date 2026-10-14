@@ -1,0 +1,26 @@
+{
+  "createdAt": "2026-10-14T20:18:00.793446+00:00",
+  "productionModel": "contextual-pick-score-v1.6.2",
+  "preserve": {
+    "PHASE_9F3_CAPTURE_FREE_LOCALIZATION_REPORT.md": "845c616d7bedea57ed4c205cedffdf729aa93394ba1ac735f39e97fd47db2b3a",
+    "PHASE_9F3_PHYSICAL_VALIDATION.md": "abe43aa80462ff6b4c747d41e13aecfb245f16d67c5c83dfc7912a08f4240cad",
+    "RATING_AND_STATS_QA_REPORT.md": "b50f0c67b32a6e0fbeb9684c2812f4a3ddaaf2af383d256acedc6aa06dce2fd1",
+    "docs/evidence/phase-9f3/implementation-summary.json": "98bb05b47cdbdc10c6684539371dc970eeabb855bb7a8a027aa3752dfa9d985b",
+    "docs/evidence/phase-9f3/live-summary.json": "c7c995a5584c1023d6776bc642923089222ff2c711322fc7a49e329ccc2ac77f",
+    "docs/evidence/phase-9f3/overlay-summary.json": "ae887bc816d646c9f855cca2bbec6f170aa25547b4c35190ae0626727100f322",
+    "docs/evidence/phase-9f3/p1p12-summary.json": "c7a7451db0d3b6b3920adac2240e853b685bee1199ea7900442837c831376538",
+    "docs/evidence/phase-9f3/physical-confirmation.json": "97890e4c9d871ed61d6db58c2cca3337dd5952563cd51534fe9d1b08d5b40db1",
+    "docs/evidence/phase-9f3/static-audit.json": "3477666bb34abc889102e3a4848182e20d4e968c02bce19582e852e181a25006",
+    "docs/evidence/phase-9f3/validation.json": "54065563313e9dd9ea62b3d8080fad543a84324b289961085f138e67dd295414",
+    "docs/evidence/rating-audit/comparison.json": "0b494e96569fe2c72f9dc6b9d88b1fd3210c6a1f26c78bbadf58e46fe1756861",
+    "docs/evidence/rating-audit/summary.json": "7c7ee42d9afef76ce2f938a6a86b665623ebf8cfe723906e08913976f8b5a7e3"
+  },
+  "riskPolicy": {
+    "High": "alternate n < 500 OR abs(Q-.5) >= .35 OR uncertain logical identity",
+    "Medium": "otherwise alternate n < 2000 OR abs(Q-.5) >= .20",
+    "Low": "otherwise",
+    "note": "Prospective QA triage heuristics, not fitted quality/reliability parameters; zero model changes."
+  },
+  "groupPolicy": "Owned Scryfall oracle_id consensus plus full normalized gameplay metadata; no name-only grouping",
+  "physicalPolicy": "Only explicit user observations qualify; screenshots/tests do not imply validation"
+}

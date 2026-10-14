@@ -1,0 +1,9 @@
+{
+  "seconds": 937.1387153998949,
+  "candidateN": 409625,
+  "candidateMeanMs": 2.185710167653261,
+  "candidateP95Ms": 5.519099999219179,
+  "frozenQMaxDifference": 0.04885791121170335,
+  "modelBytes": 18606,
+  "cache": "Legal pool projection cache within process only; no labels in cache."
+}

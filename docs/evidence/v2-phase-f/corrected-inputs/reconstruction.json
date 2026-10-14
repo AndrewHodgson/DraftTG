@@ -1,0 +1,1633 @@
+{
+  "bySet": {
+    "DMU": {
+      "F": {
+        "copyOverlap": 0.6719827586206897,
+        "exactCopyOverlap": 26.879310344827587,
+        "nonlandPrecision": 0.6167281984007996,
+        "nonlandRecall": 0.6612425037481259,
+        "nonlandF1": 0.6381258020848456,
+        "Jaccard": 0.5633794553132606,
+        "Top23Precision": 0.6167281984007996,
+        "Top23Recall": 0.6612425037481259,
+        "landMAE": 4.129310344827586,
+        "mainColorAgreement": 0.8146551724137931,
+        "splashAgreement": 0.4396551724137931,
+        "creatureMAE": 3.2370689655172415,
+        "curveL1": 9.413793103448276,
+        "removalDifference": -0.20905172413793102,
+        "totalCards": 33.62068965517241,
+        "n": 232
+      },
+      "current": {
+        "copyOverlap": 0.7292025862068966,
+        "exactCopyOverlap": 29.16810344827586,
+        "nonlandPrecision": 0.6962143928035982,
+        "nonlandRecall": 0.6913859831447912,
+        "nonlandF1": 0.6937374508667652,
+        "Jaccard": 0.6094824759891508,
+        "Top23Precision": 0.6962143928035982,
+        "Top23Recall": 0.6913859831447912,
+        "landMAE": 1.5,
+        "mainColorAgreement": 0.8405172413793104,
+        "splashAgreement": 0.40086206896551724,
+        "creatureMAE": 2.4439655172413794,
+        "curveL1": 6.982758620689655,
+        "removalDifference": -0.23060344827586207,
+        "totalCards": 36.89655172413793,
+        "n": 232
+      },
+      "E_C": {
+        "copyOverlap": 0.7670258620689655,
+        "exactCopyOverlap": 30.68103448275862,
+        "nonlandPrecision": 0.7566594940906237,
+        "nonlandRecall": 0.7459814694925264,
+        "nonlandF1": 0.7510393817844687,
+        "Jaccard": 0.6317910511459497,
+        "Top23Precision": 0.7566594940906237,
+        "Top23Recall": 0.7459814694925264,
+        "landMAE": 0.1896551724137931,
+        "mainColorAgreement": 0.8879310344827587,
+        "splashAgreement": 0.40086206896551724,
+        "creatureMAE": 1.4827586206896552,
+        "curveL1": 5.633620689655173,
+        "removalDifference": 0.0603448275862069,
+        "totalCards": 39.814655172413794,
+        "n": 232
+      },
+      "validDecks": 195,
+      "total": 232,
+      "integrityRate": 0.8405172413793104
+    },
+    "BRO": {
+      "F": {
+        "copyOverlap": 0.7672811059907834,
+        "exactCopyOverlap": 30.691244239631338,
+        "nonlandPrecision": 0.6723178387764642,
+        "nonlandRecall": 0.7118891954235572,
+        "nonlandF1": 0.6914044262499673,
+        "Jaccard": 0.6284062276568981,
+        "Top23Precision": 0.6723178387764642,
+        "Top23Recall": 0.7118891954235572,
+        "landMAE": 1.3963133640552996,
+        "mainColorAgreement": 0.8986175115207373,
+        "splashAgreement": 0.7649769585253456,
+        "creatureMAE": 2.4838709677419355,
+        "curveL1": 8.714285714285714,
+        "removalDifference": -0.27419354838709675,
+        "totalCards": 40.0,
+        "n": 217
+      },
+      "current": {
+        "copyOverlap": 0.782258064516129,
+        "exactCopyOverlap": 31.29032258064516,
+        "nonlandPrecision": 0.7046684031256262,
+        "nonlandRecall": 0.6885075186617964,
+        "nonlandF1": 0.6963688605331252,
+        "Jaccard": 0.6487120769443862,
+        "Top23Precision": 0.7046684031256262,
+        "Top23Recall": 0.6885075186617964,
+        "landMAE": 0.5483870967741935,
+        "mainColorAgreement": 0.9262672811059908,
+        "splashAgreement": 0.7649769585253456,
+        "creatureMAE": 1.5852534562211982,
+        "curveL1": 6.889400921658986,
+        "removalDifference": -0.4447004608294931,
+        "totalCards": 40.0,
+        "n": 217
+      },
+      "E_C": {
+        "copyOverlap": 0.7528801843317973,
+        "exactCopyOverlap": 30.11520737327189,
+        "nonlandPrecision": 0.7170421910954871,
+        "nonlandRecall": 0.7007114858026499,
+        "nonlandF1": 0.7086537392723025,
+        "Jaccard": 0.6118343985631476,
+        "Top23Precision": 0.7170421910954871,
+        "Top23Recall": 0.7007114858026499,
+        "landMAE": 0.5483870967741935,
+        "mainColorAgreement": 0.8617511520737328,
+        "splashAgreement": 0.7649769585253456,
+        "creatureMAE": 1.6497695852534562,
+        "curveL1": 6.658986175115207,
+        "removalDifference": -0.03686635944700461,
+        "totalCards": 40.0,
+        "n": 217
+      },
+      "validDecks": 217,
+      "total": 217,
+      "integrityRate": 1.0
+    },
+    "WOE": {
+      "F": {
+        "copyOverlap": 0.767545871559633,
+        "exactCopyOverlap": 30.701834862385322,
+        "nonlandPrecision": 0.6890682754952799,
+        "nonlandRecall": 0.734085439557119,
+        "nonlandF1": 0.7107561723877923,
+        "Jaccard": 0.6459736618730013,
+        "Top23Precision": 0.6890682754952799,
+        "Top23Recall": 0.734085439557119,
+        "landMAE": 2.1743119266055047,
+        "mainColorAgreement": 0.9036697247706422,
+        "splashAgreement": 0.6192660550458715,
+        "creatureMAE": 2.1422018348623855,
+        "curveL1": 8.009174311926605,
+        "removalDifference": -0.3394495412844037,
+        "totalCards": 38.34862385321101,
+        "n": 218
+      },
+      "current": {
+        "copyOverlap": 0.8167431192660551,
+        "exactCopyOverlap": 32.669724770642205,
+        "nonlandPrecision": 0.7596729158356601,
+        "nonlandRecall": 0.7465549189542009,
+        "nonlandF1": 0.7529466076545955,
+        "Jaccard": 0.6975049624006777,
+        "Top23Precision": 0.7596729158356601,
+        "Top23Recall": 0.7465549189542009,
+        "landMAE": 0.43119266055045874,
+        "mainColorAgreement": 0.9357798165137615,
+        "splashAgreement": 0.6009174311926605,
+        "creatureMAE": 1.4036697247706422,
+        "curveL1": 5.678899082568807,
+        "removalDifference": -0.5389908256880734,
+        "totalCards": 40.0,
+        "n": 218
+      },
+      "E_C": {
+        "copyOverlap": 0.7939220183486237,
+        "exactCopyOverlap": 31.756880733944953,
+        "nonlandPrecision": 0.7728859194256084,
+        "nonlandRecall": 0.7594254572046754,
+        "nonlandF1": 0.7659861309066028,
+        "Jaccard": 0.6652481223537388,
+        "Top23Precision": 0.7728859194256084,
+        "Top23Recall": 0.7594254572046754,
+        "landMAE": 0.42660550458715596,
+        "mainColorAgreement": 0.9128440366972477,
+        "splashAgreement": 0.6009174311926605,
+        "creatureMAE": 1.371559633027523,
+        "curveL1": 5.371559633027523,
+        "removalDifference": 0.02981651376146789,
+        "totalCards": 40.0,
+        "n": 218
+      },
+      "validDecks": 209,
+      "total": 218,
+      "integrityRate": 0.9587155963302753
+    },
+    "LCI": {
+      "F": {
+        "copyOverlap": 0.7814583333333334,
+        "exactCopyOverlap": 31.258333333333333,
+        "nonlandPrecision": 0.714308382740448,
+        "nonlandRecall": 0.7602462459038546,
+        "nonlandF1": 0.7364161957721725,
+        "Jaccard": 0.6653587854147686,
+        "Top23Precision": 0.714308382740448,
+        "Top23Recall": 0.7602462459038546,
+        "landMAE": 2.1166666666666667,
+        "mainColorAgreement": 0.8791666666666667,
+        "splashAgreement": 0.7625,
+        "creatureMAE": 1.9625,
+        "curveL1": 7.691666666666666,
+        "removalDifference": -0.34375,
+        "totalCards": 38.5,
+        "n": 240
+      },
+      "current": {
+        "copyOverlap": 0.8206249999999999,
+        "exactCopyOverlap": 32.825,
+        "nonlandPrecision": 0.7746376811594202,
+        "nonlandRecall": 0.7620689165906557,
+        "nonlandF1": 0.7681920627229204,
+        "Jaccard": 0.7084512045845763,
+        "Top23Precision": 0.7746376811594202,
+        "Top23Recall": 0.7620689165906557,
+        "landMAE": 0.5333333333333333,
+        "mainColorAgreement": 0.925,
+        "splashAgreement": 0.75,
+        "creatureMAE": 1.3708333333333333,
+        "curveL1": 5.366666666666666,
+        "removalDifference": -0.3541666666666667,
+        "totalCards": 39.666666666666664,
+        "n": 240
+      },
+      "E_C": {
+        "copyOverlap": 0.7917708333333334,
+        "exactCopyOverlap": 31.670833333333334,
+        "nonlandPrecision": 0.7706956992283078,
+        "nonlandRecall": 0.758630126515996,
+        "nonlandF1": 0.764497298241847,
+        "Jaccard": 0.6672498130695127,
+        "Top23Precision": 0.7706956992283078,
+        "Top23Recall": 0.758630126515996,
+        "landMAE": 0.4,
+        "mainColorAgreement": 0.875,
+        "splashAgreement": 0.75,
+        "creatureMAE": 1.3541666666666667,
+        "curveL1": 5.820833333333334,
+        "removalDifference": 0.09791666666666667,
+        "totalCards": 39.9875,
+        "n": 240
+      },
+      "validDecks": 231,
+      "total": 240,
+      "integrityRate": 0.9625
+    },
+    "MKM": {
+      "F": {
+        "copyOverlap": 0.6218367346938776,
+        "exactCopyOverlap": 24.8734693877551,
+        "nonlandPrecision": 0.5700564921620822,
+        "nonlandRecall": 0.6049789196310935,
+        "nonlandF1": 0.5868673412665235,
+        "Jaccard": 0.5360751415130671,
+        "Top23Precision": 0.5700564921620822,
+        "Top23Recall": 0.6049789196310935,
+        "landMAE": 5.375510204081633,
+        "mainColorAgreement": 0.7346938775510204,
+        "splashAgreement": 0.17959183673469387,
+        "creatureMAE": 4.775510204081633,
+        "curveL1": 10.534693877551021,
+        "removalDifference": -0.8734693877551021,
+        "totalCards": 29.877551020408163,
+        "n": 245
+      },
+      "current": {
+        "copyOverlap": 0.7365306122448979,
+        "exactCopyOverlap": 29.461224489795917,
+        "nonlandPrecision": 0.6933451641526176,
+        "nonlandRecall": 0.6900169664703826,
+        "nonlandF1": 0.6916209481017197,
+        "Jaccard": 0.6403357757554322,
+        "Top23Precision": 0.6933451641526176,
+        "Top23Recall": 0.6900169664703826,
+        "landMAE": 2.240816326530612,
+        "mainColorAgreement": 0.8244897959183674,
+        "splashAgreement": 0.1673469387755102,
+        "creatureMAE": 2.942857142857143,
+        "curveL1": 7.73469387755102,
+        "removalDifference": -0.6040816326530613,
+        "totalCards": 35.10204081632653,
+        "n": 245
+      },
+      "E_C": {
+        "copyOverlap": 0.8066326530612244,
+        "exactCopyOverlap": 32.265306122448976,
+        "nonlandPrecision": 0.7918870217408488,
+        "nonlandRecall": 0.7791406791965797,
+        "nonlandF1": 0.7849804543886031,
+        "Jaccard": 0.6873293988477353,
+        "Top23Precision": 0.7918870217408488,
+        "Top23Recall": 0.7791406791965797,
+        "landMAE": 0.17142857142857143,
+        "mainColorAgreement": 0.9224489795918367,
+        "splashAgreement": 0.1673469387755102,
+        "creatureMAE": 1.5877551020408163,
+        "curveL1": 5.7673469387755105,
+        "removalDifference": -0.1,
+        "totalCards": 39.710204081632654,
+        "n": 245
+      },
+      "validDecks": 183,
+      "total": 245,
+      "integrityRate": 0.746938775510204
+    },
+    "OTJ": {
+      "F": {
+        "copyOverlap": 0.6890037593984963,
+        "exactCopyOverlap": 27.56015037593985,
+        "nonlandPrecision": 0.6390124379271159,
+        "nonlandRecall": 0.6851943346508564,
+        "nonlandF1": 0.6612016028122495,
+        "Jaccard": 0.5939583508019991,
+        "Top23Precision": 0.6390124379271159,
+        "Top23Recall": 0.6851943346508564,
+        "landMAE": 4.353383458646617,
+        "mainColorAgreement": 0.8007518796992481,
+        "splashAgreement": 0.37218045112781956,
+        "creatureMAE": 3.3759398496240602,
+        "curveL1": 8.917293233082706,
+        "removalDifference": -0.5357142857142857,
+        "totalCards": 33.08270676691729,
+        "n": 266
+      },
+      "current": {
+        "copyOverlap": 0.7671052631578947,
+        "exactCopyOverlap": 30.68421052631579,
+        "nonlandPrecision": 0.7360248447204969,
+        "nonlandRecall": 0.7327446580879075,
+        "nonlandF1": 0.7343474319471203,
+        "Jaccard": 0.6644549403941664,
+        "Top23Precision": 0.7360248447204969,
+        "Top23Recall": 0.7327446580879075,
+        "landMAE": 1.4548872180451127,
+        "mainColorAgreement": 0.8759398496240601,
+        "splashAgreement": 0.34210526315789475,
+        "creatureMAE": 2.1090225563909772,
+        "curveL1": 6.2518796992481205,
+        "removalDifference": -0.6278195488721805,
+        "totalCards": 36.8421052631579,
+        "n": 266
+      },
+      "E_C": {
+        "copyOverlap": 0.8086466165413534,
+        "exactCopyOverlap": 32.34586466165413,
+        "nonlandPrecision": 0.8008086044300238,
+        "nonlandRecall": 0.7900562919155597,
+        "nonlandF1": 0.7950068438399405,
+        "Jaccard": 0.6912575580964813,
+        "Top23Precision": 0.8008086044300238,
+        "Top23Recall": 0.7900562919155597,
+        "landMAE": 0.11278195488721804,
+        "mainColorAgreement": 0.9060150375939849,
+        "splashAgreement": 0.34210526315789475,
+        "creatureMAE": 1.387218045112782,
+        "curveL1": 4.87593984962406,
+        "removalDifference": -0.15977443609022557,
+        "totalCards": 39.76315789473684,
+        "n": 266
+      },
+      "validDecks": 220,
+      "total": 266,
+      "integrityRate": 0.8270676691729323
+    },
+    "ONE": {
+      "F": {
+        "copyOverlap": 0.7856971153846154,
+        "exactCopyOverlap": 31.427884615384617,
+        "nonlandPrecision": 0.722575599219621,
+        "nonlandRecall": 0.7667392644284365,
+        "nonlandF1": 0.743877199647026,
+        "Jaccard": 0.6728088510095624,
+        "Top23Precision": 0.722575599219621,
+        "Top23Recall": 0.7667392644284365,
+        "landMAE": 2.0384615384615383,
+        "mainColorAgreement": 0.8846153846153846,
+        "splashAgreement": 0.8076923076923077,
+        "creatureMAE": 1.9423076923076923,
+        "curveL1": 6.865384615384615,
+        "removalDifference": -0.29086538461538464,
+        "totalCards": 38.46153846153846,
+        "n": 208
+      },
+      "current": {
+        "copyOverlap": 0.8159855769230769,
+        "exactCopyOverlap": 32.63942307692308,
+        "nonlandPrecision": 0.7673494983277591,
+        "nonlandRecall": 0.7542380511768053,
+        "nonlandF1": 0.7606316541803276,
+        "Jaccard": 0.7013095594469914,
+        "Top23Precision": 0.7673494983277591,
+        "Top23Recall": 0.7542380511768053,
+        "landMAE": 0.5,
+        "mainColorAgreement": 0.9375,
+        "splashAgreement": 0.8028846153846154,
+        "creatureMAE": 1.5240384615384615,
+        "curveL1": 5.903846153846154,
+        "removalDifference": -0.3870192307692308,
+        "totalCards": 39.80769230769231,
+        "n": 208
+      },
+      "E_C": {
+        "copyOverlap": 0.7883413461538461,
+        "exactCopyOverlap": 31.533653846153847,
+        "nonlandPrecision": 0.7739719519610824,
+        "nonlandRecall": 0.7607610717738225,
+        "nonlandF1": 0.7672034404738911,
+        "Jaccard": 0.6612524205900434,
+        "Top23Precision": 0.7739719519610824,
+        "Top23Recall": 0.7607610717738225,
+        "landMAE": 0.4182692307692308,
+        "mainColorAgreement": 0.8701923076923077,
+        "splashAgreement": 0.8028846153846154,
+        "creatureMAE": 1.3221153846153846,
+        "curveL1": 5.769230769230769,
+        "removalDifference": 0.004807692307692308,
+        "totalCards": 39.99519230769231,
+        "n": 208
+      },
+      "validDecks": 200,
+      "total": 208,
+      "integrityRate": 0.9615384615384616
+    },
+    "MOM": {
+      "F": {
+        "copyOverlap": 0.7156392694063927,
+        "exactCopyOverlap": 28.625570776255707,
+        "nonlandPrecision": 0.632732446562107,
+        "nonlandRecall": 0.6747783071934352,
+        "nonlandF1": 0.6529679675654174,
+        "Jaccard": 0.5929799924309582,
+        "Top23Precision": 0.632732446562107,
+        "Top23Recall": 0.6747783071934352,
+        "landMAE": 2.8858447488584473,
+        "mainColorAgreement": 0.867579908675799,
+        "splashAgreement": 0.1187214611872146,
+        "creatureMAE": 3.050228310502283,
+        "curveL1": 9.232876712328768,
+        "removalDifference": -0.21689497716894976,
+        "totalCards": 36.529680365296805,
+        "n": 219
+      },
+      "current": {
+        "copyOverlap": 0.7512557077625571,
+        "exactCopyOverlap": 30.050228310502284,
+        "nonlandPrecision": 0.6799682350605518,
+        "nonlandRecall": 0.6735280740700633,
+        "nonlandF1": 0.6766744999533008,
+        "Jaccard": 0.6231490560251278,
+        "Top23Precision": 0.6799682350605518,
+        "Top23Recall": 0.6735280740700633,
+        "landMAE": 0.8401826484018264,
+        "mainColorAgreement": 0.8995433789954338,
+        "splashAgreement": 0.0958904109589041,
+        "creatureMAE": 2.2374429223744294,
+        "curveL1": 7.168949771689498,
+        "removalDifference": -0.3150684931506849,
+        "totalCards": 38.538812785388124,
+        "n": 219
+      },
+      "E_C": {
+        "copyOverlap": 0.7663242009132419,
+        "exactCopyOverlap": 30.652968036529682,
+        "nonlandPrecision": 0.7239472379217214,
+        "nonlandRecall": 0.7137649875767802,
+        "nonlandF1": 0.7186383627972182,
+        "Jaccard": 0.6295086185925621,
+        "Top23Precision": 0.7239472379217214,
+        "Top23Recall": 0.7137649875767802,
+        "landMAE": 0.2237442922374429,
+        "mainColorAgreement": 0.9041095890410958,
+        "splashAgreement": 0.0958904109589041,
+        "creatureMAE": 1.7716894977168949,
+        "curveL1": 6.401826484018265,
+        "removalDifference": 0.1050228310502283,
+        "totalCards": 39.89497716894977,
+        "n": 219
+      },
+      "validDecks": 200,
+      "total": 219,
+      "integrityRate": 0.91324200913242
+    }
+  },
+  "manaSourceDeficit": {
+    "DMU": 0.639868676575827,
+    "BRO": 0.6503576478568192,
+    "WOE": 0.5278632101031908,
+    "LCI": 0.5725510492504207,
+    "MKM": 0.7609395660405537,
+    "OTJ": 0.7374403057492656,
+    "ONE": 0.6794900983555056,
+    "MOM": 0.7147648881459653
+  },
+  "declines": [
+    {
+      "set": "DMU",
+      "draft": "054c2352733f4cfa92a4d9ffbef8176f",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "DMU",
+      "draft": "082217c7e806407c8774b02188ffcc52",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 39
+    },
+    {
+      "set": "DMU",
+      "draft": "1feeed2fda29439d86a5e55076bd2860",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 38
+    },
+    {
+      "set": "DMU",
+      "draft": "2111bebf59684c8abb477b687c3c5450",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 39
+    },
+    {
+      "set": "DMU",
+      "draft": "28d434de3bb1429092e912bfd59034b4",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 38
+    },
+    {
+      "set": "DMU",
+      "draft": "2be23873a0a242909246dbcffa1a9046",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 35
+    },
+    {
+      "set": "DMU",
+      "draft": "2c4453aea4e545258c7a91bed8e64d74",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 39
+    },
+    {
+      "set": "DMU",
+      "draft": "2e23238325aa41758a1ce8d7c7675014",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "DMU",
+      "draft": "4c0aaf7d078e4a80b43e52b7f7c34d56",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 36
+    },
+    {
+      "set": "DMU",
+      "draft": "4d86bc6121a7424eb00d85e03f2537b2",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "DMU",
+      "draft": "52226909d3e44b158a01b3bb31bbfa89",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "DMU",
+      "draft": "54d8faa7e46a4e7d853fce7b3077d12f",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "DMU",
+      "draft": "5749fb1f084242ad8387a66557be021a",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 38
+    },
+    {
+      "set": "DMU",
+      "draft": "5829cefaf6f84ebfaadc0d30f6a7c146",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "DMU",
+      "draft": "597b482f2e954056a695ecbff2279a3d",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 38
+    },
+    {
+      "set": "DMU",
+      "draft": "5eec788ad6044629947848c4e0657ff3",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 38
+    },
+    {
+      "set": "DMU",
+      "draft": "7c4446cb98b44b1897088a8dbcc2e148",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 38
+    },
+    {
+      "set": "DMU",
+      "draft": "877d7e24c5c04b869f84fc96c2952b64",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 34
+    },
+    {
+      "set": "DMU",
+      "draft": "89eead09700a44aa85c77b80dabb9532",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 36
+    },
+    {
+      "set": "DMU",
+      "draft": "8cd81d1278fa458a8b25ea9dbd9859eb",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "DMU",
+      "draft": "9a0112000e60403dbd6abf3ea73a849d",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "DMU",
+      "draft": "a8f101f2b13f4b6ca73cf1185da98b81",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "DMU",
+      "draft": "aa8bd0e86eb045e2a6dafea7c0b78041",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "DMU",
+      "draft": "aadab1612dd647ac819663e16df25f40",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "DMU",
+      "draft": "be77547e0a1241ad84c1a10b0f1815b1",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 35
+    },
+    {
+      "set": "DMU",
+      "draft": "c67c2ff592744babaa52d2d033352933",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 39
+    },
+    {
+      "set": "DMU",
+      "draft": "d56f80fa1bc34c58af790392804a080a",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 35
+    },
+    {
+      "set": "DMU",
+      "draft": "e0b0275a1b2b47beaf84f1de069c49b2",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "DMU",
+      "draft": "e29525493641487a871434602c270b95",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 38
+    },
+    {
+      "set": "DMU",
+      "draft": "e90c8b72eeef4642914c96d1e30c20be",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 38
+    },
+    {
+      "set": "DMU",
+      "draft": "ea062fb7e0d6487480fac0cc8c31f736",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "DMU",
+      "draft": "eab75e973e334f82bf5b9f3c6f9a4b10",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "DMU",
+      "draft": "ebd388cd3681404893006fba009b7306",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 39
+    },
+    {
+      "set": "DMU",
+      "draft": "f45884cf38ca4cadb543f00c2c3b8a92",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "DMU",
+      "draft": "fb9fabc7c27240e5beec4ebaa9556cc3",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "DMU",
+      "draft": "fc0eaf38e657431795e77f0511ff073e",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 38
+    },
+    {
+      "set": "DMU",
+      "draft": "fe0e648eaa58481da1c2d4d9ffddd3bd",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "WOE",
+      "draft": "29fa0792b1754367ae9218ff66a91717",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 38
+    },
+    {
+      "set": "WOE",
+      "draft": "2bd924a3d3d145fcb63b3185841d019f",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 38
+    },
+    {
+      "set": "WOE",
+      "draft": "3b71e5da8cb842be8d312da66330379a",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 39
+    },
+    {
+      "set": "WOE",
+      "draft": "5a2469a515aa4c73ab9bc3944074400d",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 38
+    },
+    {
+      "set": "WOE",
+      "draft": "9c6cd6d213424c808ab9c5e25d8dd964",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 38
+    },
+    {
+      "set": "WOE",
+      "draft": "d3924c9ef7f6447b82e0fe2bcf0b3162",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 38
+    },
+    {
+      "set": "WOE",
+      "draft": "d4139b7c1b4c4e44984b15be007e4ff6",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 38
+    },
+    {
+      "set": "WOE",
+      "draft": "dd9e622877d4403aaccce603e81f4d41",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 39
+    },
+    {
+      "set": "WOE",
+      "draft": "fee188920dae4d87898e049ebc479c1d",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 39
+    },
+    {
+      "set": "LCI",
+      "draft": "0ef621a3379847698aa8282b5584615e",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "LCI",
+      "draft": "2188515d3f504c29b3f3818709495d95",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 39
+    },
+    {
+      "set": "LCI",
+      "draft": "32f8f56e412b4b5cafcc2e43184aa565",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "LCI",
+      "draft": "3d624058a4054110886506d3abffb291",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "LCI",
+      "draft": "4bd173d0f7ba4fa2a44486bc7e56cb5c",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "LCI",
+      "draft": "539a70183adf44a8aff56eeecaded596",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 38
+    },
+    {
+      "set": "LCI",
+      "draft": "856ee131386d4710b8d938d1eead7398",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 39
+    },
+    {
+      "set": "LCI",
+      "draft": "b670bf094dac4b87af082dcded2c87ae",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "LCI",
+      "draft": "eab266300cc24728a04b40adc8d19c0a",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 39
+    },
+    {
+      "set": "MKM",
+      "draft": "002b94dc33094adb995f1914c8772be0",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "MKM",
+      "draft": "04ad98db3b8943aa9f9a2833f98327a5",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 38
+    },
+    {
+      "set": "MKM",
+      "draft": "072b8aa1c67646259b4c7c9cf35ab8d8",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 35
+    },
+    {
+      "set": "MKM",
+      "draft": "0b6622f07e6f4241a3664a4230f7cb90",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 38
+    },
+    {
+      "set": "MKM",
+      "draft": "0c70a4c830904922bf91f45dac148e71",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 38
+    },
+    {
+      "set": "MKM",
+      "draft": "113efe8478a6446b93f3a60d4f856607",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 35
+    },
+    {
+      "set": "MKM",
+      "draft": "1f2628f07385406691bf6cc906fd673b",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 38
+    },
+    {
+      "set": "MKM",
+      "draft": "1fa90f0c03cc4a0da293442a03d1734f",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 34
+    },
+    {
+      "set": "MKM",
+      "draft": "2276cb11c2374b9793ee36e211d1267f",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 39
+    },
+    {
+      "set": "MKM",
+      "draft": "2a80fe3eef9543cd8db49f13a6cb89cb",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "MKM",
+      "draft": "2cd7b6d70a6740eb99335cffc405d261",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 39
+    },
+    {
+      "set": "MKM",
+      "draft": "2ea4c244d399467fba084a95a48b6e34",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "MKM",
+      "draft": "30da472e8ad44703a24e7ed9da2922c7",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "MKM",
+      "draft": "354c4e70ef5f42b592ae93fe225abe32",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 39
+    },
+    {
+      "set": "MKM",
+      "draft": "39f0ed1cad16469a9d184a243f46a9de",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "MKM",
+      "draft": "4061f000e5984ea6999ab1ee4cc85624",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 38
+    },
+    {
+      "set": "MKM",
+      "draft": "4274c0f791be4ebca0a3581a8b3d2324",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 39
+    },
+    {
+      "set": "MKM",
+      "draft": "453d0bb9eee84e2ab16a57fdc8cba489",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 36
+    },
+    {
+      "set": "MKM",
+      "draft": "45e752d082954445944ecc1e2bf74434",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "MKM",
+      "draft": "4d5f860cd9fc49d7b7890c0cf25aee1e",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "MKM",
+      "draft": "507fbc1473b0448899420c657ae01b9e",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "MKM",
+      "draft": "52f625bf72fa4ba4a7823d432b764392",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 36
+    },
+    {
+      "set": "MKM",
+      "draft": "54ec12767db247f3a284761105c24b3b",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "MKM",
+      "draft": "559829b47cb5479bba8cfc52bc490504",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "MKM",
+      "draft": "57a6e9bbb1a64444a726652c0c9e93b6",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 39
+    },
+    {
+      "set": "MKM",
+      "draft": "5bcd043734e2419bad3dd341da098a42",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "MKM",
+      "draft": "6338588f60e243d6a6b779d1453a206b",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "MKM",
+      "draft": "67263c0c01a24719b542d353e40349c0",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "MKM",
+      "draft": "68d8bf39a83c4376be1b9ff792822288",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "MKM",
+      "draft": "6b5882b151114d32bf3f3ce7db9347d9",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 35
+    },
+    {
+      "set": "MKM",
+      "draft": "6d9c5b31bb994602b94579ba59f11335",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 39
+    },
+    {
+      "set": "MKM",
+      "draft": "7b12d684aeb343afb84160f59abbf1a8",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 38
+    },
+    {
+      "set": "MKM",
+      "draft": "803eb806e7034b4e833b26b23c046015",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "MKM",
+      "draft": "82c61cb254004e22bb2359ad7e997a42",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 38
+    },
+    {
+      "set": "MKM",
+      "draft": "84604e1b340e4f1eb6284cb07a06928a",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 39
+    },
+    {
+      "set": "MKM",
+      "draft": "894da945b3b8413999dd83d890c0b1c8",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 33
+    },
+    {
+      "set": "MKM",
+      "draft": "8a573d2b79ac4d20a3954705a466bf78",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 39
+    },
+    {
+      "set": "MKM",
+      "draft": "8d2f831ddedf4698b581665dc4eabea3",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 39
+    },
+    {
+      "set": "MKM",
+      "draft": "8ea9c482c7874e518721f3c1fccad392",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 35
+    },
+    {
+      "set": "MKM",
+      "draft": "9774d9cf8c4c402f8efb98daf2fee97d",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 36
+    },
+    {
+      "set": "MKM",
+      "draft": "9c92ec9f599049819d3c8ecef6a95816",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 36
+    },
+    {
+      "set": "MKM",
+      "draft": "9eed630cfb414a9f91ebca5121e8acb7",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 36
+    },
+    {
+      "set": "MKM",
+      "draft": "a253482283944634ac8b2ea9fd3d5ede",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 38
+    },
+    {
+      "set": "MKM",
+      "draft": "abb97ff339784f799bf233d8a7e34402",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 36
+    },
+    {
+      "set": "MKM",
+      "draft": "b07354cbce864c478c80daa08452b4a3",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 39
+    },
+    {
+      "set": "MKM",
+      "draft": "b1809b49e6af4f4b9a6dad328fe39349",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 35
+    },
+    {
+      "set": "MKM",
+      "draft": "b1f6976c4f0546c1afd51391e704977d",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 31
+    },
+    {
+      "set": "MKM",
+      "draft": "b284b288ec0b48ddbc9d65b1ea1bfba3",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 38
+    },
+    {
+      "set": "MKM",
+      "draft": "b5e6cce5324c4da089f8004558e3b306",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "MKM",
+      "draft": "b64ff95890d34d8abf87b41f9c40fe7e",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "MKM",
+      "draft": "b7e4d24815184d62bec38d1b6a345459",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "MKM",
+      "draft": "bf8af44c4c984080946ed3543b1c246d",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 34
+    },
+    {
+      "set": "MKM",
+      "draft": "ce6f94006a35493ba977a7ca77e694c3",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 38
+    },
+    {
+      "set": "MKM",
+      "draft": "d0bfa1cfb8f24e38a5a1ad9cc9db72b7",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "MKM",
+      "draft": "d7d80b5ab0324e298e47406e5a197b56",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 38
+    },
+    {
+      "set": "MKM",
+      "draft": "e6ce8e7d0ddc44619a7e7ade42fb7740",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "MKM",
+      "draft": "e8f73d0cae4c43cbb47d8c73c1478855",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "MKM",
+      "draft": "e9a4548663b34fab9948cd87e546c39d",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 39
+    },
+    {
+      "set": "MKM",
+      "draft": "fad3f2f0ffee445994e5db917f160e04",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 38
+    },
+    {
+      "set": "MKM",
+      "draft": "fc148b8e088c42ac8a6b3029b834fb8d",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 35
+    },
+    {
+      "set": "MKM",
+      "draft": "fdc6ac2e392e42a8be0c8b2876e609f2",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 39
+    },
+    {
+      "set": "MKM",
+      "draft": "ffc1fda170b149ffb3b399390861bc3b",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 36
+    },
+    {
+      "set": "OTJ",
+      "draft": "0217fa1aa652419381538ffa4edc040d",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 39
+    },
+    {
+      "set": "OTJ",
+      "draft": "03bac1bda8404fffb2f3971d4341f27f",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 39
+    },
+    {
+      "set": "OTJ",
+      "draft": "0790ec9e16d94b4faa3491aad3ea3c1a",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 39
+    },
+    {
+      "set": "OTJ",
+      "draft": "108da760fddc4da88ae9efde6d18810c",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 30
+    },
+    {
+      "set": "OTJ",
+      "draft": "126ef86bbc23462a9a9138a6cb5334b5",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 36
+    },
+    {
+      "set": "OTJ",
+      "draft": "15efc947ae1d420ab3e88cd2780991f8",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 38
+    },
+    {
+      "set": "OTJ",
+      "draft": "15f6364e00294f4e99f5786409340937",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "OTJ",
+      "draft": "16e3233b52dd4ff78af0354b879ad7f3",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 36
+    },
+    {
+      "set": "OTJ",
+      "draft": "19e4e11d79494914b9106f2b81e9fd53",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 36
+    },
+    {
+      "set": "OTJ",
+      "draft": "1f5ae8b4c548460d9a961ad78c11dacf",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "OTJ",
+      "draft": "4e548cda024c4ec9a19c53bf3d39b581",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "OTJ",
+      "draft": "4e80ecd28fe24b9e87f52e8e8562711f",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 36
+    },
+    {
+      "set": "OTJ",
+      "draft": "54b84d604c844e8c904cb2deb2c0b6f4",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 39
+    },
+    {
+      "set": "OTJ",
+      "draft": "5b80cbbda21d45ceb3aa4aad2b30d31e",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 32
+    },
+    {
+      "set": "OTJ",
+      "draft": "5e277f3205c44e87b223230025747ca5",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 35
+    },
+    {
+      "set": "OTJ",
+      "draft": "5f7adfe74736478d9847a9e13fd8f4c6",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 38
+    },
+    {
+      "set": "OTJ",
+      "draft": "632c6e0862a24c61ad120b28c3883b43",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 39
+    },
+    {
+      "set": "OTJ",
+      "draft": "650c1604fc2e49c28b5a094707fb18d3",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 33
+    },
+    {
+      "set": "OTJ",
+      "draft": "6da70cc85e9649d6a764aa7734eb8be9",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 36
+    },
+    {
+      "set": "OTJ",
+      "draft": "7067ec57b96d4b8fa0b02cdc357c2c5b",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 34
+    },
+    {
+      "set": "OTJ",
+      "draft": "707ec33ca67a4afe857c894a4d344da5",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 36
+    },
+    {
+      "set": "OTJ",
+      "draft": "7445caaca89c42fd8e30cf954f275af8",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 39
+    },
+    {
+      "set": "OTJ",
+      "draft": "76e0e3b52f2b4658acef909d2f621e78",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 36
+    },
+    {
+      "set": "OTJ",
+      "draft": "836e87e00bbc4bf490e6ee3eb286af36",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 36
+    },
+    {
+      "set": "OTJ",
+      "draft": "85cd54e0790b496da5f05b53308518e4",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 38
+    },
+    {
+      "set": "OTJ",
+      "draft": "87a277adcedb44589c79c6e401923e90",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "OTJ",
+      "draft": "8bf5c643c977482c918199f3b734a59a",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 36
+    },
+    {
+      "set": "OTJ",
+      "draft": "8bfa85a3e5984ffbb27716a919a3ba2e",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 38
+    },
+    {
+      "set": "OTJ",
+      "draft": "8dbb09c48476461d8ba36ccf172bddf5",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 38
+    },
+    {
+      "set": "OTJ",
+      "draft": "94fff4cec3574733a1c4fe66824697f0",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "OTJ",
+      "draft": "9d5a5866a27a4b0a81956076b5899afe",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 39
+    },
+    {
+      "set": "OTJ",
+      "draft": "a05bad38a55a4ad497c6c24c9c4dbe1a",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 39
+    },
+    {
+      "set": "OTJ",
+      "draft": "a105a12c1ebb458ea16f249af7c2179e",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 36
+    },
+    {
+      "set": "OTJ",
+      "draft": "a38c3215892a4c789d8708dc3f2ac0f2",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 39
+    },
+    {
+      "set": "OTJ",
+      "draft": "a59f932c210b43199f7f2a1d4eb7cf5f",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 38
+    },
+    {
+      "set": "OTJ",
+      "draft": "b266f5d7a4e045158d4a9b14da9e252c",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 36
+    },
+    {
+      "set": "OTJ",
+      "draft": "b30b0f8d6b594d87b622fa4ad0f9fecc",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 39
+    },
+    {
+      "set": "OTJ",
+      "draft": "b8f8f17225ff49f49116e1d8dd0e65f1",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "OTJ",
+      "draft": "bbf7ecaed89141b5a84255ad679014ed",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 33
+    },
+    {
+      "set": "OTJ",
+      "draft": "bf7b95a11d3a4320ae9ddf3c4350d101",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 38
+    },
+    {
+      "set": "OTJ",
+      "draft": "cb9ceadffcca4ee7a6a3fc9fd441c2f9",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 36
+    },
+    {
+      "set": "OTJ",
+      "draft": "d0287203db6c4aac8dfca10544d9d4dc",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 34
+    },
+    {
+      "set": "OTJ",
+      "draft": "de74e7d9f17a46e295a133770fdfaf0e",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "OTJ",
+      "draft": "e5da83851611425f83e365cf30457a45",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 38
+    },
+    {
+      "set": "OTJ",
+      "draft": "e6bb8ad740db47609fcac96704906549",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "OTJ",
+      "draft": "f2de810082ed44919e14fc34d2832df9",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "ONE",
+      "draft": "16867f94fe4a4b09bc3fab872c198df0",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 34
+    },
+    {
+      "set": "ONE",
+      "draft": "20e585afcedc4152a50fe98f64c1be4e",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 36
+    },
+    {
+      "set": "ONE",
+      "draft": "5a7c2716deed41b581eaee9257fbf5fd",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 39
+    },
+    {
+      "set": "ONE",
+      "draft": "7cecc09d29e84b4685f9b03d20a505ce",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 39
+    },
+    {
+      "set": "ONE",
+      "draft": "864af3680ae74e76a0da95f97e6bf836",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 36
+    },
+    {
+      "set": "ONE",
+      "draft": "8d3bc9f8f0f84401a04a7e4f366c3af9",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 36
+    },
+    {
+      "set": "ONE",
+      "draft": "b231aa82bd894a15ab72b1c04022b740",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 36
+    },
+    {
+      "set": "ONE",
+      "draft": "ce319d3900e54ac78e4ebe5e79904bc9",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 38
+    },
+    {
+      "set": "MOM",
+      "draft": "08be4f25ae39421eae276df124fa55cc",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "MOM",
+      "draft": "170b074845a743cb91b4de93f01fad20",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "MOM",
+      "draft": "22f6679c5a2d4f4a83454786ef471a86",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "MOM",
+      "draft": "24210ad68b144afbbbf4e389ad39300e",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 39
+    },
+    {
+      "set": "MOM",
+      "draft": "2556446505884bbc86756ea7bc975fdb",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 36
+    },
+    {
+      "set": "MOM",
+      "draft": "26bf9bb57d5c456ab07a45ff5f2711a2",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 39
+    },
+    {
+      "set": "MOM",
+      "draft": "30300115279f4962843a32fd2cb18154",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 38
+    },
+    {
+      "set": "MOM",
+      "draft": "320d21c3a3ca45129445426e0f67ae6b",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "MOM",
+      "draft": "47a93d92862245eab37a235e185989d9",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 36
+    },
+    {
+      "set": "MOM",
+      "draft": "4d76c338a39b47f58cac5f7760547ba6",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 36
+    },
+    {
+      "set": "MOM",
+      "draft": "4e7876210b0d4cfbb381196e2a27c232",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "MOM",
+      "draft": "5c50ad2633b74d028301594890dfff11",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 38
+    },
+    {
+      "set": "MOM",
+      "draft": "5d0abb7d791c49688283f9683ae99c07",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 38
+    },
+    {
+      "set": "MOM",
+      "draft": "733e62f297e44a6b86018e276cbb42a3",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 39
+    },
+    {
+      "set": "MOM",
+      "draft": "752d38acce3a472aae7aa31dd93c290f",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 35
+    },
+    {
+      "set": "MOM",
+      "draft": "b40255d251de4d8092cd4bc4cb633ebd",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 38
+    },
+    {
+      "set": "MOM",
+      "draft": "dfc38cff991141b596146ad66da05ecf",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "MOM",
+      "draft": "e9dc97029de74c5b929c4491bdb444a6",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 37
+    },
+    {
+      "set": "MOM",
+      "draft": "eeb4e02d476442009ab714d96855aefd",
+      "reason": "No complete40-card owned spell/mana projection",
+      "ownedCards": 39
+    }
+  ],
+  "seconds": 7.046655599959195,
+  "meanBuilderMs": 12.590894034652287,
+  "p95BuilderMs": 22.459579957649105,
+  "allCandidateIntegrity": false,
+  "partialDecksNeverCounted": true
+}

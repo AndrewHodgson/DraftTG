@@ -1,0 +1,13 @@
+{
+  "files": {
+    "tools\\DraftTG.HistoricalEvaluation\\phase_d1.py": "65f1df59e4a499d17b70a2014d68ad77c92bea3adf41337dfbaf88ee4661d4a4",
+    "tools\\DraftTG.HistoricalEvaluation\\phase_d1_baseline.py": "32362a80dd334d66857c836d4b00a3dc66dcd97f070054ae78eeab42211d200d",
+    "tools\\DraftTG.HistoricalEvaluation\\phase_d1_core.py": "20ae004300d2af789a8a0d5873b0d39fa1c3720c9c56ba262a17e9284074be15",
+    "tools\\DraftTG.HistoricalEvaluation\\phase_d1_models.py": "6dd56c1bf7cc92eeb8a3ca792e42fd41bddcbc305dc7cf36779d3b5b811c14b8",
+    "tools\\DraftTG.HistoricalEvaluation\\phase_d1_publish.py": "dba401fe975f3ea074fc51c7b21ce80a14040f164c6b7749645ec2ad0c2cb509",
+    "tools\\DraftTG.HistoricalEvaluation\\phase_d1_report.py": "5b1716ca38f1d5785a865ca1f2c41b4c87984e709e5c477741a96fabf2c51fa6",
+    "tools\\DraftTG.HistoricalEvaluation\\phase_d1_research.py": "48ae541e163a47419c7d06650669f23031a6f785a6a36a2cd96081a2a9df7b19",
+    "tools\\DraftTG.HistoricalEvaluation\\test_phase_d1.py": "5abec3f250445393227b61b1a517285d6791447d8718222d11dda402f2dc3290"
+  },
+  "fingerprint": "f87b1ae5bd87107c7ba756193a01b42e09cea94c0a6b189879157a541428046b"
+}

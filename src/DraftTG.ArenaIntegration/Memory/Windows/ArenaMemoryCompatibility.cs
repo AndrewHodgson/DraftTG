@@ -18,11 +18,22 @@ internal static class ArenaMemoryCompatibility
          new("mscorlib", "6C76E06E6D44CF0F39BF59E6A90770968B70093AD4C1572DFBC5E46E431C5FBF", new("41d29b35-2f6a-475a-b1bf-7c6628b82790")),
          new("Wizards.Arena.Models", "7C955BD48BF8C136686D145244B9889AF258A48F338A3E2A77ED0CED1FD9A725", new("6180f80c-8973-4ed3-b3df-93c49402ff53"))]);
 
-    internal static bool IsSupported(ArenaBuildFingerprint f) =>
-        f.Architecture == Supported.Architecture && f.UnityVersion == Supported.UnityVersion
-        && f.ExecutableSha256 == Supported.ExecutableSha256 && f.UnityPlayerSha256 == Supported.UnityPlayerSha256
-        && f.MonoSha256 == Supported.MonoSha256 && f.Assemblies.Count == Supported.Assemblies.Count
-        && Supported.Assemblies.All(s => f.Assemblies.Count(a => a == s) == 1);
+    // Phase 9F.3: independently inspected current game metadata; native engine/Mono and framework bytes unchanged.
+    internal static ArenaBuildFingerprint Supported9F3 { get; } = Supported with { Assemblies =
+        Supported.Assemblies.Select(a => a.Name switch
+        {
+            "Core" => new ArenaManagedAssemblyIdentity(a.Name, "3E85D45E88B10A2FD3841E3ABE6F5B37A17E0C42D360C93988E2270B4FDC858A", new("ee80c82e-c3e1-4b1f-a368-411a84d10f78")),
+            "SharedClientCore" => new ArenaManagedAssemblyIdentity(a.Name, "42F2FB5F062CCC6098182A902D411746070759A404E875B6E0AAC44D3B7CCC6E", new("c162c20f-ba79-438b-abd6-058f915926a3")),
+            "Assembly-CSharp" => new ArenaManagedAssemblyIdentity(a.Name, "909B532F1684ECC12F05C275869C0E7951B82DF63F8C63E3C73AD8E076C2E08A", new("fcbefd0d-6e5c-4294-8514-1dfe7644a5fe")),
+            _ => a
+        }).ToArray() };
+    internal static bool IsSupported(ArenaBuildFingerprint f) => Matches(f, Supported) || Matches(f, Supported9F3);
+    internal static string ProfileFor(ArenaBuildFingerprint f) => Matches(f, Supported9F3) ? "unity-mono-x64-69dd7ca1-arena-2026-10-14-9f3" : ProfileId;
+    private static bool Matches(ArenaBuildFingerprint f, ArenaBuildFingerprint expected) =>
+        f.Architecture == expected.Architecture && f.UnityVersion == expected.UnityVersion
+        && f.ExecutableSha256 == expected.ExecutableSha256 && f.UnityPlayerSha256 == expected.UnityPlayerSha256
+        && f.MonoSha256 == expected.MonoSha256 && f.Assemblies.Count == expected.Assemblies.Count
+        && expected.Assemblies.All(s => f.Assemblies.Count(a => a == s) == 1);
 
     // This boundary inspects local files/module identity only. It never traverses target memory.
     internal static ArenaBuildFingerprint Inspect(string architecture, IReadOnlyList<ArenaRemoteModule> modules)

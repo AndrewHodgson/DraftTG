@@ -1,0 +1,919 @@
+{
+  "results": [
+    {
+      "set": "DMU",
+      "partition": "calibration",
+      "matched": true,
+      "tasks": 500,
+      "metrics": {
+        "A": {
+          "n": 500,
+          "Top1": 0.37,
+          "Top3": 0.77,
+          "MRR": 0.5936666666666668,
+          "normalizedRank": 0.339
+        },
+        "B": {
+          "n": 500,
+          "Top1": 0.374,
+          "Top3": 0.786,
+          "MRR": 0.5973333333333334,
+          "normalizedRank": 0.3335
+        },
+        "C": {
+          "n": 500,
+          "Top1": 0.368,
+          "Top3": 0.784,
+          "MRR": 0.5946999999999999,
+          "normalizedRank": 0.334
+        },
+        "color-only": {
+          "n": 500,
+          "Top1": 0.2,
+          "Top3": 0.5999999999999999,
+          "MRR": 0.4566666666666667,
+          "normalizedRank": 0.5
+        },
+        "frequency": {
+          "n": 500,
+          "Top1": 0.304,
+          "Top3": 0.816,
+          "MRR": 0.5597333333333333,
+          "normalizedRank": 0.3445
+        },
+        "Q": {
+          "n": 500,
+          "Top1": 0.088,
+          "Top3": 0.706,
+          "MRR": 0.4067,
+          "normalizedRank": 0.484
+        },
+        "frequency-plus-Q": {
+          "n": 500,
+          "Top1": 0.28,
+          "Top3": 0.804,
+          "MRR": 0.5458666666666667,
+          "normalizedRank": 0.3555
+        }
+      }
+    },
+    {
+      "set": "DMU",
+      "partition": "calibration",
+      "matched": false,
+      "tasks": 500,
+      "metrics": {
+        "A": {
+          "n": 500,
+          "Top1": 0.324,
+          "Top3": 0.804,
+          "MRR": 0.5726333333333333,
+          "normalizedRank": 0.3405
+        },
+        "B": {
+          "n": 500,
+          "Top1": 0.312,
+          "Top3": 0.8,
+          "MRR": 0.5666333333333334,
+          "normalizedRank": 0.344
+        },
+        "C": {
+          "n": 500,
+          "Top1": 0.318,
+          "Top3": 0.804,
+          "MRR": 0.5710666666666666,
+          "normalizedRank": 0.3395
+        },
+        "color-only": {
+          "n": 500,
+          "Top1": 0.2,
+          "Top3": 0.5999999999999999,
+          "MRR": 0.4566666666666667,
+          "normalizedRank": 0.5
+        },
+        "frequency": {
+          "n": 500,
+          "Top1": 0.486,
+          "Top3": 0.894,
+          "MRR": 0.6954,
+          "normalizedRank": 0.217
+        },
+        "Q": {
+          "n": 500,
+          "Top1": 0.236,
+          "Top3": 0.648,
+          "MRR": 0.4913666666666666,
+          "normalizedRank": 0.454
+        },
+        "frequency-plus-Q": {
+          "n": 500,
+          "Top1": 0.488,
+          "Top3": 0.9,
+          "MRR": 0.6945999999999999,
+          "normalizedRank": 0.2195
+        }
+      }
+    },
+    {
+      "set": "BRO",
+      "partition": "calibration",
+      "matched": true,
+      "tasks": 500,
+      "metrics": {
+        "A": {
+          "n": 500,
+          "Top1": 0.384,
+          "Top3": 0.806,
+          "MRR": 0.6087333333333333,
+          "normalizedRank": 0.314
+        },
+        "B": {
+          "n": 500,
+          "Top1": 0.378,
+          "Top3": 0.802,
+          "MRR": 0.6084,
+          "normalizedRank": 0.312
+        },
+        "C": {
+          "n": 500,
+          "Top1": 0.376,
+          "Top3": 0.798,
+          "MRR": 0.6070666666666666,
+          "normalizedRank": 0.3135
+        },
+        "color-only": {
+          "n": 500,
+          "Top1": 0.2,
+          "Top3": 0.5999999999999999,
+          "MRR": 0.4566666666666667,
+          "normalizedRank": 0.5
+        },
+        "frequency": {
+          "n": 500,
+          "Top1": 0.314,
+          "Top3": 0.85,
+          "MRR": 0.5790333333333333,
+          "normalizedRank": 0.3135
+        },
+        "Q": {
+          "n": 500,
+          "Top1": 0.058,
+          "Top3": 0.614,
+          "MRR": 0.37076666666666663,
+          "normalizedRank": 0.54
+        },
+        "frequency-plus-Q": {
+          "n": 500,
+          "Top1": 0.294,
+          "Top3": 0.84,
+          "MRR": 0.5656333333333333,
+          "normalizedRank": 0.3245
+        }
+      }
+    },
+    {
+      "set": "BRO",
+      "partition": "calibration",
+      "matched": false,
+      "tasks": 500,
+      "metrics": {
+        "A": {
+          "n": 500,
+          "Top1": 0.388,
+          "Top3": 0.848,
+          "MRR": 0.6199,
+          "normalizedRank": 0.294
+        },
+        "B": {
+          "n": 500,
+          "Top1": 0.372,
+          "Top3": 0.844,
+          "MRR": 0.6107333333333334,
+          "normalizedRank": 0.2985
+        },
+        "C": {
+          "n": 500,
+          "Top1": 0.38,
+          "Top3": 0.846,
+          "MRR": 0.6172333333333333,
+          "normalizedRank": 0.2925
+        },
+        "color-only": {
+          "n": 500,
+          "Top1": 0.2,
+          "Top3": 0.5999999999999999,
+          "MRR": 0.4566666666666667,
+          "normalizedRank": 0.5
+        },
+        "frequency": {
+          "n": 500,
+          "Top1": 0.578,
+          "Top3": 0.916,
+          "MRR": 0.7455666666666666,
+          "normalizedRank": 0.185
+        },
+        "Q": {
+          "n": 500,
+          "Top1": 0.242,
+          "Top3": 0.638,
+          "MRR": 0.4862666666666666,
+          "normalizedRank": 0.475
+        },
+        "frequency-plus-Q": {
+          "n": 500,
+          "Top1": 0.548,
+          "Top3": 0.916,
+          "MRR": 0.7342666666666666,
+          "normalizedRank": 0.188
+        }
+      }
+    },
+    {
+      "set": "WOE",
+      "partition": "calibration",
+      "matched": true,
+      "tasks": 500,
+      "metrics": {
+        "A": {
+          "n": 500,
+          "Top1": 0.328,
+          "Top3": 0.752,
+          "MRR": 0.5612999999999999,
+          "normalizedRank": 0.373
+        },
+        "B": {
+          "n": 500,
+          "Top1": 0.33,
+          "Top3": 0.742,
+          "MRR": 0.5601333333333333,
+          "normalizedRank": 0.377
+        },
+        "C": {
+          "n": 500,
+          "Top1": 0.332,
+          "Top3": 0.748,
+          "MRR": 0.5607333333333333,
+          "normalizedRank": 0.376
+        },
+        "color-only": {
+          "n": 500,
+          "Top1": 0.2,
+          "Top3": 0.5999999999999999,
+          "MRR": 0.4566666666666667,
+          "normalizedRank": 0.5
+        },
+        "frequency": {
+          "n": 500,
+          "Top1": 0.276,
+          "Top3": 0.806,
+          "MRR": 0.5433333333333332,
+          "normalizedRank": 0.356
+        },
+        "Q": {
+          "n": 500,
+          "Top1": 0.054,
+          "Top3": 0.634,
+          "MRR": 0.3720333333333333,
+          "normalizedRank": 0.5315
+        },
+        "frequency-plus-Q": {
+          "n": 500,
+          "Top1": 0.252,
+          "Top3": 0.8,
+          "MRR": 0.5332666666666667,
+          "normalizedRank": 0.3595
+        }
+      }
+    },
+    {
+      "set": "WOE",
+      "partition": "calibration",
+      "matched": false,
+      "tasks": 500,
+      "metrics": {
+        "A": {
+          "n": 500,
+          "Top1": 0.312,
+          "Top3": 0.812,
+          "MRR": 0.5686666666666668,
+          "normalizedRank": 0.3335
+        },
+        "B": {
+          "n": 500,
+          "Top1": 0.278,
+          "Top3": 0.796,
+          "MRR": 0.5450999999999999,
+          "normalizedRank": 0.357
+        },
+        "C": {
+          "n": 500,
+          "Top1": 0.28,
+          "Top3": 0.798,
+          "MRR": 0.5482666666666667,
+          "normalizedRank": 0.353
+        },
+        "color-only": {
+          "n": 500,
+          "Top1": 0.2,
+          "Top3": 0.5999999999999999,
+          "MRR": 0.4566666666666667,
+          "normalizedRank": 0.5
+        },
+        "frequency": {
+          "n": 500,
+          "Top1": 0.548,
+          "Top3": 0.918,
+          "MRR": 0.7305999999999999,
+          "normalizedRank": 0.1915
+        },
+        "Q": {
+          "n": 500,
+          "Top1": 0.26,
+          "Top3": 0.672,
+          "MRR": 0.5039333333333332,
+          "normalizedRank": 0.4445
+        },
+        "frequency-plus-Q": {
+          "n": 500,
+          "Top1": 0.536,
+          "Top3": 0.918,
+          "MRR": 0.7264666666666667,
+          "normalizedRank": 0.191
+        }
+      }
+    },
+    {
+      "set": "LCI",
+      "partition": "development",
+      "matched": true,
+      "tasks": 500,
+      "metrics": {
+        "A": {
+          "n": 500,
+          "Top1": 0.28,
+          "Top3": 0.744,
+          "MRR": 0.5348666666666668,
+          "normalizedRank": 0.3865
+        },
+        "B": {
+          "n": 500,
+          "Top1": 0.292,
+          "Top3": 0.746,
+          "MRR": 0.5431666666666666,
+          "normalizedRank": 0.3805
+        },
+        "C": {
+          "n": 500,
+          "Top1": 0.292,
+          "Top3": 0.738,
+          "MRR": 0.5405,
+          "normalizedRank": 0.3855
+        },
+        "color-only": {
+          "n": 500,
+          "Top1": 0.2,
+          "Top3": 0.5999999999999999,
+          "MRR": 0.4566666666666667,
+          "normalizedRank": 0.5
+        },
+        "frequency": {
+          "n": 500,
+          "Top1": 0.26,
+          "Top3": 0.792,
+          "MRR": 0.5371333333333334,
+          "normalizedRank": 0.358
+        },
+        "Q": {
+          "n": 500,
+          "Top1": 0.082,
+          "Top3": 0.664,
+          "MRR": 0.3999,
+          "normalizedRank": 0.494
+        },
+        "frequency-plus-Q": {
+          "n": 500,
+          "Top1": 0.21,
+          "Top3": 0.818,
+          "MRR": 0.5108666666666667,
+          "normalizedRank": 0.3695
+        }
+      }
+    },
+    {
+      "set": "LCI",
+      "partition": "development",
+      "matched": false,
+      "tasks": 500,
+      "metrics": {
+        "A": {
+          "n": 500,
+          "Top1": 0.248,
+          "Top3": 0.778,
+          "MRR": 0.5276333333333333,
+          "normalizedRank": 0.375
+        },
+        "B": {
+          "n": 500,
+          "Top1": 0.262,
+          "Top3": 0.776,
+          "MRR": 0.5319333333333334,
+          "normalizedRank": 0.3765
+        },
+        "C": {
+          "n": 500,
+          "Top1": 0.274,
+          "Top3": 0.78,
+          "MRR": 0.5410333333333333,
+          "normalizedRank": 0.368
+        },
+        "color-only": {
+          "n": 500,
+          "Top1": 0.2,
+          "Top3": 0.5999999999999999,
+          "MRR": 0.4566666666666667,
+          "normalizedRank": 0.5
+        },
+        "frequency": {
+          "n": 500,
+          "Top1": 0.516,
+          "Top3": 0.884,
+          "MRR": 0.7009333333333334,
+          "normalizedRank": 0.2295
+        },
+        "Q": {
+          "n": 500,
+          "Top1": 0.216,
+          "Top3": 0.62,
+          "MRR": 0.4731,
+          "normalizedRank": 0.4805
+        },
+        "frequency-plus-Q": {
+          "n": 500,
+          "Top1": 0.486,
+          "Top3": 0.87,
+          "MRR": 0.6827333333333333,
+          "normalizedRank": 0.2425
+        }
+      }
+    },
+    {
+      "set": "MKM",
+      "partition": "development",
+      "matched": true,
+      "tasks": 500,
+      "metrics": {
+        "A": {
+          "n": 500,
+          "Top1": 0.282,
+          "Top3": 0.712,
+          "MRR": 0.5254666666666667,
+          "normalizedRank": 0.414
+        },
+        "B": {
+          "n": 500,
+          "Top1": 0.284,
+          "Top3": 0.704,
+          "MRR": 0.5235666666666666,
+          "normalizedRank": 0.4185
+        },
+        "C": {
+          "n": 500,
+          "Top1": 0.28,
+          "Top3": 0.708,
+          "MRR": 0.5232333333333333,
+          "normalizedRank": 0.4165
+        },
+        "color-only": {
+          "n": 500,
+          "Top1": 0.2,
+          "Top3": 0.5999999999999999,
+          "MRR": 0.4566666666666667,
+          "normalizedRank": 0.5
+        },
+        "frequency": {
+          "n": 500,
+          "Top1": 0.174,
+          "Top3": 0.806,
+          "MRR": 0.48183333333333334,
+          "normalizedRank": 0.3955
+        },
+        "Q": {
+          "n": 500,
+          "Top1": 0.052,
+          "Top3": 0.692,
+          "MRR": 0.38996666666666663,
+          "normalizedRank": 0.489
+        },
+        "frequency-plus-Q": {
+          "n": 500,
+          "Top1": 0.16,
+          "Top3": 0.806,
+          "MRR": 0.47583333333333333,
+          "normalizedRank": 0.3975
+        }
+      }
+    },
+    {
+      "set": "MKM",
+      "partition": "development",
+      "matched": false,
+      "tasks": 500,
+      "metrics": {
+        "A": {
+          "n": 500,
+          "Top1": 0.308,
+          "Top3": 0.764,
+          "MRR": 0.5568,
+          "normalizedRank": 0.3595
+        },
+        "B": {
+          "n": 500,
+          "Top1": 0.25,
+          "Top3": 0.752,
+          "MRR": 0.5186666666666666,
+          "normalizedRank": 0.392
+        },
+        "C": {
+          "n": 500,
+          "Top1": 0.252,
+          "Top3": 0.756,
+          "MRR": 0.5221,
+          "normalizedRank": 0.387
+        },
+        "color-only": {
+          "n": 500,
+          "Top1": 0.2,
+          "Top3": 0.5999999999999999,
+          "MRR": 0.4566666666666667,
+          "normalizedRank": 0.5
+        },
+        "frequency": {
+          "n": 500,
+          "Top1": 0.576,
+          "Top3": 0.926,
+          "MRR": 0.7471333333333333,
+          "normalizedRank": 0.179
+        },
+        "Q": {
+          "n": 500,
+          "Top1": 0.234,
+          "Top3": 0.65,
+          "MRR": 0.4848333333333334,
+          "normalizedRank": 0.4685
+        },
+        "frequency-plus-Q": {
+          "n": 500,
+          "Top1": 0.542,
+          "Top3": 0.92,
+          "MRR": 0.7252000000000001,
+          "normalizedRank": 0.196
+        }
+      }
+    },
+    {
+      "set": "OTJ",
+      "partition": "development",
+      "matched": true,
+      "tasks": 500,
+      "metrics": {
+        "A": {
+          "n": 500,
+          "Top1": 0.268,
+          "Top3": 0.7,
+          "MRR": 0.5210333333333333,
+          "normalizedRank": 0.4155
+        },
+        "B": {
+          "n": 500,
+          "Top1": 0.274,
+          "Top3": 0.69,
+          "MRR": 0.5263,
+          "normalizedRank": 0.4115
+        },
+        "C": {
+          "n": 500,
+          "Top1": 0.276,
+          "Top3": 0.686,
+          "MRR": 0.5275333333333334,
+          "normalizedRank": 0.4115
+        },
+        "color-only": {
+          "n": 500,
+          "Top1": 0.2,
+          "Top3": 0.5999999999999999,
+          "MRR": 0.4566666666666667,
+          "normalizedRank": 0.5
+        },
+        "frequency": {
+          "n": 500,
+          "Top1": 0.258,
+          "Top3": 0.82,
+          "MRR": 0.5427666666666666,
+          "normalizedRank": 0.344
+        },
+        "Q": {
+          "n": 500,
+          "Top1": 0.064,
+          "Top3": 0.65,
+          "MRR": 0.38219999999999993,
+          "normalizedRank": 0.521
+        },
+        "frequency-plus-Q": {
+          "n": 500,
+          "Top1": 0.242,
+          "Top3": 0.824,
+          "MRR": 0.5314333333333334,
+          "normalizedRank": 0.3525
+        }
+      }
+    },
+    {
+      "set": "OTJ",
+      "partition": "development",
+      "matched": false,
+      "tasks": 500,
+      "metrics": {
+        "A": {
+          "n": 500,
+          "Top1": 0.262,
+          "Top3": 0.764,
+          "MRR": 0.5328666666666668,
+          "normalizedRank": 0.3745
+        },
+        "B": {
+          "n": 500,
+          "Top1": 0.264,
+          "Top3": 0.736,
+          "MRR": 0.5263333333333332,
+          "normalizedRank": 0.3895
+        },
+        "C": {
+          "n": 500,
+          "Top1": 0.27,
+          "Top3": 0.738,
+          "MRR": 0.5289333333333334,
+          "normalizedRank": 0.388
+        },
+        "color-only": {
+          "n": 500,
+          "Top1": 0.2,
+          "Top3": 0.5999999999999999,
+          "MRR": 0.4566666666666667,
+          "normalizedRank": 0.5
+        },
+        "frequency": {
+          "n": 500,
+          "Top1": 0.502,
+          "Top3": 0.916,
+          "MRR": 0.7058666666666666,
+          "normalizedRank": 0.209
+        },
+        "Q": {
+          "n": 500,
+          "Top1": 0.264,
+          "Top3": 0.62,
+          "MRR": 0.49489999999999995,
+          "normalizedRank": 0.469
+        },
+        "frequency-plus-Q": {
+          "n": 500,
+          "Top1": 0.518,
+          "Top3": 0.916,
+          "MRR": 0.7139666666666667,
+          "normalizedRank": 0.2045
+        }
+      }
+    },
+    {
+      "set": "ONE",
+      "partition": "development",
+      "matched": true,
+      "tasks": 500,
+      "metrics": {
+        "A": {
+          "n": 500,
+          "Top1": 0.346,
+          "Top3": 0.752,
+          "MRR": 0.5802666666666666,
+          "normalizedRank": 0.349
+        },
+        "B": {
+          "n": 500,
+          "Top1": 0.354,
+          "Top3": 0.752,
+          "MRR": 0.5849333333333333,
+          "normalizedRank": 0.346
+        },
+        "C": {
+          "n": 500,
+          "Top1": 0.352,
+          "Top3": 0.754,
+          "MRR": 0.5848666666666666,
+          "normalizedRank": 0.3445
+        },
+        "color-only": {
+          "n": 500,
+          "Top1": 0.2,
+          "Top3": 0.5999999999999999,
+          "MRR": 0.4566666666666667,
+          "normalizedRank": 0.5
+        },
+        "frequency": {
+          "n": 500,
+          "Top1": 0.304,
+          "Top3": 0.836,
+          "MRR": 0.5678,
+          "normalizedRank": 0.332
+        },
+        "Q": {
+          "n": 500,
+          "Top1": 0.048,
+          "Top3": 0.624,
+          "MRR": 0.3701999999999999,
+          "normalizedRank": 0.5255
+        },
+        "frequency-plus-Q": {
+          "n": 500,
+          "Top1": 0.276,
+          "Top3": 0.826,
+          "MRR": 0.5522666666666667,
+          "normalizedRank": 0.3415
+        }
+      }
+    },
+    {
+      "set": "ONE",
+      "partition": "development",
+      "matched": false,
+      "tasks": 500,
+      "metrics": {
+        "A": {
+          "n": 500,
+          "Top1": 0.322,
+          "Top3": 0.766,
+          "MRR": 0.5681,
+          "normalizedRank": 0.3535
+        },
+        "B": {
+          "n": 500,
+          "Top1": 0.306,
+          "Top3": 0.756,
+          "MRR": 0.5568666666666666,
+          "normalizedRank": 0.365
+        },
+        "C": {
+          "n": 500,
+          "Top1": 0.318,
+          "Top3": 0.766,
+          "MRR": 0.5652333333333334,
+          "normalizedRank": 0.3565
+        },
+        "color-only": {
+          "n": 500,
+          "Top1": 0.2,
+          "Top3": 0.5999999999999999,
+          "MRR": 0.4566666666666667,
+          "normalizedRank": 0.5
+        },
+        "frequency": {
+          "n": 500,
+          "Top1": 0.504,
+          "Top3": 0.89,
+          "MRR": 0.7016333333333333,
+          "normalizedRank": 0.2175
+        },
+        "Q": {
+          "n": 500,
+          "Top1": 0.248,
+          "Top3": 0.692,
+          "MRR": 0.5101333333333333,
+          "normalizedRank": 0.4225
+        },
+        "frequency-plus-Q": {
+          "n": 500,
+          "Top1": 0.496,
+          "Top3": 0.902,
+          "MRR": 0.6977000000000001,
+          "normalizedRank": 0.2165
+        }
+      }
+    },
+    {
+      "set": "MOM",
+      "partition": "development",
+      "matched": true,
+      "tasks": 500,
+      "metrics": {
+        "A": {
+          "n": 500,
+          "Top1": 0.292,
+          "Top3": 0.702,
+          "MRR": 0.5349666666666666,
+          "normalizedRank": 0.399
+        },
+        "B": {
+          "n": 500,
+          "Top1": 0.3,
+          "Top3": 0.724,
+          "MRR": 0.5430333333333333,
+          "normalizedRank": 0.3885
+        },
+        "C": {
+          "n": 500,
+          "Top1": 0.308,
+          "Top3": 0.722,
+          "MRR": 0.5466333333333333,
+          "normalizedRank": 0.387
+        },
+        "color-only": {
+          "n": 500,
+          "Top1": 0.2,
+          "Top3": 0.5999999999999999,
+          "MRR": 0.4566666666666667,
+          "normalizedRank": 0.5
+        },
+        "frequency": {
+          "n": 500,
+          "Top1": 0.28,
+          "Top3": 0.81,
+          "MRR": 0.5465,
+          "normalizedRank": 0.351
+        },
+        "Q": {
+          "n": 500,
+          "Top1": 0.104,
+          "Top3": 0.706,
+          "MRR": 0.4201,
+          "normalizedRank": 0.467
+        },
+        "frequency-plus-Q": {
+          "n": 500,
+          "Top1": 0.274,
+          "Top3": 0.818,
+          "MRR": 0.5427666666666666,
+          "normalizedRank": 0.354
+        }
+      }
+    },
+    {
+      "set": "MOM",
+      "partition": "development",
+      "matched": false,
+      "tasks": 500,
+      "metrics": {
+        "A": {
+          "n": 500,
+          "Top1": 0.352,
+          "Top3": 0.81,
+          "MRR": 0.5881666666666667,
+          "normalizedRank": 0.3315
+        },
+        "B": {
+          "n": 500,
+          "Top1": 0.358,
+          "Top3": 0.792,
+          "MRR": 0.5877333333333333,
+          "normalizedRank": 0.336
+        },
+        "C": {
+          "n": 500,
+          "Top1": 0.374,
+          "Top3": 0.798,
+          "MRR": 0.5974666666666667,
+          "normalizedRank": 0.329
+        },
+        "color-only": {
+          "n": 500,
+          "Top1": 0.2,
+          "Top3": 0.5999999999999999,
+          "MRR": 0.4566666666666667,
+          "normalizedRank": 0.5
+        },
+        "frequency": {
+          "n": 500,
+          "Top1": 0.516,
+          "Top3": 0.906,
+          "MRR": 0.7115666666666666,
+          "normalizedRank": 0.208
+        },
+        "Q": {
+          "n": 500,
+          "Top1": 0.27,
+          "Top3": 0.64,
+          "MRR": 0.5075,
+          "normalizedRank": 0.4555
+        },
+        "frequency-plus-Q": {
+          "n": 500,
+          "Top1": 0.496,
+          "Top3": 0.892,
+          "MRR": 0.7010333333333333,
+          "normalizedRank": 0.2145
+        }
+      }
+    }
+  ],
+  "seconds": 17.98394720000215,
+  "pairedIdenticalTasks": true,
+  "labelsNotInferenceFeatures": true
+}

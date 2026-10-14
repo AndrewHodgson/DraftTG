@@ -1,0 +1,136 @@
+{
+  "selected": {
+    "representation": "sqrt",
+    "context": "pair",
+    "perSetMAE": {
+      "DMU": 0.12776899870911654,
+      "BRO": 0.09277858878655451,
+      "WOE": 0.10250831759412106
+    },
+    "macroMAE": 0.10768530169659736
+  },
+  "results": [
+    {
+      "representation": "binary",
+      "context": "pair",
+      "perSetMAE": {
+        "DMU": 0.12861777636756846,
+        "BRO": 0.09338880289696243,
+        "WOE": 0.1030446953723631
+      },
+      "macroMAE": 0.10835042487896467
+    },
+    {
+      "representation": "binary",
+      "context": "broad",
+      "perSetMAE": {
+        "DMU": 0.12967374963111006,
+        "BRO": 0.09373835019368469,
+        "WOE": 0.10289447501608752
+      },
+      "macroMAE": 0.10876885828029409
+    },
+    {
+      "representation": "binary",
+      "context": "global",
+      "perSetMAE": {
+        "DMU": 0.14198848923196514,
+        "BRO": 0.10345052479246496,
+        "WOE": 0.11519217239899467
+      },
+      "macroMAE": 0.12021039547447492
+    },
+    {
+      "representation": "counts",
+      "context": "pair",
+      "perSetMAE": {
+        "DMU": 0.12857479208647632,
+        "BRO": 0.09331038888226144,
+        "WOE": 0.10301436433325901
+      },
+      "macroMAE": 0.10829984843399892
+    },
+    {
+      "representation": "counts",
+      "context": "broad",
+      "perSetMAE": {
+        "DMU": 0.12959415204369537,
+        "BRO": 0.09364470090919214,
+        "WOE": 0.1028609007691653
+      },
+      "macroMAE": 0.10869991790735094
+    },
+    {
+      "representation": "counts",
+      "context": "global",
+      "perSetMAE": {
+        "DMU": 0.14198848923196514,
+        "BRO": 0.10345052479246496,
+        "WOE": 0.11519217239899467
+      },
+      "macroMAE": 0.12021039547447492
+    },
+    {
+      "representation": "nonland",
+      "context": "pair",
+      "perSetMAE": {
+        "DMU": 0.12857479208647632,
+        "BRO": 0.09331038888226144,
+        "WOE": 0.10301436433325901
+      },
+      "macroMAE": 0.10829984843399892
+    },
+    {
+      "representation": "nonland",
+      "context": "broad",
+      "perSetMAE": {
+        "DMU": 0.12959415204369537,
+        "BRO": 0.09364470090919214,
+        "WOE": 0.1028609007691653
+      },
+      "macroMAE": 0.10869991790735094
+    },
+    {
+      "representation": "nonland",
+      "context": "global",
+      "perSetMAE": {
+        "DMU": 0.14198848923196514,
+        "BRO": 0.10345052479246496,
+        "WOE": 0.11519217239899467
+      },
+      "macroMAE": 0.12021039547447492
+    },
+    {
+      "representation": "sqrt",
+      "context": "pair",
+      "perSetMAE": {
+        "DMU": 0.12776899870911654,
+        "BRO": 0.09277858878655451,
+        "WOE": 0.10250831759412106
+      },
+      "macroMAE": 0.10768530169659736
+    },
+    {
+      "representation": "sqrt",
+      "context": "broad",
+      "perSetMAE": {
+        "DMU": 0.12875548511085566,
+        "BRO": 0.09311047686462393,
+        "WOE": 0.10235350270893322
+      },
+      "macroMAE": 0.10807315489480428
+    },
+    {
+      "representation": "sqrt",
+      "context": "global",
+      "perSetMAE": {
+        "DMU": 0.14198848923196514,
+        "BRO": 0.10345052479246496,
+        "WOE": 0.11519217239899467
+      },
+      "macroMAE": 0.12021039547447492
+    }
+  ],
+  "seconds": 21.660036399960518,
+  "scale": "Identical binary card-inclusion target, deterministic half-build pool; rank-one profiles; disjoint evidence audit"
+}

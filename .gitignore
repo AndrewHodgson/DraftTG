@@ -13,3 +13,4 @@ TestResults/
 # Public historical corpora and all normalized/cached row-level evaluation data.
 /data/historical/
 /tools/DraftTG.HistoricalEvaluation/__pycache__/
+/tools/__pycache__/

@@ -1,0 +1,65 @@
+{
+  "commit": "01443eeb5ab5cfb889991fcc45f72efb96e634dc",
+  "dirtyTree": true,
+  "buildPassed": true,
+  "warnings": 0,
+  "errors": 0,
+  "tests": {
+    "total": 1305,
+    "passed": 1305,
+    "failed": 0,
+    "notExecuted": 0
+  },
+  "goldens": {
+    "total": 40,
+    "passed": 40,
+    "failed": 0,
+    "notExecuted": 0
+  },
+  "newGroupedTests": 7,
+  "productionModel": "contextual-pick-score-v1.6.2",
+  "scoringSourceDiff": "",
+  "productionChanged": false,
+  "processRights": "0x410",
+  "nativeOffsetsChanged": false,
+  "noArenaWritesOrTargetCalls": true,
+  "physicalConfirmed": [
+    {
+      "cardCount": 3,
+      "client": "1600x900",
+      "dpi": 96,
+      "pack": 1,
+      "pick": 12
+    }
+  ],
+  "localizationComplete": false,
+  "holdoutsConsumed": false,
+  "sourceHashes": {
+    "src/DraftTG.RecommendationEngine/ArchetypeRecommendationEngine.cs": "551574eb82d5d48b6fc4ba71b789052ff5eda9410cf24ac42b3e1e349aa981ad",
+    "src/DraftTG.RecommendationEngine/BaselineDeckBuilder.cs": "729b43b01ec6c3569c41031a59368bae051948ca4a0e1fb8718972e037b3cf94",
+    "src/DraftTG.RecommendationEngine/CandidateDeckImpactEvaluator.cs": "87d8cf07f658d5e2685500b86b4954ee7fe32cec51354cb8d0df1fa9e30b29b2",
+    "src/DraftTG.RecommendationEngine/ColorCommitment.cs": "b2eb5ca0ca11ebf964864a3a3240435766a74e9fa9ef681b5d206033167de3a2",
+    "src/DraftTG.RecommendationEngine/ContextualPickScoreCalibration.cs": "d8c15148c9d45d315d1526a819707c3369fa336029ec2d3eb24900da900cb9e2",
+    "src/DraftTG.RecommendationEngine/ContextualPickScoreEngine.cs": "29f7fd091e558ddec471a353550bc25395aae95600142a5f9a48ecc116590164",
+    "src/DraftTG.RecommendationEngine/ContextualPickScoreModels.cs": "dcf586339e32ed51115cad33520f0f8fde23a7666b16ee86b450e77b87eb866f",
+    "src/DraftTG.RecommendationEngine/ContextualRecommendationEngine.cs": "7d1d4ee77028089edc61d68ded8c72e6b73bbd862c7660c8006cebc92b9277c4",
+    "src/DraftTG.RecommendationEngine/DeckBuildingModels.cs": "b90c324e58633ec73cb30d121f0ad3bb8ecd05713944a50780f8e0a6a665eee3",
+    "src/DraftTG.RecommendationEngine/DeckMana.cs": "e9824dcc1521a7af18b128f16d39633f2875e9de9f53dd653d5a9fa3a0af03e0",
+    "src/DraftTG.RecommendationEngine/DeckPlanSelector.cs": "42d669649f2b05b2dd2f8fd9393a008a3c86a3c43480326418e45b05b6102802",
+    "src/DraftTG.RecommendationEngine/DeckSpellOptimizer.cs": "00832d1d75ade8511fa867418e4d29374cb93e2e096c782b4f5bcbea097d6bb3",
+    "src/DraftTG.RecommendationEngine/DraftPackObservationHistory.cs": "54b0e243c756d85df61d3db2c6a39170a196ed81a7743c4d4f4b01c698d56340",
+    "src/DraftTG.RecommendationEngine/DraftPoolAnalyzer.cs": "8f910b3467567b9c3c3a76ea12b00f4937d2bfc33ce481cecb45986aeca6483c",
+    "src/DraftTG.RecommendationEngine/LaneContextualRecommendationEngine.cs": "bb8c676323c20350ed4902dffe26cb0797f7105f984929aa7d59f49e10476f21",
+    "src/DraftTG.RecommendationEngine/LaneDetectionConfiguration.cs": "3215e5c35a0e64e5876efce136b0f7f455b9f732783a82f9742a4de3ac52bd78",
+    "src/DraftTG.RecommendationEngine/LaneOpennessProfile.cs": "1da07f29ed543c1d000dd117ce3a5800d893548325012ac901f36621cbc53a3d",
+    "src/DraftTG.RecommendationEngine/LimitedCardRoles.cs": "634a32f84df627ce90a200d07254d9a881d0f0bfa0a6fd0b30964adbe0637cf8",
+    "src/DraftTG.RecommendationEngine/LimitedCardStatistics.cs": "7f62e37f381c5d769f1c517667186fde8943b3d99f7f9e72533cc09ea68c7e7f",
+    "src/DraftTG.RecommendationEngine/ProjectedColorCommitment.cs": "63ecceb20dd868b88126d3f7a7fabad52ce8895ce78c3eefc7bbde17dcf56ae7",
+    "src/DraftTG.RecommendationEngine/SparsePrimaryQualityPrior.cs": "dc67c73dba891a2c8a0ac4f184565efe0dc44f3067b7e52c44fccfe87a01aaf3",
+    "src/DraftTG.RecommendationEngine/StatisticalRecommendationEngine.cs": "a6616dcda49baa7ebd85efa27ae4904f6bc14d2a5be385d38a71da0748934fea",
+    "src/DraftTG.RecommendationEngine/SuggestedDeckBuilder.cs": "53eebc9f40437d98e8915712f22915eaceb82f02e80b8617aae7a35c5b0dfac1",
+    "src/DraftTG.RecommendationEngine/SuggestedDeckModels.cs": "8e42d11abbc50986f92ff5d16f8cc19335f5a0d18004cb0354ea3007a4df9965",
+    "src/DraftTG.RecommendationEngine/TrophyRecommendationEngine.cs": "9c5e9d65589a025223af587eeb770b3702a850ea23c5b33887aeb4012d718c9e"
+  },
+  "recordedAt": "2026-10-14T20:10:05.181592+00:00"
+}

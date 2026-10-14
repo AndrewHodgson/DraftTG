@@ -1,0 +1,9 @@
+{
+  "set": "DMU",
+  "evidenceBuilds": 2126,
+  "seconds": 0.4909514000173658,
+  "peakWorkingSetBytes": 67796992,
+  "exactModelReproduced": true,
+  "modelSha256": "d2f277c2876b4baa8d58ba370ff7441c87dd0b036a80302fa4af01fa03da06be",
+  "scope": "Single-set frozen-fit validation; original whole-study Python fit peak unavailable; no models or parameters overwritten"
+}

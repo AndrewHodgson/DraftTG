@@ -1,0 +1,11 @@
+{
+  "set": "DMU",
+  "family": "C",
+  "picks": 500,
+  "candidates": 3770,
+  "poolMeanMilliseconds": 0.15858319541439414,
+  "candidateAmortizedMilliseconds": 0.036930345277986255,
+  "pickMeanMilliseconds": 0.4370379988104105,
+  "pickP95Milliseconds": 0.6931247073225676,
+  "scope": "Measured frozen-model inference; candidate cost amortized over actual offered identities; no target labels or outcomes read"
+}

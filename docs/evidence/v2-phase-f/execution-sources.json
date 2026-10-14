@@ -1,0 +1,14 @@
+{
+  "files": {
+    "tools/DraftTG.HistoricalEvaluation/phase_f.py": "5a957f32735c3598613ac5d34c32c2d73897afcfb4f5a00538637f7e6f41922d",
+    "tools/DraftTG.HistoricalEvaluation/phase_f_core.py": "4dc508089d269811c68a939c4e83c239c0a2385ce6f5efc6f8933174037d14f4",
+    "tools/DraftTG.HistoricalEvaluation/phase_f_corrected.py": "5531df85acee731f16c3ac9d16ebc892a030bc3935db6176ca28f82adcb56e43",
+    "tools/DraftTG.HistoricalEvaluation/phase_f_model.py": "0204c8241792b0ff686850c93f4fce49904e5e5e1c1d80c4efae7d7b3144b066",
+    "tools/DraftTG.HistoricalEvaluation/phase_f_probes.py": "377d1d026d783d892c8e2b85c84e3bc54548f7b062f297c295abac9f834fdbf2",
+    "tools/DraftTG.HistoricalEvaluation/phase_f_publish.py": "aceedb81fc48758ee60eb0c59eda1e9a7482bba1a02680e5d230e7982ad27d2f",
+    "tools/DraftTG.HistoricalEvaluation/phase_f_register.py": "8baf47a851fae3cce4036131316d68097b578f52c5165c880a8878b50cc5a868",
+    "tools/DraftTG.HistoricalEvaluation/phase_f_report.py": "7029aad4053288dc31e11fdf6dee701cb827c88e8fffb17a5a4958e764380bac",
+    "tools/DraftTG.HistoricalEvaluation/phase_f_research.py": "62c9dfbe5a93c4aff30369b9c14ed46e0e33b510f425e2834fa417b86984514b",
+    "tools/DraftTG.HistoricalEvaluation/test_phase_f.py": "7838c47ace53200b16a1daba3c9170be7f0fee2b8a13c195a6f73e6e606cdefd"
+  }
+}

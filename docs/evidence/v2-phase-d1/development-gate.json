@@ -1,0 +1,15 @@
+{
+  "gates": {
+    "primary": false,
+    "perSet": false,
+    "coverage": false,
+    "uncertainty": false,
+    "cold": false,
+    "probes": false,
+    "goldens": true,
+    "contextualIntegrity": true
+  },
+  "passAll": false,
+  "qualifiedForFutureIntegration": false,
+  "productionChanged": false
+}

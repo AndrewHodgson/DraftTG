@@ -1,0 +1,1657 @@
+{
+  "Schema": "drafttg-rating-audit-v1",
+  "Set": "FRA",
+  "Format": "QuickDraft",
+  "Model": "contextual-pick-score-v1.6.2",
+  "TotalCards": 432,
+  "Unit": "Distinct non-token/non-rebalanced Arena GrpIds in exact set; includes basic lands and alternate art printings; not asserted booster collation.",
+  "Counts": {
+    "AlternateFormatPrior": 111,
+    "ExactPrimary": 281,
+    "NullGIH": 15,
+    "MissingStatRow": 25
+  },
+  "ExactPrimary": 281,
+  "SparsePrimary": 0,
+  "SparsePrimaryWithPrior": 0,
+  "AlternatePrior": 111,
+  "Neutral": 40,
+  "MissingIdentity": 0,
+  "AmbiguousIdentity": 0,
+  "MissingStatRow": 25,
+  "NullGIH": 126,
+  "MissingSampleCount": 0,
+  "PrimaryUsableCoveragePercent": 65.04629629629629,
+  "QualityEvidenceCoveragePercent": 90.74074074074075,
+  "PrimaryBaseline": 0.5681364169465147,
+  "PrimarySource": "Cache",
+  "FetchedAt": "2026-10-14T20:01:18.5299959+00:00",
+  "Diagnostic": null,
+  "AlternateSource": "Cache",
+  "AlternateBaseline": 0.561555046095775,
+  "InputHashes": {
+    "Catalog": "D44936533BB112D7F004ACF8939224B759E7BCBD450DB60F387B83B048539B52",
+    "Database": "1BE0105411AD989CA60E233F1341EAAA9276E3A679C89F1EF6F07E07EDE10D25",
+    "PrimaryCache": "27483A6C89CF721F6D11A9AF16D2CC310ECB9E841F80C77392C909C6357B263B"
+  },
+  "TopRisks": [
+    {
+      "Identifier": "f76c4d8e-3e1f-4264-99af-1b8adb9a06be",
+      "ArenaGrpId": 106251,
+      "Set": "fra",
+      "Collector": "26",
+      "Name": "Cruel Calculations",
+      "Rarity": "Rare",
+      "Colors": [
+        "Blue"
+      ],
+      "Coverage": "AlternateFormatPrior",
+      "Q": 0.2714465115264987,
+      "PrimaryGIH": null,
+      "PrimaryGames": 17,
+      "PrimaryBaseline": 0.5681364169465147,
+      "AdjustedValue": null,
+      "QProvenance": "AlternateFormatPrior",
+      "Fallback": true,
+      "FallbackFormat": "PremierDraft",
+      "AlternateGIH": 0.4931694,
+      "AlternateGames": 732,
+      "SparsePrior": {
+        "Evidence": {
+          "CardIdentifier": {
+            "Value": "f76c4d8e-3e1f-4264-99af-1b8adb9a06be"
+          },
+          "PrimaryContext": {
+            "Expansion": "FRA",
+            "Format": "QuickDraft"
+          },
+          "SourceContext": {
+            "Expansion": "FRA",
+            "Format": "PremierDraft"
+          },
+          "RawGameInHandWinRate": 0.4931694,
+          "GameInHandGameCount": 732,
+          "SourceEnvironmentBaseline": 0.561555046095775,
+          "ProviderName": "Cruel Calculations",
+          "FetchedAt": "2026-10-14T20:01:18.606464+00:00",
+          "Source": "Cache",
+          "TimePeriod": "ALL_TIME"
+        },
+        "PrimaryEnvironmentBaseline": 0.5681364169465147,
+        "ShrinkageGames": 500,
+        "SampleWeight": 0.5941558441558441,
+        "CrossFormatReliability": 0.9,
+        "EffectiveReliability": 0.5347402597402597,
+        "EffectiveQualityValue": 0.5315678587907545,
+        "Profile": "fra-quick-from-premier-v1",
+        "ShrinkageAmount": 0.4058441558441559
+      },
+      "NeutralFallback": false,
+      "IdentityMissing": false,
+      "IdentityAmbiguous": false,
+      "StatRowMissing": false,
+      "GihNull": true,
+      "SampleCountMissing": false,
+      "Risks": [
+        "NullGIH",
+        "SparseStats",
+        "AlternateFormatPrior"
+      ]
+    },
+    {
+      "Identifier": "c3192390-1518-49fc-8716-f2c7a0384f39",
+      "ArenaGrpId": 106413,
+      "Set": "fra",
+      "Collector": "168",
+      "Name": "Codie, Ravenous Codex",
+      "Rarity": "Rare",
+      "Colors": [],
+      "Coverage": "AlternateFormatPrior",
+      "Q": 0.1422266951330411,
+      "PrimaryGIH": null,
+      "PrimaryGames": 17,
+      "PrimaryBaseline": 0.5681364169465147,
+      "AdjustedValue": null,
+      "QProvenance": "AlternateFormatPrior",
+      "Fallback": true,
+      "FallbackFormat": "PremierDraft",
+      "AlternateGIH": 0.45838509,
+      "AlternateGames": 805,
+      "SparsePrior": {
+        "Evidence": {
+          "CardIdentifier": {
+            "Value": "c3192390-1518-49fc-8716-f2c7a0384f39"
+          },
+          "PrimaryContext": {
+            "Expansion": "FRA",
+            "Format": "QuickDraft"
+          },
+          "SourceContext": {
+            "Expansion": "FRA",
+            "Format": "PremierDraft"
+          },
+          "RawGameInHandWinRate": 0.45838509,
+          "GameInHandGameCount": 805,
+          "SourceEnvironmentBaseline": 0.561555046095775,
+          "ProviderName": "Codie, Ravenous Codex",
+          "FetchedAt": "2026-10-14T20:01:18.606464+00:00",
+          "Source": "Cache",
+          "TimePeriod": "ALL_TIME"
+        },
+        "PrimaryEnvironmentBaseline": 0.5681364169465147,
+        "ShrinkageGames": 500,
+        "SampleWeight": 0.6168582375478927,
+        "CrossFormatReliability": 0.9,
+        "EffectiveReliability": 0.5551724137931034,
+        "EffectiveQualityValue": 0.5108593033898948,
+        "Profile": "fra-quick-from-premier-v1",
+        "ShrinkageAmount": 0.3831417624521073
+      },
+      "NeutralFallback": false,
+      "IdentityMissing": false,
+      "IdentityAmbiguous": false,
+      "StatRowMissing": false,
+      "GihNull": true,
+      "SampleCountMissing": false,
+      "Risks": [
+        "NullGIH",
+        "SparseStats",
+        "AlternateFormatPrior"
+      ]
+    },
+    {
+      "Identifier": "8bdd99c6-d0f1-4922-ada8-0c4566860e15",
+      "ArenaGrpId": 107875,
+      "Set": "fra",
+      "Collector": "336",
+      "Name": "Cruel Calculations",
+      "Rarity": "Rare",
+      "Colors": [
+        "Blue"
+      ],
+      "Coverage": "AlternateFormatPrior",
+      "Q": 0.2714465115264987,
+      "PrimaryGIH": null,
+      "PrimaryGames": 17,
+      "PrimaryBaseline": 0.5681364169465147,
+      "AdjustedValue": null,
+      "QProvenance": "AlternateFormatPrior",
+      "Fallback": true,
+      "FallbackFormat": "PremierDraft",
+      "AlternateGIH": 0.4931694,
+      "AlternateGames": 732,
+      "SparsePrior": {
+        "Evidence": {
+          "CardIdentifier": {
+            "Value": "8bdd99c6-d0f1-4922-ada8-0c4566860e15"
+          },
+          "PrimaryContext": {
+            "Expansion": "FRA",
+            "Format": "QuickDraft"
+          },
+          "SourceContext": {
+            "Expansion": "FRA",
+            "Format": "PremierDraft"
+          },
+          "RawGameInHandWinRate": 0.4931694,
+          "GameInHandGameCount": 732,
+          "SourceEnvironmentBaseline": 0.561555046095775,
+          "ProviderName": "Cruel Calculations",
+          "FetchedAt": "2026-10-14T20:01:18.606464+00:00",
+          "Source": "Cache",
+          "TimePeriod": "ALL_TIME"
+        },
+        "PrimaryEnvironmentBaseline": 0.5681364169465147,
+        "ShrinkageGames": 500,
+        "SampleWeight": 0.5941558441558441,
+        "CrossFormatReliability": 0.9,
+        "EffectiveReliability": 0.5347402597402597,
+        "EffectiveQualityValue": 0.5315678587907545,
+        "Profile": "fra-quick-from-premier-v1",
+        "ShrinkageAmount": 0.4058441558441559
+      },
+      "NeutralFallback": false,
+      "IdentityMissing": false,
+      "IdentityAmbiguous": false,
+      "StatRowMissing": false,
+      "GihNull": true,
+      "SampleCountMissing": false,
+      "Risks": [
+        "NullGIH",
+        "SparseStats",
+        "AlternateFormatPrior"
+      ]
+    },
+    {
+      "Identifier": "19e9f3f3-2a6a-4787-8b8c-2e27ce38fb4c",
+      "ArenaGrpId": 107935,
+      "Set": "fra",
+      "Collector": "412",
+      "Name": "Codie, Ravenous Codex",
+      "Rarity": "Mythic",
+      "Colors": [],
+      "Coverage": "AlternateFormatPrior",
+      "Q": 0.1422266951330411,
+      "PrimaryGIH": null,
+      "PrimaryGames": 17,
+      "PrimaryBaseline": 0.5681364169465147,
+      "AdjustedValue": null,
+      "QProvenance": "AlternateFormatPrior",
+      "Fallback": true,
+      "FallbackFormat": "PremierDraft",
+      "AlternateGIH": 0.45838509,
+      "AlternateGames": 805,
+      "SparsePrior": {
+        "Evidence": {
+          "CardIdentifier": {
+            "Value": "19e9f3f3-2a6a-4787-8b8c-2e27ce38fb4c"
+          },
+          "PrimaryContext": {
+            "Expansion": "FRA",
+            "Format": "QuickDraft"
+          },
+          "SourceContext": {
+            "Expansion": "FRA",
+            "Format": "PremierDraft"
+          },
+          "RawGameInHandWinRate": 0.45838509,
+          "GameInHandGameCount": 805,
+          "SourceEnvironmentBaseline": 0.561555046095775,
+          "ProviderName": "Codie, Ravenous Codex",
+          "FetchedAt": "2026-10-14T20:01:18.606464+00:00",
+          "Source": "Cache",
+          "TimePeriod": "ALL_TIME"
+        },
+        "PrimaryEnvironmentBaseline": 0.5681364169465147,
+        "ShrinkageGames": 500,
+        "SampleWeight": 0.6168582375478927,
+        "CrossFormatReliability": 0.9,
+        "EffectiveReliability": 0.5551724137931034,
+        "EffectiveQualityValue": 0.5108593033898948,
+        "Profile": "fra-quick-from-premier-v1",
+        "ShrinkageAmount": 0.3831417624521073
+      },
+      "NeutralFallback": false,
+      "IdentityMissing": false,
+      "IdentityAmbiguous": false,
+      "StatRowMissing": false,
+      "GihNull": true,
+      "SampleCountMissing": false,
+      "Risks": [
+        "NullGIH",
+        "SparseStats",
+        "AlternateFormatPrior"
+      ]
+    },
+    {
+      "Identifier": "17fb6538-493c-41aa-ad13-3e63d3ad3317",
+      "ArenaGrpId": 106284,
+      "Set": "fra",
+      "Collector": "55",
+      "Name": "Extrapolate the Impossible",
+      "Rarity": "Rare",
+      "Colors": [
+        "Black"
+      ],
+      "Coverage": "AlternateFormatPrior",
+      "Q": 0.30082855749048687,
+      "PrimaryGIH": null,
+      "PrimaryGames": 20,
+      "PrimaryBaseline": 0.5681364169465147,
+      "AdjustedValue": null,
+      "QProvenance": "AlternateFormatPrior",
+      "Fallback": true,
+      "FallbackFormat": "PremierDraft",
+      "AlternateGIH": 0.49108911,
+      "AlternateGames": 505,
+      "SparsePrior": {
+        "Evidence": {
+          "CardIdentifier": {
+            "Value": "17fb6538-493c-41aa-ad13-3e63d3ad3317"
+          },
+          "PrimaryContext": {
+            "Expansion": "FRA",
+            "Format": "QuickDraft"
+          },
+          "SourceContext": {
+            "Expansion": "FRA",
+            "Format": "PremierDraft"
+          },
+          "RawGameInHandWinRate": 0.49108911,
+          "GameInHandGameCount": 505,
+          "SourceEnvironmentBaseline": 0.561555046095775,
+          "ProviderName": "Extrapolate the Impossible",
+          "FetchedAt": "2026-10-14T20:01:18.606464+00:00",
+          "Source": "Cache",
+          "TimePeriod": "ALL_TIME"
+        },
+        "PrimaryEnvironmentBaseline": 0.5681364169465147,
+        "ShrinkageGames": 500,
+        "SampleWeight": 0.5024875621890548,
+        "CrossFormatReliability": 0.9,
+        "EffectiveReliability": 0.4522388059701493,
+        "EffectiveQualityValue": 0.5362689861449926,
+        "Profile": "fra-quick-from-premier-v1",
+        "ShrinkageAmount": 0.49751243781094523
+      },
+      "NeutralFallback": false,
+      "IdentityMissing": false,
+      "IdentityAmbiguous": false,
+      "StatRowMissing": false,
+      "GihNull": true,
+      "SampleCountMissing": false,
+      "Risks": [
+        "NullGIH",
+        "SparseStats",
+        "AlternateFormatPrior"
+      ]
+    },
+    {
+      "Identifier": "a20f408a-87b2-4ee3-a1b1-520b38f54d9e",
+      "ArenaGrpId": 107903,
+      "Set": "fra",
+      "Collector": "364",
+      "Name": "Extrapolate the Impossible",
+      "Rarity": "Rare",
+      "Colors": [
+        "Black"
+      ],
+      "Coverage": "AlternateFormatPrior",
+      "Q": 0.30082855749048687,
+      "PrimaryGIH": null,
+      "PrimaryGames": 20,
+      "PrimaryBaseline": 0.5681364169465147,
+      "AdjustedValue": null,
+      "QProvenance": "AlternateFormatPrior",
+      "Fallback": true,
+      "FallbackFormat": "PremierDraft",
+      "AlternateGIH": 0.49108911,
+      "AlternateGames": 505,
+      "SparsePrior": {
+        "Evidence": {
+          "CardIdentifier": {
+            "Value": "a20f408a-87b2-4ee3-a1b1-520b38f54d9e"
+          },
+          "PrimaryContext": {
+            "Expansion": "FRA",
+            "Format": "QuickDraft"
+          },
+          "SourceContext": {
+            "Expansion": "FRA",
+            "Format": "PremierDraft"
+          },
+          "RawGameInHandWinRate": 0.49108911,
+          "GameInHandGameCount": 505,
+          "SourceEnvironmentBaseline": 0.561555046095775,
+          "ProviderName": "Extrapolate the Impossible",
+          "FetchedAt": "2026-10-14T20:01:18.606464+00:00",
+          "Source": "Cache",
+          "TimePeriod": "ALL_TIME"
+        },
+        "PrimaryEnvironmentBaseline": 0.5681364169465147,
+        "ShrinkageGames": 500,
+        "SampleWeight": 0.5024875621890548,
+        "CrossFormatReliability": 0.9,
+        "EffectiveReliability": 0.4522388059701493,
+        "EffectiveQualityValue": 0.5362689861449926,
+        "Profile": "fra-quick-from-premier-v1",
+        "ShrinkageAmount": 0.49751243781094523
+      },
+      "NeutralFallback": false,
+      "IdentityMissing": false,
+      "IdentityAmbiguous": false,
+      "StatRowMissing": false,
+      "GihNull": true,
+      "SampleCountMissing": false,
+      "Risks": [
+        "NullGIH",
+        "SparseStats",
+        "AlternateFormatPrior"
+      ]
+    },
+    {
+      "Identifier": "3abcae65-5b21-4c98-adad-34b8bc76ea3a",
+      "ArenaGrpId": 106517,
+      "Set": "fra",
+      "Collector": "272",
+      "Name": "Karn, Gilded Guardian",
+      "Rarity": "Rare",
+      "Colors": [
+        "White",
+        "Blue",
+        "Black",
+        "Red",
+        "Green"
+      ],
+      "Coverage": "AlternateFormatPrior",
+      "Q": 0.3330694128870086,
+      "PrimaryGIH": null,
+      "PrimaryGames": 27,
+      "PrimaryBaseline": 0.5681364169465147,
+      "AdjustedValue": null,
+      "QProvenance": "AlternateFormatPrior",
+      "Fallback": true,
+      "FallbackFormat": "PremierDraft",
+      "AlternateGIH": 0.51602564,
+      "AlternateGames": 936,
+      "SparsePrior": {
+        "Evidence": {
+          "CardIdentifier": {
+            "Value": "3abcae65-5b21-4c98-adad-34b8bc76ea3a"
+          },
+          "PrimaryContext": {
+            "Expansion": "FRA",
+            "Format": "QuickDraft"
+          },
+          "SourceContext": {
+            "Expansion": "FRA",
+            "Format": "PremierDraft"
+          },
+          "RawGameInHandWinRate": 0.51602564,
+          "GameInHandGameCount": 936,
+          "SourceEnvironmentBaseline": 0.561555046095775,
+          "ProviderName": "Karn, Gilded Guardian",
+          "FetchedAt": "2026-10-14T20:01:18.606464+00:00",
+          "Source": "Cache",
+          "TimePeriod": "ALL_TIME"
+        },
+        "PrimaryEnvironmentBaseline": 0.5681364169465147,
+        "ShrinkageGames": 500,
+        "SampleWeight": 0.6518105849582173,
+        "CrossFormatReliability": 0.9,
+        "EffectiveReliability": 0.5866295264623956,
+        "EffectiveQualityValue": 0.5414275230084361,
+        "Profile": "fra-quick-from-premier-v1",
+        "ShrinkageAmount": 0.3481894150417827
+      },
+      "NeutralFallback": false,
+      "IdentityMissing": false,
+      "IdentityAmbiguous": false,
+      "StatRowMissing": false,
+      "GihNull": true,
+      "SampleCountMissing": false,
+      "Risks": [
+        "NullGIH",
+        "SparseStats",
+        "AlternateFormatPrior"
+      ]
+    },
+    {
+      "Identifier": "3c3863a1-7c9f-4884-8915-84d088ce231c",
+      "ArenaGrpId": 107855,
+      "Set": "fra",
+      "Collector": "316",
+      "Name": "Karn, Gilded Guardian",
+      "Rarity": "Rare",
+      "Colors": [
+        "White",
+        "Blue",
+        "Black",
+        "Red",
+        "Green"
+      ],
+      "Coverage": "AlternateFormatPrior",
+      "Q": 0.3330694128870086,
+      "PrimaryGIH": null,
+      "PrimaryGames": 27,
+      "PrimaryBaseline": 0.5681364169465147,
+      "AdjustedValue": null,
+      "QProvenance": "AlternateFormatPrior",
+      "Fallback": true,
+      "FallbackFormat": "PremierDraft",
+      "AlternateGIH": 0.51602564,
+      "AlternateGames": 936,
+      "SparsePrior": {
+        "Evidence": {
+          "CardIdentifier": {
+            "Value": "3c3863a1-7c9f-4884-8915-84d088ce231c"
+          },
+          "PrimaryContext": {
+            "Expansion": "FRA",
+            "Format": "QuickDraft"
+          },
+          "SourceContext": {
+            "Expansion": "FRA",
+            "Format": "PremierDraft"
+          },
+          "RawGameInHandWinRate": 0.51602564,
+          "GameInHandGameCount": 936,
+          "SourceEnvironmentBaseline": 0.561555046095775,
+          "ProviderName": "Karn, Gilded Guardian",
+          "FetchedAt": "2026-10-14T20:01:18.606464+00:00",
+          "Source": "Cache",
+          "TimePeriod": "ALL_TIME"
+        },
+        "PrimaryEnvironmentBaseline": 0.5681364169465147,
+        "ShrinkageGames": 500,
+        "SampleWeight": 0.6518105849582173,
+        "CrossFormatReliability": 0.9,
+        "EffectiveReliability": 0.5866295264623956,
+        "EffectiveQualityValue": 0.5414275230084361,
+        "Profile": "fra-quick-from-premier-v1",
+        "ShrinkageAmount": 0.3481894150417827
+      },
+      "NeutralFallback": false,
+      "IdentityMissing": false,
+      "IdentityAmbiguous": false,
+      "StatRowMissing": false,
+      "GihNull": true,
+      "SampleCountMissing": false,
+      "Risks": [
+        "NullGIH",
+        "SparseStats",
+        "AlternateFormatPrior"
+      ]
+    },
+    {
+      "Identifier": "1b5d7d19-b32a-4786-ae9a-00da5e6658ad",
+      "ArenaGrpId": 106234,
+      "Set": "fra",
+      "Collector": "9",
+      "Name": "Germinate Recruits",
+      "Rarity": "Rare",
+      "Colors": [
+        "White"
+      ],
+      "Coverage": "AlternateFormatPrior",
+      "Q": 0.15466738535500718,
+      "PrimaryGIH": null,
+      "PrimaryGames": 45,
+      "PrimaryBaseline": 0.5681364169465147,
+      "AdjustedValue": null,
+      "QProvenance": "AlternateFormatPrior",
+      "Fallback": true,
+      "FallbackFormat": "PremierDraft",
+      "AlternateGIH": 0.47473074,
+      "AlternateGames": 1207,
+      "SparsePrior": {
+        "Evidence": {
+          "CardIdentifier": {
+            "Value": "1b5d7d19-b32a-4786-ae9a-00da5e6658ad"
+          },
+          "PrimaryContext": {
+            "Expansion": "FRA",
+            "Format": "QuickDraft"
+          },
+          "SourceContext": {
+            "Expansion": "FRA",
+            "Format": "PremierDraft"
+          },
+          "RawGameInHandWinRate": 0.47473074,
+          "GameInHandGameCount": 1207,
+          "SourceEnvironmentBaseline": 0.561555046095775,
+          "ProviderName": "Germinate Recruits",
+          "FetchedAt": "2026-10-14T20:01:18.606464+00:00",
+          "Source": "Cache",
+          "TimePeriod": "ALL_TIME"
+        },
+        "PrimaryEnvironmentBaseline": 0.5681364169465147,
+        "ShrinkageGames": 500,
+        "SampleWeight": 0.7070884592852958,
+        "CrossFormatReliability": 0.9,
+        "EffectiveReliability": 0.6363796133567663,
+        "EffectiveQualityValue": 0.5128831986033159,
+        "Profile": "fra-quick-from-premier-v1",
+        "ShrinkageAmount": 0.29291154071470415
+      },
+      "NeutralFallback": false,
+      "IdentityMissing": false,
+      "IdentityAmbiguous": false,
+      "StatRowMissing": false,
+      "GihNull": true,
+      "SampleCountMissing": false,
+      "Risks": [
+        "NullGIH",
+        "SparseStats",
+        "AlternateFormatPrior"
+      ]
+    },
+    {
+      "Identifier": "dcb1b131-fee7-455f-a6e7-b94471288ed7",
+      "ArenaGrpId": 107873,
+      "Set": "fra",
+      "Collector": "334",
+      "Name": "Germinate Recruits",
+      "Rarity": "Rare",
+      "Colors": [
+        "White"
+      ],
+      "Coverage": "AlternateFormatPrior",
+      "Q": 0.15466738535500718,
+      "PrimaryGIH": null,
+      "PrimaryGames": 45,
+      "PrimaryBaseline": 0.5681364169465147,
+      "AdjustedValue": null,
+      "QProvenance": "AlternateFormatPrior",
+      "Fallback": true,
+      "FallbackFormat": "PremierDraft",
+      "AlternateGIH": 0.47473074,
+      "AlternateGames": 1207,
+      "SparsePrior": {
+        "Evidence": {
+          "CardIdentifier": {
+            "Value": "dcb1b131-fee7-455f-a6e7-b94471288ed7"
+          },
+          "PrimaryContext": {
+            "Expansion": "FRA",
+            "Format": "QuickDraft"
+          },
+          "SourceContext": {
+            "Expansion": "FRA",
+            "Format": "PremierDraft"
+          },
+          "RawGameInHandWinRate": 0.47473074,
+          "GameInHandGameCount": 1207,
+          "SourceEnvironmentBaseline": 0.561555046095775,
+          "ProviderName": "Germinate Recruits",
+          "FetchedAt": "2026-10-14T20:01:18.606464+00:00",
+          "Source": "Cache",
+          "TimePeriod": "ALL_TIME"
+        },
+        "PrimaryEnvironmentBaseline": 0.5681364169465147,
+        "ShrinkageGames": 500,
+        "SampleWeight": 0.7070884592852958,
+        "CrossFormatReliability": 0.9,
+        "EffectiveReliability": 0.6363796133567663,
+        "EffectiveQualityValue": 0.5128831986033159,
+        "Profile": "fra-quick-from-premier-v1",
+        "ShrinkageAmount": 0.29291154071470415
+      },
+      "NeutralFallback": false,
+      "IdentityMissing": false,
+      "IdentityAmbiguous": false,
+      "StatRowMissing": false,
+      "GihNull": true,
+      "SampleCountMissing": false,
+      "Risks": [
+        "NullGIH",
+        "SparseStats",
+        "AlternateFormatPrior"
+      ]
+    },
+    {
+      "Identifier": "db61361b-bd12-453e-abc2-bbe09b66e3d9",
+      "ArenaGrpId": 106432,
+      "Set": "fra",
+      "Collector": "187",
+      "Name": "Roiling Canopy",
+      "Rarity": "Rare",
+      "Colors": [],
+      "Coverage": "AlternateFormatPrior",
+      "Q": 0.19153632577688678,
+      "PrimaryGIH": null,
+      "PrimaryGames": 51,
+      "PrimaryBaseline": 0.5681364169465147,
+      "AdjustedValue": null,
+      "QProvenance": "AlternateFormatPrior",
+      "Fallback": true,
+      "FallbackFormat": "PremierDraft",
+      "AlternateGIH": 0.49058824,
+      "AlternateGames": 1700,
+      "SparsePrior": {
+        "Evidence": {
+          "CardIdentifier": {
+            "Value": "db61361b-bd12-453e-abc2-bbe09b66e3d9"
+          },
+          "PrimaryContext": {
+            "Expansion": "FRA",
+            "Format": "QuickDraft"
+          },
+          "SourceContext": {
+            "Expansion": "FRA",
+            "Format": "PremierDraft"
+          },
+          "RawGameInHandWinRate": 0.49058824,
+          "GameInHandGameCount": 1700,
+          "SourceEnvironmentBaseline": 0.561555046095775,
+          "ProviderName": "Roiling Canopy",
+          "FetchedAt": "2026-10-14T20:01:18.606464+00:00",
+          "Source": "Cache",
+          "TimePeriod": "ALL_TIME"
+        },
+        "PrimaryEnvironmentBaseline": 0.5681364169465147,
+        "ShrinkageGames": 500,
+        "SampleWeight": 0.7727272727272727,
+        "CrossFormatReliability": 0.9,
+        "EffectiveReliability": 0.6954545454545454,
+        "EffectiveQualityValue": 0.5187822290708166,
+        "Profile": "fra-quick-from-premier-v1",
+        "ShrinkageAmount": 0.2272727272727273
+      },
+      "NeutralFallback": false,
+      "IdentityMissing": false,
+      "IdentityAmbiguous": false,
+      "StatRowMissing": false,
+      "GihNull": true,
+      "SampleCountMissing": false,
+      "Risks": [
+        "NullGIH",
+        "SparseStats",
+        "AlternateFormatPrior"
+      ]
+    },
+    {
+      "Identifier": "0e76872b-d271-4032-aca2-dde428712b3a",
+      "ArenaGrpId": 107919,
+      "Set": "fra",
+      "Collector": "380",
+      "Name": "Roiling Canopy",
+      "Rarity": "Rare",
+      "Colors": [],
+      "Coverage": "AlternateFormatPrior",
+      "Q": 0.19153632577688678,
+      "PrimaryGIH": null,
+      "PrimaryGames": 51,
+      "PrimaryBaseline": 0.5681364169465147,
+      "AdjustedValue": null,
+      "QProvenance": "AlternateFormatPrior",
+      "Fallback": true,
+      "FallbackFormat": "PremierDraft",
+      "AlternateGIH": 0.49058824,
+      "AlternateGames": 1700,
+      "SparsePrior": {
+        "Evidence": {
+          "CardIdentifier": {
+            "Value": "0e76872b-d271-4032-aca2-dde428712b3a"
+          },
+          "PrimaryContext": {
+            "Expansion": "FRA",
+            "Format": "QuickDraft"
+          },
+          "SourceContext": {
+            "Expansion": "FRA",
+            "Format": "PremierDraft"
+          },
+          "RawGameInHandWinRate": 0.49058824,
+          "GameInHandGameCount": 1700,
+          "SourceEnvironmentBaseline": 0.561555046095775,
+          "ProviderName": "Roiling Canopy",
+          "FetchedAt": "2026-10-14T20:01:18.606464+00:00",
+          "Source": "Cache",
+          "TimePeriod": "ALL_TIME"
+        },
+        "PrimaryEnvironmentBaseline": 0.5681364169465147,
+        "ShrinkageGames": 500,
+        "SampleWeight": 0.7727272727272727,
+        "CrossFormatReliability": 0.9,
+        "EffectiveReliability": 0.6954545454545454,
+        "EffectiveQualityValue": 0.5187822290708166,
+        "Profile": "fra-quick-from-premier-v1",
+        "ShrinkageAmount": 0.2272727272727273
+      },
+      "NeutralFallback": false,
+      "IdentityMissing": false,
+      "IdentityAmbiguous": false,
+      "StatRowMissing": false,
+      "GihNull": true,
+      "SampleCountMissing": false,
+      "Risks": [
+        "NullGIH",
+        "SparseStats",
+        "AlternateFormatPrior"
+      ]
+    },
+    {
+      "Identifier": "178e61e4-472f-42cd-9d3b-4880c2acc527",
+      "ArenaGrpId": 106430,
+      "Set": "fra",
+      "Collector": "185",
+      "Name": "Overgrown Farmland",
+      "Rarity": "Rare",
+      "Colors": [],
+      "Coverage": "AlternateFormatPrior",
+      "Q": 0.34057328266209147,
+      "PrimaryGIH": null,
+      "PrimaryGames": 60,
+      "PrimaryBaseline": 0.5681364169465147,
+      "AdjustedValue": null,
+      "QProvenance": "AlternateFormatPrior",
+      "Fallback": true,
+      "FallbackFormat": "PremierDraft",
+      "AlternateGIH": 0.53075052,
+      "AlternateGames": 5756,
+      "SparsePrior": {
+        "Evidence": {
+          "CardIdentifier": {
+            "Value": "178e61e4-472f-42cd-9d3b-4880c2acc527"
+          },
+          "PrimaryContext": {
+            "Expansion": "FRA",
+            "Format": "QuickDraft"
+          },
+          "SourceContext": {
+            "Expansion": "FRA",
+            "Format": "PremierDraft"
+          },
+          "RawGameInHandWinRate": 0.53075052,
+          "GameInHandGameCount": 5756,
+          "SourceEnvironmentBaseline": 0.561555046095775,
+          "ProviderName": "Overgrown Farmland",
+          "FetchedAt": "2026-10-14T20:01:18.606464+00:00",
+          "Source": "Cache",
+          "TimePeriod": "ALL_TIME"
+        },
+        "PrimaryEnvironmentBaseline": 0.5681364169465147,
+        "ShrinkageGames": 500,
+        "SampleWeight": 0.920076726342711,
+        "CrossFormatReliability": 0.9,
+        "EffectiveReliability": 0.8280690537084399,
+        "EffectiveQualityValue": 0.5426281421724494,
+        "Profile": "fra-quick-from-premier-v1",
+        "ShrinkageAmount": 0.07992327365728902
+      },
+      "NeutralFallback": false,
+      "IdentityMissing": false,
+      "IdentityAmbiguous": false,
+      "StatRowMissing": false,
+      "GihNull": true,
+      "SampleCountMissing": false,
+      "Risks": [
+        "NullGIH",
+        "SparseStats",
+        "AlternateFormatPrior"
+      ]
+    },
+    {
+      "Identifier": "1ebbbddb-2dc3-4194-b72b-13bcebe2ab89",
+      "ArenaGrpId": 106524,
+      "Set": "fra",
+      "Collector": "279",
+      "Name": "Karn, Argent Defender",
+      "Rarity": "Rare",
+      "Colors": [],
+      "Coverage": "AlternateFormatPrior",
+      "Q": 0.27053057709532186,
+      "PrimaryGIH": null,
+      "PrimaryGames": 60,
+      "PrimaryBaseline": 0.5681364169465147,
+      "AdjustedValue": null,
+      "QProvenance": "AlternateFormatPrior",
+      "Fallback": true,
+      "FallbackFormat": "PremierDraft",
+      "AlternateGIH": 0.49642005,
+      "AlternateGames": 838,
+      "SparsePrior": {
+        "Evidence": {
+          "CardIdentifier": {
+            "Value": "1ebbbddb-2dc3-4194-b72b-13bcebe2ab89"
+          },
+          "PrimaryContext": {
+            "Expansion": "FRA",
+            "Format": "QuickDraft"
+          },
+          "SourceContext": {
+            "Expansion": "FRA",
+            "Format": "PremierDraft"
+          },
+          "RawGameInHandWinRate": 0.49642005,
+          "GameInHandGameCount": 838,
+          "SourceEnvironmentBaseline": 0.561555046095775,
+          "ProviderName": "Karn, Argent Defender",
+          "FetchedAt": "2026-10-14T20:01:18.606464+00:00",
+          "Source": "Cache",
+          "TimePeriod": "ALL_TIME"
+        },
+        "PrimaryEnvironmentBaseline": 0.5681364169465147,
+        "ShrinkageGames": 500,
+        "SampleWeight": 0.6263079222720478,
+        "CrossFormatReliability": 0.9,
+        "EffectiveReliability": 0.563677130044843,
+        "EffectiveQualityValue": 0.5314213092817662,
+        "Profile": "fra-quick-from-premier-v1",
+        "ShrinkageAmount": 0.3736920777279522
+      },
+      "NeutralFallback": false,
+      "IdentityMissing": false,
+      "IdentityAmbiguous": false,
+      "StatRowMissing": false,
+      "GihNull": true,
+      "SampleCountMissing": false,
+      "Risks": [
+        "NullGIH",
+        "SparseStats",
+        "AlternateFormatPrior"
+      ]
+    },
+    {
+      "Identifier": "7deb091c-6fa8-44b5-a580-c0289112b6cb",
+      "ArenaGrpId": 107859,
+      "Set": "fra",
+      "Collector": "320",
+      "Name": "Karn, Argent Defender",
+      "Rarity": "Rare",
+      "Colors": [],
+      "Coverage": "AlternateFormatPrior",
+      "Q": 0.27053057709532186,
+      "PrimaryGIH": null,
+      "PrimaryGames": 60,
+      "PrimaryBaseline": 0.5681364169465147,
+      "AdjustedValue": null,
+      "QProvenance": "AlternateFormatPrior",
+      "Fallback": true,
+      "FallbackFormat": "PremierDraft",
+      "AlternateGIH": 0.49642005,
+      "AlternateGames": 838,
+      "SparsePrior": {
+        "Evidence": {
+          "CardIdentifier": {
+            "Value": "7deb091c-6fa8-44b5-a580-c0289112b6cb"
+          },
+          "PrimaryContext": {
+            "Expansion": "FRA",
+            "Format": "QuickDraft"
+          },
+          "SourceContext": {
+            "Expansion": "FRA",
+            "Format": "PremierDraft"
+          },
+          "RawGameInHandWinRate": 0.49642005,
+          "GameInHandGameCount": 838,
+          "SourceEnvironmentBaseline": 0.561555046095775,
+          "ProviderName": "Karn, Argent Defender",
+          "FetchedAt": "2026-10-14T20:01:18.606464+00:00",
+          "Source": "Cache",
+          "TimePeriod": "ALL_TIME"
+        },
+        "PrimaryEnvironmentBaseline": 0.5681364169465147,
+        "ShrinkageGames": 500,
+        "SampleWeight": 0.6263079222720478,
+        "CrossFormatReliability": 0.9,
+        "EffectiveReliability": 0.563677130044843,
+        "EffectiveQualityValue": 0.5314213092817662,
+        "Profile": "fra-quick-from-premier-v1",
+        "ShrinkageAmount": 0.3736920777279522
+      },
+      "NeutralFallback": false,
+      "IdentityMissing": false,
+      "IdentityAmbiguous": false,
+      "StatRowMissing": false,
+      "GihNull": true,
+      "SampleCountMissing": false,
+      "Risks": [
+        "NullGIH",
+        "SparseStats",
+        "AlternateFormatPrior"
+      ]
+    },
+    {
+      "Identifier": "047b4e1e-d9cb-4e6b-a1e4-bc5366ee0a23",
+      "ArenaGrpId": 107923,
+      "Set": "fra",
+      "Collector": "399",
+      "Name": "Overgrown Farmland",
+      "Rarity": "Rare",
+      "Colors": [],
+      "Coverage": "AlternateFormatPrior",
+      "Q": 0.34057328266209147,
+      "PrimaryGIH": null,
+      "PrimaryGames": 60,
+      "PrimaryBaseline": 0.5681364169465147,
+      "AdjustedValue": null,
+      "QProvenance": "AlternateFormatPrior",
+      "Fallback": true,
+      "FallbackFormat": "PremierDraft",
+      "AlternateGIH": 0.53075052,
+      "AlternateGames": 5756,
+      "SparsePrior": {
+        "Evidence": {
+          "CardIdentifier": {
+            "Value": "047b4e1e-d9cb-4e6b-a1e4-bc5366ee0a23"
+          },
+          "PrimaryContext": {
+            "Expansion": "FRA",
+            "Format": "QuickDraft"
+          },
+          "SourceContext": {
+            "Expansion": "FRA",
+            "Format": "PremierDraft"
+          },
+          "RawGameInHandWinRate": 0.53075052,
+          "GameInHandGameCount": 5756,
+          "SourceEnvironmentBaseline": 0.561555046095775,
+          "ProviderName": "Overgrown Farmland",
+          "FetchedAt": "2026-10-14T20:01:18.606464+00:00",
+          "Source": "Cache",
+          "TimePeriod": "ALL_TIME"
+        },
+        "PrimaryEnvironmentBaseline": 0.5681364169465147,
+        "ShrinkageGames": 500,
+        "SampleWeight": 0.920076726342711,
+        "CrossFormatReliability": 0.9,
+        "EffectiveReliability": 0.8280690537084399,
+        "EffectiveQualityValue": 0.5426281421724494,
+        "Profile": "fra-quick-from-premier-v1",
+        "ShrinkageAmount": 0.07992327365728902
+      },
+      "NeutralFallback": false,
+      "IdentityMissing": false,
+      "IdentityAmbiguous": false,
+      "StatRowMissing": false,
+      "GihNull": true,
+      "SampleCountMissing": false,
+      "Risks": [
+        "NullGIH",
+        "SparseStats",
+        "AlternateFormatPrior"
+      ]
+    },
+    {
+      "Identifier": "a4e4966b-8963-4fac-a8bf-e778e063c7dd",
+      "ArenaGrpId": 106425,
+      "Set": "fra",
+      "Collector": "180",
+      "Name": "Haunted Ridge",
+      "Rarity": "Rare",
+      "Colors": [],
+      "Coverage": "AlternateFormatPrior",
+      "Q": 0.43697126309495016,
+      "PrimaryGIH": null,
+      "PrimaryGames": 70,
+      "PrimaryBaseline": 0.5681364169465147,
+      "AdjustedValue": null,
+      "QProvenance": "AlternateFormatPrior",
+      "Fallback": true,
+      "FallbackFormat": "PremierDraft",
+      "AlternateGIH": 0.54947957,
+      "AlternateGames": 6437,
+      "SparsePrior": {
+        "Evidence": {
+          "CardIdentifier": {
+            "Value": "a4e4966b-8963-4fac-a8bf-e778e063c7dd"
+          },
+          "PrimaryContext": {
+            "Expansion": "FRA",
+            "Format": "QuickDraft"
+          },
+          "SourceContext": {
+            "Expansion": "FRA",
+            "Format": "PremierDraft"
+          },
+          "RawGameInHandWinRate": 0.54947957,
+          "GameInHandGameCount": 6437,
+          "SourceEnvironmentBaseline": 0.561555046095775,
+          "ProviderName": "Haunted Ridge",
+          "FetchedAt": "2026-10-14T20:01:18.606464+00:00",
+          "Source": "Cache",
+          "TimePeriod": "ALL_TIME"
+        },
+        "PrimaryEnvironmentBaseline": 0.5681364169465147,
+        "ShrinkageGames": 500,
+        "SampleWeight": 0.9279227331699582,
+        "CrossFormatReliability": 0.9,
+        "EffectiveReliability": 0.8351304598529624,
+        "EffectiveQualityValue": 0.5580518190417068,
+        "Profile": "fra-quick-from-premier-v1",
+        "ShrinkageAmount": 0.07207726683004179
+      },
+      "NeutralFallback": false,
+      "IdentityMissing": false,
+      "IdentityAmbiguous": false,
+      "StatRowMissing": false,
+      "GihNull": true,
+      "SampleCountMissing": false,
+      "Risks": [
+        "NullGIH",
+        "SparseStats",
+        "AlternateFormatPrior"
+      ]
+    },
+    {
+      "Identifier": "9c94c165-ce61-4c2b-8c08-7df71049a8d9",
+      "ArenaGrpId": 107922,
+      "Set": "fra",
+      "Collector": "398",
+      "Name": "Haunted Ridge",
+      "Rarity": "Rare",
+      "Colors": [],
+      "Coverage": "AlternateFormatPrior",
+      "Q": 0.43697126309495016,
+      "PrimaryGIH": null,
+      "PrimaryGames": 70,
+      "PrimaryBaseline": 0.5681364169465147,
+      "AdjustedValue": null,
+      "QProvenance": "AlternateFormatPrior",
+      "Fallback": true,
+      "FallbackFormat": "PremierDraft",
+      "AlternateGIH": 0.54947957,
+      "AlternateGames": 6437,
+      "SparsePrior": {
+        "Evidence": {
+          "CardIdentifier": {
+            "Value": "9c94c165-ce61-4c2b-8c08-7df71049a8d9"
+          },
+          "PrimaryContext": {
+            "Expansion": "FRA",
+            "Format": "QuickDraft"
+          },
+          "SourceContext": {
+            "Expansion": "FRA",
+            "Format": "PremierDraft"
+          },
+          "RawGameInHandWinRate": 0.54947957,
+          "GameInHandGameCount": 6437,
+          "SourceEnvironmentBaseline": 0.561555046095775,
+          "ProviderName": "Haunted Ridge",
+          "FetchedAt": "2026-10-14T20:01:18.606464+00:00",
+          "Source": "Cache",
+          "TimePeriod": "ALL_TIME"
+        },
+        "PrimaryEnvironmentBaseline": 0.5681364169465147,
+        "ShrinkageGames": 500,
+        "SampleWeight": 0.9279227331699582,
+        "CrossFormatReliability": 0.9,
+        "EffectiveReliability": 0.8351304598529624,
+        "EffectiveQualityValue": 0.5580518190417068,
+        "Profile": "fra-quick-from-premier-v1",
+        "ShrinkageAmount": 0.07207726683004179
+      },
+      "NeutralFallback": false,
+      "IdentityMissing": false,
+      "IdentityAmbiguous": false,
+      "StatRowMissing": false,
+      "GihNull": true,
+      "SampleCountMissing": false,
+      "Risks": [
+        "NullGIH",
+        "SparseStats",
+        "AlternateFormatPrior"
+      ]
+    },
+    {
+      "Identifier": "6b8789a6-3b63-4198-af5f-c2f2f49fafd9",
+      "ArenaGrpId": 106346,
+      "Set": "fra",
+      "Collector": "111",
+      "Name": "Puppet Crafting",
+      "Rarity": "Rare",
+      "Colors": [
+        "Green"
+      ],
+      "Coverage": "AlternateFormatPrior",
+      "Q": 0.2576797798068904,
+      "PrimaryGIH": null,
+      "PrimaryGames": 96,
+      "PrimaryBaseline": 0.5681364169465147,
+      "AdjustedValue": null,
+      "QProvenance": "AlternateFormatPrior",
+      "Fallback": true,
+      "FallbackFormat": "PremierDraft",
+      "AlternateGIH": 0.50828206,
+      "AlternateGames": 2113,
+      "SparsePrior": {
+        "Evidence": {
+          "CardIdentifier": {
+            "Value": "6b8789a6-3b63-4198-af5f-c2f2f49fafd9"
+          },
+          "PrimaryContext": {
+            "Expansion": "FRA",
+            "Format": "QuickDraft"
+          },
+          "SourceContext": {
+            "Expansion": "FRA",
+            "Format": "PremierDraft"
+          },
+          "RawGameInHandWinRate": 0.50828206,
+          "GameInHandGameCount": 2113,
+          "SourceEnvironmentBaseline": 0.561555046095775,
+          "ProviderName": "Puppet Crafting",
+          "FetchedAt": "2026-10-14T20:01:18.606464+00:00",
+          "Source": "Cache",
+          "TimePeriod": "ALL_TIME"
+        },
+        "PrimaryEnvironmentBaseline": 0.5681364169465147,
+        "ShrinkageGames": 500,
+        "SampleWeight": 0.8086490623804057,
+        "CrossFormatReliability": 0.9,
+        "EffectiveReliability": 0.7277841561423651,
+        "EffectiveQualityValue": 0.5293651817156172,
+        "Profile": "fra-quick-from-premier-v1",
+        "ShrinkageAmount": 0.19135093761959432
+      },
+      "NeutralFallback": false,
+      "IdentityMissing": false,
+      "IdentityAmbiguous": false,
+      "StatRowMissing": false,
+      "GihNull": true,
+      "SampleCountMissing": false,
+      "Risks": [
+        "NullGIH",
+        "SparseStats",
+        "AlternateFormatPrior"
+      ]
+    },
+    {
+      "Identifier": "15126d14-3737-4377-8476-e5f05a54fc77",
+      "ArenaGrpId": 107912,
+      "Set": "fra",
+      "Collector": "373",
+      "Name": "Puppet Crafting",
+      "Rarity": "Rare",
+      "Colors": [
+        "Green"
+      ],
+      "Coverage": "AlternateFormatPrior",
+      "Q": 0.2576797798068904,
+      "PrimaryGIH": null,
+      "PrimaryGames": 96,
+      "PrimaryBaseline": 0.5681364169465147,
+      "AdjustedValue": null,
+      "QProvenance": "AlternateFormatPrior",
+      "Fallback": true,
+      "FallbackFormat": "PremierDraft",
+      "AlternateGIH": 0.50828206,
+      "AlternateGames": 2113,
+      "SparsePrior": {
+        "Evidence": {
+          "CardIdentifier": {
+            "Value": "15126d14-3737-4377-8476-e5f05a54fc77"
+          },
+          "PrimaryContext": {
+            "Expansion": "FRA",
+            "Format": "QuickDraft"
+          },
+          "SourceContext": {
+            "Expansion": "FRA",
+            "Format": "PremierDraft"
+          },
+          "RawGameInHandWinRate": 0.50828206,
+          "GameInHandGameCount": 2113,
+          "SourceEnvironmentBaseline": 0.561555046095775,
+          "ProviderName": "Puppet Crafting",
+          "FetchedAt": "2026-10-14T20:01:18.606464+00:00",
+          "Source": "Cache",
+          "TimePeriod": "ALL_TIME"
+        },
+        "PrimaryEnvironmentBaseline": 0.5681364169465147,
+        "ShrinkageGames": 500,
+        "SampleWeight": 0.8086490623804057,
+        "CrossFormatReliability": 0.9,
+        "EffectiveReliability": 0.7277841561423651,
+        "EffectiveQualityValue": 0.5293651817156172,
+        "Profile": "fra-quick-from-premier-v1",
+        "ShrinkageAmount": 0.19135093761959432
+      },
+      "NeutralFallback": false,
+      "IdentityMissing": false,
+      "IdentityAmbiguous": false,
+      "StatRowMissing": false,
+      "GihNull": true,
+      "SampleCountMissing": false,
+      "Risks": [
+        "NullGIH",
+        "SparseStats",
+        "AlternateFormatPrior"
+      ]
+    },
+    {
+      "Identifier": "6d7d8fa7-ce69-4a8c-9af0-55571393a244",
+      "ArenaGrpId": 106465,
+      "Set": "fra",
+      "Collector": "220",
+      "Name": "Samut, Tyrant of Naktamun",
+      "Rarity": "Rare",
+      "Colors": [
+        "Blue"
+      ],
+      "Coverage": "AlternateFormatPrior",
+      "Q": 0.121552663823347,
+      "PrimaryGIH": null,
+      "PrimaryGames": 103,
+      "PrimaryBaseline": 0.5681364169465147,
+      "AdjustedValue": null,
+      "QProvenance": "AlternateFormatPrior",
+      "Fallback": true,
+      "FallbackFormat": "PremierDraft",
+      "AlternateGIH": 0.47806005,
+      "AlternateGames": 2165,
+      "SparsePrior": {
+        "Evidence": {
+          "CardIdentifier": {
+            "Value": "6d7d8fa7-ce69-4a8c-9af0-55571393a244"
+          },
+          "PrimaryContext": {
+            "Expansion": "FRA",
+            "Format": "QuickDraft"
+          },
+          "SourceContext": {
+            "Expansion": "FRA",
+            "Format": "PremierDraft"
+          },
+          "RawGameInHandWinRate": 0.47806005,
+          "GameInHandGameCount": 2165,
+          "SourceEnvironmentBaseline": 0.561555046095775,
+          "ProviderName": "Samut, Tyrant of Naktamun",
+          "FetchedAt": "2026-10-14T20:01:18.606464+00:00",
+          "Source": "Cache",
+          "TimePeriod": "ALL_TIME"
+        },
+        "PrimaryEnvironmentBaseline": 0.5681364169465147,
+        "ShrinkageGames": 500,
+        "SampleWeight": 0.8123827392120075,
+        "CrossFormatReliability": 0.9,
+        "EffectiveReliability": 0.7311444652908068,
+        "EffectiveQualityValue": 0.5070895126716113,
+        "Profile": "fra-quick-from-premier-v1",
+        "ShrinkageAmount": 0.18761726078799246
+      },
+      "NeutralFallback": false,
+      "IdentityMissing": false,
+      "IdentityAmbiguous": false,
+      "StatRowMissing": false,
+      "GihNull": true,
+      "SampleCountMissing": false,
+      "Risks": [
+        "NullGIH",
+        "SparseStats",
+        "AlternateFormatPrior"
+      ]
+    },
+    {
+      "Identifier": "7081f960-3476-4acd-8272-600c1e50b560",
+      "ArenaGrpId": 107841,
+      "Set": "fra",
+      "Collector": "302",
+      "Name": "Samut, Tyrant of Naktamun",
+      "Rarity": "Rare",
+      "Colors": [
+        "Blue"
+      ],
+      "Coverage": "AlternateFormatPrior",
+      "Q": 0.121552663823347,
+      "PrimaryGIH": null,
+      "PrimaryGames": 103,
+      "PrimaryBaseline": 0.5681364169465147,
+      "AdjustedValue": null,
+      "QProvenance": "AlternateFormatPrior",
+      "Fallback": true,
+      "FallbackFormat": "PremierDraft",
+      "AlternateGIH": 0.47806005,
+      "AlternateGames": 2165,
+      "SparsePrior": {
+        "Evidence": {
+          "CardIdentifier": {
+            "Value": "7081f960-3476-4acd-8272-600c1e50b560"
+          },
+          "PrimaryContext": {
+            "Expansion": "FRA",
+            "Format": "QuickDraft"
+          },
+          "SourceContext": {
+            "Expansion": "FRA",
+            "Format": "PremierDraft"
+          },
+          "RawGameInHandWinRate": 0.47806005,
+          "GameInHandGameCount": 2165,
+          "SourceEnvironmentBaseline": 0.561555046095775,
+          "ProviderName": "Samut, Tyrant of Naktamun",
+          "FetchedAt": "2026-10-14T20:01:18.606464+00:00",
+          "Source": "Cache",
+          "TimePeriod": "ALL_TIME"
+        },
+        "PrimaryEnvironmentBaseline": 0.5681364169465147,
+        "ShrinkageGames": 500,
+        "SampleWeight": 0.8123827392120075,
+        "CrossFormatReliability": 0.9,
+        "EffectiveReliability": 0.7311444652908068,
+        "EffectiveQualityValue": 0.5070895126716113,
+        "Profile": "fra-quick-from-premier-v1",
+        "ShrinkageAmount": 0.18761726078799246
+      },
+      "NeutralFallback": false,
+      "IdentityMissing": false,
+      "IdentityAmbiguous": false,
+      "StatRowMissing": false,
+      "GihNull": true,
+      "SampleCountMissing": false,
+      "Risks": [
+        "NullGIH",
+        "SparseStats",
+        "AlternateFormatPrior"
+      ]
+    },
+    {
+      "Identifier": "e3c8a8b6-23ba-45ad-80d1-8e2dc79897f7",
+      "ArenaGrpId": 106431,
+      "Set": "fra",
+      "Collector": "186",
+      "Name": "Rockfall Vale",
+      "Rarity": "Rare",
+      "Colors": [],
+      "Coverage": "AlternateFormatPrior",
+      "Q": 0.42691241920999695,
+      "PrimaryGIH": null,
+      "PrimaryGames": 119,
+      "PrimaryBaseline": 0.5681364169465147,
+      "AdjustedValue": null,
+      "QProvenance": "AlternateFormatPrior",
+      "Fallback": true,
+      "FallbackFormat": "PremierDraft",
+      "AlternateGIH": 0.5476459,
+      "AlternateGames": 7094,
+      "SparsePrior": {
+        "Evidence": {
+          "CardIdentifier": {
+            "Value": "e3c8a8b6-23ba-45ad-80d1-8e2dc79897f7"
+          },
+          "PrimaryContext": {
+            "Expansion": "FRA",
+            "Format": "QuickDraft"
+          },
+          "SourceContext": {
+            "Expansion": "FRA",
+            "Format": "PremierDraft"
+          },
+          "RawGameInHandWinRate": 0.5476459,
+          "GameInHandGameCount": 7094,
+          "SourceEnvironmentBaseline": 0.561555046095775,
+          "ProviderName": "Rockfall Vale",
+          "FetchedAt": "2026-10-14T20:01:18.606464+00:00",
+          "Source": "Cache",
+          "TimePeriod": "ALL_TIME"
+        },
+        "PrimaryEnvironmentBaseline": 0.5681364169465147,
+        "ShrinkageGames": 500,
+        "SampleWeight": 0.9341585462207006,
+        "CrossFormatReliability": 0.9,
+        "EffectiveReliability": 0.8407426915986306,
+        "EffectiveQualityValue": 0.5564424040201142,
+        "Profile": "fra-quick-from-premier-v1",
+        "ShrinkageAmount": 0.0658414537792994
+      },
+      "NeutralFallback": false,
+      "IdentityMissing": false,
+      "IdentityAmbiguous": false,
+      "StatRowMissing": false,
+      "GihNull": true,
+      "SampleCountMissing": false,
+      "Risks": [
+        "NullGIH",
+        "SparseStats",
+        "AlternateFormatPrior"
+      ]
+    },
+    {
+      "Identifier": "1017fda6-ed4f-4989-9f46-d61398aade55",
+      "ArenaGrpId": 107924,
+      "Set": "fra",
+      "Collector": "400",
+      "Name": "Rockfall Vale",
+      "Rarity": "Rare",
+      "Colors": [],
+      "Coverage": "AlternateFormatPrior",
+      "Q": 0.42691241920999695,
+      "PrimaryGIH": null,
+      "PrimaryGames": 119,
+      "PrimaryBaseline": 0.5681364169465147,
+      "AdjustedValue": null,
+      "QProvenance": "AlternateFormatPrior",
+      "Fallback": true,
+      "FallbackFormat": "PremierDraft",
+      "AlternateGIH": 0.5476459,
+      "AlternateGames": 7094,
+      "SparsePrior": {
+        "Evidence": {
+          "CardIdentifier": {
+            "Value": "1017fda6-ed4f-4989-9f46-d61398aade55"
+          },
+          "PrimaryContext": {
+            "Expansion": "FRA",
+            "Format": "QuickDraft"
+          },
+          "SourceContext": {
+            "Expansion": "FRA",
+            "Format": "PremierDraft"
+          },
+          "RawGameInHandWinRate": 0.5476459,
+          "GameInHandGameCount": 7094,
+          "SourceEnvironmentBaseline": 0.561555046095775,
+          "ProviderName": "Rockfall Vale",
+          "FetchedAt": "2026-10-14T20:01:18.606464+00:00",
+          "Source": "Cache",
+          "TimePeriod": "ALL_TIME"
+        },
+        "PrimaryEnvironmentBaseline": 0.5681364169465147,
+        "ShrinkageGames": 500,
+        "SampleWeight": 0.9341585462207006,
+        "CrossFormatReliability": 0.9,
+        "EffectiveReliability": 0.8407426915986306,
+        "EffectiveQualityValue": 0.5564424040201142,
+        "Profile": "fra-quick-from-premier-v1",
+        "ShrinkageAmount": 0.0658414537792994
+      },
+      "NeutralFallback": false,
+      "IdentityMissing": false,
+      "IdentityAmbiguous": false,
+      "StatRowMissing": false,
+      "GihNull": true,
+      "SampleCountMissing": false,
+      "Risks": [
+        "NullGIH",
+        "SparseStats",
+        "AlternateFormatPrior"
+      ]
+    },
+    {
+      "Identifier": "56dae4c4-3e71-4a32-979b-4e26d9c9e96c",
+      "ArenaGrpId": 106421,
+      "Set": "fra",
+      "Collector": "176",
+      "Name": "Deserted Beach",
+      "Rarity": "Rare",
+      "Colors": [],
+      "Coverage": "AlternateFormatPrior",
+      "Q": 0.47530837695228834,
+      "PrimaryGIH": null,
+      "PrimaryGames": 120,
+      "PrimaryBaseline": 0.5681364169465147,
+      "AdjustedValue": null,
+      "QProvenance": "AlternateFormatPrior",
+      "Fallback": true,
+      "FallbackFormat": "PremierDraft",
+      "AlternateGIH": 0.55686754,
+      "AlternateGames": 7368,
+      "SparsePrior": {
+        "Evidence": {
+          "CardIdentifier": {
+            "Value": "56dae4c4-3e71-4a32-979b-4e26d9c9e96c"
+          },
+          "PrimaryContext": {
+            "Expansion": "FRA",
+            "Format": "QuickDraft"
+          },
+          "SourceContext": {
+            "Expansion": "FRA",
+            "Format": "PremierDraft"
+          },
+          "RawGameInHandWinRate": 0.55686754,
+          "GameInHandGameCount": 7368,
+          "SourceEnvironmentBaseline": 0.561555046095775,
+          "ProviderName": "Deserted Beach",
+          "FetchedAt": "2026-10-14T20:01:18.606464+00:00",
+          "Source": "Cache",
+          "TimePeriod": "ALL_TIME"
+        },
+        "PrimaryEnvironmentBaseline": 0.5681364169465147,
+        "ShrinkageGames": 500,
+        "SampleWeight": 0.936451448906965,
+        "CrossFormatReliability": 0.9,
+        "EffectiveReliability": 0.8428063040162684,
+        "EffectiveQualityValue": 0.5641857572588809,
+        "Profile": "fra-quick-from-premier-v1",
+        "ShrinkageAmount": 0.06354855109303503
+      },
+      "NeutralFallback": false,
+      "IdentityMissing": false,
+      "IdentityAmbiguous": false,
+      "StatRowMissing": false,
+      "GihNull": true,
+      "SampleCountMissing": false,
+      "Risks": [
+        "NullGIH",
+        "SparseStats",
+        "AlternateFormatPrior"
+      ]
+    }
+  ],
+  "CurrentPack": {
+    "SemanticPackKey": "1D87F45C7DC2DE9ABF6463AB5D8FB0CAB73518F031A9F313DA535B2AD49661E6",
+    "Generation": 2,
+    "GeometryGeneration": 2,
+    "Set": "FRA",
+    "Format": "QuickDraft",
+    "Baseline": 0.5681364169465147,
+    "Source": "Live",
+    "Cards": [
+      {
+        "Index": 0,
+        "Name": "Hexhaven Dueling Arena",
+        "GrpId": 106426,
+        "Identifier": "9128ce00-6744-4d36-bfbe-ef75d78110b0",
+        "Q": 0.25635313540960825,
+        "GIH": 0.49666667,
+        "Games": 600,
+        "Provenance": "DirectPrimary",
+        "Prior": null,
+        "CoverageState": "ExactName",
+        "FinalCurrentScore": 0.2554033359500761,
+        "PackRank": 3
+      },
+      {
+        "Index": 1,
+        "Name": "Ferocity of the Hunt",
+        "GrpId": 106371,
+        "Identifier": "a9793ce9-5a0b-41fe-b9ad-02f6f7da2481",
+        "Q": 0.33049725054228135,
+        "GIH": 0.53809729,
+        "Games": 4646,
+        "Provenance": "DirectPrimary",
+        "Prior": null,
+        "CoverageState": "ExactName",
+        "FinalCurrentScore": 0.320403563568219,
+        "PackRank": 2
+      },
+      {
+        "Index": 2,
+        "Name": "Medic's Kitesail",
+        "GrpId": 106418,
+        "Identifier": "8b07409a-1dce-461d-95e4-1130521ff4c4",
+        "Q": 0.3556070398091314,
+        "GIH": 0.54055103,
+        "Games": 2577,
+        "Provenance": "DirectPrimary",
+        "Prior": null,
+        "CoverageState": "ExactName",
+        "FinalCurrentScore": 0.3772096624938763,
+        "PackRank": 1
+      }
+    ]
+  },
+  "Comparison": {
+    "Available": false,
+    "ComparedCards": 0,
+    "Spearman": null,
+    "Reason": "No legitimate user-visible reference supplied."
+  },
+  "NoNetworkAcquisition": true,
+  "ScoringChanged": false
+}

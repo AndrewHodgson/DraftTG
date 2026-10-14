@@ -1,0 +1,15 @@
+{
+  "files": {
+    "data/historical/normalized/phase-b1-v1/compatible-stats.json": "c97ae75ddb06a1aae6dad99bb756755dc9538c586d12bb92471d7f31cd1c9e9a",
+    "data/historical/normalized/phase-b1-v1/catalog.json": "c3582df3ba6da57aed275fb3de6d396433af1e3dd07c54805aa756c21207d2d3",
+    "V2_PHASE_B1_SPLIT_MANIFEST.json": "6856df32859cd1f81e035de4f4f3ae880e5b0dbebaeda08e78ae0f0e248e0ac0",
+    "data/historical/normalized/phase-c-v1/quality.json": "d32f8e28a3030f71cd7b3ab35092cd4406570180d8f90b429bcf7de4cd1628b3",
+    "data/historical/normalized/phase-b1-v1/bulk-replay.sqlite": "1cfa2f737f05db6d1090db73e0cbf4efa8e883399b67fae8000530bd27afce47",
+    "data/historical/normalized/phase-b1-v1/bonus.json": "7c0e7dfa089f50f27546e038af7dcf22c37db8b050f599ffb3c1a45049322c52"
+  },
+  "matchesPriorD1Replay": {
+    "Stats": true,
+    "Catalog": true,
+    "Split": true
+  }
+}

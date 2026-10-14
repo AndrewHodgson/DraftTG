@@ -17,15 +17,15 @@ internal static class ArenaMemoryWatchCommand
         using var lifetime = new CancellationTokenSource();
         ConsoleCancelEventHandler cancel = (_, e) => { e.Cancel = true; lifetime.Cancel(); };
         Console.CancelKeyPress += cancel;
-        using var watcher = new ArenaDraftMemoryWatcher();
         using var ledger = new CaptureFreeEvidenceLedger(options.Ledger, "Console");
+        MemoryCardNames names;
+        try { names = await MemoryCardNames.LoadAsync(lifetime.Token); }
+        catch (Exception ex) when (ex is not OperationCanceledException) { Console.WriteLine("Catalog unavailable: " + ex.Message); names = new(null, null); }
+        using var watcher = new ArenaDraftMemoryWatcher(printingReconciler:names.PrintingReconciler);
         watcher.PollObserved += ledger.Poll;
         try
         {
             Console.WriteLine("Capture-free memory watcher: ENABLED\nWGC: DISABLED\nGDI fallback: DISABLED\nLive evidence: " + options.Ledger);
-            MemoryCardNames names;
-            try { names = await MemoryCardNames.LoadAsync(lifetime.Token); }
-            catch (Exception ex) when (ex is not OperationCanceledException) { Console.WriteLine("Catalog unavailable: " + ex.Message); names = new(null, null); }
             await foreach (var update in watcher.WatchAsync(options.Seconds is { } seconds ? TimeSpan.FromSeconds(seconds) : null, lifetime.Token))
             {
                 var snapshot = update.CurrentPack ?? update.CurrentRead;

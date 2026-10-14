@@ -26,11 +26,12 @@ public sealed class ArenaDraftMemoryWatcher : IDisposable
     public long Generation => Interlocked.Read(ref generation);
     public TimeSpan PollInterval { get; }
     public event Action<ArenaDraftMemorySnapshot>? PollObserved;
-    public ArenaDraftMemoryWatcher(TimeSpan? interval = null, Func<ArenaDraftMemorySnapshot>? reader = null)
+    public ArenaDraftMemoryWatcher(TimeSpan? interval = null, Func<ArenaDraftMemorySnapshot>? reader = null,
+        Func<uint,uint,ArenaOfferedCardIdentity>? printingReconciler = null)
     {
         PollInterval = interval ?? TimeSpan.FromMilliseconds(100);
         if (PollInterval < TimeSpan.FromMilliseconds(50)) throw new ArgumentOutOfRangeException(nameof(interval));
-        if (reader is null) { var r = new ArenaDraftMemoryReader(); read = () => r.ReadCurrent(); owned = r; }
+        if (reader is null) { var r = new ArenaDraftMemoryReader(printingReconciler); read = () => r.ReadCurrent(); owned = r; }
         else read = reader;
     }
     public ArenaDraftMemoryUpdate? Observe(ArenaDraftMemorySnapshot snapshot)
@@ -77,7 +78,7 @@ public sealed class ArenaDraftMemoryWatcher : IDisposable
         lastEmission = emission;
         return new(Interlocked.Increment(ref generation), transition, snapshot, pack, LastStablePack, pack is null ? null : SemanticKey(pack));
     }
-    public static string StateKey(ArenaDraftMemorySnapshot s) => Hash($"{s.ProcessInstance}|{s.DraftSessionId}|{s.PackNumber}|{s.PickNumber}|{s.Identity}|{s.ViewMode}|{string.Join(',', s.OrderedOfferedGrpIds)}");
+    public static string StateKey(ArenaDraftMemorySnapshot s) => Hash($"{s.ProcessInstance}|{s.DraftSessionId}|{s.PackNumber}|{s.PickNumber}|{s.Identity}|{s.ViewMode}|{string.Join(',', s.OrderedOfferedGrpIds)}|{string.Join(',',s.PrintingIdentities.Select(i=>i.VisibleGrpId))}");
     public static string SemanticKey(ArenaDraftMemorySnapshot s) => Hash(s.PackNumber is not null && s.PickNumber is not null
         ? $"{s.DraftSessionId ?? s.CourseId ?? s.ProcessInstance + s.Identity?.Split("/list:")[0]}|{s.EventName}|{s.PackNumber}|{s.PickNumber}"
         : $"{s.ProcessInstance}|{s.DraftSessionId}|{s.Identity}|{string.Join(',', s.OrderedOfferedGrpIds)}");

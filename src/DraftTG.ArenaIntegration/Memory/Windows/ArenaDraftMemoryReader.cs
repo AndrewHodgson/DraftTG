@@ -3,7 +3,7 @@
 namespace DraftTG.ArenaIntegration.Memory.Windows;
 
 /// <summary>ReadOnce disposes; ReadCurrent caches process-lifetime metadata for a serial watcher.</summary>
-public sealed class ArenaDraftMemoryReader : IDisposable
+public sealed class ArenaDraftMemoryReader(Func<uint,uint,ArenaOfferedCardIdentity>? printingReconciler = null) : IDisposable
 {
     private ArenaProcessReader? process;
     private ArenaBuildFingerprint? build;
@@ -12,7 +12,7 @@ public sealed class ArenaDraftMemoryReader : IDisposable
     private bool disposed;
     public ArenaDraftMemorySnapshot ReadOnce(int? requestedProcessId = null)
     {
-        using var oneShot = new ArenaDraftMemoryReader();
+        using var oneShot = new ArenaDraftMemoryReader(printingReconciler);
         return oneShot.ReadCurrent(requestedProcessId);
     }
     public ArenaDraftMemorySnapshot ReadCurrent(int? requestedProcessId = null)
@@ -23,6 +23,8 @@ public sealed class ArenaDraftMemoryReader : IDisposable
         int? pid = requestedProcessId;
         var active = false;
         var firstAttach = false;
+        ArenaUiMemorySnapshot? ui = null;
+        Stopwatch? traversal = null;
         try
         {
             if (!OperatingSystem.IsWindows() || !Environment.Is64BitProcess)
@@ -50,21 +52,21 @@ public sealed class ArenaDraftMemoryReader : IDisposable
                     var runtime = new ArenaMonoRuntime(process, mono.BaseAddress);
                     runtime.Initialize(build);
                     var exe = ArenaProcessReader.Module(process.Modules, "MTGA.exe");
-                    graph = new(process, runtime, Path.Combine(Path.GetDirectoryName(exe.Path)!, "MTGA_Data", "Managed"));
+                    graph = new(process, runtime, Path.Combine(Path.GetDirectoryName(exe.Path)!, "MTGA_Data", "Managed"), ArenaProcessReader.Module(process.Modules,"UnityPlayer.dll").BaseAddress,printingReconciler);
                 }
             }
             if (process is null || build is null) { Reset(); return Result(ArenaMemoryStatus.TransientReadFailure, "Attachment incomplete."); }
             if (!ArenaMemoryCompatibility.IsSupported(build))
                 return Result(ArenaMemoryStatus.UnsupportedBuild, "Unknown fingerprint; no Mono/object traversal attempted.");
             if (!firstAttach) process.BeginSnapshot();
-            var traversal = Stopwatch.StartNew();
-            var snapshot = graph!.Read(() => active = true);
+            traversal = Stopwatch.StartNew();
+            var snapshot = graph!.Read(() => active = true, observed => ui = observed);
             return new(ArenaMemoryStatus.Success, "Complete pack; scene/list/occurrence/logical-count/pod checks passed.", pid,
-                build, ArenaMemoryCompatibility.ProfileId, timestamp, true, snapshot.ViewMode,
+                build, ArenaMemoryCompatibility.ProfileFor(build), timestamp, true, snapshot.ViewMode,
                 Array.AsReadOnly(snapshot.GrpIds), snapshot.Identity, started.Elapsed, process.BytesRead)
             { ProcessInstance = instance, DraftSessionId = snapshot.DraftId, EventName = snapshot.EventName, DraftKind = snapshot.DraftKind,
                 CourseId = snapshot.CourseId,
-                PackNumber = snapshot.Pack, PickNumber = snapshot.Pick, IsFirstAttach = firstAttach, TraversalDuration = traversal.Elapsed };
+                PackNumber = snapshot.Pack, PickNumber = snapshot.Pick, IsFirstAttach = firstAttach, TraversalDuration = traversal.Elapsed, Ui = snapshot.Ui, PrintingIdentities=snapshot.Printings };
         }
         catch (ArenaMemoryException ex)
         {
@@ -82,7 +84,7 @@ public sealed class ArenaDraftMemoryReader : IDisposable
         ArenaDraftMemorySnapshot Result(ArenaMemoryStatus status, string detail) =>
             new(status, detail, pid, build, graph is null ? null : ArenaMemoryCompatibility.ProfileId, timestamp, active,
                 null, Array.Empty<uint>(), null, started.Elapsed, process?.BytesRead ?? 0)
-            { ProcessInstance = instance, IsFirstAttach = firstAttach };
+            { ProcessInstance = instance, IsFirstAttach = firstAttach, Ui = ui, TraversalDuration = traversal?.Elapsed ?? TimeSpan.Zero };
     }
     private void Reset() { process?.Dispose(); process = null; build = null; graph = null; instance = null; }
     public void Dispose() { if (disposed) return; disposed = true; Reset(); }

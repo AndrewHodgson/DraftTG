@@ -1,0 +1,79 @@
+{
+  "version": "research-a-phase-d1-v1",
+  "best": "C",
+  "macroAvailableSets": {
+    "A": 0.35247833763458764,
+    "B": 0.35247833763458764,
+    "C": 0.45666666666666667
+  },
+  "baselineAvailableMRR": 0.45666666666666667,
+  "relativeAvailableGain": 0.0,
+  "improvedSets": 0,
+  "worstLoss": 0.0,
+  "coverage": {
+    "LCI": 4,
+    "MKM": 0,
+    "OTJ": 364,
+    "ONE": 4,
+    "MOM": 55
+  },
+  "primaryGates": {
+    "primary": false,
+    "perSet": false,
+    "coverage": false
+  },
+  "parameters": {
+    "factor": {
+      "method": "residual-nmf",
+      "rank": 2,
+      "perSetLogLoss": {
+        "DMU": 0.1383354800883171,
+        "BRO": 0.1089398570918301,
+        "WOE": 0.11600243846077588
+      },
+      "macroLogLoss": 0.12109259188030769
+    },
+    "poolWeights": {
+      "A": "sqrt-capped3",
+      "B": "sqrt-capped3",
+      "C": "sqrt-capped3"
+    },
+    "coldMapping": {
+      "x": [
+        50.0,
+        100.0,
+        250.0,
+        500.0,
+        1000.0,
+        2149.3333333333335
+      ],
+      "weights": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "inputs": {
+    "docs\\evidence\\v2-phase-d1\\baseline-freeze.json": "9a399468772e67d12c77d0a221087676602fd2b1656522ed731af4922ca3cfaf",
+    "docs\\evidence\\v2-phase-d1\\secondary-baseline-freeze.json": "a4dd38d67c4a92b176d2cd7e45ac18b7940fc4d32c663c1a99592542aa75403c",
+    "docs\\evidence\\v2-phase-d1\\model-fit.json": "a631ae0db699a45d3be18a064ba82072d83901c94296de989012b3d42742bd9a",
+    "docs\\evidence\\v2-phase-d1\\shell-utility.json": "a1b198afe4797a1937f9d19456da4382745bf8a8f0fcb9dd843fdae24890b620",
+    "docs\\evidence\\v2-phase-d1\\confidence-calibration.json": "573e1d170452c6b8fed1534b715cb02ed5a416a8217cf0a3aae8270e34472551",
+    "docs\\evidence\\v2-phase-d1\\completion.json": "79d070ba1e353ecf5e9f89f19fdc9f357424e6d8d6e5d6bc8d2f79c94aa2b8a3",
+    "data\\historical\\normalized\\phase-d1\\DMU.utility-model.json": "fe5ff30be637593bacd8a680b1b06ed4096385fc7826190f7127183e2778323c",
+    "data\\historical\\normalized\\phase-d1\\BRO.utility-model.json": "14e320b3658a5d77e4d28dcc4cb7ff16d184d569ce1ec88c8fdfc999d0e35204",
+    "data\\historical\\normalized\\phase-d1\\WOE.utility-model.json": "ac715e3deebe87b42902cdcd9a6023e2b5256491a0c66cae6d0d66d46bad4686",
+    "data\\historical\\normalized\\phase-d1\\LCI.utility-model.json": "5d51b24efac19b946d22e9db443b0bd9e649e33eb79ed613fb54e6f21ecac725",
+    "data\\historical\\normalized\\phase-d1\\MKM.utility-model.json": "63b02e10ebb98cf5915a5102ab8cb65e450cc17236a65caa3531c43297b26825",
+    "data\\historical\\normalized\\phase-d1\\OTJ.utility-model.json": "3d52bd240bd49ef2ac3a298532b3bf3e33d930c495a737a5703ee33ffd0f00e6",
+    "data\\historical\\normalized\\phase-d1\\ONE.utility-model.json": "63643376bae2b76648839a178ff4a7e446a95db6eb058165b841af9c36c9b309",
+    "data\\historical\\normalized\\phase-d1\\MOM.utility-model.json": "3aace494030d25612d33921f5c46b3a57bf471a4f3fd8763cf09d9c5f07a696a"
+  },
+  "noCompleteFiveSetClaim": true,
+  "holdoutsConsumed": false,
+  "productionChanged": false
+}

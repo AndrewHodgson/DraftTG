@@ -1,0 +1,96 @@
+{
+  "schema": "drafttg-phase9f3-implementation-v1",
+  "status": "Implemented diagnostics and shrinking-pack model; overall localization incomplete",
+  "implementedPackCounts": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+  ],
+  "supportedMode": "list",
+  "clientEnvelope": {
+    "heightPixels": [
+      720,
+      1080
+    ],
+    "aspectRatio": [
+      1.7,
+      1.78
+    ],
+    "windowed": true
+  },
+  "requiredLiveLayout": {
+    "Columns": 5,
+    "Rows": 0,
+    "Scale": 43,
+    "OffsetX": 196,
+    "OffsetY": -268
+  },
+  "physicallyValidated": {
+    "schema": "drafttg-physical-confirmation-v1",
+    "recordedAt": "2026-10-14T20:03:34.851909+00:00",
+    "source": "User reply in this conversation",
+    "statement": "All three aligned",
+    "pack": 1,
+    "pick": 12,
+    "cardCount": 3,
+    "clientWidth": 1600,
+    "clientHeight": 900,
+    "dpi": 96,
+    "profile": "arena-list-compact-index-1-14-v1",
+    "cards": [
+      "Hexhaven Dueling Arena",
+      "Ferocity of the Hunt",
+      "Medic?s Kitesail"
+    ],
+    "scope": "Offered outlines/labels only. Does not validate deck anchors, other sizes/counts/DPI, or unseen transitions.",
+    "ledger": "artifacts/phase9f3-overlay-recheck.jsonl"
+  },
+  "deck": {
+    "identityPath": "DraftContentController._activeDeckView._mainHolderInstance/_sideHolderInstance._tiles[i]._cardData._printing.Record.GrpId",
+    "quantityField": "<Quantity>k__BackingField",
+    "collectionOrderCaptured": true,
+    "visualOrderQualified": false,
+    "screenAnchorsQualified": false,
+    "viewportCullingQualified": false,
+    "normalizedScrollObserved": true,
+    "sideboardExpansionQualified": false,
+    "liveMainGroups": 8,
+    "liveMainQuantity": 9,
+    "liveSideGroups": 2,
+    "liveSideQuantity": 2,
+    "liveDuplicateGrpId": 106520,
+    "liveDuplicateQuantity": 2
+  },
+  "openingPackDecline": {
+    "logicalGrpId": 106530,
+    "visualGrpId": 11809,
+    "localNames": [
+      "Swamp",
+      "Swamp"
+    ],
+    "behavior": "Existing exact-ID multiset guard preserved; no partial pack placement"
+  },
+  "scoringChanged": false,
+  "productionAuthorityChanged": false,
+  "holdoutsConsumed": false,
+  "untappedReferenceCount": 0,
+  "remaining": [
+    "native deck viewport/client mapping",
+    "visible row order and active/culling",
+    "scroll pixel mapping",
+    "sideboard expansion",
+    "preferred printing contract review",
+    "physical size/count/DPI/transition matrix"
+  ]
+}

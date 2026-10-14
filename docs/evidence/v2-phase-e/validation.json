@@ -1,0 +1,20 @@
+{
+  "commit": "0048c80ff9bf433766b8874a4138e4bb87501d99",
+  "dirtyTree": true,
+  "CSharp": {
+    "total": 1298,
+    "passed": 1298,
+    "failed": 0,
+    "notExecuted": 0
+  },
+  "pythonTests": 8,
+  "golden": 40,
+  "goldenPassed": true,
+  "buildPassed": true,
+  "warnings": 0,
+  "errors": 0,
+  "preservedFiles": 650,
+  "productionChanged": false,
+  "sourceFingerprint": "8508859cbb51ff370a8f0a0e7b45ae4f0120d35680f466030fdbb65cc9c550b1",
+  "scoreAssemblySha256": "5004395fc67b8c2b859e0564cbc58add2d3d36b92daae309eca19a78cfcb2505"
+}

@@ -1,0 +1,20 @@
+{
+  "schema": "drafttg-physical-confirmation-v1",
+  "recordedAt": "2026-10-14T20:03:34.851909+00:00",
+  "source": "User reply in this conversation",
+  "statement": "All three aligned",
+  "pack": 1,
+  "pick": 12,
+  "cardCount": 3,
+  "clientWidth": 1600,
+  "clientHeight": 900,
+  "dpi": 96,
+  "profile": "arena-list-compact-index-1-14-v1",
+  "cards": [
+    "Hexhaven Dueling Arena",
+    "Ferocity of the Hunt",
+    "Medic?s Kitesail"
+  ],
+  "scope": "Offered outlines/labels only. Does not validate deck anchors, other sizes/counts/DPI, or unseen transitions.",
+  "ledger": "artifacts/phase9f3-overlay-recheck.jsonl"
+}

@@ -1,0 +1,7 @@
+{
+  "targetBaseline": "Unchanged Phase E per-identity actual late production D cache.",
+  "validationBaseline": "Actual frozen C# adapter called only for previously unavailable calibration-validation counterfactuals; outputs written only Phase F.",
+  "noHistoricalReplayRepeated": true,
+  "validationPools": 116,
+  "countCorrection": "Publication count derived from frozen validation jobs; no baseline scoring repeated"
+}

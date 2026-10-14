@@ -1,0 +1,25 @@
+{
+  "bins": {
+    "1-10": {
+      "n": 18450,
+      "observedCopyInclusion": 0.8555971093044263
+    },
+    "11-20": {
+      "n": 18450,
+      "observedCopyInclusion": 0.7034019873532068
+    },
+    "21-23": {
+      "n": 5535,
+      "observedCopyInclusion": 0.5987353206865402
+    },
+    "24-26": {
+      "n": 5535,
+      "observedCopyInclusion": 0.365742246311352
+    },
+    "27+": {
+      "n": 25852,
+      "observedCopyInclusion": 0.3421044148744133
+    }
+  },
+  "rankDefinition": "Actual production starter membership first, then frozen Q within membership group; ties are source-ID order. This is an audit ordering, not a claimed optimizer objective rank."
+}

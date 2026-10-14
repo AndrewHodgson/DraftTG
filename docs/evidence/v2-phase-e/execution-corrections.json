@@ -1,0 +1,9 @@
+{
+  "schemaCorrectionCommit": "0048c80",
+  "originalPlanPreserved": true,
+  "pairExport": "An early pair export preceded completion of all task files and produced only DMU/BRO inputs. Their actual baseline D rows were retained and reused by exact keys in the complete input run; no candidate fit or historical contextual replay was repeated.",
+  "diagnosticCorrection": "Original NO-Q included numeric qualityDelta; strict NO-Q added on calibration only, without changing selected E-C. Original model/selection retained.",
+  "QMapping": "Sol\u2019kanar versus Sol\u2019Kanar source case discrepancy: research resolver normalizes names, production statistics mapper uses exact ordinal names. Five offered occurrences in full replay receive neutral production Q; production source and output remain unchanged.",
+  "initialBuild": "New test initially called an internal helper; fixture corrected. Final clean build/test evidence supersedes initial compile failure.",
+  "noPostDevelopmentParameterChanges": true
+}

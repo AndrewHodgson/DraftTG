@@ -1,0 +1,14 @@
+{
+  "gates": {
+    "primary": false,
+    "perSet": true,
+    "coverage": true,
+    "confounds": true,
+    "coldStart": false,
+    "goldens": true
+  },
+  "developmentPass": false,
+  "qualifiedForFutureIntegration": false,
+  "reason": "Development gate failed; retain production A",
+  "productionChanged": false
+}

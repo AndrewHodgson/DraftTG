@@ -1,0 +1,3839 @@
+{
+  "selectionSha256": "5b9361b84975364f8e3e8a42995a5047ce71a3d936ccd0b8962672b1a7fb8294",
+  "cases": [
+    {
+      "family": "A",
+      "name": "fifth-five-drop/needed",
+      "result": {
+        "available": true,
+        "candidate": "fiveW",
+        "CandidateSelected": true,
+        "DisplacedCards": {},
+        "AddedCards": {
+          "fiveW": 1
+        },
+        "ReplacementValue": -0.09339592326437635,
+        "VirtualReplacement": 0.4901312339887548,
+        "VirtualSlotsBefore": 2,
+        "Castability": {
+          "supported": true,
+          "score": 0.7485571900459971,
+          "onCurve": 0.38737242935535154,
+          "byGrace": 0.5988457520367977,
+          "requirements": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "drawsByGrace": 13,
+          "interpretation": "Minimum marginal source tails, NOT exact joint cast-on-curve probability."
+        },
+        "AbsoluteEligibility": 0.7485571900459971,
+        "CastabilityDelta": 0.0,
+        "ManaConsistencyDelta": 0.0,
+        "CurveDelta": 0.0,
+        "CreatureDelta": -0.07333333333333332,
+        "EarlyPlayDelta": 0.0,
+        "RemovalDelta": 0.0,
+        "FixingDelta": 0,
+        "RoleDelta": 0.0,
+        "StructuralDelta": -0.07333333333333332,
+        "Final23Probability": 0.65,
+        "Confidence": 0.7640032116078863,
+        "RawMarginalValue": -0.09339592326437635,
+        "DValue": 0.23187113460200115,
+        "BeforePair": [
+          0,
+          1
+        ],
+        "AfterPair": [
+          0,
+          1
+        ],
+        "BeforeMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 8,
+            "1": 7
+          },
+          "sources": [
+            8,
+            7,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "AfterMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 8,
+            "1": 7
+          },
+          "sources": [
+            8,
+            7,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "BeforeMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fourU": 3,
+          "fourW": 3,
+          "midU": 6,
+          "midW": 7
+        },
+        "AfterMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveW": 1,
+          "fourU": 3,
+          "fourW": 3,
+          "midU": 6,
+          "midW": 7
+        },
+        "ColorPairChanged": false,
+        "LandCountChanged": false,
+        "UnknownNarrow": false,
+        "OptionalPositiveRoleBonusAllowed": true,
+        "provenance": "research-d-phase-f-v1/A"
+      }
+    },
+    {
+      "family": "A",
+      "name": "fifth-five-drop/fifth",
+      "result": {
+        "available": true,
+        "candidate": "fiveW",
+        "CandidateSelected": true,
+        "DisplacedCards": {},
+        "AddedCards": {
+          "fiveW": 1
+        },
+        "ReplacementValue": -0.09339592326437635,
+        "VirtualReplacement": 0.4901312339887548,
+        "VirtualSlotsBefore": 2,
+        "Castability": {
+          "supported": true,
+          "score": 0.7485571900459971,
+          "onCurve": 0.38737242935535154,
+          "byGrace": 0.5988457520367977,
+          "requirements": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "drawsByGrace": 13,
+          "interpretation": "Minimum marginal source tails, NOT exact joint cast-on-curve probability."
+        },
+        "AbsoluteEligibility": 0.7485571900459971,
+        "CastabilityDelta": 0.0,
+        "ManaConsistencyDelta": 0.0,
+        "CurveDelta": -0.03,
+        "CreatureDelta": -0.07333333333333332,
+        "EarlyPlayDelta": 0.0,
+        "RemovalDelta": 0.0,
+        "FixingDelta": 0,
+        "RoleDelta": 0.0,
+        "StructuralDelta": -0.10333333333333332,
+        "Final23Probability": 0.65,
+        "Confidence": 0.7460263150986562,
+        "RawMarginalValue": -0.09339592326437635,
+        "DValue": 0.23581360535293533,
+        "BeforePair": [
+          0,
+          1
+        ],
+        "AfterPair": [
+          0,
+          1
+        ],
+        "BeforeMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 8,
+            "1": 7
+          },
+          "sources": [
+            8,
+            7,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "AfterMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 8,
+            "1": 7
+          },
+          "sources": [
+            8,
+            7,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "BeforeMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fiveW": 2,
+          "fourU": 3,
+          "fourW": 3,
+          "midU": 4,
+          "midW": 5
+        },
+        "AfterMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fiveW": 3,
+          "fourU": 3,
+          "fourW": 3,
+          "midU": 4,
+          "midW": 5
+        },
+        "ColorPairChanged": false,
+        "LandCountChanged": false,
+        "UnknownNarrow": false,
+        "OptionalPositiveRoleBonusAllowed": true,
+        "provenance": "research-d-phase-f-v1/A"
+      }
+    },
+    {
+      "family": "A",
+      "name": "two-drop-hole/deficient",
+      "result": {
+        "available": true,
+        "candidate": "earlyW",
+        "CandidateSelected": true,
+        "DisplacedCards": {},
+        "AddedCards": {
+          "earlyW": 1
+        },
+        "ReplacementValue": 0.059868766011245245,
+        "VirtualReplacement": 0.4901312339887548,
+        "VirtualSlotsBefore": 2,
+        "Castability": {
+          "supported": true,
+          "score": 1,
+          "onCurve": 0.863229398833114,
+          "byGrace": 0.9238937783829425,
+          "requirements": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "drawsByGrace": 10,
+          "interpretation": "Minimum marginal source tails, NOT exact joint cast-on-curve probability."
+        },
+        "AbsoluteEligibility": 1,
+        "CastabilityDelta": 0.0,
+        "ManaConsistencyDelta": 0.0,
+        "CurveDelta": 0.0,
+        "CreatureDelta": -0.07333333333333332,
+        "EarlyPlayDelta": 0.07,
+        "RemovalDelta": 0.0,
+        "FixingDelta": 0,
+        "RoleDelta": 0.0,
+        "StructuralDelta": -0.003333333333333313,
+        "Final23Probability": 0.65,
+        "Confidence": 0.7504882570886986,
+        "RawMarginalValue": 0.059868766011245245,
+        "DValue": 0.6609392279045646,
+        "BeforePair": [
+          0,
+          1
+        ],
+        "AfterPair": [
+          0,
+          1
+        ],
+        "BeforeMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 7,
+            "1": 8
+          },
+          "sources": [
+            7,
+            8,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "AfterMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 8,
+            "1": 7
+          },
+          "sources": [
+            8,
+            7,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "BeforeMain": {
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 6,
+          "midW": 6
+        },
+        "AfterMain": {
+          "earlyW": 1,
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 6,
+          "midW": 6
+        },
+        "ColorPairChanged": false,
+        "LandCountChanged": false,
+        "UnknownNarrow": false,
+        "OptionalPositiveRoleBonusAllowed": true,
+        "provenance": "research-d-phase-f-v1/A"
+      }
+    },
+    {
+      "family": "A",
+      "name": "two-drop-hole/filled",
+      "result": {
+        "available": true,
+        "candidate": "earlyW",
+        "CandidateSelected": true,
+        "DisplacedCards": {},
+        "AddedCards": {
+          "earlyW": 1
+        },
+        "ReplacementValue": 0.059868766011245245,
+        "VirtualReplacement": 0.4901312339887548,
+        "VirtualSlotsBefore": 2,
+        "Castability": {
+          "supported": true,
+          "score": 1,
+          "onCurve": 0.863229398833114,
+          "byGrace": 0.9238937783829425,
+          "requirements": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "drawsByGrace": 10,
+          "interpretation": "Minimum marginal source tails, NOT exact joint cast-on-curve probability."
+        },
+        "AbsoluteEligibility": 1,
+        "CastabilityDelta": 0.0,
+        "ManaConsistencyDelta": 0.0,
+        "CurveDelta": 0.0,
+        "CreatureDelta": -0.07333333333333332,
+        "EarlyPlayDelta": 0.0,
+        "RemovalDelta": 0.0,
+        "FixingDelta": 0,
+        "RoleDelta": 0.0,
+        "StructuralDelta": -0.07333333333333332,
+        "Final23Probability": 0.65,
+        "Confidence": 0.7530762049039146,
+        "RawMarginalValue": 0.059868766011245245,
+        "DValue": 0.6614942030414893,
+        "BeforePair": [
+          0,
+          1
+        ],
+        "AfterPair": [
+          0,
+          1
+        ],
+        "BeforeMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 7,
+            "1": 8
+          },
+          "sources": [
+            7,
+            8,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "AfterMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 8,
+            "1": 7
+          },
+          "sources": [
+            8,
+            7,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "BeforeMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4
+        },
+        "AfterMain": {
+          "earlyU": 2,
+          "earlyW": 3,
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4
+        },
+        "ColorPairChanged": false,
+        "LandCountChanged": false,
+        "UnknownNarrow": false,
+        "OptionalPositiveRoleBonusAllowed": true,
+        "provenance": "research-d-phase-f-v1/A"
+      }
+    },
+    {
+      "family": "A",
+      "name": "fixing/need",
+      "result": {
+        "available": false,
+        "DValue": 0.5,
+        "reason": "Replacement-only family has no land benefit estimator; production D retained.",
+        "candidate": "dualWR"
+      }
+    },
+    {
+      "family": "A",
+      "name": "fixing/covered",
+      "result": {
+        "available": false,
+        "DValue": 0.5,
+        "reason": "Replacement-only family has no land benefit estimator; production D retained.",
+        "candidate": "dualWR"
+      }
+    },
+    {
+      "family": "A",
+      "name": "fixing/noNeed",
+      "result": {
+        "available": false,
+        "DValue": 0.5,
+        "reason": "Replacement-only family has no land benefit estimator; production D retained.",
+        "candidate": "dualWU"
+      }
+    },
+    {
+      "family": "A",
+      "name": "offcolor/noSources",
+      "result": {
+        "available": true,
+        "candidate": "bombR",
+        "CandidateSelected": false,
+        "DisplacedCards": {},
+        "AddedCards": {},
+        "ReplacementValue": 0.0,
+        "VirtualReplacement": 0.4901312339887548,
+        "VirtualSlotsBefore": 2,
+        "Castability": {
+          "supported": true,
+          "score": 0.0,
+          "onCurve": 0.0,
+          "byGrace": 0.0,
+          "requirements": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "drawsByGrace": 13,
+          "interpretation": "Minimum marginal source tails, NOT exact joint cast-on-curve probability."
+        },
+        "AbsoluteEligibility": 0.0,
+        "CastabilityDelta": 0.0,
+        "ManaConsistencyDelta": 0.0,
+        "CurveDelta": 0.0,
+        "CreatureDelta": 0.0,
+        "EarlyPlayDelta": 0.0,
+        "RemovalDelta": 0.0,
+        "FixingDelta": 0,
+        "RoleDelta": 0.0,
+        "StructuralDelta": 0.0,
+        "Final23Probability": 0.65,
+        "Confidence": 0.7530762049039146,
+        "RawMarginalValue": 0.0,
+        "DValue": 0.1,
+        "BeforePair": [
+          0,
+          1
+        ],
+        "AfterPair": [
+          0,
+          1
+        ],
+        "BeforeMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 7,
+            "1": 8
+          },
+          "sources": [
+            7,
+            8,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "AfterMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 7,
+            "1": 8
+          },
+          "sources": [
+            7,
+            8,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "BeforeMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4
+        },
+        "AfterMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4
+        },
+        "ColorPairChanged": false,
+        "LandCountChanged": false,
+        "UnknownNarrow": false,
+        "OptionalPositiveRoleBonusAllowed": true,
+        "provenance": "research-d-phase-f-v1/A"
+      }
+    },
+    {
+      "family": "A",
+      "name": "offcolor/supported",
+      "result": {
+        "available": true,
+        "candidate": "bombR",
+        "CandidateSelected": true,
+        "DisplacedCards": {},
+        "AddedCards": {
+          "bombR": 1
+        },
+        "ReplacementValue": 0.18357023705264264,
+        "VirtualReplacement": 0.4901312339887548,
+        "VirtualSlotsBefore": 2,
+        "Castability": {
+          "supported": true,
+          "score": 0.7485571900459971,
+          "onCurve": 0.38737242935535154,
+          "byGrace": 0.5988457520367977,
+          "requirements": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "drawsByGrace": 13,
+          "interpretation": "Minimum marginal source tails, NOT exact joint cast-on-curve probability."
+        },
+        "AbsoluteEligibility": 0.7485571900459971,
+        "CastabilityDelta": 0.0,
+        "ManaConsistencyDelta": 0.0,
+        "CurveDelta": -0.01,
+        "CreatureDelta": -0.07333333333333332,
+        "EarlyPlayDelta": 0.0,
+        "RemovalDelta": 0.0,
+        "FixingDelta": 0,
+        "RoleDelta": 0.0,
+        "StructuralDelta": -0.08333333333333331,
+        "Final23Probability": 0.65,
+        "Confidence": 0.7530762049039146,
+        "RawMarginalValue": 0.18357023705264264,
+        "DValue": 0.613722602182447,
+        "BeforePair": [
+          0,
+          1
+        ],
+        "AfterPair": [
+          0,
+          1
+        ],
+        "BeforeMana": {
+          "lands": 15,
+          "nonbasic": {
+            "dualUR": 2,
+            "dualWR": 2
+          },
+          "basics": {
+            "0": 5,
+            "1": 6
+          },
+          "sources": [
+            7,
+            8,
+            0,
+            4,
+            0,
+            0
+          ],
+          "effectiveFixing": 4,
+          "splash": null
+        },
+        "AfterMana": {
+          "lands": 15,
+          "nonbasic": {
+            "dualUR": 2,
+            "dualWR": 2
+          },
+          "basics": {
+            "0": 5,
+            "1": 5,
+            "3": 1
+          },
+          "sources": [
+            7,
+            7,
+            0,
+            5,
+            0,
+            0
+          ],
+          "effectiveFixing": 4,
+          "splash": 3
+        },
+        "BeforeMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4
+        },
+        "AfterMain": {
+          "bombR": 1,
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4
+        },
+        "ColorPairChanged": false,
+        "LandCountChanged": false,
+        "UnknownNarrow": false,
+        "OptionalPositiveRoleBonusAllowed": true,
+        "provenance": "research-d-phase-f-v1/A"
+      }
+    },
+    {
+      "family": "A",
+      "name": "offcolor/doublePip",
+      "result": {
+        "available": true,
+        "candidate": "doubleR",
+        "CandidateSelected": false,
+        "DisplacedCards": {},
+        "AddedCards": {},
+        "ReplacementValue": 0.0,
+        "VirtualReplacement": 0.4901312339887548,
+        "VirtualSlotsBefore": 2,
+        "Castability": {
+          "supported": true,
+          "score": 0.48986486486486486,
+          "onCurve": 0.3003063792537477,
+          "byGrace": 0.3918918918918919,
+          "requirements": [
+            0,
+            0,
+            0,
+            2,
+            0,
+            0
+          ],
+          "drawsByGrace": 13,
+          "interpretation": "Minimum marginal source tails, NOT exact joint cast-on-curve probability."
+        },
+        "AbsoluteEligibility": 0.0,
+        "CastabilityDelta": 0.0,
+        "ManaConsistencyDelta": 0.0,
+        "CurveDelta": 0.0,
+        "CreatureDelta": 0.0,
+        "EarlyPlayDelta": 0.0,
+        "RemovalDelta": 0.0,
+        "FixingDelta": 0,
+        "RoleDelta": 0.0,
+        "StructuralDelta": 0.0,
+        "Final23Probability": 0.65,
+        "Confidence": 0.7530762049039146,
+        "RawMarginalValue": 0.0,
+        "DValue": 0.1,
+        "BeforePair": [
+          0,
+          1
+        ],
+        "AfterPair": [
+          0,
+          1
+        ],
+        "BeforeMana": {
+          "lands": 15,
+          "nonbasic": {
+            "dualUR": 2,
+            "dualWR": 2
+          },
+          "basics": {
+            "0": 5,
+            "1": 6
+          },
+          "sources": [
+            7,
+            8,
+            0,
+            4,
+            0,
+            0
+          ],
+          "effectiveFixing": 4,
+          "splash": null
+        },
+        "AfterMana": {
+          "lands": 15,
+          "nonbasic": {
+            "dualUR": 2,
+            "dualWR": 2
+          },
+          "basics": {
+            "0": 5,
+            "1": 6
+          },
+          "sources": [
+            7,
+            8,
+            0,
+            4,
+            0,
+            0
+          ],
+          "effectiveFixing": 4,
+          "splash": null
+        },
+        "BeforeMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4
+        },
+        "AfterMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4
+        },
+        "ColorPairChanged": false,
+        "LandCountChanged": false,
+        "UnknownNarrow": false,
+        "OptionalPositiveRoleBonusAllowed": true,
+        "provenance": "research-d-phase-f-v1/A"
+      }
+    },
+    {
+      "family": "A",
+      "name": "cutline/modest",
+      "result": {
+        "available": true,
+        "candidate": "modest",
+        "CandidateSelected": true,
+        "DisplacedCards": {},
+        "AddedCards": {
+          "modest": 1
+        },
+        "ReplacementValue": 0.07986876601124515,
+        "VirtualReplacement": 0.4901312339887548,
+        "VirtualSlotsBefore": 2,
+        "Castability": {
+          "supported": true,
+          "score": 1,
+          "onCurve": 0.7486089030206677,
+          "byGrace": 0.8840725806451613,
+          "requirements": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "drawsByGrace": 11,
+          "interpretation": "Minimum marginal source tails, NOT exact joint cast-on-curve probability."
+        },
+        "AbsoluteEligibility": 1,
+        "CastabilityDelta": 0.0,
+        "ManaConsistencyDelta": 0.0,
+        "CurveDelta": 0.0,
+        "CreatureDelta": -0.07333333333333332,
+        "EarlyPlayDelta": 0.0,
+        "RemovalDelta": 0.0,
+        "FixingDelta": 0,
+        "RoleDelta": 0.0,
+        "StructuralDelta": -0.07333333333333332,
+        "Final23Probability": 0.65,
+        "Confidence": 0.7530762049039146,
+        "RawMarginalValue": 0.07986876601124515,
+        "DValue": 0.6998069198280709,
+        "BeforePair": [
+          0,
+          1
+        ],
+        "AfterPair": [
+          0,
+          1
+        ],
+        "BeforeMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 7,
+            "1": 8
+          },
+          "sources": [
+            7,
+            8,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "AfterMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 8,
+            "1": 7
+          },
+          "sources": [
+            8,
+            7,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "BeforeMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4
+        },
+        "AfterMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4,
+          "modest": 1
+        },
+        "ColorPairChanged": false,
+        "LandCountChanged": false,
+        "UnknownNarrow": false,
+        "OptionalPositiveRoleBonusAllowed": true,
+        "provenance": "research-d-phase-f-v1/A"
+      }
+    },
+    {
+      "family": "A",
+      "name": "cutline/huge",
+      "result": {
+        "available": true,
+        "candidate": "premium",
+        "CandidateSelected": true,
+        "DisplacedCards": {},
+        "AddedCards": {
+          "premium": 1
+        },
+        "ReplacementValue": 0.3649804918646771,
+        "VirtualReplacement": 0.48501950813532285,
+        "VirtualSlotsBefore": 11,
+        "Castability": {
+          "supported": true,
+          "score": 1,
+          "onCurve": 0.8445945945945946,
+          "byGrace": 0.9429280397022333,
+          "requirements": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "drawsByGrace": 11,
+          "interpretation": "Minimum marginal source tails, NOT exact joint cast-on-curve probability."
+        },
+        "AbsoluteEligibility": 1,
+        "CastabilityDelta": 0.0,
+        "ManaConsistencyDelta": 0.0,
+        "CurveDelta": 0.0,
+        "CreatureDelta": 0.008571428571428572,
+        "EarlyPlayDelta": 0.0,
+        "RemovalDelta": 0.0,
+        "FixingDelta": 0,
+        "RoleDelta": 0.0,
+        "StructuralDelta": 0.008571428571428572,
+        "Final23Probability": 0.65,
+        "Confidence": 0.2996260211019489,
+        "RawMarginalValue": 0.3649804918646771,
+        "DValue": 0.6196885274538099,
+        "BeforePair": [
+          0,
+          2
+        ],
+        "AfterPair": [
+          0,
+          2
+        ],
+        "BeforeMana": {
+          "lands": 17,
+          "nonbasic": {},
+          "basics": {
+            "0": 17
+          },
+          "sources": [
+            17,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "AfterMana": {
+          "lands": 17,
+          "nonbasic": {},
+          "basics": {
+            "0": 17
+          },
+          "sources": [
+            17,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "BeforeMain": {
+          "weakW": 12
+        },
+        "AfterMain": {
+          "premium": 1,
+          "weakW": 12
+        },
+        "ColorPairChanged": false,
+        "LandCountChanged": false,
+        "UnknownNarrow": false,
+        "OptionalPositiveRoleBonusAllowed": true,
+        "provenance": "research-d-phase-f-v1/A"
+      }
+    },
+    {
+      "family": "A",
+      "name": "cutline/nonstarter",
+      "result": {
+        "available": true,
+        "candidate": "weakW",
+        "CandidateSelected": true,
+        "DisplacedCards": {},
+        "AddedCards": {
+          "weakW": 1
+        },
+        "ReplacementValue": -0.09013123398875478,
+        "VirtualReplacement": 0.4901312339887548,
+        "VirtualSlotsBefore": 2,
+        "Castability": {
+          "supported": true,
+          "score": 1,
+          "onCurve": 0.7486089030206677,
+          "byGrace": 0.8840725806451613,
+          "requirements": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "drawsByGrace": 11,
+          "interpretation": "Minimum marginal source tails, NOT exact joint cast-on-curve probability."
+        },
+        "AbsoluteEligibility": 1,
+        "CastabilityDelta": 0.0,
+        "ManaConsistencyDelta": 0.0,
+        "CurveDelta": 0.0,
+        "CreatureDelta": -0.07333333333333332,
+        "EarlyPlayDelta": 0.0,
+        "RemovalDelta": 0.0,
+        "FixingDelta": 0,
+        "RoleDelta": 0.0,
+        "StructuralDelta": -0.07333333333333332,
+        "Final23Probability": 0.65,
+        "Confidence": 0.7530762049039146,
+        "RawMarginalValue": -0.09013123398875478,
+        "DValue": 0.2840369416129418,
+        "BeforePair": [
+          0,
+          1
+        ],
+        "AfterPair": [
+          0,
+          1
+        ],
+        "BeforeMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 7,
+            "1": 8
+          },
+          "sources": [
+            7,
+            8,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "AfterMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 8,
+            "1": 7
+          },
+          "sources": [
+            8,
+            7,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "BeforeMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4
+        },
+        "AfterMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4,
+          "weakW": 1
+        },
+        "ColorPairChanged": false,
+        "LandCountChanged": false,
+        "UnknownNarrow": false,
+        "OptionalPositiveRoleBonusAllowed": true,
+        "provenance": "research-d-phase-f-v1/A"
+      }
+    },
+    {
+      "family": "B",
+      "name": "fifth-five-drop/needed",
+      "result": {
+        "available": true,
+        "candidate": "fiveW",
+        "CandidateSelected": true,
+        "DisplacedCards": {},
+        "AddedCards": {
+          "fiveW": 1
+        },
+        "ReplacementValue": -0.09339592326437635,
+        "VirtualReplacement": 0.4901312339887548,
+        "VirtualSlotsBefore": 2,
+        "Castability": {
+          "supported": true,
+          "score": 0.7485571900459971,
+          "onCurve": 0.38737242935535154,
+          "byGrace": 0.5988457520367977,
+          "requirements": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "drawsByGrace": 13,
+          "interpretation": "Minimum marginal source tails, NOT exact joint cast-on-curve probability."
+        },
+        "AbsoluteEligibility": 0.7485571900459971,
+        "CastabilityDelta": 0.0,
+        "ManaConsistencyDelta": 0.0,
+        "CurveDelta": 0.0,
+        "CreatureDelta": -0.07333333333333332,
+        "EarlyPlayDelta": 0.0,
+        "RemovalDelta": 0.0,
+        "FixingDelta": 0,
+        "RoleDelta": 0.0,
+        "StructuralDelta": -0.07333333333333332,
+        "Final23Probability": 0.65,
+        "Confidence": 0.7640032116078863,
+        "RawMarginalValue": -0.16672925659770965,
+        "DValue": 0.1864031687734818,
+        "BeforePair": [
+          0,
+          1
+        ],
+        "AfterPair": [
+          0,
+          1
+        ],
+        "BeforeMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 8,
+            "1": 7
+          },
+          "sources": [
+            8,
+            7,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "AfterMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 8,
+            "1": 7
+          },
+          "sources": [
+            8,
+            7,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "BeforeMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fourU": 3,
+          "fourW": 3,
+          "midU": 6,
+          "midW": 7
+        },
+        "AfterMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveW": 1,
+          "fourU": 3,
+          "fourW": 3,
+          "midU": 6,
+          "midW": 7
+        },
+        "ColorPairChanged": false,
+        "LandCountChanged": false,
+        "UnknownNarrow": false,
+        "OptionalPositiveRoleBonusAllowed": true,
+        "provenance": "research-d-phase-f-v1/B"
+      }
+    },
+    {
+      "family": "B",
+      "name": "fifth-five-drop/fifth",
+      "result": {
+        "available": true,
+        "candidate": "fiveW",
+        "CandidateSelected": true,
+        "DisplacedCards": {},
+        "AddedCards": {
+          "fiveW": 1
+        },
+        "ReplacementValue": -0.09339592326437635,
+        "VirtualReplacement": 0.4901312339887548,
+        "VirtualSlotsBefore": 2,
+        "Castability": {
+          "supported": true,
+          "score": 0.7485571900459971,
+          "onCurve": 0.38737242935535154,
+          "byGrace": 0.5988457520367977,
+          "requirements": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "drawsByGrace": 13,
+          "interpretation": "Minimum marginal source tails, NOT exact joint cast-on-curve probability."
+        },
+        "AbsoluteEligibility": 0.7485571900459971,
+        "CastabilityDelta": 0.0,
+        "ManaConsistencyDelta": 0.0,
+        "CurveDelta": -0.03,
+        "CreatureDelta": -0.07333333333333332,
+        "EarlyPlayDelta": 0.0,
+        "RemovalDelta": 0.0,
+        "FixingDelta": 0,
+        "RoleDelta": 0.0,
+        "StructuralDelta": -0.10333333333333332,
+        "Final23Probability": 0.65,
+        "Confidence": 0.7460263150986562,
+        "RawMarginalValue": -0.19672925659770968,
+        "DValue": 0.18461374619097012,
+        "BeforePair": [
+          0,
+          1
+        ],
+        "AfterPair": [
+          0,
+          1
+        ],
+        "BeforeMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 8,
+            "1": 7
+          },
+          "sources": [
+            8,
+            7,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "AfterMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 8,
+            "1": 7
+          },
+          "sources": [
+            8,
+            7,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "BeforeMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fiveW": 2,
+          "fourU": 3,
+          "fourW": 3,
+          "midU": 4,
+          "midW": 5
+        },
+        "AfterMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fiveW": 3,
+          "fourU": 3,
+          "fourW": 3,
+          "midU": 4,
+          "midW": 5
+        },
+        "ColorPairChanged": false,
+        "LandCountChanged": false,
+        "UnknownNarrow": false,
+        "OptionalPositiveRoleBonusAllowed": true,
+        "provenance": "research-d-phase-f-v1/B"
+      }
+    },
+    {
+      "family": "B",
+      "name": "two-drop-hole/deficient",
+      "result": {
+        "available": true,
+        "candidate": "earlyW",
+        "CandidateSelected": true,
+        "DisplacedCards": {},
+        "AddedCards": {
+          "earlyW": 1
+        },
+        "ReplacementValue": 0.059868766011245245,
+        "VirtualReplacement": 0.4901312339887548,
+        "VirtualSlotsBefore": 2,
+        "Castability": {
+          "supported": true,
+          "score": 1,
+          "onCurve": 0.863229398833114,
+          "byGrace": 0.9238937783829425,
+          "requirements": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "drawsByGrace": 10,
+          "interpretation": "Minimum marginal source tails, NOT exact joint cast-on-curve probability."
+        },
+        "AbsoluteEligibility": 1,
+        "CastabilityDelta": 0.0,
+        "ManaConsistencyDelta": 0.0,
+        "CurveDelta": 0.0,
+        "CreatureDelta": -0.07333333333333332,
+        "EarlyPlayDelta": 0.07,
+        "RemovalDelta": 0.0,
+        "FixingDelta": 0,
+        "RoleDelta": 0.0,
+        "StructuralDelta": -0.003333333333333313,
+        "Final23Probability": 0.65,
+        "Confidence": 0.7504882570886986,
+        "RawMarginalValue": 0.05653543267791193,
+        "DValue": 0.6536817761310322,
+        "BeforePair": [
+          0,
+          1
+        ],
+        "AfterPair": [
+          0,
+          1
+        ],
+        "BeforeMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 7,
+            "1": 8
+          },
+          "sources": [
+            7,
+            8,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "AfterMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 8,
+            "1": 7
+          },
+          "sources": [
+            8,
+            7,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "BeforeMain": {
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 6,
+          "midW": 6
+        },
+        "AfterMain": {
+          "earlyW": 1,
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 6,
+          "midW": 6
+        },
+        "ColorPairChanged": false,
+        "LandCountChanged": false,
+        "UnknownNarrow": false,
+        "OptionalPositiveRoleBonusAllowed": true,
+        "provenance": "research-d-phase-f-v1/B"
+      }
+    },
+    {
+      "family": "B",
+      "name": "two-drop-hole/filled",
+      "result": {
+        "available": true,
+        "candidate": "earlyW",
+        "CandidateSelected": true,
+        "DisplacedCards": {},
+        "AddedCards": {
+          "earlyW": 1
+        },
+        "ReplacementValue": 0.059868766011245245,
+        "VirtualReplacement": 0.4901312339887548,
+        "VirtualSlotsBefore": 2,
+        "Castability": {
+          "supported": true,
+          "score": 1,
+          "onCurve": 0.863229398833114,
+          "byGrace": 0.9238937783829425,
+          "requirements": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "drawsByGrace": 10,
+          "interpretation": "Minimum marginal source tails, NOT exact joint cast-on-curve probability."
+        },
+        "AbsoluteEligibility": 1,
+        "CastabilityDelta": 0.0,
+        "ManaConsistencyDelta": 0.0,
+        "CurveDelta": 0.0,
+        "CreatureDelta": -0.07333333333333332,
+        "EarlyPlayDelta": 0.0,
+        "RemovalDelta": 0.0,
+        "FixingDelta": 0,
+        "RoleDelta": 0.0,
+        "StructuralDelta": -0.07333333333333332,
+        "Final23Probability": 0.65,
+        "Confidence": 0.7530762049039146,
+        "RawMarginalValue": -0.013464567322088075,
+        "DValue": 0.459683960972862,
+        "BeforePair": [
+          0,
+          1
+        ],
+        "AfterPair": [
+          0,
+          1
+        ],
+        "BeforeMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 7,
+            "1": 8
+          },
+          "sources": [
+            7,
+            8,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "AfterMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 8,
+            "1": 7
+          },
+          "sources": [
+            8,
+            7,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "BeforeMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4
+        },
+        "AfterMain": {
+          "earlyU": 2,
+          "earlyW": 3,
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4
+        },
+        "ColorPairChanged": false,
+        "LandCountChanged": false,
+        "UnknownNarrow": false,
+        "OptionalPositiveRoleBonusAllowed": true,
+        "provenance": "research-d-phase-f-v1/B"
+      }
+    },
+    {
+      "family": "B",
+      "name": "fixing/need",
+      "result": {
+        "available": false,
+        "DValue": 0.5,
+        "reason": "Replacement-only family has no land benefit estimator; production D retained.",
+        "candidate": "dualWR"
+      }
+    },
+    {
+      "family": "B",
+      "name": "fixing/covered",
+      "result": {
+        "available": false,
+        "DValue": 0.5,
+        "reason": "Replacement-only family has no land benefit estimator; production D retained.",
+        "candidate": "dualWR"
+      }
+    },
+    {
+      "family": "B",
+      "name": "fixing/noNeed",
+      "result": {
+        "available": false,
+        "DValue": 0.5,
+        "reason": "Replacement-only family has no land benefit estimator; production D retained.",
+        "candidate": "dualWU"
+      }
+    },
+    {
+      "family": "B",
+      "name": "offcolor/noSources",
+      "result": {
+        "available": true,
+        "candidate": "bombR",
+        "CandidateSelected": false,
+        "DisplacedCards": {},
+        "AddedCards": {},
+        "ReplacementValue": 0.0,
+        "VirtualReplacement": 0.4901312339887548,
+        "VirtualSlotsBefore": 2,
+        "Castability": {
+          "supported": true,
+          "score": 0.0,
+          "onCurve": 0.0,
+          "byGrace": 0.0,
+          "requirements": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "drawsByGrace": 13,
+          "interpretation": "Minimum marginal source tails, NOT exact joint cast-on-curve probability."
+        },
+        "AbsoluteEligibility": 0.0,
+        "CastabilityDelta": 0.0,
+        "ManaConsistencyDelta": 0.0,
+        "CurveDelta": 0.0,
+        "CreatureDelta": 0.0,
+        "EarlyPlayDelta": 0.0,
+        "RemovalDelta": 0.0,
+        "FixingDelta": 0,
+        "RoleDelta": 0.0,
+        "StructuralDelta": 0.0,
+        "Final23Probability": 0.65,
+        "Confidence": 0.7530762049039146,
+        "RawMarginalValue": 0.0,
+        "DValue": 0.1,
+        "BeforePair": [
+          0,
+          1
+        ],
+        "AfterPair": [
+          0,
+          1
+        ],
+        "BeforeMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 7,
+            "1": 8
+          },
+          "sources": [
+            7,
+            8,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "AfterMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 7,
+            "1": 8
+          },
+          "sources": [
+            7,
+            8,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "BeforeMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4
+        },
+        "AfterMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4
+        },
+        "ColorPairChanged": false,
+        "LandCountChanged": false,
+        "UnknownNarrow": false,
+        "OptionalPositiveRoleBonusAllowed": true,
+        "provenance": "research-d-phase-f-v1/B"
+      }
+    },
+    {
+      "family": "B",
+      "name": "offcolor/supported",
+      "result": {
+        "available": true,
+        "candidate": "bombR",
+        "CandidateSelected": true,
+        "DisplacedCards": {},
+        "AddedCards": {
+          "bombR": 1
+        },
+        "ReplacementValue": 0.18357023705264264,
+        "VirtualReplacement": 0.4901312339887548,
+        "VirtualSlotsBefore": 2,
+        "Castability": {
+          "supported": true,
+          "score": 0.7485571900459971,
+          "onCurve": 0.38737242935535154,
+          "byGrace": 0.5988457520367977,
+          "requirements": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "drawsByGrace": 13,
+          "interpretation": "Minimum marginal source tails, NOT exact joint cast-on-curve probability."
+        },
+        "AbsoluteEligibility": 0.7485571900459971,
+        "CastabilityDelta": 0.0,
+        "ManaConsistencyDelta": 0.0,
+        "CurveDelta": -0.01,
+        "CreatureDelta": -0.07333333333333332,
+        "EarlyPlayDelta": 0.0,
+        "RemovalDelta": 0.0,
+        "FixingDelta": 0,
+        "RoleDelta": 0.0,
+        "StructuralDelta": -0.08333333333333331,
+        "Final23Probability": 0.65,
+        "Confidence": 0.7530762049039146,
+        "RawMarginalValue": 0.10023690371930932,
+        "DValue": 0.5713773458690553,
+        "BeforePair": [
+          0,
+          1
+        ],
+        "AfterPair": [
+          0,
+          1
+        ],
+        "BeforeMana": {
+          "lands": 15,
+          "nonbasic": {
+            "dualUR": 2,
+            "dualWR": 2
+          },
+          "basics": {
+            "0": 5,
+            "1": 6
+          },
+          "sources": [
+            7,
+            8,
+            0,
+            4,
+            0,
+            0
+          ],
+          "effectiveFixing": 4,
+          "splash": null
+        },
+        "AfterMana": {
+          "lands": 15,
+          "nonbasic": {
+            "dualUR": 2,
+            "dualWR": 2
+          },
+          "basics": {
+            "0": 5,
+            "1": 5,
+            "3": 1
+          },
+          "sources": [
+            7,
+            7,
+            0,
+            5,
+            0,
+            0
+          ],
+          "effectiveFixing": 4,
+          "splash": 3
+        },
+        "BeforeMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4
+        },
+        "AfterMain": {
+          "bombR": 1,
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4
+        },
+        "ColorPairChanged": false,
+        "LandCountChanged": false,
+        "UnknownNarrow": false,
+        "OptionalPositiveRoleBonusAllowed": true,
+        "provenance": "research-d-phase-f-v1/B"
+      }
+    },
+    {
+      "family": "B",
+      "name": "offcolor/doublePip",
+      "result": {
+        "available": true,
+        "candidate": "doubleR",
+        "CandidateSelected": false,
+        "DisplacedCards": {},
+        "AddedCards": {},
+        "ReplacementValue": 0.0,
+        "VirtualReplacement": 0.4901312339887548,
+        "VirtualSlotsBefore": 2,
+        "Castability": {
+          "supported": true,
+          "score": 0.48986486486486486,
+          "onCurve": 0.3003063792537477,
+          "byGrace": 0.3918918918918919,
+          "requirements": [
+            0,
+            0,
+            0,
+            2,
+            0,
+            0
+          ],
+          "drawsByGrace": 13,
+          "interpretation": "Minimum marginal source tails, NOT exact joint cast-on-curve probability."
+        },
+        "AbsoluteEligibility": 0.0,
+        "CastabilityDelta": 0.0,
+        "ManaConsistencyDelta": 0.0,
+        "CurveDelta": 0.0,
+        "CreatureDelta": 0.0,
+        "EarlyPlayDelta": 0.0,
+        "RemovalDelta": 0.0,
+        "FixingDelta": 0,
+        "RoleDelta": 0.0,
+        "StructuralDelta": 0.0,
+        "Final23Probability": 0.65,
+        "Confidence": 0.7530762049039146,
+        "RawMarginalValue": 0.0,
+        "DValue": 0.1,
+        "BeforePair": [
+          0,
+          1
+        ],
+        "AfterPair": [
+          0,
+          1
+        ],
+        "BeforeMana": {
+          "lands": 15,
+          "nonbasic": {
+            "dualUR": 2,
+            "dualWR": 2
+          },
+          "basics": {
+            "0": 5,
+            "1": 6
+          },
+          "sources": [
+            7,
+            8,
+            0,
+            4,
+            0,
+            0
+          ],
+          "effectiveFixing": 4,
+          "splash": null
+        },
+        "AfterMana": {
+          "lands": 15,
+          "nonbasic": {
+            "dualUR": 2,
+            "dualWR": 2
+          },
+          "basics": {
+            "0": 5,
+            "1": 6
+          },
+          "sources": [
+            7,
+            8,
+            0,
+            4,
+            0,
+            0
+          ],
+          "effectiveFixing": 4,
+          "splash": null
+        },
+        "BeforeMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4
+        },
+        "AfterMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4
+        },
+        "ColorPairChanged": false,
+        "LandCountChanged": false,
+        "UnknownNarrow": false,
+        "OptionalPositiveRoleBonusAllowed": true,
+        "provenance": "research-d-phase-f-v1/B"
+      }
+    },
+    {
+      "family": "B",
+      "name": "cutline/modest",
+      "result": {
+        "available": true,
+        "candidate": "modest",
+        "CandidateSelected": true,
+        "DisplacedCards": {},
+        "AddedCards": {
+          "modest": 1
+        },
+        "ReplacementValue": 0.07986876601124515,
+        "VirtualReplacement": 0.4901312339887548,
+        "VirtualSlotsBefore": 2,
+        "Castability": {
+          "supported": true,
+          "score": 1,
+          "onCurve": 0.7486089030206677,
+          "byGrace": 0.8840725806451613,
+          "requirements": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "drawsByGrace": 11,
+          "interpretation": "Minimum marginal source tails, NOT exact joint cast-on-curve probability."
+        },
+        "AbsoluteEligibility": 1,
+        "CastabilityDelta": 0.0,
+        "ManaConsistencyDelta": 0.0,
+        "CurveDelta": 0.0,
+        "CreatureDelta": -0.07333333333333332,
+        "EarlyPlayDelta": 0.0,
+        "RemovalDelta": 0.0,
+        "FixingDelta": 0,
+        "RoleDelta": 0.0,
+        "StructuralDelta": -0.07333333333333332,
+        "Final23Probability": 0.65,
+        "Confidence": 0.7530762049039146,
+        "RawMarginalValue": 0.006535432677911832,
+        "DValue": 0.5196587346030795,
+        "BeforePair": [
+          0,
+          1
+        ],
+        "AfterPair": [
+          0,
+          1
+        ],
+        "BeforeMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 7,
+            "1": 8
+          },
+          "sources": [
+            7,
+            8,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "AfterMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 8,
+            "1": 7
+          },
+          "sources": [
+            8,
+            7,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "BeforeMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4
+        },
+        "AfterMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4,
+          "modest": 1
+        },
+        "ColorPairChanged": false,
+        "LandCountChanged": false,
+        "UnknownNarrow": false,
+        "OptionalPositiveRoleBonusAllowed": true,
+        "provenance": "research-d-phase-f-v1/B"
+      }
+    },
+    {
+      "family": "B",
+      "name": "cutline/huge",
+      "result": {
+        "available": true,
+        "candidate": "premium",
+        "CandidateSelected": true,
+        "DisplacedCards": {},
+        "AddedCards": {
+          "premium": 1
+        },
+        "ReplacementValue": 0.3649804918646771,
+        "VirtualReplacement": 0.48501950813532285,
+        "VirtualSlotsBefore": 11,
+        "Castability": {
+          "supported": true,
+          "score": 1,
+          "onCurve": 0.8445945945945946,
+          "byGrace": 0.9429280397022333,
+          "requirements": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "drawsByGrace": 11,
+          "interpretation": "Minimum marginal source tails, NOT exact joint cast-on-curve probability."
+        },
+        "AbsoluteEligibility": 1,
+        "CastabilityDelta": 0.0,
+        "ManaConsistencyDelta": 0.0,
+        "CurveDelta": 0.0,
+        "CreatureDelta": 0.008571428571428572,
+        "EarlyPlayDelta": 0.0,
+        "RemovalDelta": 0.0,
+        "FixingDelta": 0,
+        "RoleDelta": 0.0,
+        "StructuralDelta": 0.008571428571428572,
+        "Final23Probability": 0.65,
+        "Confidence": 0.2996260211019489,
+        "RawMarginalValue": 0.3735519204361057,
+        "DValue": 0.6197140156016675,
+        "BeforePair": [
+          0,
+          2
+        ],
+        "AfterPair": [
+          0,
+          2
+        ],
+        "BeforeMana": {
+          "lands": 17,
+          "nonbasic": {},
+          "basics": {
+            "0": 17
+          },
+          "sources": [
+            17,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "AfterMana": {
+          "lands": 17,
+          "nonbasic": {},
+          "basics": {
+            "0": 17
+          },
+          "sources": [
+            17,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "BeforeMain": {
+          "weakW": 12
+        },
+        "AfterMain": {
+          "premium": 1,
+          "weakW": 12
+        },
+        "ColorPairChanged": false,
+        "LandCountChanged": false,
+        "UnknownNarrow": false,
+        "OptionalPositiveRoleBonusAllowed": true,
+        "provenance": "research-d-phase-f-v1/B"
+      }
+    },
+    {
+      "family": "B",
+      "name": "cutline/nonstarter",
+      "result": {
+        "available": true,
+        "candidate": "weakW",
+        "CandidateSelected": true,
+        "DisplacedCards": {},
+        "AddedCards": {
+          "weakW": 1
+        },
+        "ReplacementValue": -0.09013123398875478,
+        "VirtualReplacement": 0.4901312339887548,
+        "VirtualSlotsBefore": 2,
+        "Castability": {
+          "supported": true,
+          "score": 1,
+          "onCurve": 0.7486089030206677,
+          "byGrace": 0.8840725806451613,
+          "requirements": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "drawsByGrace": 11,
+          "interpretation": "Minimum marginal source tails, NOT exact joint cast-on-curve probability."
+        },
+        "AbsoluteEligibility": 1,
+        "CastabilityDelta": 0.0,
+        "ManaConsistencyDelta": 0.0,
+        "CurveDelta": 0.0,
+        "CreatureDelta": -0.07333333333333332,
+        "EarlyPlayDelta": 0.0,
+        "RemovalDelta": 0.0,
+        "FixingDelta": 0,
+        "RoleDelta": 0.0,
+        "StructuralDelta": -0.07333333333333332,
+        "Final23Probability": 0.65,
+        "Confidence": 0.7530762049039146,
+        "RawMarginalValue": -0.16346456732208808,
+        "DValue": 0.22084358754305936,
+        "BeforePair": [
+          0,
+          1
+        ],
+        "AfterPair": [
+          0,
+          1
+        ],
+        "BeforeMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 7,
+            "1": 8
+          },
+          "sources": [
+            7,
+            8,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "AfterMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 8,
+            "1": 7
+          },
+          "sources": [
+            8,
+            7,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "BeforeMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4
+        },
+        "AfterMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4,
+          "weakW": 1
+        },
+        "ColorPairChanged": false,
+        "LandCountChanged": false,
+        "UnknownNarrow": false,
+        "OptionalPositiveRoleBonusAllowed": true,
+        "provenance": "research-d-phase-f-v1/B"
+      }
+    },
+    {
+      "family": "C",
+      "name": "fifth-five-drop/needed",
+      "result": {
+        "available": true,
+        "candidate": "fiveW",
+        "CandidateSelected": true,
+        "DisplacedCards": {},
+        "AddedCards": {
+          "fiveW": 1
+        },
+        "ReplacementValue": -0.09339592326437635,
+        "VirtualReplacement": 0.4901312339887548,
+        "VirtualSlotsBefore": 2,
+        "Castability": {
+          "supported": true,
+          "score": 0.7485571900459971,
+          "onCurve": 0.38737242935535154,
+          "byGrace": 0.5988457520367977,
+          "requirements": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "drawsByGrace": 13,
+          "interpretation": "Minimum marginal source tails, NOT exact joint cast-on-curve probability."
+        },
+        "AbsoluteEligibility": 0.7485571900459971,
+        "CastabilityDelta": 0.0,
+        "ManaConsistencyDelta": 0.0,
+        "CurveDelta": 0.0,
+        "CreatureDelta": -0.03666666666666666,
+        "EarlyPlayDelta": 0.0,
+        "RemovalDelta": 0.0,
+        "FixingDelta": 0,
+        "RoleDelta": 0.0,
+        "StructuralDelta": -0.03666666666666666,
+        "Final23Probability": 0.65,
+        "Confidence": 0.7244016474009755,
+        "RawMarginalValue": -0.130062589931043,
+        "DValue": 0.18489451593024286,
+        "BeforePair": [
+          0,
+          1
+        ],
+        "AfterPair": [
+          0,
+          1
+        ],
+        "BeforeMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 8,
+            "1": 7
+          },
+          "sources": [
+            8,
+            7,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "AfterMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 8,
+            "1": 7
+          },
+          "sources": [
+            8,
+            7,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "BeforeMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fourU": 3,
+          "fourW": 3,
+          "midU": 6,
+          "midW": 7
+        },
+        "AfterMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveW": 1,
+          "fourU": 3,
+          "fourW": 3,
+          "midU": 6,
+          "midW": 7
+        },
+        "ColorPairChanged": false,
+        "LandCountChanged": false,
+        "UnknownNarrow": false,
+        "OptionalPositiveRoleBonusAllowed": true,
+        "provenance": "research-d-phase-f-v1/C"
+      }
+    },
+    {
+      "family": "C",
+      "name": "fifth-five-drop/fifth",
+      "result": {
+        "available": true,
+        "candidate": "fiveW",
+        "CandidateSelected": true,
+        "DisplacedCards": {},
+        "AddedCards": {
+          "fiveW": 1
+        },
+        "ReplacementValue": -0.09339592326437635,
+        "VirtualReplacement": 0.4901312339887548,
+        "VirtualSlotsBefore": 2,
+        "Castability": {
+          "supported": true,
+          "score": 0.7485571900459971,
+          "onCurve": 0.38737242935535154,
+          "byGrace": 0.5988457520367977,
+          "requirements": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "drawsByGrace": 13,
+          "interpretation": "Minimum marginal source tails, NOT exact joint cast-on-curve probability."
+        },
+        "AbsoluteEligibility": 0.7485571900459971,
+        "CastabilityDelta": 0.0,
+        "ManaConsistencyDelta": 0.0,
+        "CurveDelta": -0.015,
+        "CreatureDelta": -0.03666666666666666,
+        "EarlyPlayDelta": 0.0,
+        "RemovalDelta": 0.0,
+        "FixingDelta": 0,
+        "RoleDelta": 0.0,
+        "StructuralDelta": -0.05166666666666666,
+        "Final23Probability": 0.65,
+        "Confidence": 0.7109106450266955,
+        "RawMarginalValue": -0.145062589931043,
+        "DValue": 0.18784178038828275,
+        "BeforePair": [
+          0,
+          1
+        ],
+        "AfterPair": [
+          0,
+          1
+        ],
+        "BeforeMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 8,
+            "1": 7
+          },
+          "sources": [
+            8,
+            7,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "AfterMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 8,
+            "1": 7
+          },
+          "sources": [
+            8,
+            7,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "BeforeMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fiveW": 2,
+          "fourU": 3,
+          "fourW": 3,
+          "midU": 4,
+          "midW": 5
+        },
+        "AfterMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fiveW": 3,
+          "fourU": 3,
+          "fourW": 3,
+          "midU": 4,
+          "midW": 5
+        },
+        "ColorPairChanged": false,
+        "LandCountChanged": false,
+        "UnknownNarrow": false,
+        "OptionalPositiveRoleBonusAllowed": true,
+        "provenance": "research-d-phase-f-v1/C"
+      }
+    },
+    {
+      "family": "C",
+      "name": "two-drop-hole/deficient",
+      "result": {
+        "available": true,
+        "candidate": "earlyW",
+        "CandidateSelected": true,
+        "DisplacedCards": {},
+        "AddedCards": {
+          "earlyW": 1
+        },
+        "ReplacementValue": 0.059868766011245245,
+        "VirtualReplacement": 0.4901312339887548,
+        "VirtualSlotsBefore": 2,
+        "Castability": {
+          "supported": true,
+          "score": 1,
+          "onCurve": 0.863229398833114,
+          "byGrace": 0.9238937783829425,
+          "requirements": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "drawsByGrace": 10,
+          "interpretation": "Minimum marginal source tails, NOT exact joint cast-on-curve probability."
+        },
+        "AbsoluteEligibility": 1,
+        "CastabilityDelta": 0.0,
+        "ManaConsistencyDelta": 0.0,
+        "CurveDelta": 0.0,
+        "CreatureDelta": -0.03666666666666666,
+        "EarlyPlayDelta": 0.035,
+        "RemovalDelta": 0.0,
+        "FixingDelta": 0,
+        "RoleDelta": 0.0,
+        "StructuralDelta": -0.0016666666666666566,
+        "Final23Probability": 0.65,
+        "Confidence": 0.7150509502678455,
+        "RawMarginalValue": 0.05820209934457859,
+        "DValue": 0.7352096531394657,
+        "BeforePair": [
+          0,
+          1
+        ],
+        "AfterPair": [
+          0,
+          1
+        ],
+        "BeforeMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 7,
+            "1": 8
+          },
+          "sources": [
+            7,
+            8,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "AfterMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 8,
+            "1": 7
+          },
+          "sources": [
+            8,
+            7,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "BeforeMain": {
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 6,
+          "midW": 6
+        },
+        "AfterMain": {
+          "earlyW": 1,
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 6,
+          "midW": 6
+        },
+        "ColorPairChanged": false,
+        "LandCountChanged": false,
+        "UnknownNarrow": false,
+        "OptionalPositiveRoleBonusAllowed": true,
+        "provenance": "research-d-phase-f-v1/C"
+      }
+    },
+    {
+      "family": "C",
+      "name": "two-drop-hole/filled",
+      "result": {
+        "available": true,
+        "candidate": "earlyW",
+        "CandidateSelected": true,
+        "DisplacedCards": {},
+        "AddedCards": {
+          "earlyW": 1
+        },
+        "ReplacementValue": 0.059868766011245245,
+        "VirtualReplacement": 0.4901312339887548,
+        "VirtualSlotsBefore": 2,
+        "Castability": {
+          "supported": true,
+          "score": 1,
+          "onCurve": 0.863229398833114,
+          "byGrace": 0.9238937783829425,
+          "requirements": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "drawsByGrace": 10,
+          "interpretation": "Minimum marginal source tails, NOT exact joint cast-on-curve probability."
+        },
+        "AbsoluteEligibility": 1,
+        "CastabilityDelta": 0.0,
+        "ManaConsistencyDelta": 0.0,
+        "CurveDelta": 0.0,
+        "CreatureDelta": -0.03666666666666666,
+        "EarlyPlayDelta": 0.0,
+        "RemovalDelta": 0.0,
+        "FixingDelta": 0,
+        "RoleDelta": 0.0,
+        "StructuralDelta": -0.03666666666666666,
+        "Final23Probability": 0.65,
+        "Confidence": 0.7160078741613408,
+        "RawMarginalValue": 0.023202099344578585,
+        "DValue": 0.624119337010702,
+        "BeforePair": [
+          0,
+          1
+        ],
+        "AfterPair": [
+          0,
+          1
+        ],
+        "BeforeMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 7,
+            "1": 8
+          },
+          "sources": [
+            7,
+            8,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "AfterMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 8,
+            "1": 7
+          },
+          "sources": [
+            8,
+            7,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "BeforeMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4
+        },
+        "AfterMain": {
+          "earlyU": 2,
+          "earlyW": 3,
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4
+        },
+        "ColorPairChanged": false,
+        "LandCountChanged": false,
+        "UnknownNarrow": false,
+        "OptionalPositiveRoleBonusAllowed": true,
+        "provenance": "research-d-phase-f-v1/C"
+      }
+    },
+    {
+      "family": "C",
+      "name": "fixing/need",
+      "result": {
+        "available": true,
+        "candidate": "dualWR",
+        "CandidateSelected": true,
+        "DisplacedCards": {},
+        "AddedCards": {},
+        "ReplacementValue": 0.0,
+        "VirtualReplacement": 0.4966715961748869,
+        "VirtualSlotsBefore": 0,
+        "Castability": {
+          "supported": true,
+          "score": 1.0,
+          "onCurve": null,
+          "byGrace": null,
+          "requirements": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "AbsoluteEligibility": 0.0,
+        "CastabilityDelta": 0.0,
+        "ManaConsistencyDelta": 0.0,
+        "CurveDelta": 0.0,
+        "CreatureDelta": 0.0,
+        "EarlyPlayDelta": 0.0,
+        "RemovalDelta": 0.0,
+        "FixingDelta": 0.0,
+        "RoleDelta": 0.0,
+        "StructuralDelta": 0.0,
+        "Final23Probability": 0.65,
+        "Confidence": 0.7571794072718638,
+        "RawMarginalValue": 0.0,
+        "DValue": 0.1,
+        "BeforePair": [
+          0,
+          1
+        ],
+        "AfterPair": [
+          0,
+          1
+        ],
+        "BeforeMana": {
+          "lands": 16,
+          "nonbasic": {
+            "dualUR": 1,
+            "dualWR": 1
+          },
+          "basics": {
+            "0": 6,
+            "1": 7,
+            "3": 1
+          },
+          "sources": [
+            7,
+            8,
+            0,
+            3,
+            0,
+            0
+          ],
+          "effectiveFixing": 2,
+          "splash": 3
+        },
+        "AfterMana": {
+          "lands": 16,
+          "nonbasic": {
+            "dualUR": 1,
+            "dualWR": 2
+          },
+          "basics": {
+            "0": 6,
+            "1": 6,
+            "3": 1
+          },
+          "sources": [
+            8,
+            7,
+            0,
+            4,
+            0,
+            0
+          ],
+          "effectiveFixing": 3,
+          "splash": 3
+        },
+        "BeforeMain": {
+          "bombR": 2,
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4
+        },
+        "AfterMain": {
+          "bombR": 2,
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4
+        },
+        "ColorPairChanged": false,
+        "LandCountChanged": false,
+        "UnknownNarrow": false,
+        "OptionalPositiveRoleBonusAllowed": false,
+        "provenance": "research-d-phase-f-v1/C"
+      }
+    },
+    {
+      "family": "C",
+      "name": "fixing/covered",
+      "result": {
+        "available": true,
+        "candidate": "dualWR",
+        "CandidateSelected": false,
+        "DisplacedCards": {},
+        "AddedCards": {},
+        "ReplacementValue": 0.0,
+        "VirtualReplacement": 0.4966715961748869,
+        "VirtualSlotsBefore": 0,
+        "Castability": {
+          "supported": true,
+          "score": 1.0,
+          "onCurve": null,
+          "byGrace": null,
+          "requirements": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "AbsoluteEligibility": 0.0,
+        "CastabilityDelta": 0.0,
+        "ManaConsistencyDelta": 0.0,
+        "CurveDelta": 0.0,
+        "CreatureDelta": 0.0,
+        "EarlyPlayDelta": 0.0,
+        "RemovalDelta": 0.0,
+        "FixingDelta": 0.0,
+        "RoleDelta": 0.0,
+        "StructuralDelta": 0.0,
+        "Final23Probability": 0.65,
+        "Confidence": 0.7571794072718638,
+        "RawMarginalValue": 0.0,
+        "DValue": 0.1,
+        "BeforePair": [
+          0,
+          1
+        ],
+        "AfterPair": [
+          0,
+          1
+        ],
+        "BeforeMana": {
+          "lands": 16,
+          "nonbasic": {
+            "dualUR": 1,
+            "dualWR": 3
+          },
+          "basics": {
+            "0": 5,
+            "1": 6,
+            "3": 1
+          },
+          "sources": [
+            8,
+            7,
+            0,
+            5,
+            0,
+            0
+          ],
+          "effectiveFixing": 4,
+          "splash": 3
+        },
+        "AfterMana": {
+          "lands": 16,
+          "nonbasic": {
+            "dualUR": 1,
+            "dualWR": 3
+          },
+          "basics": {
+            "0": 5,
+            "1": 6,
+            "3": 1
+          },
+          "sources": [
+            8,
+            7,
+            0,
+            5,
+            0,
+            0
+          ],
+          "effectiveFixing": 4,
+          "splash": 3
+        },
+        "BeforeMain": {
+          "bombR": 2,
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4
+        },
+        "AfterMain": {
+          "bombR": 2,
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4
+        },
+        "ColorPairChanged": false,
+        "LandCountChanged": false,
+        "UnknownNarrow": false,
+        "OptionalPositiveRoleBonusAllowed": false,
+        "provenance": "research-d-phase-f-v1/C"
+      }
+    },
+    {
+      "family": "C",
+      "name": "fixing/noNeed",
+      "result": {
+        "available": true,
+        "candidate": "dualWU",
+        "CandidateSelected": true,
+        "DisplacedCards": {},
+        "AddedCards": {},
+        "ReplacementValue": 0.0,
+        "VirtualReplacement": 0.4901312339887548,
+        "VirtualSlotsBefore": 2,
+        "Castability": {
+          "supported": true,
+          "score": 1.0,
+          "onCurve": null,
+          "byGrace": null,
+          "requirements": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "AbsoluteEligibility": 0.0,
+        "CastabilityDelta": 0.0,
+        "ManaConsistencyDelta": 0.0,
+        "CurveDelta": 0.0,
+        "CreatureDelta": 0.0,
+        "EarlyPlayDelta": 0.0,
+        "RemovalDelta": 0.0,
+        "FixingDelta": 0.0,
+        "RoleDelta": 0.0,
+        "StructuralDelta": 0.0,
+        "Final23Probability": 0.65,
+        "Confidence": 0.7160078741613408,
+        "RawMarginalValue": 0.0,
+        "DValue": 0.1,
+        "BeforePair": [
+          0,
+          1
+        ],
+        "AfterPair": [
+          0,
+          1
+        ],
+        "BeforeMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 7,
+            "1": 8
+          },
+          "sources": [
+            7,
+            8,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "AfterMana": {
+          "lands": 15,
+          "nonbasic": {
+            "dualWU": 1
+          },
+          "basics": {
+            "0": 7,
+            "1": 7
+          },
+          "sources": [
+            8,
+            8,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 1,
+          "splash": null
+        },
+        "BeforeMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4
+        },
+        "AfterMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4
+        },
+        "ColorPairChanged": false,
+        "LandCountChanged": false,
+        "UnknownNarrow": false,
+        "OptionalPositiveRoleBonusAllowed": false,
+        "provenance": "research-d-phase-f-v1/C"
+      }
+    },
+    {
+      "family": "C",
+      "name": "offcolor/noSources",
+      "result": {
+        "available": true,
+        "candidate": "bombR",
+        "CandidateSelected": false,
+        "DisplacedCards": {},
+        "AddedCards": {},
+        "ReplacementValue": 0.0,
+        "VirtualReplacement": 0.4901312339887548,
+        "VirtualSlotsBefore": 2,
+        "Castability": {
+          "supported": true,
+          "score": 0.0,
+          "onCurve": 0.0,
+          "byGrace": 0.0,
+          "requirements": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "drawsByGrace": 13,
+          "interpretation": "Minimum marginal source tails, NOT exact joint cast-on-curve probability."
+        },
+        "AbsoluteEligibility": 0.0,
+        "CastabilityDelta": 0.0,
+        "ManaConsistencyDelta": 0.0,
+        "CurveDelta": 0.0,
+        "CreatureDelta": 0.0,
+        "EarlyPlayDelta": 0.0,
+        "RemovalDelta": 0.0,
+        "FixingDelta": 0,
+        "RoleDelta": 0.0,
+        "StructuralDelta": 0.0,
+        "Final23Probability": 0.65,
+        "Confidence": 0.7160078741613408,
+        "RawMarginalValue": 0.0,
+        "DValue": 0.1,
+        "BeforePair": [
+          0,
+          1
+        ],
+        "AfterPair": [
+          0,
+          1
+        ],
+        "BeforeMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 7,
+            "1": 8
+          },
+          "sources": [
+            7,
+            8,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "AfterMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 7,
+            "1": 8
+          },
+          "sources": [
+            7,
+            8,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "BeforeMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4
+        },
+        "AfterMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4
+        },
+        "ColorPairChanged": false,
+        "LandCountChanged": false,
+        "UnknownNarrow": false,
+        "OptionalPositiveRoleBonusAllowed": true,
+        "provenance": "research-d-phase-f-v1/C"
+      }
+    },
+    {
+      "family": "C",
+      "name": "offcolor/supported",
+      "result": {
+        "available": true,
+        "candidate": "bombR",
+        "CandidateSelected": true,
+        "DisplacedCards": {},
+        "AddedCards": {
+          "bombR": 1
+        },
+        "ReplacementValue": 0.18357023705264264,
+        "VirtualReplacement": 0.4901312339887548,
+        "VirtualSlotsBefore": 2,
+        "Castability": {
+          "supported": true,
+          "score": 0.7485571900459971,
+          "onCurve": 0.38737242935535154,
+          "byGrace": 0.5988457520367977,
+          "requirements": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "drawsByGrace": 13,
+          "interpretation": "Minimum marginal source tails, NOT exact joint cast-on-curve probability."
+        },
+        "AbsoluteEligibility": 0.7485571900459971,
+        "CastabilityDelta": 0.0,
+        "ManaConsistencyDelta": 0.0,
+        "CurveDelta": -0.005,
+        "CreatureDelta": -0.03666666666666666,
+        "EarlyPlayDelta": 0.0,
+        "RemovalDelta": 0.0,
+        "FixingDelta": 0,
+        "RoleDelta": 0.0,
+        "StructuralDelta": -0.04166666666666666,
+        "Final23Probability": 0.65,
+        "Confidence": 0.7160078741613408,
+        "RawMarginalValue": 0.14190357038597598,
+        "DValue": 0.6123477145323144,
+        "BeforePair": [
+          0,
+          1
+        ],
+        "AfterPair": [
+          0,
+          1
+        ],
+        "BeforeMana": {
+          "lands": 15,
+          "nonbasic": {
+            "dualUR": 2,
+            "dualWR": 2
+          },
+          "basics": {
+            "0": 5,
+            "1": 6
+          },
+          "sources": [
+            7,
+            8,
+            0,
+            4,
+            0,
+            0
+          ],
+          "effectiveFixing": 4,
+          "splash": null
+        },
+        "AfterMana": {
+          "lands": 15,
+          "nonbasic": {
+            "dualUR": 2,
+            "dualWR": 2
+          },
+          "basics": {
+            "0": 5,
+            "1": 5,
+            "3": 1
+          },
+          "sources": [
+            7,
+            7,
+            0,
+            5,
+            0,
+            0
+          ],
+          "effectiveFixing": 4,
+          "splash": 3
+        },
+        "BeforeMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4
+        },
+        "AfterMain": {
+          "bombR": 1,
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4
+        },
+        "ColorPairChanged": false,
+        "LandCountChanged": false,
+        "UnknownNarrow": false,
+        "OptionalPositiveRoleBonusAllowed": true,
+        "provenance": "research-d-phase-f-v1/C"
+      }
+    },
+    {
+      "family": "C",
+      "name": "offcolor/doublePip",
+      "result": {
+        "available": true,
+        "candidate": "doubleR",
+        "CandidateSelected": false,
+        "DisplacedCards": {},
+        "AddedCards": {},
+        "ReplacementValue": 0.0,
+        "VirtualReplacement": 0.4901312339887548,
+        "VirtualSlotsBefore": 2,
+        "Castability": {
+          "supported": true,
+          "score": 0.48986486486486486,
+          "onCurve": 0.3003063792537477,
+          "byGrace": 0.3918918918918919,
+          "requirements": [
+            0,
+            0,
+            0,
+            2,
+            0,
+            0
+          ],
+          "drawsByGrace": 13,
+          "interpretation": "Minimum marginal source tails, NOT exact joint cast-on-curve probability."
+        },
+        "AbsoluteEligibility": 0.0,
+        "CastabilityDelta": 0.0,
+        "ManaConsistencyDelta": 0.0,
+        "CurveDelta": 0.0,
+        "CreatureDelta": 0.0,
+        "EarlyPlayDelta": 0.0,
+        "RemovalDelta": 0.0,
+        "FixingDelta": 0,
+        "RoleDelta": 0.0,
+        "StructuralDelta": 0.0,
+        "Final23Probability": 0.65,
+        "Confidence": 0.7160078741613408,
+        "RawMarginalValue": 0.0,
+        "DValue": 0.1,
+        "BeforePair": [
+          0,
+          1
+        ],
+        "AfterPair": [
+          0,
+          1
+        ],
+        "BeforeMana": {
+          "lands": 15,
+          "nonbasic": {
+            "dualUR": 2,
+            "dualWR": 2
+          },
+          "basics": {
+            "0": 5,
+            "1": 6
+          },
+          "sources": [
+            7,
+            8,
+            0,
+            4,
+            0,
+            0
+          ],
+          "effectiveFixing": 4,
+          "splash": null
+        },
+        "AfterMana": {
+          "lands": 15,
+          "nonbasic": {
+            "dualUR": 2,
+            "dualWR": 2
+          },
+          "basics": {
+            "0": 5,
+            "1": 6
+          },
+          "sources": [
+            7,
+            8,
+            0,
+            4,
+            0,
+            0
+          ],
+          "effectiveFixing": 4,
+          "splash": null
+        },
+        "BeforeMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4
+        },
+        "AfterMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4
+        },
+        "ColorPairChanged": false,
+        "LandCountChanged": false,
+        "UnknownNarrow": false,
+        "OptionalPositiveRoleBonusAllowed": true,
+        "provenance": "research-d-phase-f-v1/C"
+      }
+    },
+    {
+      "family": "C",
+      "name": "cutline/modest",
+      "result": {
+        "available": true,
+        "candidate": "modest",
+        "CandidateSelected": true,
+        "DisplacedCards": {},
+        "AddedCards": {
+          "modest": 1
+        },
+        "ReplacementValue": 0.07986876601124515,
+        "VirtualReplacement": 0.4901312339887548,
+        "VirtualSlotsBefore": 2,
+        "Castability": {
+          "supported": true,
+          "score": 1,
+          "onCurve": 0.7486089030206677,
+          "byGrace": 0.8840725806451613,
+          "requirements": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "drawsByGrace": 11,
+          "interpretation": "Minimum marginal source tails, NOT exact joint cast-on-curve probability."
+        },
+        "AbsoluteEligibility": 1,
+        "CastabilityDelta": 0.0,
+        "ManaConsistencyDelta": 0.0,
+        "CurveDelta": 0.0,
+        "CreatureDelta": -0.03666666666666666,
+        "EarlyPlayDelta": 0.0,
+        "RemovalDelta": 0.0,
+        "FixingDelta": 0,
+        "RoleDelta": 0.0,
+        "StructuralDelta": -0.03666666666666666,
+        "Final23Probability": 0.65,
+        "Confidence": 0.7160078741613408,
+        "RawMarginalValue": 0.04320209934457849,
+        "DValue": 0.7000051575811553,
+        "BeforePair": [
+          0,
+          1
+        ],
+        "AfterPair": [
+          0,
+          1
+        ],
+        "BeforeMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 7,
+            "1": 8
+          },
+          "sources": [
+            7,
+            8,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "AfterMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 8,
+            "1": 7
+          },
+          "sources": [
+            8,
+            7,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "BeforeMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4
+        },
+        "AfterMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4,
+          "modest": 1
+        },
+        "ColorPairChanged": false,
+        "LandCountChanged": false,
+        "UnknownNarrow": false,
+        "OptionalPositiveRoleBonusAllowed": true,
+        "provenance": "research-d-phase-f-v1/C"
+      }
+    },
+    {
+      "family": "C",
+      "name": "cutline/huge",
+      "result": {
+        "available": true,
+        "candidate": "premium",
+        "CandidateSelected": true,
+        "DisplacedCards": {},
+        "AddedCards": {
+          "premium": 1
+        },
+        "ReplacementValue": 0.3649804918646771,
+        "VirtualReplacement": 0.48501950813532285,
+        "VirtualSlotsBefore": 11,
+        "Castability": {
+          "supported": true,
+          "score": 1,
+          "onCurve": 0.8445945945945946,
+          "byGrace": 0.9429280397022333,
+          "requirements": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "drawsByGrace": 11,
+          "interpretation": "Minimum marginal source tails, NOT exact joint cast-on-curve probability."
+        },
+        "AbsoluteEligibility": 1,
+        "CastabilityDelta": 0.0,
+        "ManaConsistencyDelta": 0.0,
+        "CurveDelta": 0.0,
+        "CreatureDelta": 0.004285714285714286,
+        "EarlyPlayDelta": 0.0,
+        "RemovalDelta": 0.0,
+        "FixingDelta": 0,
+        "RoleDelta": 0.0,
+        "StructuralDelta": 0.004285714285714286,
+        "Final23Probability": 0.65,
+        "Confidence": 0.27755203414745966,
+        "RawMarginalValue": 0.3692662061503914,
+        "DValue": 0.6110207282264658,
+        "BeforePair": [
+          0,
+          2
+        ],
+        "AfterPair": [
+          0,
+          2
+        ],
+        "BeforeMana": {
+          "lands": 17,
+          "nonbasic": {},
+          "basics": {
+            "0": 17
+          },
+          "sources": [
+            17,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "AfterMana": {
+          "lands": 17,
+          "nonbasic": {},
+          "basics": {
+            "0": 17
+          },
+          "sources": [
+            17,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "BeforeMain": {
+          "weakW": 12
+        },
+        "AfterMain": {
+          "premium": 1,
+          "weakW": 12
+        },
+        "ColorPairChanged": false,
+        "LandCountChanged": false,
+        "UnknownNarrow": false,
+        "OptionalPositiveRoleBonusAllowed": true,
+        "provenance": "research-d-phase-f-v1/C"
+      }
+    },
+    {
+      "family": "C",
+      "name": "cutline/nonstarter",
+      "result": {
+        "available": true,
+        "candidate": "weakW",
+        "CandidateSelected": true,
+        "DisplacedCards": {},
+        "AddedCards": {
+          "weakW": 1
+        },
+        "ReplacementValue": -0.09013123398875478,
+        "VirtualReplacement": 0.4901312339887548,
+        "VirtualSlotsBefore": 2,
+        "Castability": {
+          "supported": true,
+          "score": 1,
+          "onCurve": 0.7486089030206677,
+          "byGrace": 0.8840725806451613,
+          "requirements": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "drawsByGrace": 11,
+          "interpretation": "Minimum marginal source tails, NOT exact joint cast-on-curve probability."
+        },
+        "AbsoluteEligibility": 1,
+        "CastabilityDelta": 0.0,
+        "ManaConsistencyDelta": 0.0,
+        "CurveDelta": 0.0,
+        "CreatureDelta": -0.03666666666666666,
+        "EarlyPlayDelta": 0.0,
+        "RemovalDelta": 0.0,
+        "FixingDelta": 0,
+        "RoleDelta": 0.0,
+        "StructuralDelta": -0.03666666666666666,
+        "Final23Probability": 0.65,
+        "Confidence": 0.7160078741613408,
+        "RawMarginalValue": -0.12679790065542143,
+        "DValue": 0.2171661905667384,
+        "BeforePair": [
+          0,
+          1
+        ],
+        "AfterPair": [
+          0,
+          1
+        ],
+        "BeforeMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 7,
+            "1": 8
+          },
+          "sources": [
+            7,
+            8,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "AfterMana": {
+          "lands": 15,
+          "nonbasic": {},
+          "basics": {
+            "0": 8,
+            "1": 7
+          },
+          "sources": [
+            8,
+            7,
+            0,
+            0,
+            0,
+            0
+          ],
+          "effectiveFixing": 0,
+          "splash": null
+        },
+        "BeforeMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4
+        },
+        "AfterMain": {
+          "earlyU": 2,
+          "earlyW": 2,
+          "fiveU": 2,
+          "fiveW": 1,
+          "fourU": 4,
+          "fourW": 4,
+          "midU": 4,
+          "midW": 4,
+          "weakW": 1
+        },
+        "ColorPairChanged": false,
+        "LandCountChanged": false,
+        "UnknownNarrow": false,
+        "OptionalPositiveRoleBonusAllowed": true,
+        "provenance": "research-d-phase-f-v1/C"
+      }
+    }
+  ]
+}

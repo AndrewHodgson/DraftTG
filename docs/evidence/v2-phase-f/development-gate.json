@@ -1,0 +1,39 @@
+{
+  "gates": {
+    "pair": false,
+    "coverage": true,
+    "structuralProbes": false,
+    "castability": true,
+    "reconstruction": false,
+    "contextual": false,
+    "cold": true,
+    "goldens": true,
+    "compatibility": true
+  },
+  "passAll": false,
+  "selectedFamily": "C",
+  "pairGainBySet": {
+    "LCI": -0.05247134670487108,
+    "MKM": -0.08946488294314381,
+    "OTJ": -0.08129820051413883,
+    "ONE": -0.053262316910785645,
+    "MOM": -0.09477234401349066
+  },
+  "reconstructionF1GainBySet": {
+    "LCI": -0.031775866950747855,
+    "MKM": -0.19811311312207958,
+    "OTJ": -0.13380524102769098,
+    "ONE": -0.023326240826865074,
+    "MOM": -0.06567039523180074
+  },
+  "overlapGainBySet": {
+    "LCI": -0.03916666666666657,
+    "MKM": -0.18479591836734688,
+    "OTJ": -0.11964285714285705,
+    "ONE": -0.030288461538461542,
+    "MOM": -0.05068493150684927
+  },
+  "correctedInputRunUsed": true,
+  "originalRunPreserved": true,
+  "selectionNotRetuned": true
+}

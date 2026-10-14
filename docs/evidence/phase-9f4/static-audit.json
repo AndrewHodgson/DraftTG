@@ -1,0 +1,29 @@
+{
+  "method": "Existing local managed metadata/IL audit and passive native getter byte disassembly; no target calls",
+  "files": {
+    "artifacts/phase9f4/camera-getters.txt": "f5597345defdd40253188ba580f3b21e352be1c4fba5d855853d38d01b95a056",
+    "artifacts/phase9f4/camera-pointer-pixelrect.txt": "5bfff2f2ae9b5db00b39cca235f125815b13af8acc44f5b31c7c82b485a8a7d7",
+    "artifacts/phase9f4/deck-il.txt": "552abeac6946a005441f76d026977865ad7ca2dd69f0a1b82d8f976318ced993",
+    "artifacts/phase9f4/delegate-il.txt": "4534dce0f96333ed2cc2456e9dd9bae8206a6d1140887cf9d81ba5c84b583e8c",
+    "artifacts/phase9f4/events-il.txt": "dbb52cb72564717a109da99af0ab1da203c2a4b611bde1fc182a32494d45bc1a",
+    "artifacts/phase9f4/native-cache-lookup.txt": "5710cef425b4fd587e5d16161efaf987111f496d1d60a4b6472574b2e9edaa88",
+    "artifacts/phase9f4/native-canvas-helpers.txt": "ac0a140d5f237bc360b773e07ce430d70743e8dbfcf7f1ed01f695a4e3de2e39",
+    "artifacts/phase9f4/native-canvas.txt": "540febb45fdd102a82e89002f7bf04b4325067d76b114e879b76df7a5c770dbc",
+    "artifacts/phase9f4/native-getters.txt": "dd056b953f43b1587131b92dae95f2488ca5b0d1fa125bfd1c40791726a7bb5b",
+    "artifacts/phase9f4/native-helpers.txt": "9aa79ce981517fc27ee5295dd0d40397580adbfda12ae42862750d5ec1c96302",
+    "artifacts/phase9f4/native-transform-helpers2.txt": "af5e24ad6e7ffbc4b85a71b5e02f8a53b79667a2b70b82c65b6049745ec4ca20",
+    "artifacts/phase9f4/native-transform.txt": "d88cacdc19053211b8543045b8cf01b18bb11f62dff01a8a9993ac371f9bcaf1",
+    "artifacts/phase9f4/rect-calc.txt": "1555958b45f7f6b727b480bfef41c9a866981629117cda84270a3bf27c031f0f",
+    "artifacts/phase9f4/rect-update.txt": "4ded558983a8df7ee247228bc06cbd429494fe565dcc224180b3b332fa9424e3",
+    "artifacts/phase9f4/ui-il.txt": "db219219f954805debe7276288b616f4d804c3dca25e4e4bab583d902f69f025",
+    "artifacts/phase9f4/unity-bindings-il.txt": "466940797365f0235350305703fd6c29de484526a27554cac6f411e16ea7fabb"
+  },
+  "uiAssemblies": {
+    "UnityEngine.CoreModule": "7C8FAF1B9BEFE71EC2D2A5AAE0ACBB97C6FD8962D9514495D701F717A20B0014",
+    "UnityEngine.UIModule": "DDF3665576C653F9E6F7B2B5F12569DFA1E81B3793FB5A7E8C912EAE1141BD84",
+    "UnityEngine.UI": "4BF50572EE01F1A62147142CC9750058EC01DFB3790B46BE9B42D207A4BD3797"
+  },
+  "loadedMvidChecked": true,
+  "nativeOffsetsScope": "Pinned UnityPlayer/current build only",
+  "managedOffsets": "Resolved by existing Mono field metadata, including inherited fields"
+}

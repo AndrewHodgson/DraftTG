@@ -1,0 +1,9 @@
+{
+  "sets": [
+    "MH3",
+    "DFT"
+  ],
+  "consumed": false,
+  "performance": null,
+  "reason": "Development gates fail; no holdout download/read or release lock"
+}

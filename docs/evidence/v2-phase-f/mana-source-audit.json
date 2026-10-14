@@ -1,0 +1,81 @@
+{
+  "bySet": {
+    "DMU": {
+      "unmetPipSourceAdequacy": 0.2691440264716127,
+      "maxRequiredChannelCount": 23.637931034482758,
+      "sourceShortfallScore": 0.01147592421129423,
+      "effectiveFixing": 2.935344827586207,
+      "lands": 15.21551724137931
+    },
+    "BRO": {
+      "unmetPipSourceAdequacy": 0.11391449052739373,
+      "maxRequiredChannelCount": 18.76958525345622,
+      "sourceShortfallScore": 0.0061958970166961225,
+      "effectiveFixing": 0.1382488479262673,
+      "lands": 15.064516129032258
+    },
+    "WOE": {
+      "unmetPipSourceAdequacy": 0.20256704304869444,
+      "maxRequiredChannelCount": 24.077981651376145,
+      "sourceShortfallScore": 0.008479085745782428,
+      "effectiveFixing": 0.7477064220183486,
+      "lands": 15.036697247706423
+    },
+    "LCI": {
+      "unmetPipSourceAdequacy": 0.20641138953638952,
+      "maxRequiredChannelCount": 23.970833333333335,
+      "sourceShortfallScore": 0.008732245565220191,
+      "effectiveFixing": 0.625,
+      "lands": 15.070833333333333
+    },
+    "MKM": {
+      "unmetPipSourceAdequacy": 0.19282161149508087,
+      "maxRequiredChannelCount": 24.963265306122448,
+      "sourceShortfallScore": 0.007631054766041721,
+      "effectiveFixing": 0.8571428571428571,
+      "lands": 15.526530612244898
+    },
+    "OTJ": {
+      "unmetPipSourceAdequacy": 0.2043698260803524,
+      "maxRequiredChannelCount": 24.68421052631579,
+      "sourceShortfallScore": 0.008155550450900455,
+      "effectiveFixing": 2.5676691729323307,
+      "lands": 15.31578947368421
+    },
+    "ONE": {
+      "unmetPipSourceAdequacy": 0.14762286324786325,
+      "maxRequiredChannelCount": 23.16826923076923,
+      "sourceShortfallScore": 0.00649640523280292,
+      "effectiveFixing": 0.1778846153846154,
+      "lands": 15.16826923076923
+    },
+    "MOM": {
+      "unmetPipSourceAdequacy": 0.20486288191767643,
+      "maxRequiredChannelCount": 24.78082191780822,
+      "sourceShortfallScore": 0.008183665591359133,
+      "effectiveFixing": 1.4292237442922375,
+      "lands": 15.26027397260274
+    }
+  },
+  "qualifiedPositiveRemovalOccurrences": {
+    "DMU": 61,
+    "BRO": 99,
+    "WOE": 280,
+    "LCI": 97,
+    "MKM": 290,
+    "OTJ": 424,
+    "ONE": 209,
+    "MOM": 114
+  },
+  "unknownNarrowOccurrences": {
+    "DMU": 6852,
+    "BRO": 8407,
+    "WOE": 8385,
+    "LCI": 9040,
+    "MKM": 7714,
+    "OTJ": 8192,
+    "ONE": 7546,
+    "MOM": 8721
+  },
+  "sourceInterpretation": "Structured produced_mana counts are potential direct sources; conditional activation, tapped tempo and overlapping dual-source assignments remain unqualified. Exact joint casting probability is not claimed."
+}

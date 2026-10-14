@@ -1,0 +1,206 @@
+{
+  "datasets": [
+    {
+      "set": "DMU",
+      "pickDrafts": 700,
+      "completeSequenceCount": 690,
+      "observedBuilds": 7256,
+      "joined": 618,
+      "qualified": 446,
+      "legalDecisions": 18732,
+      "pickedLabels": 18732,
+      "identityOccurrences": 844587,
+      "totalIdentityOccurrences": 844587,
+      "exclusions": {
+        "no-observed-build": 82,
+        "modal-support-unavailable": 117,
+        "insufficient-observed-support": 47,
+        "incomplete-sequence": 8
+      },
+      "partitions": {
+        "target": 232,
+        "train": 168,
+        "validation": 46
+      },
+      "fileSha256": "efb152a71fa9d8bed77741a3ca65cae5b5c4dfc2d0686f0f84cb1038e6e06df5"
+    },
+    {
+      "set": "BRO",
+      "pickDrafts": 700,
+      "completeSequenceCount": 686,
+      "observedBuilds": 7119,
+      "joined": 597,
+      "qualified": 420,
+      "legalDecisions": 17640,
+      "pickedLabels": 17640,
+      "identityOccurrences": 963635,
+      "totalIdentityOccurrences": 963635,
+      "exclusions": {
+        "modal-support-unavailable": 151,
+        "no-observed-build": 103,
+        "insufficient-observed-support": 14,
+        "incomplete-sequence": 11,
+        "opening-pack-length-conflict": 1
+      },
+      "partitions": {
+        "train": 171,
+        "target": 217,
+        "validation": 32
+      },
+      "fileSha256": "50b551fceec15275f0d651188f14546be584e09d502e29641607139ca1af1438"
+    },
+    {
+      "set": "WOE",
+      "pickDrafts": 700,
+      "completeSequenceCount": 688,
+      "observedBuilds": 7305,
+      "joined": 630,
+      "qualified": 445,
+      "legalDecisions": 18690,
+      "pickedLabels": 18690,
+      "identityOccurrences": 841914,
+      "totalIdentityOccurrences": 841914,
+      "exclusions": {
+        "modal-support-unavailable": 154,
+        "insufficient-observed-support": 21,
+        "no-observed-build": 70,
+        "incomplete-sequence": 9,
+        "build-not-subset-of-pool": 1
+      },
+      "partitions": {
+        "train": 189,
+        "target": 218,
+        "validation": 38
+      },
+      "fileSha256": "0efb99e1655dd07915613d3d890c549b1069c959b02dde01f5262bd3dbd93385"
+    },
+    {
+      "set": "LCI",
+      "pickDrafts": 700,
+      "completeSequenceCount": 695,
+      "observedBuilds": 7135,
+      "joined": 624,
+      "qualified": 494,
+      "legalDecisions": 20748,
+      "pickedLabels": 20748,
+      "identityOccurrences": 972139,
+      "totalIdentityOccurrences": 972139,
+      "exclusions": {
+        "modal-support-unavailable": 116,
+        "no-observed-build": 76,
+        "insufficient-observed-support": 11,
+        "incomplete-sequence": 3
+      },
+      "partitions": {
+        "validation": 51,
+        "target": 240,
+        "train": 203
+      },
+      "fileSha256": "e16de8ab6b6625e2183a9c00e7f5db82d0fff6b5017946898fcfd53b20a4e33b"
+    },
+    {
+      "set": "MKM",
+      "pickDrafts": 700,
+      "completeSequenceCount": 689,
+      "observedBuilds": 7430,
+      "joined": 641,
+      "qualified": 490,
+      "legalDecisions": 19110,
+      "pickedLabels": 19110,
+      "identityOccurrences": 729014,
+      "totalIdentityOccurrences": 729014,
+      "exclusions": {
+        "modal-support-unavailable": 126,
+        "insufficient-observed-support": 16,
+        "no-observed-build": 59,
+        "incomplete-sequence": 8,
+        "build-not-subset-of-pool": 1
+      },
+      "partitions": {
+        "target": 245,
+        "validation": 45,
+        "train": 200
+      },
+      "fileSha256": "de4b3cc6ef76d3500c8c58a34220804f19c59869abe42f2bf7cbc60382ea2252"
+    },
+    {
+      "set": "OTJ",
+      "pickDrafts": 700,
+      "completeSequenceCount": 691,
+      "observedBuilds": 7301,
+      "joined": 632,
+      "qualified": 512,
+      "legalDecisions": 21504,
+      "pickedLabels": 21504,
+      "identityOccurrences": 845352,
+      "totalIdentityOccurrences": 845352,
+      "exclusions": {
+        "insufficient-observed-support": 10,
+        "modal-support-unavailable": 104,
+        "no-observed-build": 68,
+        "incomplete-sequence": 6
+      },
+      "partitions": {
+        "validation": 53,
+        "target": 266,
+        "train": 193
+      },
+      "fileSha256": "d34935d9b928a25fd31b055d733f28b339d68aaa4d95d570340e912566208776"
+    },
+    {
+      "set": "ONE",
+      "pickDrafts": 700,
+      "completeSequenceCount": 685,
+      "observedBuilds": 7359,
+      "joined": 618,
+      "qualified": 419,
+      "legalDecisions": 17598,
+      "pickedLabels": 17598,
+      "identityOccurrences": 839817,
+      "totalIdentityOccurrences": 840764,
+      "exclusions": {
+        "modal-support-unavailable": 117,
+        "incomplete-sequence": 12,
+        "insufficient-observed-support": 20,
+        "no-observed-build": 82,
+        "invalid-identity-or-quantities": 49,
+        "picked-identity-or-pack-invalid": 1
+      },
+      "partitions": {
+        "validation": 45,
+        "train": 166,
+        "target": 208
+      },
+      "fileSha256": "1a9fb15ec4ae62d653f4a9934e06ac12d5eb784aed5d5a24142447065559dc8e"
+    },
+    {
+      "set": "MOM",
+      "pickDrafts": 700,
+      "completeSequenceCount": 688,
+      "observedBuilds": 7221,
+      "joined": 636,
+      "qualified": 482,
+      "legalDecisions": 20244,
+      "pickedLabels": 20244,
+      "identityOccurrences": 966381,
+      "totalIdentityOccurrences": 966381,
+      "exclusions": {
+        "no-observed-build": 64,
+        "insufficient-observed-support": 11,
+        "modal-support-unavailable": 133,
+        "incomplete-sequence": 10
+      },
+      "partitions": {
+        "train": 220,
+        "target": 219,
+        "validation": 43
+      },
+      "fileSha256": "b01a5752d413f9afcb316ed21a69e53d22165dbec9804abb79b7e3704f7cc228"
+    }
+  ],
+  "basicSupplyException": "Ordinary basic lands are supplied by Arena; they alone may exceed drafted quantities.",
+  "copyLabels": "m/n fractional; exact kept pick occurrence unknowable",
+  "qualified": 3708,
+  "decisions": 154266,
+  "noAcquisition": true
+}

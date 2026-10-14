@@ -1,0 +1,20 @@
+{
+  "calibrationCandidates": [
+    [
+      0.7291469551621086,
+      0.5
+    ],
+    [
+      0.7282059586999722,
+      1
+    ],
+    [
+      0.7289165826219105,
+      1.5
+    ]
+  ],
+  "scale": 0.5,
+  "developmentNotRead": true,
+  "objective": "Set-macro calibration-validation nonland copy F1",
+  "landRule": "clip(round(17+scale*(current projected spell average MV-3)),15,19)"
+}

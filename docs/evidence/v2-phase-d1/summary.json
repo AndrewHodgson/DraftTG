@@ -1,0 +1,5342 @@
+{
+  "version": "research-a-phase-d1-v1",
+  "baseline": {
+    "version": "research-a-phase-d1-v1",
+    "strongest": "color-only",
+    "developmentMRR": {
+      "color-only": 0.45666666666666667,
+      "uniform-frequency": 0.3312928737928738,
+      "quality-frequency": 0.3294207875457875,
+      "frequency-Q": 0.30588827838827837,
+      "frequency-Q-mana": 0.4098655511155511,
+      "generic-logistic": 0.35320325507825506
+    },
+    "results": [
+      {
+        "set": "DMU",
+        "partition": "utility",
+        "tasks": 0,
+        "metrics": {
+          "color-only": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "uniform-frequency": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "quality-frequency": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "frequency-Q": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "frequency-Q-mana": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "generic-logistic": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          }
+        }
+      },
+      {
+        "set": "DMU",
+        "partition": "confidence",
+        "tasks": 0,
+        "metrics": {
+          "color-only": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "uniform-frequency": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "quality-frequency": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "frequency-Q": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "frequency-Q-mana": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "generic-logistic": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          }
+        }
+      },
+      {
+        "set": "DMU",
+        "partition": "target",
+        "tasks": 7,
+        "metrics": {
+          "color-only": {
+            "n": 7,
+            "Top1": 0.19999999999999998,
+            "Top3": 0.6,
+            "MRR": 0.4566666666666666,
+            "normalizedRank": 0.5
+          },
+          "uniform-frequency": {
+            "n": 7,
+            "Top1": 0.2857142857142857,
+            "Top3": 0.8571428571428571,
+            "MRR": 0.5595238095238095,
+            "normalizedRank": 0.32142857142857145
+          },
+          "quality-frequency": {
+            "n": 7,
+            "Top1": 0.2857142857142857,
+            "Top3": 0.8571428571428571,
+            "MRR": 0.5523809523809524,
+            "normalizedRank": 0.35714285714285715
+          },
+          "frequency-Q": {
+            "n": 7,
+            "Top1": 0.2857142857142857,
+            "Top3": 0.5714285714285714,
+            "MRR": 0.5285714285714286,
+            "normalizedRank": 0.42857142857142855
+          },
+          "frequency-Q-mana": {
+            "n": 7,
+            "Top1": 0.14285714285714285,
+            "Top3": 0.5714285714285714,
+            "MRR": 0.4023809523809524,
+            "normalizedRank": 0.5714285714285714
+          },
+          "generic-logistic": {
+            "n": 7,
+            "Top1": 0.2857142857142857,
+            "Top3": 0.7142857142857143,
+            "MRR": 0.5238095238095238,
+            "normalizedRank": 0.39285714285714285
+          }
+        }
+      },
+      {
+        "set": "BRO",
+        "partition": "utility",
+        "tasks": 10,
+        "metrics": {
+          "color-only": {
+            "n": 10,
+            "Top1": 0.2,
+            "Top3": 0.5999999999999999,
+            "MRR": 0.4566666666666667,
+            "normalizedRank": 0.5
+          },
+          "uniform-frequency": {
+            "n": 10,
+            "Top1": 0.0,
+            "Top3": 0.7,
+            "MRR": 0.375,
+            "normalizedRank": 0.475
+          },
+          "quality-frequency": {
+            "n": 10,
+            "Top1": 0.0,
+            "Top3": 0.6,
+            "MRR": 0.36666666666666664,
+            "normalizedRank": 0.5
+          },
+          "frequency-Q": {
+            "n": 10,
+            "Top1": 0.0,
+            "Top3": 0.7,
+            "MRR": 0.375,
+            "normalizedRank": 0.475
+          },
+          "frequency-Q-mana": {
+            "n": 10,
+            "Top1": 0.0,
+            "Top3": 0.5,
+            "MRR": 0.30333333333333334,
+            "normalizedRank": 0.625
+          },
+          "generic-logistic": {
+            "n": 10,
+            "Top1": 0.0,
+            "Top3": 0.7,
+            "MRR": 0.35833333333333334,
+            "normalizedRank": 0.5
+          }
+        }
+      },
+      {
+        "set": "BRO",
+        "partition": "confidence",
+        "tasks": 10,
+        "metrics": {
+          "color-only": {
+            "n": 10,
+            "Top1": 0.2,
+            "Top3": 0.5999999999999999,
+            "MRR": 0.4566666666666667,
+            "normalizedRank": 0.5
+          },
+          "uniform-frequency": {
+            "n": 10,
+            "Top1": 0.0,
+            "Top3": 0.7,
+            "MRR": 0.38666666666666666,
+            "normalizedRank": 0.475
+          },
+          "quality-frequency": {
+            "n": 10,
+            "Top1": 0.0,
+            "Top3": 0.8,
+            "MRR": 0.39499999999999996,
+            "normalizedRank": 0.45
+          },
+          "frequency-Q": {
+            "n": 10,
+            "Top1": 0.0,
+            "Top3": 0.7,
+            "MRR": 0.35333333333333333,
+            "normalizedRank": 0.525
+          },
+          "frequency-Q-mana": {
+            "n": 10,
+            "Top1": 0.0,
+            "Top3": 0.6,
+            "MRR": 0.32333333333333336,
+            "normalizedRank": 0.6
+          },
+          "generic-logistic": {
+            "n": 10,
+            "Top1": 0.0,
+            "Top3": 0.7,
+            "MRR": 0.35833333333333334,
+            "normalizedRank": 0.5
+          }
+        }
+      },
+      {
+        "set": "BRO",
+        "partition": "target",
+        "tasks": 74,
+        "metrics": {
+          "color-only": {
+            "n": 74,
+            "Top1": 0.19999999999999996,
+            "Top3": 0.6,
+            "MRR": 0.4566666666666665,
+            "normalizedRank": 0.5
+          },
+          "uniform-frequency": {
+            "n": 74,
+            "Top1": 0.05405405405405406,
+            "Top3": 0.5540540540540541,
+            "MRR": 0.3725225225225225,
+            "normalizedRank": 0.5405405405405406
+          },
+          "quality-frequency": {
+            "n": 74,
+            "Top1": 0.04054054054054054,
+            "Top3": 0.5405405405405406,
+            "MRR": 0.3689189189189189,
+            "normalizedRank": 0.5337837837837838
+          },
+          "frequency-Q": {
+            "n": 74,
+            "Top1": 0.02702702702702703,
+            "Top3": 0.5405405405405406,
+            "MRR": 0.35135135135135137,
+            "normalizedRank": 0.5675675675675675
+          },
+          "frequency-Q-mana": {
+            "n": 74,
+            "Top1": 0.04054054054054054,
+            "Top3": 0.47297297297297297,
+            "MRR": 0.3518018018018018,
+            "normalizedRank": 0.5844594594594594
+          },
+          "generic-logistic": {
+            "n": 74,
+            "Top1": 0.05405405405405406,
+            "Top3": 0.5540540540540541,
+            "MRR": 0.3702702702702703,
+            "normalizedRank": 0.543918918918919
+          }
+        }
+      },
+      {
+        "set": "WOE",
+        "partition": "utility",
+        "tasks": 3,
+        "metrics": {
+          "color-only": {
+            "n": 3,
+            "Top1": 0.20000000000000004,
+            "Top3": 0.6,
+            "MRR": 0.4566666666666667,
+            "normalizedRank": 0.5
+          },
+          "uniform-frequency": {
+            "n": 3,
+            "Top1": 0.0,
+            "Top3": 1.0,
+            "MRR": 0.4444444444444444,
+            "normalizedRank": 0.3333333333333333
+          },
+          "quality-frequency": {
+            "n": 3,
+            "Top1": 0.0,
+            "Top3": 1.0,
+            "MRR": 0.4444444444444444,
+            "normalizedRank": 0.3333333333333333
+          },
+          "frequency-Q": {
+            "n": 3,
+            "Top1": 0.0,
+            "Top3": 1.0,
+            "MRR": 0.4444444444444444,
+            "normalizedRank": 0.3333333333333333
+          },
+          "frequency-Q-mana": {
+            "n": 3,
+            "Top1": 0.0,
+            "Top3": 1.0,
+            "MRR": 0.4444444444444444,
+            "normalizedRank": 0.3333333333333333
+          },
+          "generic-logistic": {
+            "n": 3,
+            "Top1": 0.0,
+            "Top3": 1.0,
+            "MRR": 0.4444444444444444,
+            "normalizedRank": 0.3333333333333333
+          }
+        }
+      },
+      {
+        "set": "WOE",
+        "partition": "confidence",
+        "tasks": 3,
+        "metrics": {
+          "color-only": {
+            "n": 3,
+            "Top1": 0.20000000000000004,
+            "Top3": 0.6,
+            "MRR": 0.4566666666666667,
+            "normalizedRank": 0.5
+          },
+          "uniform-frequency": {
+            "n": 3,
+            "Top1": 0.0,
+            "Top3": 1.0,
+            "MRR": 0.3333333333333333,
+            "normalizedRank": 0.5
+          },
+          "quality-frequency": {
+            "n": 3,
+            "Top1": 0.0,
+            "Top3": 1.0,
+            "MRR": 0.3333333333333333,
+            "normalizedRank": 0.5
+          },
+          "frequency-Q": {
+            "n": 3,
+            "Top1": 0.0,
+            "Top3": 1.0,
+            "MRR": 0.3333333333333333,
+            "normalizedRank": 0.5
+          },
+          "frequency-Q-mana": {
+            "n": 3,
+            "Top1": 0.0,
+            "Top3": 1.0,
+            "MRR": 0.3333333333333333,
+            "normalizedRank": 0.5
+          },
+          "generic-logistic": {
+            "n": 3,
+            "Top1": 0.0,
+            "Top3": 1.0,
+            "MRR": 0.3333333333333333,
+            "normalizedRank": 0.5
+          }
+        }
+      },
+      {
+        "set": "WOE",
+        "partition": "target",
+        "tasks": 57,
+        "metrics": {
+          "color-only": {
+            "n": 57,
+            "Top1": 0.19999999999999998,
+            "Top3": 0.6000000000000001,
+            "MRR": 0.4566666666666666,
+            "normalizedRank": 0.5
+          },
+          "uniform-frequency": {
+            "n": 57,
+            "Top1": 0.0,
+            "Top3": 0.9122807017543859,
+            "MRR": 0.43128654970760233,
+            "normalizedRank": 0.36403508771929827
+          },
+          "quality-frequency": {
+            "n": 57,
+            "Top1": 0.0,
+            "Top3": 0.9122807017543859,
+            "MRR": 0.42836257309941517,
+            "normalizedRank": 0.3684210526315789
+          },
+          "frequency-Q": {
+            "n": 57,
+            "Top1": 0.0,
+            "Top3": 0.8947368421052632,
+            "MRR": 0.4269005847953216,
+            "normalizedRank": 0.37280701754385964
+          },
+          "frequency-Q-mana": {
+            "n": 57,
+            "Top1": 0.0,
+            "Top3": 0.9473684210526315,
+            "MRR": 0.43128654970760233,
+            "normalizedRank": 0.35964912280701755
+          },
+          "generic-logistic": {
+            "n": 57,
+            "Top1": 0.03508771929824561,
+            "Top3": 0.9298245614035088,
+            "MRR": 0.45321637426900585,
+            "normalizedRank": 0.34649122807017546
+          }
+        }
+      },
+      {
+        "set": "LCI",
+        "partition": "utility",
+        "tasks": 0,
+        "metrics": {
+          "color-only": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "uniform-frequency": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "quality-frequency": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "frequency-Q": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "frequency-Q-mana": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "generic-logistic": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          }
+        }
+      },
+      {
+        "set": "LCI",
+        "partition": "confidence",
+        "tasks": 2,
+        "metrics": {
+          "color-only": {
+            "n": 2,
+            "Top1": 0.2,
+            "Top3": 0.6,
+            "MRR": 0.45666666666666667,
+            "normalizedRank": 0.5
+          },
+          "uniform-frequency": {
+            "n": 2,
+            "Top1": 0.5,
+            "Top3": 1.0,
+            "MRR": 0.75,
+            "normalizedRank": 0.125
+          },
+          "quality-frequency": {
+            "n": 2,
+            "Top1": 0.5,
+            "Top3": 1.0,
+            "MRR": 0.75,
+            "normalizedRank": 0.125
+          },
+          "frequency-Q": {
+            "n": 2,
+            "Top1": 0.0,
+            "Top3": 1.0,
+            "MRR": 0.41666666666666663,
+            "normalizedRank": 0.375
+          },
+          "frequency-Q-mana": {
+            "n": 2,
+            "Top1": 0.0,
+            "Top3": 1.0,
+            "MRR": 0.3333333333333333,
+            "normalizedRank": 0.5
+          },
+          "generic-logistic": {
+            "n": 2,
+            "Top1": 0.5,
+            "Top3": 1.0,
+            "MRR": 0.6666666666666666,
+            "normalizedRank": 0.25
+          }
+        }
+      },
+      {
+        "set": "LCI",
+        "partition": "target",
+        "tasks": 4,
+        "metrics": {
+          "color-only": {
+            "n": 4,
+            "Top1": 0.2,
+            "Top3": 0.6,
+            "MRR": 0.45666666666666667,
+            "normalizedRank": 0.5
+          },
+          "uniform-frequency": {
+            "n": 4,
+            "Top1": 0.0,
+            "Top3": 1.0,
+            "MRR": 0.3333333333333333,
+            "normalizedRank": 0.5
+          },
+          "quality-frequency": {
+            "n": 4,
+            "Top1": 0.0,
+            "Top3": 1.0,
+            "MRR": 0.3333333333333333,
+            "normalizedRank": 0.5
+          },
+          "frequency-Q": {
+            "n": 4,
+            "Top1": 0.0,
+            "Top3": 1.0,
+            "MRR": 0.3333333333333333,
+            "normalizedRank": 0.5
+          },
+          "frequency-Q-mana": {
+            "n": 4,
+            "Top1": 0.0,
+            "Top3": 1.0,
+            "MRR": 0.3333333333333333,
+            "normalizedRank": 0.5
+          },
+          "generic-logistic": {
+            "n": 4,
+            "Top1": 0.0,
+            "Top3": 1.0,
+            "MRR": 0.3333333333333333,
+            "normalizedRank": 0.5
+          }
+        }
+      },
+      {
+        "set": "MKM",
+        "partition": "utility",
+        "tasks": 0,
+        "metrics": {
+          "color-only": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "uniform-frequency": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "quality-frequency": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "frequency-Q": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "frequency-Q-mana": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "generic-logistic": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          }
+        }
+      },
+      {
+        "set": "MKM",
+        "partition": "confidence",
+        "tasks": 0,
+        "metrics": {
+          "color-only": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "uniform-frequency": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "quality-frequency": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "frequency-Q": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "frequency-Q-mana": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "generic-logistic": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          }
+        }
+      },
+      {
+        "set": "MKM",
+        "partition": "target",
+        "tasks": 0,
+        "metrics": {
+          "color-only": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "uniform-frequency": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "quality-frequency": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "frequency-Q": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "frequency-Q-mana": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "generic-logistic": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          }
+        }
+      },
+      {
+        "set": "OTJ",
+        "partition": "utility",
+        "tasks": 34,
+        "metrics": {
+          "color-only": {
+            "n": 34,
+            "Top1": 0.2,
+            "Top3": 0.6000000000000001,
+            "MRR": 0.45666666666666667,
+            "normalizedRank": 0.5
+          },
+          "uniform-frequency": {
+            "n": 34,
+            "Top1": 0.20588235294117646,
+            "Top3": 0.6470588235294118,
+            "MRR": 0.48039215686274506,
+            "normalizedRank": 0.4264705882352941
+          },
+          "quality-frequency": {
+            "n": 34,
+            "Top1": 0.23529411764705882,
+            "Top3": 0.7058823529411765,
+            "MRR": 0.5,
+            "normalizedRank": 0.40441176470588236
+          },
+          "frequency-Q": {
+            "n": 34,
+            "Top1": 0.08823529411764706,
+            "Top3": 0.6764705882352942,
+            "MRR": 0.42892156862745096,
+            "normalizedRank": 0.4411764705882353
+          },
+          "frequency-Q-mana": {
+            "n": 34,
+            "Top1": 0.14705882352941177,
+            "Top3": 0.7352941176470589,
+            "MRR": 0.4730392156862745,
+            "normalizedRank": 0.39705882352941174
+          },
+          "generic-logistic": {
+            "n": 34,
+            "Top1": 0.20588235294117646,
+            "Top3": 0.7058823529411765,
+            "MRR": 0.47892156862745094,
+            "normalizedRank": 0.4264705882352941
+          }
+        }
+      },
+      {
+        "set": "OTJ",
+        "partition": "confidence",
+        "tasks": 41,
+        "metrics": {
+          "color-only": {
+            "n": 41,
+            "Top1": 0.19999999999999998,
+            "Top3": 0.6000000000000001,
+            "MRR": 0.45666666666666667,
+            "normalizedRank": 0.5
+          },
+          "uniform-frequency": {
+            "n": 41,
+            "Top1": 0.17073170731707318,
+            "Top3": 0.7073170731707317,
+            "MRR": 0.4634146341463415,
+            "normalizedRank": 0.4268292682926829
+          },
+          "quality-frequency": {
+            "n": 41,
+            "Top1": 0.14634146341463414,
+            "Top3": 0.7073170731707317,
+            "MRR": 0.44715447154471544,
+            "normalizedRank": 0.43902439024390244
+          },
+          "frequency-Q": {
+            "n": 41,
+            "Top1": 0.0975609756097561,
+            "Top3": 0.7073170731707317,
+            "MRR": 0.4227642276422764,
+            "normalizedRank": 0.45121951219512196
+          },
+          "frequency-Q-mana": {
+            "n": 41,
+            "Top1": 0.21951219512195122,
+            "Top3": 0.7317073170731707,
+            "MRR": 0.5101626016260162,
+            "normalizedRank": 0.3780487804878049
+          },
+          "generic-logistic": {
+            "n": 41,
+            "Top1": 0.21951219512195122,
+            "Top3": 0.7073170731707317,
+            "MRR": 0.5,
+            "normalizedRank": 0.39634146341463417
+          }
+        }
+      },
+      {
+        "set": "OTJ",
+        "partition": "target",
+        "tasks": 364,
+        "metrics": {
+          "color-only": {
+            "n": 364,
+            "Top1": 0.19999999999999996,
+            "Top3": 0.6,
+            "MRR": 0.45666666666666667,
+            "normalizedRank": 0.5
+          },
+          "uniform-frequency": {
+            "n": 364,
+            "Top1": 0.08791208791208792,
+            "Top3": 0.6318681318681318,
+            "MRR": 0.3902472527472528,
+            "normalizedRank": 0.5089285714285714
+          },
+          "quality-frequency": {
+            "n": 364,
+            "Top1": 0.09340659340659341,
+            "Top3": 0.6291208791208791,
+            "MRR": 0.39184981684981685,
+            "normalizedRank": 0.5096153846153846
+          },
+          "frequency-Q": {
+            "n": 364,
+            "Top1": 0.03296703296703297,
+            "Top3": 0.6346153846153846,
+            "MRR": 0.3677197802197803,
+            "normalizedRank": 0.5144230769230769
+          },
+          "frequency-Q-mana": {
+            "n": 364,
+            "Top1": 0.11813186813186813,
+            "Top3": 0.6895604395604396,
+            "MRR": 0.43438644688644684,
+            "normalizedRank": 0.4491758241758242
+          },
+          "generic-logistic": {
+            "n": 364,
+            "Top1": 0.10714285714285714,
+            "Top3": 0.6565934065934066,
+            "MRR": 0.4097069597069597,
+            "normalizedRank": 0.48626373626373626
+          }
+        }
+      },
+      {
+        "set": "ONE",
+        "partition": "utility",
+        "tasks": 0,
+        "metrics": {
+          "color-only": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "uniform-frequency": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "quality-frequency": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "frequency-Q": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "frequency-Q-mana": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "generic-logistic": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          }
+        }
+      },
+      {
+        "set": "ONE",
+        "partition": "confidence",
+        "tasks": 2,
+        "metrics": {
+          "color-only": {
+            "n": 2,
+            "Top1": 0.2,
+            "Top3": 0.6,
+            "MRR": 0.45666666666666667,
+            "normalizedRank": 0.5
+          },
+          "uniform-frequency": {
+            "n": 2,
+            "Top1": 0.5,
+            "Top3": 0.5,
+            "MRR": 0.625,
+            "normalizedRank": 0.375
+          },
+          "quality-frequency": {
+            "n": 2,
+            "Top1": 0.5,
+            "Top3": 0.5,
+            "MRR": 0.625,
+            "normalizedRank": 0.375
+          },
+          "frequency-Q": {
+            "n": 2,
+            "Top1": 0.0,
+            "Top3": 0.5,
+            "MRR": 0.375,
+            "normalizedRank": 0.5
+          },
+          "frequency-Q-mana": {
+            "n": 2,
+            "Top1": 0.5,
+            "Top3": 1.0,
+            "MRR": 0.75,
+            "normalizedRank": 0.125
+          },
+          "generic-logistic": {
+            "n": 2,
+            "Top1": 0.0,
+            "Top3": 0.5,
+            "MRR": 0.375,
+            "normalizedRank": 0.5
+          }
+        }
+      },
+      {
+        "set": "ONE",
+        "partition": "target",
+        "tasks": 4,
+        "metrics": {
+          "color-only": {
+            "n": 4,
+            "Top1": 0.2,
+            "Top3": 0.6,
+            "MRR": 0.45666666666666667,
+            "normalizedRank": 0.5
+          },
+          "uniform-frequency": {
+            "n": 4,
+            "Top1": 0.0,
+            "Top3": 0.0,
+            "MRR": 0.21250000000000002,
+            "normalizedRank": 0.9375
+          },
+          "quality-frequency": {
+            "n": 4,
+            "Top1": 0.0,
+            "Top3": 0.0,
+            "MRR": 0.21250000000000002,
+            "normalizedRank": 0.9375
+          },
+          "frequency-Q": {
+            "n": 4,
+            "Top1": 0.0,
+            "Top3": 0.0,
+            "MRR": 0.21250000000000002,
+            "normalizedRank": 0.9375
+          },
+          "frequency-Q-mana": {
+            "n": 4,
+            "Top1": 0.0,
+            "Top3": 0.5,
+            "MRR": 0.3208333333333333,
+            "normalizedRank": 0.625
+          },
+          "generic-logistic": {
+            "n": 4,
+            "Top1": 0.0,
+            "Top3": 0.0,
+            "MRR": 0.21250000000000002,
+            "normalizedRank": 0.9375
+          }
+        }
+      },
+      {
+        "set": "MOM",
+        "partition": "utility",
+        "tasks": 6,
+        "metrics": {
+          "color-only": {
+            "n": 6,
+            "Top1": 0.19999999999999998,
+            "Top3": 0.6,
+            "MRR": 0.4566666666666666,
+            "normalizedRank": 0.5
+          },
+          "uniform-frequency": {
+            "n": 6,
+            "Top1": 0.0,
+            "Top3": 0.8333333333333334,
+            "MRR": 0.375,
+            "normalizedRank": 0.4583333333333333
+          },
+          "quality-frequency": {
+            "n": 6,
+            "Top1": 0.0,
+            "Top3": 0.8333333333333334,
+            "MRR": 0.375,
+            "normalizedRank": 0.4583333333333333
+          },
+          "frequency-Q": {
+            "n": 6,
+            "Top1": 0.0,
+            "Top3": 0.5,
+            "MRR": 0.33888888888888885,
+            "normalizedRank": 0.5833333333333334
+          },
+          "frequency-Q-mana": {
+            "n": 6,
+            "Top1": 0.3333333333333333,
+            "Top3": 0.6666666666666666,
+            "MRR": 0.5388888888888889,
+            "normalizedRank": 0.4583333333333333
+          },
+          "generic-logistic": {
+            "n": 6,
+            "Top1": 0.0,
+            "Top3": 0.8333333333333334,
+            "MRR": 0.375,
+            "normalizedRank": 0.4583333333333333
+          }
+        }
+      },
+      {
+        "set": "MOM",
+        "partition": "confidence",
+        "tasks": 4,
+        "metrics": {
+          "color-only": {
+            "n": 4,
+            "Top1": 0.2,
+            "Top3": 0.6,
+            "MRR": 0.45666666666666667,
+            "normalizedRank": 0.5
+          },
+          "uniform-frequency": {
+            "n": 4,
+            "Top1": 0.0,
+            "Top3": 1.0,
+            "MRR": 0.4583333333333333,
+            "normalizedRank": 0.3125
+          },
+          "quality-frequency": {
+            "n": 4,
+            "Top1": 0.0,
+            "Top3": 1.0,
+            "MRR": 0.4583333333333333,
+            "normalizedRank": 0.3125
+          },
+          "frequency-Q": {
+            "n": 4,
+            "Top1": 0.0,
+            "Top3": 0.5,
+            "MRR": 0.29166666666666663,
+            "normalizedRank": 0.625
+          },
+          "frequency-Q-mana": {
+            "n": 4,
+            "Top1": 0.5,
+            "Top3": 1.0,
+            "MRR": 0.7083333333333333,
+            "normalizedRank": 0.1875
+          },
+          "generic-logistic": {
+            "n": 4,
+            "Top1": 0.0,
+            "Top3": 1.0,
+            "MRR": 0.3333333333333333,
+            "normalizedRank": 0.5
+          }
+        }
+      },
+      {
+        "set": "MOM",
+        "partition": "target",
+        "tasks": 55,
+        "metrics": {
+          "color-only": {
+            "n": 55,
+            "Top1": 0.1999999999999999,
+            "Top3": 0.6000000000000001,
+            "MRR": 0.45666666666666667,
+            "normalizedRank": 0.5
+          },
+          "uniform-frequency": {
+            "n": 55,
+            "Top1": 0.0,
+            "Top3": 0.8909090909090909,
+            "MRR": 0.389090909090909,
+            "normalizedRank": 0.43636363636363634
+          },
+          "quality-frequency": {
+            "n": 55,
+            "Top1": 0.0,
+            "Top3": 0.8909090909090909,
+            "MRR": 0.3799999999999999,
+            "normalizedRank": 0.45
+          },
+          "frequency-Q": {
+            "n": 55,
+            "Top1": 0.0,
+            "Top3": 0.5818181818181818,
+            "MRR": 0.30999999999999994,
+            "normalizedRank": 0.6
+          },
+          "frequency-Q-mana": {
+            "n": 55,
+            "Top1": 0.3090909090909091,
+            "Top3": 0.7454545454545455,
+            "MRR": 0.5509090909090909,
+            "normalizedRank": 0.40454545454545454
+          },
+          "generic-logistic": {
+            "n": 55,
+            "Top1": 0.16363636363636364,
+            "Top3": 0.9454545454545454,
+            "MRR": 0.4572727272727271,
+            "normalizedRank": 0.4090909090909091
+          }
+        }
+      }
+    ],
+    "inputs": {
+      "docs\\evidence\\v2-phase-d1\\generic-fit.json": "ae5bf07cd8a29d43c9fb7b61baa729590b8262ed8f4c6f8105093a0ac86af43b",
+      "data\\historical\\normalized\\phase-d1\\DMU.generic.json": "8cd65694c87e49f52f112c76df7c4bcd5089f56a1b15162004859dcdb7cbd223",
+      "data\\historical\\normalized\\phase-d1\\BRO.generic.json": "ae47f0399883fa25430ca77d06a5d24d25b4a80f34411e767822672f22fb9a3f",
+      "data\\historical\\normalized\\phase-d1\\WOE.generic.json": "1cf51950131cc6e96006849cd9fd367a66d9ebaa3bb957dbba3a856c948594fb",
+      "data\\historical\\normalized\\phase-d1\\LCI.generic.json": "5a7d578efda20e5da8a933bd915d121893c8be04a4c914838999563d9bae7be5",
+      "data\\historical\\normalized\\phase-d1\\MKM.generic.json": "829264050f22c81a624d6d8e4156a905417d4ba344ee3fff56af491943a25897",
+      "data\\historical\\normalized\\phase-d1\\OTJ.generic.json": "7b6d412767f256c37140249ce0adcf33694537d273cc14eb92287a022677c719",
+      "data\\historical\\normalized\\phase-d1\\ONE.generic.json": "a98c35bf896215de5c5adabb7d192af0ddaf15c924181ed9dfb84cc7ca20e5aa",
+      "data\\historical\\normalized\\phase-d1\\MOM.generic.json": "bc0323b8b0d524b553d804a54f3fe2733e31837779ddc013571c35cdcac72848"
+    },
+    "coverage": {
+      "LCI": 4,
+      "MKM": 0,
+      "OTJ": 364,
+      "ONE": 4,
+      "MOM": 55
+    },
+    "fullPrimaryCoverage": false,
+    "aggregateScope": "Available development sets only; MKM unavailable, complete primary gate FAIL",
+    "stage": "Frozen before residual candidates; generic controls only",
+    "noCandidateAnalysis": true
+  },
+  "selection": {
+    "version": "research-a-phase-d1-v1",
+    "best": "C",
+    "macroAvailableSets": {
+      "A": 0.35247833763458764,
+      "B": 0.35247833763458764,
+      "C": 0.45666666666666667
+    },
+    "baselineAvailableMRR": 0.45666666666666667,
+    "relativeAvailableGain": 0.0,
+    "improvedSets": 0,
+    "worstLoss": 0.0,
+    "coverage": {
+      "LCI": 4,
+      "MKM": 0,
+      "OTJ": 364,
+      "ONE": 4,
+      "MOM": 55
+    },
+    "primaryGates": {
+      "primary": false,
+      "perSet": false,
+      "coverage": false
+    },
+    "parameters": {
+      "factor": {
+        "method": "residual-nmf",
+        "rank": 2,
+        "perSetLogLoss": {
+          "DMU": 0.1383354800883171,
+          "BRO": 0.1089398570918301,
+          "WOE": 0.11600243846077588
+        },
+        "macroLogLoss": 0.12109259188030769
+      },
+      "poolWeights": {
+        "A": "sqrt-capped3",
+        "B": "sqrt-capped3",
+        "C": "sqrt-capped3"
+      },
+      "coldMapping": {
+        "x": [
+          50.0,
+          100.0,
+          250.0,
+          500.0,
+          1000.0,
+          2149.3333333333335
+        ],
+        "weights": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "inputs": {
+      "docs\\evidence\\v2-phase-d1\\baseline-freeze.json": "9a399468772e67d12c77d0a221087676602fd2b1656522ed731af4922ca3cfaf",
+      "docs\\evidence\\v2-phase-d1\\secondary-baseline-freeze.json": "a4dd38d67c4a92b176d2cd7e45ac18b7940fc4d32c663c1a99592542aa75403c",
+      "docs\\evidence\\v2-phase-d1\\model-fit.json": "a631ae0db699a45d3be18a064ba82072d83901c94296de989012b3d42742bd9a",
+      "docs\\evidence\\v2-phase-d1\\shell-utility.json": "a1b198afe4797a1937f9d19456da4382745bf8a8f0fcb9dd843fdae24890b620",
+      "docs\\evidence\\v2-phase-d1\\confidence-calibration.json": "573e1d170452c6b8fed1534b715cb02ed5a416a8217cf0a3aae8270e34472551",
+      "docs\\evidence\\v2-phase-d1\\completion.json": "79d070ba1e353ecf5e9f89f19fdc9f357424e6d8d6e5d6bc8d2f79c94aa2b8a3",
+      "data\\historical\\normalized\\phase-d1\\DMU.utility-model.json": "fe5ff30be637593bacd8a680b1b06ed4096385fc7826190f7127183e2778323c",
+      "data\\historical\\normalized\\phase-d1\\BRO.utility-model.json": "14e320b3658a5d77e4d28dcc4cb7ff16d184d569ce1ec88c8fdfc999d0e35204",
+      "data\\historical\\normalized\\phase-d1\\WOE.utility-model.json": "ac715e3deebe87b42902cdcd9a6023e2b5256491a0c66cae6d0d66d46bad4686",
+      "data\\historical\\normalized\\phase-d1\\LCI.utility-model.json": "5d51b24efac19b946d22e9db443b0bd9e649e33eb79ed613fb54e6f21ecac725",
+      "data\\historical\\normalized\\phase-d1\\MKM.utility-model.json": "63b02e10ebb98cf5915a5102ab8cb65e450cc17236a65caa3531c43297b26825",
+      "data\\historical\\normalized\\phase-d1\\OTJ.utility-model.json": "3d52bd240bd49ef2ac3a298532b3bf3e33d930c495a737a5703ee33ffd0f00e6",
+      "data\\historical\\normalized\\phase-d1\\ONE.utility-model.json": "63643376bae2b76648839a178ff4a7e446a95db6eb058165b841af9c36c9b309",
+      "data\\historical\\normalized\\phase-d1\\MOM.utility-model.json": "3aace494030d25612d33921f5c46b3a57bf471a4f3fd8763cf09d9c5f07a696a"
+    },
+    "noCompleteFiveSetClaim": true,
+    "holdoutsConsumed": false,
+    "productionChanged": false
+  },
+  "gate": {
+    "gates": {
+      "primary": false,
+      "perSet": false,
+      "coverage": false,
+      "uncertainty": false,
+      "cold": false,
+      "probes": false,
+      "goldens": true,
+      "contextualIntegrity": true
+    },
+    "passAll": false,
+    "qualifiedForFutureIntegration": false,
+    "productionChanged": false
+  },
+  "completion": {
+    "results": [
+      {
+        "set": "DMU",
+        "secondary": false,
+        "tasks": 7,
+        "metrics": {
+          "A": {
+            "n": 7,
+            "Top1": 0.0,
+            "Top3": 0.14285714285714285,
+            "MRR": 0.24047619047619045,
+            "normalizedRank": 0.8214285714285714
+          },
+          "B": {
+            "n": 7,
+            "Top1": 0.0,
+            "Top3": 0.2857142857142857,
+            "MRR": 0.2523809523809523,
+            "normalizedRank": 0.7857142857142857
+          },
+          "C": {
+            "n": 7,
+            "Top1": 0.19999999999999998,
+            "Top3": 0.6,
+            "MRR": 0.4566666666666666,
+            "normalizedRank": 0.5
+          }
+        },
+        "baselines": {
+          "color-only": {
+            "n": 7,
+            "Top1": 0.19999999999999998,
+            "Top3": 0.6,
+            "MRR": 0.4566666666666666,
+            "normalizedRank": 0.5
+          },
+          "uniform-frequency": {
+            "n": 7,
+            "Top1": 0.2857142857142857,
+            "Top3": 0.8571428571428571,
+            "MRR": 0.5595238095238095,
+            "normalizedRank": 0.32142857142857145
+          },
+          "quality-frequency": {
+            "n": 7,
+            "Top1": 0.2857142857142857,
+            "Top3": 0.8571428571428571,
+            "MRR": 0.5523809523809524,
+            "normalizedRank": 0.35714285714285715
+          },
+          "frequency-Q": {
+            "n": 7,
+            "Top1": 0.2857142857142857,
+            "Top3": 0.5714285714285714,
+            "MRR": 0.5285714285714286,
+            "normalizedRank": 0.42857142857142855
+          },
+          "frequency-Q-mana": {
+            "n": 7,
+            "Top1": 0.14285714285714285,
+            "Top3": 0.5714285714285714,
+            "MRR": 0.4023809523809524,
+            "normalizedRank": 0.5714285714285714
+          },
+          "generic-logistic": {
+            "n": 7,
+            "Top1": 0.2857142857142857,
+            "Top3": 0.7142857142857143,
+            "MRR": 0.5238095238095238,
+            "normalizedRank": 0.39285714285714285
+          }
+        }
+      },
+      {
+        "set": "DMU",
+        "secondary": true,
+        "tasks": 500,
+        "metrics": {
+          "A": {
+            "n": 500,
+            "Top1": 0.292,
+            "Top3": 0.6273333333333333,
+            "MRR": 0.5186944444444445,
+            "normalizedRank": 0.45275
+          },
+          "B": {
+            "n": 500,
+            "Top1": 0.298,
+            "Top3": 0.6393333333333333,
+            "MRR": 0.5244777777777777,
+            "normalizedRank": 0.444
+          },
+          "C": {
+            "n": 500,
+            "Top1": 0.2,
+            "Top3": 0.5999999999999999,
+            "MRR": 0.4566666666666667,
+            "normalizedRank": 0.5
+          }
+        },
+        "baselines": {
+          "color-only": {
+            "n": 500,
+            "Top1": 0.2,
+            "Top3": 0.5999999999999999,
+            "MRR": 0.4566666666666667,
+            "normalizedRank": 0.5
+          },
+          "uniform-frequency": {
+            "n": 500,
+            "Top1": 0.338,
+            "Top3": 0.806,
+            "MRR": 0.5775,
+            "normalizedRank": 0.3375
+          },
+          "quality-frequency": {
+            "n": 500,
+            "Top1": 0.336,
+            "Top3": 0.804,
+            "MRR": 0.5767666666666666,
+            "normalizedRank": 0.3375
+          },
+          "frequency-Q": {
+            "n": 500,
+            "Top1": 0.324,
+            "Top3": 0.802,
+            "MRR": 0.5714333333333333,
+            "normalizedRank": 0.3415
+          },
+          "frequency-Q-mana": {
+            "n": 500,
+            "Top1": 0.33,
+            "Top3": 0.806,
+            "MRR": 0.5760666666666667,
+            "normalizedRank": 0.336
+          },
+          "generic-logistic": {
+            "n": 500,
+            "Top1": 0.342,
+            "Top3": 0.806,
+            "MRR": 0.5808666666666666,
+            "normalizedRank": 0.3355
+          }
+        }
+      },
+      {
+        "set": "BRO",
+        "secondary": false,
+        "tasks": 74,
+        "metrics": {
+          "A": {
+            "n": 74,
+            "Top1": 0.2972972972972973,
+            "Top3": 0.7027027027027027,
+            "MRR": 0.5322072072072073,
+            "normalizedRank": 0.40878378378378377
+          },
+          "B": {
+            "n": 74,
+            "Top1": 0.2972972972972973,
+            "Top3": 0.7027027027027027,
+            "MRR": 0.5322072072072073,
+            "normalizedRank": 0.40878378378378377
+          },
+          "C": {
+            "n": 74,
+            "Top1": 0.19999999999999996,
+            "Top3": 0.6,
+            "MRR": 0.4566666666666665,
+            "normalizedRank": 0.5
+          }
+        },
+        "baselines": {
+          "color-only": {
+            "n": 74,
+            "Top1": 0.19999999999999996,
+            "Top3": 0.6,
+            "MRR": 0.4566666666666665,
+            "normalizedRank": 0.5
+          },
+          "uniform-frequency": {
+            "n": 74,
+            "Top1": 0.05405405405405406,
+            "Top3": 0.5540540540540541,
+            "MRR": 0.3725225225225225,
+            "normalizedRank": 0.5405405405405406
+          },
+          "quality-frequency": {
+            "n": 74,
+            "Top1": 0.04054054054054054,
+            "Top3": 0.5405405405405406,
+            "MRR": 0.3689189189189189,
+            "normalizedRank": 0.5337837837837838
+          },
+          "frequency-Q": {
+            "n": 74,
+            "Top1": 0.02702702702702703,
+            "Top3": 0.5405405405405406,
+            "MRR": 0.35135135135135137,
+            "normalizedRank": 0.5675675675675675
+          },
+          "frequency-Q-mana": {
+            "n": 74,
+            "Top1": 0.04054054054054054,
+            "Top3": 0.47297297297297297,
+            "MRR": 0.3518018018018018,
+            "normalizedRank": 0.5844594594594594
+          },
+          "generic-logistic": {
+            "n": 74,
+            "Top1": 0.05405405405405406,
+            "Top3": 0.5540540540540541,
+            "MRR": 0.3702702702702703,
+            "normalizedRank": 0.543918918918919
+          }
+        }
+      },
+      {
+        "set": "BRO",
+        "secondary": true,
+        "tasks": 500,
+        "metrics": {
+          "A": {
+            "n": 500,
+            "Top1": 0.2670666666666667,
+            "Top3": 0.6785333333333333,
+            "MRR": 0.5114216666666667,
+            "normalizedRank": 0.432
+          },
+          "B": {
+            "n": 500,
+            "Top1": 0.2670666666666667,
+            "Top3": 0.6785333333333333,
+            "MRR": 0.5114216666666667,
+            "normalizedRank": 0.432
+          },
+          "C": {
+            "n": 500,
+            "Top1": 0.2,
+            "Top3": 0.5999999999999999,
+            "MRR": 0.4566666666666667,
+            "normalizedRank": 0.5
+          }
+        },
+        "baselines": {
+          "color-only": {
+            "n": 500,
+            "Top1": 0.2,
+            "Top3": 0.5999999999999999,
+            "MRR": 0.4566666666666667,
+            "normalizedRank": 0.5
+          },
+          "uniform-frequency": {
+            "n": 500,
+            "Top1": 0.33,
+            "Top3": 0.846,
+            "MRR": 0.588,
+            "normalizedRank": 0.3075
+          },
+          "quality-frequency": {
+            "n": 500,
+            "Top1": 0.332,
+            "Top3": 0.852,
+            "MRR": 0.5899333333333334,
+            "normalizedRank": 0.3045
+          },
+          "frequency-Q": {
+            "n": 500,
+            "Top1": 0.308,
+            "Top3": 0.84,
+            "MRR": 0.5742,
+            "normalizedRank": 0.319
+          },
+          "frequency-Q-mana": {
+            "n": 500,
+            "Top1": 0.31,
+            "Top3": 0.844,
+            "MRR": 0.5747666666666666,
+            "normalizedRank": 0.319
+          },
+          "generic-logistic": {
+            "n": 500,
+            "Top1": 0.338,
+            "Top3": 0.848,
+            "MRR": 0.5925,
+            "normalizedRank": 0.3045
+          }
+        }
+      },
+      {
+        "set": "WOE",
+        "secondary": false,
+        "tasks": 57,
+        "metrics": {
+          "A": {
+            "n": 57,
+            "Top1": 0.0,
+            "Top3": 0.24561403508771928,
+            "MRR": 0.2681286549707602,
+            "normalizedRank": 0.7412280701754386
+          },
+          "B": {
+            "n": 57,
+            "Top1": 0.0,
+            "Top3": 0.24561403508771928,
+            "MRR": 0.2681286549707602,
+            "normalizedRank": 0.7412280701754386
+          },
+          "C": {
+            "n": 57,
+            "Top1": 0.19999999999999998,
+            "Top3": 0.6000000000000001,
+            "MRR": 0.4566666666666666,
+            "normalizedRank": 0.5
+          }
+        },
+        "baselines": {
+          "color-only": {
+            "n": 57,
+            "Top1": 0.19999999999999998,
+            "Top3": 0.6000000000000001,
+            "MRR": 0.4566666666666666,
+            "normalizedRank": 0.5
+          },
+          "uniform-frequency": {
+            "n": 57,
+            "Top1": 0.0,
+            "Top3": 0.9122807017543859,
+            "MRR": 0.43128654970760233,
+            "normalizedRank": 0.36403508771929827
+          },
+          "quality-frequency": {
+            "n": 57,
+            "Top1": 0.0,
+            "Top3": 0.9122807017543859,
+            "MRR": 0.42836257309941517,
+            "normalizedRank": 0.3684210526315789
+          },
+          "frequency-Q": {
+            "n": 57,
+            "Top1": 0.0,
+            "Top3": 0.8947368421052632,
+            "MRR": 0.4269005847953216,
+            "normalizedRank": 0.37280701754385964
+          },
+          "frequency-Q-mana": {
+            "n": 57,
+            "Top1": 0.0,
+            "Top3": 0.9473684210526315,
+            "MRR": 0.43128654970760233,
+            "normalizedRank": 0.35964912280701755
+          },
+          "generic-logistic": {
+            "n": 57,
+            "Top1": 0.03508771929824561,
+            "Top3": 0.9298245614035088,
+            "MRR": 0.45321637426900585,
+            "normalizedRank": 0.34649122807017546
+          }
+        }
+      },
+      {
+        "set": "WOE",
+        "secondary": true,
+        "tasks": 500,
+        "metrics": {
+          "A": {
+            "n": 500,
+            "Top1": 0.19006666666666666,
+            "Top3": 0.5362,
+            "MRR": 0.4406300000000001,
+            "normalizedRank": 0.53075
+          },
+          "B": {
+            "n": 500,
+            "Top1": 0.19006666666666666,
+            "Top3": 0.5362,
+            "MRR": 0.4406300000000001,
+            "normalizedRank": 0.53075
+          },
+          "C": {
+            "n": 500,
+            "Top1": 0.2,
+            "Top3": 0.5999999999999999,
+            "MRR": 0.4566666666666667,
+            "normalizedRank": 0.5
+          }
+        },
+        "baselines": {
+          "color-only": {
+            "n": 500,
+            "Top1": 0.2,
+            "Top3": 0.5999999999999999,
+            "MRR": 0.4566666666666667,
+            "normalizedRank": 0.5
+          },
+          "uniform-frequency": {
+            "n": 500,
+            "Top1": 0.296,
+            "Top3": 0.81,
+            "MRR": 0.5528,
+            "normalizedRank": 0.352
+          },
+          "quality-frequency": {
+            "n": 500,
+            "Top1": 0.298,
+            "Top3": 0.808,
+            "MRR": 0.5548666666666666,
+            "normalizedRank": 0.3505
+          },
+          "frequency-Q": {
+            "n": 500,
+            "Top1": 0.278,
+            "Top3": 0.802,
+            "MRR": 0.5432333333333333,
+            "normalizedRank": 0.358
+          },
+          "frequency-Q-mana": {
+            "n": 500,
+            "Top1": 0.272,
+            "Top3": 0.798,
+            "MRR": 0.5414333333333334,
+            "normalizedRank": 0.3575
+          },
+          "generic-logistic": {
+            "n": 500,
+            "Top1": 0.298,
+            "Top3": 0.804,
+            "MRR": 0.5544666666666667,
+            "normalizedRank": 0.353
+          }
+        }
+      },
+      {
+        "set": "LCI",
+        "secondary": false,
+        "tasks": 4,
+        "metrics": {
+          "A": {
+            "n": 4,
+            "Top1": 0.0,
+            "Top3": 0.0,
+            "MRR": 0.2,
+            "normalizedRank": 1.0
+          },
+          "B": {
+            "n": 4,
+            "Top1": 0.0,
+            "Top3": 0.0,
+            "MRR": 0.2,
+            "normalizedRank": 1.0
+          },
+          "C": {
+            "n": 4,
+            "Top1": 0.2,
+            "Top3": 0.6,
+            "MRR": 0.45666666666666667,
+            "normalizedRank": 0.5
+          }
+        },
+        "baselines": {
+          "color-only": {
+            "n": 4,
+            "Top1": 0.2,
+            "Top3": 0.6,
+            "MRR": 0.45666666666666667,
+            "normalizedRank": 0.5
+          },
+          "uniform-frequency": {
+            "n": 4,
+            "Top1": 0.0,
+            "Top3": 1.0,
+            "MRR": 0.3333333333333333,
+            "normalizedRank": 0.5
+          },
+          "quality-frequency": {
+            "n": 4,
+            "Top1": 0.0,
+            "Top3": 1.0,
+            "MRR": 0.3333333333333333,
+            "normalizedRank": 0.5
+          },
+          "frequency-Q": {
+            "n": 4,
+            "Top1": 0.0,
+            "Top3": 1.0,
+            "MRR": 0.3333333333333333,
+            "normalizedRank": 0.5
+          },
+          "frequency-Q-mana": {
+            "n": 4,
+            "Top1": 0.0,
+            "Top3": 1.0,
+            "MRR": 0.3333333333333333,
+            "normalizedRank": 0.5
+          },
+          "generic-logistic": {
+            "n": 4,
+            "Top1": 0.0,
+            "Top3": 1.0,
+            "MRR": 0.3333333333333333,
+            "normalizedRank": 0.5
+          }
+        }
+      },
+      {
+        "set": "LCI",
+        "secondary": true,
+        "tasks": 500,
+        "metrics": {
+          "A": {
+            "n": 500,
+            "Top1": 0.23033333333333336,
+            "Top3": 0.6273333333333334,
+            "MRR": 0.4832722222222222,
+            "normalizedRank": 0.46525
+          },
+          "B": {
+            "n": 500,
+            "Top1": 0.23033333333333336,
+            "Top3": 0.6273333333333334,
+            "MRR": 0.4832722222222222,
+            "normalizedRank": 0.46525
+          },
+          "C": {
+            "n": 500,
+            "Top1": 0.2,
+            "Top3": 0.5999999999999999,
+            "MRR": 0.4566666666666667,
+            "normalizedRank": 0.5
+          }
+        },
+        "baselines": {
+          "color-only": {
+            "n": 500,
+            "Top1": 0.2,
+            "Top3": 0.5999999999999999,
+            "MRR": 0.4566666666666667,
+            "normalizedRank": 0.5
+          },
+          "uniform-frequency": {
+            "n": 500,
+            "Top1": 0.26,
+            "Top3": 0.8,
+            "MRR": 0.5369333333333334,
+            "normalizedRank": 0.358
+          },
+          "quality-frequency": {
+            "n": 500,
+            "Top1": 0.254,
+            "Top3": 0.8,
+            "MRR": 0.5334,
+            "normalizedRank": 0.361
+          },
+          "frequency-Q": {
+            "n": 500,
+            "Top1": 0.234,
+            "Top3": 0.806,
+            "MRR": 0.5229666666666667,
+            "normalizedRank": 0.3645
+          },
+          "frequency-Q-mana": {
+            "n": 500,
+            "Top1": 0.238,
+            "Top3": 0.806,
+            "MRR": 0.5240666666666666,
+            "normalizedRank": 0.3645
+          },
+          "generic-logistic": {
+            "n": 500,
+            "Top1": 0.25,
+            "Top3": 0.802,
+            "MRR": 0.5320666666666666,
+            "normalizedRank": 0.3625
+          }
+        }
+      },
+      {
+        "set": "MKM",
+        "secondary": false,
+        "tasks": 0,
+        "metrics": {
+          "A": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "B": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "C": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          }
+        },
+        "baselines": {
+          "color-only": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "uniform-frequency": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "quality-frequency": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "frequency-Q": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "frequency-Q-mana": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "generic-logistic": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          }
+        }
+      },
+      {
+        "set": "MKM",
+        "secondary": true,
+        "tasks": 500,
+        "metrics": {
+          "A": {
+            "n": 500,
+            "Top1": 0.232,
+            "Top3": 0.6123333333333334,
+            "MRR": 0.4825861111111111,
+            "normalizedRank": 0.47275
+          },
+          "B": {
+            "n": 500,
+            "Top1": 0.232,
+            "Top3": 0.6123333333333334,
+            "MRR": 0.4825861111111111,
+            "normalizedRank": 0.47275
+          },
+          "C": {
+            "n": 500,
+            "Top1": 0.2,
+            "Top3": 0.5999999999999999,
+            "MRR": 0.4566666666666667,
+            "normalizedRank": 0.5
+          }
+        },
+        "baselines": {
+          "color-only": {
+            "n": 500,
+            "Top1": 0.2,
+            "Top3": 0.5999999999999999,
+            "MRR": 0.4566666666666667,
+            "normalizedRank": 0.5
+          },
+          "uniform-frequency": {
+            "n": 500,
+            "Top1": 0.176,
+            "Top3": 0.79,
+            "MRR": 0.4845333333333333,
+            "normalizedRank": 0.3955
+          },
+          "quality-frequency": {
+            "n": 500,
+            "Top1": 0.176,
+            "Top3": 0.796,
+            "MRR": 0.48536666666666667,
+            "normalizedRank": 0.3935
+          },
+          "frequency-Q": {
+            "n": 500,
+            "Top1": 0.158,
+            "Top3": 0.806,
+            "MRR": 0.47886666666666666,
+            "normalizedRank": 0.393
+          },
+          "frequency-Q-mana": {
+            "n": 500,
+            "Top1": 0.166,
+            "Top3": 0.804,
+            "MRR": 0.4811666666666667,
+            "normalizedRank": 0.3945
+          },
+          "generic-logistic": {
+            "n": 500,
+            "Top1": 0.164,
+            "Top3": 0.792,
+            "MRR": 0.4810333333333333,
+            "normalizedRank": 0.3945
+          }
+        }
+      },
+      {
+        "set": "OTJ",
+        "secondary": false,
+        "tasks": 364,
+        "metrics": {
+          "A": {
+            "n": 364,
+            "Top1": 0.24725274725274726,
+            "Top3": 0.5407509157509157,
+            "MRR": 0.4667315323565323,
+            "normalizedRank": 0.5175137362637363
+          },
+          "B": {
+            "n": 364,
+            "Top1": 0.24725274725274726,
+            "Top3": 0.5407509157509157,
+            "MRR": 0.4667315323565323,
+            "normalizedRank": 0.5175137362637363
+          },
+          "C": {
+            "n": 364,
+            "Top1": 0.19999999999999996,
+            "Top3": 0.6,
+            "MRR": 0.45666666666666667,
+            "normalizedRank": 0.5
+          }
+        },
+        "baselines": {
+          "color-only": {
+            "n": 364,
+            "Top1": 0.19999999999999996,
+            "Top3": 0.6,
+            "MRR": 0.45666666666666667,
+            "normalizedRank": 0.5
+          },
+          "uniform-frequency": {
+            "n": 364,
+            "Top1": 0.08791208791208792,
+            "Top3": 0.6318681318681318,
+            "MRR": 0.3902472527472528,
+            "normalizedRank": 0.5089285714285714
+          },
+          "quality-frequency": {
+            "n": 364,
+            "Top1": 0.09340659340659341,
+            "Top3": 0.6291208791208791,
+            "MRR": 0.39184981684981685,
+            "normalizedRank": 0.5096153846153846
+          },
+          "frequency-Q": {
+            "n": 364,
+            "Top1": 0.03296703296703297,
+            "Top3": 0.6346153846153846,
+            "MRR": 0.3677197802197803,
+            "normalizedRank": 0.5144230769230769
+          },
+          "frequency-Q-mana": {
+            "n": 364,
+            "Top1": 0.11813186813186813,
+            "Top3": 0.6895604395604396,
+            "MRR": 0.43438644688644684,
+            "normalizedRank": 0.4491758241758242
+          },
+          "generic-logistic": {
+            "n": 364,
+            "Top1": 0.10714285714285714,
+            "Top3": 0.6565934065934066,
+            "MRR": 0.4097069597069597,
+            "normalizedRank": 0.48626373626373626
+          }
+        }
+      },
+      {
+        "set": "OTJ",
+        "secondary": true,
+        "tasks": 500,
+        "metrics": {
+          "A": {
+            "n": 500,
+            "Top1": 0.24113333333333334,
+            "Top3": 0.6067333333333333,
+            "MRR": 0.47451277777777773,
+            "normalizedRank": 0.49575
+          },
+          "B": {
+            "n": 500,
+            "Top1": 0.24113333333333334,
+            "Top3": 0.6067333333333333,
+            "MRR": 0.47451277777777773,
+            "normalizedRank": 0.49575
+          },
+          "C": {
+            "n": 500,
+            "Top1": 0.2,
+            "Top3": 0.5999999999999999,
+            "MRR": 0.4566666666666667,
+            "normalizedRank": 0.5
+          }
+        },
+        "baselines": {
+          "color-only": {
+            "n": 500,
+            "Top1": 0.2,
+            "Top3": 0.5999999999999999,
+            "MRR": 0.4566666666666667,
+            "normalizedRank": 0.5
+          },
+          "uniform-frequency": {
+            "n": 500,
+            "Top1": 0.262,
+            "Top3": 0.816,
+            "MRR": 0.5455666666666666,
+            "normalizedRank": 0.343
+          },
+          "quality-frequency": {
+            "n": 500,
+            "Top1": 0.266,
+            "Top3": 0.816,
+            "MRR": 0.5477666666666666,
+            "normalizedRank": 0.341
+          },
+          "frequency-Q": {
+            "n": 500,
+            "Top1": 0.27,
+            "Top3": 0.822,
+            "MRR": 0.5465999999999999,
+            "normalizedRank": 0.344
+          },
+          "frequency-Q-mana": {
+            "n": 500,
+            "Top1": 0.258,
+            "Top3": 0.82,
+            "MRR": 0.5425,
+            "normalizedRank": 0.3465
+          },
+          "generic-logistic": {
+            "n": 500,
+            "Top1": 0.266,
+            "Top3": 0.814,
+            "MRR": 0.5475999999999999,
+            "normalizedRank": 0.3415
+          }
+        }
+      },
+      {
+        "set": "ONE",
+        "secondary": false,
+        "tasks": 4,
+        "metrics": {
+          "A": {
+            "n": 4,
+            "Top1": 0.0,
+            "Top3": 0.5,
+            "MRR": 0.29166666666666663,
+            "normalizedRank": 0.625
+          },
+          "B": {
+            "n": 4,
+            "Top1": 0.0,
+            "Top3": 0.5,
+            "MRR": 0.29166666666666663,
+            "normalizedRank": 0.625
+          },
+          "C": {
+            "n": 4,
+            "Top1": 0.2,
+            "Top3": 0.6,
+            "MRR": 0.45666666666666667,
+            "normalizedRank": 0.5
+          }
+        },
+        "baselines": {
+          "color-only": {
+            "n": 4,
+            "Top1": 0.2,
+            "Top3": 0.6,
+            "MRR": 0.45666666666666667,
+            "normalizedRank": 0.5
+          },
+          "uniform-frequency": {
+            "n": 4,
+            "Top1": 0.0,
+            "Top3": 0.0,
+            "MRR": 0.21250000000000002,
+            "normalizedRank": 0.9375
+          },
+          "quality-frequency": {
+            "n": 4,
+            "Top1": 0.0,
+            "Top3": 0.0,
+            "MRR": 0.21250000000000002,
+            "normalizedRank": 0.9375
+          },
+          "frequency-Q": {
+            "n": 4,
+            "Top1": 0.0,
+            "Top3": 0.0,
+            "MRR": 0.21250000000000002,
+            "normalizedRank": 0.9375
+          },
+          "frequency-Q-mana": {
+            "n": 4,
+            "Top1": 0.0,
+            "Top3": 0.5,
+            "MRR": 0.3208333333333333,
+            "normalizedRank": 0.625
+          },
+          "generic-logistic": {
+            "n": 4,
+            "Top1": 0.0,
+            "Top3": 0.0,
+            "MRR": 0.21250000000000002,
+            "normalizedRank": 0.9375
+          }
+        }
+      },
+      {
+        "set": "ONE",
+        "secondary": true,
+        "tasks": 500,
+        "metrics": {
+          "A": {
+            "n": 500,
+            "Top1": 0.21239999999999998,
+            "Top3": 0.6202000000000001,
+            "MRR": 0.46653277777777774,
+            "normalizedRank": 0.4895
+          },
+          "B": {
+            "n": 500,
+            "Top1": 0.21239999999999998,
+            "Top3": 0.6202000000000001,
+            "MRR": 0.46653277777777774,
+            "normalizedRank": 0.4895
+          },
+          "C": {
+            "n": 500,
+            "Top1": 0.2,
+            "Top3": 0.5999999999999999,
+            "MRR": 0.4566666666666667,
+            "normalizedRank": 0.5
+          }
+        },
+        "baselines": {
+          "color-only": {
+            "n": 500,
+            "Top1": 0.2,
+            "Top3": 0.5999999999999999,
+            "MRR": 0.4566666666666667,
+            "normalizedRank": 0.5
+          },
+          "uniform-frequency": {
+            "n": 500,
+            "Top1": 0.318,
+            "Top3": 0.834,
+            "MRR": 0.5762999999999999,
+            "normalizedRank": 0.3265
+          },
+          "quality-frequency": {
+            "n": 500,
+            "Top1": 0.32,
+            "Top3": 0.832,
+            "MRR": 0.5773666666666666,
+            "normalizedRank": 0.3265
+          },
+          "frequency-Q": {
+            "n": 500,
+            "Top1": 0.298,
+            "Top3": 0.826,
+            "MRR": 0.5628333333333334,
+            "normalizedRank": 0.337
+          },
+          "frequency-Q-mana": {
+            "n": 500,
+            "Top1": 0.304,
+            "Top3": 0.832,
+            "MRR": 0.5682333333333334,
+            "normalizedRank": 0.3315
+          },
+          "generic-logistic": {
+            "n": 500,
+            "Top1": 0.33,
+            "Top3": 0.84,
+            "MRR": 0.5845,
+            "normalizedRank": 0.3205
+          }
+        }
+      },
+      {
+        "set": "MOM",
+        "secondary": false,
+        "tasks": 55,
+        "metrics": {
+          "A": {
+            "n": 55,
+            "Top1": 0.16363636363636364,
+            "Top3": 0.7090909090909091,
+            "MRR": 0.45151515151515154,
+            "normalizedRank": 0.4409090909090909
+          },
+          "B": {
+            "n": 55,
+            "Top1": 0.16363636363636364,
+            "Top3": 0.7090909090909091,
+            "MRR": 0.45151515151515154,
+            "normalizedRank": 0.4409090909090909
+          },
+          "C": {
+            "n": 55,
+            "Top1": 0.1999999999999999,
+            "Top3": 0.6000000000000001,
+            "MRR": 0.45666666666666667,
+            "normalizedRank": 0.5
+          }
+        },
+        "baselines": {
+          "color-only": {
+            "n": 55,
+            "Top1": 0.1999999999999999,
+            "Top3": 0.6000000000000001,
+            "MRR": 0.45666666666666667,
+            "normalizedRank": 0.5
+          },
+          "uniform-frequency": {
+            "n": 55,
+            "Top1": 0.0,
+            "Top3": 0.8909090909090909,
+            "MRR": 0.389090909090909,
+            "normalizedRank": 0.43636363636363634
+          },
+          "quality-frequency": {
+            "n": 55,
+            "Top1": 0.0,
+            "Top3": 0.8909090909090909,
+            "MRR": 0.3799999999999999,
+            "normalizedRank": 0.45
+          },
+          "frequency-Q": {
+            "n": 55,
+            "Top1": 0.0,
+            "Top3": 0.5818181818181818,
+            "MRR": 0.30999999999999994,
+            "normalizedRank": 0.6
+          },
+          "frequency-Q-mana": {
+            "n": 55,
+            "Top1": 0.3090909090909091,
+            "Top3": 0.7454545454545455,
+            "MRR": 0.5509090909090909,
+            "normalizedRank": 0.40454545454545454
+          },
+          "generic-logistic": {
+            "n": 55,
+            "Top1": 0.16363636363636364,
+            "Top3": 0.9454545454545454,
+            "MRR": 0.4572727272727271,
+            "normalizedRank": 0.4090909090909091
+          }
+        }
+      },
+      {
+        "set": "MOM",
+        "secondary": true,
+        "tasks": 500,
+        "metrics": {
+          "A": {
+            "n": 500,
+            "Top1": 0.254,
+            "Top3": 0.6193333333333333,
+            "MRR": 0.49147777777777774,
+            "normalizedRank": 0.4705
+          },
+          "B": {
+            "n": 500,
+            "Top1": 0.254,
+            "Top3": 0.6193333333333333,
+            "MRR": 0.49147777777777774,
+            "normalizedRank": 0.4705
+          },
+          "C": {
+            "n": 500,
+            "Top1": 0.2,
+            "Top3": 0.5999999999999999,
+            "MRR": 0.4566666666666667,
+            "normalizedRank": 0.5
+          }
+        },
+        "baselines": {
+          "color-only": {
+            "n": 500,
+            "Top1": 0.2,
+            "Top3": 0.5999999999999999,
+            "MRR": 0.4566666666666667,
+            "normalizedRank": 0.5
+          },
+          "uniform-frequency": {
+            "n": 500,
+            "Top1": 0.288,
+            "Top3": 0.792,
+            "MRR": 0.5499333333333333,
+            "normalizedRank": 0.3535
+          },
+          "quality-frequency": {
+            "n": 500,
+            "Top1": 0.29,
+            "Top3": 0.79,
+            "MRR": 0.5514333333333333,
+            "normalizedRank": 0.3525
+          },
+          "frequency-Q": {
+            "n": 500,
+            "Top1": 0.288,
+            "Top3": 0.814,
+            "MRR": 0.5504333333333333,
+            "normalizedRank": 0.35
+          },
+          "frequency-Q-mana": {
+            "n": 500,
+            "Top1": 0.304,
+            "Top3": 0.8,
+            "MRR": 0.5580333333333333,
+            "normalizedRank": 0.348
+          },
+          "generic-logistic": {
+            "n": 500,
+            "Top1": 0.296,
+            "Top3": 0.788,
+            "MRR": 0.5526666666666666,
+            "normalizedRank": 0.356
+          }
+        }
+      }
+    ],
+    "seconds": 150.13407080015168,
+    "uncertainty": {
+      "bins": [
+        {
+          "bin": 0,
+          "n": 427,
+          "lift": 0.0,
+          "meanConfidence": 0.0,
+          "residualError": 0.25,
+          "buildInclusionAssociation": 0.5
+        },
+        {
+          "bin": 1,
+          "n": 0,
+          "lift": null,
+          "meanConfidence": null,
+          "residualError": null,
+          "buildInclusionAssociation": null
+        },
+        {
+          "bin": 2,
+          "n": 0,
+          "lift": null,
+          "meanConfidence": null,
+          "residualError": null,
+          "buildInclusionAssociation": null
+        },
+        {
+          "bin": 3,
+          "n": 0,
+          "lift": null,
+          "meanConfidence": null,
+          "residualError": null,
+          "buildInclusionAssociation": null
+        },
+        {
+          "bin": 4,
+          "n": 0,
+          "lift": null,
+          "meanConfidence": null,
+          "residualError": null,
+          "buildInclusionAssociation": null
+        }
+      ],
+      "weightedLiftError": 0.0,
+      "monotonicViolations": 0,
+      "positiveConfidenceTasks": 0,
+      "qualified": false
+    },
+    "primaryNotRelaxed": true
+  },
+  "uncertainty": {
+    "mapping": {
+      "x": [
+        50.0,
+        100.0,
+        250.0,
+        500.0,
+        1000.0,
+        2149.3333333333335
+      ],
+      "weights": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "curves": [
+      {
+        "requested": 50,
+        "achieved": 50.0,
+        "grid": [
+          {
+            "alpha": 0,
+            "perSet": {
+              "DMU": {
+                "n": 0,
+                "gain": null
+              },
+              "BRO": {
+                "n": 10,
+                "gain": 0.0
+              },
+              "WOE": {
+                "n": 3,
+                "gain": 0.0
+              }
+            },
+            "safe": false
+          },
+          {
+            "alpha": 0.25,
+            "perSet": {
+              "DMU": {
+                "n": 0,
+                "gain": null
+              },
+              "BRO": {
+                "n": 10,
+                "gain": 0.0
+              },
+              "WOE": {
+                "n": 3,
+                "gain": 0.0
+              }
+            },
+            "safe": false
+          },
+          {
+            "alpha": 0.5,
+            "perSet": {
+              "DMU": {
+                "n": 0,
+                "gain": null
+              },
+              "BRO": {
+                "n": 10,
+                "gain": 0.0
+              },
+              "WOE": {
+                "n": 3,
+                "gain": 0.0
+              }
+            },
+            "safe": false
+          },
+          {
+            "alpha": 0.75,
+            "perSet": {
+              "DMU": {
+                "n": 0,
+                "gain": null
+              },
+              "BRO": {
+                "n": 10,
+                "gain": 0.0
+              },
+              "WOE": {
+                "n": 3,
+                "gain": 0.0
+              }
+            },
+            "safe": false
+          },
+          {
+            "alpha": 1,
+            "perSet": {
+              "DMU": {
+                "n": 0,
+                "gain": null
+              },
+              "BRO": {
+                "n": 10,
+                "gain": 0.0
+              },
+              "WOE": {
+                "n": 3,
+                "gain": 0.0
+              }
+            },
+            "safe": false
+          }
+        ]
+      },
+      {
+        "requested": 100,
+        "achieved": 100.0,
+        "grid": [
+          {
+            "alpha": 0,
+            "perSet": {
+              "DMU": {
+                "n": 0,
+                "gain": null
+              },
+              "BRO": {
+                "n": 10,
+                "gain": 0.0
+              },
+              "WOE": {
+                "n": 3,
+                "gain": 0.0
+              }
+            },
+            "safe": false
+          },
+          {
+            "alpha": 0.25,
+            "perSet": {
+              "DMU": {
+                "n": 0,
+                "gain": null
+              },
+              "BRO": {
+                "n": 10,
+                "gain": 0.0
+              },
+              "WOE": {
+                "n": 3,
+                "gain": 0.0
+              }
+            },
+            "safe": false
+          },
+          {
+            "alpha": 0.5,
+            "perSet": {
+              "DMU": {
+                "n": 0,
+                "gain": null
+              },
+              "BRO": {
+                "n": 10,
+                "gain": 0.0
+              },
+              "WOE": {
+                "n": 3,
+                "gain": 0.0
+              }
+            },
+            "safe": false
+          },
+          {
+            "alpha": 0.75,
+            "perSet": {
+              "DMU": {
+                "n": 0,
+                "gain": null
+              },
+              "BRO": {
+                "n": 10,
+                "gain": 0.0
+              },
+              "WOE": {
+                "n": 3,
+                "gain": 0.0
+              }
+            },
+            "safe": false
+          },
+          {
+            "alpha": 1,
+            "perSet": {
+              "DMU": {
+                "n": 0,
+                "gain": null
+              },
+              "BRO": {
+                "n": 10,
+                "gain": 0.0
+              },
+              "WOE": {
+                "n": 3,
+                "gain": 0.0
+              }
+            },
+            "safe": false
+          }
+        ]
+      },
+      {
+        "requested": 250,
+        "achieved": 250.0,
+        "grid": [
+          {
+            "alpha": 0,
+            "perSet": {
+              "DMU": {
+                "n": 0,
+                "gain": null
+              },
+              "BRO": {
+                "n": 10,
+                "gain": 0.0
+              },
+              "WOE": {
+                "n": 3,
+                "gain": 0.0
+              }
+            },
+            "safe": false
+          },
+          {
+            "alpha": 0.25,
+            "perSet": {
+              "DMU": {
+                "n": 0,
+                "gain": null
+              },
+              "BRO": {
+                "n": 10,
+                "gain": 0.0
+              },
+              "WOE": {
+                "n": 3,
+                "gain": 0.0
+              }
+            },
+            "safe": false
+          },
+          {
+            "alpha": 0.5,
+            "perSet": {
+              "DMU": {
+                "n": 0,
+                "gain": null
+              },
+              "BRO": {
+                "n": 10,
+                "gain": 0.0
+              },
+              "WOE": {
+                "n": 3,
+                "gain": 0.0
+              }
+            },
+            "safe": false
+          },
+          {
+            "alpha": 0.75,
+            "perSet": {
+              "DMU": {
+                "n": 0,
+                "gain": null
+              },
+              "BRO": {
+                "n": 10,
+                "gain": 0.0
+              },
+              "WOE": {
+                "n": 3,
+                "gain": 0.0
+              }
+            },
+            "safe": false
+          },
+          {
+            "alpha": 1,
+            "perSet": {
+              "DMU": {
+                "n": 0,
+                "gain": null
+              },
+              "BRO": {
+                "n": 10,
+                "gain": 0.0
+              },
+              "WOE": {
+                "n": 3,
+                "gain": 0.0
+              }
+            },
+            "safe": false
+          }
+        ]
+      },
+      {
+        "requested": 500,
+        "achieved": 500.0,
+        "grid": [
+          {
+            "alpha": 0,
+            "perSet": {
+              "DMU": {
+                "n": 0,
+                "gain": null
+              },
+              "BRO": {
+                "n": 10,
+                "gain": 0.0
+              },
+              "WOE": {
+                "n": 3,
+                "gain": 0.0
+              }
+            },
+            "safe": false
+          },
+          {
+            "alpha": 0.25,
+            "perSet": {
+              "DMU": {
+                "n": 0,
+                "gain": null
+              },
+              "BRO": {
+                "n": 10,
+                "gain": 0.0
+              },
+              "WOE": {
+                "n": 3,
+                "gain": 0.0
+              }
+            },
+            "safe": false
+          },
+          {
+            "alpha": 0.5,
+            "perSet": {
+              "DMU": {
+                "n": 0,
+                "gain": null
+              },
+              "BRO": {
+                "n": 10,
+                "gain": 0.0
+              },
+              "WOE": {
+                "n": 3,
+                "gain": 0.0
+              }
+            },
+            "safe": false
+          },
+          {
+            "alpha": 0.75,
+            "perSet": {
+              "DMU": {
+                "n": 0,
+                "gain": null
+              },
+              "BRO": {
+                "n": 10,
+                "gain": 0.0
+              },
+              "WOE": {
+                "n": 3,
+                "gain": 0.0
+              }
+            },
+            "safe": false
+          },
+          {
+            "alpha": 1,
+            "perSet": {
+              "DMU": {
+                "n": 0,
+                "gain": null
+              },
+              "BRO": {
+                "n": 10,
+                "gain": 0.0
+              },
+              "WOE": {
+                "n": 3,
+                "gain": 0.0
+              }
+            },
+            "safe": false
+          }
+        ]
+      },
+      {
+        "requested": 1000,
+        "achieved": 1000.0,
+        "grid": [
+          {
+            "alpha": 0,
+            "perSet": {
+              "DMU": {
+                "n": 0,
+                "gain": null
+              },
+              "BRO": {
+                "n": 10,
+                "gain": 0.0
+              },
+              "WOE": {
+                "n": 3,
+                "gain": 0.0
+              }
+            },
+            "safe": false
+          },
+          {
+            "alpha": 0.25,
+            "perSet": {
+              "DMU": {
+                "n": 0,
+                "gain": null
+              },
+              "BRO": {
+                "n": 10,
+                "gain": 0.0
+              },
+              "WOE": {
+                "n": 3,
+                "gain": 0.0
+              }
+            },
+            "safe": false
+          },
+          {
+            "alpha": 0.5,
+            "perSet": {
+              "DMU": {
+                "n": 0,
+                "gain": null
+              },
+              "BRO": {
+                "n": 10,
+                "gain": 0.0
+              },
+              "WOE": {
+                "n": 3,
+                "gain": 0.0
+              }
+            },
+            "safe": false
+          },
+          {
+            "alpha": 0.75,
+            "perSet": {
+              "DMU": {
+                "n": 0,
+                "gain": null
+              },
+              "BRO": {
+                "n": 10,
+                "gain": 0.0
+              },
+              "WOE": {
+                "n": 3,
+                "gain": 0.0
+              }
+            },
+            "safe": false
+          },
+          {
+            "alpha": 1,
+            "perSet": {
+              "DMU": {
+                "n": 0,
+                "gain": null
+              },
+              "BRO": {
+                "n": 10,
+                "gain": 0.0
+              },
+              "WOE": {
+                "n": 3,
+                "gain": 0.0
+              }
+            },
+            "safe": false
+          }
+        ]
+      },
+      {
+        "requested": "full",
+        "achieved": 2149.3333333333335,
+        "grid": [
+          {
+            "alpha": 0,
+            "perSet": {
+              "DMU": {
+                "n": 0,
+                "gain": null
+              },
+              "BRO": {
+                "n": 10,
+                "gain": 0.0
+              },
+              "WOE": {
+                "n": 3,
+                "gain": 0.0
+              }
+            },
+            "safe": false
+          },
+          {
+            "alpha": 0.25,
+            "perSet": {
+              "DMU": {
+                "n": 0,
+                "gain": null
+              },
+              "BRO": {
+                "n": 10,
+                "gain": 0.0
+              },
+              "WOE": {
+                "n": 3,
+                "gain": 0.0
+              }
+            },
+            "safe": false
+          },
+          {
+            "alpha": 0.5,
+            "perSet": {
+              "DMU": {
+                "n": 0,
+                "gain": null
+              },
+              "BRO": {
+                "n": 10,
+                "gain": 0.0
+              },
+              "WOE": {
+                "n": 3,
+                "gain": 0.0
+              }
+            },
+            "safe": false
+          },
+          {
+            "alpha": 0.75,
+            "perSet": {
+              "DMU": {
+                "n": 0,
+                "gain": null
+              },
+              "BRO": {
+                "n": 10,
+                "gain": 0.0
+              },
+              "WOE": {
+                "n": 3,
+                "gain": 0.0
+              }
+            },
+            "safe": false
+          },
+          {
+            "alpha": 1,
+            "perSet": {
+              "DMU": {
+                "n": 0,
+                "gain": null
+              },
+              "BRO": {
+                "n": 10,
+                "gain": 0.0
+              },
+              "WOE": {
+                "n": 3,
+                "gain": 0.0
+              }
+            },
+            "safe": false
+          }
+        ]
+      }
+    ],
+    "bins": [
+      {
+        "bin": 0,
+        "n": 13,
+        "meanConfidence": 0.0,
+        "lift": 0.0,
+        "residualError": 0.25
+      },
+      {
+        "bin": 1,
+        "n": 0,
+        "meanConfidence": null,
+        "lift": null,
+        "residualError": null
+      },
+      {
+        "bin": 2,
+        "n": 0,
+        "meanConfidence": null,
+        "lift": null,
+        "residualError": null
+      },
+      {
+        "bin": 3,
+        "n": 0,
+        "meanConfidence": null,
+        "lift": null,
+        "residualError": null
+      },
+      {
+        "bin": 4,
+        "n": 0,
+        "meanConfidence": null,
+        "lift": null,
+        "residualError": null
+      }
+    ],
+    "predictedLift": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "seconds": 16.87566740019247,
+    "calibrationSetsOnly": true,
+    "probabilityClaim": false,
+    "qualifiedCalibrationCoverage": false
+  },
+  "cold": {
+    "results": [
+      {
+        "set": "DMU",
+        "requested": 50,
+        "achieved": 50,
+        "best": {
+          "n": 7,
+          "Top1": 0.19999999999999998,
+          "Top3": 0.6,
+          "MRR": 0.4566666666666666,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 7,
+          "Top1": 0.19999999999999998,
+          "Top3": 0.6,
+          "MRR": 0.4566666666666666,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 7,
+          "Top1": 0.19999999999999998,
+          "Top3": 0.6,
+          "MRR": 0.4566666666666666,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "<30": {
+            "n": 7,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      },
+      {
+        "set": "DMU",
+        "requested": 100,
+        "achieved": 100,
+        "best": {
+          "n": 7,
+          "Top1": 0.19999999999999998,
+          "Top3": 0.6,
+          "MRR": 0.4566666666666666,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 7,
+          "Top1": 0.19999999999999998,
+          "Top3": 0.6,
+          "MRR": 0.4566666666666666,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 7,
+          "Top1": 0.19999999999999998,
+          "Top3": 0.6,
+          "MRR": 0.4566666666666666,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "<30": {
+            "n": 7,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      },
+      {
+        "set": "DMU",
+        "requested": 250,
+        "achieved": 250,
+        "best": {
+          "n": 7,
+          "Top1": 0.19999999999999998,
+          "Top3": 0.6,
+          "MRR": 0.4566666666666666,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 7,
+          "Top1": 0.19999999999999998,
+          "Top3": 0.6,
+          "MRR": 0.4566666666666666,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 7,
+          "Top1": 0.19999999999999998,
+          "Top3": 0.6,
+          "MRR": 0.4566666666666666,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "<30": {
+            "n": 3,
+            "lift": 0.0,
+            "confidence": 0.0
+          },
+          "30-99": {
+            "n": 4,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      },
+      {
+        "set": "DMU",
+        "requested": 500,
+        "achieved": 500,
+        "best": {
+          "n": 7,
+          "Top1": 0.19999999999999998,
+          "Top3": 0.6,
+          "MRR": 0.4566666666666666,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 7,
+          "Top1": 0.19999999999999998,
+          "Top3": 0.6,
+          "MRR": 0.4566666666666666,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 7,
+          "Top1": 0.19999999999999998,
+          "Top3": 0.6,
+          "MRR": 0.4566666666666666,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "30-99": {
+            "n": 6,
+            "lift": 0.0,
+            "confidence": 0.0
+          },
+          "<30": {
+            "n": 1,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      },
+      {
+        "set": "DMU",
+        "requested": 1000,
+        "achieved": 1000,
+        "best": {
+          "n": 7,
+          "Top1": 0.19999999999999998,
+          "Top3": 0.6,
+          "MRR": 0.4566666666666666,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 7,
+          "Top1": 0.19999999999999998,
+          "Top3": 0.6,
+          "MRR": 0.4566666666666666,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 7,
+          "Top1": 0.19999999999999998,
+          "Top3": 0.6,
+          "MRR": 0.4566666666666666,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "30-99": {
+            "n": 3,
+            "lift": 0.0,
+            "confidence": 0.0
+          },
+          "100+": {
+            "n": 4,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      },
+      {
+        "set": "DMU",
+        "requested": "full",
+        "achieved": 2126,
+        "best": {
+          "n": 7,
+          "Top1": 0.19999999999999998,
+          "Top3": 0.6,
+          "MRR": 0.4566666666666666,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 7,
+          "Top1": 0.19999999999999998,
+          "Top3": 0.6,
+          "MRR": 0.4566666666666666,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 7,
+          "Top1": 0.19999999999999998,
+          "Top3": 0.6,
+          "MRR": 0.4566666666666666,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "100+": {
+            "n": 6,
+            "lift": 0.0,
+            "confidence": 0.0
+          },
+          "30-99": {
+            "n": 1,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      },
+      {
+        "set": "BRO",
+        "requested": 50,
+        "achieved": 50,
+        "best": {
+          "n": 74,
+          "Top1": 0.19999999999999996,
+          "Top3": 0.6,
+          "MRR": 0.4566666666666665,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 74,
+          "Top1": 0.19999999999999996,
+          "Top3": 0.6,
+          "MRR": 0.4566666666666665,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 74,
+          "Top1": 0.19999999999999996,
+          "Top3": 0.6,
+          "MRR": 0.4566666666666665,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "<30": {
+            "n": 74,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      },
+      {
+        "set": "BRO",
+        "requested": 100,
+        "achieved": 100,
+        "best": {
+          "n": 74,
+          "Top1": 0.19999999999999996,
+          "Top3": 0.6,
+          "MRR": 0.4566666666666665,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 74,
+          "Top1": 0.19999999999999996,
+          "Top3": 0.6,
+          "MRR": 0.4566666666666665,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 74,
+          "Top1": 0.19999999999999996,
+          "Top3": 0.6,
+          "MRR": 0.4566666666666665,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "<30": {
+            "n": 74,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      },
+      {
+        "set": "BRO",
+        "requested": 250,
+        "achieved": 250,
+        "best": {
+          "n": 74,
+          "Top1": 0.19999999999999996,
+          "Top3": 0.6,
+          "MRR": 0.4566666666666665,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 74,
+          "Top1": 0.19999999999999996,
+          "Top3": 0.6,
+          "MRR": 0.4566666666666665,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 74,
+          "Top1": 0.19999999999999996,
+          "Top3": 0.6,
+          "MRR": 0.4566666666666665,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "30-99": {
+            "n": 30,
+            "lift": 0.0,
+            "confidence": 0.0
+          },
+          "<30": {
+            "n": 44,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      },
+      {
+        "set": "BRO",
+        "requested": 500,
+        "achieved": 500,
+        "best": {
+          "n": 74,
+          "Top1": 0.19999999999999996,
+          "Top3": 0.6,
+          "MRR": 0.4566666666666665,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 74,
+          "Top1": 0.19999999999999996,
+          "Top3": 0.6,
+          "MRR": 0.4566666666666665,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 74,
+          "Top1": 0.19999999999999996,
+          "Top3": 0.6,
+          "MRR": 0.4566666666666665,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "30-99": {
+            "n": 40,
+            "lift": 0.0,
+            "confidence": 0.0
+          },
+          "<30": {
+            "n": 34,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      },
+      {
+        "set": "BRO",
+        "requested": 1000,
+        "achieved": 1000,
+        "best": {
+          "n": 74,
+          "Top1": 0.19999999999999996,
+          "Top3": 0.6,
+          "MRR": 0.4566666666666665,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 74,
+          "Top1": 0.19999999999999996,
+          "Top3": 0.6,
+          "MRR": 0.4566666666666665,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 74,
+          "Top1": 0.19999999999999996,
+          "Top3": 0.6,
+          "MRR": 0.4566666666666665,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "100+": {
+            "n": 35,
+            "lift": 0.0,
+            "confidence": 0.0
+          },
+          "30-99": {
+            "n": 30,
+            "lift": 0.0,
+            "confidence": 0.0
+          },
+          "<30": {
+            "n": 9,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      },
+      {
+        "set": "BRO",
+        "requested": "full",
+        "achieved": 2088,
+        "best": {
+          "n": 74,
+          "Top1": 0.19999999999999996,
+          "Top3": 0.6,
+          "MRR": 0.4566666666666665,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 74,
+          "Top1": 0.19999999999999996,
+          "Top3": 0.6,
+          "MRR": 0.4566666666666665,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 74,
+          "Top1": 0.19999999999999996,
+          "Top3": 0.6,
+          "MRR": 0.4566666666666665,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "100+": {
+            "n": 65,
+            "lift": 0.0,
+            "confidence": 0.0
+          },
+          "<30": {
+            "n": 9,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      },
+      {
+        "set": "WOE",
+        "requested": 50,
+        "achieved": 50,
+        "best": {
+          "n": 57,
+          "Top1": 0.19999999999999998,
+          "Top3": 0.6000000000000001,
+          "MRR": 0.4566666666666666,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 57,
+          "Top1": 0.19999999999999998,
+          "Top3": 0.6000000000000001,
+          "MRR": 0.4566666666666666,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 57,
+          "Top1": 0.19999999999999998,
+          "Top3": 0.6000000000000001,
+          "MRR": 0.4566666666666666,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "<30": {
+            "n": 57,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      },
+      {
+        "set": "WOE",
+        "requested": 100,
+        "achieved": 100,
+        "best": {
+          "n": 57,
+          "Top1": 0.19999999999999998,
+          "Top3": 0.6000000000000001,
+          "MRR": 0.4566666666666666,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 57,
+          "Top1": 0.19999999999999998,
+          "Top3": 0.6000000000000001,
+          "MRR": 0.4566666666666666,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 57,
+          "Top1": 0.19999999999999998,
+          "Top3": 0.6000000000000001,
+          "MRR": 0.4566666666666666,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "<30": {
+            "n": 57,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      },
+      {
+        "set": "WOE",
+        "requested": 250,
+        "achieved": 250,
+        "best": {
+          "n": 57,
+          "Top1": 0.19999999999999998,
+          "Top3": 0.6000000000000001,
+          "MRR": 0.4566666666666666,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 57,
+          "Top1": 0.19999999999999998,
+          "Top3": 0.6000000000000001,
+          "MRR": 0.4566666666666666,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 57,
+          "Top1": 0.19999999999999998,
+          "Top3": 0.6000000000000001,
+          "MRR": 0.4566666666666666,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "30-99": {
+            "n": 19,
+            "lift": 0.0,
+            "confidence": 0.0
+          },
+          "<30": {
+            "n": 38,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      },
+      {
+        "set": "WOE",
+        "requested": 500,
+        "achieved": 500,
+        "best": {
+          "n": 57,
+          "Top1": 0.19999999999999998,
+          "Top3": 0.6000000000000001,
+          "MRR": 0.4566666666666666,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 57,
+          "Top1": 0.19999999999999998,
+          "Top3": 0.6000000000000001,
+          "MRR": 0.4566666666666666,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 57,
+          "Top1": 0.19999999999999998,
+          "Top3": 0.6000000000000001,
+          "MRR": 0.4566666666666666,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "30-99": {
+            "n": 56,
+            "lift": 0.0,
+            "confidence": 0.0
+          },
+          "<30": {
+            "n": 1,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      },
+      {
+        "set": "WOE",
+        "requested": 1000,
+        "achieved": 1000,
+        "best": {
+          "n": 57,
+          "Top1": 0.19999999999999998,
+          "Top3": 0.6000000000000001,
+          "MRR": 0.4566666666666666,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 57,
+          "Top1": 0.19999999999999998,
+          "Top3": 0.6000000000000001,
+          "MRR": 0.4566666666666666,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 57,
+          "Top1": 0.19999999999999998,
+          "Top3": 0.6000000000000001,
+          "MRR": 0.4566666666666666,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "100+": {
+            "n": 49,
+            "lift": 0.0,
+            "confidence": 0.0
+          },
+          "30-99": {
+            "n": 8,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      },
+      {
+        "set": "WOE",
+        "requested": "full",
+        "achieved": 2234,
+        "best": {
+          "n": 57,
+          "Top1": 0.19999999999999998,
+          "Top3": 0.6000000000000001,
+          "MRR": 0.4566666666666666,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 57,
+          "Top1": 0.19999999999999998,
+          "Top3": 0.6000000000000001,
+          "MRR": 0.4566666666666666,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 57,
+          "Top1": 0.19999999999999998,
+          "Top3": 0.6000000000000001,
+          "MRR": 0.4566666666666666,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "100+": {
+            "n": 56,
+            "lift": 0.0,
+            "confidence": 0.0
+          },
+          "30-99": {
+            "n": 1,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      },
+      {
+        "set": "LCI",
+        "requested": 50,
+        "achieved": 50,
+        "best": {
+          "n": 4,
+          "Top1": 0.2,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 4,
+          "Top1": 0.2,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 4,
+          "Top1": 0.2,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "<30": {
+            "n": 4,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      },
+      {
+        "set": "LCI",
+        "requested": 100,
+        "achieved": 100,
+        "best": {
+          "n": 4,
+          "Top1": 0.2,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 4,
+          "Top1": 0.2,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 4,
+          "Top1": 0.2,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "<30": {
+            "n": 4,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      },
+      {
+        "set": "LCI",
+        "requested": 250,
+        "achieved": 250,
+        "best": {
+          "n": 4,
+          "Top1": 0.2,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 4,
+          "Top1": 0.2,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 4,
+          "Top1": 0.2,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "<30": {
+            "n": 4,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      },
+      {
+        "set": "LCI",
+        "requested": 500,
+        "achieved": 500,
+        "best": {
+          "n": 4,
+          "Top1": 0.2,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 4,
+          "Top1": 0.2,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 4,
+          "Top1": 0.2,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "30-99": {
+            "n": 4,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      },
+      {
+        "set": "LCI",
+        "requested": 1000,
+        "achieved": 1000,
+        "best": {
+          "n": 4,
+          "Top1": 0.2,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 4,
+          "Top1": 0.2,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 4,
+          "Top1": 0.2,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "30-99": {
+            "n": 4,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      },
+      {
+        "set": "LCI",
+        "requested": "full",
+        "achieved": 2165,
+        "best": {
+          "n": 4,
+          "Top1": 0.2,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 4,
+          "Top1": 0.2,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 4,
+          "Top1": 0.2,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "100+": {
+            "n": 4,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      },
+      {
+        "set": "MKM",
+        "requested": 50,
+        "achieved": 50,
+        "best": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "safeC": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "control": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "confidence": null,
+        "byShellSupport": {}
+      },
+      {
+        "set": "MKM",
+        "requested": 100,
+        "achieved": 100,
+        "best": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "safeC": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "control": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "confidence": null,
+        "byShellSupport": {}
+      },
+      {
+        "set": "MKM",
+        "requested": 250,
+        "achieved": 250,
+        "best": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "safeC": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "control": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "confidence": null,
+        "byShellSupport": {}
+      },
+      {
+        "set": "MKM",
+        "requested": 500,
+        "achieved": 500,
+        "best": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "safeC": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "control": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "confidence": null,
+        "byShellSupport": {}
+      },
+      {
+        "set": "MKM",
+        "requested": 1000,
+        "achieved": 1000,
+        "best": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "safeC": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "control": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "confidence": null,
+        "byShellSupport": {}
+      },
+      {
+        "set": "MKM",
+        "requested": "full",
+        "achieved": 2288,
+        "best": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "safeC": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "control": {
+          "n": 0,
+          "Top1": null,
+          "Top3": null,
+          "MRR": null,
+          "normalizedRank": null
+        },
+        "confidence": null,
+        "byShellSupport": {}
+      },
+      {
+        "set": "OTJ",
+        "requested": 50,
+        "achieved": 50,
+        "best": {
+          "n": 364,
+          "Top1": 0.19999999999999996,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 364,
+          "Top1": 0.19999999999999996,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 364,
+          "Top1": 0.19999999999999996,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "<30": {
+            "n": 364,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      },
+      {
+        "set": "OTJ",
+        "requested": 100,
+        "achieved": 100,
+        "best": {
+          "n": 364,
+          "Top1": 0.19999999999999996,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 364,
+          "Top1": 0.19999999999999996,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 364,
+          "Top1": 0.19999999999999996,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "<30": {
+            "n": 364,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      },
+      {
+        "set": "OTJ",
+        "requested": 250,
+        "achieved": 250,
+        "best": {
+          "n": 364,
+          "Top1": 0.19999999999999996,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 364,
+          "Top1": 0.19999999999999996,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 364,
+          "Top1": 0.19999999999999996,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "<30": {
+            "n": 188,
+            "lift": 0.0,
+            "confidence": 0.0
+          },
+          "30-99": {
+            "n": 176,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      },
+      {
+        "set": "OTJ",
+        "requested": 500,
+        "achieved": 500,
+        "best": {
+          "n": 364,
+          "Top1": 0.19999999999999996,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 364,
+          "Top1": 0.19999999999999996,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 364,
+          "Top1": 0.19999999999999996,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "30-99": {
+            "n": 306,
+            "lift": 0.0,
+            "confidence": 0.0
+          },
+          "100+": {
+            "n": 11,
+            "lift": 0.0,
+            "confidence": 0.0
+          },
+          "<30": {
+            "n": 47,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      },
+      {
+        "set": "OTJ",
+        "requested": 1000,
+        "achieved": 1000,
+        "best": {
+          "n": 364,
+          "Top1": 0.19999999999999996,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 364,
+          "Top1": 0.19999999999999996,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 364,
+          "Top1": 0.19999999999999996,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "30-99": {
+            "n": 188,
+            "lift": 0.0,
+            "confidence": 0.0
+          },
+          "100+": {
+            "n": 176,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      },
+      {
+        "set": "OTJ",
+        "requested": "full",
+        "achieved": 2313,
+        "best": {
+          "n": 364,
+          "Top1": 0.19999999999999996,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 364,
+          "Top1": 0.19999999999999996,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 364,
+          "Top1": 0.19999999999999996,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "100+": {
+            "n": 364,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      },
+      {
+        "set": "ONE",
+        "requested": 50,
+        "achieved": 50,
+        "best": {
+          "n": 4,
+          "Top1": 0.2,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 4,
+          "Top1": 0.2,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 4,
+          "Top1": 0.2,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "<30": {
+            "n": 4,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      },
+      {
+        "set": "ONE",
+        "requested": 100,
+        "achieved": 100,
+        "best": {
+          "n": 4,
+          "Top1": 0.2,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 4,
+          "Top1": 0.2,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 4,
+          "Top1": 0.2,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "<30": {
+            "n": 4,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      },
+      {
+        "set": "ONE",
+        "requested": 250,
+        "achieved": 250,
+        "best": {
+          "n": 4,
+          "Top1": 0.2,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 4,
+          "Top1": 0.2,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 4,
+          "Top1": 0.2,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "<30": {
+            "n": 4,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      },
+      {
+        "set": "ONE",
+        "requested": 500,
+        "achieved": 500,
+        "best": {
+          "n": 4,
+          "Top1": 0.2,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 4,
+          "Top1": 0.2,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 4,
+          "Top1": 0.2,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "30-99": {
+            "n": 3,
+            "lift": 0.0,
+            "confidence": 0.0
+          },
+          "<30": {
+            "n": 1,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      },
+      {
+        "set": "ONE",
+        "requested": 1000,
+        "achieved": 1000,
+        "best": {
+          "n": 4,
+          "Top1": 0.2,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 4,
+          "Top1": 0.2,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 4,
+          "Top1": 0.2,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "100+": {
+            "n": 1,
+            "lift": 0.0,
+            "confidence": 0.0
+          },
+          "30-99": {
+            "n": 3,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      },
+      {
+        "set": "ONE",
+        "requested": "full",
+        "achieved": 2205,
+        "best": {
+          "n": 4,
+          "Top1": 0.2,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 4,
+          "Top1": 0.2,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 4,
+          "Top1": 0.2,
+          "Top3": 0.6,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "100+": {
+            "n": 3,
+            "lift": 0.0,
+            "confidence": 0.0
+          },
+          "30-99": {
+            "n": 1,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      },
+      {
+        "set": "MOM",
+        "requested": 50,
+        "achieved": 50,
+        "best": {
+          "n": 55,
+          "Top1": 0.1999999999999999,
+          "Top3": 0.6000000000000001,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 55,
+          "Top1": 0.1999999999999999,
+          "Top3": 0.6000000000000001,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 55,
+          "Top1": 0.1999999999999999,
+          "Top3": 0.6000000000000001,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "<30": {
+            "n": 55,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      },
+      {
+        "set": "MOM",
+        "requested": 100,
+        "achieved": 100,
+        "best": {
+          "n": 55,
+          "Top1": 0.1999999999999999,
+          "Top3": 0.6000000000000001,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 55,
+          "Top1": 0.1999999999999999,
+          "Top3": 0.6000000000000001,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 55,
+          "Top1": 0.1999999999999999,
+          "Top3": 0.6000000000000001,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "<30": {
+            "n": 55,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      },
+      {
+        "set": "MOM",
+        "requested": 250,
+        "achieved": 250,
+        "best": {
+          "n": 55,
+          "Top1": 0.1999999999999999,
+          "Top3": 0.6000000000000001,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 55,
+          "Top1": 0.1999999999999999,
+          "Top3": 0.6000000000000001,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 55,
+          "Top1": 0.1999999999999999,
+          "Top3": 0.6000000000000001,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "<30": {
+            "n": 54,
+            "lift": 0.0,
+            "confidence": 0.0
+          },
+          "30-99": {
+            "n": 1,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      },
+      {
+        "set": "MOM",
+        "requested": 500,
+        "achieved": 500,
+        "best": {
+          "n": 55,
+          "Top1": 0.1999999999999999,
+          "Top3": 0.6000000000000001,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 55,
+          "Top1": 0.1999999999999999,
+          "Top3": 0.6000000000000001,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 55,
+          "Top1": 0.1999999999999999,
+          "Top3": 0.6000000000000001,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "30-99": {
+            "n": 54,
+            "lift": 0.0,
+            "confidence": 0.0
+          },
+          "100+": {
+            "n": 1,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      },
+      {
+        "set": "MOM",
+        "requested": 1000,
+        "achieved": 1000,
+        "best": {
+          "n": 55,
+          "Top1": 0.1999999999999999,
+          "Top3": 0.6000000000000001,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 55,
+          "Top1": 0.1999999999999999,
+          "Top3": 0.6000000000000001,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 55,
+          "Top1": 0.1999999999999999,
+          "Top3": 0.6000000000000001,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "100+": {
+            "n": 55,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      },
+      {
+        "set": "MOM",
+        "requested": "full",
+        "achieved": 2287,
+        "best": {
+          "n": 55,
+          "Top1": 0.1999999999999999,
+          "Top3": 0.6000000000000001,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "safeC": {
+          "n": 55,
+          "Top1": 0.1999999999999999,
+          "Top3": 0.6000000000000001,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "control": {
+          "n": 55,
+          "Top1": 0.1999999999999999,
+          "Top3": 0.6000000000000001,
+          "MRR": 0.45666666666666667,
+          "normalizedRank": 0.5
+        },
+        "confidence": 0.0,
+        "byShellSupport": {
+          "100+": {
+            "n": 55,
+            "lift": 0.0,
+            "confidence": 0.0
+          }
+        }
+      }
+    ],
+    "seconds": 77.18712239991874,
+    "parametersFrozen": true,
+    "undercoverageNotPassed": true
+  },
+  "metadataPrior": {
+    "calibrationOnlyCovariance": [
+      [
+        0.3487890161359104,
+        -0.22144610267998055,
+        -0.06939288770225517,
+        -0.08298773303263245,
+        0.0426365847838665,
+        -0.05598102975696813,
+        0.07210593903496196,
+        -0.004686434305583269,
+        0.025668597137318467
+      ],
+      [
+        -0.22144610267998055,
+        0.3009327115977095,
+        -0.11234567535031274,
+        0.046634616247895416,
+        -0.022530839132996652,
+        0.05413465315234143,
+        -0.06880600641551896,
+        -0.06628911048888354,
+        -0.024266503839816666
+      ],
+      [
+        -0.06939288770225517,
+        -0.11234567535031274,
+        0.3169184860097164,
+        -0.0005068245354276435,
+        0.01684124347385686,
+        -0.007023791691259471,
+        0.006354958708057072,
+        0.20685826613392322,
+        -0.010779864309385271
+      ],
+      [
+        -0.08298773303263245,
+        0.046634616247895416,
+        -0.0005068245354276435,
+        0.4118019801237747,
+        -0.14198527956274876,
+        -0.014232266042511215,
+        0.010085272105147376,
+        -0.011841552670064492,
+        -0.014597044856036984
+      ],
+      [
+        0.0426365847838665,
+        -0.022530839132996652,
+        0.01684124347385686,
+        -0.14198527956274876,
+        0.21418215597772763,
+        0.007719588116139718,
+        -0.006423962809214381,
+        0.02962606058091329,
+        0.0015962383087876962
+      ],
+      [
+        -0.05598102975696813,
+        0.05413465315234143,
+        -0.007023791691259471,
+        -0.014232266042511215,
+        0.007719588116139718,
+        0.1189470150386763,
+        -0.1350091595877851,
+        -0.014186413576883383,
+        -0.0028107734919437803
+      ],
+      [
+        0.07210593903496196,
+        -0.06880600641551896,
+        0.006354958708057072,
+        0.010085272105147376,
+        -0.006423962809214381,
+        -0.1350091595877851,
+        0.1704411537406918,
+        0.016664377685254677,
+        0.004914054033036108
+      ],
+      [
+        -0.004686434305583269,
+        -0.06628911048888354,
+        0.20685826613392322,
+        -0.011841552670064492,
+        0.02962606058091329,
+        -0.014186413576883383,
+        0.016664377685254677,
+        0.22479086266396778,
+        -0.0027316971729711105
+      ],
+      [
+        0.025668597137318463,
+        -0.02426650383981666,
+        -0.010779864309385273,
+        -0.014597044856036988,
+        0.0015962383087876962,
+        -0.00281077349194378,
+        0.004914054033036107,
+        -0.0027316971729711066,
+        0.10707881481986796
+      ]
+    ],
+    "calibrationStructureRows": 6448,
+    "results": [
+      {
+        "set": "DMU",
+        "n": 0,
+        "metrics": {
+          "0": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "0.05": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "0.1": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          }
+        }
+      },
+      {
+        "set": "BRO",
+        "n": 10,
+        "metrics": {
+          "0": {
+            "n": 10,
+            "Top1": 0.2,
+            "Top3": 0.5999999999999999,
+            "MRR": 0.4566666666666667,
+            "normalizedRank": 0.5
+          },
+          "0.05": {
+            "n": 10,
+            "Top1": 0.22833333333333336,
+            "Top3": 0.6849999999999999,
+            "MRR": 0.49427777777777776,
+            "normalizedRank": 0.4375
+          },
+          "0.1": {
+            "n": 10,
+            "Top1": 0.22833333333333336,
+            "Top3": 0.6849999999999999,
+            "MRR": 0.49427777777777776,
+            "normalizedRank": 0.4375
+          }
+        }
+      },
+      {
+        "set": "WOE",
+        "n": 3,
+        "metrics": {
+          "0": {
+            "n": 3,
+            "Top1": 0.20000000000000004,
+            "Top3": 0.6,
+            "MRR": 0.4566666666666667,
+            "normalizedRank": 0.5
+          },
+          "0.05": {
+            "n": 3,
+            "Top1": 0.0,
+            "Top3": 0.3333333333333333,
+            "MRR": 0.26111111111111107,
+            "normalizedRank": 0.75
+          },
+          "0.1": {
+            "n": 3,
+            "Top1": 0.0,
+            "Top3": 0.3333333333333333,
+            "MRR": 0.26111111111111107,
+            "normalizedRank": 0.75
+          }
+        }
+      },
+      {
+        "set": "LCI",
+        "n": 4,
+        "metrics": {
+          "0": {
+            "n": 4,
+            "Top1": 0.2,
+            "Top3": 0.6,
+            "MRR": 0.45666666666666667,
+            "normalizedRank": 0.5
+          },
+          "0.05": {
+            "n": 4,
+            "Top1": 0.2,
+            "Top3": 0.6,
+            "MRR": 0.45666666666666667,
+            "normalizedRank": 0.5
+          },
+          "0.1": {
+            "n": 4,
+            "Top1": 0.2,
+            "Top3": 0.6,
+            "MRR": 0.45666666666666667,
+            "normalizedRank": 0.5
+          }
+        }
+      },
+      {
+        "set": "MKM",
+        "n": 0,
+        "metrics": {
+          "0": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "0.05": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          },
+          "0.1": {
+            "n": 0,
+            "Top1": null,
+            "Top3": null,
+            "MRR": null,
+            "normalizedRank": null
+          }
+        }
+      },
+      {
+        "set": "OTJ",
+        "n": 364,
+        "metrics": {
+          "0": {
+            "n": 364,
+            "Top1": 0.19999999999999996,
+            "Top3": 0.6,
+            "MRR": 0.45666666666666667,
+            "normalizedRank": 0.5
+          },
+          "0.05": {
+            "n": 364,
+            "Top1": 0.1490384615384615,
+            "Top3": 0.5927197802197802,
+            "MRR": 0.4218101343101343,
+            "normalizedRank": 0.5271291208791209
+          },
+          "0.1": {
+            "n": 364,
+            "Top1": 0.1490384615384615,
+            "Top3": 0.5927197802197802,
+            "MRR": 0.4218101343101343,
+            "normalizedRank": 0.5271291208791209
+          }
+        }
+      },
+      {
+        "set": "ONE",
+        "n": 4,
+        "metrics": {
+          "0": {
+            "n": 4,
+            "Top1": 0.2,
+            "Top3": 0.6,
+            "MRR": 0.45666666666666667,
+            "normalizedRank": 0.5
+          },
+          "0.05": {
+            "n": 4,
+            "Top1": 0.0,
+            "Top3": 0.5,
+            "MRR": 0.3208333333333333,
+            "normalizedRank": 0.625
+          },
+          "0.1": {
+            "n": 4,
+            "Top1": 0.0,
+            "Top3": 0.5,
+            "MRR": 0.3208333333333333,
+            "normalizedRank": 0.625
+          }
+        }
+      },
+      {
+        "set": "MOM",
+        "n": 55,
+        "metrics": {
+          "0": {
+            "n": 55,
+            "Top1": 0.1999999999999999,
+            "Top3": 0.6000000000000001,
+            "MRR": 0.45666666666666667,
+            "normalizedRank": 0.5
+          },
+          "0.05": {
+            "n": 55,
+            "Top1": 0.12727272727272726,
+            "Top3": 0.5303030303030302,
+            "MRR": 0.395328282828283,
+            "normalizedRank": 0.5704545454545454
+          },
+          "0.1": {
+            "n": 55,
+            "Top1": 0.12727272727272726,
+            "Top3": 0.5303030303030302,
+            "MRR": 0.395328282828283,
+            "normalizedRank": 0.5704545454545454
+          }
+        }
+      }
+    ],
+    "adopted": false,
+    "reason": "Calibration primary confidence coverage insufficient; optional prior remains0 and is not an approved cold fallback",
+    "missingRoles": "Unassigned removal indicator explicit; never interpreted as proven absence",
+    "noQorOutcomeFit": true
+  },
+  "replay": {
+    "decisions": 54283,
+    "drafts": 1280,
+    "complete": 50285,
+    "metrics": {
+      "current": {
+        "Decisions": 50285,
+        "Eligible": 50285,
+        "Top1Count": 18857,
+        "Top3Count": 36246,
+        "Top5Count": 43318,
+        "Top1": 0.3750024858307646,
+        "Top3": 0.720811375161579,
+        "Top5": 0.8614497365019389,
+        "MeanReciprocalRank": 0.5771582357408029,
+        "MeanNormalizedRank": 0.29783316519968733,
+        "MeanScoreGap": 4.491485849744949,
+        "EstimatedCardScores": 9840,
+        "TotalOfferedOccurrences": 409625,
+        "MaindeckLabelCount": 50285,
+        "MeanObservedMaindeckRate": 0.5967743820224708,
+        "MeanActualRankWhenObservedMaindeckRatePositive": 3.0531575659949373,
+        "PartialPoolDecisions": 0,
+        "MissingGihCards": 9840
+      },
+      "A": {
+        "Decisions": 50285,
+        "Eligible": 50285,
+        "Top1Count": 18859,
+        "Top3Count": 36249,
+        "Top5Count": 43324,
+        "Top1": 0.37504225912299893,
+        "Top3": 0.7208710350999304,
+        "Top5": 0.8615690563786418,
+        "MeanReciprocalRank": 0.5772142416817645,
+        "MeanNormalizedRank": 0.2976921053270973,
+        "MeanScoreGap": 4.490478829025854,
+        "EstimatedCardScores": 9840,
+        "TotalOfferedOccurrences": 409625,
+        "MaindeckLabelCount": 50285,
+        "MeanObservedMaindeckRate": 0.5967743820224708,
+        "MeanActualRankWhenObservedMaindeckRatePositive": 3.0522370886616916,
+        "PartialPoolDecisions": 0,
+        "MissingGihCards": 9840
+      },
+      "B": {
+        "Decisions": 50285,
+        "Eligible": 50285,
+        "Top1Count": 18859,
+        "Top3Count": 36249,
+        "Top5Count": 43324,
+        "Top1": 0.37504225912299893,
+        "Top3": 0.7208710350999304,
+        "Top5": 0.8615690563786418,
+        "MeanReciprocalRank": 0.5772142416817645,
+        "MeanNormalizedRank": 0.2976921053270973,
+        "MeanScoreGap": 4.490478709031114,
+        "EstimatedCardScores": 9840,
+        "TotalOfferedOccurrences": 409625,
+        "MaindeckLabelCount": 50285,
+        "MeanObservedMaindeckRate": 0.5967743820224708,
+        "MeanActualRankWhenObservedMaindeckRatePositive": 3.0522370886616916,
+        "PartialPoolDecisions": 0,
+        "MissingGihCards": 9840
+      },
+      "C": {
+        "Decisions": 50285,
+        "Eligible": 50285,
+        "Top1Count": 18857,
+        "Top3Count": 36246,
+        "Top5Count": 43318,
+        "Top1": 0.3750024858307646,
+        "Top3": 0.720811375161579,
+        "Top5": 0.8614497365019389,
+        "MeanReciprocalRank": 0.5771582357408029,
+        "MeanNormalizedRank": 0.29783316519968733,
+        "MeanScoreGap": 4.491485849744949,
+        "EstimatedCardScores": 9840,
+        "TotalOfferedOccurrences": 409625,
+        "MaindeckLabelCount": 50285,
+        "MeanObservedMaindeckRate": 0.5967743820224708,
+        "MeanActualRankWhenObservedMaindeckRatePositive": 3.0531575659949373,
+        "PartialPoolDecisions": 0,
+        "MissingGihCards": 9840
+      }
+    },
+    "changes": {
+      "Compared": 50285,
+      "Changed": 0,
+      "Improved": 0,
+      "Regressed": 0
+    }
+  },
+  "holdout": {
+    "sets": [
+      "MH3",
+      "DFT"
+    ],
+    "consumed": false,
+    "performance": null,
+    "reason": "Development gates fail; no holdout download/read or release lock"
+  },
+  "tests": {
+    "commit": "68efed1518eb74751b33553c10af7116be35fb20",
+    "dirtyTree": true,
+    "CSharp": {
+      "total": 1297,
+      "passed": 1297,
+      "failed": 0,
+      "notExecuted": 0
+    },
+    "pythonTests": 10,
+    "golden": 40,
+    "buildPassed": true,
+    "warnings": 0,
+    "errors": 0,
+    "preservedFiles": 399,
+    "sourceFingerprint": "f87b1ae5bd87107c7ba756193a01b42e09cea94c0a6b189879157a541428046b",
+    "scoreAssemblySha256": "2774219b32c3fc4b3db46de5dc8d203d17eda96ceb771ee837546ac8705e312f",
+    "productionChanged": false
+  },
+  "performance": {
+    "picks": 500,
+    "candidates": 3770,
+    "inferenceMeanMs": 3.6750570037402213,
+    "inferenceP95Ms": 4.247340082656592,
+    "candidateAmortizedMs": 0.06144050383984805,
+    "perSetModelBytes": {
+      "DMU": 1098420,
+      "BRO": 1340532,
+      "WOE": 1253051,
+      "LCI": 1149727,
+      "MKM": 1034335,
+      "OTJ": 1345437,
+      "ONE": 1044376,
+      "MOM": 1167813
+    },
+    "totalModelBytes": 9433691,
+    "noRawRowsInArtifacts": true
+  },
+  "productionChanged": false,
+  "recommendation": "Retain production A/v1.6.2. Do not qualify undercovered tasks, uncalibrated confidence or zero-weight fallback as strategic benefit. Next work requires separately preregistered evaluation design with adequate matched coverage; no automatic next phase."
+}

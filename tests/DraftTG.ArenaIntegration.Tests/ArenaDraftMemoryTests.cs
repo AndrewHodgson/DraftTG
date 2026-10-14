@@ -8,6 +8,17 @@ namespace DraftTG.ArenaIntegration.Tests;
 public sealed class ArenaDraftMemoryTests
 {
     [Fact]
+    public void NewUiBuildProfileStillRequiresEveryExactFingerprintAndRetainsNativeOffsets()
+    {
+        var supported=ArenaMemoryCompatibility.Supported9F3;
+        Assert.True(ArenaMemoryCompatibility.IsSupported(supported));
+        Assert.Equal(ArenaMemoryCompatibility.Supported.MonoSha256,supported.MonoSha256);
+        Assert.Equal(ArenaMemoryCompatibility.Supported.UnityPlayerSha256,supported.UnityPlayerSha256);
+        var changed=supported.Assemblies.Select((a,i)=>i==0?a with {Sha256="unknown"}:a).ToArray();
+        Assert.False(ArenaMemoryCompatibility.IsSupported(supported with {Assemblies=changed}));
+        Assert.Equal(0x410u,ArenaProcessReader.AccessRights);
+    }
+    [Fact]
     public void ProcessRightsAreExactlyQueryAndRead()
     {
         Assert.Equal(0x410u, ArenaProcessReader.AccessRights);

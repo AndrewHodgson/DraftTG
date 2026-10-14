@@ -1,0 +1,2038 @@
+{
+  "comparableDecisionsWithQualifiedBuild": 33631,
+  "metrics": {
+    "current | overall": {
+      "not-included": {
+        "n": 229139,
+        "normalizedRank": 0.5357098047325377
+      },
+      "included": {
+        "n": 44693,
+        "normalizedRank": 0.31691743792967697
+      }
+    },
+    "current | set=BRO": {
+      "not-included": {
+        "n": 30159,
+        "normalizedRank": 0.527857545282692
+      },
+      "included": {
+        "n": 4827,
+        "normalizedRank": 0.32594661110820217
+      }
+    },
+    "current | stage=early": {
+      "not-included": {
+        "n": 129485,
+        "normalizedRank": 0.5373078806868434
+      },
+      "included": {
+        "n": 26107,
+        "normalizedRank": 0.31496108588746574
+      }
+    },
+    "current | pick=1": {
+      "not-included": {
+        "n": 29933,
+        "normalizedRank": 0.5384032275256008
+      },
+      "included": {
+        "n": 6287,
+        "normalizedRank": 0.31715861149613334
+      }
+    },
+    "current | pack=1": {
+      "not-included": {
+        "n": 76646,
+        "normalizedRank": 0.5232996875597272
+      },
+      "included": {
+        "n": 15013,
+        "normalizedRank": 0.3810479016383899
+      }
+    },
+    "current | Q=low": {
+      "not-included": {
+        "n": 164208,
+        "normalizedRank": 0.6392683275941095
+      },
+      "included": {
+        "n": 22887,
+        "normalizedRank": 0.46670842750604186
+      }
+    },
+    "current | color-fit=pool-empty": {
+      "not-included": {
+        "n": 9213,
+        "normalizedRank": 0.5190192816698841
+      },
+      "included": {
+        "n": 1950,
+        "normalizedRank": 0.35830030653107575
+      }
+    },
+    "current | affinity-confidence=0-.25": {
+      "not-included": {
+        "n": 229139,
+        "normalizedRank": 0.5357098047325377
+      },
+      "included": {
+        "n": 44693,
+        "normalizedRank": 0.31691743792967697
+      }
+    },
+    "current | commitment=0.0": {
+      "not-included": {
+        "n": 56620,
+        "normalizedRank": 0.5233679435286641
+      },
+      "included": {
+        "n": 11330,
+        "normalizedRank": 0.38322215687617284
+      }
+    },
+    "current | offered-other": {
+      "not-included": {
+        "n": 217346,
+        "normalizedRank": 0.5441885825008818
+      },
+      "included": {
+        "n": 22806,
+        "normalizedRank": 0.38437488072452547
+      }
+    },
+    "current | Q=medium": {
+      "not-included": {
+        "n": 62725,
+        "normalizedRank": 0.27711888306547533
+      },
+      "included": {
+        "n": 20478,
+        "normalizedRank": 0.16800103728026375
+      }
+    },
+    "current | color-fit=colorless": {
+      "not-included": {
+        "n": 34136,
+        "normalizedRank": 0.4753919805229273
+      },
+      "included": {
+        "n": 9000,
+        "normalizedRank": 0.4447442283025616
+      }
+    },
+    "current | actual-picked": {
+      "included": {
+        "n": 21887,
+        "normalizedRank": 0.24662756538527542
+      },
+      "not-included": {
+        "n": 11793,
+        "normalizedRank": 0.3794452043052908
+      }
+    },
+    "A | overall": {
+      "not-included": {
+        "n": 229139,
+        "normalizedRank": 0.5389520314860392
+      },
+      "included": {
+        "n": 44693,
+        "normalizedRank": 0.30029468725125763
+      }
+    },
+    "A | set=BRO": {
+      "not-included": {
+        "n": 30159,
+        "normalizedRank": 0.5302552683085858
+      },
+      "included": {
+        "n": 4827,
+        "normalizedRank": 0.31096568532864366
+      }
+    },
+    "A | stage=early": {
+      "not-included": {
+        "n": 129485,
+        "normalizedRank": 0.5399005077120304
+      },
+      "included": {
+        "n": 26107,
+        "normalizedRank": 0.30210222388278085
+      }
+    },
+    "A | pick=1": {
+      "not-included": {
+        "n": 29933,
+        "normalizedRank": 0.5406044806539244
+      },
+      "included": {
+        "n": 6287,
+        "normalizedRank": 0.30667823772643243
+      }
+    },
+    "A | pack=1": {
+      "not-included": {
+        "n": 76646,
+        "normalizedRank": 0.5242091206247849
+      },
+      "included": {
+        "n": 15013,
+        "normalizedRank": 0.3764049650697889
+      }
+    },
+    "A | Q=low": {
+      "not-included": {
+        "n": 164208,
+        "normalizedRank": 0.6381900596635871
+      },
+      "included": {
+        "n": 22887,
+        "normalizedRank": 0.44671580416107876
+      }
+    },
+    "A | color-fit=pool-empty": {
+      "not-included": {
+        "n": 9213,
+        "normalizedRank": 0.5190526792936432
+      },
+      "included": {
+        "n": 1950,
+        "normalizedRank": 0.3583397542628312
+      }
+    },
+    "A | affinity-confidence=0-.25": {
+      "not-included": {
+        "n": 59937,
+        "normalizedRank": 0.5231856365434122
+      },
+      "included": {
+        "n": 11950,
+        "normalizedRank": 0.3837089960248956
+      }
+    },
+    "A | commitment=0.0": {
+      "not-included": {
+        "n": 56620,
+        "normalizedRank": 0.5237266741951483
+      },
+      "included": {
+        "n": 11330,
+        "normalizedRank": 0.3814294534042989
+      }
+    },
+    "A | offered-other": {
+      "not-included": {
+        "n": 217346,
+        "normalizedRank": 0.548049373412274
+      },
+      "included": {
+        "n": 22806,
+        "normalizedRank": 0.3637315244754076
+      }
+    },
+    "A | Q=medium": {
+      "not-included": {
+        "n": 62725,
+        "normalizedRank": 0.2911574231976783
+      },
+      "included": {
+        "n": 20478,
+        "normalizedRank": 0.15396912598421533
+      }
+    },
+    "A | color-fit=colorless": {
+      "not-included": {
+        "n": 34136,
+        "normalizedRank": 0.45270406900211213
+      },
+      "included": {
+        "n": 9000,
+        "normalizedRank": 0.40196789938456606
+      }
+    },
+    "A | actual-picked": {
+      "included": {
+        "n": 21887,
+        "normalizedRank": 0.23419423905214556
+      },
+      "not-included": {
+        "n": 11793,
+        "normalizedRank": 0.37128724065254204
+      }
+    },
+    "B | overall": {
+      "not-included": {
+        "n": 229139,
+        "normalizedRank": 0.5405816312322843
+      },
+      "included": {
+        "n": 44693,
+        "normalizedRank": 0.2919398026775021
+      }
+    },
+    "B | set=BRO": {
+      "not-included": {
+        "n": 30159,
+        "normalizedRank": 0.5318492811902739
+      },
+      "included": {
+        "n": 4827,
+        "normalizedRank": 0.30100632454579
+      }
+    },
+    "B | stage=early": {
+      "not-included": {
+        "n": 129485,
+        "normalizedRank": 0.5413997781360795
+      },
+      "included": {
+        "n": 26107,
+        "normalizedRank": 0.29466617106713633
+      }
+    },
+    "B | pick=1": {
+      "not-included": {
+        "n": 29933,
+        "normalizedRank": 0.5418931339821328
+      },
+      "included": {
+        "n": 6287,
+        "normalizedRank": 0.30054283768296813
+      }
+    },
+    "B | pack=1": {
+      "not-included": {
+        "n": 76646,
+        "normalizedRank": 0.5251235904469602
+      },
+      "included": {
+        "n": 15013,
+        "normalizedRank": 0.3717363143010915
+      }
+    },
+    "B | Q=low": {
+      "not-included": {
+        "n": 164208,
+        "normalizedRank": 0.6372591656262366
+      },
+      "included": {
+        "n": 22887,
+        "normalizedRank": 0.4319416794446287
+      }
+    },
+    "B | color-fit=pool-empty": {
+      "not-included": {
+        "n": 9213,
+        "normalizedRank": 0.5190958178909986
+      },
+      "included": {
+        "n": 1950,
+        "normalizedRank": 0.3584219370373216
+      }
+    },
+    "B | affinity-confidence=0-.25": {
+      "not-included": {
+        "n": 37738,
+        "normalizedRank": 0.5246182034293487
+      },
+      "included": {
+        "n": 7711,
+        "normalizedRank": 0.3795173439220904
+      }
+    },
+    "B | commitment=0.0": {
+      "not-included": {
+        "n": 56620,
+        "normalizedRank": 0.5242052279817203
+      },
+      "included": {
+        "n": 11330,
+        "normalizedRank": 0.3790379516041475
+      }
+    },
+    "B | offered-other": {
+      "not-included": {
+        "n": 217346,
+        "normalizedRank": 0.5501086172417827
+      },
+      "included": {
+        "n": 22806,
+        "normalizedRank": 0.35505961622444127
+      }
+    },
+    "B | Q=medium": {
+      "not-included": {
+        "n": 62725,
+        "normalizedRank": 0.29914789161062577
+      },
+      "included": {
+        "n": 20478,
+        "normalizedRank": 0.15213548483399056
+      }
+    },
+    "B | color-fit=colorless": {
+      "not-included": {
+        "n": 34136,
+        "normalizedRank": 0.4466332974696579
+      },
+      "included": {
+        "n": 9000,
+        "normalizedRank": 0.3914852049185382
+      }
+    },
+    "B | actual-picked": {
+      "included": {
+        "n": 21887,
+        "normalizedRank": 0.22616968947096422
+      },
+      "not-included": {
+        "n": 11793,
+        "normalizedRank": 0.364998463147789
+      }
+    },
+    "C | overall": {
+      "not-included": {
+        "n": 229139,
+        "normalizedRank": 0.5405925501298834
+      },
+      "included": {
+        "n": 44693,
+        "normalizedRank": 0.291883821980817
+      }
+    },
+    "C | set=BRO": {
+      "not-included": {
+        "n": 30159,
+        "normalizedRank": 0.5318695828120875
+      },
+      "included": {
+        "n": 4827,
+        "normalizedRank": 0.3008794804164599
+      }
+    },
+    "C | stage=early": {
+      "not-included": {
+        "n": 129485,
+        "normalizedRank": 0.5414088798280018
+      },
+      "included": {
+        "n": 26107,
+        "normalizedRank": 0.2946210286693682
+      }
+    },
+    "C | pick=1": {
+      "not-included": {
+        "n": 29933,
+        "normalizedRank": 0.5418935316957567
+      },
+      "included": {
+        "n": 6287,
+        "normalizedRank": 0.30054094413089166
+      }
+    },
+    "C | pack=1": {
+      "not-included": {
+        "n": 76646,
+        "normalizedRank": 0.5251372747305346
+      },
+      "included": {
+        "n": 15013,
+        "normalizedRank": 0.3716664518086619
+      }
+    },
+    "C | Q=low": {
+      "not-included": {
+        "n": 164208,
+        "normalizedRank": 0.6372714055637543
+      },
+      "included": {
+        "n": 22887,
+        "normalizedRank": 0.43183526190145666
+      }
+    },
+    "C | color-fit=pool-empty": {
+      "not-included": {
+        "n": 9213,
+        "normalizedRank": 0.5190958178909986
+      },
+      "included": {
+        "n": 1950,
+        "normalizedRank": 0.3584219370373216
+      }
+    },
+    "C | affinity-confidence=0-.25": {
+      "not-included": {
+        "n": 37738,
+        "normalizedRank": 0.5246203179552853
+      },
+      "included": {
+        "n": 7711,
+        "normalizedRank": 0.3795069953317911
+      }
+    },
+    "C | commitment=0.0": {
+      "not-included": {
+        "n": 56620,
+        "normalizedRank": 0.52421092658862
+      },
+      "included": {
+        "n": 11330,
+        "normalizedRank": 0.3790094736586352
+      }
+    },
+    "C | offered-other": {
+      "not-included": {
+        "n": 217346,
+        "normalizedRank": 0.550127512032493
+      },
+      "included": {
+        "n": 22806,
+        "normalizedRank": 0.3550425625997844
+      }
+    },
+    "C | Q=medium": {
+      "not-included": {
+        "n": 62725,
+        "normalizedRank": 0.29915573616410607
+      },
+      "included": {
+        "n": 20478,
+        "normalizedRank": 0.15213631335078742
+      }
+    },
+    "C | color-fit=colorless": {
+      "not-included": {
+        "n": 34136,
+        "normalizedRank": 0.446671221098512
+      },
+      "included": {
+        "n": 9000,
+        "normalizedRank": 0.391492920967921
+      }
+    },
+    "C | actual-picked": {
+      "included": {
+        "n": 21887,
+        "normalizedRank": 0.22607314721697688
+      },
+      "not-included": {
+        "n": 11793,
+        "normalizedRank": 0.364862385652261
+      }
+    },
+    "current | pick=2": {
+      "not-included": {
+        "n": 28011,
+        "normalizedRank": 0.5379315269001463
+      },
+      "included": {
+        "n": 5641,
+        "normalizedRank": 0.31164687112214146
+      }
+    },
+    "current | color-fit=off-pool-shell": {
+      "included": {
+        "n": 6431,
+        "normalizedRank": 0.4189323794089771
+      },
+      "not-included": {
+        "n": 131910,
+        "normalizedRank": 0.6148597445731855
+      }
+    },
+    "current | color-fit=within-pool-shell": {
+      "not-included": {
+        "n": 53880,
+        "normalizedRank": 0.3830021297476754
+      },
+      "included": {
+        "n": 27312,
+        "normalizedRank": 0.24781975940807222
+      }
+    },
+    "A | pick=2": {
+      "not-included": {
+        "n": 28011,
+        "normalizedRank": 0.5404185202300229
+      },
+      "included": {
+        "n": 5641,
+        "normalizedRank": 0.2992974348230508
+      }
+    },
+    "A | color-fit=off-pool-shell": {
+      "included": {
+        "n": 6431,
+        "normalizedRank": 0.4155736292767858
+      },
+      "not-included": {
+        "n": 131910,
+        "normalizedRank": 0.6314324062169183
+      }
+    },
+    "A | color-fit=within-pool-shell": {
+      "not-included": {
+        "n": 53880,
+        "normalizedRank": 0.37058541954004093
+      },
+      "included": {
+        "n": 27312,
+        "normalizedRank": 0.23550244698915612
+      }
+    },
+    "B | pick=2": {
+      "not-included": {
+        "n": 28011,
+        "normalizedRank": 0.5417921480896741
+      },
+      "included": {
+        "n": 5641,
+        "normalizedRank": 0.2924765360503705
+      }
+    },
+    "B | color-fit=off-pool-shell": {
+      "included": {
+        "n": 6431,
+        "normalizedRank": 0.4172734261367444
+      },
+      "not-included": {
+        "n": 131910,
+        "normalizedRank": 0.6400551013605368
+      }
+    },
+    "B | color-fit=within-pool-shell": {
+      "not-included": {
+        "n": 53880,
+        "normalizedRank": 0.36024428295864824
+      },
+      "included": {
+        "n": 27312,
+        "normalizedRank": 0.22487882894297656
+      }
+    },
+    "C | pick=2": {
+      "not-included": {
+        "n": 28011,
+        "normalizedRank": 0.5418066071113088
+      },
+      "included": {
+        "n": 5641,
+        "normalizedRank": 0.29240473820335544
+      }
+    },
+    "C | color-fit=off-pool-shell": {
+      "included": {
+        "n": 6431,
+        "normalizedRank": 0.4172786766784589
+      },
+      "not-included": {
+        "n": 131910,
+        "normalizedRank": 0.640067278596958
+      }
+    },
+    "C | color-fit=within-pool-shell": {
+      "not-included": {
+        "n": 53880,
+        "normalizedRank": 0.36023687919150055
+      },
+      "included": {
+        "n": 27312,
+        "normalizedRank": 0.2247834439123982
+      }
+    },
+    "current | pick=3": {
+      "not-included": {
+        "n": 25890,
+        "normalizedRank": 0.5367273546589885
+      },
+      "included": {
+        "n": 5220,
+        "normalizedRank": 0.31784076396145367
+      }
+    },
+    "A | pick=3": {
+      "not-included": {
+        "n": 25890,
+        "normalizedRank": 0.5391559277596357
+      },
+      "included": {
+        "n": 5220,
+        "normalizedRank": 0.30579559967491005
+      }
+    },
+    "B | pick=3": {
+      "not-included": {
+        "n": 25890,
+        "normalizedRank": 0.5408272177159779
+      },
+      "included": {
+        "n": 5220,
+        "normalizedRank": 0.2975063856960409
+      }
+    },
+    "C | pick=3": {
+      "not-included": {
+        "n": 25890,
+        "normalizedRank": 0.5408384540655687
+      },
+      "included": {
+        "n": 5220,
+        "normalizedRank": 0.29745065598513876
+      }
+    },
+    "current | pick=4": {
+      "not-included": {
+        "n": 23893,
+        "normalizedRank": 0.5366444759823573
+      },
+      "included": {
+        "n": 4688,
+        "normalizedRank": 0.3132366756300204
+      }
+    },
+    "A | pick=4": {
+      "not-included": {
+        "n": 23893,
+        "normalizedRank": 0.5393042296737941
+      },
+      "included": {
+        "n": 4688,
+        "normalizedRank": 0.299680895990623
+      }
+    },
+    "B | pick=4": {
+      "not-included": {
+        "n": 23893,
+        "normalizedRank": 0.5409139315136888
+      },
+      "included": {
+        "n": 4688,
+        "normalizedRank": 0.2914768417968077
+      }
+    },
+    "C | pick=4": {
+      "not-included": {
+        "n": 23893,
+        "normalizedRank": 0.5409252614877693
+      },
+      "included": {
+        "n": 4688,
+        "normalizedRank": 0.29141909711448954
+      }
+    },
+    "current | pick=5": {
+      "not-included": {
+        "n": 21758,
+        "normalizedRank": 0.536417384154998
+      },
+      "included": {
+        "n": 4271,
+        "normalizedRank": 0.31447683342438665
+      }
+    },
+    "A | pick=5": {
+      "not-included": {
+        "n": 21758,
+        "normalizedRank": 0.5398059206830693
+      },
+      "included": {
+        "n": 4271,
+        "normalizedRank": 0.2972144176487422
+      }
+    },
+    "B | pick=5": {
+      "not-included": {
+        "n": 21758,
+        "normalizedRank": 0.5414307381193124
+      },
+      "included": {
+        "n": 4271,
+        "normalizedRank": 0.28893701709201597
+      }
+    },
+    "C | pick=5": {
+      "not-included": {
+        "n": 21758,
+        "normalizedRank": 0.541439930140638
+      },
+      "included": {
+        "n": 4271,
+        "normalizedRank": 0.28889018965113555
+      }
+    },
+    "current | stage=mid": {
+      "included": {
+        "n": 12649,
+        "normalizedRank": 0.31435043487972575
+      },
+      "not-included": {
+        "n": 66016,
+        "normalizedRank": 0.535571397073533
+      }
+    },
+    "current | pick=6": {
+      "included": {
+        "n": 3763,
+        "normalizedRank": 0.3102235003311272
+      },
+      "not-included": {
+        "n": 19707,
+        "normalizedRank": 0.5362373252272781
+      }
+    },
+    "A | stage=mid": {
+      "included": {
+        "n": 12649,
+        "normalizedRank": 0.2950236670945818
+      },
+      "not-included": {
+        "n": 66016,
+        "normalizedRank": 0.5392745036797236
+      }
+    },
+    "A | pick=6": {
+      "included": {
+        "n": 3763,
+        "normalizedRank": 0.291645048487993
+      },
+      "not-included": {
+        "n": 19707,
+        "normalizedRank": 0.539784831914532
+      }
+    },
+    "B | stage=mid": {
+      "included": {
+        "n": 12649,
+        "normalizedRank": 0.2863466840342483
+      },
+      "not-included": {
+        "n": 66016,
+        "normalizedRank": 0.5409370575868091
+      }
+    },
+    "B | pick=6": {
+      "included": {
+        "n": 3763,
+        "normalizedRank": 0.2836162678376338
+      },
+      "not-included": {
+        "n": 19707,
+        "normalizedRank": 0.541317906537118
+      }
+    },
+    "B | affinity-confidence=.25-.5": {
+      "included": {
+        "n": 10250,
+        "normalizedRank": 0.3485041132309425
+      },
+      "not-included": {
+        "n": 52793,
+        "normalizedRank": 0.529413612399046
+      }
+    },
+    "C | stage=mid": {
+      "included": {
+        "n": 12649,
+        "normalizedRank": 0.28628817511140225
+      },
+      "not-included": {
+        "n": 66016,
+        "normalizedRank": 0.5409482681927998
+      }
+    },
+    "C | pick=6": {
+      "included": {
+        "n": 3763,
+        "normalizedRank": 0.283557213300769
+      },
+      "not-included": {
+        "n": 19707,
+        "normalizedRank": 0.5413291828461564
+      }
+    },
+    "C | affinity-confidence=.25-.5": {
+      "included": {
+        "n": 10250,
+        "normalizedRank": 0.3483788385056678
+      },
+      "not-included": {
+        "n": 52793,
+        "normalizedRank": 0.52943793505421
+      }
+    },
+    "current | pick=7": {
+      "not-included": {
+        "n": 17523,
+        "normalizedRank": 0.5374528171138341
+      },
+      "included": {
+        "n": 3424,
+        "normalizedRank": 0.30832777036048065
+      }
+    },
+    "current | commitment=0.25": {
+      "not-included": {
+        "n": 15929,
+        "normalizedRank": 0.5254828267901908
+      },
+      "included": {
+        "n": 3074,
+        "normalizedRank": 0.367951871196829
+      }
+    },
+    "A | pick=7": {
+      "not-included": {
+        "n": 17523,
+        "normalizedRank": 0.540634689645989
+      },
+      "included": {
+        "n": 3424,
+        "normalizedRank": 0.29204390576323985
+      }
+    },
+    "A | commitment=0.25": {
+      "not-included": {
+        "n": 15929,
+        "normalizedRank": 0.527140118236546
+      },
+      "included": {
+        "n": 3074,
+        "normalizedRank": 0.35936403923554217
+      }
+    },
+    "B | pick=7": {
+      "not-included": {
+        "n": 17523,
+        "normalizedRank": 0.542084484881095
+      },
+      "included": {
+        "n": 3424,
+        "normalizedRank": 0.2846242907209613
+      }
+    },
+    "B | commitment=0.25": {
+      "not-included": {
+        "n": 15929,
+        "normalizedRank": 0.5291642415661499
+      },
+      "included": {
+        "n": 3074,
+        "normalizedRank": 0.34887534030344697
+      }
+    },
+    "C | pick=7": {
+      "not-included": {
+        "n": 17523,
+        "normalizedRank": 0.5421140378767497
+      },
+      "included": {
+        "n": 3424,
+        "normalizedRank": 0.28447304739652873
+      }
+    },
+    "C | commitment=0.25": {
+      "not-included": {
+        "n": 15929,
+        "normalizedRank": 0.5292161086310124
+      },
+      "included": {
+        "n": 3074,
+        "normalizedRank": 0.34860657306981313
+      }
+    },
+    "current | pick=8": {
+      "included": {
+        "n": 2989,
+        "normalizedRank": 0.3192483550797368
+      },
+      "not-included": {
+        "n": 15411,
+        "normalizedRank": 0.5350572102178097
+      }
+    },
+    "A | pick=8": {
+      "included": {
+        "n": 2989,
+        "normalizedRank": 0.2991476684350555
+      },
+      "not-included": {
+        "n": 15411,
+        "normalizedRank": 0.5389557860649938
+      }
+    },
+    "B | pick=8": {
+      "included": {
+        "n": 2989,
+        "normalizedRank": 0.2886631936146824
+      },
+      "not-included": {
+        "n": 15411,
+        "normalizedRank": 0.5409892748222513
+      }
+    },
+    "C | pick=8": {
+      "included": {
+        "n": 2989,
+        "normalizedRank": 0.2886631936146824
+      },
+      "not-included": {
+        "n": 15411,
+        "normalizedRank": 0.5409892748222513
+      }
+    },
+    "current | pick=9": {
+      "not-included": {
+        "n": 13375,
+        "normalizedRank": 0.5327177570093459
+      },
+      "included": {
+        "n": 2473,
+        "normalizedRank": 0.3230489284270117
+      }
+    },
+    "current | commitment=0.5": {
+      "not-included": {
+        "n": 17394,
+        "normalizedRank": 0.5314803430188045
+      },
+      "included": {
+        "n": 3613,
+        "normalizedRank": 0.34844475879626724
+      }
+    },
+    "A | pick=9": {
+      "not-included": {
+        "n": 13375,
+        "normalizedRank": 0.5371077881619938
+      },
+      "included": {
+        "n": 2473,
+        "normalizedRank": 0.2993058363660871
+      }
+    },
+    "A | affinity-confidence=.25-.5": {
+      "not-included": {
+        "n": 119912,
+        "normalizedRank": 0.5415942763111938
+      },
+      "included": {
+        "n": 23579,
+        "normalizedRank": 0.288470551718569
+      }
+    },
+    "A | commitment=0.5": {
+      "not-included": {
+        "n": 17394,
+        "normalizedRank": 0.5341780815737354
+      },
+      "included": {
+        "n": 3613,
+        "normalizedRank": 0.3354570852771794
+      }
+    },
+    "B | pick=9": {
+      "not-included": {
+        "n": 13375,
+        "normalizedRank": 0.53881246105919
+      },
+      "included": {
+        "n": 2473,
+        "normalizedRank": 0.2900862649952824
+      }
+    },
+    "B | commitment=0.5": {
+      "not-included": {
+        "n": 17394,
+        "normalizedRank": 0.5364942602783237
+      },
+      "included": {
+        "n": 3613,
+        "normalizedRank": 0.3243063483860606
+      }
+    },
+    "C | pick=9": {
+      "not-included": {
+        "n": 13375,
+        "normalizedRank": 0.53881246105919
+      },
+      "included": {
+        "n": 2473,
+        "normalizedRank": 0.2900862649952824
+      }
+    },
+    "C | commitment=0.5": {
+      "not-included": {
+        "n": 17394,
+        "normalizedRank": 0.5365078959853019
+      },
+      "included": {
+        "n": 3613,
+        "normalizedRank": 0.32424070225066626
+      }
+    },
+    "current | stage=late": {
+      "included": {
+        "n": 5937,
+        "normalizedRank": 0.3309892762899332
+      },
+      "not-included": {
+        "n": 33638,
+        "normalizedRank": 0.529829855124165
+      }
+    },
+    "current | pick=10": {
+      "included": {
+        "n": 1966,
+        "normalizedRank": 0.3136656493726687
+      },
+      "not-included": {
+        "n": 11344,
+        "normalizedRank": 0.5322931358721205
+      }
+    },
+    "A | stage=late": {
+      "included": {
+        "n": 5937,
+        "normalizedRank": 0.3035764415249004
+      },
+      "not-included": {
+        "n": 33638,
+        "normalizedRank": 0.5346681332619855
+      }
+    },
+    "A | pick=10": {
+      "included": {
+        "n": 1966,
+        "normalizedRank": 0.28844523567310953
+      },
+      "not-included": {
+        "n": 11344,
+        "normalizedRank": 0.53666402209685
+      }
+    },
+    "B | stage=late": {
+      "included": {
+        "n": 5937,
+        "normalizedRank": 0.29186738532367634
+      },
+      "not-included": {
+        "n": 33638,
+        "normalizedRank": 0.5367347444358563
+      }
+    },
+    "B | pick=10": {
+      "included": {
+        "n": 1966,
+        "normalizedRank": 0.2757205832485588
+      },
+      "not-included": {
+        "n": 11344,
+        "normalizedRank": 0.5388692994828397
+      }
+    },
+    "C | stage=late": {
+      "included": {
+        "n": 5937,
+        "normalizedRank": 0.29176913143562966
+      },
+      "not-included": {
+        "n": 33638,
+        "normalizedRank": 0.5367520859345581
+      }
+    },
+    "C | pick=10": {
+      "included": {
+        "n": 1966,
+        "normalizedRank": 0.2754238724991523
+      },
+      "not-included": {
+        "n": 11344,
+        "normalizedRank": 0.5389207216737188
+      }
+    },
+    "current | pick=11": {
+      "not-included": {
+        "n": 9130,
+        "normalizedRank": 0.5297280029207739
+      },
+      "included": {
+        "n": 1638,
+        "normalizedRank": 0.33429995929995926
+      }
+    },
+    "A | pick=11": {
+      "not-included": {
+        "n": 9130,
+        "normalizedRank": 0.5341639284410368
+      },
+      "included": {
+        "n": 1638,
+        "normalizedRank": 0.30957468457468457
+      }
+    },
+    "B | pick=11": {
+      "not-included": {
+        "n": 9130,
+        "normalizedRank": 0.535806863818912
+      },
+      "included": {
+        "n": 1638,
+        "normalizedRank": 0.30041717541717544
+      }
+    },
+    "C | pick=11": {
+      "not-included": {
+        "n": 9130,
+        "normalizedRank": 0.535806863818912
+      },
+      "included": {
+        "n": 1638,
+        "normalizedRank": 0.30041717541717544
+      }
+    },
+    "current | pick=12": {
+      "not-included": {
+        "n": 6998,
+        "normalizedRank": 0.5303181861484234
+      },
+      "included": {
+        "n": 1233,
+        "normalizedRank": 0.327926466612598
+      }
+    },
+    "current | commitment=0.75": {
+      "not-included": {
+        "n": 19892,
+        "normalizedRank": 0.5396541664928454
+      },
+      "included": {
+        "n": 4092,
+        "normalizedRank": 0.30723346044093847
+      }
+    },
+    "A | pick=12": {
+      "not-included": {
+        "n": 6998,
+        "normalizedRank": 0.5354863294274554
+      },
+      "included": {
+        "n": 1233,
+        "normalizedRank": 0.29859421465260877
+      }
+    },
+    "A | commitment=0.75": {
+      "not-included": {
+        "n": 19892,
+        "normalizedRank": 0.543355738955729
+      },
+      "included": {
+        "n": 4092,
+        "normalizedRank": 0.28923940388383196
+      }
+    },
+    "B | pick=12": {
+      "not-included": {
+        "n": 6998,
+        "normalizedRank": 0.5372725540630656
+      },
+      "included": {
+        "n": 1233,
+        "normalizedRank": 0.28845633955123
+      }
+    },
+    "B | commitment=0.75": {
+      "not-included": {
+        "n": 19892,
+        "normalizedRank": 0.5453508618813766
+      },
+      "included": {
+        "n": 4092,
+        "normalizedRank": 0.27954072713970074
+      }
+    },
+    "C | pick=12": {
+      "not-included": {
+        "n": 6998,
+        "normalizedRank": 0.5372725540630656
+      },
+      "included": {
+        "n": 1233,
+        "normalizedRank": 0.28845633955123
+      }
+    },
+    "C | commitment=0.75": {
+      "not-included": {
+        "n": 19892,
+        "normalizedRank": 0.545384955270839
+      },
+      "included": {
+        "n": 4092,
+        "normalizedRank": 0.2793749926081305
+      }
+    },
+    "current | pick=13": {
+      "not-included": {
+        "n": 4556,
+        "normalizedRank": 0.5264486391571555
+      },
+      "included": {
+        "n": 794,
+        "normalizedRank": 0.3482367758186398
+      }
+    },
+    "A | pick=13": {
+      "not-included": {
+        "n": 4556,
+        "normalizedRank": 0.531387181738367
+      },
+      "included": {
+        "n": 794,
+        "normalizedRank": 0.3198992443324937
+      }
+    },
+    "B | pick=13": {
+      "not-included": {
+        "n": 4556,
+        "normalizedRank": 0.5346795434591747
+      },
+      "included": {
+        "n": 794,
+        "normalizedRank": 0.30100755667506296
+      }
+    },
+    "C | pick=13": {
+      "not-included": {
+        "n": 4556,
+        "normalizedRank": 0.5346795434591747
+      },
+      "included": {
+        "n": 794,
+        "normalizedRank": 0.30100755667506296
+      }
+    },
+    "current | pick=14": {
+      "not-included": {
+        "n": 1610,
+        "normalizedRank": 0.5204968944099378
+      },
+      "included": {
+        "n": 306,
+        "normalizedRank": 0.39215686274509803
+      }
+    },
+    "A | pick=14": {
+      "not-included": {
+        "n": 1610,
+        "normalizedRank": 0.529192546583851
+      },
+      "included": {
+        "n": 306,
+        "normalizedRank": 0.3464052287581699
+      }
+    },
+    "B | pick=14": {
+      "not-included": {
+        "n": 1610,
+        "normalizedRank": 0.5304347826086957
+      },
+      "included": {
+        "n": 306,
+        "normalizedRank": 0.33986928104575165
+      }
+    },
+    "C | pick=14": {
+      "not-included": {
+        "n": 1610,
+        "normalizedRank": 0.5304347826086957
+      },
+      "included": {
+        "n": 306,
+        "normalizedRank": 0.33986928104575165
+      }
+    },
+    "current | pack=2": {
+      "not-included": {
+        "n": 76412,
+        "normalizedRank": 0.5377116400833225
+      },
+      "included": {
+        "n": 14895,
+        "normalizedRank": 0.30653764068164874
+      }
+    },
+    "current | commitment=1.0": {
+      "not-included": {
+        "n": 119304,
+        "normalizedRank": 0.5428915230816257
+      },
+      "included": {
+        "n": 22584,
+        "normalizedRank": 0.27341789453904225
+      }
+    },
+    "A | pack=2": {
+      "not-included": {
+        "n": 76412,
+        "normalizedRank": 0.5413941851958786
+      },
+      "included": {
+        "n": 14895,
+        "normalizedRank": 0.28764602355236796
+      }
+    },
+    "A | commitment=1.0": {
+      "not-included": {
+        "n": 119304,
+        "normalizedRank": 0.5477166264011214
+      },
+      "included": {
+        "n": 22584,
+        "normalizedRank": 0.2479284273751596
+      }
+    },
+    "B | pack=2": {
+      "not-included": {
+        "n": 76412,
+        "normalizedRank": 0.5438547928526596
+      },
+      "included": {
+        "n": 14895,
+        "normalizedRank": 0.2750229988951036
+      }
+    },
+    "B | affinity-confidence=.5-.75": {
+      "not-included": {
+        "n": 138608,
+        "normalizedRank": 0.5491815753674738
+      },
+      "included": {
+        "n": 26732,
+        "normalizedRank": 0.24498878503161756
+      }
+    },
+    "B | commitment=1.0": {
+      "not-included": {
+        "n": 119304,
+        "normalizedRank": 0.5496787758908057
+      },
+      "included": {
+        "n": 22584,
+        "normalizedRank": 0.23756302342912333
+      }
+    },
+    "C | pack=2": {
+      "not-included": {
+        "n": 76412,
+        "normalizedRank": 0.5438680653061247
+      },
+      "included": {
+        "n": 14895,
+        "normalizedRank": 0.2749549106296337
+      }
+    },
+    "C | affinity-confidence=.5-.75": {
+      "not-included": {
+        "n": 138608,
+        "normalizedRank": 0.5491897861587922
+      },
+      "included": {
+        "n": 26732,
+        "normalizedRank": 0.24494621128617836
+      }
+    },
+    "C | commitment=1.0": {
+      "not-included": {
+        "n": 119304,
+        "normalizedRank": 0.5496824449587979
+      },
+      "included": {
+        "n": 22584,
+        "normalizedRank": 0.23754364092435296
+      }
+    },
+    "current | Q=high": {
+      "not-included": {
+        "n": 2206,
+        "normalizedRank": 0.17985198039595138
+      },
+      "included": {
+        "n": 1328,
+        "normalizedRank": 0.03170936117095756
+      }
+    },
+    "A | Q=high": {
+      "not-included": {
+        "n": 2206,
+        "normalizedRank": 0.1977184294500704
+      },
+      "included": {
+        "n": 1328,
+        "normalizedRank": 0.0332124138411789
+      }
+    },
+    "B | Q=high": {
+      "not-included": {
+        "n": 2206,
+        "normalizedRank": 0.2090797046712731
+      },
+      "included": {
+        "n": 1328,
+        "normalizedRank": 0.03492916053157017
+      }
+    },
+    "C | Q=high": {
+      "not-included": {
+        "n": 2206,
+        "normalizedRank": 0.2090797046712731
+      },
+      "included": {
+        "n": 1328,
+        "normalizedRank": 0.034866409527554106
+      }
+    },
+    "current | pack=3": {
+      "not-included": {
+        "n": 76081,
+        "normalizedRank": 0.5462015385163083
+      },
+      "included": {
+        "n": 14785,
+        "normalizedRank": 0.2622550387650151
+      }
+    },
+    "A | pack=3": {
+      "not-included": {
+        "n": 76081,
+        "normalizedRank": 0.5513516489542042
+      },
+      "included": {
+        "n": 14785,
+        "normalizedRank": 0.23575347960197468
+      }
+    },
+    "A | affinity-confidence=.5-.75": {
+      "not-included": {
+        "n": 49290,
+        "normalizedRank": 0.5516960678464026
+      },
+      "included": {
+        "n": 9164,
+        "normalizedRank": 0.2219446547196438
+      }
+    },
+    "B | pack=3": {
+      "not-included": {
+        "n": 76081,
+        "normalizedRank": 0.5528670660753572
+      },
+      "included": {
+        "n": 14785,
+        "normalizedRank": 0.22795541061351005
+      }
+    },
+    "C | pack=3": {
+      "not-included": {
+        "n": 76081,
+        "normalizedRank": 0.5528728352550989
+      },
+      "included": {
+        "n": 14785,
+        "normalizedRank": 0.2279257234329943
+      }
+    },
+    "current | set=DMU": {
+      "not-included": {
+        "n": 26357,
+        "normalizedRank": 0.5365311885401426
+      },
+      "included": {
+        "n": 5875,
+        "normalizedRank": 0.3361102065782917
+      }
+    },
+    "A | set=DMU": {
+      "not-included": {
+        "n": 26357,
+        "normalizedRank": 0.5392571949387975
+      },
+      "included": {
+        "n": 5875,
+        "normalizedRank": 0.3238805298720192
+      }
+    },
+    "B | set=DMU": {
+      "not-included": {
+        "n": 26357,
+        "normalizedRank": 0.5416549353653349
+      },
+      "included": {
+        "n": 5875,
+        "normalizedRank": 0.3131235520980202
+      }
+    },
+    "C | set=DMU": {
+      "not-included": {
+        "n": 26357,
+        "normalizedRank": 0.541671133076642
+      },
+      "included": {
+        "n": 5875,
+        "normalizedRank": 0.3130508843402461
+      }
+    },
+    "current | set=LCI": {
+      "not-included": {
+        "n": 33750,
+        "normalizedRank": 0.5365899813766482
+      },
+      "included": {
+        "n": 6578,
+        "normalizedRank": 0.3122663618939082
+      }
+    },
+    "A | set=LCI": {
+      "not-included": {
+        "n": 33750,
+        "normalizedRank": 0.5399903617370284
+      },
+      "included": {
+        "n": 6578,
+        "normalizedRank": 0.29481989835440736
+      }
+    },
+    "B | set=LCI": {
+      "not-included": {
+        "n": 33750,
+        "normalizedRank": 0.5414593363015585
+      },
+      "included": {
+        "n": 6578,
+        "normalizedRank": 0.2872829735211918
+      }
+    },
+    "C | set=LCI": {
+      "not-included": {
+        "n": 33750,
+        "normalizedRank": 0.5414741051541052
+      },
+      "included": {
+        "n": 6578,
+        "normalizedRank": 0.28720719839600956
+      }
+    },
+    "current | set=MKM": {
+      "included": {
+        "n": 5214,
+        "normalizedRank": 0.28319458904901945
+      },
+      "not-included": {
+        "n": 25559,
+        "normalizedRank": 0.5442279984623191
+      }
+    },
+    "A | set=MKM": {
+      "included": {
+        "n": 5214,
+        "normalizedRank": 0.2707789371051742
+      },
+      "not-included": {
+        "n": 25559,
+        "normalizedRank": 0.5467607739713456
+      }
+    },
+    "B | set=MKM": {
+      "included": {
+        "n": 5214,
+        "normalizedRank": 0.26443070631793303
+      },
+      "not-included": {
+        "n": 25559,
+        "normalizedRank": 0.5480558041104229
+      }
+    },
+    "C | set=MKM": {
+      "included": {
+        "n": 5214,
+        "normalizedRank": 0.26431630956947416
+      },
+      "not-included": {
+        "n": 25559,
+        "normalizedRank": 0.54807914088598
+      }
+    },
+    "current | set=MOM": {
+      "not-included": {
+        "n": 32887,
+        "normalizedRank": 0.5319617148645337
+      },
+      "included": {
+        "n": 6136,
+        "normalizedRank": 0.32869541773958333
+      }
+    },
+    "A | set=MOM": {
+      "not-included": {
+        "n": 32887,
+        "normalizedRank": 0.5367702591141944
+      },
+      "included": {
+        "n": 6136,
+        "normalizedRank": 0.3029231565370744
+      }
+    },
+    "B | set=MOM": {
+      "not-included": {
+        "n": 32887,
+        "normalizedRank": 0.5381963720828622
+      },
+      "included": {
+        "n": 6136,
+        "normalizedRank": 0.29527964656305594
+      }
+    },
+    "C | set=MOM": {
+      "not-included": {
+        "n": 32887,
+        "normalizedRank": 0.5381972130132496
+      },
+      "included": {
+        "n": 6136,
+        "normalizedRank": 0.29527513944479394
+      }
+    },
+    "current | set=ONE": {
+      "not-included": {
+        "n": 26570,
+        "normalizedRank": 0.5347102561846634
+      },
+      "included": {
+        "n": 5205,
+        "normalizedRank": 0.322814311848894
+      }
+    },
+    "A | set=ONE": {
+      "not-included": {
+        "n": 26570,
+        "normalizedRank": 0.5371973623958947
+      },
+      "included": {
+        "n": 5205,
+        "normalizedRank": 0.3101183633316198
+      }
+    },
+    "B | set=ONE": {
+      "not-included": {
+        "n": 26570,
+        "normalizedRank": 0.5390374204685457
+      },
+      "included": {
+        "n": 5205,
+        "normalizedRank": 0.300725405984772
+      }
+    },
+    "C | set=ONE": {
+      "not-included": {
+        "n": 26570,
+        "normalizedRank": 0.5390505086223942
+      },
+      "included": {
+        "n": 5205,
+        "normalizedRank": 0.3006585947940415
+      }
+    },
+    "current | set=OTJ": {
+      "not-included": {
+        "n": 27164,
+        "normalizedRank": 0.5404697940968372
+      },
+      "included": {
+        "n": 6220,
+        "normalizedRank": 0.32326021111792813
+      }
+    },
+    "A | set=OTJ": {
+      "not-included": {
+        "n": 27164,
+        "normalizedRank": 0.5451499243365316
+      },
+      "included": {
+        "n": 6220,
+        "normalizedRank": 0.3028211342962147
+      }
+    },
+    "B | set=OTJ": {
+      "not-included": {
+        "n": 27164,
+        "normalizedRank": 0.5468227966138804
+      },
+      "included": {
+        "n": 6220,
+        "normalizedRank": 0.29551536218336866
+      }
+    },
+    "C | set=OTJ": {
+      "not-included": {
+        "n": 27164,
+        "normalizedRank": 0.5468194499384678
+      },
+      "included": {
+        "n": 6220,
+        "normalizedRank": 0.2955299777928395
+      }
+    },
+    "current | set=WOE": {
+      "not-included": {
+        "n": 26693,
+        "normalizedRank": 0.5352702022062903
+      },
+      "included": {
+        "n": 4638,
+        "normalizedRank": 0.29701002425776035
+      }
+    },
+    "A | set=WOE": {
+      "not-included": {
+        "n": 26693,
+        "normalizedRank": 0.5378142476745106
+      },
+      "included": {
+        "n": 4638,
+        "normalizedRank": 0.28236832402421014
+      }
+    },
+    "B | set=WOE": {
+      "not-included": {
+        "n": 26693,
+        "normalizedRank": 0.5392462106506987
+      },
+      "included": {
+        "n": 4638,
+        "normalizedRank": 0.27412697263926245
+      }
+    },
+    "C | set=WOE": {
+      "not-included": {
+        "n": 26693,
+        "normalizedRank": 0.5392493325678056
+      },
+      "included": {
+        "n": 4638,
+        "normalizedRank": 0.27410900512452907
+      }
+    }
+  },
+  "humanBuildQualifiedStrata": {
+    "current | Q=low": {
+      "n": 19005,
+      "Top1": 0.2185214417258616,
+      "Top3": 0.5965272296764009,
+      "MRR": 0.45310705532883905,
+      "normalizedRank": 0.44274495754764104
+    },
+    "current | eventual-inclusion=True": {
+      "n": 21859,
+      "Top1": 0.3971361910425912,
+      "Top3": 0.7130243835491102,
+      "MRR": 0.5867728226402,
+      "normalizedRank": 0.2464387539711205
+    },
+    "current | affinity-confidence=0-.25": {
+      "n": 33631,
+      "Top1": 0.38408016413428087,
+      "Top3": 0.7259671136748833,
+      "MRR": 0.5838788359543021,
+      "normalizedRank": 0.29279553921476553
+    },
+    "A | Q=low": {
+      "n": 19005,
+      "Top1": 0.23041304919757957,
+      "Top3": 0.6147329650092082,
+      "MRR": 0.4656323950246602,
+      "normalizedRank": 0.42232887139753755
+    },
+    "A | eventual-inclusion=True": {
+      "n": 21859,
+      "Top1": 0.4080699025572991,
+      "Top3": 0.72464431126767,
+      "MRR": 0.5964027742745891,
+      "normalizedRank": 0.2340299998175473
+    },
+    "A | affinity-confidence=0-.25": {
+      "n": 6745,
+      "Top1": 0.2833209785025945,
+      "Top3": 0.5660489251297257,
+      "MRR": 0.4779081494240871,
+      "normalizedRank": 0.3087557315429813
+    },
+    "B | Q=low": {
+      "n": 19005,
+      "Top1": 0.238726650881347,
+      "Top3": 0.6271507498026835,
+      "MRR": 0.47427338162144794,
+      "normalizedRank": 0.4088529362128415
+    },
+    "B | eventual-inclusion=True": {
+      "n": 21859,
+      "Top1": 0.41333089345349744,
+      "Top3": 0.7326959147261998,
+      "MRR": 0.6019618962399969,
+      "normalizedRank": 0.22598487805153256
+    },
+    "B | affinity-confidence=0-.25": {
+      "n": 3616,
+      "Top1": 0.29728982300884954,
+      "Top3": 0.5754977876106194,
+      "MRR": 0.4860826627281273,
+      "normalizedRank": 0.2621185084888072
+    },
+    "C | Q=low": {
+      "n": 19005,
+      "Top1": 0.23888450407787423,
+      "Top3": 0.6272033675348593,
+      "MRR": 0.4744108558867833,
+      "normalizedRank": 0.40867765459714944
+    },
+    "C | eventual-inclusion=True": {
+      "n": 21859,
+      "Top1": 0.41351388444119125,
+      "Top3": 0.7327416624731232,
+      "MRR": 0.60210429517923,
+      "normalizedRank": 0.22588821213300833
+    },
+    "C | affinity-confidence=0-.25": {
+      "n": 3616,
+      "Top1": 0.29728982300884954,
+      "Top3": 0.5757743362831859,
+      "MRR": 0.48605961700541345,
+      "normalizedRank": 0.2621210225676487
+    },
+    "current | Q=medium": {
+      "n": 13362,
+      "Top1": 0.5769345906301452,
+      "Top3": 0.8899116898667864,
+      "MRR": 0.7404525022284341,
+      "normalizedRank": 0.10378303488990512
+    },
+    "A | Q=medium": {
+      "n": 13362,
+      "Top1": 0.5787307289327945,
+      "Top3": 0.8911839544978296,
+      "MRR": 0.7415385006651283,
+      "normalizedRank": 0.10515109983565303
+    },
+    "B | Q=medium": {
+      "n": 13362,
+      "Top1": 0.5806017063313875,
+      "Top3": 0.8905104026343362,
+      "MRR": 0.7423256772830189,
+      "normalizedRank": 0.10538737817588288
+    },
+    "C | Q=medium": {
+      "n": 13362,
+      "Top1": 0.5808262236192187,
+      "Top3": 0.8905852417302799,
+      "MRR": 0.7424529037461233,
+      "normalizedRank": 0.10536468533213034
+    },
+    "current | eventual-inclusion=False": {
+      "n": 11772,
+      "Top1": 0.3598369011213048,
+      "Top3": 0.75,
+      "MRR": 0.578505097000255,
+      "normalizedRank": 0.37887377304426234
+    },
+    "A | eventual-inclusion=False": {
+      "n": 11772,
+      "Top1": 0.36026163778457354,
+      "Top3": 0.7590893645939517,
+      "MRR": 0.581690968496524,
+      "normalizedRank": 0.3707352353822792
+    },
+    "B | eventual-inclusion=False": {
+      "n": 11772,
+      "Top1": 0.3656133197417601,
+      "Top3": 0.7630818892286783,
+      "MRR": 0.5857795260955301,
+      "normalizedRank": 0.36445222883168854
+    },
+    "C | eventual-inclusion=False": {
+      "n": 11772,
+      "Top1": 0.3657832144070676,
+      "Top3": 0.763166836561332,
+      "MRR": 0.5858857102613473,
+      "normalizedRank": 0.3643159085883346
+    },
+    "B | affinity-confidence=.25-.5": {
+      "n": 8888,
+      "Top1": 0.3487848784878488,
+      "Top3": 0.698019801980198,
+      "MRR": 0.555910572950402,
+      "normalizedRank": 0.3498108420981958
+    },
+    "C | affinity-confidence=.25-.5": {
+      "n": 8888,
+      "Top1": 0.3488973897389739,
+      "Top3": 0.6981323132313232,
+      "MRR": 0.556012011665702,
+      "normalizedRank": 0.34957127143783306
+    },
+    "A | affinity-confidence=.25-.5": {
+      "n": 18554,
+      "Top1": 0.39775789587151017,
+      "Top3": 0.7562250727605907,
+      "MRR": 0.6009345009547122,
+      "normalizedRank": 0.2889192308535846
+    },
+    "B | affinity-confidence=.5-.75": {
+      "n": 21127,
+      "Top1": 0.43375775074549155,
+      "Top3": 0.7911203673025039,
+      "MRR": 0.6321519188857192,
+      "normalizedRank": 0.24486182590385744
+    },
+    "C | affinity-confidence=.5-.75": {
+      "n": 21127,
+      "Top1": 0.4339944147299664,
+      "Top3": 0.7911203673025039,
+      "MRR": 0.6323196873547137,
+      "normalizedRank": 0.24478620849023652
+    },
+    "A | affinity-confidence=.5-.75": {
+      "n": 8332,
+      "Top1": 0.4644743158905425,
+      "Top3": 0.8313730196831493,
+      "MRR": 0.6614504471231548,
+      "normalizedRank": 0.24445416927714095
+    },
+    "current | Q=high": {
+      "n": 1264,
+      "Top1": 0.8346518987341772,
+      "Top3": 0.9390822784810127,
+      "MRR": 0.8949392489542807,
+      "normalizedRank": 0.03630533935122543
+    },
+    "A | Q=high": {
+      "n": 1264,
+      "Top1": 0.8299050632911392,
+      "Top3": 0.9375,
+      "MRR": 0.8913395654099767,
+      "normalizedRank": 0.03842386077354432
+    },
+    "B | Q=high": {
+      "n": 1264,
+      "Top1": 0.8259493670886076,
+      "Top3": 0.9343354430379747,
+      "MRR": 0.8873104062779696,
+      "normalizedRank": 0.0409010183733285
+    },
+    "C | Q=high": {
+      "n": 1264,
+      "Top1": 0.8259493670886076,
+      "Top3": 0.9343354430379747,
+      "MRR": 0.8873499632399949,
+      "normalizedRank": 0.0408350901032863
+    }
+  },
+  "interpretation": "Post-hoc modal-build association, not drafting correctness or final-deck truth; actual identity uses best occurrence when pack contains duplicates"
+}

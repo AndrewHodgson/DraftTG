@@ -1,0 +1,200 @@
+[
+  {
+    "Proof": {
+      "PodGrpId": 106530,
+      "VisibleGrpId": 11809,
+      "LogicalIdentity": "ordinary-basic:Swamp",
+      "Accepted": true,
+      "Reconciled": true,
+      "Reason": "Independently resolved ordinary basic; full normalized gameplay metadata agrees; pod printing retained for history/stats"
+    },
+    "PodCard": {
+      "Identifier": {
+        "Value": "30693b85-550d-4c98-8c5b-4fd4e91c9f28"
+      },
+      "Name": "Swamp",
+      "Colors": {
+        "Colors": [],
+        "IsColorless": true,
+        "Count": 0
+      },
+      "Rarity": "Common",
+      "SetCode": {
+        "Value": "fra"
+      },
+      "CollectorNumber": {
+        "Value": "285"
+      },
+      "GameplayMetadata": {
+        "ManaValue": 0,
+        "ManaCost": "",
+        "TypeLine": "Basic Land \u2014 Swamp",
+        "CardTypes": {
+          "Types": "Land",
+          "IsKnown": true,
+          "IsBasic": true,
+          "BasicLandType": "Swamp"
+        },
+        "Layout": "Normal",
+        "Faces": [],
+        "OracleText": "({T}: Add {B}.)",
+        "Keywords": [],
+        "Power": null,
+        "Toughness": null,
+        "ProducedMana": [
+          "Black"
+        ],
+        "UnrecognizedManaSymbols": [],
+        "ColorsKnown": true,
+        "IsCreature": false,
+        "IsLand": true,
+        "IsBasicLand": true,
+        "IsNonlandSpell": false
+      }
+    },
+    "VisibleCard": {
+      "Identifier": {
+        "Value": "8a97cc92-6894-4c6f-8c8d-bfc9fdd4f974"
+      },
+      "Name": "Swamp",
+      "Colors": {
+        "Colors": [],
+        "IsColorless": true,
+        "Count": 0
+      },
+      "Rarity": "Common",
+      "SetCode": {
+        "Value": "usg"
+      },
+      "CollectorNumber": {
+        "Value": "340"
+      },
+      "GameplayMetadata": {
+        "ManaValue": 0,
+        "ManaCost": "",
+        "TypeLine": "Basic Land \u2014 Swamp",
+        "CardTypes": {
+          "Types": "Land",
+          "IsKnown": true,
+          "IsBasic": true,
+          "BasicLandType": "Swamp"
+        },
+        "Layout": "Normal",
+        "Faces": [],
+        "OracleText": "({T}: Add {B}.)",
+        "Keywords": [],
+        "Power": null,
+        "Toughness": null,
+        "ProducedMana": [
+          "Black"
+        ],
+        "UnrecognizedManaSymbols": [],
+        "ColorsKnown": true,
+        "IsCreature": false,
+        "IsLand": true,
+        "IsBasicLand": true,
+        "IsNonlandSpell": false
+      }
+    },
+    "Evidence": "Owned metadata proof only; physical live evidence separately recorded"
+  },
+  {
+    "Proof": {
+      "PodGrpId": 106535,
+      "VisibleGrpId": 75903,
+      "LogicalIdentity": "ordinary-basic:Forest",
+      "Accepted": true,
+      "Reconciled": true,
+      "Reason": "Independently resolved ordinary basic; full normalized gameplay metadata agrees; pod printing retained for history/stats"
+    },
+    "PodCard": {
+      "Identifier": {
+        "Value": "25e36841-3242-436b-8e82-9099063fa461"
+      },
+      "Name": "Forest",
+      "Colors": {
+        "Colors": [],
+        "IsColorless": true,
+        "Count": 0
+      },
+      "Rarity": "Common",
+      "SetCode": {
+        "Value": "fra"
+      },
+      "CollectorNumber": {
+        "Value": "290"
+      },
+      "GameplayMetadata": {
+        "ManaValue": 0,
+        "ManaCost": "",
+        "TypeLine": "Basic Land \u2014 Forest",
+        "CardTypes": {
+          "Types": "Land",
+          "IsKnown": true,
+          "IsBasic": true,
+          "BasicLandType": "Forest"
+        },
+        "Layout": "Normal",
+        "Faces": [],
+        "OracleText": "({T}: Add {G}.)",
+        "Keywords": [],
+        "Power": null,
+        "Toughness": null,
+        "ProducedMana": [
+          "Green"
+        ],
+        "UnrecognizedManaSymbols": [],
+        "ColorsKnown": true,
+        "IsCreature": false,
+        "IsLand": true,
+        "IsBasicLand": true,
+        "IsNonlandSpell": false
+      }
+    },
+    "VisibleCard": {
+      "Identifier": {
+        "Value": "1afffb9b-3fae-4c90-9108-91713bef7daf"
+      },
+      "Name": "Forest",
+      "Colors": {
+        "Colors": [],
+        "IsColorless": true,
+        "Count": 0
+      },
+      "Rarity": "Common",
+      "SetCode": {
+        "Value": "ana"
+      },
+      "CollectorNumber": {
+        "Value": "20"
+      },
+      "GameplayMetadata": {
+        "ManaValue": 0,
+        "ManaCost": "",
+        "TypeLine": "Basic Land \u2014 Forest",
+        "CardTypes": {
+          "Types": "Land",
+          "IsKnown": true,
+          "IsBasic": true,
+          "BasicLandType": "Forest"
+        },
+        "Layout": "Normal",
+        "Faces": [],
+        "OracleText": "({T}: Add {G}.)",
+        "Keywords": [],
+        "Power": null,
+        "Toughness": null,
+        "ProducedMana": [
+          "Green"
+        ],
+        "UnrecognizedManaSymbols": [],
+        "ColorsKnown": true,
+        "IsCreature": false,
+        "IsLand": true,
+        "IsBasicLand": true,
+        "IsNonlandSpell": false
+      }
+    },
+    "Evidence": "Owned metadata proof only; physical live evidence separately recorded"
+  }
+]

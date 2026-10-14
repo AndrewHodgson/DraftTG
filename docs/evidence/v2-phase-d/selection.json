@@ -1,0 +1,126 @@
+{
+  "version": "research-a-phase-d-v1",
+  "best": "C",
+  "reference": "frequency",
+  "developmentMRR": {
+    "A": 0.53932,
+    "B": 0.5441999999999999,
+    "C": 0.5445533333333333,
+    "color-only": 0.4566666666666667,
+    "frequency": 0.5352066666666666,
+    "Q": 0.3924733333333333,
+    "frequency-plus-Q": 0.5226333333333334
+  },
+  "relativeImprovement": 0.017463658898120515,
+  "setsImproving": 4,
+  "worstRelativeLoss": 0.028066081188969916,
+  "primaryGates": {
+    "primary": false,
+    "perSet": true,
+    "coverage": true
+  },
+  "parameters": {
+    "A": {
+      "family": "A",
+      "weight": "quality",
+      "cold": 50,
+      "perSet": {
+        "DMU": {
+          "n": 500,
+          "Top1": 0.394,
+          "Top3": 0.76,
+          "MRR": 0.6053666666666667,
+          "normalizedRank": 0.334
+        },
+        "BRO": {
+          "n": 477,
+          "Top1": 0.33962264150943394,
+          "Top3": 0.7819706498951782,
+          "MRR": 0.5757861635220125,
+          "normalizedRank": 0.3469601677148847
+        },
+        "WOE": {
+          "n": 500,
+          "Top1": 0.302,
+          "Top3": 0.718,
+          "MRR": 0.5454666666666667,
+          "normalizedRank": 0.388
+        }
+      },
+      "MRR": 0.5755398322851152
+    },
+    "B": {
+      "family": "B",
+      "weight": "uniform",
+      "cold": 50,
+      "perSet": {
+        "DMU": {
+          "n": 500,
+          "Top1": 0.394,
+          "Top3": 0.778,
+          "MRR": 0.6113,
+          "normalizedRank": 0.3225
+        },
+        "BRO": {
+          "n": 477,
+          "Top1": 0.33962264150943394,
+          "Top3": 0.7924528301886793,
+          "MRR": 0.5814465408805031,
+          "normalizedRank": 0.33752620545073375
+        },
+        "WOE": {
+          "n": 500,
+          "Top1": 0.308,
+          "Top3": 0.716,
+          "MRR": 0.5456666666666667,
+          "normalizedRank": 0.392
+        }
+      },
+      "MRR": 0.57947106918239
+    },
+    "C": {
+      "family": "C",
+      "weight": "uniform",
+      "cold": 50,
+      "perSet": {
+        "DMU": {
+          "n": 500,
+          "Top1": 0.394,
+          "Top3": 0.782,
+          "MRR": 0.6116333333333334,
+          "normalizedRank": 0.3215
+        },
+        "BRO": {
+          "n": 477,
+          "Top1": 0.34591194968553457,
+          "Top3": 0.7966457023060797,
+          "MRR": 0.5846960167714884,
+          "normalizedRank": 0.33490566037735847
+        },
+        "WOE": {
+          "n": 500,
+          "Top1": 0.31,
+          "Top3": 0.72,
+          "MRR": 0.5477666666666666,
+          "normalizedRank": 0.389
+        }
+      },
+      "MRR": 0.5813653389238295
+    }
+  },
+  "inputs": {
+    "docs\\evidence\\v2-phase-d\\representation.json": "d50e299cad6b209fd47661736aaa02747c9ecbf07953d67b9567185250ea833b",
+    "docs\\evidence\\v2-phase-d\\model-fit.json": "98c882d5508d58f65a68f298c8a2561a221bb94eb4552a4efc486bfba4169cd1",
+    "docs\\evidence\\v2-phase-d\\build-completion.json": "9e572050456f31bc57f8fb616e150f60989331dcf5b1cb5ee0e0650acf8e2693",
+    "data\\historical\\normalized\\phase-d-v1\\DMU.model.json": "d2f277c2876b4baa8d58ba370ff7441c87dd0b036a80302fa4af01fa03da06be",
+    "data\\historical\\normalized\\phase-d-v1\\BRO.model.json": "2d95a429864b76da131d34047e8584eed6be4938f3d9b332cf40da8a386932e3",
+    "data\\historical\\normalized\\phase-d-v1\\WOE.model.json": "0c70a9f85ec8200fd4f9e1a7218f2d4193daa2faf87b6fb45388cd6f7d9d80c0",
+    "data\\historical\\normalized\\phase-d-v1\\LCI.model.json": "dff1e2ac5f01b8f7e8ce15a2c7ec2ce7d449154682fa92794a16ab48b29f2f0f",
+    "data\\historical\\normalized\\phase-d-v1\\MKM.model.json": "5d4f0e861d2914949f944c7bd99c83844f31380959e4746ad6ce3a3078e57cda",
+    "data\\historical\\normalized\\phase-d-v1\\OTJ.model.json": "0a3bdfacd7ff8cbdc5d546114a9ccb2a3db39c25fab818d518c64a6497a65437",
+    "data\\historical\\normalized\\phase-d-v1\\ONE.model.json": "bf15ba001164dc30686a76866aa8a3fd46f7eaffc54174005212e60b2b06e76f",
+    "data\\historical\\normalized\\phase-d-v1\\MOM.model.json": "d3a25b876a5af75458a2f367caa20997446eb158a7c64b00b2af469fb4eeb835"
+  },
+  "holdoutsConsumed": false,
+  "productionChanged": false
+}

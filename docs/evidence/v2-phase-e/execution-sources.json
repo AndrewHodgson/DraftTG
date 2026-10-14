@@ -1,0 +1,16 @@
+{
+  "files": {
+    "tools/DraftTG.HistoricalEvaluation/phase_e.py": "5953c50276834f2e67fe8bdc59062ab8a9d7c4306f291f8f0c31c12b0e1f905b",
+    "tools/DraftTG.HistoricalEvaluation/phase_e_builders.py": "539474f5274ee5c08a86a2044b181c0b3972d0e0ed5183e45183d29d499e0160",
+    "tools/DraftTG.HistoricalEvaluation/phase_e_core.py": "fb7851a617f76f27ed384815e569e042a1701abf5d5dfd9b3702d8289372733f",
+    "tools/DraftTG.HistoricalEvaluation/phase_e_models.py": "3d662d9181361ed8172f90418359510cd3241783419fcbc33c1ca2fa5ff4f425",
+    "tools/DraftTG.HistoricalEvaluation/phase_e_publish.py": "d7197cccbcb1953b39452060cc3bac5c9007be36dd81292047b1fb6d494f4305",
+    "tools/DraftTG.HistoricalEvaluation/phase_e_register.py": "1807e7a7038d789ecc00ad06c033e50acaa7616ba65ab1ab19045b14667a9b69",
+    "tools/DraftTG.HistoricalEvaluation/phase_e_report.py": "448d5e82459902e4b9c940fee079e425c3c45516b8e1b92fc66883f68a96d216",
+    "tools/DraftTG.HistoricalEvaluation/test_phase_e.py": "926768915f8815e54a18b4ad8011301d66e38c99b47a7f3561a2ebe0a05bc1c5",
+    "tools/DraftTG.DeckFitResearch/DraftTG.DeckFitResearch.csproj": "d77443d72370fddbe523c51b7c20cfc8faf39860be5639e88c84f3f42e0d6981",
+    "tools/DraftTG.DeckFitResearch/Program.cs": "4c43f27afc2b3cb229513c48c1d52cd44e7cea373933005d311fd75215eb75fa",
+    "src/DraftTG.HistoricalEvaluation/ExperimentalDeckFitSubstitution.cs": "5878b3f2327cc0bbfe55ab3702a2f47726cf09cdedcae0524622222ea17c0385",
+    "tests/DraftTG.HistoricalEvaluation.Tests/ExperimentalDeckFitTests.cs": "37c417128b9abd97f3e8d1ed75d58f73eca2a81ce3600caa41df64efd311d57d"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "exact": false,
+  "distinctIdentities": 1,
+  "offeredOccurrences": 5,
+  "examples": [
+    {
+      "set": "DMU",
+      "draft": "1feeed2fda29439d86a5e55076bd2860",
+      "pack": 3,
+      "pick": 5,
+      "id": "3027347d-5fd3-47cd-83d4-8c834e00794c",
+      "name": "Sol'Kanar the Tainted",
+      "researchQ": 0.5488579112117034,
+      "productionQ": 0.5,
+      "productionProvenance": "NeutralEstimate"
+    },
+    {
+      "set": "DMU",
+      "draft": "4411f58e8a4841c9ad2b311862518958",
+      "pack": 3,
+      "pick": 2,
+      "id": "3027347d-5fd3-47cd-83d4-8c834e00794c",
+      "name": "Sol'Kanar the Tainted",
+      "researchQ": 0.5488579112117034,
+      "productionQ": 0.5,
+      "productionProvenance": "NeutralEstimate"
+    },
+    {
+      "set": "DMU",
+      "draft": "571d1550a1a84c6f8fc74cc52a25389d",
+      "pack": 1,
+      "pick": 1,
+      "id": "3027347d-5fd3-47cd-83d4-8c834e00794c",
+      "name": "Sol'Kanar the Tainted",
+      "researchQ": 0.5488579112117034,
+      "productionQ": 0.5,
+      "productionProvenance": "NeutralEstimate"
+    },
+    {
+      "set": "DMU",
+      "draft": "ad74aa89c9c24f229f849644d745ed77",
+      "pack": 2,
+      "pick": 3,
+      "id": "3027347d-5fd3-47cd-83d4-8c834e00794c",
+      "name": "Sol'Kanar the Tainted",
+      "researchQ": 0.5488579112117034,
+      "productionQ": 0.5,
+      "productionProvenance": "NeutralEstimate"
+    },
+    {
+      "set": "DMU",
+      "draft": "e9b238bf86e945f58c81b951e91c3173",
+      "pack": 3,
+      "pick": 3,
+      "id": "3027347d-5fd3-47cd-83d4-8c834e00794c",
+      "name": "Sol'Kanar the Tainted",
+      "researchQ": 0.5488579112117034,
+      "productionQ": 0.5,
+      "productionProvenance": "NeutralEstimate"
+    }
+  ],
+  "productionQHeldFixed": true,
+  "noPostDevelopmentRefit": true,
+  "reason": "Frozen research quality export and actual production statistics mapping differ for one identity; not an eligible production-equivalent feature contract."
+}

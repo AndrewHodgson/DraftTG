@@ -1,0 +1,9 @@
+{
+  "sets": [
+    "MH3",
+    "DFT"
+  ],
+  "consumed": false,
+  "performance": null,
+  "reason": "Development gate fails; no holdout acquisition or performance read"
+}

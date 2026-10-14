@@ -1,0 +1,15 @@
+{
+  "files": {
+    "tools\\DraftTG.HistoricalEvaluation\\phase_d.py": "1950e35e82792b03cbb4376ace2736b7c5802ef42153a80a2c147badd79c0739",
+    "tools\\DraftTG.HistoricalEvaluation\\phase_d_core.py": "0150d3c337769cf18e2a1fbda1afdc84a79f276d8ad1d8feb1bad07288a769be",
+    "tools\\DraftTG.HistoricalEvaluation\\phase_d_models.py": "b418e9d2f6c1d6a8d7fabec0b6c4eb101ea79dfb735b0b4e0d73d52d79c38246",
+    "tools\\DraftTG.HistoricalEvaluation\\phase_d_publish.py": "b5e0e9f1837a4f30521a4e807f71e52de3fee56a8ca107677ae8c82ec96a84db",
+    "tools\\DraftTG.HistoricalEvaluation\\phase_d_report.py": "4d3a954f65e66bb0c05f61696450f275c70e762d62512a28fbd7057b5d2d09b8",
+    "tools\\DraftTG.HistoricalEvaluation\\phase_d_research.py": "56f5df14ed2ebe7b87501567e8c76a09781c4c1521e570f3b9823a9efafc3518",
+    "tools\\DraftTG.HistoricalEvaluation\\test_phase_d.py": "5bf1a3c093a2abc63922b4e4530d8f2daa46c48ab69effe9b3fb76d82db632c5",
+    "src/DraftTG.HistoricalEvaluation/ExperimentalAffinitySubstitution.cs": "71752399cfe691c366dc64192dbecbb76dc6552d14717a030d8054957d00cb18",
+    "tools/DraftTG.QualityEvidenceResearch/Program.cs": "aba846d740b3f3d46c3951db87b1f2e7094fa8fad74d18e2a0803cb3329e0dd4",
+    "tests/DraftTG.HistoricalEvaluation.Tests/ExperimentalAffinityTests.cs": "e82353ca688c105f0f86fc28b243ca73f3988fa6b249f906969295a4fd981535"
+  },
+  "fingerprint": "99a6092975465fb22602eab6c7cc425c0299a831479805af30cef2f9daf569f5"
+}

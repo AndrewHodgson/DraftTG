@@ -1,0 +1,15 @@
+{
+  "emptyPoolRetainsA": true,
+  "missingCardDeclines": true,
+  "lowSupportPairZero": true,
+  "boundedFitConfidence": true,
+  "basicsExcluded": true,
+  "rareCannotCreateFactor": "Factor vocabulary requires20 builds; complexity requires25 effective support and .8 stability",
+  "hybridSoftMembership": true,
+  "targetLeakageRejected": true,
+  "sameColorPowerConfound": "Measured by matched completion controls, not certified by synthetic scores",
+  "unstructuredRoles": 0,
+  "splashPolicy": "Spell loads select base shells; land/fixing features descriptive only",
+  "noOutcomeFit": true,
+  "noProductionChanges": true
+}

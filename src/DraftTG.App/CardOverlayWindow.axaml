@@ -5,6 +5,32 @@
         TransparencyLevelHint="Transparent" Background="Transparent" ShowInTaskbar="False"
         SizeToContent="Manual" Focusable="False" ShowActivated="False" WindowStartupLocation="Manual">
   <Grid ClipToBounds="True">
+    <ItemsControl ItemsSource="{Binding DeckBadges}" IsHitTestVisible="False">
+      <ItemsControl.ItemsPanel><ItemsPanelTemplate><Canvas /></ItemsPanelTemplate></ItemsControl.ItemsPanel>
+      <ItemsControl.Styles>
+        <Style Selector="ContentPresenter" x:DataType="vm:DeckQualityBadge">
+          <Setter Property="Canvas.Left" Value="{Binding X}" /><Setter Property="Canvas.Top" Value="{Binding Y}" />
+        </Style>
+      </ItemsControl.Styles>
+      <ItemsControl.ItemTemplate><DataTemplate x:DataType="vm:DeckQualityBadge">
+        <Border Width="{Binding Width}" Height="{Binding Height}" Background="#DD171B22" CornerRadius="3">
+          <TextBlock Text="{Binding Label}" Foreground="#FFF8FAFD" FontSize="10" HorizontalAlignment="Center" />
+        </Border>
+      </DataTemplate></ItemsControl.ItemTemplate>
+    </ItemsControl>
+    <ItemsControl ItemsSource="{Binding LocalizationDebug}" IsHitTestVisible="False">
+      <ItemsControl.ItemsPanel><ItemsPanelTemplate><Canvas /></ItemsPanelTemplate></ItemsControl.ItemsPanel>
+      <ItemsControl.Styles>
+        <Style Selector="ContentPresenter" x:DataType="vm:LocalizationDebugItem">
+          <Setter Property="Canvas.Left" Value="{Binding X}" /><Setter Property="Canvas.Top" Value="{Binding Y}" />
+        </Style>
+      </ItemsControl.Styles>
+      <ItemsControl.ItemTemplate><DataTemplate x:DataType="vm:LocalizationDebugItem">
+        <Border Width="{Binding Width}" Height="{Binding Height}" BorderBrush="#FF69C4FF" BorderThickness="1">
+          <TextBlock Text="{Binding Label}" Foreground="White" Background="#B3171B22" FontSize="9" TextWrapping="Wrap" VerticalAlignment="Top" />
+        </Border>
+      </DataTemplate></ItemsControl.ItemTemplate>
+    </ItemsControl>
     <ItemsControl ItemsSource="{Binding Badges}" IsVisible="{Binding ShowBadges}" IsHitTestVisible="False" Focusable="False">
       <ItemsControl.ItemsPanel><ItemsPanelTemplate><Canvas /></ItemsPanelTemplate></ItemsControl.ItemsPanel>
       <ItemsControl.Styles>

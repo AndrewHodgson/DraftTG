@@ -1,0 +1,2437 @@
+{
+  "version": "research-a-phase-d-v1",
+  "qualification": {
+    "datasets": [
+      {
+        "set": "AFR",
+        "format": "PremierDraft",
+        "counts": {
+          "availablePrimaryBuilds": 3120,
+          "qualified": 2495,
+          "MEDIUM": 2495,
+          "mode-support-unavailable-multiple-configurations": 526,
+          "LOW": 625,
+          "under-three-observed-games": 99
+        },
+        "landCount": {
+          "16": 456,
+          "17": 2568,
+          "18": 70,
+          "15": 25,
+          "14": 1
+        },
+        "mainColorDistribution": {
+          "BR": 714,
+          "WG": 429,
+          "BG": 274,
+          "WR": 390,
+          "RG": 309,
+          "UR": 159,
+          "WB": 273,
+          "UB": 179,
+          "WU": 117,
+          "UG": 138,
+          "WBR": 10,
+          "U": 10,
+          "B": 13,
+          "R": 19,
+          "G": 19,
+          "WBG": 10,
+          "WUG": 7,
+          "UBR": 8,
+          "BRG": 14,
+          "URG": 2,
+          "W": 7,
+          "WUB": 8,
+          "UBG": 5,
+          "WUR": 1,
+          "WUBR": 1,
+          "WRG": 4
+        },
+        "knownModeSupportHistogram": {
+          "6": 376,
+          "5": 434,
+          "4": 398,
+          "8": 352,
+          "7": 330,
+          "9": 355,
+          "3": 250,
+          "2": 45,
+          "1": 53
+        },
+        "openingAgreement": {
+          "not-proven-agree": 3067,
+          "agreement": 53
+        },
+        "partitions": {},
+        "sourceBuildAudit": {
+          "draftsWithObservedDeck": 3415,
+          "observedConfigurations": 4252,
+          "gameDecksExactly40": 18759,
+          "non40GameDecks": 1241,
+          "observedPrimaryBuild": 3120,
+          "openingObservedAndModalAgree": 53,
+          "ambiguousModal40": 98
+        },
+        "availableGameDrafts": 3415,
+        "observedGames": 20000,
+        "incompleteHistories": "Unavailable as a proven completeness label; bounded samples and absent opening keys are not complete events",
+        "modeSupport": "Exactly Games only for Configurations==1; unknown otherwise, declined",
+        "sourceSha256": "cdd3995d8fb778b3c1acc2b13b80cb37523ef9cd788321e75314b6c3e2e3dac1"
+      },
+      {
+        "set": "BRO",
+        "format": "PremierDraft",
+        "counts": {
+          "availablePrimaryBuilds": 7119,
+          "mode-support-unavailable-multiple-configurations": 1772,
+          "LOW": 2020,
+          "qualified": 5099,
+          "HIGH": 3793,
+          "MEDIUM": 1306,
+          "under-three-observed-games": 247,
+          "suspicious-land-composition": 1
+        },
+        "landCount": {
+          "17": 3672,
+          "16": 2885,
+          "15": 482,
+          "14": 44,
+          "18": 29,
+          "9": 1,
+          "13": 6
+        },
+        "mainColorDistribution": {
+          "BG": 723,
+          "WB": 433,
+          "WU": 781,
+          "WG": 610,
+          "R": 193,
+          "BR": 1046,
+          "UB": 506,
+          "RG": 598,
+          "UG": 381,
+          "UBR": 29,
+          "U": 62,
+          "W": 96,
+          "WR": 719,
+          "UR": 481,
+          "WUB": 32,
+          "B": 89,
+          "G": 121,
+          "WUR": 24,
+          "BRG": 31,
+          "URG": 10,
+          "UBG": 34,
+          "WUG": 43,
+          "WBG": 32,
+          "WBR": 26,
+          "WRG": 14,
+          "UBRG": 2,
+          "WUBG": 2,
+          "WBRG": 1
+        },
+        "knownModeSupportHistogram": {
+          "5": 837,
+          "3": 506,
+          "9": 668,
+          "7": 728,
+          "8": 735,
+          "4": 782,
+          "6": 844,
+          "1": 114,
+          "2": 129
+        },
+        "openingAgreement": {
+          "not-proven-agree": 1243,
+          "agreement": 5876
+        },
+        "partitions": {
+          "fit": 2088,
+          "target": 2530,
+          "audit": 481
+        },
+        "sourceBuildAudit": {
+          "draftsWithObservedDeck": 8000,
+          "observedConfigurations": 10891,
+          "gameDecksExactly40": 43201,
+          "non40GameDecks": 3649,
+          "observedPrimaryBuild": 7119,
+          "openingObservedAndModalAgree": 5876,
+          "ambiguousModal40": 312
+        },
+        "availableGameDrafts": 8000,
+        "observedGames": 46850,
+        "incompleteHistories": "Unavailable as a proven completeness label; bounded samples and absent opening keys are not complete events",
+        "modeSupport": "Exactly Games only for Configurations==1; unknown otherwise, declined",
+        "sourceSha256": "a77f5e11f68d4bc1b19850fc276c9318e858d3791b4b16059b528afb2ad2f1be"
+      },
+      {
+        "set": "DMU",
+        "format": "PremierDraft",
+        "counts": {
+          "availablePrimaryBuilds": 7256,
+          "qualified": 5299,
+          "MEDIUM": 1978,
+          "HIGH": 3321,
+          "mode-support-unavailable-multiple-configurations": 1359,
+          "LOW": 1957,
+          "under-three-observed-games": 598
+        },
+        "landCount": {
+          "17": 5872,
+          "18": 169,
+          "16": 1162,
+          "15": 46,
+          "19": 7
+        },
+        "mainColorDistribution": {
+          "WU": 486,
+          "UB": 606,
+          "WUG": 166,
+          "UBG": 302,
+          "WUB": 177,
+          "WBG": 157,
+          "BG": 602,
+          "WG": 382,
+          "UR": 873,
+          "BR": 279,
+          "WB": 764,
+          "UG": 401,
+          "B": 24,
+          "WBR": 87,
+          "RG": 481,
+          "UBR": 70,
+          "WR": 598,
+          "W": 39,
+          "WRG": 131,
+          "WUR": 103,
+          "BRG": 183,
+          "URG": 133,
+          "G": 27,
+          "R": 8,
+          "UBRG": 39,
+          "WBRG": 19,
+          "U": 47,
+          "WUBG": 39,
+          "WURG": 20,
+          "WUBR": 9,
+          "WUBRG": 4
+        },
+        "knownModeSupportHistogram": {
+          "5": 999,
+          "7": 759,
+          "8": 646,
+          "9": 303,
+          "2": 376,
+          "6": 890,
+          "1": 220,
+          "3": 740,
+          "4": 962
+        },
+        "openingAgreement": {
+          "not-proven-agree": 1662,
+          "agreement": 5594
+        },
+        "partitions": {
+          "target": 2653,
+          "fit": 2126,
+          "audit": 520
+        },
+        "sourceBuildAudit": {
+          "draftsWithObservedDeck": 8000,
+          "observedConfigurations": 10074,
+          "gameDecksExactly40": 38876,
+          "non40GameDecks": 2652,
+          "observedPrimaryBuild": 7256,
+          "openingObservedAndModalAgree": 5594,
+          "ambiguousModal40": 261
+        },
+        "availableGameDrafts": 8000,
+        "observedGames": 41528,
+        "incompleteHistories": "Unavailable as a proven completeness label; bounded samples and absent opening keys are not complete events",
+        "modeSupport": "Exactly Games only for Configurations==1; unknown otherwise, declined",
+        "sourceSha256": "365de5a8d27cd4015ffe1ed1284142a1370ef72109d1b31433ab1dba20cbf077"
+      },
+      {
+        "set": "KHM",
+        "format": "PremierDraft",
+        "counts": {
+          "availablePrimaryBuilds": 3112,
+          "qualified": 2302,
+          "MEDIUM": 2302,
+          "under-three-observed-games": 104,
+          "LOW": 810,
+          "mode-support-unavailable-multiple-configurations": 706
+        },
+        "landCount": {
+          "17": 2123,
+          "16": 715,
+          "15": 117,
+          "18": 129,
+          "14": 20,
+          "13": 2,
+          "20": 2,
+          "19": 4
+        },
+        "mainColorDistribution": {
+          "UR": 319,
+          "BG": 304,
+          "URG": 153,
+          "RG": 271,
+          "WR": 427,
+          "WU": 130,
+          "WB": 153,
+          "UG": 391,
+          "BR": 223,
+          "UB": 89,
+          "G": 22,
+          "UBG": 173,
+          "WG": 233,
+          "BRG": 32,
+          "W": 23,
+          "WBG": 21,
+          "WUG": 24,
+          "WUB": 17,
+          "UBRG": 14,
+          "UBR": 20,
+          "WRG": 21,
+          "R": 20,
+          "WUR": 9,
+          "U": 5,
+          "WBR": 9,
+          "WUBG": 4,
+          "B": 5
+        },
+        "knownModeSupportHistogram": {
+          "4": 340,
+          "6": 364,
+          "2": 67,
+          "7": 327,
+          "5": 385,
+          "3": 213,
+          "9": 332,
+          "8": 341,
+          "1": 36
+        },
+        "openingAgreement": {
+          "not-proven-agree": 3076,
+          "agreement": 36
+        },
+        "partitions": {},
+        "sourceBuildAudit": {
+          "draftsWithObservedDeck": 3393,
+          "observedConfigurations": 4492,
+          "gameDecksExactly40": 18949,
+          "non40GameDecks": 1051,
+          "observedPrimaryBuild": 3112,
+          "openingObservedAndModalAgree": 36,
+          "ambiguousModal40": 122
+        },
+        "availableGameDrafts": 3393,
+        "observedGames": 20000,
+        "incompleteHistories": "Unavailable as a proven completeness label; bounded samples and absent opening keys are not complete events",
+        "modeSupport": "Exactly Games only for Configurations==1; unknown otherwise, declined",
+        "sourceSha256": "95123ea2054a161515028586e8cd53c47a0362f5ea5a3e589432dcb1ae32db9d"
+      },
+      {
+        "set": "LCI",
+        "format": "PremierDraft",
+        "counts": {
+          "availablePrimaryBuilds": 7135,
+          "qualified": 5430,
+          "HIGH": 4086,
+          "mode-support-unavailable-multiple-configurations": 1446,
+          "LOW": 1705,
+          "MEDIUM": 1344,
+          "under-three-observed-games": 259
+        },
+        "landCount": {
+          "17": 4454,
+          "14": 15,
+          "16": 2423,
+          "15": 197,
+          "20": 2,
+          "18": 38,
+          "13": 1,
+          "19": 5
+        },
+        "mainColorDistribution": {
+          "WB": 496,
+          "R": 25,
+          "WG": 397,
+          "UB": 511,
+          "WR": 959,
+          "BR": 368,
+          "UR": 1143,
+          "WU": 1114,
+          "RG": 928,
+          "BG": 450,
+          "WUG": 22,
+          "B": 66,
+          "WUB": 32,
+          "UG": 295,
+          "WRG": 43,
+          "WUR": 56,
+          "UBG": 46,
+          "G": 24,
+          "U": 16,
+          "UBR": 18,
+          "URG": 21,
+          "WBR": 17,
+          "UBRG": 3,
+          "WUBR": 2,
+          "BRG": 30,
+          "WBG": 12,
+          "W": 33,
+          "WURG": 4,
+          "WBRG": 2,
+          "WUBG": 1,
+          "WUBRG": 1
+        },
+        "knownModeSupportHistogram": {
+          "5": 872,
+          "8": 798,
+          "4": 830,
+          "7": 852,
+          "9": 766,
+          "6": 798,
+          "3": 514,
+          "1": 118,
+          "2": 139
+        },
+        "openingAgreement": {
+          "agreement": 6198,
+          "not-proven-agree": 937
+        },
+        "partitions": {
+          "audit": 531,
+          "target": 2734,
+          "fit": 2165
+        },
+        "sourceBuildAudit": {
+          "draftsWithObservedDeck": 8000,
+          "observedConfigurations": 10292,
+          "gameDecksExactly40": 42963,
+          "non40GameDecks": 4025,
+          "observedPrimaryBuild": 7135,
+          "openingObservedAndModalAgree": 6198,
+          "ambiguousModal40": 233
+        },
+        "availableGameDrafts": 8000,
+        "observedGames": 46988,
+        "incompleteHistories": "Unavailable as a proven completeness label; bounded samples and absent opening keys are not complete events",
+        "modeSupport": "Exactly Games only for Configurations==1; unknown otherwise, declined",
+        "sourceSha256": "3530091482090007e107752023e02ee9bf7b9855c96fc2a205681a3c0fec8382"
+      },
+      {
+        "set": "MKM",
+        "format": "PremierDraft",
+        "counts": {
+          "availablePrimaryBuilds": 7430,
+          "qualified": 5759,
+          "HIGH": 4270,
+          "mode-support-unavailable-multiple-configurations": 1384,
+          "LOW": 1671,
+          "MEDIUM": 1489,
+          "under-three-observed-games": 287
+        },
+        "landCount": {
+          "17": 5975,
+          "18": 435,
+          "16": 979,
+          "19": 6,
+          "15": 32,
+          "20": 2,
+          "13": 1
+        },
+        "mainColorDistribution": {
+          "BG": 646,
+          "WU": 795,
+          "UG": 565,
+          "WG": 898,
+          "WB": 415,
+          "BR": 403,
+          "UBR": 59,
+          "UBG": 157,
+          "WR": 1189,
+          "UR": 650,
+          "WRG": 119,
+          "UB": 321,
+          "RG": 528,
+          "U": 16,
+          "WUG": 127,
+          "R": 19,
+          "B": 11,
+          "WUR": 79,
+          "WUB": 75,
+          "G": 64,
+          "URG": 77,
+          "UBRG": 5,
+          "BRG": 40,
+          "WURG": 12,
+          "WBG": 75,
+          "WBR": 54,
+          "WUBG": 8,
+          "W": 13,
+          "WBRG": 6,
+          "WUBR": 2,
+          "WUBRG": 2
+        },
+        "knownModeSupportHistogram": {
+          "9": 810,
+          "5": 1035,
+          "8": 800,
+          "4": 918,
+          "6": 864,
+          "3": 562,
+          "7": 770,
+          "2": 142,
+          "1": 141
+        },
+        "openingAgreement": {
+          "agreement": 6490,
+          "not-proven-agree": 940
+        },
+        "partitions": {
+          "target": 2874,
+          "fit": 2288,
+          "audit": 597
+        },
+        "sourceBuildAudit": {
+          "draftsWithObservedDeck": 8000,
+          "observedConfigurations": 9978,
+          "gameDecksExactly40": 44291,
+          "non40GameDecks": 2348,
+          "observedPrimaryBuild": 7430,
+          "openingObservedAndModalAgree": 6490,
+          "ambiguousModal40": 198
+        },
+        "availableGameDrafts": 8000,
+        "observedGames": 46639,
+        "incompleteHistories": "Unavailable as a proven completeness label; bounded samples and absent opening keys are not complete events",
+        "modeSupport": "Exactly Games only for Configurations==1; unknown otherwise, declined",
+        "sourceSha256": "757f8507d5285a34a999103aee329d3376265545ab017f6b5951b1ae56720011"
+      },
+      {
+        "set": "NEO",
+        "format": "PremierDraft",
+        "counts": {
+          "availablePrimaryBuilds": 7354,
+          "mode-support-unavailable-multiple-configurations": 1566,
+          "LOW": 1829,
+          "under-three-observed-games": 263,
+          "qualified": 5525,
+          "HIGH": 4204,
+          "MEDIUM": 1321
+        },
+        "landCount": {
+          "16": 2132,
+          "17": 4892,
+          "18": 69,
+          "15": 238,
+          "14": 19,
+          "13": 2,
+          "19": 2
+        },
+        "mainColorDistribution": {
+          "UR": 492,
+          "W": 20,
+          "WG": 1102,
+          "BG": 901,
+          "BR": 720,
+          "WR": 461,
+          "WU": 462,
+          "G": 106,
+          "WB": 519,
+          "UB": 1006,
+          "RG": 323,
+          "UBG": 94,
+          "UG": 528,
+          "WRG": 31,
+          "WUG": 112,
+          "URG": 19,
+          "UBR": 39,
+          "WBG": 139,
+          "R": 64,
+          "U": 34,
+          "WUR": 33,
+          "BRG": 14,
+          "WUB": 57,
+          "B": 22,
+          "WBR": 37,
+          "WUBG": 5,
+          "UBRG": 3,
+          "WBRG": 3,
+          "WUBR": 4,
+          "WURG": 3,
+          "WUBRG": 1
+        },
+        "knownModeSupportHistogram": {
+          "2": 145,
+          "7": 798,
+          "4": 790,
+          "1": 117,
+          "3": 523,
+          "5": 922,
+          "9": 810,
+          "6": 863,
+          "8": 819
+        },
+        "openingAgreement": {
+          "not-proven-agree": 1047,
+          "agreement": 6307
+        },
+        "partitions": {},
+        "sourceBuildAudit": {
+          "draftsWithObservedDeck": 8000,
+          "observedConfigurations": 10309,
+          "gameDecksExactly40": 44591,
+          "non40GameDecks": 2806,
+          "observedPrimaryBuild": 7354,
+          "openingObservedAndModalAgree": 6307,
+          "ambiguousModal40": 202
+        },
+        "availableGameDrafts": 8000,
+        "observedGames": 47397,
+        "incompleteHistories": "Unavailable as a proven completeness label; bounded samples and absent opening keys are not complete events",
+        "modeSupport": "Exactly Games only for Configurations==1; unknown otherwise, declined",
+        "sourceSha256": "020772ae205173319dec955ad1762024eb0d6b4fbe821bf3ad367e52ef64d42c"
+      },
+      {
+        "set": "OTJ",
+        "format": "PremierDraft",
+        "counts": {
+          "availablePrimaryBuilds": 7301,
+          "qualified": 5722,
+          "MEDIUM": 1553,
+          "HIGH": 4169,
+          "mode-support-unavailable-multiple-configurations": 1307,
+          "LOW": 1579,
+          "under-three-observed-games": 272
+        },
+        "landCount": {
+          "17": 6360,
+          "16": 787,
+          "18": 122,
+          "15": 26,
+          "19": 4,
+          "14": 2
+        },
+        "mainColorDistribution": {
+          "UB": 669,
+          "UBR": 157,
+          "BG": 939,
+          "WBR": 49,
+          "RG": 581,
+          "WG": 1403,
+          "WBG": 190,
+          "UR": 356,
+          "UG": 429,
+          "UBG": 166,
+          "BR": 629,
+          "BRG": 98,
+          "URG": 76,
+          "WR": 329,
+          "WB": 434,
+          "WU": 298,
+          "G": 60,
+          "WUB": 68,
+          "WRG": 139,
+          "B": 17,
+          "WUG": 111,
+          "R": 6,
+          "W": 9,
+          "WUBR": 4,
+          "WBRG": 6,
+          "WUBG": 9,
+          "WUR": 32,
+          "U": 22,
+          "UBRG": 8,
+          "WURG": 7
+        },
+        "knownModeSupportHistogram": {
+          "3": 621,
+          "9": 790,
+          "6": 825,
+          "7": 812,
+          "8": 787,
+          "5": 961,
+          "1": 145,
+          "4": 925,
+          "2": 124,
+          "10": 1
+        },
+        "openingAgreement": {
+          "agreement": 6442,
+          "not-proven-agree": 859
+        },
+        "partitions": {
+          "fit": 2313,
+          "target": 2836,
+          "audit": 573
+        },
+        "sourceBuildAudit": {
+          "draftsWithObservedDeck": 8000,
+          "observedConfigurations": 9953,
+          "gameDecksExactly40": 43165,
+          "non40GameDecks": 3095,
+          "observedPrimaryBuild": 7301,
+          "openingObservedAndModalAgree": 6442,
+          "ambiguousModal40": 202
+        },
+        "availableGameDrafts": 8000,
+        "observedGames": 46260,
+        "incompleteHistories": "Unavailable as a proven completeness label; bounded samples and absent opening keys are not complete events",
+        "modeSupport": "Exactly Games only for Configurations==1; unknown otherwise, declined",
+        "sourceSha256": "ddcf10a7c21e746a8b14a84efd5175ccf232c18961807e1ad3cd36f0253a42d0"
+      },
+      {
+        "set": "SNC",
+        "format": "PremierDraft",
+        "counts": {
+          "availablePrimaryBuilds": 7318,
+          "qualified": 5594,
+          "HIGH": 4115,
+          "under-three-observed-games": 300,
+          "LOW": 1724,
+          "MEDIUM": 1479,
+          "mode-support-unavailable-multiple-configurations": 1423,
+          "suspicious-land-composition": 1
+        },
+        "landCount": {
+          "17": 6086,
+          "16": 891,
+          "18": 275,
+          "19": 8,
+          "15": 50,
+          "14": 5,
+          "20": 2,
+          "21": 1
+        },
+        "mainColorDistribution": {
+          "WG": 997,
+          "UBR": 462,
+          "WU": 1260,
+          "BR": 873,
+          "UB": 656,
+          "B": 5,
+          "WUB": 595,
+          "WUG": 1024,
+          "UG": 52,
+          "WRG": 452,
+          "WR": 34,
+          "BG": 36,
+          "BRG": 317,
+          "WUBG": 10,
+          "UBG": 8,
+          "UR": 18,
+          "RG": 368,
+          "W": 10,
+          "WURG": 5,
+          "UBRG": 6,
+          "WB": 67,
+          "WBRG": 11,
+          "WUBR": 8,
+          "WBG": 13,
+          "WBR": 9,
+          "R": 7,
+          "WUBRG": 1,
+          "URG": 5,
+          "U": 2,
+          "WUR": 5,
+          "G": 2
+        },
+        "knownModeSupportHistogram": {
+          "6": 849,
+          "5": 882,
+          "8": 844,
+          "7": 773,
+          "2": 150,
+          "9": 793,
+          "3": 607,
+          "1": 146,
+          "4": 847
+        },
+        "openingAgreement": {
+          "agreement": 6251,
+          "not-proven-agree": 1067
+        },
+        "partitions": {},
+        "sourceBuildAudit": {
+          "draftsWithObservedDeck": 8000,
+          "observedConfigurations": 10163,
+          "gameDecksExactly40": 43810,
+          "non40GameDecks": 2836,
+          "observedPrimaryBuild": 7318,
+          "openingObservedAndModalAgree": 6251,
+          "ambiguousModal40": 236
+        },
+        "availableGameDrafts": 8000,
+        "observedGames": 46646,
+        "incompleteHistories": "Unavailable as a proven completeness label; bounded samples and absent opening keys are not complete events",
+        "modeSupport": "Exactly Games only for Configurations==1; unknown otherwise, declined",
+        "sourceSha256": "b4eb7df2a4d8c33db3327e911e7c279a7622f11c14e8d68b9120410cbbfca8ac"
+      },
+      {
+        "set": "STX",
+        "format": "PremierDraft",
+        "counts": {
+          "availablePrimaryBuilds": 3198,
+          "qualified": 2444,
+          "MEDIUM": 2444,
+          "mode-support-unavailable-multiple-configurations": 627,
+          "LOW": 754,
+          "under-three-observed-games": 127
+        },
+        "landCount": {
+          "17": 2387,
+          "16": 630,
+          "15": 62,
+          "18": 115,
+          "14": 1,
+          "19": 2,
+          "13": 1
+        },
+        "mainColorDistribution": {
+          "WR": 453,
+          "UG": 646,
+          "WB": 607,
+          "UR": 670,
+          "BG": 523,
+          "UBRG": 1,
+          "WBG": 26,
+          "UBR": 4,
+          "UB": 8,
+          "URG": 143,
+          "WBR": 29,
+          "WUR": 28,
+          "RG": 1,
+          "UBG": 31,
+          "BRG": 2,
+          "R": 2,
+          "BR": 7,
+          "W": 1,
+          "WUG": 4,
+          "B": 1,
+          "WU": 3,
+          "WUB": 2,
+          "WRG": 3,
+          "U": 1,
+          "WURG": 1,
+          "WG": 1
+        },
+        "knownModeSupportHistogram": {
+          "3": 250,
+          "4": 412,
+          "8": 335,
+          "6": 401,
+          "7": 340,
+          "5": 392,
+          "9": 314,
+          "1": 44,
+          "2": 82
+        },
+        "openingAgreement": {
+          "not-proven-agree": 3154,
+          "agreement": 44
+        },
+        "partitions": {},
+        "sourceBuildAudit": {
+          "draftsWithObservedDeck": 3460,
+          "observedConfigurations": 4362,
+          "gameDecksExactly40": 18850,
+          "non40GameDecks": 1150,
+          "observedPrimaryBuild": 3198,
+          "openingObservedAndModalAgree": 44,
+          "ambiguousModal40": 80
+        },
+        "availableGameDrafts": 3460,
+        "observedGames": 20000,
+        "incompleteHistories": "Unavailable as a proven completeness label; bounded samples and absent opening keys are not complete events",
+        "modeSupport": "Exactly Games only for Configurations==1; unknown otherwise, declined",
+        "sourceSha256": "f68c04dfed0eaedb2c886716b842722c71301c0cdf0ae896daab01b711e12b27"
+      },
+      {
+        "set": "VOW",
+        "format": "PremierDraft",
+        "counts": {
+          "availablePrimaryBuilds": 3149,
+          "qualified": 2426,
+          "MEDIUM": 2426,
+          "mode-support-unavailable-multiple-configurations": 617,
+          "LOW": 723,
+          "under-three-observed-games": 106
+        },
+        "landCount": {
+          "16": 566,
+          "17": 2495,
+          "15": 30,
+          "14": 13,
+          "13": 1,
+          "18": 42,
+          "19": 2
+        },
+        "mainColorDistribution": {
+          "RG": 387,
+          "UR": 202,
+          "WB": 346,
+          "BR": 506,
+          "WU": 346,
+          "BG": 204,
+          "UB": 378,
+          "WR": 200,
+          "WG": 250,
+          "WRG": 15,
+          "B": 7,
+          "UG": 155,
+          "U": 17,
+          "UBG": 16,
+          "WBR": 21,
+          "WUG": 7,
+          "R": 12,
+          "WUR": 9,
+          "W": 8,
+          "BRG": 20,
+          "G": 14,
+          "UBR": 6,
+          "WBG": 15,
+          "WUB": 4,
+          "URG": 4
+        },
+        "knownModeSupportHistogram": {
+          "4": 392,
+          "5": 434,
+          "9": 333,
+          "8": 312,
+          "7": 337,
+          "6": 348,
+          "3": 270,
+          "2": 54,
+          "1": 52
+        },
+        "openingAgreement": {
+          "not-proven-agree": 3097,
+          "agreement": 52
+        },
+        "partitions": {},
+        "sourceBuildAudit": {
+          "draftsWithObservedDeck": 3462,
+          "observedConfigurations": 4418,
+          "gameDecksExactly40": 18672,
+          "non40GameDecks": 1328,
+          "observedPrimaryBuild": 3149,
+          "openingObservedAndModalAgree": 52,
+          "ambiguousModal40": 105
+        },
+        "availableGameDrafts": 3462,
+        "observedGames": 20000,
+        "incompleteHistories": "Unavailable as a proven completeness label; bounded samples and absent opening keys are not complete events",
+        "modeSupport": "Exactly Games only for Configurations==1; unknown otherwise, declined",
+        "sourceSha256": "1a1903c9cad85536ad2b2417da1ac37b764d707637b05efd7348951145c54711"
+      },
+      {
+        "set": "WOE",
+        "format": "PremierDraft",
+        "counts": {
+          "availablePrimaryBuilds": 7305,
+          "mode-support-unavailable-multiple-configurations": 1505,
+          "LOW": 1813,
+          "qualified": 5492,
+          "HIGH": 4098,
+          "MEDIUM": 1394,
+          "under-three-observed-games": 308
+        },
+        "landCount": {
+          "15": 240,
+          "16": 2284,
+          "17": 4696,
+          "18": 50,
+          "14": 31,
+          "19": 1,
+          "13": 2,
+          "12": 1
+        },
+        "mainColorDistribution": {
+          "R": 66,
+          "BR": 1082,
+          "RG": 714,
+          "BG": 1075,
+          "WB": 547,
+          "UR": 515,
+          "WG": 487,
+          "WR": 907,
+          "UB": 600,
+          "WU": 314,
+          "UG": 387,
+          "WBG": 94,
+          "BRG": 77,
+          "URG": 62,
+          "UBR": 37,
+          "WRG": 46,
+          "WUG": 46,
+          "G": 35,
+          "B": 15,
+          "UBG": 65,
+          "WUR": 31,
+          "WUB": 28,
+          "U": 16,
+          "W": 17,
+          "WUBG": 5,
+          "WBR": 28,
+          "UBRG": 5,
+          "WUBRG": 1,
+          "WBRG": 3
+        },
+        "knownModeSupportHistogram": {
+          "7": 789,
+          "8": 829,
+          "4": 839,
+          "2": 154,
+          "6": 859,
+          "3": 548,
+          "9": 774,
+          "5": 852,
+          "1": 152,
+          "10": 1,
+          "11": 1
+        },
+        "openingAgreement": {
+          "not-proven-agree": 1016,
+          "agreement": 6289
+        },
+        "partitions": {
+          "target": 2733,
+          "audit": 525,
+          "fit": 2234
+        },
+        "sourceBuildAudit": {
+          "draftsWithObservedDeck": 8000,
+          "observedConfigurations": 10285,
+          "gameDecksExactly40": 43978,
+          "non40GameDecks": 2907,
+          "observedPrimaryBuild": 7305,
+          "openingObservedAndModalAgree": 6289,
+          "ambiguousModal40": 233
+        },
+        "availableGameDrafts": 8000,
+        "observedGames": 46885,
+        "incompleteHistories": "Unavailable as a proven completeness label; bounded samples and absent opening keys are not complete events",
+        "modeSupport": "Exactly Games only for Configurations==1; unknown otherwise, declined",
+        "sourceSha256": "02f15b3b25e5daf31acf0469fc2abe8e5e4b28c1bb7a4a708a39528ea69ea6fd"
+      },
+      {
+        "set": "MOM",
+        "format": "PremierDraft",
+        "counts": {
+          "availablePrimaryBuilds": 7221,
+          "qualified": 5608,
+          "HIGH": 4112,
+          "mode-support-unavailable-multiple-configurations": 1371,
+          "LOW": 1613,
+          "MEDIUM": 1496,
+          "under-three-observed-games": 242
+        },
+        "landCount": {
+          "15": 71,
+          "17": 5348,
+          "18": 76,
+          "16": 1722,
+          "14": 4
+        },
+        "mainColorDistribution": {
+          "UB": 1198,
+          "WU": 927,
+          "UG": 540,
+          "BR": 655,
+          "UR": 547,
+          "RG": 367,
+          "B": 21,
+          "WR": 423,
+          "WB": 459,
+          "G": 43,
+          "WG": 505,
+          "UBRG": 10,
+          "BG": 640,
+          "UBG": 277,
+          "W": 17,
+          "WUR": 47,
+          "U": 30,
+          "URG": 67,
+          "WBG": 101,
+          "BRG": 67,
+          "WRG": 26,
+          "WBR": 31,
+          "WUB": 74,
+          "WUG": 55,
+          "UBR": 61,
+          "R": 16,
+          "WUBG": 8,
+          "WBRG": 3,
+          "WUBRG": 1,
+          "WURG": 2,
+          "WUBR": 3
+        },
+        "knownModeSupportHistogram": {
+          "8": 857,
+          "7": 762,
+          "9": 731,
+          "3": 606,
+          "5": 921,
+          "4": 869,
+          "6": 862,
+          "2": 126,
+          "1": 112
+        },
+        "openingAgreement": {
+          "agreement": 6304,
+          "not-proven-agree": 917
+        },
+        "partitions": {
+          "fit": 2287,
+          "audit": 542,
+          "target": 2779
+        },
+        "sourceBuildAudit": {
+          "draftsWithObservedDeck": 8000,
+          "observedConfigurations": 10075,
+          "gameDecksExactly40": 42977,
+          "non40GameDecks": 3589,
+          "observedPrimaryBuild": 7221,
+          "openingObservedAndModalAgree": 6304,
+          "ambiguousModal40": 210
+        },
+        "availableGameDrafts": 8000,
+        "observedGames": 46566,
+        "incompleteHistories": "Unavailable as a proven completeness label; bounded samples and absent opening keys are not complete events",
+        "modeSupport": "Exactly Games only for Configurations==1; unknown otherwise, declined",
+        "sourceSha256": "548896243c8c08e884d4560d962d0bbeaf2a512964efad410a23b5af61d520a4"
+      },
+      {
+        "set": "ONE",
+        "format": "PremierDraft",
+        "counts": {
+          "availablePrimaryBuilds": 7359,
+          "qualified": 5443,
+          "MEDIUM": 1371,
+          "mode-support-unavailable-multiple-configurations": 1371,
+          "LOW": 1916,
+          "HIGH": 4072,
+          "under-three-observed-games": 266,
+          "unknown-identity-or-types": 278,
+          "duplicate-identity": 1
+        },
+        "landCount": {
+          "16": 2550,
+          "15": 192,
+          "17": 4550,
+          "18": 55,
+          "14": 12
+        },
+        "mainColorDistribution": {
+          "UR": 477,
+          "WG": 714,
+          "WR": 1034,
+          "RG": 1671,
+          "R": 96,
+          "UB": 437,
+          "BR": 272,
+          "UG": 293,
+          "WU": 585,
+          "WB": 901,
+          "WRG": 22,
+          "UBG": 28,
+          "BG": 538,
+          "BRG": 20,
+          "U": 35,
+          "W": 45,
+          "WBG": 56,
+          "WBR": 8,
+          "G": 27,
+          "B": 26,
+          "URG": 17,
+          "UBR": 14,
+          "UBRG": 1,
+          "WUB": 16,
+          "WUR": 15,
+          "WUG": 11
+        },
+        "knownModeSupportHistogram": {
+          "4": 858,
+          "6": 895,
+          "9": 780,
+          "5": 956,
+          "8": 787,
+          "7": 831,
+          "2": 154,
+          "1": 125,
+          "3": 544
+        },
+        "openingAgreement": {
+          "agreement": 6390,
+          "not-proven-agree": 969
+        },
+        "partitions": {
+          "fit": 2205,
+          "audit": 571,
+          "target": 2667
+        },
+        "sourceBuildAudit": {
+          "draftsWithObservedDeck": 8000,
+          "observedConfigurations": 10137,
+          "gameDecksExactly40": 44264,
+          "non40GameDecks": 2595,
+          "observedPrimaryBuild": 7359,
+          "openingObservedAndModalAgree": 6390,
+          "ambiguousModal40": 216
+        },
+        "availableGameDrafts": 8000,
+        "observedGames": 46859,
+        "incompleteHistories": "Unavailable as a proven completeness label; bounded samples and absent opening keys are not complete events",
+        "modeSupport": "Exactly Games only for Configurations==1; unknown otherwise, declined",
+        "sourceSha256": "7a2fa1a6c5b2eaf0649c8045ee585cd75ba0fc197575945b465fd8847e486aa3"
+      }
+    ],
+    "qualifiedAll": 64638,
+    "modelQualified": 43852,
+    "seconds": 5.978823799872771,
+    "inputHashes": {
+      "data\\historical\\normalized\\phase-d-v1\\metadata.json": "621157983601cb8920b4d3a46fc6e4e3049d781d8332db8ff3362c744ce1e18a",
+      "data\\historical\\normalized\\phase-b-v1\\AFR.PremierDraft.primary-builds.jsonl.gz": "cdd3995d8fb778b3c1acc2b13b80cb37523ef9cd788321e75314b6c3e2e3dac1",
+      "data\\historical\\normalized\\phase-b-v1\\BRO.PremierDraft.primary-builds.jsonl.gz": "a77f5e11f68d4bc1b19850fc276c9318e858d3791b4b16059b528afb2ad2f1be",
+      "data\\historical\\normalized\\phase-b-v1\\DMU.PremierDraft.primary-builds.jsonl.gz": "365de5a8d27cd4015ffe1ed1284142a1370ef72109d1b31433ab1dba20cbf077",
+      "data\\historical\\normalized\\phase-b-v1\\KHM.PremierDraft.primary-builds.jsonl.gz": "95123ea2054a161515028586e8cd53c47a0362f5ea5a3e589432dcb1ae32db9d",
+      "data\\historical\\normalized\\phase-b-v1\\LCI.PremierDraft.primary-builds.jsonl.gz": "3530091482090007e107752023e02ee9bf7b9855c96fc2a205681a3c0fec8382",
+      "data\\historical\\normalized\\phase-b-v1\\MKM.PremierDraft.primary-builds.jsonl.gz": "757f8507d5285a34a999103aee329d3376265545ab017f6b5951b1ae56720011",
+      "data\\historical\\normalized\\phase-b-v1\\NEO.PremierDraft.primary-builds.jsonl.gz": "020772ae205173319dec955ad1762024eb0d6b4fbe821bf3ad367e52ef64d42c",
+      "data\\historical\\normalized\\phase-b-v1\\OTJ.PremierDraft.primary-builds.jsonl.gz": "ddcf10a7c21e746a8b14a84efd5175ccf232c18961807e1ad3cd36f0253a42d0",
+      "data\\historical\\normalized\\phase-b-v1\\SNC.PremierDraft.primary-builds.jsonl.gz": "b4eb7df2a4d8c33db3327e911e7c279a7622f11c14e8d68b9120410cbbfca8ac",
+      "data\\historical\\normalized\\phase-b-v1\\STX.PremierDraft.primary-builds.jsonl.gz": "f68c04dfed0eaedb2c886716b842722c71301c0cdf0ae896daab01b711e12b27",
+      "data\\historical\\normalized\\phase-b-v1\\VOW.PremierDraft.primary-builds.jsonl.gz": "1a1903c9cad85536ad2b2417da1ac37b764d707637b05efd7348951145c54711",
+      "data\\historical\\normalized\\phase-b-v1\\WOE.PremierDraft.primary-builds.jsonl.gz": "02f15b3b25e5daf31acf0469fc2abe8e5e4b28c1bb7a4a708a39528ea69ea6fd",
+      "data\\historical\\normalized\\phase-b1-v1\\MOM.PremierDraft.primary-builds.jsonl.gz": "548896243c8c08e884d4560d962d0bbeaf2a512964efad410a23b5af61d520a4",
+      "data\\historical\\normalized\\phase-b1-v1\\ONE.PremierDraft.primary-builds.jsonl.gz": "7a2fa1a6c5b2eaf0649c8045ee585cd75ba0fc197575945b465fd8847e486aa3"
+    },
+    "noOutcomeSelection": true,
+    "notFinalSubmittedDecks": true,
+    "models": [
+      "DMU",
+      "BRO",
+      "WOE",
+      "LCI",
+      "MKM",
+      "OTJ",
+      "ONE",
+      "MOM"
+    ],
+    "formats": [
+      "PremierDraft"
+    ]
+  },
+  "representation": {
+    "representation": "sqrt",
+    "context": "pair",
+    "perSetMAE": {
+      "DMU": 0.12776899870911654,
+      "BRO": 0.09277858878655451,
+      "WOE": 0.10250831759412106
+    },
+    "macroMAE": 0.10768530169659736
+  },
+  "selection": {
+    "version": "research-a-phase-d-v1",
+    "best": "C",
+    "reference": "frequency",
+    "developmentMRR": {
+      "A": 0.53932,
+      "B": 0.5441999999999999,
+      "C": 0.5445533333333333,
+      "color-only": 0.4566666666666667,
+      "frequency": 0.5352066666666666,
+      "Q": 0.3924733333333333,
+      "frequency-plus-Q": 0.5226333333333334
+    },
+    "relativeImprovement": 0.017463658898120515,
+    "setsImproving": 4,
+    "worstRelativeLoss": 0.028066081188969916,
+    "primaryGates": {
+      "primary": false,
+      "perSet": true,
+      "coverage": true
+    },
+    "parameters": {
+      "A": {
+        "family": "A",
+        "weight": "quality",
+        "cold": 50,
+        "perSet": {
+          "DMU": {
+            "n": 500,
+            "Top1": 0.394,
+            "Top3": 0.76,
+            "MRR": 0.6053666666666667,
+            "normalizedRank": 0.334
+          },
+          "BRO": {
+            "n": 477,
+            "Top1": 0.33962264150943394,
+            "Top3": 0.7819706498951782,
+            "MRR": 0.5757861635220125,
+            "normalizedRank": 0.3469601677148847
+          },
+          "WOE": {
+            "n": 500,
+            "Top1": 0.302,
+            "Top3": 0.718,
+            "MRR": 0.5454666666666667,
+            "normalizedRank": 0.388
+          }
+        },
+        "MRR": 0.5755398322851152
+      },
+      "B": {
+        "family": "B",
+        "weight": "uniform",
+        "cold": 50,
+        "perSet": {
+          "DMU": {
+            "n": 500,
+            "Top1": 0.394,
+            "Top3": 0.778,
+            "MRR": 0.6113,
+            "normalizedRank": 0.3225
+          },
+          "BRO": {
+            "n": 477,
+            "Top1": 0.33962264150943394,
+            "Top3": 0.7924528301886793,
+            "MRR": 0.5814465408805031,
+            "normalizedRank": 0.33752620545073375
+          },
+          "WOE": {
+            "n": 500,
+            "Top1": 0.308,
+            "Top3": 0.716,
+            "MRR": 0.5456666666666667,
+            "normalizedRank": 0.392
+          }
+        },
+        "MRR": 0.57947106918239
+      },
+      "C": {
+        "family": "C",
+        "weight": "uniform",
+        "cold": 50,
+        "perSet": {
+          "DMU": {
+            "n": 500,
+            "Top1": 0.394,
+            "Top3": 0.782,
+            "MRR": 0.6116333333333334,
+            "normalizedRank": 0.3215
+          },
+          "BRO": {
+            "n": 477,
+            "Top1": 0.34591194968553457,
+            "Top3": 0.7966457023060797,
+            "MRR": 0.5846960167714884,
+            "normalizedRank": 0.33490566037735847
+          },
+          "WOE": {
+            "n": 500,
+            "Top1": 0.31,
+            "Top3": 0.72,
+            "MRR": 0.5477666666666666,
+            "normalizedRank": 0.389
+          }
+        },
+        "MRR": 0.5813653389238295
+      }
+    },
+    "inputs": {
+      "docs\\evidence\\v2-phase-d\\representation.json": "d50e299cad6b209fd47661736aaa02747c9ecbf07953d67b9567185250ea833b",
+      "docs\\evidence\\v2-phase-d\\model-fit.json": "98c882d5508d58f65a68f298c8a2561a221bb94eb4552a4efc486bfba4169cd1",
+      "docs\\evidence\\v2-phase-d\\build-completion.json": "9e572050456f31bc57f8fb616e150f60989331dcf5b1cb5ee0e0650acf8e2693",
+      "data\\historical\\normalized\\phase-d-v1\\DMU.model.json": "d2f277c2876b4baa8d58ba370ff7441c87dd0b036a80302fa4af01fa03da06be",
+      "data\\historical\\normalized\\phase-d-v1\\BRO.model.json": "2d95a429864b76da131d34047e8584eed6be4938f3d9b332cf40da8a386932e3",
+      "data\\historical\\normalized\\phase-d-v1\\WOE.model.json": "0c70a9f85ec8200fd4f9e1a7218f2d4193daa2faf87b6fb45388cd6f7d9d80c0",
+      "data\\historical\\normalized\\phase-d-v1\\LCI.model.json": "dff1e2ac5f01b8f7e8ce15a2c7ec2ce7d449154682fa92794a16ab48b29f2f0f",
+      "data\\historical\\normalized\\phase-d-v1\\MKM.model.json": "5d4f0e861d2914949f944c7bd99c83844f31380959e4746ad6ce3a3078e57cda",
+      "data\\historical\\normalized\\phase-d-v1\\OTJ.model.json": "0a3bdfacd7ff8cbdc5d546114a9ccb2a3db39c25fab818d518c64a6497a65437",
+      "data\\historical\\normalized\\phase-d-v1\\ONE.model.json": "bf15ba001164dc30686a76866aa8a3fd46f7eaffc54174005212e60b2b06e76f",
+      "data\\historical\\normalized\\phase-d-v1\\MOM.model.json": "d3a25b876a5af75458a2f367caa20997446eb158a7c64b00b2af469fb4eeb835"
+    },
+    "holdoutsConsumed": false,
+    "productionChanged": false
+  },
+  "gate": {
+    "gates": {
+      "primary": false,
+      "perSet": true,
+      "coverage": true,
+      "confounds": true,
+      "coldStart": false,
+      "goldens": true
+    },
+    "developmentPass": false,
+    "qualifiedForFutureIntegration": false,
+    "reason": "Development gate failed; retain production A",
+    "productionChanged": false
+  },
+  "primary": {
+    "metric": "Power-matched masked-build completion MRR",
+    "calibration": [
+      {
+        "set": "DMU",
+        "partition": "calibration",
+        "matched": true,
+        "tasks": 500,
+        "metrics": {
+          "A": {
+            "n": 500,
+            "Top1": 0.37,
+            "Top3": 0.77,
+            "MRR": 0.5936666666666668,
+            "normalizedRank": 0.339
+          },
+          "B": {
+            "n": 500,
+            "Top1": 0.374,
+            "Top3": 0.786,
+            "MRR": 0.5973333333333334,
+            "normalizedRank": 0.3335
+          },
+          "C": {
+            "n": 500,
+            "Top1": 0.368,
+            "Top3": 0.784,
+            "MRR": 0.5946999999999999,
+            "normalizedRank": 0.334
+          },
+          "color-only": {
+            "n": 500,
+            "Top1": 0.2,
+            "Top3": 0.5999999999999999,
+            "MRR": 0.4566666666666667,
+            "normalizedRank": 0.5
+          },
+          "frequency": {
+            "n": 500,
+            "Top1": 0.304,
+            "Top3": 0.816,
+            "MRR": 0.5597333333333333,
+            "normalizedRank": 0.3445
+          },
+          "Q": {
+            "n": 500,
+            "Top1": 0.088,
+            "Top3": 0.706,
+            "MRR": 0.4067,
+            "normalizedRank": 0.484
+          },
+          "frequency-plus-Q": {
+            "n": 500,
+            "Top1": 0.28,
+            "Top3": 0.804,
+            "MRR": 0.5458666666666667,
+            "normalizedRank": 0.3555
+          }
+        }
+      },
+      {
+        "set": "BRO",
+        "partition": "calibration",
+        "matched": true,
+        "tasks": 500,
+        "metrics": {
+          "A": {
+            "n": 500,
+            "Top1": 0.384,
+            "Top3": 0.806,
+            "MRR": 0.6087333333333333,
+            "normalizedRank": 0.314
+          },
+          "B": {
+            "n": 500,
+            "Top1": 0.378,
+            "Top3": 0.802,
+            "MRR": 0.6084,
+            "normalizedRank": 0.312
+          },
+          "C": {
+            "n": 500,
+            "Top1": 0.376,
+            "Top3": 0.798,
+            "MRR": 0.6070666666666666,
+            "normalizedRank": 0.3135
+          },
+          "color-only": {
+            "n": 500,
+            "Top1": 0.2,
+            "Top3": 0.5999999999999999,
+            "MRR": 0.4566666666666667,
+            "normalizedRank": 0.5
+          },
+          "frequency": {
+            "n": 500,
+            "Top1": 0.314,
+            "Top3": 0.85,
+            "MRR": 0.5790333333333333,
+            "normalizedRank": 0.3135
+          },
+          "Q": {
+            "n": 500,
+            "Top1": 0.058,
+            "Top3": 0.614,
+            "MRR": 0.37076666666666663,
+            "normalizedRank": 0.54
+          },
+          "frequency-plus-Q": {
+            "n": 500,
+            "Top1": 0.294,
+            "Top3": 0.84,
+            "MRR": 0.5656333333333333,
+            "normalizedRank": 0.3245
+          }
+        }
+      },
+      {
+        "set": "WOE",
+        "partition": "calibration",
+        "matched": true,
+        "tasks": 500,
+        "metrics": {
+          "A": {
+            "n": 500,
+            "Top1": 0.328,
+            "Top3": 0.752,
+            "MRR": 0.5612999999999999,
+            "normalizedRank": 0.373
+          },
+          "B": {
+            "n": 500,
+            "Top1": 0.33,
+            "Top3": 0.742,
+            "MRR": 0.5601333333333333,
+            "normalizedRank": 0.377
+          },
+          "C": {
+            "n": 500,
+            "Top1": 0.332,
+            "Top3": 0.748,
+            "MRR": 0.5607333333333333,
+            "normalizedRank": 0.376
+          },
+          "color-only": {
+            "n": 500,
+            "Top1": 0.2,
+            "Top3": 0.5999999999999999,
+            "MRR": 0.4566666666666667,
+            "normalizedRank": 0.5
+          },
+          "frequency": {
+            "n": 500,
+            "Top1": 0.276,
+            "Top3": 0.806,
+            "MRR": 0.5433333333333332,
+            "normalizedRank": 0.356
+          },
+          "Q": {
+            "n": 500,
+            "Top1": 0.054,
+            "Top3": 0.634,
+            "MRR": 0.3720333333333333,
+            "normalizedRank": 0.5315
+          },
+          "frequency-plus-Q": {
+            "n": 500,
+            "Top1": 0.252,
+            "Top3": 0.8,
+            "MRR": 0.5332666666666667,
+            "normalizedRank": 0.3595
+          }
+        }
+      }
+    ],
+    "development": [
+      {
+        "set": "LCI",
+        "partition": "development",
+        "matched": true,
+        "tasks": 500,
+        "metrics": {
+          "A": {
+            "n": 500,
+            "Top1": 0.28,
+            "Top3": 0.744,
+            "MRR": 0.5348666666666668,
+            "normalizedRank": 0.3865
+          },
+          "B": {
+            "n": 500,
+            "Top1": 0.292,
+            "Top3": 0.746,
+            "MRR": 0.5431666666666666,
+            "normalizedRank": 0.3805
+          },
+          "C": {
+            "n": 500,
+            "Top1": 0.292,
+            "Top3": 0.738,
+            "MRR": 0.5405,
+            "normalizedRank": 0.3855
+          },
+          "color-only": {
+            "n": 500,
+            "Top1": 0.2,
+            "Top3": 0.5999999999999999,
+            "MRR": 0.4566666666666667,
+            "normalizedRank": 0.5
+          },
+          "frequency": {
+            "n": 500,
+            "Top1": 0.26,
+            "Top3": 0.792,
+            "MRR": 0.5371333333333334,
+            "normalizedRank": 0.358
+          },
+          "Q": {
+            "n": 500,
+            "Top1": 0.082,
+            "Top3": 0.664,
+            "MRR": 0.3999,
+            "normalizedRank": 0.494
+          },
+          "frequency-plus-Q": {
+            "n": 500,
+            "Top1": 0.21,
+            "Top3": 0.818,
+            "MRR": 0.5108666666666667,
+            "normalizedRank": 0.3695
+          }
+        }
+      },
+      {
+        "set": "MKM",
+        "partition": "development",
+        "matched": true,
+        "tasks": 500,
+        "metrics": {
+          "A": {
+            "n": 500,
+            "Top1": 0.282,
+            "Top3": 0.712,
+            "MRR": 0.5254666666666667,
+            "normalizedRank": 0.414
+          },
+          "B": {
+            "n": 500,
+            "Top1": 0.284,
+            "Top3": 0.704,
+            "MRR": 0.5235666666666666,
+            "normalizedRank": 0.4185
+          },
+          "C": {
+            "n": 500,
+            "Top1": 0.28,
+            "Top3": 0.708,
+            "MRR": 0.5232333333333333,
+            "normalizedRank": 0.4165
+          },
+          "color-only": {
+            "n": 500,
+            "Top1": 0.2,
+            "Top3": 0.5999999999999999,
+            "MRR": 0.4566666666666667,
+            "normalizedRank": 0.5
+          },
+          "frequency": {
+            "n": 500,
+            "Top1": 0.174,
+            "Top3": 0.806,
+            "MRR": 0.48183333333333334,
+            "normalizedRank": 0.3955
+          },
+          "Q": {
+            "n": 500,
+            "Top1": 0.052,
+            "Top3": 0.692,
+            "MRR": 0.38996666666666663,
+            "normalizedRank": 0.489
+          },
+          "frequency-plus-Q": {
+            "n": 500,
+            "Top1": 0.16,
+            "Top3": 0.806,
+            "MRR": 0.47583333333333333,
+            "normalizedRank": 0.3975
+          }
+        }
+      },
+      {
+        "set": "OTJ",
+        "partition": "development",
+        "matched": true,
+        "tasks": 500,
+        "metrics": {
+          "A": {
+            "n": 500,
+            "Top1": 0.268,
+            "Top3": 0.7,
+            "MRR": 0.5210333333333333,
+            "normalizedRank": 0.4155
+          },
+          "B": {
+            "n": 500,
+            "Top1": 0.274,
+            "Top3": 0.69,
+            "MRR": 0.5263,
+            "normalizedRank": 0.4115
+          },
+          "C": {
+            "n": 500,
+            "Top1": 0.276,
+            "Top3": 0.686,
+            "MRR": 0.5275333333333334,
+            "normalizedRank": 0.4115
+          },
+          "color-only": {
+            "n": 500,
+            "Top1": 0.2,
+            "Top3": 0.5999999999999999,
+            "MRR": 0.4566666666666667,
+            "normalizedRank": 0.5
+          },
+          "frequency": {
+            "n": 500,
+            "Top1": 0.258,
+            "Top3": 0.82,
+            "MRR": 0.5427666666666666,
+            "normalizedRank": 0.344
+          },
+          "Q": {
+            "n": 500,
+            "Top1": 0.064,
+            "Top3": 0.65,
+            "MRR": 0.38219999999999993,
+            "normalizedRank": 0.521
+          },
+          "frequency-plus-Q": {
+            "n": 500,
+            "Top1": 0.242,
+            "Top3": 0.824,
+            "MRR": 0.5314333333333334,
+            "normalizedRank": 0.3525
+          }
+        }
+      },
+      {
+        "set": "ONE",
+        "partition": "development",
+        "matched": true,
+        "tasks": 500,
+        "metrics": {
+          "A": {
+            "n": 500,
+            "Top1": 0.346,
+            "Top3": 0.752,
+            "MRR": 0.5802666666666666,
+            "normalizedRank": 0.349
+          },
+          "B": {
+            "n": 500,
+            "Top1": 0.354,
+            "Top3": 0.752,
+            "MRR": 0.5849333333333333,
+            "normalizedRank": 0.346
+          },
+          "C": {
+            "n": 500,
+            "Top1": 0.352,
+            "Top3": 0.754,
+            "MRR": 0.5848666666666666,
+            "normalizedRank": 0.3445
+          },
+          "color-only": {
+            "n": 500,
+            "Top1": 0.2,
+            "Top3": 0.5999999999999999,
+            "MRR": 0.4566666666666667,
+            "normalizedRank": 0.5
+          },
+          "frequency": {
+            "n": 500,
+            "Top1": 0.304,
+            "Top3": 0.836,
+            "MRR": 0.5678,
+            "normalizedRank": 0.332
+          },
+          "Q": {
+            "n": 500,
+            "Top1": 0.048,
+            "Top3": 0.624,
+            "MRR": 0.3701999999999999,
+            "normalizedRank": 0.5255
+          },
+          "frequency-plus-Q": {
+            "n": 500,
+            "Top1": 0.276,
+            "Top3": 0.826,
+            "MRR": 0.5522666666666667,
+            "normalizedRank": 0.3415
+          }
+        }
+      },
+      {
+        "set": "MOM",
+        "partition": "development",
+        "matched": true,
+        "tasks": 500,
+        "metrics": {
+          "A": {
+            "n": 500,
+            "Top1": 0.292,
+            "Top3": 0.702,
+            "MRR": 0.5349666666666666,
+            "normalizedRank": 0.399
+          },
+          "B": {
+            "n": 500,
+            "Top1": 0.3,
+            "Top3": 0.724,
+            "MRR": 0.5430333333333333,
+            "normalizedRank": 0.3885
+          },
+          "C": {
+            "n": 500,
+            "Top1": 0.308,
+            "Top3": 0.722,
+            "MRR": 0.5466333333333333,
+            "normalizedRank": 0.387
+          },
+          "color-only": {
+            "n": 500,
+            "Top1": 0.2,
+            "Top3": 0.5999999999999999,
+            "MRR": 0.4566666666666667,
+            "normalizedRank": 0.5
+          },
+          "frequency": {
+            "n": 500,
+            "Top1": 0.28,
+            "Top3": 0.81,
+            "MRR": 0.5465,
+            "normalizedRank": 0.351
+          },
+          "Q": {
+            "n": 500,
+            "Top1": 0.104,
+            "Top3": 0.706,
+            "MRR": 0.4201,
+            "normalizedRank": 0.467
+          },
+          "frequency-plus-Q": {
+            "n": 500,
+            "Top1": 0.274,
+            "Top3": 0.818,
+            "MRR": 0.5427666666666666,
+            "normalizedRank": 0.354
+          }
+        }
+      }
+    ],
+    "uniformFrequencyDevelopmentMRR": 0.5394133333333333,
+    "controlsCaveat": "Original primary controls use A-family calibration-selected quality pool weights; frozen full learning-curve controls also expose a stronger uniform-pool frequency comparator. No parameter retuning."
+  },
+  "secondary": {
+    "replayDecisions": 54283,
+    "completeComparable": 50285,
+    "drafts": 1280,
+    "contextual": {
+      "current-A": {
+        "Decisions": 50285,
+        "Eligible": 50285,
+        "Top1Count": 18857,
+        "Top3Count": 36246,
+        "Top5Count": 43318,
+        "Top1": 0.3750024858307646,
+        "Top3": 0.720811375161579,
+        "Top5": 0.8614497365019389,
+        "MeanReciprocalRank": 0.5771582357408029,
+        "MeanNormalizedRank": 0.29783316519968733,
+        "MeanScoreGap": 4.491485849744949,
+        "EstimatedCardScores": 9840,
+        "TotalOfferedOccurrences": 409625,
+        "MaindeckLabelCount": 50285,
+        "MeanObservedMaindeckRate": 0.5967743820224708,
+        "MeanActualRankWhenObservedMaindeckRatePositive": 3.0531575659949373,
+        "PartialPoolDecisions": 0,
+        "MissingGihCards": 9840
+      },
+      "A": {
+        "Decisions": 50285,
+        "Eligible": 50285,
+        "Top1Count": 19257,
+        "Top3Count": 36770,
+        "Top5Count": 43782,
+        "Top1": 0.38295714427761757,
+        "Top3": 0.7312319777269564,
+        "Top5": 0.8706771403002883,
+        "MeanReciprocalRank": 0.5849272499510983,
+        "MeanNormalizedRank": 0.2866371739912659,
+        "MeanScoreGap": 4.493118328519605,
+        "EstimatedCardScores": 9840,
+        "TotalOfferedOccurrences": 409625,
+        "MaindeckLabelCount": 50285,
+        "MeanObservedMaindeckRate": 0.5967743820224708,
+        "MeanActualRankWhenObservedMaindeckRatePositive": 2.9623590519083467,
+        "PartialPoolDecisions": 0,
+        "MissingGihCards": 9840
+      },
+      "B": {
+        "Decisions": 50285,
+        "Eligible": 50285,
+        "Top1Count": 19523,
+        "Top3Count": 37146,
+        "Top5Count": 44096,
+        "Top1": 0.38824699214477476,
+        "Top3": 0.7387093566669981,
+        "Top5": 0.876921547181068,
+        "MeanReciprocalRank": 0.5901627223880227,
+        "MeanNormalizedRank": 0.27902224298964,
+        "MeanScoreGap": 4.4872061389704845,
+        "EstimatedCardScores": 9840,
+        "TotalOfferedOccurrences": 409625,
+        "MaindeckLabelCount": 50285,
+        "MeanObservedMaindeckRate": 0.5967743820224708,
+        "MeanActualRankWhenObservedMaindeckRatePositive": 2.9015417995331867,
+        "PartialPoolDecisions": 0,
+        "MissingGihCards": 9840
+      },
+      "C": {
+        "Decisions": 50285,
+        "Eligible": 50285,
+        "Top1Count": 19525,
+        "Top3Count": 37150,
+        "Top5Count": 44099,
+        "Top1": 0.3882867654370091,
+        "Top3": 0.7387889032514666,
+        "Top5": 0.8769812071194193,
+        "MeanReciprocalRank": 0.5902153430849707,
+        "MeanNormalizedRank": 0.2789613685288451,
+        "MeanScoreGap": 4.48712654705362,
+        "EstimatedCardScores": 9840,
+        "TotalOfferedOccurrences": 409625,
+        "MaindeckLabelCount": 50285,
+        "MeanObservedMaindeckRate": 0.5967743820224708,
+        "MeanActualRankWhenObservedMaindeckRatePositive": 2.9009829382951446,
+        "PartialPoolDecisions": 0,
+        "MissingGihCards": 9840
+      }
+    },
+    "changes": {
+      "Compared": 50285,
+      "Changed": 24651,
+      "Improved": 5898,
+      "Regressed": 2055
+    },
+    "qualifiedModalAssociationDecisions": 33631
+  },
+  "factorCounts": {
+    "DMU": {
+      "BG": 4,
+      "BR": 1,
+      "RG": 2,
+      "UB": 2,
+      "UG": 2,
+      "UR": 2,
+      "WB": 2,
+      "WG": 2,
+      "WR": 1,
+      "WU": 2
+    },
+    "BRO": {
+      "BG": 1,
+      "BR": 2,
+      "RG": 2,
+      "UB": 2,
+      "UG": 2,
+      "UR": 2,
+      "WB": 2,
+      "WG": 2,
+      "WR": 2,
+      "WU": 2
+    },
+    "WOE": {
+      "BG": 2,
+      "BR": 2,
+      "RG": 2,
+      "UB": 2,
+      "UG": 2,
+      "UR": 2,
+      "WB": 2,
+      "WG": 2,
+      "WR": 2,
+      "WU": 2
+    },
+    "LCI": {
+      "BG": 2,
+      "BR": 2,
+      "RG": 1,
+      "UB": 2,
+      "UG": 1,
+      "UR": 1,
+      "WB": 2,
+      "WG": 1,
+      "WR": 1,
+      "WU": 2
+    },
+    "MKM": {
+      "BG": 2,
+      "BR": 2,
+      "RG": 2,
+      "UB": 2,
+      "UG": 2,
+      "UR": 2,
+      "WB": 2,
+      "WG": 2,
+      "WR": 2,
+      "WU": 2
+    },
+    "OTJ": {
+      "BG": 2,
+      "BR": 2,
+      "RG": 2,
+      "UB": 1,
+      "UG": 2,
+      "UR": 1,
+      "WB": 2,
+      "WG": 2,
+      "WR": 1,
+      "WU": 2
+    },
+    "ONE": {
+      "BG": 2,
+      "BR": 2,
+      "RG": 2,
+      "UB": 1,
+      "UG": 2,
+      "UR": 2,
+      "WB": 2,
+      "WG": 2,
+      "WR": 2,
+      "WU": 2
+    },
+    "MOM": {
+      "BG": 2,
+      "BR": 1,
+      "RG": 1,
+      "UB": 1,
+      "UG": 2,
+      "UR": 2,
+      "WB": 2,
+      "WG": 4,
+      "WR": 2,
+      "WU": 2
+    }
+  },
+  "coldStart": {
+    "policy": "No model/card, unsupported shell or empty pool retains current A; confidence budget is not calibrated correctness",
+    "frozenParameters": true,
+    "learningCurve": [
+      {
+        "set": "DMU",
+        "requested": 50,
+        "achieved": 50,
+        "MRR": 0.4566666666666667
+      },
+      {
+        "set": "DMU",
+        "requested": 100,
+        "achieved": 100,
+        "MRR": 0.4566666666666667
+      },
+      {
+        "set": "DMU",
+        "requested": 250,
+        "achieved": 250,
+        "MRR": 0.5237166666666667
+      },
+      {
+        "set": "DMU",
+        "requested": 500,
+        "achieved": 500,
+        "MRR": 0.586
+      },
+      {
+        "set": "DMU",
+        "requested": 1000,
+        "achieved": 1000,
+        "MRR": 0.594
+      },
+      {
+        "set": "DMU",
+        "requested": 2500,
+        "achieved": 2126,
+        "MRR": 0.5946999999999999
+      },
+      {
+        "set": "DMU",
+        "requested": "full",
+        "achieved": 2126,
+        "MRR": 0.5946999999999999
+      },
+      {
+        "set": "BRO",
+        "requested": 50,
+        "achieved": 50,
+        "MRR": 0.4566666666666667
+      },
+      {
+        "set": "BRO",
+        "requested": 100,
+        "achieved": 100,
+        "MRR": 0.4566666666666667
+      },
+      {
+        "set": "BRO",
+        "requested": 250,
+        "achieved": 250,
+        "MRR": 0.5139444444444444
+      },
+      {
+        "set": "BRO",
+        "requested": 500,
+        "achieved": 500,
+        "MRR": 0.5898666666666668
+      },
+      {
+        "set": "BRO",
+        "requested": 1000,
+        "achieved": 1000,
+        "MRR": 0.6030666666666666
+      },
+      {
+        "set": "BRO",
+        "requested": 2500,
+        "achieved": 2088,
+        "MRR": 0.6070666666666666
+      },
+      {
+        "set": "BRO",
+        "requested": "full",
+        "achieved": 2088,
+        "MRR": 0.6070666666666666
+      },
+      {
+        "set": "WOE",
+        "requested": 50,
+        "achieved": 50,
+        "MRR": 0.4566666666666667
+      },
+      {
+        "set": "WOE",
+        "requested": 100,
+        "achieved": 100,
+        "MRR": 0.4566666666666667
+      },
+      {
+        "set": "WOE",
+        "requested": 250,
+        "achieved": 250,
+        "MRR": 0.5142605555555556
+      },
+      {
+        "set": "WOE",
+        "requested": 500,
+        "achieved": 500,
+        "MRR": 0.5353666666666667
+      },
+      {
+        "set": "WOE",
+        "requested": 1000,
+        "achieved": 1000,
+        "MRR": 0.5436666666666667
+      },
+      {
+        "set": "WOE",
+        "requested": 2500,
+        "achieved": 2234,
+        "MRR": 0.5607333333333333
+      },
+      {
+        "set": "WOE",
+        "requested": "full",
+        "achieved": 2234,
+        "MRR": 0.5607333333333333
+      },
+      {
+        "set": "LCI",
+        "requested": 50,
+        "achieved": 50,
+        "MRR": 0.4566666666666667
+      },
+      {
+        "set": "LCI",
+        "requested": 100,
+        "achieved": 100,
+        "MRR": 0.4566666666666667
+      },
+      {
+        "set": "LCI",
+        "requested": 250,
+        "achieved": 250,
+        "MRR": 0.498815
+      },
+      {
+        "set": "LCI",
+        "requested": 500,
+        "achieved": 500,
+        "MRR": 0.5295666666666667
+      },
+      {
+        "set": "LCI",
+        "requested": 1000,
+        "achieved": 1000,
+        "MRR": 0.5252666666666667
+      },
+      {
+        "set": "LCI",
+        "requested": 2500,
+        "achieved": 2165,
+        "MRR": 0.5405
+      },
+      {
+        "set": "LCI",
+        "requested": "full",
+        "achieved": 2165,
+        "MRR": 0.5405
+      },
+      {
+        "set": "MKM",
+        "requested": 50,
+        "achieved": 50,
+        "MRR": 0.4566666666666667
+      },
+      {
+        "set": "MKM",
+        "requested": 100,
+        "achieved": 100,
+        "MRR": 0.4566666666666667
+      },
+      {
+        "set": "MKM",
+        "requested": 250,
+        "achieved": 250,
+        "MRR": 0.4519405555555555
+      },
+      {
+        "set": "MKM",
+        "requested": 500,
+        "achieved": 500,
+        "MRR": 0.5230666666666667
+      },
+      {
+        "set": "MKM",
+        "requested": 1000,
+        "achieved": 1000,
+        "MRR": 0.5046666666666666
+      },
+      {
+        "set": "MKM",
+        "requested": 2500,
+        "achieved": 2288,
+        "MRR": 0.5232333333333333
+      },
+      {
+        "set": "MKM",
+        "requested": "full",
+        "achieved": 2288,
+        "MRR": 0.5232333333333333
+      },
+      {
+        "set": "OTJ",
+        "requested": 50,
+        "achieved": 50,
+        "MRR": 0.4566666666666667
+      },
+      {
+        "set": "OTJ",
+        "requested": 100,
+        "achieved": 100,
+        "MRR": 0.44252222222222226
+      },
+      {
+        "set": "OTJ",
+        "requested": 250,
+        "achieved": 250,
+        "MRR": 0.4705538888888889
+      },
+      {
+        "set": "OTJ",
+        "requested": 500,
+        "achieved": 500,
+        "MRR": 0.5149000000000001
+      },
+      {
+        "set": "OTJ",
+        "requested": 1000,
+        "achieved": 1000,
+        "MRR": 0.5465666666666668
+      },
+      {
+        "set": "OTJ",
+        "requested": 2500,
+        "achieved": 2313,
+        "MRR": 0.5275333333333334
+      },
+      {
+        "set": "OTJ",
+        "requested": "full",
+        "achieved": 2313,
+        "MRR": 0.5275333333333334
+      },
+      {
+        "set": "ONE",
+        "requested": 50,
+        "achieved": 50,
+        "MRR": 0.4566666666666667
+      },
+      {
+        "set": "ONE",
+        "requested": 100,
+        "achieved": 100,
+        "MRR": 0.4566666666666667
+      },
+      {
+        "set": "ONE",
+        "requested": 250,
+        "achieved": 250,
+        "MRR": 0.4885133333333333
+      },
+      {
+        "set": "ONE",
+        "requested": 500,
+        "achieved": 500,
+        "MRR": 0.5486333333333333
+      },
+      {
+        "set": "ONE",
+        "requested": 1000,
+        "achieved": 1000,
+        "MRR": 0.5717333333333333
+      },
+      {
+        "set": "ONE",
+        "requested": 2500,
+        "achieved": 2205,
+        "MRR": 0.5848666666666666
+      },
+      {
+        "set": "ONE",
+        "requested": "full",
+        "achieved": 2205,
+        "MRR": 0.5848666666666666
+      },
+      {
+        "set": "MOM",
+        "requested": 50,
+        "achieved": 50,
+        "MRR": 0.4566666666666667
+      },
+      {
+        "set": "MOM",
+        "requested": 100,
+        "achieved": 100,
+        "MRR": 0.4566666666666667
+      },
+      {
+        "set": "MOM",
+        "requested": 250,
+        "achieved": 250,
+        "MRR": 0.5079988888888888
+      },
+      {
+        "set": "MOM",
+        "requested": 500,
+        "achieved": 500,
+        "MRR": 0.5245666666666666
+      },
+      {
+        "set": "MOM",
+        "requested": 1000,
+        "achieved": 1000,
+        "MRR": 0.5435666666666668
+      },
+      {
+        "set": "MOM",
+        "requested": 2500,
+        "achieved": 2287,
+        "MRR": 0.5466333333333333
+      },
+      {
+        "set": "MOM",
+        "requested": "full",
+        "achieved": 2287,
+        "MRR": 0.5466333333333333
+      }
+    ]
+  },
+  "performance": {
+    "fitSeconds": 30.121099600102752,
+    "modelBytes": 24608610,
+    "replaySeconds": 642.0501596,
+    "replayPeakBytes": 285589504,
+    "inference": {
+      "set": "DMU",
+      "family": "C",
+      "picks": 500,
+      "candidates": 3770,
+      "poolMeanMilliseconds": 0.15858319541439414,
+      "candidateAmortizedMilliseconds": 0.036930345277986255,
+      "pickMeanMilliseconds": 0.4370379988104105,
+      "pickP95Milliseconds": 0.6931247073225676,
+      "scope": "Measured frozen-model inference; candidate cost amortized over actual offered identities; no target labels or outcomes read"
+    },
+    "frozenFitReproduction": {
+      "set": "DMU",
+      "evidenceBuilds": 2126,
+      "seconds": 0.4909514000173658,
+      "peakWorkingSetBytes": 67796992,
+      "exactModelReproduced": true,
+      "modelSha256": "d2f277c2876b4baa8d58ba370ff7441c87dd0b036a80302fa4af01fa03da06be",
+      "scope": "Single-set frozen-fit validation; original whole-study Python fit peak unavailable; no models or parameters overwritten"
+    }
+  },
+  "holdout": {
+    "sets": [
+      "MH3",
+      "DFT"
+    ],
+    "consumed": false,
+    "performance": null,
+    "reason": "Development gate fails; no holdout acquisition or performance read"
+  },
+  "tests": {
+    "commit": "a47bac227878a74990a35d10332ebd7200c68e89",
+    "dirtyTree": true,
+    "CSharp": {
+      "total": 1297,
+      "passed": 1297,
+      "failed": 0,
+      "notExecuted": 0
+    },
+    "pythonTests": 8,
+    "golden": 40,
+    "productionChanged": false,
+    "sourceFingerprint": "99a6092975465fb22602eab6c7cc425c0299a831479805af30cef2f9daf569f5",
+    "scoreAssemblySha256": "617de3a627032d11750a9c750b263400434e41e096ae7f5c34d000924ff14487",
+    "preservedFiles": 341,
+    "buildPassed": true,
+    "warnings": 0,
+    "errors": 0,
+    "baselineUnchanged": true
+  },
+  "productionChanged": false,
+  "recommendation": "Retain production current A and all v1.6.2 components. No integration or next phase started. Any affinity follow-up must be separately preregistered and resolve frequency controls, cold coverage and card-level uncertainty before new holdout release."
+}

@@ -1,0 +1,646 @@
+{
+  "mapping": {
+    "x": [
+      50.0,
+      100.0,
+      250.0,
+      500.0,
+      1000.0,
+      2149.3333333333335
+    ],
+    "weights": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "curves": [
+    {
+      "requested": 50,
+      "achieved": 50.0,
+      "grid": [
+        {
+          "alpha": 0,
+          "perSet": {
+            "DMU": {
+              "n": 0,
+              "gain": null
+            },
+            "BRO": {
+              "n": 10,
+              "gain": 0.0
+            },
+            "WOE": {
+              "n": 3,
+              "gain": 0.0
+            }
+          },
+          "safe": false
+        },
+        {
+          "alpha": 0.25,
+          "perSet": {
+            "DMU": {
+              "n": 0,
+              "gain": null
+            },
+            "BRO": {
+              "n": 10,
+              "gain": 0.0
+            },
+            "WOE": {
+              "n": 3,
+              "gain": 0.0
+            }
+          },
+          "safe": false
+        },
+        {
+          "alpha": 0.5,
+          "perSet": {
+            "DMU": {
+              "n": 0,
+              "gain": null
+            },
+            "BRO": {
+              "n": 10,
+              "gain": 0.0
+            },
+            "WOE": {
+              "n": 3,
+              "gain": 0.0
+            }
+          },
+          "safe": false
+        },
+        {
+          "alpha": 0.75,
+          "perSet": {
+            "DMU": {
+              "n": 0,
+              "gain": null
+            },
+            "BRO": {
+              "n": 10,
+              "gain": 0.0
+            },
+            "WOE": {
+              "n": 3,
+              "gain": 0.0
+            }
+          },
+          "safe": false
+        },
+        {
+          "alpha": 1,
+          "perSet": {
+            "DMU": {
+              "n": 0,
+              "gain": null
+            },
+            "BRO": {
+              "n": 10,
+              "gain": 0.0
+            },
+            "WOE": {
+              "n": 3,
+              "gain": 0.0
+            }
+          },
+          "safe": false
+        }
+      ]
+    },
+    {
+      "requested": 100,
+      "achieved": 100.0,
+      "grid": [
+        {
+          "alpha": 0,
+          "perSet": {
+            "DMU": {
+              "n": 0,
+              "gain": null
+            },
+            "BRO": {
+              "n": 10,
+              "gain": 0.0
+            },
+            "WOE": {
+              "n": 3,
+              "gain": 0.0
+            }
+          },
+          "safe": false
+        },
+        {
+          "alpha": 0.25,
+          "perSet": {
+            "DMU": {
+              "n": 0,
+              "gain": null
+            },
+            "BRO": {
+              "n": 10,
+              "gain": 0.0
+            },
+            "WOE": {
+              "n": 3,
+              "gain": 0.0
+            }
+          },
+          "safe": false
+        },
+        {
+          "alpha": 0.5,
+          "perSet": {
+            "DMU": {
+              "n": 0,
+              "gain": null
+            },
+            "BRO": {
+              "n": 10,
+              "gain": 0.0
+            },
+            "WOE": {
+              "n": 3,
+              "gain": 0.0
+            }
+          },
+          "safe": false
+        },
+        {
+          "alpha": 0.75,
+          "perSet": {
+            "DMU": {
+              "n": 0,
+              "gain": null
+            },
+            "BRO": {
+              "n": 10,
+              "gain": 0.0
+            },
+            "WOE": {
+              "n": 3,
+              "gain": 0.0
+            }
+          },
+          "safe": false
+        },
+        {
+          "alpha": 1,
+          "perSet": {
+            "DMU": {
+              "n": 0,
+              "gain": null
+            },
+            "BRO": {
+              "n": 10,
+              "gain": 0.0
+            },
+            "WOE": {
+              "n": 3,
+              "gain": 0.0
+            }
+          },
+          "safe": false
+        }
+      ]
+    },
+    {
+      "requested": 250,
+      "achieved": 250.0,
+      "grid": [
+        {
+          "alpha": 0,
+          "perSet": {
+            "DMU": {
+              "n": 0,
+              "gain": null
+            },
+            "BRO": {
+              "n": 10,
+              "gain": 0.0
+            },
+            "WOE": {
+              "n": 3,
+              "gain": 0.0
+            }
+          },
+          "safe": false
+        },
+        {
+          "alpha": 0.25,
+          "perSet": {
+            "DMU": {
+              "n": 0,
+              "gain": null
+            },
+            "BRO": {
+              "n": 10,
+              "gain": 0.0
+            },
+            "WOE": {
+              "n": 3,
+              "gain": 0.0
+            }
+          },
+          "safe": false
+        },
+        {
+          "alpha": 0.5,
+          "perSet": {
+            "DMU": {
+              "n": 0,
+              "gain": null
+            },
+            "BRO": {
+              "n": 10,
+              "gain": 0.0
+            },
+            "WOE": {
+              "n": 3,
+              "gain": 0.0
+            }
+          },
+          "safe": false
+        },
+        {
+          "alpha": 0.75,
+          "perSet": {
+            "DMU": {
+              "n": 0,
+              "gain": null
+            },
+            "BRO": {
+              "n": 10,
+              "gain": 0.0
+            },
+            "WOE": {
+              "n": 3,
+              "gain": 0.0
+            }
+          },
+          "safe": false
+        },
+        {
+          "alpha": 1,
+          "perSet": {
+            "DMU": {
+              "n": 0,
+              "gain": null
+            },
+            "BRO": {
+              "n": 10,
+              "gain": 0.0
+            },
+            "WOE": {
+              "n": 3,
+              "gain": 0.0
+            }
+          },
+          "safe": false
+        }
+      ]
+    },
+    {
+      "requested": 500,
+      "achieved": 500.0,
+      "grid": [
+        {
+          "alpha": 0,
+          "perSet": {
+            "DMU": {
+              "n": 0,
+              "gain": null
+            },
+            "BRO": {
+              "n": 10,
+              "gain": 0.0
+            },
+            "WOE": {
+              "n": 3,
+              "gain": 0.0
+            }
+          },
+          "safe": false
+        },
+        {
+          "alpha": 0.25,
+          "perSet": {
+            "DMU": {
+              "n": 0,
+              "gain": null
+            },
+            "BRO": {
+              "n": 10,
+              "gain": 0.0
+            },
+            "WOE": {
+              "n": 3,
+              "gain": 0.0
+            }
+          },
+          "safe": false
+        },
+        {
+          "alpha": 0.5,
+          "perSet": {
+            "DMU": {
+              "n": 0,
+              "gain": null
+            },
+            "BRO": {
+              "n": 10,
+              "gain": 0.0
+            },
+            "WOE": {
+              "n": 3,
+              "gain": 0.0
+            }
+          },
+          "safe": false
+        },
+        {
+          "alpha": 0.75,
+          "perSet": {
+            "DMU": {
+              "n": 0,
+              "gain": null
+            },
+            "BRO": {
+              "n": 10,
+              "gain": 0.0
+            },
+            "WOE": {
+              "n": 3,
+              "gain": 0.0
+            }
+          },
+          "safe": false
+        },
+        {
+          "alpha": 1,
+          "perSet": {
+            "DMU": {
+              "n": 0,
+              "gain": null
+            },
+            "BRO": {
+              "n": 10,
+              "gain": 0.0
+            },
+            "WOE": {
+              "n": 3,
+              "gain": 0.0
+            }
+          },
+          "safe": false
+        }
+      ]
+    },
+    {
+      "requested": 1000,
+      "achieved": 1000.0,
+      "grid": [
+        {
+          "alpha": 0,
+          "perSet": {
+            "DMU": {
+              "n": 0,
+              "gain": null
+            },
+            "BRO": {
+              "n": 10,
+              "gain": 0.0
+            },
+            "WOE": {
+              "n": 3,
+              "gain": 0.0
+            }
+          },
+          "safe": false
+        },
+        {
+          "alpha": 0.25,
+          "perSet": {
+            "DMU": {
+              "n": 0,
+              "gain": null
+            },
+            "BRO": {
+              "n": 10,
+              "gain": 0.0
+            },
+            "WOE": {
+              "n": 3,
+              "gain": 0.0
+            }
+          },
+          "safe": false
+        },
+        {
+          "alpha": 0.5,
+          "perSet": {
+            "DMU": {
+              "n": 0,
+              "gain": null
+            },
+            "BRO": {
+              "n": 10,
+              "gain": 0.0
+            },
+            "WOE": {
+              "n": 3,
+              "gain": 0.0
+            }
+          },
+          "safe": false
+        },
+        {
+          "alpha": 0.75,
+          "perSet": {
+            "DMU": {
+              "n": 0,
+              "gain": null
+            },
+            "BRO": {
+              "n": 10,
+              "gain": 0.0
+            },
+            "WOE": {
+              "n": 3,
+              "gain": 0.0
+            }
+          },
+          "safe": false
+        },
+        {
+          "alpha": 1,
+          "perSet": {
+            "DMU": {
+              "n": 0,
+              "gain": null
+            },
+            "BRO": {
+              "n": 10,
+              "gain": 0.0
+            },
+            "WOE": {
+              "n": 3,
+              "gain": 0.0
+            }
+          },
+          "safe": false
+        }
+      ]
+    },
+    {
+      "requested": "full",
+      "achieved": 2149.3333333333335,
+      "grid": [
+        {
+          "alpha": 0,
+          "perSet": {
+            "DMU": {
+              "n": 0,
+              "gain": null
+            },
+            "BRO": {
+              "n": 10,
+              "gain": 0.0
+            },
+            "WOE": {
+              "n": 3,
+              "gain": 0.0
+            }
+          },
+          "safe": false
+        },
+        {
+          "alpha": 0.25,
+          "perSet": {
+            "DMU": {
+              "n": 0,
+              "gain": null
+            },
+            "BRO": {
+              "n": 10,
+              "gain": 0.0
+            },
+            "WOE": {
+              "n": 3,
+              "gain": 0.0
+            }
+          },
+          "safe": false
+        },
+        {
+          "alpha": 0.5,
+          "perSet": {
+            "DMU": {
+              "n": 0,
+              "gain": null
+            },
+            "BRO": {
+              "n": 10,
+              "gain": 0.0
+            },
+            "WOE": {
+              "n": 3,
+              "gain": 0.0
+            }
+          },
+          "safe": false
+        },
+        {
+          "alpha": 0.75,
+          "perSet": {
+            "DMU": {
+              "n": 0,
+              "gain": null
+            },
+            "BRO": {
+              "n": 10,
+              "gain": 0.0
+            },
+            "WOE": {
+              "n": 3,
+              "gain": 0.0
+            }
+          },
+          "safe": false
+        },
+        {
+          "alpha": 1,
+          "perSet": {
+            "DMU": {
+              "n": 0,
+              "gain": null
+            },
+            "BRO": {
+              "n": 10,
+              "gain": 0.0
+            },
+            "WOE": {
+              "n": 3,
+              "gain": 0.0
+            }
+          },
+          "safe": false
+        }
+      ]
+    }
+  ],
+  "bins": [
+    {
+      "bin": 0,
+      "n": 13,
+      "meanConfidence": 0.0,
+      "lift": 0.0,
+      "residualError": 0.25
+    },
+    {
+      "bin": 1,
+      "n": 0,
+      "meanConfidence": null,
+      "lift": null,
+      "residualError": null
+    },
+    {
+      "bin": 2,
+      "n": 0,
+      "meanConfidence": null,
+      "lift": null,
+      "residualError": null
+    },
+    {
+      "bin": 3,
+      "n": 0,
+      "meanConfidence": null,
+      "lift": null,
+      "residualError": null
+    },
+    {
+      "bin": 4,
+      "n": 0,
+      "meanConfidence": null,
+      "lift": null,
+      "residualError": null
+    }
+  ],
+  "predictedLift": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "seconds": 16.87566740019247,
+  "calibrationSetsOnly": true,
+  "probabilityClaim": false,
+  "qualifiedCalibrationCoverage": false
+}

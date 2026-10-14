@@ -1,0 +1,64 @@
+{
+  "copyConfusionBySet": {
+    "DMU": {
+      "starterObservedStarter": 3715,
+      "starterObservedNonstarter": 1207,
+      "nonstarterObservedStarter": 1655,
+      "nonstarterObservedNonstarter": 2205
+    },
+    "BRO": {
+      "starterObservedStarter": 3517,
+      "starterObservedNonstarter": 1474,
+      "nonstarterObservedStarter": 1593,
+      "nonstarterObservedNonstarter": 2961
+    },
+    "WOE": {
+      "starterObservedStarter": 3809,
+      "starterObservedNonstarter": 1205,
+      "nonstarterObservedStarter": 1295,
+      "nonstarterObservedNonstarter": 2607
+    },
+    "LCI": {
+      "starterObservedStarter": 4276,
+      "starterObservedNonstarter": 1198,
+      "nonstarterObservedStarter": 1336,
+      "nonstarterObservedNonstarter": 3132
+    },
+    "MKM": {
+      "starterObservedStarter": 3907,
+      "starterObservedNonstarter": 1038,
+      "nonstarterObservedStarter": 1751,
+      "nonstarterObservedNonstarter": 2542
+    },
+    "OTJ": {
+      "starterObservedStarter": 4503,
+      "starterObservedNonstarter": 1132,
+      "nonstarterObservedStarter": 1637,
+      "nonstarterObservedNonstarter": 2643
+    },
+    "ONE": {
+      "starterObservedStarter": 3671,
+      "starterObservedNonstarter": 1090,
+      "nonstarterObservedStarter": 1198,
+      "nonstarterObservedNonstarter": 2363
+    },
+    "MOM": {
+      "starterObservedStarter": 3425,
+      "starterObservedNonstarter": 1428,
+      "nonstarterObservedStarter": 1658,
+      "nonstarterObservedNonstarter": 2651
+    }
+  },
+  "observedLandHistogram": {
+    "17": 1327,
+    "16": 456,
+    "18": 24,
+    "15": 35,
+    "14": 3
+  },
+  "currentAvailability": {
+    "Ready": 1765,
+    "InsufficientEligibleCards": 80
+  },
+  "labelInterpretation": "Quantity-equivalent interchangeable copies; not an assignment of physical picked occurrences."
+}

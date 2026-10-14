@@ -1,0 +1,3063 @@
+{
+  "decisions": 33631,
+  "metrics": {
+    "current | overall": {
+      "not-included": {
+        "n": 229139,
+        "normalizedRank": 0.5357098047325377
+      },
+      "included": {
+        "n": 44693,
+        "normalizedRank": 0.31691743792967697
+      }
+    },
+    "current | set=BRO": {
+      "not-included": {
+        "n": 30159,
+        "normalizedRank": 0.527857545282692
+      },
+      "included": {
+        "n": 4827,
+        "normalizedRank": 0.32594661110820217
+      }
+    },
+    "current | pack=1": {
+      "not-included": {
+        "n": 76646,
+        "normalizedRank": 0.5232996875597272
+      },
+      "included": {
+        "n": 15013,
+        "normalizedRank": 0.3810479016383899
+      }
+    },
+    "current | pick=1": {
+      "not-included": {
+        "n": 29933,
+        "normalizedRank": 0.5384032275256008
+      },
+      "included": {
+        "n": 6287,
+        "normalizedRank": 0.31715861149613334
+      }
+    },
+    "current | stage=early": {
+      "not-included": {
+        "n": 129485,
+        "normalizedRank": 0.5373078806868434
+      },
+      "included": {
+        "n": 26107,
+        "normalizedRank": 0.31496108588746574
+      }
+    },
+    "current | shell=colorless": {
+      "not-included": {
+        "n": 10817,
+        "normalizedRank": 0.5264799574404826
+      },
+      "included": {
+        "n": 2305,
+        "normalizedRank": 0.3757337528704123
+      }
+    },
+    "current | generic=low": {
+      "not-included": {
+        "n": 124877,
+        "normalizedRank": 0.6156264741306422
+      },
+      "included": {
+        "n": 3471,
+        "normalizedRank": 0.4201782212153863
+      }
+    },
+    "current | Q=low": {
+      "not-included": {
+        "n": 164208,
+        "normalizedRank": 0.6392683275941095
+      },
+      "included": {
+        "n": 22887,
+        "normalizedRank": 0.46670842750604186
+      }
+    },
+    "current | confidence=0": {
+      "not-included": {
+        "n": 229139,
+        "normalizedRank": 0.5357098047325377
+      },
+      "included": {
+        "n": 44693,
+        "normalizedRank": 0.31691743792967697
+      }
+    },
+    "current | utility=zero": {
+      "not-included": {
+        "n": 229139,
+        "normalizedRank": 0.5357098047325377
+      },
+      "included": {
+        "n": 44693,
+        "normalizedRank": 0.31691743792967697
+      }
+    },
+    "current | commitment=0.0": {
+      "not-included": {
+        "n": 56620,
+        "normalizedRank": 0.5233679435286641
+      },
+      "included": {
+        "n": 11330,
+        "normalizedRank": 0.38322215687617284
+      }
+    },
+    "current | generic=medium": {
+      "not-included": {
+        "n": 80800,
+        "normalizedRank": 0.476600220255542
+      },
+      "included": {
+        "n": 16922,
+        "normalizedRank": 0.3798002274157575
+      }
+    },
+    "current | Q=medium": {
+      "not-included": {
+        "n": 62725,
+        "normalizedRank": 0.27711888306547533
+      },
+      "included": {
+        "n": 20478,
+        "normalizedRank": 0.16800103728026375
+      }
+    },
+    "current | generic=high": {
+      "not-included": {
+        "n": 19415,
+        "normalizedRank": 0.2923724352735427
+      },
+      "included": {
+        "n": 21142,
+        "normalizedRank": 0.22896615125590628
+      }
+    },
+    "A | overall": {
+      "not-included": {
+        "n": 229139,
+        "normalizedRank": 0.5357367885248342
+      },
+      "included": {
+        "n": 44693,
+        "normalizedRank": 0.31677909324073156
+      }
+    },
+    "A | set=BRO": {
+      "not-included": {
+        "n": 30159,
+        "normalizedRank": 0.5278542295228856
+      },
+      "included": {
+        "n": 4827,
+        "normalizedRank": 0.32596732790952804
+      }
+    },
+    "A | pack=1": {
+      "not-included": {
+        "n": 76646,
+        "normalizedRank": 0.5233040795702253
+      },
+      "included": {
+        "n": 15013,
+        "normalizedRank": 0.3810254790688415
+      }
+    },
+    "A | pick=1": {
+      "not-included": {
+        "n": 29933,
+        "normalizedRank": 0.5383953650331895
+      },
+      "included": {
+        "n": 6287,
+        "normalizedRank": 0.31719604556410663
+      }
+    },
+    "A | stage=early": {
+      "not-included": {
+        "n": 129485,
+        "normalizedRank": 0.5373272101879663
+      },
+      "included": {
+        "n": 26107,
+        "normalizedRank": 0.31486521579695825
+      }
+    },
+    "A | shell=colorless": {
+      "not-included": {
+        "n": 10817,
+        "normalizedRank": 0.5264799574404826
+      },
+      "included": {
+        "n": 2305,
+        "normalizedRank": 0.3757337528704123
+      }
+    },
+    "A | generic=low": {
+      "not-included": {
+        "n": 124877,
+        "normalizedRank": 0.6157235241177841
+      },
+      "included": {
+        "n": 3471,
+        "normalizedRank": 0.42008208028087024
+      }
+    },
+    "A | Q=low": {
+      "not-included": {
+        "n": 164208,
+        "normalizedRank": 0.6392861254460568
+      },
+      "included": {
+        "n": 22887,
+        "normalizedRank": 0.4666228121169791
+      }
+    },
+    "A | confidence=0": {
+      "not-included": {
+        "n": 189575,
+        "normalizedRank": 0.5739651163524301
+      },
+      "included": {
+        "n": 19576,
+        "normalizedRank": 0.4261391495543008
+      }
+    },
+    "A | utility=zero": {
+      "not-included": {
+        "n": 229139,
+        "normalizedRank": 0.5357367885248342
+      },
+      "included": {
+        "n": 44693,
+        "normalizedRank": 0.31677909324073156
+      }
+    },
+    "A | commitment=0.0": {
+      "not-included": {
+        "n": 56620,
+        "normalizedRank": 0.5233684643195416
+      },
+      "included": {
+        "n": 11330,
+        "normalizedRank": 0.38321955430075466
+      }
+    },
+    "A | generic=medium": {
+      "not-included": {
+        "n": 80800,
+        "normalizedRank": 0.4765297099764922
+      },
+      "included": {
+        "n": 16922,
+        "normalizedRank": 0.37948792792782865
+      }
+    },
+    "A | Q=medium": {
+      "not-included": {
+        "n": 62725,
+        "normalizedRank": 0.2771723130949914
+      },
+      "included": {
+        "n": 20478,
+        "normalizedRank": 0.1677985450106751
+      }
+    },
+    "A | generic=high": {
+      "not-included": {
+        "n": 19415,
+        "normalizedRank": 0.2923544001138645
+      },
+      "included": {
+        "n": 21142,
+        "normalizedRank": 0.22891867681504421
+      }
+    },
+    "B | overall": {
+      "not-included": {
+        "n": 229139,
+        "normalizedRank": 0.5357367885248342
+      },
+      "included": {
+        "n": 44693,
+        "normalizedRank": 0.31677909324073156
+      }
+    },
+    "B | set=BRO": {
+      "not-included": {
+        "n": 30159,
+        "normalizedRank": 0.5278542295228856
+      },
+      "included": {
+        "n": 4827,
+        "normalizedRank": 0.32596732790952804
+      }
+    },
+    "B | pack=1": {
+      "not-included": {
+        "n": 76646,
+        "normalizedRank": 0.5233040795702253
+      },
+      "included": {
+        "n": 15013,
+        "normalizedRank": 0.3810254790688415
+      }
+    },
+    "B | pick=1": {
+      "not-included": {
+        "n": 29933,
+        "normalizedRank": 0.5383953650331895
+      },
+      "included": {
+        "n": 6287,
+        "normalizedRank": 0.31719604556410663
+      }
+    },
+    "B | stage=early": {
+      "not-included": {
+        "n": 129485,
+        "normalizedRank": 0.5373272101879663
+      },
+      "included": {
+        "n": 26107,
+        "normalizedRank": 0.31486521579695825
+      }
+    },
+    "B | shell=colorless": {
+      "not-included": {
+        "n": 10817,
+        "normalizedRank": 0.5264799574404826
+      },
+      "included": {
+        "n": 2305,
+        "normalizedRank": 0.3757337528704123
+      }
+    },
+    "B | generic=low": {
+      "not-included": {
+        "n": 124877,
+        "normalizedRank": 0.6157235241177841
+      },
+      "included": {
+        "n": 3471,
+        "normalizedRank": 0.42008208028087024
+      }
+    },
+    "B | Q=low": {
+      "not-included": {
+        "n": 164208,
+        "normalizedRank": 0.6392861254460568
+      },
+      "included": {
+        "n": 22887,
+        "normalizedRank": 0.4666228121169791
+      }
+    },
+    "B | confidence=0": {
+      "not-included": {
+        "n": 189575,
+        "normalizedRank": 0.5739651163524301
+      },
+      "included": {
+        "n": 19576,
+        "normalizedRank": 0.4261391495543008
+      }
+    },
+    "B | utility=zero": {
+      "not-included": {
+        "n": 229139,
+        "normalizedRank": 0.5357367885248342
+      },
+      "included": {
+        "n": 44693,
+        "normalizedRank": 0.31677909324073156
+      }
+    },
+    "B | commitment=0.0": {
+      "not-included": {
+        "n": 56620,
+        "normalizedRank": 0.5233684643195416
+      },
+      "included": {
+        "n": 11330,
+        "normalizedRank": 0.38321955430075466
+      }
+    },
+    "B | generic=medium": {
+      "not-included": {
+        "n": 80800,
+        "normalizedRank": 0.4765297099764922
+      },
+      "included": {
+        "n": 16922,
+        "normalizedRank": 0.37948792792782865
+      }
+    },
+    "B | Q=medium": {
+      "not-included": {
+        "n": 62725,
+        "normalizedRank": 0.2771723130949914
+      },
+      "included": {
+        "n": 20478,
+        "normalizedRank": 0.1677985450106751
+      }
+    },
+    "B | generic=high": {
+      "not-included": {
+        "n": 19415,
+        "normalizedRank": 0.2923544001138645
+      },
+      "included": {
+        "n": 21142,
+        "normalizedRank": 0.22891867681504421
+      }
+    },
+    "C | overall": {
+      "not-included": {
+        "n": 229139,
+        "normalizedRank": 0.5357098047325377
+      },
+      "included": {
+        "n": 44693,
+        "normalizedRank": 0.31691743792967697
+      }
+    },
+    "C | set=BRO": {
+      "not-included": {
+        "n": 30159,
+        "normalizedRank": 0.527857545282692
+      },
+      "included": {
+        "n": 4827,
+        "normalizedRank": 0.32594661110820217
+      }
+    },
+    "C | pack=1": {
+      "not-included": {
+        "n": 76646,
+        "normalizedRank": 0.5232996875597272
+      },
+      "included": {
+        "n": 15013,
+        "normalizedRank": 0.3810479016383899
+      }
+    },
+    "C | pick=1": {
+      "not-included": {
+        "n": 29933,
+        "normalizedRank": 0.5384032275256008
+      },
+      "included": {
+        "n": 6287,
+        "normalizedRank": 0.31715861149613334
+      }
+    },
+    "C | stage=early": {
+      "not-included": {
+        "n": 129485,
+        "normalizedRank": 0.5373078806868434
+      },
+      "included": {
+        "n": 26107,
+        "normalizedRank": 0.31496108588746574
+      }
+    },
+    "C | shell=colorless": {
+      "not-included": {
+        "n": 10817,
+        "normalizedRank": 0.5264799574404826
+      },
+      "included": {
+        "n": 2305,
+        "normalizedRank": 0.3757337528704123
+      }
+    },
+    "C | generic=low": {
+      "not-included": {
+        "n": 124877,
+        "normalizedRank": 0.6156264741306422
+      },
+      "included": {
+        "n": 3471,
+        "normalizedRank": 0.4201782212153863
+      }
+    },
+    "C | Q=low": {
+      "not-included": {
+        "n": 164208,
+        "normalizedRank": 0.6392683275941095
+      },
+      "included": {
+        "n": 22887,
+        "normalizedRank": 0.46670842750604186
+      }
+    },
+    "C | confidence=0": {
+      "not-included": {
+        "n": 229139,
+        "normalizedRank": 0.5357098047325377
+      },
+      "included": {
+        "n": 44693,
+        "normalizedRank": 0.31691743792967697
+      }
+    },
+    "C | utility=zero": {
+      "not-included": {
+        "n": 229139,
+        "normalizedRank": 0.5357098047325377
+      },
+      "included": {
+        "n": 44693,
+        "normalizedRank": 0.31691743792967697
+      }
+    },
+    "C | commitment=0.0": {
+      "not-included": {
+        "n": 56620,
+        "normalizedRank": 0.5233679435286641
+      },
+      "included": {
+        "n": 11330,
+        "normalizedRank": 0.38322215687617284
+      }
+    },
+    "C | generic=medium": {
+      "not-included": {
+        "n": 80800,
+        "normalizedRank": 0.476600220255542
+      },
+      "included": {
+        "n": 16922,
+        "normalizedRank": 0.3798002274157575
+      }
+    },
+    "C | Q=medium": {
+      "not-included": {
+        "n": 62725,
+        "normalizedRank": 0.27711888306547533
+      },
+      "included": {
+        "n": 20478,
+        "normalizedRank": 0.16800103728026375
+      }
+    },
+    "C | generic=high": {
+      "not-included": {
+        "n": 19415,
+        "normalizedRank": 0.2923724352735427
+      },
+      "included": {
+        "n": 21142,
+        "normalizedRank": 0.22896615125590628
+      }
+    },
+    "Phase-D-C | overall": {
+      "not-included": {
+        "n": 229139,
+        "normalizedRank": 0.5405925501298834
+      },
+      "included": {
+        "n": 44693,
+        "normalizedRank": 0.291883821980817
+      }
+    },
+    "Phase-D-C | set=BRO": {
+      "not-included": {
+        "n": 30159,
+        "normalizedRank": 0.5318695828120875
+      },
+      "included": {
+        "n": 4827,
+        "normalizedRank": 0.3008794804164599
+      }
+    },
+    "Phase-D-C | pack=1": {
+      "not-included": {
+        "n": 76646,
+        "normalizedRank": 0.5251372747305346
+      },
+      "included": {
+        "n": 15013,
+        "normalizedRank": 0.3716664518086619
+      }
+    },
+    "Phase-D-C | pick=1": {
+      "not-included": {
+        "n": 29933,
+        "normalizedRank": 0.5418935316957567
+      },
+      "included": {
+        "n": 6287,
+        "normalizedRank": 0.30054094413089166
+      }
+    },
+    "Phase-D-C | stage=early": {
+      "not-included": {
+        "n": 129485,
+        "normalizedRank": 0.5414088798280018
+      },
+      "included": {
+        "n": 26107,
+        "normalizedRank": 0.2946210286693682
+      }
+    },
+    "Phase-D-C | shell=colorless": {
+      "not-included": {
+        "n": 10817,
+        "normalizedRank": 0.5264651422042567
+      },
+      "included": {
+        "n": 2305,
+        "normalizedRank": 0.37580327842800726
+      }
+    },
+    "Phase-D-C | generic=low": {
+      "not-included": {
+        "n": 124877,
+        "normalizedRank": 0.6373527723996586
+      },
+      "included": {
+        "n": 3471,
+        "normalizedRank": 0.41676358629686205
+      }
+    },
+    "Phase-D-C | Q=low": {
+      "not-included": {
+        "n": 164208,
+        "normalizedRank": 0.6372714055637543
+      },
+      "included": {
+        "n": 22887,
+        "normalizedRank": 0.43183526190145666
+      }
+    },
+    "Phase-D-C | confidence=0": {
+      "not-included": {
+        "n": 229139,
+        "normalizedRank": 0.5405925501298834
+      },
+      "included": {
+        "n": 44693,
+        "normalizedRank": 0.291883821980817
+      }
+    },
+    "Phase-D-C | utility=zero": {
+      "not-included": {
+        "n": 229139,
+        "normalizedRank": 0.5405925501298834
+      },
+      "included": {
+        "n": 44693,
+        "normalizedRank": 0.291883821980817
+      }
+    },
+    "Phase-D-C | commitment=0.0": {
+      "not-included": {
+        "n": 56620,
+        "normalizedRank": 0.52421092658862
+      },
+      "included": {
+        "n": 11330,
+        "normalizedRank": 0.3790094736586352
+      }
+    },
+    "Phase-D-C | generic=medium": {
+      "not-included": {
+        "n": 80800,
+        "normalizedRank": 0.46743776441517776
+      },
+      "included": {
+        "n": 16922,
+        "normalizedRank": 0.36248368173081563
+      }
+    },
+    "Phase-D-C | Q=medium": {
+      "not-included": {
+        "n": 62725,
+        "normalizedRank": 0.29915573616410607
+      },
+      "included": {
+        "n": 20478,
+        "normalizedRank": 0.15213631335078742
+      }
+    },
+    "Phase-D-C | generic=high": {
+      "not-included": {
+        "n": 19415,
+        "normalizedRank": 0.2643758507781171
+      },
+      "included": {
+        "n": 21142,
+        "normalizedRank": 0.20296685703222458
+      }
+    },
+    "current | pick=2": {
+      "not-included": {
+        "n": 28011,
+        "normalizedRank": 0.5379315269001463
+      },
+      "included": {
+        "n": 5641,
+        "normalizedRank": 0.31164687112214146
+      }
+    },
+    "current | shell=W": {
+      "not-included": {
+        "n": 2398,
+        "normalizedRank": 0.5244639071890949
+      },
+      "included": {
+        "n": 495,
+        "normalizedRank": 0.381485960728385
+      }
+    },
+    "A | pick=2": {
+      "not-included": {
+        "n": 28011,
+        "normalizedRank": 0.5379485240521976
+      },
+      "included": {
+        "n": 5641,
+        "normalizedRank": 0.31156246991205333
+      }
+    },
+    "A | shell=W": {
+      "not-included": {
+        "n": 2398,
+        "normalizedRank": 0.5244318291753653
+      },
+      "included": {
+        "n": 495,
+        "normalizedRank": 0.3816413608837851
+      }
+    },
+    "B | pick=2": {
+      "not-included": {
+        "n": 28011,
+        "normalizedRank": 0.5379485240521976
+      },
+      "included": {
+        "n": 5641,
+        "normalizedRank": 0.31156246991205333
+      }
+    },
+    "B | shell=W": {
+      "not-included": {
+        "n": 2398,
+        "normalizedRank": 0.5244318291753653
+      },
+      "included": {
+        "n": 495,
+        "normalizedRank": 0.3816413608837851
+      }
+    },
+    "C | pick=2": {
+      "not-included": {
+        "n": 28011,
+        "normalizedRank": 0.5379315269001463
+      },
+      "included": {
+        "n": 5641,
+        "normalizedRank": 0.31164687112214146
+      }
+    },
+    "C | shell=W": {
+      "not-included": {
+        "n": 2398,
+        "normalizedRank": 0.5244639071890949
+      },
+      "included": {
+        "n": 495,
+        "normalizedRank": 0.381485960728385
+      }
+    },
+    "Phase-D-C | pick=2": {
+      "not-included": {
+        "n": 28011,
+        "normalizedRank": 0.5418066071113088
+      },
+      "included": {
+        "n": 5641,
+        "normalizedRank": 0.29240473820335544
+      }
+    },
+    "Phase-D-C | shell=W": {
+      "not-included": {
+        "n": 2398,
+        "normalizedRank": 0.5251768572452475
+      },
+      "included": {
+        "n": 495,
+        "normalizedRank": 0.37803211378968954
+      }
+    },
+    "current | pick=3": {
+      "not-included": {
+        "n": 25890,
+        "normalizedRank": 0.5367273546589885
+      },
+      "included": {
+        "n": 5220,
+        "normalizedRank": 0.31784076396145367
+      }
+    },
+    "A | pick=3": {
+      "not-included": {
+        "n": 25890,
+        "normalizedRank": 0.5367616489343024
+      },
+      "included": {
+        "n": 5220,
+        "normalizedRank": 0.31767067223963774
+      }
+    },
+    "B | pick=3": {
+      "not-included": {
+        "n": 25890,
+        "normalizedRank": 0.5367616489343024
+      },
+      "included": {
+        "n": 5220,
+        "normalizedRank": 0.31767067223963774
+      }
+    },
+    "C | pick=3": {
+      "not-included": {
+        "n": 25890,
+        "normalizedRank": 0.5367273546589885
+      },
+      "included": {
+        "n": 5220,
+        "normalizedRank": 0.31784076396145367
+      }
+    },
+    "Phase-D-C | pick=3": {
+      "not-included": {
+        "n": 25890,
+        "normalizedRank": 0.5408384540655687
+      },
+      "included": {
+        "n": 5220,
+        "normalizedRank": 0.29745065598513876
+      }
+    },
+    "current | pick=4": {
+      "not-included": {
+        "n": 23893,
+        "normalizedRank": 0.5366444759823573
+      },
+      "included": {
+        "n": 4688,
+        "normalizedRank": 0.3132366756300204
+      }
+    },
+    "A | pick=4": {
+      "not-included": {
+        "n": 23893,
+        "normalizedRank": 0.5366571165131413
+      },
+      "included": {
+        "n": 4688,
+        "normalizedRank": 0.3131722515254938
+      }
+    },
+    "B | pick=4": {
+      "not-included": {
+        "n": 23893,
+        "normalizedRank": 0.5366571165131413
+      },
+      "included": {
+        "n": 4688,
+        "normalizedRank": 0.3131722515254938
+      }
+    },
+    "C | pick=4": {
+      "not-included": {
+        "n": 23893,
+        "normalizedRank": 0.5366444759823573
+      },
+      "included": {
+        "n": 4688,
+        "normalizedRank": 0.3132366756300204
+      }
+    },
+    "Phase-D-C | pick=4": {
+      "not-included": {
+        "n": 23893,
+        "normalizedRank": 0.5409252614877693
+      },
+      "included": {
+        "n": 4688,
+        "normalizedRank": 0.29141909711448954
+      }
+    },
+    "current | pick=5": {
+      "not-included": {
+        "n": 21758,
+        "normalizedRank": 0.536417384154998
+      },
+      "included": {
+        "n": 4271,
+        "normalizedRank": 0.31447683342438665
+      }
+    },
+    "A | pick=5": {
+      "not-included": {
+        "n": 21758,
+        "normalizedRank": 0.5364666636026596
+      },
+      "included": {
+        "n": 4271,
+        "normalizedRank": 0.31422578631077813
+      }
+    },
+    "B | pick=5": {
+      "not-included": {
+        "n": 21758,
+        "normalizedRank": 0.5364666636026596
+      },
+      "included": {
+        "n": 4271,
+        "normalizedRank": 0.31422578631077813
+      }
+    },
+    "C | pick=5": {
+      "not-included": {
+        "n": 21758,
+        "normalizedRank": 0.536417384154998
+      },
+      "included": {
+        "n": 4271,
+        "normalizedRank": 0.31447683342438665
+      }
+    },
+    "Phase-D-C | pick=5": {
+      "not-included": {
+        "n": 21758,
+        "normalizedRank": 0.541439930140638
+      },
+      "included": {
+        "n": 4271,
+        "normalizedRank": 0.28889018965113555
+      }
+    },
+    "current | pick=6": {
+      "included": {
+        "n": 3763,
+        "normalizedRank": 0.3102235003311272
+      },
+      "not-included": {
+        "n": 19707,
+        "normalizedRank": 0.5362373252272781
+      }
+    },
+    "current | stage=mid": {
+      "included": {
+        "n": 12649,
+        "normalizedRank": 0.31435043487972575
+      },
+      "not-included": {
+        "n": 66016,
+        "normalizedRank": 0.535571397073533
+      }
+    },
+    "current | shell=WG": {
+      "included": {
+        "n": 4263,
+        "normalizedRank": 0.28259551002337774
+      },
+      "not-included": {
+        "n": 21180,
+        "normalizedRank": 0.5437580425292889
+      }
+    },
+    "A | pick=6": {
+      "included": {
+        "n": 3763,
+        "normalizedRank": 0.3101133003471563
+      },
+      "not-included": {
+        "n": 19707,
+        "normalizedRank": 0.5362583676253946
+      }
+    },
+    "A | stage=mid": {
+      "included": {
+        "n": 12649,
+        "normalizedRank": 0.3142927102587945
+      },
+      "not-included": {
+        "n": 66016,
+        "normalizedRank": 0.5355824574033038
+      }
+    },
+    "A | shell=WG": {
+      "included": {
+        "n": 4263,
+        "normalizedRank": 0.2825983026018213
+      },
+      "not-included": {
+        "n": 21180,
+        "normalizedRank": 0.5437574804536561
+      }
+    },
+    "A | confidence=1": {
+      "included": {
+        "n": 14839,
+        "normalizedRank": 0.28070189875567597
+      },
+      "not-included": {
+        "n": 31085,
+        "normalizedRank": 0.3772989613821205
+      }
+    },
+    "B | pick=6": {
+      "included": {
+        "n": 3763,
+        "normalizedRank": 0.3101133003471563
+      },
+      "not-included": {
+        "n": 19707,
+        "normalizedRank": 0.5362583676253946
+      }
+    },
+    "B | stage=mid": {
+      "included": {
+        "n": 12649,
+        "normalizedRank": 0.3142927102587945
+      },
+      "not-included": {
+        "n": 66016,
+        "normalizedRank": 0.5355824574033038
+      }
+    },
+    "B | shell=WG": {
+      "included": {
+        "n": 4263,
+        "normalizedRank": 0.2825983026018213
+      },
+      "not-included": {
+        "n": 21180,
+        "normalizedRank": 0.5437574804536561
+      }
+    },
+    "B | confidence=1": {
+      "included": {
+        "n": 14839,
+        "normalizedRank": 0.28070189875567597
+      },
+      "not-included": {
+        "n": 31085,
+        "normalizedRank": 0.3772989613821205
+      }
+    },
+    "C | pick=6": {
+      "included": {
+        "n": 3763,
+        "normalizedRank": 0.3102235003311272
+      },
+      "not-included": {
+        "n": 19707,
+        "normalizedRank": 0.5362373252272781
+      }
+    },
+    "C | stage=mid": {
+      "included": {
+        "n": 12649,
+        "normalizedRank": 0.31435043487972575
+      },
+      "not-included": {
+        "n": 66016,
+        "normalizedRank": 0.535571397073533
+      }
+    },
+    "C | shell=WG": {
+      "included": {
+        "n": 4263,
+        "normalizedRank": 0.28259551002337774
+      },
+      "not-included": {
+        "n": 21180,
+        "normalizedRank": 0.5437580425292889
+      }
+    },
+    "Phase-D-C | pick=6": {
+      "included": {
+        "n": 3763,
+        "normalizedRank": 0.283557213300769
+      },
+      "not-included": {
+        "n": 19707,
+        "normalizedRank": 0.5413291828461564
+      }
+    },
+    "Phase-D-C | stage=mid": {
+      "included": {
+        "n": 12649,
+        "normalizedRank": 0.28628817511140225
+      },
+      "not-included": {
+        "n": 66016,
+        "normalizedRank": 0.5409482681927998
+      }
+    },
+    "Phase-D-C | shell=WG": {
+      "included": {
+        "n": 4263,
+        "normalizedRank": 0.25798138512776086
+      },
+      "not-included": {
+        "n": 21180,
+        "normalizedRank": 0.5487122452880243
+      }
+    },
+    "current | pick=7": {
+      "not-included": {
+        "n": 17523,
+        "normalizedRank": 0.5374528171138341
+      },
+      "included": {
+        "n": 3424,
+        "normalizedRank": 0.30832777036048065
+      }
+    },
+    "current | commitment=0.25": {
+      "not-included": {
+        "n": 15929,
+        "normalizedRank": 0.5254828267901908
+      },
+      "included": {
+        "n": 3074,
+        "normalizedRank": 0.367951871196829
+      }
+    },
+    "A | pick=7": {
+      "not-included": {
+        "n": 17523,
+        "normalizedRank": 0.5374613093539646
+      },
+      "included": {
+        "n": 3424,
+        "normalizedRank": 0.308284309635069
+      }
+    },
+    "A | commitment=0.25": {
+      "not-included": {
+        "n": 15929,
+        "normalizedRank": 0.5255099561050971
+      },
+      "included": {
+        "n": 3074,
+        "normalizedRank": 0.36781129121727696
+      }
+    },
+    "B | pick=7": {
+      "not-included": {
+        "n": 17523,
+        "normalizedRank": 0.5374613093539646
+      },
+      "included": {
+        "n": 3424,
+        "normalizedRank": 0.308284309635069
+      }
+    },
+    "B | commitment=0.25": {
+      "not-included": {
+        "n": 15929,
+        "normalizedRank": 0.5255099561050971
+      },
+      "included": {
+        "n": 3074,
+        "normalizedRank": 0.36781129121727696
+      }
+    },
+    "C | pick=7": {
+      "not-included": {
+        "n": 17523,
+        "normalizedRank": 0.5374528171138341
+      },
+      "included": {
+        "n": 3424,
+        "normalizedRank": 0.30832777036048065
+      }
+    },
+    "C | commitment=0.25": {
+      "not-included": {
+        "n": 15929,
+        "normalizedRank": 0.5254828267901908
+      },
+      "included": {
+        "n": 3074,
+        "normalizedRank": 0.367951871196829
+      }
+    },
+    "Phase-D-C | pick=7": {
+      "not-included": {
+        "n": 17523,
+        "normalizedRank": 0.5421140378767497
+      },
+      "included": {
+        "n": 3424,
+        "normalizedRank": 0.28447304739652873
+      }
+    },
+    "Phase-D-C | commitment=0.25": {
+      "not-included": {
+        "n": 15929,
+        "normalizedRank": 0.5292161086310124
+      },
+      "included": {
+        "n": 3074,
+        "normalizedRank": 0.34860657306981313
+      }
+    },
+    "current | pick=8": {
+      "included": {
+        "n": 2989,
+        "normalizedRank": 0.3192483550797368
+      },
+      "not-included": {
+        "n": 15411,
+        "normalizedRank": 0.5350572102178097
+      }
+    },
+    "A | pick=8": {
+      "included": {
+        "n": 2989,
+        "normalizedRank": 0.3192483550797368
+      },
+      "not-included": {
+        "n": 15411,
+        "normalizedRank": 0.5350572102178097
+      }
+    },
+    "B | pick=8": {
+      "included": {
+        "n": 2989,
+        "normalizedRank": 0.3192483550797368
+      },
+      "not-included": {
+        "n": 15411,
+        "normalizedRank": 0.5350572102178097
+      }
+    },
+    "C | pick=8": {
+      "included": {
+        "n": 2989,
+        "normalizedRank": 0.3192483550797368
+      },
+      "not-included": {
+        "n": 15411,
+        "normalizedRank": 0.5350572102178097
+      }
+    },
+    "Phase-D-C | pick=8": {
+      "included": {
+        "n": 2989,
+        "normalizedRank": 0.2886631936146824
+      },
+      "not-included": {
+        "n": 15411,
+        "normalizedRank": 0.5409892748222513
+      }
+    },
+    "current | pick=9": {
+      "not-included": {
+        "n": 13375,
+        "normalizedRank": 0.5327177570093459
+      },
+      "included": {
+        "n": 2473,
+        "normalizedRank": 0.3230489284270117
+      }
+    },
+    "current | commitment=0.5": {
+      "not-included": {
+        "n": 17394,
+        "normalizedRank": 0.5314803430188045
+      },
+      "included": {
+        "n": 3613,
+        "normalizedRank": 0.34844475879626724
+      }
+    },
+    "A | pick=9": {
+      "not-included": {
+        "n": 13375,
+        "normalizedRank": 0.5327302180685358
+      },
+      "included": {
+        "n": 2473,
+        "normalizedRank": 0.3229815338994474
+      }
+    },
+    "A | commitment=0.5": {
+      "not-included": {
+        "n": 17394,
+        "normalizedRank": 0.531485133942878
+      },
+      "included": {
+        "n": 3613,
+        "normalizedRank": 0.34842169393788547
+      }
+    },
+    "B | pick=9": {
+      "not-included": {
+        "n": 13375,
+        "normalizedRank": 0.5327302180685358
+      },
+      "included": {
+        "n": 2473,
+        "normalizedRank": 0.3229815338994474
+      }
+    },
+    "B | commitment=0.5": {
+      "not-included": {
+        "n": 17394,
+        "normalizedRank": 0.531485133942878
+      },
+      "included": {
+        "n": 3613,
+        "normalizedRank": 0.34842169393788547
+      }
+    },
+    "C | pick=9": {
+      "not-included": {
+        "n": 13375,
+        "normalizedRank": 0.5327177570093459
+      },
+      "included": {
+        "n": 2473,
+        "normalizedRank": 0.3230489284270117
+      }
+    },
+    "C | commitment=0.5": {
+      "not-included": {
+        "n": 17394,
+        "normalizedRank": 0.5314803430188045
+      },
+      "included": {
+        "n": 3613,
+        "normalizedRank": 0.34844475879626724
+      }
+    },
+    "Phase-D-C | pick=9": {
+      "not-included": {
+        "n": 13375,
+        "normalizedRank": 0.53881246105919
+      },
+      "included": {
+        "n": 2473,
+        "normalizedRank": 0.2900862649952824
+      }
+    },
+    "Phase-D-C | commitment=0.5": {
+      "not-included": {
+        "n": 17394,
+        "normalizedRank": 0.5365078959853019
+      },
+      "included": {
+        "n": 3613,
+        "normalizedRank": 0.32424070225066626
+      }
+    },
+    "current | pick=10": {
+      "included": {
+        "n": 1966,
+        "normalizedRank": 0.3136656493726687
+      },
+      "not-included": {
+        "n": 11344,
+        "normalizedRank": 0.5322931358721205
+      }
+    },
+    "current | stage=late": {
+      "included": {
+        "n": 5937,
+        "normalizedRank": 0.3309892762899332
+      },
+      "not-included": {
+        "n": 33638,
+        "normalizedRank": 0.529829855124165
+      }
+    },
+    "A | pick=10": {
+      "included": {
+        "n": 1966,
+        "normalizedRank": 0.31309766022380464
+      },
+      "not-included": {
+        "n": 11344,
+        "normalizedRank": 0.5323915726375176
+      }
+    },
+    "A | stage=late": {
+      "included": {
+        "n": 5937,
+        "normalizedRank": 0.33049239234181127
+      },
+      "not-included": {
+        "n": 33638,
+        "normalizedRank": 0.5299175535604574
+      }
+    },
+    "B | pick=10": {
+      "included": {
+        "n": 1966,
+        "normalizedRank": 0.31309766022380464
+      },
+      "not-included": {
+        "n": 11344,
+        "normalizedRank": 0.5323915726375176
+      }
+    },
+    "B | stage=late": {
+      "included": {
+        "n": 5937,
+        "normalizedRank": 0.33049239234181127
+      },
+      "not-included": {
+        "n": 33638,
+        "normalizedRank": 0.5299175535604574
+      }
+    },
+    "C | pick=10": {
+      "included": {
+        "n": 1966,
+        "normalizedRank": 0.3136656493726687
+      },
+      "not-included": {
+        "n": 11344,
+        "normalizedRank": 0.5322931358721205
+      }
+    },
+    "C | stage=late": {
+      "included": {
+        "n": 5937,
+        "normalizedRank": 0.3309892762899332
+      },
+      "not-included": {
+        "n": 33638,
+        "normalizedRank": 0.529829855124165
+      }
+    },
+    "Phase-D-C | pick=10": {
+      "included": {
+        "n": 1966,
+        "normalizedRank": 0.2754238724991523
+      },
+      "not-included": {
+        "n": 11344,
+        "normalizedRank": 0.5389207216737188
+      }
+    },
+    "Phase-D-C | stage=late": {
+      "included": {
+        "n": 5937,
+        "normalizedRank": 0.29176913143562966
+      },
+      "not-included": {
+        "n": 33638,
+        "normalizedRank": 0.5367520859345581
+      }
+    },
+    "current | pick=11": {
+      "not-included": {
+        "n": 9130,
+        "normalizedRank": 0.5297280029207739
+      },
+      "included": {
+        "n": 1638,
+        "normalizedRank": 0.33429995929995926
+      }
+    },
+    "A | pick=11": {
+      "not-included": {
+        "n": 9130,
+        "normalizedRank": 0.5297645125958379
+      },
+      "included": {
+        "n": 1638,
+        "normalizedRank": 0.3340964590964591
+      }
+    },
+    "B | pick=11": {
+      "not-included": {
+        "n": 9130,
+        "normalizedRank": 0.5297645125958379
+      },
+      "included": {
+        "n": 1638,
+        "normalizedRank": 0.3340964590964591
+      }
+    },
+    "C | pick=11": {
+      "not-included": {
+        "n": 9130,
+        "normalizedRank": 0.5297280029207739
+      },
+      "included": {
+        "n": 1638,
+        "normalizedRank": 0.33429995929995926
+      }
+    },
+    "Phase-D-C | pick=11": {
+      "not-included": {
+        "n": 9130,
+        "normalizedRank": 0.535806863818912
+      },
+      "included": {
+        "n": 1638,
+        "normalizedRank": 0.30041717541717544
+      }
+    },
+    "current | pick=12": {
+      "not-included": {
+        "n": 6998,
+        "normalizedRank": 0.5303181861484234
+      },
+      "included": {
+        "n": 1233,
+        "normalizedRank": 0.327926466612598
+      }
+    },
+    "current | commitment=0.75": {
+      "not-included": {
+        "n": 19892,
+        "normalizedRank": 0.5396541664928454
+      },
+      "included": {
+        "n": 4092,
+        "normalizedRank": 0.30723346044093847
+      }
+    },
+    "A | pick=12": {
+      "not-included": {
+        "n": 6998,
+        "normalizedRank": 0.5304610841192722
+      },
+      "included": {
+        "n": 1233,
+        "normalizedRank": 0.32711543660448766
+      }
+    },
+    "A | commitment=0.75": {
+      "not-included": {
+        "n": 19892,
+        "normalizedRank": 0.5397493250097312
+      },
+      "included": {
+        "n": 4092,
+        "normalizedRank": 0.306770876565598
+      }
+    },
+    "B | pick=12": {
+      "not-included": {
+        "n": 6998,
+        "normalizedRank": 0.5304610841192722
+      },
+      "included": {
+        "n": 1233,
+        "normalizedRank": 0.32711543660448766
+      }
+    },
+    "B | commitment=0.75": {
+      "not-included": {
+        "n": 19892,
+        "normalizedRank": 0.5397493250097312
+      },
+      "included": {
+        "n": 4092,
+        "normalizedRank": 0.306770876565598
+      }
+    },
+    "C | pick=12": {
+      "not-included": {
+        "n": 6998,
+        "normalizedRank": 0.5303181861484234
+      },
+      "included": {
+        "n": 1233,
+        "normalizedRank": 0.327926466612598
+      }
+    },
+    "C | commitment=0.75": {
+      "not-included": {
+        "n": 19892,
+        "normalizedRank": 0.5396541664928454
+      },
+      "included": {
+        "n": 4092,
+        "normalizedRank": 0.30723346044093847
+      }
+    },
+    "Phase-D-C | pick=12": {
+      "not-included": {
+        "n": 6998,
+        "normalizedRank": 0.5372725540630656
+      },
+      "included": {
+        "n": 1233,
+        "normalizedRank": 0.28845633955123
+      }
+    },
+    "Phase-D-C | commitment=0.75": {
+      "not-included": {
+        "n": 19892,
+        "normalizedRank": 0.545384955270839
+      },
+      "included": {
+        "n": 4092,
+        "normalizedRank": 0.2793749926081305
+      }
+    },
+    "current | pick=13": {
+      "not-included": {
+        "n": 4556,
+        "normalizedRank": 0.5264486391571555
+      },
+      "included": {
+        "n": 794,
+        "normalizedRank": 0.3482367758186398
+      }
+    },
+    "current | shell=WR": {
+      "not-included": {
+        "n": 24089,
+        "normalizedRank": 0.5401415928087854
+      },
+      "included": {
+        "n": 4394,
+        "normalizedRank": 0.2799338122050912
+      }
+    },
+    "A | pick=13": {
+      "not-included": {
+        "n": 4556,
+        "normalizedRank": 0.526558384547849
+      },
+      "included": {
+        "n": 794,
+        "normalizedRank": 0.34760705289672544
+      }
+    },
+    "A | shell=WR": {
+      "not-included": {
+        "n": 24089,
+        "normalizedRank": 0.5401962227743704
+      },
+      "included": {
+        "n": 4394,
+        "normalizedRank": 0.2796343171570755
+      }
+    },
+    "B | pick=13": {
+      "not-included": {
+        "n": 4556,
+        "normalizedRank": 0.526558384547849
+      },
+      "included": {
+        "n": 794,
+        "normalizedRank": 0.34760705289672544
+      }
+    },
+    "B | shell=WR": {
+      "not-included": {
+        "n": 24089,
+        "normalizedRank": 0.5401962227743704
+      },
+      "included": {
+        "n": 4394,
+        "normalizedRank": 0.2796343171570755
+      }
+    },
+    "C | pick=13": {
+      "not-included": {
+        "n": 4556,
+        "normalizedRank": 0.5264486391571555
+      },
+      "included": {
+        "n": 794,
+        "normalizedRank": 0.3482367758186398
+      }
+    },
+    "C | shell=WR": {
+      "not-included": {
+        "n": 24089,
+        "normalizedRank": 0.5401415928087854
+      },
+      "included": {
+        "n": 4394,
+        "normalizedRank": 0.2799338122050912
+      }
+    },
+    "Phase-D-C | pick=13": {
+      "not-included": {
+        "n": 4556,
+        "normalizedRank": 0.5346795434591747
+      },
+      "included": {
+        "n": 794,
+        "normalizedRank": 0.30100755667506296
+      }
+    },
+    "Phase-D-C | shell=WR": {
+      "not-included": {
+        "n": 24089,
+        "normalizedRank": 0.5445911791816561
+      },
+      "included": {
+        "n": 4394,
+        "normalizedRank": 0.2555400738946483
+      }
+    },
+    "current | pick=14": {
+      "not-included": {
+        "n": 1610,
+        "normalizedRank": 0.5204968944099378
+      },
+      "included": {
+        "n": 306,
+        "normalizedRank": 0.39215686274509803
+      }
+    },
+    "A | pick=14": {
+      "not-included": {
+        "n": 1610,
+        "normalizedRank": 0.5204968944099378
+      },
+      "included": {
+        "n": 306,
+        "normalizedRank": 0.39215686274509803
+      }
+    },
+    "A | confidence=2": {
+      "not-included": {
+        "n": 8403,
+        "normalizedRank": 0.2632196307401591
+      },
+      "included": {
+        "n": 10075,
+        "normalizedRank": 0.1624753388326589
+      }
+    },
+    "B | pick=14": {
+      "not-included": {
+        "n": 1610,
+        "normalizedRank": 0.5204968944099378
+      },
+      "included": {
+        "n": 306,
+        "normalizedRank": 0.39215686274509803
+      }
+    },
+    "B | confidence=2": {
+      "not-included": {
+        "n": 8403,
+        "normalizedRank": 0.2632196307401591
+      },
+      "included": {
+        "n": 10075,
+        "normalizedRank": 0.1624753388326589
+      }
+    },
+    "C | pick=14": {
+      "not-included": {
+        "n": 1610,
+        "normalizedRank": 0.5204968944099378
+      },
+      "included": {
+        "n": 306,
+        "normalizedRank": 0.39215686274509803
+      }
+    },
+    "Phase-D-C | pick=14": {
+      "not-included": {
+        "n": 1610,
+        "normalizedRank": 0.5304347826086957
+      },
+      "included": {
+        "n": 306,
+        "normalizedRank": 0.33986928104575165
+      }
+    },
+    "current | pack=2": {
+      "not-included": {
+        "n": 76412,
+        "normalizedRank": 0.5377116400833225
+      },
+      "included": {
+        "n": 14895,
+        "normalizedRank": 0.30653764068164874
+      }
+    },
+    "current | commitment=1.0": {
+      "not-included": {
+        "n": 119304,
+        "normalizedRank": 0.5428915230816257
+      },
+      "included": {
+        "n": 22584,
+        "normalizedRank": 0.27341789453904225
+      }
+    },
+    "A | pack=2": {
+      "not-included": {
+        "n": 76412,
+        "normalizedRank": 0.5377485052899255
+      },
+      "included": {
+        "n": 14895,
+        "normalizedRank": 0.30634852056302203
+      }
+    },
+    "A | commitment=1.0": {
+      "not-included": {
+        "n": 119304,
+        "normalizedRank": 0.5429229150097687
+      },
+      "included": {
+        "n": 22584,
+        "normalizedRank": 0.27325206109079647
+      }
+    },
+    "B | pack=2": {
+      "not-included": {
+        "n": 76412,
+        "normalizedRank": 0.5377485052899255
+      },
+      "included": {
+        "n": 14895,
+        "normalizedRank": 0.30634852056302203
+      }
+    },
+    "B | commitment=1.0": {
+      "not-included": {
+        "n": 119304,
+        "normalizedRank": 0.5429229150097687
+      },
+      "included": {
+        "n": 22584,
+        "normalizedRank": 0.27325206109079647
+      }
+    },
+    "C | pack=2": {
+      "not-included": {
+        "n": 76412,
+        "normalizedRank": 0.5377116400833225
+      },
+      "included": {
+        "n": 14895,
+        "normalizedRank": 0.30653764068164874
+      }
+    },
+    "C | commitment=1.0": {
+      "not-included": {
+        "n": 119304,
+        "normalizedRank": 0.5428915230816257
+      },
+      "included": {
+        "n": 22584,
+        "normalizedRank": 0.27341789453904225
+      }
+    },
+    "Phase-D-C | pack=2": {
+      "not-included": {
+        "n": 76412,
+        "normalizedRank": 0.5438680653061247
+      },
+      "included": {
+        "n": 14895,
+        "normalizedRank": 0.2749549106296337
+      }
+    },
+    "Phase-D-C | commitment=1.0": {
+      "not-included": {
+        "n": 119304,
+        "normalizedRank": 0.5496824449587979
+      },
+      "included": {
+        "n": 22584,
+        "normalizedRank": 0.23754364092435296
+      }
+    },
+    "current | Q=high": {
+      "not-included": {
+        "n": 2206,
+        "normalizedRank": 0.17985198039595138
+      },
+      "included": {
+        "n": 1328,
+        "normalizedRank": 0.03170936117095756
+      }
+    },
+    "A | Q=high": {
+      "not-included": {
+        "n": 2206,
+        "normalizedRank": 0.17981077047260183
+      },
+      "included": {
+        "n": 1328,
+        "normalizedRank": 0.031651437167250426
+      }
+    },
+    "B | Q=high": {
+      "not-included": {
+        "n": 2206,
+        "normalizedRank": 0.17981077047260183
+      },
+      "included": {
+        "n": 1328,
+        "normalizedRank": 0.031651437167250426
+      }
+    },
+    "C | Q=high": {
+      "not-included": {
+        "n": 2206,
+        "normalizedRank": 0.17985198039595138
+      },
+      "included": {
+        "n": 1328,
+        "normalizedRank": 0.03170936117095756
+      }
+    },
+    "Phase-D-C | Q=high": {
+      "not-included": {
+        "n": 2206,
+        "normalizedRank": 0.2090797046712731
+      },
+      "included": {
+        "n": 1328,
+        "normalizedRank": 0.034866409527554106
+      }
+    },
+    "current | pack=3": {
+      "not-included": {
+        "n": 76081,
+        "normalizedRank": 0.5462015385163083
+      },
+      "included": {
+        "n": 14785,
+        "normalizedRank": 0.2622550387650151
+      }
+    },
+    "A | pack=3": {
+      "not-included": {
+        "n": 76081,
+        "normalizedRank": 0.546241357459007
+      },
+      "included": {
+        "n": 14785,
+        "normalizedRank": 0.26205013751513584
+      }
+    },
+    "B | pack=3": {
+      "not-included": {
+        "n": 76081,
+        "normalizedRank": 0.546241357459007
+      },
+      "included": {
+        "n": 14785,
+        "normalizedRank": 0.26205013751513584
+      }
+    },
+    "C | pack=3": {
+      "not-included": {
+        "n": 76081,
+        "normalizedRank": 0.5462015385163083
+      },
+      "included": {
+        "n": 14785,
+        "normalizedRank": 0.2622550387650151
+      }
+    },
+    "Phase-D-C | pack=3": {
+      "not-included": {
+        "n": 76081,
+        "normalizedRank": 0.5528728352550989
+      },
+      "included": {
+        "n": 14785,
+        "normalizedRank": 0.2279257234329943
+      }
+    },
+    "current | shell=G": {
+      "not-included": {
+        "n": 2718,
+        "normalizedRank": 0.5269977314403363
+      },
+      "included": {
+        "n": 544,
+        "normalizedRank": 0.36511059916390803
+      }
+    },
+    "A | shell=G": {
+      "not-included": {
+        "n": 2718,
+        "normalizedRank": 0.5269977314403363
+      },
+      "included": {
+        "n": 544,
+        "normalizedRank": 0.36511059916390803
+      }
+    },
+    "B | shell=G": {
+      "not-included": {
+        "n": 2718,
+        "normalizedRank": 0.5269977314403363
+      },
+      "included": {
+        "n": 544,
+        "normalizedRank": 0.36511059916390803
+      }
+    },
+    "C | shell=G": {
+      "not-included": {
+        "n": 2718,
+        "normalizedRank": 0.5269977314403363
+      },
+      "included": {
+        "n": 544,
+        "normalizedRank": 0.36511059916390803
+      }
+    },
+    "Phase-D-C | shell=G": {
+      "not-included": {
+        "n": 2718,
+        "normalizedRank": 0.5275587884031593
+      },
+      "included": {
+        "n": 544,
+        "normalizedRank": 0.3623073770592153
+      }
+    },
+    "current | shell=B": {
+      "not-included": {
+        "n": 2161,
+        "normalizedRank": 0.5156125547032535
+      },
+      "included": {
+        "n": 422,
+        "normalizedRank": 0.42005040115229686
+      }
+    },
+    "A | shell=B": {
+      "not-included": {
+        "n": 2161,
+        "normalizedRank": 0.5156155210412499
+      },
+      "included": {
+        "n": 422,
+        "normalizedRank": 0.4200352109712299
+      }
+    },
+    "B | shell=B": {
+      "not-included": {
+        "n": 2161,
+        "normalizedRank": 0.5156155210412499
+      },
+      "included": {
+        "n": 422,
+        "normalizedRank": 0.4200352109712299
+      }
+    },
+    "C | shell=B": {
+      "not-included": {
+        "n": 2161,
+        "normalizedRank": 0.5156125547032535
+      },
+      "included": {
+        "n": 422,
+        "normalizedRank": 0.42005040115229686
+      }
+    },
+    "Phase-D-C | shell=B": {
+      "not-included": {
+        "n": 2161,
+        "normalizedRank": 0.5161498509716926
+      },
+      "included": {
+        "n": 422,
+        "normalizedRank": 0.41729898590088166
+      }
+    },
+    "current | shell=BR": {
+      "not-included": {
+        "n": 17541,
+        "normalizedRank": 0.5299407061592798
+      },
+      "included": {
+        "n": 3243,
+        "normalizedRank": 0.3380542933271888
+      }
+    },
+    "A | shell=BR": {
+      "not-included": {
+        "n": 17541,
+        "normalizedRank": 0.529934213434299
+      },
+      "included": {
+        "n": 3243,
+        "normalizedRank": 0.3380894117018076
+      }
+    },
+    "B | shell=BR": {
+      "not-included": {
+        "n": 17541,
+        "normalizedRank": 0.529934213434299
+      },
+      "included": {
+        "n": 3243,
+        "normalizedRank": 0.3380894117018076
+      }
+    },
+    "C | shell=BR": {
+      "not-included": {
+        "n": 17541,
+        "normalizedRank": 0.5299407061592798
+      },
+      "included": {
+        "n": 3243,
+        "normalizedRank": 0.3380542933271888
+      }
+    },
+    "Phase-D-C | shell=BR": {
+      "not-included": {
+        "n": 17541,
+        "normalizedRank": 0.5356241140232931
+      },
+      "included": {
+        "n": 3243,
+        "normalizedRank": 0.30731341841425097
+      }
+    },
+    "A | confidence=3": {
+      "included": {
+        "n": 203,
+        "normalizedRank": 0.066174917036986
+      },
+      "not-included": {
+        "n": 76,
+        "normalizedRank": 0.11292475799054745
+      }
+    },
+    "B | confidence=3": {
+      "included": {
+        "n": 203,
+        "normalizedRank": 0.066174917036986
+      },
+      "not-included": {
+        "n": 76,
+        "normalizedRank": 0.11292475799054745
+      }
+    },
+    "current | shell=WU": {
+      "not-included": {
+        "n": 21602,
+        "normalizedRank": 0.5360184894521993
+      },
+      "included": {
+        "n": 4203,
+        "normalizedRank": 0.3148771332033288
+      }
+    },
+    "A | shell=WU": {
+      "not-included": {
+        "n": 21602,
+        "normalizedRank": 0.5360996290586143
+      },
+      "included": {
+        "n": 4203,
+        "normalizedRank": 0.314460103039689
+      }
+    },
+    "B | shell=WU": {
+      "not-included": {
+        "n": 21602,
+        "normalizedRank": 0.5360996290586143
+      },
+      "included": {
+        "n": 4203,
+        "normalizedRank": 0.314460103039689
+      }
+    },
+    "C | shell=WU": {
+      "not-included": {
+        "n": 21602,
+        "normalizedRank": 0.5360184894521993
+      },
+      "included": {
+        "n": 4203,
+        "normalizedRank": 0.3148771332033288
+      }
+    },
+    "Phase-D-C | shell=WU": {
+      "not-included": {
+        "n": 21602,
+        "normalizedRank": 0.541600213430368
+      },
+      "included": {
+        "n": 4203,
+        "normalizedRank": 0.28618895776283354
+      }
+    },
+    "current | generic=unknown": {
+      "not-included": {
+        "n": 4047,
+        "normalizedRank": 0.4172752925903408
+      },
+      "included": {
+        "n": 3158,
+        "normalizedRank": 0.4552788566721436
+      }
+    },
+    "A | generic=unknown": {
+      "not-included": {
+        "n": 4047,
+        "normalizedRank": 0.41730274776976034
+      },
+      "included": {
+        "n": 3158,
+        "normalizedRank": 0.4554179011826257
+      }
+    },
+    "B | generic=unknown": {
+      "not-included": {
+        "n": 4047,
+        "normalizedRank": 0.41730274776976034
+      },
+      "included": {
+        "n": 3158,
+        "normalizedRank": 0.4554179011826257
+      }
+    },
+    "C | generic=unknown": {
+      "not-included": {
+        "n": 4047,
+        "normalizedRank": 0.4172752925903408
+      },
+      "included": {
+        "n": 3158,
+        "normalizedRank": 0.4552788566721436
+      }
+    },
+    "Phase-D-C | generic=unknown": {
+      "not-included": {
+        "n": 4047,
+        "normalizedRank": 0.34057466707577905
+      },
+      "included": {
+        "n": 3158,
+        "normalizedRank": 0.37159692657634397
+      }
+    },
+    "current | shell=UG": {
+      "not-included": {
+        "n": 14878,
+        "normalizedRank": 0.5346022776793041
+      },
+      "included": {
+        "n": 3020,
+        "normalizedRank": 0.3295322227441433
+      }
+    },
+    "A | shell=UG": {
+      "not-included": {
+        "n": 14878,
+        "normalizedRank": 0.5346265622176363
+      },
+      "included": {
+        "n": 3020,
+        "normalizedRank": 0.3294125852072872
+      }
+    },
+    "B | shell=UG": {
+      "not-included": {
+        "n": 14878,
+        "normalizedRank": 0.5346265622176363
+      },
+      "included": {
+        "n": 3020,
+        "normalizedRank": 0.3294125852072872
+      }
+    },
+    "C | shell=UG": {
+      "not-included": {
+        "n": 14878,
+        "normalizedRank": 0.5346022776793041
+      },
+      "included": {
+        "n": 3020,
+        "normalizedRank": 0.3295322227441433
+      }
+    },
+    "Phase-D-C | shell=UG": {
+      "not-included": {
+        "n": 14878,
+        "normalizedRank": 0.539521083500449
+      },
+      "included": {
+        "n": 3020,
+        "normalizedRank": 0.30529977472858266
+      }
+    },
+    "current | shell=R": {
+      "not-included": {
+        "n": 2389,
+        "normalizedRank": 0.5239921048209034
+      },
+      "included": {
+        "n": 433,
+        "normalizedRank": 0.36762785584956487
+      }
+    },
+    "A | shell=R": {
+      "not-included": {
+        "n": 2389,
+        "normalizedRank": 0.5239921048209034
+      },
+      "included": {
+        "n": 433,
+        "normalizedRank": 0.36762785584956487
+      }
+    },
+    "B | shell=R": {
+      "not-included": {
+        "n": 2389,
+        "normalizedRank": 0.5239921048209034
+      },
+      "included": {
+        "n": 433,
+        "normalizedRank": 0.36762785584956487
+      }
+    },
+    "C | shell=R": {
+      "not-included": {
+        "n": 2389,
+        "normalizedRank": 0.5239921048209034
+      },
+      "included": {
+        "n": 433,
+        "normalizedRank": 0.36762785584956487
+      }
+    },
+    "Phase-D-C | shell=R": {
+      "not-included": {
+        "n": 2389,
+        "normalizedRank": 0.5249508142664274
+      },
+      "included": {
+        "n": 433,
+        "normalizedRank": 0.36233834807737814
+      }
+    },
+    "current | shell=UR": {
+      "not-included": {
+        "n": 21059,
+        "normalizedRank": 0.5381777144087795
+      },
+      "included": {
+        "n": 4108,
+        "normalizedRank": 0.30428809938303614
+      }
+    },
+    "A | shell=UR": {
+      "not-included": {
+        "n": 21059,
+        "normalizedRank": 0.5381854385332707
+      },
+      "included": {
+        "n": 4108,
+        "normalizedRank": 0.3042485029035662
+      }
+    },
+    "B | shell=UR": {
+      "not-included": {
+        "n": 21059,
+        "normalizedRank": 0.5381854385332707
+      },
+      "included": {
+        "n": 4108,
+        "normalizedRank": 0.3042485029035662
+      }
+    },
+    "C | shell=UR": {
+      "not-included": {
+        "n": 21059,
+        "normalizedRank": 0.5381777144087795
+      },
+      "included": {
+        "n": 4108,
+        "normalizedRank": 0.30428809938303614
+      }
+    },
+    "Phase-D-C | shell=UR": {
+      "not-included": {
+        "n": 21059,
+        "normalizedRank": 0.543389469271515
+      },
+      "included": {
+        "n": 4108,
+        "normalizedRank": 0.2775708779481905
+      }
+    },
+    "current | shell=RG": {
+      "not-included": {
+        "n": 19314,
+        "normalizedRank": 0.5402819412876884
+      },
+      "included": {
+        "n": 3743,
+        "normalizedRank": 0.292143891522732
+      }
+    },
+    "A | shell=RG": {
+      "not-included": {
+        "n": 19314,
+        "normalizedRank": 0.5403161098563397
+      },
+      "included": {
+        "n": 3743,
+        "normalizedRank": 0.29196758061305217
+      }
+    },
+    "B | shell=RG": {
+      "not-included": {
+        "n": 19314,
+        "normalizedRank": 0.5403161098563397
+      },
+      "included": {
+        "n": 3743,
+        "normalizedRank": 0.29196758061305217
+      }
+    },
+    "C | shell=RG": {
+      "not-included": {
+        "n": 19314,
+        "normalizedRank": 0.5402819412876884
+      },
+      "included": {
+        "n": 3743,
+        "normalizedRank": 0.292143891522732
+      }
+    },
+    "Phase-D-C | shell=RG": {
+      "not-included": {
+        "n": 19314,
+        "normalizedRank": 0.5461475526130698
+      },
+      "included": {
+        "n": 3743,
+        "normalizedRank": 0.2618771490331736
+      }
+    },
+    "current | shell=WB": {
+      "included": {
+        "n": 3981,
+        "normalizedRank": 0.32679316970952244
+      },
+      "not-included": {
+        "n": 20833,
+        "normalizedRank": 0.5330982763589686
+      }
+    },
+    "A | shell=WB": {
+      "included": {
+        "n": 3981,
+        "normalizedRank": 0.32675291439421056
+      },
+      "not-included": {
+        "n": 20833,
+        "normalizedRank": 0.5331059687897397
+      }
+    },
+    "B | shell=WB": {
+      "included": {
+        "n": 3981,
+        "normalizedRank": 0.32675291439421056
+      },
+      "not-included": {
+        "n": 20833,
+        "normalizedRank": 0.5331059687897397
+      }
+    },
+    "C | shell=WB": {
+      "included": {
+        "n": 3981,
+        "normalizedRank": 0.32679316970952244
+      },
+      "not-included": {
+        "n": 20833,
+        "normalizedRank": 0.5330982763589686
+      }
+    },
+    "Phase-D-C | shell=WB": {
+      "included": {
+        "n": 3981,
+        "normalizedRank": 0.29782130914384114
+      },
+      "not-included": {
+        "n": 20833,
+        "normalizedRank": 0.5386345398309589
+      }
+    },
+    "current | shell=BG": {
+      "not-included": {
+        "n": 27379,
+        "normalizedRank": 0.5365797441010196
+      },
+      "included": {
+        "n": 5470,
+        "normalizedRank": 0.3169073466651163
+      }
+    },
+    "A | shell=BG": {
+      "not-included": {
+        "n": 27379,
+        "normalizedRank": 0.536651641190704
+      },
+      "included": {
+        "n": 5470,
+        "normalizedRank": 0.3165474800438237
+      }
+    },
+    "B | shell=BG": {
+      "not-included": {
+        "n": 27379,
+        "normalizedRank": 0.536651641190704
+      },
+      "included": {
+        "n": 5470,
+        "normalizedRank": 0.3165474800438237
+      }
+    },
+    "C | shell=BG": {
+      "not-included": {
+        "n": 27379,
+        "normalizedRank": 0.5365797441010196
+      },
+      "included": {
+        "n": 5470,
+        "normalizedRank": 0.3169073466651163
+      }
+    },
+    "Phase-D-C | shell=BG": {
+      "not-included": {
+        "n": 27379,
+        "normalizedRank": 0.5425091753071227
+      },
+      "included": {
+        "n": 5470,
+        "normalizedRank": 0.2872287548932887
+      }
+    },
+    "current | shell=UB": {
+      "included": {
+        "n": 3679,
+        "normalizedRank": 0.32173701008302796
+      },
+      "not-included": {
+        "n": 18803,
+        "normalizedRank": 0.5348789841995713
+      }
+    },
+    "A | shell=UB": {
+      "included": {
+        "n": 3679,
+        "normalizedRank": 0.32173756448015756
+      },
+      "not-included": {
+        "n": 18803,
+        "normalizedRank": 0.5348788757260808
+      }
+    },
+    "B | shell=UB": {
+      "included": {
+        "n": 3679,
+        "normalizedRank": 0.32173756448015756
+      },
+      "not-included": {
+        "n": 18803,
+        "normalizedRank": 0.5348788757260808
+      }
+    },
+    "C | shell=UB": {
+      "included": {
+        "n": 3679,
+        "normalizedRank": 0.32173701008302796
+      },
+      "not-included": {
+        "n": 18803,
+        "normalizedRank": 0.5348789841995713
+      }
+    },
+    "Phase-D-C | shell=UB": {
+      "included": {
+        "n": 3679,
+        "normalizedRank": 0.2934597423656951
+      },
+      "not-included": {
+        "n": 18803,
+        "normalizedRank": 0.5404117219505721
+      }
+    },
+    "current | shell=U": {
+      "not-included": {
+        "n": 1978,
+        "normalizedRank": 0.5163105431811195
+      },
+      "included": {
+        "n": 390,
+        "normalizedRank": 0.4172762707378092
+      }
+    },
+    "A | shell=U": {
+      "not-included": {
+        "n": 1978,
+        "normalizedRank": 0.5163105431811195
+      },
+      "included": {
+        "n": 390,
+        "normalizedRank": 0.4172762707378092
+      }
+    },
+    "B | shell=U": {
+      "not-included": {
+        "n": 1978,
+        "normalizedRank": 0.5163105431811195
+      },
+      "included": {
+        "n": 390,
+        "normalizedRank": 0.4172762707378092
+      }
+    },
+    "C | shell=U": {
+      "not-included": {
+        "n": 1978,
+        "normalizedRank": 0.5163105431811195
+      },
+      "included": {
+        "n": 390,
+        "normalizedRank": 0.4172762707378092
+      }
+    },
+    "Phase-D-C | shell=U": {
+      "not-included": {
+        "n": 1978,
+        "normalizedRank": 0.5173119263614714
+      },
+      "included": {
+        "n": 390,
+        "normalizedRank": 0.41219746065899915
+      }
+    },
+    "current | set=DMU": {
+      "not-included": {
+        "n": 26357,
+        "normalizedRank": 0.5365311885401426
+      },
+      "included": {
+        "n": 5875,
+        "normalizedRank": 0.3361102065782917
+      }
+    },
+    "A | set=DMU": {
+      "not-included": {
+        "n": 26357,
+        "normalizedRank": 0.5365436885289296
+      },
+      "included": {
+        "n": 5875,
+        "normalizedRank": 0.33605412790519174
+      }
+    },
+    "B | set=DMU": {
+      "not-included": {
+        "n": 26357,
+        "normalizedRank": 0.5365436885289296
+      },
+      "included": {
+        "n": 5875,
+        "normalizedRank": 0.33605412790519174
+      }
+    },
+    "C | set=DMU": {
+      "not-included": {
+        "n": 26357,
+        "normalizedRank": 0.5365311885401426
+      },
+      "included": {
+        "n": 5875,
+        "normalizedRank": 0.3361102065782917
+      }
+    },
+    "Phase-D-C | set=DMU": {
+      "not-included": {
+        "n": 26357,
+        "normalizedRank": 0.541671133076642
+      },
+      "included": {
+        "n": 5875,
+        "normalizedRank": 0.3130508843402461
+      }
+    },
+    "current | set=LCI": {
+      "not-included": {
+        "n": 33750,
+        "normalizedRank": 0.5365899813766482
+      },
+      "included": {
+        "n": 6578,
+        "normalizedRank": 0.3122663618939082
+      }
+    },
+    "A | set=LCI": {
+      "not-included": {
+        "n": 33750,
+        "normalizedRank": 0.5365878649745317
+      },
+      "included": {
+        "n": 6578,
+        "normalizedRank": 0.31227722060041907
+      }
+    },
+    "B | set=LCI": {
+      "not-included": {
+        "n": 33750,
+        "normalizedRank": 0.5365878649745317
+      },
+      "included": {
+        "n": 6578,
+        "normalizedRank": 0.31227722060041907
+      }
+    },
+    "C | set=LCI": {
+      "not-included": {
+        "n": 33750,
+        "normalizedRank": 0.5365899813766482
+      },
+      "included": {
+        "n": 6578,
+        "normalizedRank": 0.3122663618939082
+      }
+    },
+    "Phase-D-C | set=LCI": {
+      "not-included": {
+        "n": 33750,
+        "normalizedRank": 0.5414741051541052
+      },
+      "included": {
+        "n": 6578,
+        "normalizedRank": 0.28720719839600956
+      }
+    },
+    "current | set=MKM": {
+      "included": {
+        "n": 5214,
+        "normalizedRank": 0.28319458904901945
+      },
+      "not-included": {
+        "n": 25559,
+        "normalizedRank": 0.5442279984623191
+      }
+    },
+    "A | set=MKM": {
+      "included": {
+        "n": 5214,
+        "normalizedRank": 0.2824384109050392
+      },
+      "not-included": {
+        "n": 25559,
+        "normalizedRank": 0.5443822577386097
+      }
+    },
+    "B | set=MKM": {
+      "included": {
+        "n": 5214,
+        "normalizedRank": 0.2824384109050392
+      },
+      "not-included": {
+        "n": 25559,
+        "normalizedRank": 0.5443822577386097
+      }
+    },
+    "C | set=MKM": {
+      "included": {
+        "n": 5214,
+        "normalizedRank": 0.28319458904901945
+      },
+      "not-included": {
+        "n": 25559,
+        "normalizedRank": 0.5442279984623191
+      }
+    },
+    "Phase-D-C | set=MKM": {
+      "included": {
+        "n": 5214,
+        "normalizedRank": 0.26431630956947416
+      },
+      "not-included": {
+        "n": 25559,
+        "normalizedRank": 0.54807914088598
+      }
+    },
+    "current | set=MOM": {
+      "not-included": {
+        "n": 32887,
+        "normalizedRank": 0.5319617148645337
+      },
+      "included": {
+        "n": 6136,
+        "normalizedRank": 0.32869541773958333
+      }
+    },
+    "A | set=MOM": {
+      "not-included": {
+        "n": 32887,
+        "normalizedRank": 0.5320184054364734
+      },
+      "included": {
+        "n": 6136,
+        "normalizedRank": 0.3283915743824479
+      }
+    },
+    "B | set=MOM": {
+      "not-included": {
+        "n": 32887,
+        "normalizedRank": 0.5320184054364734
+      },
+      "included": {
+        "n": 6136,
+        "normalizedRank": 0.3283915743824479
+      }
+    },
+    "C | set=MOM": {
+      "not-included": {
+        "n": 32887,
+        "normalizedRank": 0.5319617148645337
+      },
+      "included": {
+        "n": 6136,
+        "normalizedRank": 0.32869541773958333
+      }
+    },
+    "Phase-D-C | set=MOM": {
+      "not-included": {
+        "n": 32887,
+        "normalizedRank": 0.5381972130132496
+      },
+      "included": {
+        "n": 6136,
+        "normalizedRank": 0.29527513944479394
+      }
+    },
+    "current | set=ONE": {
+      "not-included": {
+        "n": 26570,
+        "normalizedRank": 0.5347102561846634
+      },
+      "included": {
+        "n": 5205,
+        "normalizedRank": 0.322814311848894
+      }
+    },
+    "A | set=ONE": {
+      "not-included": {
+        "n": 26570,
+        "normalizedRank": 0.534705028902432
+      },
+      "included": {
+        "n": 5205,
+        "normalizedRank": 0.322840995593157
+      }
+    },
+    "B | set=ONE": {
+      "not-included": {
+        "n": 26570,
+        "normalizedRank": 0.534705028902432
+      },
+      "included": {
+        "n": 5205,
+        "normalizedRank": 0.322840995593157
+      }
+    },
+    "C | set=ONE": {
+      "not-included": {
+        "n": 26570,
+        "normalizedRank": 0.5347102561846634
+      },
+      "included": {
+        "n": 5205,
+        "normalizedRank": 0.322814311848894
+      }
+    },
+    "Phase-D-C | set=ONE": {
+      "not-included": {
+        "n": 26570,
+        "normalizedRank": 0.5390505086223942
+      },
+      "included": {
+        "n": 5205,
+        "normalizedRank": 0.3006585947940415
+      }
+    },
+    "current | set=OTJ": {
+      "not-included": {
+        "n": 27164,
+        "normalizedRank": 0.5404697940968372
+      },
+      "included": {
+        "n": 6220,
+        "normalizedRank": 0.32326021111792813
+      }
+    },
+    "A | set=OTJ": {
+      "not-included": {
+        "n": 27164,
+        "normalizedRank": 0.5404757208587646
+      },
+      "included": {
+        "n": 6220,
+        "normalizedRank": 0.3232343277479933
+      }
+    },
+    "B | set=OTJ": {
+      "not-included": {
+        "n": 27164,
+        "normalizedRank": 0.5404757208587646
+      },
+      "included": {
+        "n": 6220,
+        "normalizedRank": 0.3232343277479933
+      }
+    },
+    "C | set=OTJ": {
+      "not-included": {
+        "n": 27164,
+        "normalizedRank": 0.5404697940968372
+      },
+      "included": {
+        "n": 6220,
+        "normalizedRank": 0.32326021111792813
+      }
+    },
+    "Phase-D-C | set=OTJ": {
+      "not-included": {
+        "n": 27164,
+        "normalizedRank": 0.5468194499384678
+      },
+      "included": {
+        "n": 6220,
+        "normalizedRank": 0.2955299777928395
+      }
+    },
+    "current | set=WOE": {
+      "not-included": {
+        "n": 26693,
+        "normalizedRank": 0.5352702022062903
+      },
+      "included": {
+        "n": 4638,
+        "normalizedRank": 0.29701002425776035
+      }
+    },
+    "A | set=WOE": {
+      "not-included": {
+        "n": 26693,
+        "normalizedRank": 0.535277537619912
+      },
+      "included": {
+        "n": 4638,
+        "normalizedRank": 0.29696780688048474
+      }
+    },
+    "B | set=WOE": {
+      "not-included": {
+        "n": 26693,
+        "normalizedRank": 0.535277537619912
+      },
+      "included": {
+        "n": 4638,
+        "normalizedRank": 0.29696780688048474
+      }
+    },
+    "C | set=WOE": {
+      "not-included": {
+        "n": 26693,
+        "normalizedRank": 0.5352702022062903
+      },
+      "included": {
+        "n": 4638,
+        "normalizedRank": 0.29701002425776035
+      }
+    },
+    "Phase-D-C | set=WOE": {
+      "not-included": {
+        "n": 26693,
+        "normalizedRank": 0.5392493325678056
+      },
+      "included": {
+        "n": 4638,
+        "normalizedRank": 0.27410900512452907
+      }
+    }
+  },
+  "confidenceInclusion": {
+    "A/0": {
+      "n": 209151,
+      "observedInclusion": 0.0935974487332119,
+      "meanGenericProbability": 0.05655592659051573
+    },
+    "B/0": {
+      "n": 209151,
+      "observedInclusion": 0.0935974487332119,
+      "meanGenericProbability": 0.05655592659051573
+    },
+    "C/0": {
+      "n": 273832,
+      "observedInclusion": 0.16321321101989542,
+      "meanGenericProbability": 0.0958713165194552
+    },
+    "A/1": {
+      "n": 45924,
+      "observedInclusion": 0.3231208082919606,
+      "meanGenericProbability": 0.17213062544537577
+    },
+    "B/1": {
+      "n": 45924,
+      "observedInclusion": 0.3231208082919606,
+      "meanGenericProbability": 0.17213062544537577
+    },
+    "A/2": {
+      "n": 18478,
+      "observedInclusion": 0.5452429916657647,
+      "meanGenericProbability": 0.32930854775772145
+    },
+    "B/2": {
+      "n": 18478,
+      "observedInclusion": 0.5452429916657647,
+      "meanGenericProbability": 0.32930854775772145
+    },
+    "A/3": {
+      "n": 279,
+      "observedInclusion": 0.7275985663082437,
+      "meanGenericProbability": 0.5403160213759078
+    },
+    "B/3": {
+      "n": 279,
+      "observedInclusion": 0.7275985663082437,
+      "meanGenericProbability": 0.5403160213759078
+    }
+  },
+  "interpretation": "Post-scoring modal-build labels, never pick-time features; strata use known generic probability and utility"
+}

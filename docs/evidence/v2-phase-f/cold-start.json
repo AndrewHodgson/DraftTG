@@ -1,0 +1,41 @@
+{
+  "selectedFamily": "C",
+  "leaveCalibrationSetOut": {
+    "DMU": {
+      "params": {
+        "scale": 0.05,
+        "structureWeight": 0.04,
+        "virtualBase": 0.5
+      },
+      "heldAccuracy": 0.5424028268551236,
+      "fullCalibrationAccuracy": 0.5468197879858657,
+      "gain": -0.004416961130742081
+    },
+    "BRO": {
+      "params": {
+        "scale": 0.05,
+        "structureWeight": 0.02,
+        "virtualBase": 0.5
+      },
+      "heldAccuracy": 0.5928411633109619,
+      "fullCalibrationAccuracy": 0.5928411633109619,
+      "gain": 0.0
+    },
+    "WOE": {
+      "params": {
+        "scale": 0.05,
+        "structureWeight": 0.04,
+        "virtualBase": 0.5
+      },
+      "heldAccuracy": 0.5861344537815126,
+      "fullCalibrationAccuracy": 0.5934873949579832,
+      "gain": -0.007352941176470562
+    }
+  },
+  "macroLoss": 0.003923300769070881,
+  "passesMarginalParameterGate": true,
+  "developmentSameSetBuildTrainingRows": 0,
+  "setIdentityFeatures": false,
+  "probabilityCaveat": "Frozen E-C was trained on the three calibration sets; leave-calibration-set-out is a marginal-parameter sensitivity check, not fully independent E-C probability training. Development sets have zero same-set training for both components.",
+  "zeroBuildDevelopmentTransferEvaluated": true
+}

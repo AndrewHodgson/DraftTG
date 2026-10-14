@@ -1,0 +1,16 @@
+{
+  "method": "Existing ArenaManagedStaticAudit; local PE metadata and IL only, no target execution",
+  "files": {
+    "phase9f3-layout-il.txt": "293c55ca403f9b3a92169ba60817b4a9cfcc9fdd590383de10cce9b1667e3d80",
+    "phase9f3-graph-il.txt": "ca5d308f589019d92cadfec3007ae1a97287d0cbc4d95ea2f59f78974a63aecf",
+    "phase9f3-deck-il.txt": "df461886896a46c5d63accc5b229bf359a9c10b2154ce89294bab9d535f86bc2",
+    "phase9f3-tile-il.txt": "1fe29887a428eee77f2052a26828f09fb646c9052457e67ab8524efe88a77f0b",
+    "phase9f3-draft-holder-il.txt": "67c306310dabd5f64c6ba9622981ac06afbb592e167b6cc4da8a14f1c766890e",
+    "phase9f3-scroll-il.txt": "39a1cd434f2303888c69b2c004b54b486c44f52f48d47a28a2e82bc00b8e8172"
+  },
+  "layoutMethod": "DraftPackHolder.LayoutCards 0x0600754D",
+  "deckHolder": "Wotc.Mtga.Wrapper.Draft.DraftListMetaCardHolder : ListMetaCardHolder_Expanding",
+  "deckRepresentedCard": "MetaCardView.get_Card 0x060014B5 returns _cardData",
+  "legacyVisualCardAccessor": "MetaCardView.get_VisualCard 0x060014B7 returns _visualCard or _cardData",
+  "monoOffsetsUnchanged": true
+}

@@ -1,0 +1,165 @@
+{
+  "datasets": [
+    {
+      "set": "DMU",
+      "pickedOccurrences": 18732,
+      "counts": {
+        "knownTypes": 18732,
+        "knownMana": 18732,
+        "knownMV": 18732,
+        "assignedHardRemoval": 899,
+        "assignedConditionalRemoval": 895,
+        "assignedFixing": 1871,
+        "assignedEarlyPlay": 8113,
+        "assignedCardAdvantage": 0,
+        "assignedCombatTrick": 0,
+        "assignedFinisher": 0,
+        "assignedDefensive": 0,
+        "assignedRamp": 0,
+        "assignedAggressive": 0
+      },
+      "missingRoleInterpretation": "Unassigned remains unknown; no absence/counterfactual role label claimed."
+    },
+    {
+      "set": "BRO",
+      "pickedOccurrences": 18900,
+      "counts": {
+        "knownTypes": 18900,
+        "knownMana": 18900,
+        "knownMV": 18900,
+        "assignedHardRemoval": 929,
+        "assignedConditionalRemoval": 533,
+        "assignedFixing": 75,
+        "assignedEarlyPlay": 8103,
+        "assignedCardAdvantage": 0,
+        "assignedCombatTrick": 0,
+        "assignedFinisher": 0,
+        "assignedDefensive": 0,
+        "assignedRamp": 0,
+        "assignedAggressive": 0
+      },
+      "missingRoleInterpretation": "Unassigned remains unknown; no absence/counterfactual role label claimed."
+    },
+    {
+      "set": "WOE",
+      "pickedOccurrences": 18690,
+      "counts": {
+        "knownTypes": 18690,
+        "knownMana": 18690,
+        "knownMV": 18690,
+        "assignedHardRemoval": 934,
+        "assignedConditionalRemoval": 1112,
+        "assignedFixing": 341,
+        "assignedEarlyPlay": 8848,
+        "assignedCardAdvantage": 0,
+        "assignedCombatTrick": 0,
+        "assignedFinisher": 0,
+        "assignedDefensive": 0,
+        "assignedRamp": 0,
+        "assignedAggressive": 0
+      },
+      "missingRoleInterpretation": "Unassigned remains unknown; no absence/counterfactual role label claimed."
+    },
+    {
+      "set": "LCI",
+      "pickedOccurrences": 22230,
+      "counts": {
+        "knownTypes": 22230,
+        "knownMana": 22230,
+        "knownMV": 22230,
+        "assignedHardRemoval": 835,
+        "assignedConditionalRemoval": 765,
+        "assignedFixing": 312,
+        "assignedEarlyPlay": 10085,
+        "assignedCardAdvantage": 0,
+        "assignedCombatTrick": 0,
+        "assignedFinisher": 0,
+        "assignedDefensive": 0,
+        "assignedRamp": 0,
+        "assignedAggressive": 0
+      },
+      "missingRoleInterpretation": "Unassigned remains unknown; no absence/counterfactual role label claimed."
+    },
+    {
+      "set": "MKM",
+      "pickedOccurrences": 19110,
+      "counts": {
+        "knownTypes": 19110,
+        "knownMana": 19110,
+        "knownMV": 19110,
+        "assignedHardRemoval": 1122,
+        "assignedConditionalRemoval": 842,
+        "assignedFixing": 483,
+        "assignedEarlyPlay": 8304,
+        "assignedCardAdvantage": 0,
+        "assignedCombatTrick": 0,
+        "assignedFinisher": 0,
+        "assignedDefensive": 0,
+        "assignedRamp": 0,
+        "assignedAggressive": 0
+      },
+      "missingRoleInterpretation": "Unassigned remains unknown; no absence/counterfactual role label claimed."
+    },
+    {
+      "set": "OTJ",
+      "pickedOccurrences": 21504,
+      "counts": {
+        "knownTypes": 21504,
+        "knownMana": 21504,
+        "knownMV": 21504,
+        "assignedHardRemoval": 1162,
+        "assignedConditionalRemoval": 1618,
+        "assignedFixing": 1542,
+        "assignedEarlyPlay": 8835,
+        "assignedCardAdvantage": 0,
+        "assignedCombatTrick": 0,
+        "assignedFinisher": 0,
+        "assignedDefensive": 0,
+        "assignedRamp": 0,
+        "assignedAggressive": 0
+      },
+      "missingRoleInterpretation": "Unassigned remains unknown; no absence/counterfactual role label claimed."
+    },
+    {
+      "set": "ONE",
+      "pickedOccurrences": 17598,
+      "counts": {
+        "knownTypes": 17598,
+        "knownMana": 17598,
+        "knownMV": 17598,
+        "assignedHardRemoval": 938,
+        "assignedConditionalRemoval": 474,
+        "assignedFixing": 96,
+        "assignedEarlyPlay": 7979,
+        "assignedCardAdvantage": 0,
+        "assignedCombatTrick": 0,
+        "assignedFinisher": 0,
+        "assignedDefensive": 0,
+        "assignedRamp": 0,
+        "assignedAggressive": 0
+      },
+      "missingRoleInterpretation": "Unassigned remains unknown; no absence/counterfactual role label claimed."
+    },
+    {
+      "set": "MOM",
+      "pickedOccurrences": 21690,
+      "counts": {
+        "knownTypes": 21690,
+        "knownMana": 21690,
+        "knownMV": 21690,
+        "assignedHardRemoval": 969,
+        "assignedConditionalRemoval": 770,
+        "assignedFixing": 791,
+        "assignedEarlyPlay": 8319,
+        "assignedCardAdvantage": 0,
+        "assignedCombatTrick": 0,
+        "assignedFinisher": 0,
+        "assignedDefensive": 0,
+        "assignedRamp": 0,
+        "assignedAggressive": 0
+      },
+      "missingRoleInterpretation": "Unassigned remains unknown; no absence/counterfactual role label claimed."
+    }
+  ],
+  "metadataSha256": "d8306d8ca43415de7f59fe0a431df488acfcdfb8d97d4a17f99e1d17c6d426c0"
+}

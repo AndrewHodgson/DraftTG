@@ -25,6 +25,14 @@ internal sealed class CaptureFreeDesktopSession
     private CaptureFreeDraftLayoutResult? lastLayout;
     private string? geometryKey;
     private string? rejectedPack;
+    private readonly CaptureFreeUiStability uiStability = new();
+    private readonly CaptureFreeUiStability deckStability = new();
+    private ArenaDraftMemorySnapshot? latestUiRead;
+    private string? lastUiEvent;
+    private string? lastRatingEvent;
+    private string? lastDeckPlacement;
+    private string? lastBadgeEvent;
+    private DateTimeOffset geometryChangedAt;
 
     internal CaptureFreeDesktopSession(MainWindowViewModel runtime, CaptureFreeOptions options)
     {
@@ -63,10 +71,41 @@ internal sealed class CaptureFreeDesktopSession
     {
         if (e.PropertyName != nameof(MainWindowViewModel.CaptureFreeSession) || runtime.CaptureFreeSession is not { } session) return;
         source = session; source.Observed += Observed; source.Watcher.PollObserved += ledger.Poll;
+        source.Watcher.PollObserved += UiPoll;
         source.Diagnostic += Diagnostic;
         source.PickRetired += PickRetired;
     }
-    private void PickRetired() => ledger.Record("PickAccepted", new { source?.Generation });
+    private void UiPoll(ArenaDraftMemorySnapshot read) => Dispatcher.UIThread.Post(() =>
+    {
+        if (closing || read.ReadTimestamp < geometryChangedAt || latestUiRead is { } previous && read.ReadTimestamp < previous.ReadTimestamp) return;
+        latestUiRead = read;
+        var stableBefore = uiStability.IsStable;
+        var key = ArenaUiLocalizationDebugCommand.Key(read, window);
+        uiStability.Observe(key, read.ReadTimestamp);
+        var deckKey=ArenaUiLocalizationDebugCommand.DeckKey(read,window);deckStability.Observe(deckKey,read.ReadTimestamp);
+        var eventKey = key + ":" + uiStability.IsStable+":"+deckKey+":"+deckStability.IsStable;
+        if (eventKey != lastUiEvent)
+        {
+            lastUiEvent = eventKey;
+            ledger.Record("UiLocalization", ArenaUiLocalizationDebugCommand.Snapshot(read, window, uiStability,
+                source?.MemoryUpdate?.Generation ?? 0, new MemoryCardNames(runtime.CardResolver, runtime.CardCatalog).Resolve(read),deckStability,
+                new MemoryCardNames(runtime.CardResolver,runtime.CardCatalog).ResolveIds(read.Ui?.DeckView?.Entries.Select(e=>e.GrpId)??[])));
+            Place();
+        }
+        else if (stableBefore != uiStability.IsStable) Place();
+    });
+    private void PickRetired() => Dispatcher.UIThread.Post(() =>
+    {
+        if (closing) return;
+        var placementWasVisible=presentation.Badges.Any(b=>b.IsPlaced);
+        deckStability.Invalidate();
+        uiStability.Invalidate();
+        presentation.SetLocalizationDebug([]);
+        presentation.SetDeckBadges([]);
+        presentation.RetireMemoryPlacement("Accepted pick; awaiting fresh current-generation UI");
+        ledger.Record(placementWasVisible?"PickAccepted":"HistoricalOrUnplacedPickRetired", new { source?.Generation,
+            source?.MemoryUpdate?.SemanticPackKey, PlacementWasVisible=placementWasVisible });
+    });
     private void Diagnostic(string message) => ledger.Record("SourceDiagnostic", new { Message = message });
     private void Observed(ArenaDraftMemoryUpdate update, CaptureFreeReconciliation? reconciliation) => Dispatcher.UIThread.Post(() =>
     {
@@ -92,6 +131,17 @@ internal sealed class CaptureFreeDesktopSession
         if (closing) return;
         var inspection = OperatingSystem.IsWindows() ? ArenaWindowInspector.InspectWindow() : new ArenaWindowInspection(false, null, "Windows only");
         var previous = window; window = inspection.Window; events?.Track(window);
+        if (previous?.Width != window?.Width || previous?.Height != window?.Height || previous?.Scaling != window?.Scaling
+            || previous?.Handle != window?.Handle || previous?.IsVisible != window?.IsVisible || previous?.IsMinimized != window?.IsMinimized
+            || previous?.IsWindowed != window?.IsWindowed)
+        {
+            geometryChangedAt = DateTimeOffset.UtcNow;
+            uiStability.Invalidate();
+            deckStability.Invalidate();
+            presentation.RetireMemoryPlacement("Window geometry invalidated; awaiting fresh stable memory/UI state");
+            presentation.SetLocalizationDebug([]);
+            presentation.SetDeckBadges([]);
+        }
         if (window is null || !window.IsVisible || window.IsMinimized)
         {
             if (previous is not null) ledger.Record("WindowUnavailable", new { Reason = inspection.Diagnostic ?? "Hidden/minimized/exited" });
@@ -114,6 +164,7 @@ internal sealed class CaptureFreeDesktopSession
     }
     private void Place()
     {
+        var placementClock = System.Diagnostics.Stopwatch.StartNew();
         var memory = source?.MemoryUpdate;
         var current = memory?.CurrentPack;
         var context = presentation.PlacementContext;
@@ -121,15 +172,95 @@ internal sealed class CaptureFreeDesktopSession
         var rejected = memory?.SemanticPackKey is { } packKey && packKey == rejectedPack;
         if (rejected) reason = "Manual comparison reported an order/placement mismatch; this pack is withheld";
         CaptureFreeDraftLayoutResult? layout = null;
-        if (!rejected && current is not null && source?.Reconciliation?.CanScore == true && runtime.CaptureFreePresentationGeneration == source.Generation
+        if (!rejected && uiStability.IsStable && latestUiRead is { Status: ArenaMemoryStatus.Success } fresh
+            && current is not null && ArenaDraftMemoryWatcher.StateKey(fresh) == ArenaDraftMemoryWatcher.StateKey(current)
+            && source?.Reconciliation?.CanScore == true && runtime.CaptureFreePresentationGeneration == source.Generation
             && context is not null && window is { IsVisible: true, IsMinimized: false } w && w.ProcessId == current.ProcessId)
         {
-            layout = CaptureFreeDraftLayout.Map(w.Width, w.Height, current.OrderedOfferedGrpIds.Count, current.ViewMode, w.IsWindowed);
+            layout = CaptureFreeDraftLayout.Map(w.Width, w.Height, current.OrderedOfferedGrpIds.Count, current.ViewMode, w.IsWindowed, fresh.Ui?.PackLayout);
             reason = layout.Decline ?? "Current memory order at measured slots";
         }
         var placed = layout?.IsAvailable == true && context is not null && presentation.ApplyMemoryPlacement(context, layout);
         if (!placed) presentation.RetireMemoryPlacement(reason);
+        var packDebug=options.LocalizationDebug && placed && window is { } debugWindow && current is not null
+            ? layout!.Rectangles.Select((r, i) => new LocalizationDebugItem(r.X * debugWindow.Width / debugWindow.Scaling,
+                r.Y * debugWindow.Height / debugWindow.Scaling, r.Width * debugWindow.Width / debugWindow.Scaling,
+                r.Height * debugWindow.Height / debugWindow.Scaling,
+                $"slot {i} / GrpId {current.OrderedOfferedGrpIds[i]}\n{presentation.Badges[i].Name}\n{r}\ngeometry {uiStability.Generation} / stable read {memory!.Generation}")).ToArray() : [];
+        var deckDebug=new List<LocalizationDebugItem>();
+        presentation.SetDeckBadges([]);
+        if(deckStability.IsStable&&latestUiRead is {Status:ArenaMemoryStatus.Success} deckRead
+            &&window is {IsVisible:true,IsMinimized:false} dw&&dw.ProcessId==deckRead.ProcessId&&source?.Reconciliation?.CanScore==true
+            &&runtime.CaptureFreePresentationGeneration==source.Generation&&current is not null
+            &&ArenaDraftMemoryWatcher.StateKey(deckRead)==ArenaDraftMemoryWatcher.StateKey(current))
+        {
+            var deckProjectionClock=System.Diagnostics.Stopwatch.StartNew();
+            var deck=CaptureFreeDeckLayout.Map(deckRead.Ui?.DeckView,dw.Width,dw.Height,deckRead.ViewMode,dw.IsWindowed);
+            var projectionMs=deckProjectionClock.Elapsed.TotalMilliseconds;
+            var names=new MemoryCardNames(runtime.CardResolver,runtime.CardCatalog).ResolveIds(deck.Rows.Select(r=>r.GrpId));
+            foreach(var row in deck.Rows.Where(r=>r.Visible&&options.LocalizationDebug))
+            {
+                var name=names[row.VisualIndex];if(!name.Resolved)continue;
+                var r=row.VisibleRectangle;
+                deckDebug.Add(new(r.X/dw.Scaling,r.Y/dw.Scaling,r.Width/dw.Scaling,r.Height/dw.Scaling,
+                    $"{row.Holder} row {row.VisualIndex} / {row.GrpId}\n{name.Name} ×{row.Quantity}\n{row.Rectangle}\nscroll {deck.ScrollPixels:F1}px / g{deckStability.Generation}"));
+            }
+            var deckBadgeMode="Debug outlines only";
+            if(!options.LocalizationDebug&&DeckQualityBadges.PhysicallyQualified(dw.Width,dw.Height,dw.Scaling*96,deck)
+                &&runtime.CurrentStatisticsDiagnostic is {IsLoading:false,Result:{} statistics} diagnostic
+                &&Equals(diagnostic.PackIdentity,context?.Pack)&&deckRead.Ui?.DeckView is {} deckMemory
+                &&source.Reconciliation.State.DraftedPool.Count==deckMemory.Entries.Sum(e=>e.Quantity))
+            {
+                var identities=new Dictionary<uint,DraftTG.Domain.CardIdentifier>();
+                try
+                {
+                    var visible=deckMemory.Entries.SelectMany(e=>Enumerable.Repeat(e.GrpId,e.Quantity)).ToArray();
+                    var proof=new PreferredBasicPrintingReconciler(runtime.CardResolver!,runtime.CardCatalog!);
+                    var matched=ArenaOfferedPrintingReconciliation.Match(source.Reconciliation.State.DraftedPool.Occurrences.Select(id=>(uint)id.Value).ToArray(),visible,visible,proof.Reconcile);
+                    foreach(var printing in matched)
+                    {
+                        var resolved=runtime.CardResolver!.Resolve(DraftTG.ArenaIntegration.ArenaCardIdentifier.Create((int)printing.PodGrpId));
+                        if(resolved.CardIdentifier is not {} id)throw new InvalidDataException("Deck/pool identity unavailable");
+                        if(identities.TryGetValue(printing.VisibleGrpId,out var prior)&&prior!=id)throw new InvalidDataException("Deck/pool printing identity ambiguous");
+                        identities[printing.VisibleGrpId]=id;
+                    }
+                }
+                catch(InvalidDataException) {identities.Clear();}
+                presentation.SetDeckBadges(DeckQualityBadges.Create(deck,identities,statistics,dw.Scaling));
+                deckBadgeMode="Compact intrinsic Q marker; existing quality policy, not contextual pick score";
+            }
+            var evidence=new {Generation=deckStability.Generation,deck.Viewport,deck.Content,deck.ScrollPixels,deck.NormalizedScrollPixels,
+                Rows=deck.Rows,Names=names,deck.Decline,Mode=deckBadgeMode,BadgeCount=presentation.DeckBadges.Count};
+            var deckEvidenceKey=System.Text.Json.JsonSerializer.Serialize(evidence);
+            if(deckEvidenceKey!=lastDeckPlacement) {lastDeckPlacement=deckEvidenceKey;ledger.Record("DeckPlacement",evidence);
+                ledger.Record("DeckTiming",new {Generation=deckStability.Generation,ProjectionMs=projectionMs,
+                    ModelMs=deckProjectionClock.Elapsed.TotalMilliseconds,deckRead.Ui!.DeckIdentityMilliseconds,deckRead.Ui.DeckGeometryMilliseconds,IncludesRendering=false});}
+        }
+        presentation.SetLocalizationDebug(packDebug.Concat(deckDebug).ToArray());
         presentation.SetCalibrationState(false, placed);
+        if (current is not null && runtime.CaptureFreePresentationGeneration == source?.Generation
+            && source?.Reconciliation?.CanScore == true && runtime.CurrentStatisticsDiagnostic is { IsLoading: false } stats
+            && Equals(stats.PackIdentity, context?.Pack))
+        {
+            var audit = new { memory!.SemanticPackKey, memory.Generation, GeometryGeneration = uiStability.Generation,
+                ScoreScale = "0–50", ContextualValueScale = "0–1",
+                Set = stats.Result?.RequestedContext.Expansion, Format = stats.Result?.RequestedContext.Format.ToString(),
+                Baseline = stats.Recommendation?.EnvironmentBaseline, Source = stats.Result?.Source.ToString(),
+                Cards = presentation.Badges.Select(b => new { b.Index, b.Name, GrpId = current.OrderedOfferedGrpIds[b.Index],
+                    Identifier = b.Presentation?.CardIdentifier.Value, Q = b.Presentation?.PickScore?.QualityComponent,
+                    PrintingIdentity=current.PrintingIdentities.ElementAtOrDefault(b.Index),
+                    CoverageMarker=b.Presentation?.PickScore?.QualityProvenance.ToString() switch {"DirectPrimary" or "FrontFacePrimary"=>"Direct","AlternateFormatPrior"=>"Prior","NeutralEstimate"=>"Neutral",_=>"Missing"},
+                    GIH = b.Presentation?.RawGIH, Games = b.Presentation?.GIHSample,
+                    Provenance = b.Presentation?.PickScore?.QualityProvenance.ToString(),
+                    Prior = b.Presentation?.PickScore?.QualityPrior,
+                    CoverageState = b.Presentation?.StatisticsResolution?.Kind.ToString(),
+                    FinalCurrentScore = b.Presentation?.PickScore?.Score0To50,
+                    ExactScore0To50 = b.Presentation?.PickScore?.ContextualValue * 50,
+                    ContextualValue = b.Presentation?.PickScore?.ContextualValue,
+                    PackRank = b.Presentation?.PickScore?.CurrentPackRank }).ToArray() };
+            var ratingKey = System.Text.Json.JsonSerializer.Serialize(audit);
+            if (ratingKey != lastRatingEvent) { lastRatingEvent = ratingKey; ledger.Record("RatingAudit", audit); }
+        }
         lastLayout = layout;
         geometryKey = window is null ? null : $"{window.Width}x{window.Height}@{window.Scaling * 96}";
         var key = $"{source?.Generation}:{memory?.Generation}:{geometryKey}:{placed}:{reason}";
@@ -138,20 +269,26 @@ internal sealed class CaptureFreeDesktopSession
             lastPlacement = key;
             ledger.Record("Placement", new { Placed = placed, Reason = reason, memory?.Generation, source?.Reconciliation?.Status,
                 memory?.SemanticPackKey, Profile = layout?.Profile, GeometryKey = geometryKey });
+            ledger.Record("UiPlacementTiming", new { GeometryGeneration = uiStability.Generation,
+                PlacementUpdateMs = placementClock.Elapsed.TotalMilliseconds, IncludesRendering = false });
         }
         Visibility();
         var generation = source?.Generation;
+        var geometryGeneration = uiStability.Generation;
+        var deckGeneration = deckStability.Generation;
         Dispatcher.UIThread.Post(() =>
         {
-            if (closing || generation != source?.Generation) { if (!closing) Stale(); return; }
-            ledger.Record("BadgeStages", new { memory?.Generation, memory?.SemanticPackKey,
+            if (closing || generation != source?.Generation || geometryGeneration != uiStability.Generation || deckGeneration != deckStability.Generation) { if (!closing) Stale(); return; }
+            var badgeEvidence=new { memory?.Generation, memory?.SemanticPackKey,
                 Cards = presentation.Badges.Select(b => new { b.Index, b.Name,
                     MemoryGrpId = current?.OrderedOfferedGrpIds.ElementAtOrDefault(b.Index),
                     CatalogResolved = b.Presentation?.Card is not null, StatsAvailable = b.Presentation?.RawStatistics is not null,
                     ScoreGenerated = b.Presentation?.PickScore?.Score0To50 is not null, b.Presentation?.IsLoading,
                     BadgeModelGenerated = true, SlotMapped = b.IsPlaced,
                     MissingRatingReason = b.Presentation?.IsLoading == true ? "Loading" : b.Presentation?.PickScore?.Availability.ToString() ?? "Score unavailable" }).ToArray(),
-                Render = cards.ReadBadgeRenderDiagnostics() });
+                Render = cards.ReadBadgeRenderDiagnostics() };
+            var badgeEventKey=System.Text.Json.JsonSerializer.Serialize(badgeEvidence);
+            if(badgeEventKey!=lastBadgeEvent) {lastBadgeEvent=badgeEventKey;ledger.Record("BadgeStages",badgeEvidence);}
         }, DispatcherPriority.Background);
     }
     private void Visibility()
@@ -186,7 +323,7 @@ internal sealed class CaptureFreeDesktopSession
     {
         if (allowClose) return;
         e.Cancel = true; if (closing) return; closing = true; health.Stop(); cards.Hide(); events?.Dispose();
-        if (source is not null) { source.Observed -= Observed; source.Watcher.PollObserved -= ledger.Poll; source.Diagnostic -= Diagnostic; source.PickRetired -= PickRetired; }
+        if (source is not null) { source.Observed -= Observed; source.Watcher.PollObserved -= ledger.Poll; source.Watcher.PollObserved -= UiPoll; source.Diagnostic -= Diagnostic; source.PickRetired -= PickRetired; }
         runtime.PropertyChanged -= RuntimeChanged; runtime.PackPresentationChanged -= PresentationChanged; runtime.CaptureFreeStaleResultRejected -= Stale;
         try { await runtime.DisposeAsync(); }
         finally { ledger.Dispose(); presentation.Dispose(); interaction.Dispose(); allowClose = true; cards.Close(); Rail.Close(); }

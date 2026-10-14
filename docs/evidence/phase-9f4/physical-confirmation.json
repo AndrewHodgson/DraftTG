@@ -1,0 +1,23 @@
+{
+  "schema": "phase9f4-physical-v1",
+  "draft": "761fac89-894a-4de8-afa2-4507fc4eb55f",
+  "source": "Explicit user observations; no screenshots or synthetic tests",
+  "checks": [
+    { "kind": "MainDeck", "pack": 1, "pick": 12, "client": "1600x900", "dpi": 96,
+      "mainGroups": 8, "mainCopies": 9, "quantityTwo": true,
+      "confirmed": ["vertical alignment", "visual order", "names", "quantities", "grouped quantity two"],
+      "quote": "All main rows aligned, including ×2" },
+    { "kind": "Pack", "pack": 1, "pick": 14, "cards": 1, "client": "1600x900", "dpi": 96,
+      "confirmed": ["outline alignment"], "quote": "Yes both old Pack 1 pick 14 aligned and so does pack 2 outlines" },
+    { "kind": "Pack", "pack": 2, "pick": 1, "cards": 14, "client": "1600x900", "dpi": 96,
+      "confirmed": ["outline alignment"], "quote": "Yes both old Pack 1 pick 14 aligned and so does pack 2 outlines" }
+  ],
+  "previousPhase": { "cards": 3, "client": "1600x900", "dpi": 96,
+    "evidence": "docs/evidence/phase-9f3/physical-confirmation.json", "preserved": true },
+  "timedSessionCaveat": "P1P14→P2P1 occurred after timed overlay exited; disappearing old outline is not live accepted-pick retirement evidence.",
+  "pending": ["10-card pack", "5-card pack", "second client size", "movement", "resize retirement", "live pick retirement", "next-pack redisplay while running", "10+ main rows", "top/middle/bottom and rapid scroll", "deck pick update", "deck resize"],
+  "dpiTransition": "Not physically observed",
+  "sideboard": "Not supported for display; no physical qualification claimed",
+  "packMatrixPassed": false,
+  "deckScrollablePassed": false
+}

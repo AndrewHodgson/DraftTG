@@ -16,6 +16,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="../../tools/DraftTG.RatingAudit/DraftTG.RatingAudit.csproj" />
     <ProjectReference Include="../../src/DraftTG.Application/DraftTG.Application.csproj" />
     <ProjectReference Include="../../src/DraftTG.ArenaIntegration/DraftTG.ArenaIntegration.csproj" />
     <ProjectReference Include="../../src/DraftTG.Data/DraftTG.Data.csproj" />

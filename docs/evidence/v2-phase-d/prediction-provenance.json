@@ -1,0 +1,16 @@
+{
+  "version": "research-a-phase-d-v1",
+  "decisions": 54283,
+  "sha256": "ad958cbdced483cf2a2818c11b04ddc26cf4524a0c96e8cd9082aee8d021aab7",
+  "selectionSha256": "86400eee0d5449e88634995c101a5bc530a59e54771ab0a4268558bf5c1393f4",
+  "pickTimeFeatures": [
+    "PoolBeforePick",
+    "offered identity",
+    "frozen Q metadata weighting only",
+    "disjoint model"
+  ],
+  "noLabelsRead": true,
+  "meanThreeModelMilliseconds": 0.9477476818313456,
+  "p95ThreeModelMilliseconds": 1.3786000199615955,
+  "estimatedPerCandidateMilliseconds": 0.031591589394378186
+}

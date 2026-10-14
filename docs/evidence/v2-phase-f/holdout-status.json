@@ -1,0 +1,8 @@
+{
+  "consumed": false,
+  "MH3": "untouched",
+  "DFT": "untouched",
+  "releaseLockCreated": false,
+  "results": null,
+  "reason": "All frozen gates required; failure prohibits performance access/acquisition or release. No production integration."
+}

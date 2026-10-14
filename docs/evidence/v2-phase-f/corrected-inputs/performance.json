@@ -1,0 +1,1148 @@
+{
+  "candidate": {
+    "n": 120,
+    "meanMs": 16.52230248049212,
+    "p95Ms": 31.8809000775218
+  },
+  "beforeAfterBuilder": {
+    "n": 154,
+    "meanMs": 12.816717530685393,
+    "p95Ms": 24.472779966890805
+  },
+  "castability": {
+    "n": 5462,
+    "meanMs": 0.03900091642604582,
+    "p95Ms": 0.0709950691089034
+  },
+  "mana": {
+    "n": 5462,
+    "meanMs": 0.039288886157432264,
+    "p95Ms": 0.07929479470476507
+  },
+  "peakBytes": 50110464,
+  "supportProbabilityMeanDChange": 0.0016242702785080308,
+  "supportProbabilityMaxAbsDChange": 0.01991443824643191,
+  "frozenEModelBytes": 18606,
+  "kernelSourceBytes": 15152,
+  "baselineProbeSamples": [
+    {
+      "available": true,
+      "candidate": "017a3c6b-9a1e-403a-9c20-2360090d39ee",
+      "CandidateSelected": true,
+      "DisplacedCards": {
+        "d397fb84-8573-4b2c-be2c-f8fd820342f0": 1
+      },
+      "AddedCards": {
+        "017a3c6b-9a1e-403a-9c20-2360090d39ee": 1
+      },
+      "ReplacementValue": 0.21555397215546174,
+      "VirtualReplacement": 0.35,
+      "VirtualSlotsBefore": 0,
+      "Castability": {
+        "supported": true,
+        "score": 1,
+        "onCurve": 0.8974220491248355,
+        "byGrace": 0.947676972638273,
+        "requirements": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "drawsByGrace": 10,
+        "interpretation": "Minimum marginal source tails, NOT exact joint cast-on-curve probability."
+      },
+      "AbsoluteEligibility": 1,
+      "CastabilityDelta": 0.0,
+      "ManaConsistencyDelta": 0.0,
+      "CurveDelta": 0.0,
+      "CreatureDelta": -0.0014285714285714286,
+      "EarlyPlayDelta": 0.0,
+      "RemovalDelta": 0.0,
+      "FixingDelta": 0,
+      "RoleDelta": 0.0,
+      "StructuralDelta": -0.0014285714285714286,
+      "Final23Probability": 0.5947956960379434,
+      "Confidence": 0.6846474719624953,
+      "RawMarginalValue": 0.21412540072689032,
+      "DValue": 0.773754580490391,
+      "BeforePair": [
+        1,
+        4
+      ],
+      "AfterPair": [
+        1,
+        4
+      ],
+      "BeforeMana": {
+        "lands": 15,
+        "nonbasic": {
+          "bd250c9d-c65f-4293-a6b0-007fac634d3d": 1,
+          "c50ec22c-decb-419f-ae52-78ea1706eb11": 1
+        },
+        "basics": {
+          "1": 7,
+          "4": 6
+        },
+        "sources": [
+          2,
+          9,
+          1,
+          1,
+          7,
+          1
+        ],
+        "effectiveFixing": 2,
+        "splash": null
+      },
+      "AfterMana": {
+        "lands": 15,
+        "nonbasic": {
+          "bd250c9d-c65f-4293-a6b0-007fac634d3d": 1,
+          "c50ec22c-decb-419f-ae52-78ea1706eb11": 1
+        },
+        "basics": {
+          "1": 7,
+          "4": 6
+        },
+        "sources": [
+          2,
+          9,
+          1,
+          1,
+          7,
+          1
+        ],
+        "effectiveFixing": 2,
+        "splash": null
+      },
+      "BeforeMain": {
+        "017a3c6b-9a1e-403a-9c20-2360090d39ee": 1,
+        "0a4b9afe-aeb7-4c56-8a22-96e19a7a938c": 2,
+        "0b0979f9-aae3-4fc7-beae-c8c6637ae596": 1,
+        "0b983366-385f-41a3-aa46-20151e68d140": 1,
+        "0ced8d87-ac22-41b0-a632-298159cbb316": 1,
+        "0d446cb9-519a-4889-b057-029db9400021": 1,
+        "171bfcb2-dd43-4d63-b2e2-6ca594c2ec40": 2,
+        "2a3cc789-cbb8-4dae-a749-af169832dd7b": 1,
+        "40141353-c0d6-4529-b26a-34dfccbcf231": 1,
+        "4016c6f7-7cb4-46c2-af73-3bd6d682ea5e": 2,
+        "6129b0d3-b50a-4a4b-9111-39f8fc6718dd": 1,
+        "7e57e1d7-da1d-4a2b-867f-85b8331b7bbc": 1,
+        "89c46e9c-ae7c-466c-bb11-4f4d01ea7a63": 1,
+        "95a39b26-8c83-40ea-b492-036251366d73": 1,
+        "9c0e3882-1f97-48eb-b9e3-2f9683ff5897": 1,
+        "b21203c8-a935-4ce0-a742-148587e32145": 1,
+        "b7ad4441-e300-4267-bedb-4ae6a64f59cd": 3,
+        "d14b07ea-18e4-41fb-8136-759d5349e88a": 1,
+        "d2028115-f0de-4e8b-99bc-7369352e1e07": 1,
+        "d397fb84-8573-4b2c-be2c-f8fd820342f0": 1
+      },
+      "AfterMain": {
+        "017a3c6b-9a1e-403a-9c20-2360090d39ee": 2,
+        "0a4b9afe-aeb7-4c56-8a22-96e19a7a938c": 2,
+        "0b0979f9-aae3-4fc7-beae-c8c6637ae596": 1,
+        "0b983366-385f-41a3-aa46-20151e68d140": 1,
+        "0ced8d87-ac22-41b0-a632-298159cbb316": 1,
+        "0d446cb9-519a-4889-b057-029db9400021": 1,
+        "171bfcb2-dd43-4d63-b2e2-6ca594c2ec40": 2,
+        "2a3cc789-cbb8-4dae-a749-af169832dd7b": 1,
+        "40141353-c0d6-4529-b26a-34dfccbcf231": 1,
+        "4016c6f7-7cb4-46c2-af73-3bd6d682ea5e": 2,
+        "6129b0d3-b50a-4a4b-9111-39f8fc6718dd": 1,
+        "7e57e1d7-da1d-4a2b-867f-85b8331b7bbc": 1,
+        "89c46e9c-ae7c-466c-bb11-4f4d01ea7a63": 1,
+        "95a39b26-8c83-40ea-b492-036251366d73": 1,
+        "9c0e3882-1f97-48eb-b9e3-2f9683ff5897": 1,
+        "b21203c8-a935-4ce0-a742-148587e32145": 1,
+        "b7ad4441-e300-4267-bedb-4ae6a64f59cd": 3,
+        "d14b07ea-18e4-41fb-8136-759d5349e88a": 1,
+        "d2028115-f0de-4e8b-99bc-7369352e1e07": 1
+      },
+      "ColorPairChanged": false,
+      "LandCountChanged": false,
+      "UnknownNarrow": true,
+      "OptionalPositiveRoleBonusAllowed": false,
+      "provenance": "research-d-phase-f-v1/C"
+    },
+    {
+      "available": true,
+      "candidate": "0a4b9afe-aeb7-4c56-8a22-96e19a7a938c",
+      "CandidateSelected": true,
+      "DisplacedCards": {
+        "d397fb84-8573-4b2c-be2c-f8fd820342f0": 1
+      },
+      "AddedCards": {
+        "0a4b9afe-aeb7-4c56-8a22-96e19a7a938c": 1
+      },
+      "ReplacementValue": 0.16784334867333578,
+      "VirtualReplacement": 0.35,
+      "VirtualSlotsBefore": 0,
+      "Castability": {
+        "supported": true,
+        "score": 0.9491073039112526,
+        "onCurve": 0.5679906661880096,
+        "byGrace": 0.7592858431290022,
+        "requirements": [
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "drawsByGrace": 12,
+        "interpretation": "Minimum marginal source tails, NOT exact joint cast-on-curve probability."
+      },
+      "AbsoluteEligibility": 0.9491073039112526,
+      "CastabilityDelta": 0.0,
+      "ManaConsistencyDelta": 0.0,
+      "CurveDelta": 0.0,
+      "CreatureDelta": 0.0,
+      "EarlyPlayDelta": 0.0,
+      "RemovalDelta": 0.0,
+      "FixingDelta": 0,
+      "RoleDelta": 0.0,
+      "StructuralDelta": 0.0,
+      "Final23Probability": 0.80538087570778,
+      "Confidence": 0.7118803287978881,
+      "RawMarginalValue": 0.16784334867333578,
+      "DValue": 0.7492477870868788,
+      "BeforePair": [
+        1,
+        4
+      ],
+      "AfterPair": [
+        1,
+        4
+      ],
+      "BeforeMana": {
+        "lands": 15,
+        "nonbasic": {
+          "bd250c9d-c65f-4293-a6b0-007fac634d3d": 1,
+          "c50ec22c-decb-419f-ae52-78ea1706eb11": 1
+        },
+        "basics": {
+          "1": 7,
+          "4": 6
+        },
+        "sources": [
+          2,
+          9,
+          1,
+          1,
+          7,
+          1
+        ],
+        "effectiveFixing": 2,
+        "splash": null
+      },
+      "AfterMana": {
+        "lands": 15,
+        "nonbasic": {
+          "bd250c9d-c65f-4293-a6b0-007fac634d3d": 1,
+          "c50ec22c-decb-419f-ae52-78ea1706eb11": 1
+        },
+        "basics": {
+          "1": 7,
+          "4": 6
+        },
+        "sources": [
+          2,
+          9,
+          1,
+          1,
+          7,
+          1
+        ],
+        "effectiveFixing": 2,
+        "splash": null
+      },
+      "BeforeMain": {
+        "017a3c6b-9a1e-403a-9c20-2360090d39ee": 2,
+        "0a4b9afe-aeb7-4c56-8a22-96e19a7a938c": 1,
+        "0b0979f9-aae3-4fc7-beae-c8c6637ae596": 1,
+        "0b983366-385f-41a3-aa46-20151e68d140": 1,
+        "0ced8d87-ac22-41b0-a632-298159cbb316": 1,
+        "0d446cb9-519a-4889-b057-029db9400021": 1,
+        "171bfcb2-dd43-4d63-b2e2-6ca594c2ec40": 2,
+        "2a3cc789-cbb8-4dae-a749-af169832dd7b": 1,
+        "40141353-c0d6-4529-b26a-34dfccbcf231": 1,
+        "4016c6f7-7cb4-46c2-af73-3bd6d682ea5e": 2,
+        "6129b0d3-b50a-4a4b-9111-39f8fc6718dd": 1,
+        "7e57e1d7-da1d-4a2b-867f-85b8331b7bbc": 1,
+        "89c46e9c-ae7c-466c-bb11-4f4d01ea7a63": 1,
+        "95a39b26-8c83-40ea-b492-036251366d73": 1,
+        "9c0e3882-1f97-48eb-b9e3-2f9683ff5897": 1,
+        "b21203c8-a935-4ce0-a742-148587e32145": 1,
+        "b7ad4441-e300-4267-bedb-4ae6a64f59cd": 3,
+        "d14b07ea-18e4-41fb-8136-759d5349e88a": 1,
+        "d2028115-f0de-4e8b-99bc-7369352e1e07": 1,
+        "d397fb84-8573-4b2c-be2c-f8fd820342f0": 1
+      },
+      "AfterMain": {
+        "017a3c6b-9a1e-403a-9c20-2360090d39ee": 2,
+        "0a4b9afe-aeb7-4c56-8a22-96e19a7a938c": 2,
+        "0b0979f9-aae3-4fc7-beae-c8c6637ae596": 1,
+        "0b983366-385f-41a3-aa46-20151e68d140": 1,
+        "0ced8d87-ac22-41b0-a632-298159cbb316": 1,
+        "0d446cb9-519a-4889-b057-029db9400021": 1,
+        "171bfcb2-dd43-4d63-b2e2-6ca594c2ec40": 2,
+        "2a3cc789-cbb8-4dae-a749-af169832dd7b": 1,
+        "40141353-c0d6-4529-b26a-34dfccbcf231": 1,
+        "4016c6f7-7cb4-46c2-af73-3bd6d682ea5e": 2,
+        "6129b0d3-b50a-4a4b-9111-39f8fc6718dd": 1,
+        "7e57e1d7-da1d-4a2b-867f-85b8331b7bbc": 1,
+        "89c46e9c-ae7c-466c-bb11-4f4d01ea7a63": 1,
+        "95a39b26-8c83-40ea-b492-036251366d73": 1,
+        "9c0e3882-1f97-48eb-b9e3-2f9683ff5897": 1,
+        "b21203c8-a935-4ce0-a742-148587e32145": 1,
+        "b7ad4441-e300-4267-bedb-4ae6a64f59cd": 3,
+        "d14b07ea-18e4-41fb-8136-759d5349e88a": 1,
+        "d2028115-f0de-4e8b-99bc-7369352e1e07": 1
+      },
+      "ColorPairChanged": false,
+      "LandCountChanged": false,
+      "UnknownNarrow": false,
+      "OptionalPositiveRoleBonusAllowed": true,
+      "provenance": "research-d-phase-f-v1/C"
+    },
+    {
+      "available": true,
+      "candidate": "0b0979f9-aae3-4fc7-beae-c8c6637ae596",
+      "CandidateSelected": true,
+      "DisplacedCards": {
+        "d397fb84-8573-4b2c-be2c-f8fd820342f0": 1
+      },
+      "AddedCards": {
+        "0b0979f9-aae3-4fc7-beae-c8c6637ae596": 1
+      },
+      "ReplacementValue": 0.08932351537821787,
+      "VirtualReplacement": 0.35,
+      "VirtualSlotsBefore": 0,
+      "Castability": {
+        "supported": true,
+        "score": 1,
+        "onCurve": 0.7486089030206677,
+        "byGrace": 0.8840725806451613,
+        "requirements": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "drawsByGrace": 11,
+        "interpretation": "Minimum marginal source tails, NOT exact joint cast-on-curve probability."
+      },
+      "AbsoluteEligibility": 1,
+      "CastabilityDelta": 0.0,
+      "ManaConsistencyDelta": 0.0,
+      "CurveDelta": 0.0,
+      "CreatureDelta": 0.0,
+      "EarlyPlayDelta": 0.0,
+      "RemovalDelta": 0.0,
+      "FixingDelta": 0,
+      "RoleDelta": 0.0,
+      "StructuralDelta": 0.0,
+      "Final23Probability": 0.4533799315053213,
+      "Confidence": 0.6693006658268212,
+      "RawMarginalValue": 0.08932351537821787,
+      "DValue": 0.7530992076127355,
+      "BeforePair": [
+        1,
+        4
+      ],
+      "AfterPair": [
+        1,
+        4
+      ],
+      "BeforeMana": {
+        "lands": 15,
+        "nonbasic": {
+          "bd250c9d-c65f-4293-a6b0-007fac634d3d": 1,
+          "c50ec22c-decb-419f-ae52-78ea1706eb11": 1
+        },
+        "basics": {
+          "1": 7,
+          "4": 6
+        },
+        "sources": [
+          2,
+          9,
+          1,
+          1,
+          7,
+          1
+        ],
+        "effectiveFixing": 2,
+        "splash": null
+      },
+      "AfterMana": {
+        "lands": 15,
+        "nonbasic": {
+          "bd250c9d-c65f-4293-a6b0-007fac634d3d": 1,
+          "c50ec22c-decb-419f-ae52-78ea1706eb11": 1
+        },
+        "basics": {
+          "1": 7,
+          "4": 6
+        },
+        "sources": [
+          2,
+          9,
+          1,
+          1,
+          7,
+          1
+        ],
+        "effectiveFixing": 2,
+        "splash": null
+      },
+      "BeforeMain": {
+        "017a3c6b-9a1e-403a-9c20-2360090d39ee": 2,
+        "0a4b9afe-aeb7-4c56-8a22-96e19a7a938c": 2,
+        "0b983366-385f-41a3-aa46-20151e68d140": 1,
+        "0ced8d87-ac22-41b0-a632-298159cbb316": 1,
+        "0d446cb9-519a-4889-b057-029db9400021": 1,
+        "171bfcb2-dd43-4d63-b2e2-6ca594c2ec40": 2,
+        "2a3cc789-cbb8-4dae-a749-af169832dd7b": 1,
+        "40141353-c0d6-4529-b26a-34dfccbcf231": 1,
+        "4016c6f7-7cb4-46c2-af73-3bd6d682ea5e": 2,
+        "6129b0d3-b50a-4a4b-9111-39f8fc6718dd": 1,
+        "7e57e1d7-da1d-4a2b-867f-85b8331b7bbc": 1,
+        "89c46e9c-ae7c-466c-bb11-4f4d01ea7a63": 1,
+        "95a39b26-8c83-40ea-b492-036251366d73": 1,
+        "9c0e3882-1f97-48eb-b9e3-2f9683ff5897": 1,
+        "b21203c8-a935-4ce0-a742-148587e32145": 1,
+        "b7ad4441-e300-4267-bedb-4ae6a64f59cd": 3,
+        "d14b07ea-18e4-41fb-8136-759d5349e88a": 1,
+        "d2028115-f0de-4e8b-99bc-7369352e1e07": 1,
+        "d397fb84-8573-4b2c-be2c-f8fd820342f0": 1
+      },
+      "AfterMain": {
+        "017a3c6b-9a1e-403a-9c20-2360090d39ee": 2,
+        "0a4b9afe-aeb7-4c56-8a22-96e19a7a938c": 2,
+        "0b0979f9-aae3-4fc7-beae-c8c6637ae596": 1,
+        "0b983366-385f-41a3-aa46-20151e68d140": 1,
+        "0ced8d87-ac22-41b0-a632-298159cbb316": 1,
+        "0d446cb9-519a-4889-b057-029db9400021": 1,
+        "171bfcb2-dd43-4d63-b2e2-6ca594c2ec40": 2,
+        "2a3cc789-cbb8-4dae-a749-af169832dd7b": 1,
+        "40141353-c0d6-4529-b26a-34dfccbcf231": 1,
+        "4016c6f7-7cb4-46c2-af73-3bd6d682ea5e": 2,
+        "6129b0d3-b50a-4a4b-9111-39f8fc6718dd": 1,
+        "7e57e1d7-da1d-4a2b-867f-85b8331b7bbc": 1,
+        "89c46e9c-ae7c-466c-bb11-4f4d01ea7a63": 1,
+        "95a39b26-8c83-40ea-b492-036251366d73": 1,
+        "9c0e3882-1f97-48eb-b9e3-2f9683ff5897": 1,
+        "b21203c8-a935-4ce0-a742-148587e32145": 1,
+        "b7ad4441-e300-4267-bedb-4ae6a64f59cd": 3,
+        "d14b07ea-18e4-41fb-8136-759d5349e88a": 1,
+        "d2028115-f0de-4e8b-99bc-7369352e1e07": 1
+      },
+      "ColorPairChanged": false,
+      "LandCountChanged": false,
+      "UnknownNarrow": false,
+      "OptionalPositiveRoleBonusAllowed": true,
+      "provenance": "research-d-phase-f-v1/C"
+    },
+    {
+      "available": true,
+      "candidate": "0ced8d87-ac22-41b0-a632-298159cbb316",
+      "CandidateSelected": true,
+      "DisplacedCards": {
+        "d397fb84-8573-4b2c-be2c-f8fd820342f0": 1
+      },
+      "AddedCards": {
+        "0ced8d87-ac22-41b0-a632-298159cbb316": 1
+      },
+      "ReplacementValue": 0.07781958617317691,
+      "VirtualReplacement": 0.35,
+      "VirtualSlotsBefore": 0,
+      "Castability": {
+        "supported": true,
+        "score": 1,
+        "onCurve": 0.7486089030206677,
+        "byGrace": 0.8840725806451613,
+        "requirements": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "drawsByGrace": 11,
+        "interpretation": "Minimum marginal source tails, NOT exact joint cast-on-curve probability."
+      },
+      "AbsoluteEligibility": 1,
+      "CastabilityDelta": 0.0,
+      "ManaConsistencyDelta": 0.0,
+      "CurveDelta": 0.0,
+      "CreatureDelta": -0.0014285714285714286,
+      "EarlyPlayDelta": 0.0,
+      "RemovalDelta": 0.0,
+      "FixingDelta": 0,
+      "RoleDelta": 0.0,
+      "StructuralDelta": -0.0014285714285714286,
+      "Final23Probability": 0.4363423811149197,
+      "Confidence": 0.632383714161366,
+      "RawMarginalValue": 0.07639101474460548,
+      "DValue": 0.7302005336990002,
+      "BeforePair": [
+        1,
+        4
+      ],
+      "AfterPair": [
+        1,
+        4
+      ],
+      "BeforeMana": {
+        "lands": 15,
+        "nonbasic": {
+          "bd250c9d-c65f-4293-a6b0-007fac634d3d": 1,
+          "c50ec22c-decb-419f-ae52-78ea1706eb11": 1
+        },
+        "basics": {
+          "1": 7,
+          "4": 6
+        },
+        "sources": [
+          2,
+          9,
+          1,
+          1,
+          7,
+          1
+        ],
+        "effectiveFixing": 2,
+        "splash": null
+      },
+      "AfterMana": {
+        "lands": 15,
+        "nonbasic": {
+          "bd250c9d-c65f-4293-a6b0-007fac634d3d": 1,
+          "c50ec22c-decb-419f-ae52-78ea1706eb11": 1
+        },
+        "basics": {
+          "1": 7,
+          "4": 6
+        },
+        "sources": [
+          2,
+          9,
+          1,
+          1,
+          7,
+          1
+        ],
+        "effectiveFixing": 2,
+        "splash": null
+      },
+      "BeforeMain": {
+        "017a3c6b-9a1e-403a-9c20-2360090d39ee": 2,
+        "0a4b9afe-aeb7-4c56-8a22-96e19a7a938c": 2,
+        "0b0979f9-aae3-4fc7-beae-c8c6637ae596": 1,
+        "0b983366-385f-41a3-aa46-20151e68d140": 1,
+        "0d446cb9-519a-4889-b057-029db9400021": 1,
+        "171bfcb2-dd43-4d63-b2e2-6ca594c2ec40": 2,
+        "2a3cc789-cbb8-4dae-a749-af169832dd7b": 1,
+        "40141353-c0d6-4529-b26a-34dfccbcf231": 1,
+        "4016c6f7-7cb4-46c2-af73-3bd6d682ea5e": 2,
+        "6129b0d3-b50a-4a4b-9111-39f8fc6718dd": 1,
+        "7e57e1d7-da1d-4a2b-867f-85b8331b7bbc": 1,
+        "89c46e9c-ae7c-466c-bb11-4f4d01ea7a63": 1,
+        "95a39b26-8c83-40ea-b492-036251366d73": 1,
+        "9c0e3882-1f97-48eb-b9e3-2f9683ff5897": 1,
+        "b21203c8-a935-4ce0-a742-148587e32145": 1,
+        "b7ad4441-e300-4267-bedb-4ae6a64f59cd": 3,
+        "d14b07ea-18e4-41fb-8136-759d5349e88a": 1,
+        "d2028115-f0de-4e8b-99bc-7369352e1e07": 1,
+        "d397fb84-8573-4b2c-be2c-f8fd820342f0": 1
+      },
+      "AfterMain": {
+        "017a3c6b-9a1e-403a-9c20-2360090d39ee": 2,
+        "0a4b9afe-aeb7-4c56-8a22-96e19a7a938c": 2,
+        "0b0979f9-aae3-4fc7-beae-c8c6637ae596": 1,
+        "0b983366-385f-41a3-aa46-20151e68d140": 1,
+        "0ced8d87-ac22-41b0-a632-298159cbb316": 1,
+        "0d446cb9-519a-4889-b057-029db9400021": 1,
+        "171bfcb2-dd43-4d63-b2e2-6ca594c2ec40": 2,
+        "2a3cc789-cbb8-4dae-a749-af169832dd7b": 1,
+        "40141353-c0d6-4529-b26a-34dfccbcf231": 1,
+        "4016c6f7-7cb4-46c2-af73-3bd6d682ea5e": 2,
+        "6129b0d3-b50a-4a4b-9111-39f8fc6718dd": 1,
+        "7e57e1d7-da1d-4a2b-867f-85b8331b7bbc": 1,
+        "89c46e9c-ae7c-466c-bb11-4f4d01ea7a63": 1,
+        "95a39b26-8c83-40ea-b492-036251366d73": 1,
+        "9c0e3882-1f97-48eb-b9e3-2f9683ff5897": 1,
+        "b21203c8-a935-4ce0-a742-148587e32145": 1,
+        "b7ad4441-e300-4267-bedb-4ae6a64f59cd": 3,
+        "d14b07ea-18e4-41fb-8136-759d5349e88a": 1,
+        "d2028115-f0de-4e8b-99bc-7369352e1e07": 1
+      },
+      "ColorPairChanged": false,
+      "LandCountChanged": false,
+      "UnknownNarrow": true,
+      "OptionalPositiveRoleBonusAllowed": false,
+      "provenance": "research-d-phase-f-v1/C"
+    },
+    {
+      "available": true,
+      "candidate": "0b0979f9-aae3-4fc7-beae-c8c6637ae596",
+      "CandidateSelected": true,
+      "DisplacedCards": {},
+      "AddedCards": {
+        "0b0979f9-aae3-4fc7-beae-c8c6637ae596": 1
+      },
+      "ReplacementValue": 0.04511641607934025,
+      "VirtualReplacement": 0.35,
+      "VirtualSlotsBefore": 0,
+      "Castability": {
+        "supported": true,
+        "score": 1,
+        "onCurve": 0.7486089030206677,
+        "byGrace": 0.8840725806451613,
+        "requirements": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "drawsByGrace": 11,
+        "interpretation": "Minimum marginal source tails, NOT exact joint cast-on-curve probability."
+      },
+      "AbsoluteEligibility": 1,
+      "CastabilityDelta": -0.1584974962324232,
+      "ManaConsistencyDelta": -0.1584974962324232,
+      "CurveDelta": 0.0,
+      "CreatureDelta": 0.0,
+      "EarlyPlayDelta": 0.0,
+      "RemovalDelta": 0.0,
+      "FixingDelta": 0,
+      "RoleDelta": 0.0,
+      "StructuralDelta": 0.0,
+      "Final23Probability": 0.9013767384718219,
+      "Confidence": 0.8323524228274957,
+      "RawMarginalValue": -0.11338108015308296,
+      "DValue": 0.17412437678996848,
+      "BeforePair": [
+        1,
+        2
+      ],
+      "AfterPair": [
+        1,
+        2
+      ],
+      "BeforeMana": {
+        "lands": 16,
+        "nonbasic": {
+          "08ae1037-6f70-41a9-b75e-98fa9a2152c8": 1,
+          "f0588fbf-3c05-452a-b3f7-67604c1f921d": 1
+        },
+        "basics": {
+          "1": 7,
+          "2": 7
+        },
+        "sources": [
+          2,
+          8,
+          8,
+          0,
+          0,
+          1
+        ],
+        "effectiveFixing": 2,
+        "splash": null
+      },
+      "AfterMana": {
+        "lands": 15,
+        "nonbasic": {
+          "08ae1037-6f70-41a9-b75e-98fa9a2152c8": 1,
+          "f0588fbf-3c05-452a-b3f7-67604c1f921d": 1
+        },
+        "basics": {
+          "1": 6,
+          "2": 7
+        },
+        "sources": [
+          2,
+          7,
+          8,
+          0,
+          0,
+          1
+        ],
+        "effectiveFixing": 2,
+        "splash": null
+      },
+      "BeforeMain": {
+        "0b0979f9-aae3-4fc7-beae-c8c6637ae596": 4,
+        "106b5c96-d1bd-433d-955e-ace0b60d3bc3": 1,
+        "2d841faa-9e0b-45ff-9dfd-f8a169d9af76": 1,
+        "5045027d-0ff4-484c-b4cb-e0b61885d428": 3,
+        "60afeb75-2c1e-4634-8c83-88b1dddb77c2": 1,
+        "660d7983-b335-48b4-898d-f182effcf2de": 1,
+        "6d872c10-4126-4130-a74a-1331ed418ca8": 1,
+        "6fd574e7-705f-4a65-aad0-68ff6d63bf0f": 1,
+        "7c9231f0-7733-46d9-b9c6-c6c5b7fe65dd": 1,
+        "7f7e780e-fbc5-4dc0-b5c7-efcb8645c7c6": 1,
+        "807c7812-c108-45a7-a5b2-08cc693bc500": 1,
+        "9d933bf1-14f0-4150-a0d2-6b845b9624cf": 1,
+        "a166abef-f068-47e9-8a65-43ebf4b015bd": 1,
+        "aef37244-deb9-464e-ab8c-4308369ae09b": 1,
+        "bb6db604-8bbe-4719-88bd-f3cad8c4725d": 1,
+        "bdf96533-f28a-4465-893b-0c9394d5b8d7": 1,
+        "cc8331ab-adc9-45c6-9728-66afc72d901c": 1,
+        "d397fb84-8573-4b2c-be2c-f8fd820342f0": 1,
+        "fed77513-94ab-44e2-b9a1-30ba927cd6ee": 1
+      },
+      "AfterMain": {
+        "0b0979f9-aae3-4fc7-beae-c8c6637ae596": 5,
+        "106b5c96-d1bd-433d-955e-ace0b60d3bc3": 1,
+        "2d841faa-9e0b-45ff-9dfd-f8a169d9af76": 1,
+        "5045027d-0ff4-484c-b4cb-e0b61885d428": 3,
+        "60afeb75-2c1e-4634-8c83-88b1dddb77c2": 1,
+        "660d7983-b335-48b4-898d-f182effcf2de": 1,
+        "6d872c10-4126-4130-a74a-1331ed418ca8": 1,
+        "6fd574e7-705f-4a65-aad0-68ff6d63bf0f": 1,
+        "7c9231f0-7733-46d9-b9c6-c6c5b7fe65dd": 1,
+        "7f7e780e-fbc5-4dc0-b5c7-efcb8645c7c6": 1,
+        "807c7812-c108-45a7-a5b2-08cc693bc500": 1,
+        "9d933bf1-14f0-4150-a0d2-6b845b9624cf": 1,
+        "a166abef-f068-47e9-8a65-43ebf4b015bd": 1,
+        "aef37244-deb9-464e-ab8c-4308369ae09b": 1,
+        "bb6db604-8bbe-4719-88bd-f3cad8c4725d": 1,
+        "bdf96533-f28a-4465-893b-0c9394d5b8d7": 1,
+        "cc8331ab-adc9-45c6-9728-66afc72d901c": 1,
+        "d397fb84-8573-4b2c-be2c-f8fd820342f0": 1,
+        "fed77513-94ab-44e2-b9a1-30ba927cd6ee": 1
+      },
+      "ColorPairChanged": false,
+      "LandCountChanged": true,
+      "UnknownNarrow": false,
+      "OptionalPositiveRoleBonusAllowed": true,
+      "provenance": "research-d-phase-f-v1/C"
+    },
+    {
+      "available": true,
+      "candidate": "106b5c96-d1bd-433d-955e-ace0b60d3bc3",
+      "CandidateSelected": true,
+      "DisplacedCards": {},
+      "AddedCards": {
+        "106b5c96-d1bd-433d-955e-ace0b60d3bc3": 1
+      },
+      "ReplacementValue": 0.12225479463674249,
+      "VirtualReplacement": 0.35,
+      "VirtualSlotsBefore": 0,
+      "Castability": {
+        "supported": true,
+        "score": 1,
+        "onCurve": 0.863229398833114,
+        "byGrace": 0.9238937783829425,
+        "requirements": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "drawsByGrace": 10,
+        "interpretation": "Minimum marginal source tails, NOT exact joint cast-on-curve probability."
+      },
+      "AbsoluteEligibility": 1,
+      "CastabilityDelta": -0.1584974962324232,
+      "ManaConsistencyDelta": -0.1584974962324232,
+      "CurveDelta": 0.0,
+      "CreatureDelta": 0.0,
+      "EarlyPlayDelta": 0.0,
+      "RemovalDelta": 0.0,
+      "FixingDelta": 0,
+      "RoleDelta": 0.0,
+      "StructuralDelta": 0,
+      "Final23Probability": 0.7656177807743938,
+      "Confidence": 0.8110246586880101,
+      "RawMarginalValue": -0.036242701595680715,
+      "DValue": 0.2988960543356801,
+      "BeforePair": [
+        1,
+        2
+      ],
+      "AfterPair": [
+        1,
+        2
+      ],
+      "BeforeMana": {
+        "lands": 16,
+        "nonbasic": {
+          "08ae1037-6f70-41a9-b75e-98fa9a2152c8": 1,
+          "f0588fbf-3c05-452a-b3f7-67604c1f921d": 1
+        },
+        "basics": {
+          "1": 7,
+          "2": 7
+        },
+        "sources": [
+          2,
+          8,
+          8,
+          0,
+          0,
+          1
+        ],
+        "effectiveFixing": 2,
+        "splash": null
+      },
+      "AfterMana": {
+        "lands": 15,
+        "nonbasic": {
+          "08ae1037-6f70-41a9-b75e-98fa9a2152c8": 1,
+          "f0588fbf-3c05-452a-b3f7-67604c1f921d": 1
+        },
+        "basics": {
+          "1": 6,
+          "2": 7
+        },
+        "sources": [
+          2,
+          7,
+          8,
+          0,
+          0,
+          1
+        ],
+        "effectiveFixing": 2,
+        "splash": null
+      },
+      "BeforeMain": {
+        "0b0979f9-aae3-4fc7-beae-c8c6637ae596": 5,
+        "2d841faa-9e0b-45ff-9dfd-f8a169d9af76": 1,
+        "5045027d-0ff4-484c-b4cb-e0b61885d428": 3,
+        "60afeb75-2c1e-4634-8c83-88b1dddb77c2": 1,
+        "660d7983-b335-48b4-898d-f182effcf2de": 1,
+        "6d872c10-4126-4130-a74a-1331ed418ca8": 1,
+        "6fd574e7-705f-4a65-aad0-68ff6d63bf0f": 1,
+        "7c9231f0-7733-46d9-b9c6-c6c5b7fe65dd": 1,
+        "7f7e780e-fbc5-4dc0-b5c7-efcb8645c7c6": 1,
+        "807c7812-c108-45a7-a5b2-08cc693bc500": 1,
+        "9d933bf1-14f0-4150-a0d2-6b845b9624cf": 1,
+        "a166abef-f068-47e9-8a65-43ebf4b015bd": 1,
+        "aef37244-deb9-464e-ab8c-4308369ae09b": 1,
+        "bb6db604-8bbe-4719-88bd-f3cad8c4725d": 1,
+        "bdf96533-f28a-4465-893b-0c9394d5b8d7": 1,
+        "cc8331ab-adc9-45c6-9728-66afc72d901c": 1,
+        "d397fb84-8573-4b2c-be2c-f8fd820342f0": 1,
+        "fed77513-94ab-44e2-b9a1-30ba927cd6ee": 1
+      },
+      "AfterMain": {
+        "0b0979f9-aae3-4fc7-beae-c8c6637ae596": 5,
+        "106b5c96-d1bd-433d-955e-ace0b60d3bc3": 1,
+        "2d841faa-9e0b-45ff-9dfd-f8a169d9af76": 1,
+        "5045027d-0ff4-484c-b4cb-e0b61885d428": 3,
+        "60afeb75-2c1e-4634-8c83-88b1dddb77c2": 1,
+        "660d7983-b335-48b4-898d-f182effcf2de": 1,
+        "6d872c10-4126-4130-a74a-1331ed418ca8": 1,
+        "6fd574e7-705f-4a65-aad0-68ff6d63bf0f": 1,
+        "7c9231f0-7733-46d9-b9c6-c6c5b7fe65dd": 1,
+        "7f7e780e-fbc5-4dc0-b5c7-efcb8645c7c6": 1,
+        "807c7812-c108-45a7-a5b2-08cc693bc500": 1,
+        "9d933bf1-14f0-4150-a0d2-6b845b9624cf": 1,
+        "a166abef-f068-47e9-8a65-43ebf4b015bd": 1,
+        "aef37244-deb9-464e-ab8c-4308369ae09b": 1,
+        "bb6db604-8bbe-4719-88bd-f3cad8c4725d": 1,
+        "bdf96533-f28a-4465-893b-0c9394d5b8d7": 1,
+        "cc8331ab-adc9-45c6-9728-66afc72d901c": 1,
+        "d397fb84-8573-4b2c-be2c-f8fd820342f0": 1,
+        "fed77513-94ab-44e2-b9a1-30ba927cd6ee": 1
+      },
+      "ColorPairChanged": false,
+      "LandCountChanged": true,
+      "UnknownNarrow": true,
+      "OptionalPositiveRoleBonusAllowed": false,
+      "provenance": "research-d-phase-f-v1/C"
+    },
+    {
+      "available": true,
+      "candidate": "2d841faa-9e0b-45ff-9dfd-f8a169d9af76",
+      "CandidateSelected": true,
+      "DisplacedCards": {},
+      "AddedCards": {
+        "2d841faa-9e0b-45ff-9dfd-f8a169d9af76": 1
+      },
+      "ReplacementValue": 0.13908235404339253,
+      "VirtualReplacement": 0.35,
+      "VirtualSlotsBefore": 0,
+      "Castability": {
+        "supported": true,
+        "score": 1,
+        "onCurve": 0.8194628064597105,
+        "byGrace": 0.8908041168103088,
+        "requirements": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "drawsByGrace": 10,
+        "interpretation": "Minimum marginal source tails, NOT exact joint cast-on-curve probability."
+      },
+      "AbsoluteEligibility": 1,
+      "CastabilityDelta": -0.1584974962324232,
+      "ManaConsistencyDelta": -0.1584974962324232,
+      "CurveDelta": 0.0,
+      "CreatureDelta": 0.0,
+      "EarlyPlayDelta": 0.0,
+      "RemovalDelta": 0.0,
+      "FixingDelta": 0,
+      "RoleDelta": 0.0,
+      "StructuralDelta": 0,
+      "Final23Probability": 0.4978167289185337,
+      "Confidence": 0.7806629243028348,
+      "RawMarginalValue": -0.019415142189030676,
+      "DValue": 0.3844942995526781,
+      "BeforePair": [
+        1,
+        2
+      ],
+      "AfterPair": [
+        1,
+        2
+      ],
+      "BeforeMana": {
+        "lands": 16,
+        "nonbasic": {
+          "08ae1037-6f70-41a9-b75e-98fa9a2152c8": 1,
+          "f0588fbf-3c05-452a-b3f7-67604c1f921d": 1
+        },
+        "basics": {
+          "1": 7,
+          "2": 7
+        },
+        "sources": [
+          2,
+          8,
+          8,
+          0,
+          0,
+          1
+        ],
+        "effectiveFixing": 2,
+        "splash": null
+      },
+      "AfterMana": {
+        "lands": 15,
+        "nonbasic": {
+          "08ae1037-6f70-41a9-b75e-98fa9a2152c8": 1,
+          "f0588fbf-3c05-452a-b3f7-67604c1f921d": 1
+        },
+        "basics": {
+          "1": 6,
+          "2": 7
+        },
+        "sources": [
+          2,
+          7,
+          8,
+          0,
+          0,
+          1
+        ],
+        "effectiveFixing": 2,
+        "splash": null
+      },
+      "BeforeMain": {
+        "0b0979f9-aae3-4fc7-beae-c8c6637ae596": 5,
+        "106b5c96-d1bd-433d-955e-ace0b60d3bc3": 1,
+        "5045027d-0ff4-484c-b4cb-e0b61885d428": 3,
+        "60afeb75-2c1e-4634-8c83-88b1dddb77c2": 1,
+        "660d7983-b335-48b4-898d-f182effcf2de": 1,
+        "6d872c10-4126-4130-a74a-1331ed418ca8": 1,
+        "6fd574e7-705f-4a65-aad0-68ff6d63bf0f": 1,
+        "7c9231f0-7733-46d9-b9c6-c6c5b7fe65dd": 1,
+        "7f7e780e-fbc5-4dc0-b5c7-efcb8645c7c6": 1,
+        "807c7812-c108-45a7-a5b2-08cc693bc500": 1,
+        "9d933bf1-14f0-4150-a0d2-6b845b9624cf": 1,
+        "a166abef-f068-47e9-8a65-43ebf4b015bd": 1,
+        "aef37244-deb9-464e-ab8c-4308369ae09b": 1,
+        "bb6db604-8bbe-4719-88bd-f3cad8c4725d": 1,
+        "bdf96533-f28a-4465-893b-0c9394d5b8d7": 1,
+        "cc8331ab-adc9-45c6-9728-66afc72d901c": 1,
+        "d397fb84-8573-4b2c-be2c-f8fd820342f0": 1,
+        "fed77513-94ab-44e2-b9a1-30ba927cd6ee": 1
+      },
+      "AfterMain": {
+        "0b0979f9-aae3-4fc7-beae-c8c6637ae596": 5,
+        "106b5c96-d1bd-433d-955e-ace0b60d3bc3": 1,
+        "2d841faa-9e0b-45ff-9dfd-f8a169d9af76": 1,
+        "5045027d-0ff4-484c-b4cb-e0b61885d428": 3,
+        "60afeb75-2c1e-4634-8c83-88b1dddb77c2": 1,
+        "660d7983-b335-48b4-898d-f182effcf2de": 1,
+        "6d872c10-4126-4130-a74a-1331ed418ca8": 1,
+        "6fd574e7-705f-4a65-aad0-68ff6d63bf0f": 1,
+        "7c9231f0-7733-46d9-b9c6-c6c5b7fe65dd": 1,
+        "7f7e780e-fbc5-4dc0-b5c7-efcb8645c7c6": 1,
+        "807c7812-c108-45a7-a5b2-08cc693bc500": 1,
+        "9d933bf1-14f0-4150-a0d2-6b845b9624cf": 1,
+        "a166abef-f068-47e9-8a65-43ebf4b015bd": 1,
+        "aef37244-deb9-464e-ab8c-4308369ae09b": 1,
+        "bb6db604-8bbe-4719-88bd-f3cad8c4725d": 1,
+        "bdf96533-f28a-4465-893b-0c9394d5b8d7": 1,
+        "cc8331ab-adc9-45c6-9728-66afc72d901c": 1,
+        "d397fb84-8573-4b2c-be2c-f8fd820342f0": 1,
+        "fed77513-94ab-44e2-b9a1-30ba927cd6ee": 1
+      },
+      "ColorPairChanged": false,
+      "LandCountChanged": true,
+      "UnknownNarrow": true,
+      "OptionalPositiveRoleBonusAllowed": false,
+      "provenance": "research-d-phase-f-v1/C"
+    },
+    {
+      "available": true,
+      "candidate": "660d7983-b335-48b4-898d-f182effcf2de",
+      "CandidateSelected": true,
+      "DisplacedCards": {},
+      "AddedCards": {
+        "660d7983-b335-48b4-898d-f182effcf2de": 1
+      },
+      "ReplacementValue": 0.04144637531957357,
+      "VirtualReplacement": 0.35,
+      "VirtualSlotsBefore": 0,
+      "Castability": {
+        "supported": true,
+        "score": 0.9491073039112526,
+        "onCurve": 0.5679906661880096,
+        "byGrace": 0.7592858431290022,
+        "requirements": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "drawsByGrace": 12,
+        "interpretation": "Minimum marginal source tails, NOT exact joint cast-on-curve probability."
+      },
+      "AbsoluteEligibility": 0.9491073039112526,
+      "CastabilityDelta": -0.13750749717532648,
+      "ManaConsistencyDelta": -0.13750749717532648,
+      "CurveDelta": 0.001,
+      "CreatureDelta": 0.0,
+      "EarlyPlayDelta": 0.0,
+      "RemovalDelta": 0.0,
+      "FixingDelta": 0,
+      "RoleDelta": 0.0,
+      "StructuralDelta": 0.001,
+      "Final23Probability": 0.586515741405318,
+      "Confidence": 0.7895274662649018,
+      "RawMarginalValue": -0.09506112185575291,
+      "DValue": 0.1929903950650913,
+      "BeforePair": [
+        1,
+        2
+      ],
+      "AfterPair": [
+        1,
+        2
+      ],
+      "BeforeMana": {
+        "lands": 16,
+        "nonbasic": {
+          "08ae1037-6f70-41a9-b75e-98fa9a2152c8": 1,
+          "f0588fbf-3c05-452a-b3f7-67604c1f921d": 1
+        },
+        "basics": {
+          "1": 7,
+          "2": 7
+        },
+        "sources": [
+          2,
+          8,
+          8,
+          0,
+          0,
+          1
+        ],
+        "effectiveFixing": 2,
+        "splash": null
+      },
+      "AfterMana": {
+        "lands": 15,
+        "nonbasic": {
+          "08ae1037-6f70-41a9-b75e-98fa9a2152c8": 1,
+          "f0588fbf-3c05-452a-b3f7-67604c1f921d": 1
+        },
+        "basics": {
+          "1": 6,
+          "2": 7
+        },
+        "sources": [
+          2,
+          7,
+          8,
+          0,
+          0,
+          1
+        ],
+        "effectiveFixing": 2,
+        "splash": null
+      },
+      "BeforeMain": {
+        "0b0979f9-aae3-4fc7-beae-c8c6637ae596": 5,
+        "106b5c96-d1bd-433d-955e-ace0b60d3bc3": 1,
+        "2d841faa-9e0b-45ff-9dfd-f8a169d9af76": 1,
+        "5045027d-0ff4-484c-b4cb-e0b61885d428": 3,
+        "60afeb75-2c1e-4634-8c83-88b1dddb77c2": 1,
+        "6d872c10-4126-4130-a74a-1331ed418ca8": 1,
+        "6fd574e7-705f-4a65-aad0-68ff6d63bf0f": 1,
+        "7c9231f0-7733-46d9-b9c6-c6c5b7fe65dd": 1,
+        "7f7e780e-fbc5-4dc0-b5c7-efcb8645c7c6": 1,
+        "807c7812-c108-45a7-a5b2-08cc693bc500": 1,
+        "9d933bf1-14f0-4150-a0d2-6b845b9624cf": 1,
+        "a166abef-f068-47e9-8a65-43ebf4b015bd": 1,
+        "aef37244-deb9-464e-ab8c-4308369ae09b": 1,
+        "bb6db604-8bbe-4719-88bd-f3cad8c4725d": 1,
+        "bdf96533-f28a-4465-893b-0c9394d5b8d7": 1,
+        "cc8331ab-adc9-45c6-9728-66afc72d901c": 1,
+        "d397fb84-8573-4b2c-be2c-f8fd820342f0": 1,
+        "fed77513-94ab-44e2-b9a1-30ba927cd6ee": 1
+      },
+      "AfterMain": {
+        "0b0979f9-aae3-4fc7-beae-c8c6637ae596": 5,
+        "106b5c96-d1bd-433d-955e-ace0b60d3bc3": 1,
+        "2d841faa-9e0b-45ff-9dfd-f8a169d9af76": 1,
+        "5045027d-0ff4-484c-b4cb-e0b61885d428": 3,
+        "60afeb75-2c1e-4634-8c83-88b1dddb77c2": 1,
+        "660d7983-b335-48b4-898d-f182effcf2de": 1,
+        "6d872c10-4126-4130-a74a-1331ed418ca8": 1,
+        "6fd574e7-705f-4a65-aad0-68ff6d63bf0f": 1,
+        "7c9231f0-7733-46d9-b9c6-c6c5b7fe65dd": 1,
+        "7f7e780e-fbc5-4dc0-b5c7-efcb8645c7c6": 1,
+        "807c7812-c108-45a7-a5b2-08cc693bc500": 1,
+        "9d933bf1-14f0-4150-a0d2-6b845b9624cf": 1,
+        "a166abef-f068-47e9-8a65-43ebf4b015bd": 1,
+        "aef37244-deb9-464e-ab8c-4308369ae09b": 1,
+        "bb6db604-8bbe-4719-88bd-f3cad8c4725d": 1,
+        "bdf96533-f28a-4465-893b-0c9394d5b8d7": 1,
+        "cc8331ab-adc9-45c6-9728-66afc72d901c": 1,
+        "d397fb84-8573-4b2c-be2c-f8fd820342f0": 1,
+        "fed77513-94ab-44e2-b9a1-30ba927cd6ee": 1
+      },
+      "ColorPairChanged": false,
+      "LandCountChanged": true,
+      "UnknownNarrow": false,
+      "OptionalPositiveRoleBonusAllowed": true,
+      "provenance": "research-d-phase-f-v1/C"
+    }
+  ]
+}

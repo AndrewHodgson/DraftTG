@@ -73,7 +73,7 @@ public sealed class DraftTGRuntimeFactory(bool captureFree = false) : IDraftTGRu
             bootstrap.DatasetUpdatedAt,
             bootstrap.RefreshDiagnostic?.Message,
             statistics, decks, captureFree ? new CaptureFreeDraftSession(coordinator, bootstrap.SnapshotAdapter,
-                new DraftTG.ArenaIntegration.Memory.ArenaDraftMemoryWatcher()) : null, bootstrap.ArenaCardResolver);
+                new DraftTG.ArenaIntegration.Memory.ArenaDraftMemoryWatcher(printingReconciler:new PreferredBasicPrintingReconciler(bootstrap.ArenaCardResolver,bootstrap.Catalog).Reconcile)) : null, bootstrap.ArenaCardResolver);
     }
 
     private static DraftTGCardDataStatus MapStatus(ScryfallCardDataLoadSource source) =>

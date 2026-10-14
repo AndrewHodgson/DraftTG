@@ -112,6 +112,12 @@ public enum RailPanel { None, Status, History, Calibration }
 /// <summary>Two surfaces, one existing runtime owner. Contains presentation and calibration only.</summary>
 public sealed class OverlayViewModel : PresentationModel, IDisposable
 {
+    public IReadOnlyList<DeckQualityBadge> DeckBadges { get; private set; } = [];
+    internal void SetDeckBadges(IReadOnlyList<DeckQualityBadge> items)
+    { DeckBadges=items;Notify(nameof(DeckBadges)); }
+    public IReadOnlyList<LocalizationDebugItem> LocalizationDebug { get; private set; } = [];
+    internal void SetLocalizationDebug(IReadOnlyList<LocalizationDebugItem> items)
+    { LocalizationDebug = items; Notify(nameof(LocalizationDebug)); }
     private double _width = 1000;
     private double _height = 500;
     private bool _statisticsVisible = true;

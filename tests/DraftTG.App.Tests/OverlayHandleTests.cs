@@ -56,7 +56,11 @@ public sealed class OverlayHandleTests
         Assert.Equal("{Binding IsCalibrating}", (string?)layer.Attribute("IsVisible"));
         Assert.Equal("Transparent", (string?)view.Attribute("Background"));
         Assert.Null(root.Attribute("Background"));
-        Assert.Equal(2, root.Elements().Count()); // Badge renderer plus the gated calibration subtree.
+        Assert.Equal(4, root.Elements().Count()); // Pack/deck badges, opt-in debug bounds, calibration subtree.
+        var deck=Assert.Single(root.Elements(), e=>(string?)e.Attribute("ItemsSource")=="{Binding DeckBadges}");
+        Assert.Equal("False",(string?)deck.Attribute("IsHitTestVisible"));
+        var debug = Assert.Single(root.Elements(), e => (string?)e.Attribute("ItemsSource") == "{Binding LocalizationDebug}");
+        Assert.Equal("False", (string?)debug.Attribute("IsHitTestVisible"));
         Assert.Single(root.Elements(), e => (string?)e.Attribute("ItemsSource") == "{Binding Badges}");
         Assert.Single(layer.Descendants(), e => (string?)e.Attribute("ItemsSource") == "{Binding Guides}");
         Assert.Single(layer.Descendants(), e => (string?)e.Attribute("PointerPressed") == "Move_OnPointerPressed");

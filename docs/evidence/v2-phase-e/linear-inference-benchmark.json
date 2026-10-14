@@ -1,0 +1,7 @@
+{
+  "n": 500,
+  "threeFamilyMeanMs": 0.06058120308443904,
+  "threeFamilyP95Ms": 0.06501002935692667,
+  "peakBytes": 512716800,
+  "excludesProjectionAndIO": true
+}

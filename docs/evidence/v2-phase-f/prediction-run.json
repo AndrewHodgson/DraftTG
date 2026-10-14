@@ -1,0 +1,16 @@
+{
+  "comparableDecisions": 50285,
+  "candidateOccurrences": 409625,
+  "seconds": 640.5894857998937,
+  "workers": 4,
+  "maxProductionQDifference": 0.3975554995557067,
+  "declines": {
+    "A: Replacement-only family has no land benefit estimator; production D retained.": 26112,
+    "B: Replacement-only family has no land benefit estimator; production D retained.": 26112,
+    "A: Unsupported castability or direct-source metadata; production D retained.": 3600,
+    "B: Unsupported castability or direct-source metadata; production D retained.": 3600,
+    "C: Unsupported castability or direct-source metadata; production D retained.": 3600
+  },
+  "productionReplayReused": true,
+  "probabilityModelNotRefit": true
+}

@@ -1,0 +1,44 @@
+{
+  "gates": {
+    "pair": false,
+    "reconstruction": false,
+    "inclusion": true,
+    "coverage": true,
+    "contextual": false,
+    "cold": true,
+    "probes": false,
+    "goldens": true,
+    "frozenQCompatibility": false
+  },
+  "passAll": false,
+  "selectedFamily": "C",
+  "pairGainBySet": {
+    "LCI": -0.06088825214899707,
+    "MKM": -0.05392976588628762,
+    "OTJ": -0.06266066838046269,
+    "ONE": -0.012871726586773269,
+    "MOM": -0.09005059021922424
+  },
+  "reconstructionF1GainBySet": {
+    "LCI": -0.0036947644810734204,
+    "MKM": 0.005467401268246963,
+    "OTJ": 0.0049520965534401995,
+    "ONE": 0.005514751219992675,
+    "MOM": 0.010830492652245893
+  },
+  "loglossRelativeGainBySet": {
+    "LCI": 0.0347514710265977,
+    "MKM": 0.04969760548585467,
+    "OTJ": 0.05791927815735487,
+    "ONE": 0.0325054718918083,
+    "MOM": 0.028978209976454172
+  },
+  "brierRelativeGainBySet": {
+    "LCI": 0.04779409184853489,
+    "MKM": 0.06256127438856784,
+    "OTJ": 0.07406363104963376,
+    "ONE": 0.043276389388506864,
+    "MOM": 0.038990501183393866
+  },
+  "QCompatibilityInterpretation": "Additional input-contract integrity blocker, not a newly tuned predictive threshold; all original failed gates remain failed."
+}
