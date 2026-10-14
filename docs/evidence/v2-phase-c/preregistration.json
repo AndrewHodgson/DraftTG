@@ -1,0 +1,64 @@
+{
+  "version": "research-l-phase-c-v1",
+  "seed": "DraftTG-phase-c-v1",
+  "registeredBeforeCalibration": true,
+  "split": "V2_PHASE_B1_SPLIT_MANIFEST.json",
+  "splitSha256": "6856df32859cd1f81e035de4f4f3ae880e5b0dbebaeda08e78ae0f0e248e0ac0",
+  "calibration": [
+    "DMU",
+    "BRO",
+    "WOE"
+  ],
+  "development": [
+    "LCI",
+    "MKM",
+    "OTJ",
+    "ONE",
+    "MOM"
+  ],
+  "spent": [
+    "BLB",
+    "DSK"
+  ],
+  "untouched": [
+    "MH3",
+    "DFT"
+  ],
+  "replay": "Reuse B.1 target draft selection, canonical SQLite and unchanged k500 evidence snapshots. Score once; L-only ablations. Complete pack/pool/labels and supported coordinates required for comparative metrics.",
+  "positionalTraining": "B.1 whole-draft evidence group only; independent C-seed 50/50 fit/audit split inside that group for confidence/pack-specific choice. No target-draft positions or own future picks enter feature fitting.",
+  "positionAudit": "Mean, median, 10% trimmed mean and empirical CDF; global versus pack-specific; lambda 0/20/100/400 independent supporting drafts. Select confidence/lookup on equal-set calibration CDF CRPS, descriptive median/mean errors.",
+  "candidates": [
+    "A: bounded positive raw lateness accumulator",
+    "B: signed standardized lateness accumulator",
+    "C: signed empirical-mid-CDF accumulator"
+  ],
+  "qualityGate": "clamp(2*(frozen k500 raw Q-.5),0,1); no intrinsic Q substitution; colorless/lands zero lane evidence; gold split evenly and downweight .5",
+  "temporalGrid": {
+    "halfLife": [
+      4,
+      8,
+      16
+    ],
+    "oppositePackRetention": [
+      0,
+      0.25,
+      0.5
+    ],
+    "negativeWeight": [
+      0,
+      0.25
+    ]
+  },
+  "safeguards": "Current-pick position ramp max(0,min(1,(pick-2)/6)); per-observation color evidence capped, smooth tanh accumulator; supporting-position confidence. Same-direction old pack retention .5, exponential age by source global pick. Physical card/pack independence unavailable; do not claim repeated sightings independent.",
+  "primaryMetric": "Equal-set, equal-pack/pick-stage next-3 same-pack quality-card availability multiclass Brier; next-1/5 and quality subsequent human-pick colors secondary; temporal params calibration only; family choice on development.",
+  "developmentGate": "At least 1% improvement versus best of actual current-derived-L, uniform and current-pack-quality-mass predictor; improve 4/5 development sets; contextual Top1 and MRR no worse than current-derived-L; no worse false early-lock rate; no worse measured recovery; frozen Q/commitment golden pass. Otherwise no final release.",
+  "diagnostics": "Build top-2 spell-color loads, completed observed pools, terminal records labels only. Early lock at P1 picks<=3 and leader-runner support gap>=.5/confidence>=.5; report .25/.5/.75 sensitivity. Reversal: different mono-color availability leaders at picks4-6 vs9-11, margins>=.05, report recovery by pick11 and latency.",
+  "holdouts": "No release by default. Only after immutable selection and convincing development gate, exactly one exclusive release; otherwise refuse final. New holdouts remain untouched.",
+  "productionChanged": false,
+  "nonGoals": [
+    "Q/A/D/commitment changes",
+    "provider aggregate requests",
+    "archetype or synergy model",
+    "Phase D"
+  ]
+}

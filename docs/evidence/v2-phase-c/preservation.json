@@ -1,0 +1,1218 @@
+{
+  "version": "phase-c-preservation-v1",
+  "files": [
+    {
+      "path": "docs/evidence/v2-phase-a/baseline-freeze.json",
+      "sha256": "5ed4ca8324e55ee747b01109fd35a622eb3dede1ff960f4891614bc96c25042b"
+    },
+    {
+      "path": "docs/evidence/v2-phase-a/deck-manifests.json",
+      "sha256": "5a54f8c54f3a63bb63a6ced877f9adab3d45ea1d88bc3db01c95602a3838b669"
+    },
+    {
+      "path": "docs/evidence/v2-phase-a/identity-metadata.json",
+      "sha256": "66bfb2bfa16ddcf6cef9639d5627f55bd271a5ed41deb75bedeb137493dfc70a"
+    },
+    {
+      "path": "docs/evidence/v2-phase-a/metrics.csv",
+      "sha256": "0877eb711f3adb67b8bd73632cb18a1d1bac259d64fb9fe0ed678d901f23ebe1"
+    },
+    {
+      "path": "docs/evidence/v2-phase-a/model-comparisons.json",
+      "sha256": "1755b5878dc81c02c008825b2a9a85b847e05277dfe314c7696213bf5f9c2b8e"
+    },
+    {
+      "path": "docs/evidence/v2-phase-a/observed-schemas.json",
+      "sha256": "0ac2ad77c8c6c34365c81b9d3e46dc388071e9d0426a8e1c08a3b2c3637aea78"
+    },
+    {
+      "path": "docs/evidence/v2-phase-a/pilot-summary.json",
+      "sha256": "d64ba2c2f1db4b4cfc197b36aa4e093e5e0fe959ffc2751173a4f0512255d390"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b/cross-format-experiments.json",
+      "sha256": "50be64fe598f6beda132e8d50746af7fb8912766dbf5d0df2060d3ad03255598"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b/derived-positions.json",
+      "sha256": "045eb10cc86f961b886d6346fdb836db8724bb235b828d977a071fd56cd9c7cf"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b/execution-correction.json",
+      "sha256": "e90cd8a601c56614788838e6a5fdff6ba27aa3fb21ca01b87c3020f613db50d3"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b/final-summary.json",
+      "sha256": "ca5d9c76d286900868077be7c64a987551b1183d0ca90784740752b9fdc15594"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b/golden-sanity.json",
+      "sha256": "e247c59482c26c94e55f7c673695e70ef59132696585dd1c198e78c787654c48"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b/holdout-baselines.json",
+      "sha256": "a1e7dae224ec038de94f2e799a9fd17f511d0dbba48299412e5e3d7a03a6c90d"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b/holdout-build-association.json",
+      "sha256": "9ffe699d9f2c2b292de6be78f151e9ce969aade8fa26a5cc8893a6a6c45bb696"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b/holdout-card-features.json",
+      "sha256": "b1b0d583eebb196e290d6f8d08c46bc7db6e64b2e06fc8ccf8a98b20631918d6"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b/holdout-experiments.json",
+      "sha256": "7ac122e4e3e4d59b9653342e07692f47b73e17cd87971b58656afcaab6477dd8"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b/holdout-human-q-ranking.json",
+      "sha256": "ff1028aae1ec67f42bcfffd5a996afa7cb2a416150222aff081653a3858c5097"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b/holdout-production-replay.json",
+      "sha256": "a1d0085453633b7f9482c3ebc84cfeb6411d80bbee5e6ed204b69953d5ece20e"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b/holdout-q-values.json",
+      "sha256": "920e1186d35069684a43c5867adfdcb43985edb2517edcca45199f600730110a"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b/holdout-release.json",
+      "sha256": "c21568e99771045b80d9186264c9b3b60d0941a8d29dc9a47dd4cc57f92de3b2"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b/holdout-result.json",
+      "sha256": "847a31f22b021d4fc8eef75f2e2a5930f24152375592a21d5e79b21ebeec1e8e"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b/identity-summary.json",
+      "sha256": "431292a65e35786611069a20e1b8247c084a3c4d442397be2c5f013a5b208277"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b/position-audit.json",
+      "sha256": "3ecc67e7c4c7c59b2599fb5f4fc84b8a25974a79c3bab666d5a408f2b4771e74"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b/preregistration-hashes.json",
+      "sha256": "4569f4f5729937f7daa54859ac6ce0710af4079cf5230d7d8db4b49189a37352"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b/preregistration.json",
+      "sha256": "f60c70caaa3f60a342e2203ccdaf3d0effd6f5261dc032c442149f2a7ca0147d"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b/qualification.json",
+      "sha256": "92a4fc89037c13832001edc1163817efa3f7368259881c54af097f53ba1cbb2e"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b/report-diagnostics.json",
+      "sha256": "7ce067a170ec64b2d7f54737372b8fc38f44567860c1e59a6ba84c5ba013dd7b"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b/selection-analysis-freeze.json",
+      "sha256": "1131a6e4e526b42b87b71d399c91f458209758aae7ef06a0c185a1da3f977d9e"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b/selection.json",
+      "sha256": "6646a9b2f7dcece0b87cfeebbc4729bbb95c61e8e4ceed10096139df39beac3c"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b/source-audit.json",
+      "sha256": "589e5ce068b5e1d2bd66165d6651b22d2b79cabf68a031dfc2519f042c02edee"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b/source-provenance.json",
+      "sha256": "bec70bf5b28d0e3fd205426f1a3c48ecd33ac7b674ba6f15b87bcb412eb50400"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b/storage.json",
+      "sha256": "e3f3cf9b80116020313c202e24216f8fda9298709a51ff46d5c64cfb0b4f64fd"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b/training-baselines.json",
+      "sha256": "39f48c23c75a8ce71eb1d60160e183c38bc9a66bcc6f75a155d0152b02b473c2"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b/training-build-association.json",
+      "sha256": "524b9c048d1b02ab73be1bacb18ce2fc528ff3ffd4f26cc8125e74ef9ad868e7"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b/training-candidate-experiments.json",
+      "sha256": "462963751b27f2d630973cca3147f114cf47a0e42c5d732dddc6ac7a53aaf599"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b/training-card-features.json",
+      "sha256": "066fb55fc005bd8c42404365ba75c3bc89ce676407a39a66e4ade63892a934b4"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b/training-experiments.json",
+      "sha256": "9b1ce0a7029f9404f85dc230decd9f54f40bb9e7f7225339631df7a09a9df2e5"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b/training-human-q-ranking.json",
+      "sha256": "af71cd200d577b5f9274ce279a3a520d4869edfb3c7f48078e47f26707130c5f"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b/training-production-replay.json",
+      "sha256": "dea1eb8febe7432122f5ac9ee48bcd913906f8d7751954ab39884fbb74aef881"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b/training-q-values.json",
+      "sha256": "dc96a4fb7449ceb88bc09fa3e6198e76c3ded4d4cb64c50e6f7bdf90d4fd31f5"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b/training-result.json",
+      "sha256": "7bf2bf65bae6947f0b5498fe0e0d24a68c6f2695fd484b8a7f8ebc87eb741103"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b/validation.json",
+      "sha256": "acd1ad2880a271404ce4840d0ad31270a18ae22f03643e509b51634190601d1f"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b1/analytical-source-freeze.json",
+      "sha256": "7553d2c4654b0ffbaf8eeca9f5e39432374b15efa96616c2655f98b46a1c9b3c"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b1/calibration-summary.json",
+      "sha256": "0e5febd027f18810c798ab79f008c1fb86a2a9598e67cb3ee5c4443272a19eca"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b1/compatible-baselines.json",
+      "sha256": "a0f51dd785ac74a6b5c1524221d19eb6becf1324f0c09edf297939abcb09c900"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b1/contextual-replay.json",
+      "sha256": "560c0baa01ef164a1c18654eb3339b78c221e71849dad91a60a559fc84fc67a2"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b1/count-comparisons.json",
+      "sha256": "44cab8b9a6a1f35e5591a509941ddcb10147c03137fbdd1b91162c5be7aacfc7"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b1/cross-format.json",
+      "sha256": "92eee15d11d0d377b0dd761d28ffbbc30b0343663420089efd0318a9bf4ce40b"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b1/dotnet-golden.json",
+      "sha256": "ded8898e66a6e52fd78a760fff8d26a48b5d8f04cc5cf027ef04e11695e95b1c"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b1/execution-correction.json",
+      "sha256": "3a690cfe5c837621232c8a45acfef89d98b1d4388fe1bed366eec6012726fcfc"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b1/execution-source-hashes.json",
+      "sha256": "c3a962d5acea5f79a4a1dbf02a28821a1d68d0227452e2d1896ff018d2b0cb5e"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b1/golden-portability.json",
+      "sha256": "ca8b882a37544e697dc2dc0a3063a8a9083445fc0f6e98e4d16a38d90d07c68b"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b1/human-q-ranking.json",
+      "sha256": "73ebcc2b4bbf83f6aae6eebb268745cdbbe492d211f0d5d7cf311c67782fa804"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b1/identity-policy.json",
+      "sha256": "800e0ad48be430cab776d7e3a6dfa497bc7aa522f0f5887b2a0c1138585661e9"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b1/new-qualification.json",
+      "sha256": "a7f5291810dca4c9a731b662688eca336b870516c2703aa0d5ac1e6154a3be26"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b1/new-source-provenance.json",
+      "sha256": "906ec4a3da252354a73febe6ca9e791656f80997996ede802308317ddb335c9e"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b1/preregistration.json",
+      "sha256": "f222770836477bf99f64461b6e1e2ab24d59b280686ad3a9b41d5997e5a4205e"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b1/preservation.json",
+      "sha256": "39f251a7b4a20527a08b32b971ada5cecae2edaf425a530b754e36047079236a"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b1/profile-after.json",
+      "sha256": "accbfa2b86e6879e65575d52640096cba9d0368061d2d18554b628e4a42e5ed2"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b1/profile-all-after.json",
+      "sha256": "8ae270b455dd93389dc58afcc5fd64b973ccb1bed88ebd95c4f6a4c7a6d0b8a1"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b1/profile-all-before.json",
+      "sha256": "16daff4afb50a498d1623661855216f0c90e43556a5fad6e3a29c7d45369099f"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b1/profile-before.json",
+      "sha256": "822629386008e088195aa613f46e5ae1fae90f5b407cb831dfa61de85d2e926f"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b1/profile-compact.json",
+      "sha256": "217fc628b9e584cf6cca0b109bcc5ffde421f436f13743fc393e8f47f614a929"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b1/provider-semantics.json",
+      "sha256": "6498122b4b59669b66f26176ec8ba913d3ecb5bdf976dbfeb8835b11677a9283"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b1/q-values.json",
+      "sha256": "60d591e3c47bb28827d22f7a0bad45bb05007b0b281166fe060294fd1954173a"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b1/replay-equivalence.json",
+      "sha256": "3e9ecebda235c39b8642f8f1b44538f237202d681f89d162a53215f4aea78f6d"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b1/replay-selection.json",
+      "sha256": "9fb52473b0d4b103e26cbbf4d3807211ac13105b73d2ade10a069d86329112f7"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b1/selection.json",
+      "sha256": "ced2798b4d405c97bd2cc7e47fa3b5409394257fb0c6168ce5ea86a3f038658e"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b1/shrinkage-experiments.json",
+      "sha256": "0f82091bb487375def6aeb2781df1f4f119e4bdad8b5bb47423cf230903c2f69"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b1/source-availability.json",
+      "sha256": "797cdf612ef03c5c83b692963900e60b035ed44d49cec8518494722de9a95d35"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b1/summary.json",
+      "sha256": "037114c1a8c170ae857f25169f662dcbc81156b6ee6631152714e4a8a6f2b7eb"
+    },
+    {
+      "path": "docs/evidence/v2-phase-b1/validation.json",
+      "sha256": "ff3e6cb16c73f6a0b4317894fc62b43755fd93839263448119a30a40eaa98b3d"
+    },
+    {
+      "path": "src/DraftTG.App/App.axaml.cs",
+      "sha256": "dca8c15838a5f0581657a967a38a92fca9ed5011ea5ab0fd9c789ac8e917e7b5"
+    },
+    {
+      "path": "src/DraftTG.App/ArenaCaptureCoordinator.cs",
+      "sha256": "3cdbb1d7a8ed6ae618e7f099f3f055763dcc62d244c2d58bb3f27f709bc7eea1"
+    },
+    {
+      "path": "src/DraftTG.App/ArenaMemoryDraftCommand.cs",
+      "sha256": "4b31d530a77309af8085bd9be4b76010ca93ecb8fb1ae44ab8fa9a6040d0073e"
+    },
+    {
+      "path": "src/DraftTG.App/ArenaMemoryWatchCommand.cs",
+      "sha256": "df8cbfdb51c76193e5d3df0a9ffd7e7f85decdc73290076b94b425ec79bb2bb7"
+    },
+    {
+      "path": "src/DraftTG.App/AssemblyInfo.cs",
+      "sha256": "21f3afc6f7023aadd10b2f46ba98862582498b167cbb651c7704903d49e00d51"
+    },
+    {
+      "path": "src/DraftTG.App/AutomaticCardLocalizationSession.cs",
+      "sha256": "b500053660515c3aa144b50882de03dadab23b787750ff9e5bbd5ef7ad34911a"
+    },
+    {
+      "path": "src/DraftTG.App/BaselineDeckPresentation.cs",
+      "sha256": "7e4a70d56d1c0e1830891d80fe1ec0080cf9f9d08d724235bf13fe0611d9497f"
+    },
+    {
+      "path": "src/DraftTG.App/CaptureBackendComparison.cs",
+      "sha256": "6885d0213f174c64d41f5d863ca2f64a00db535e36802c4eea3878cf92350f6e"
+    },
+    {
+      "path": "src/DraftTG.App/CaptureFreeDesktopSession.cs",
+      "sha256": "403cabd23edc0ce0aef2fc73c9aba8a3090618821688b7a9e88bd52022bc018a"
+    },
+    {
+      "path": "src/DraftTG.App/CaptureFreeDiagnostics.cs",
+      "sha256": "e86a590e9664ac0f78523c0fbaf4af41145e68a0c1fbaed7aad49dde4010850a"
+    },
+    {
+      "path": "src/DraftTG.App/CaptureFreeSafety.cs",
+      "sha256": "c7d147763ba87c5838d0a32e89968974a754683c2fa45ca1b0fd7004a665877c"
+    },
+    {
+      "path": "src/DraftTG.App/CaptureFreeSummaryCommand.cs",
+      "sha256": "b868dcb93473b0c8f3666e107a947c3111cd91d728eae8337cab77acb10a1134"
+    },
+    {
+      "path": "src/DraftTG.App/CardOverlayWindow.axaml.cs",
+      "sha256": "09bd067b18c510e1022e72055af438802840383966c8842868b784a0bd4b65cd"
+    },
+    {
+      "path": "src/DraftTG.App/CardTemplateRecognition.cs",
+      "sha256": "a535d230d6a55d44b210426fd48bf0a6b93c5e6a6a142dfcd85b51944ebdc4ca"
+    },
+    {
+      "path": "src/DraftTG.App/CompareArenaCaptureCommand.cs",
+      "sha256": "aeb012eedd77d738538e2cc0850cecf553f9deaf56bc9e23d7b659e310a18898"
+    },
+    {
+      "path": "src/DraftTG.App/ControlRailWindow.axaml.cs",
+      "sha256": "9551cbdb1916dffa7f5dab121ca8c625f6df58b706456a8992386f8d217203b7"
+    },
+    {
+      "path": "src/DraftTG.App/DebugCaptureArtifacts.cs",
+      "sha256": "374885e26726f58856bc4475fd635c39bb0332633f6efbcaf425e51e71658260"
+    },
+    {
+      "path": "src/DraftTG.App/DeckBuilderCaptureAuditCommand.cs",
+      "sha256": "8d8da686c3baa6d4a07530a02e4200230a97982f996264f90a6cc00457e07ea8"
+    },
+    {
+      "path": "src/DraftTG.App/DesktopDuplicationBenchmarkCommand.cs",
+      "sha256": "5b6e7002159b26c0349470ebfeaf853f26c5870c1681217bde079ee990e38ffb"
+    },
+    {
+      "path": "src/DraftTG.App/DeterministicShadowLiveCommand.cs",
+      "sha256": "5f2f88041ef4d69adfee6e26da1f656654867d8d774ea1820722a63786196c4b"
+    },
+    {
+      "path": "src/DraftTG.App/DeterministicSlotShadowObserver.cs",
+      "sha256": "6c07c9752ec762d778f59704117e88c4ec737d2c97d824092ec83776bcb7df8f"
+    },
+    {
+      "path": "src/DraftTG.App/DraftPoolPresentation.cs",
+      "sha256": "52bfcc381aa8420f3cdcafd8ec5dd2b53a0263a48275f5837fa7033f13b53b77"
+    },
+    {
+      "path": "src/DraftTG.App/FixedSlotOrderEvidence.cs",
+      "sha256": "ae4d2c86abc2c83fc7c521354c7d9c8845bd7b854e3c88bca9568ca54a84bea9"
+    },
+    {
+      "path": "src/DraftTG.App/LiveLocalizationValidation.cs",
+      "sha256": "f22c9c69fde34d0ea5bbd03bcec022b8548b855e1f55a4be8293c9c0cc60b02c"
+    },
+    {
+      "path": "src/DraftTG.App/LiveLocalizationValidationSummaryCommand.cs",
+      "sha256": "8087502da0943139dca76f7464f0c41ab043e20e5fdeb3de8a847d8109711a65"
+    },
+    {
+      "path": "src/DraftTG.App/LocalizationDebugCapture.cs",
+      "sha256": "a8dbbf6cc4d79611c8a2244d24f6886b31dc2b9d3f1cebeb8f34de01c9b9d662"
+    },
+    {
+      "path": "src/DraftTG.App/MainWindowViewModel.cs",
+      "sha256": "da3bd8a70ca70dda67876dea102c50ae7931ad7d1eb84ed31ea1ca1f0436aeb8"
+    },
+    {
+      "path": "src/DraftTG.App/MysticBadgePreviewWindow.cs",
+      "sha256": "0dcac87af46e4ec2014297f131b24022bd40a50cfa59fd8814b77fb72da62490"
+    },
+    {
+      "path": "src/DraftTG.App/MysticRatingBackground.cs",
+      "sha256": "e857a3ee1b1f2183c5be6a5aed77a74e1a6f7c3b31d7fd5c374065d79ca8a800"
+    },
+    {
+      "path": "src/DraftTG.App/OfflineArtworkCommand.cs",
+      "sha256": "d7684dec8b4db5b2292aa89819080930062736741b32dd0108203d86fa72559f"
+    },
+    {
+      "path": "src/DraftTG.App/OrderEvidenceRecorder.cs",
+      "sha256": "eca3eeafe10a39e7429632f57794c536cd42aa5c795c1e187a59cc71fd3a00fc"
+    },
+    {
+      "path": "src/DraftTG.App/OrderEvidenceSummaryCommand.cs",
+      "sha256": "bb1b31f3dcd36e976d075107f025445430f11528fa68822d19dad99c2805db9a"
+    },
+    {
+      "path": "src/DraftTG.App/OverlayCalibrationEditor.cs",
+      "sha256": "5ae1e114dfc5b8a0638cdafe43c25c7dc4e0ce63bd83070f1ebc6997af55eae2"
+    },
+    {
+      "path": "src/DraftTG.App/OverlayDesktopSession.cs",
+      "sha256": "9400b1b638682585ad5584e3ee75ebcfd3d3861c38e0879c7e6ad58888cefe3c"
+    },
+    {
+      "path": "src/DraftTG.App/OverlayViewModel.cs",
+      "sha256": "547bfc2839368051a3a180cf0f4ed4953f7b71c77f8838ede9523479a7562b44"
+    },
+    {
+      "path": "src/DraftTG.App/PackFrameSynchronization.cs",
+      "sha256": "cdaa049ccee81196a9749efb5371e043d022ccc1e6486eeb695bb35b880ae67c"
+    },
+    {
+      "path": "src/DraftTG.App/Platform/ArenaRegionCapture.cs",
+      "sha256": "4e94b9abe4eceaeb7ca17f3d03e2fdaf8abc79c3feb5fb31115e26d863de3acd"
+    },
+    {
+      "path": "src/DraftTG.App/Platform/ArenaWindowEvents.cs",
+      "sha256": "d2d35c535660085e4c17b6b49585d7702c3d97b3cc668bf1eee6695bded50483"
+    },
+    {
+      "path": "src/DraftTG.App/Platform/ArenaWindowInspector.cs",
+      "sha256": "89b40b4fd6e31c59f84143c293cba740c6d86a5d4e2cd23bb34c58e4e4916349"
+    },
+    {
+      "path": "src/DraftTG.App/Platform/ClickThroughWindowController.cs",
+      "sha256": "a5451ed3d36e6fdf918eac386fa82a93c3c343fa8d5456ecf4c83feb6989251b"
+    },
+    {
+      "path": "src/DraftTG.App/Platform/DesktopDuplicationFrameCapture.cs",
+      "sha256": "7d6bd99bc066747d659f6313dae0f22dd87a5ad8e3be1db65242c09b261a4015"
+    },
+    {
+      "path": "src/DraftTG.App/Platform/DesktopDuplicationGeometry.cs",
+      "sha256": "607428f3684eaf89996a8f54a20f2a5419c5247bccfbdad0943d28f55d43c33f"
+    },
+    {
+      "path": "src/DraftTG.App/Platform/DesktopDuplicationNativeSession.cs",
+      "sha256": "66300f6f78ced2544bd2110f6fe517f5ddf82f89598b182c350d47011df9a1e5"
+    },
+    {
+      "path": "src/DraftTG.App/Platform/PhysicalPixelContext.cs",
+      "sha256": "e1e682a4cc060e92896a997a6dad82fd1cceec0dcdac23029f1ad47cfb7963b5"
+    },
+    {
+      "path": "src/DraftTG.App/Platform/PreferredArenaFrameCapture.cs",
+      "sha256": "64df39ba0b6dd213b975d504c22a1a8fe14dcd36660d1ca5bd6545434aa91c00"
+    },
+    {
+      "path": "src/DraftTG.App/Platform/WgcCaptureLifecycle.cs",
+      "sha256": "535aa1a1d31cd4eef043c8f4850ca60fc6e2db6f821f7e73c7f85addcb39af26"
+    },
+    {
+      "path": "src/DraftTG.App/Platform/WgcCaptureWorker.cs",
+      "sha256": "0671898f9e0482596b6c209374bd6b21c1335ec6739b26efcae9416acbd023c3"
+    },
+    {
+      "path": "src/DraftTG.App/Platform/WgcDirect3DInterop.cs",
+      "sha256": "e7f766828f90e0b083cb52ae761f39183622a5e6962c4936ae3c24b5b5b48bb0"
+    },
+    {
+      "path": "src/DraftTG.App/Platform/WgcStressFixture.cs",
+      "sha256": "57a6030ff9a4c4b092a31160149ece600f15635acd9829664aac3b266771116c"
+    },
+    {
+      "path": "src/DraftTG.App/Platform/WindowCaptureBounds.cs",
+      "sha256": "3d7cde56b76c2859020b052f10eaa4f56f04d4d79c652e0934b997135e12ede1"
+    },
+    {
+      "path": "src/DraftTG.App/Platform/WindowsGraphicsCaptureFrameCapture.cs",
+      "sha256": "3f1223f27da67aa19681718acb47808903e962ace571a9624c990e48b528a7ec"
+    },
+    {
+      "path": "src/DraftTG.App/ProductionBadgeDiagnostics.cs",
+      "sha256": "2721145ac729493b0302e877402031054a896a75b2d4511f70c40e74f7bb5471"
+    },
+    {
+      "path": "src/DraftTG.App/Program.cs",
+      "sha256": "8ec0a7b0217beab293ed5deb86469bb0ffbd04a5658586cbe5207ab31f1cbf08"
+    },
+    {
+      "path": "src/DraftTG.App/RailPanelView.axaml.cs",
+      "sha256": "16cef50bc9205cbce3684316468ca5398617a2a37d25402e0321e0232c91a6a3"
+    },
+    {
+      "path": "src/DraftTG.App/ScryfallVisualReferenceCache.cs",
+      "sha256": "cb048619be558a622e010af27c70bdb3bc7d506aa0987c6e2e0168890e5defe4"
+    },
+    {
+      "path": "src/DraftTG.App/SuggestedDeckPresentation.cs",
+      "sha256": "4a7ae5c12ce126a9742542b14ece5c66285e793c24df63ade0b468eeb7564821"
+    },
+    {
+      "path": "src/DraftTG.App/UiDispatcher.cs",
+      "sha256": "8d860ca62bb6e434224b62fdaddcc1505934fe04eb116817a9084abae2ad4cc9"
+    },
+    {
+      "path": "src/DraftTG.App/VisualSlotAssignmentViewModel.cs",
+      "sha256": "9c6302dda3d3eef9d9a4893e013152923be93076e9454abcbe4a15eefbdb285d"
+    },
+    {
+      "path": "src/DraftTG.App/WgcStressCommand.cs",
+      "sha256": "51de0c98dc4f9e68aab87aa87de4b26ec782228b7d7da4b0929d617957e68aa2"
+    },
+    {
+      "path": "src/DraftTG.App/WindowDrag.cs",
+      "sha256": "bd8f83804f624ed4d5287cce3aa3b38c78d6bb6c928c9181358544abc3dd1942"
+    },
+    {
+      "path": "src/DraftTG.Application/ArchetypeRecommendationPresentation.cs",
+      "sha256": "49ec558da9cbcd0faf463122fa2109036b129c1a0eed3bc24abe66b3ebdd9d43"
+    },
+    {
+      "path": "src/DraftTG.Application/ArchetypeStatistics.cs",
+      "sha256": "da37c78353afeb3e6b12d1901861fb7c7e840789a704ce1845b2f8101d8084ed"
+    },
+    {
+      "path": "src/DraftTG.Application/ArenaCardIdentityFallback.cs",
+      "sha256": "389a2594ed9feae30bfa4bdda044bb9f916983511fc2585aeee7726de12f3e5f"
+    },
+    {
+      "path": "src/DraftTG.Application/ArenaCardResolver.cs",
+      "sha256": "20f062d6ce84bc4d05f4f2944c57cffe737c9afb9321ee38cae6b91f78957e00"
+    },
+    {
+      "path": "src/DraftTG.Application/ArenaDeckDifference.cs",
+      "sha256": "763855ebd38d738ad27afe83f5a54b850240275d23f3222e715dc9c01ebc5311"
+    },
+    {
+      "path": "src/DraftTG.Application/ArenaDeterministicDraftSlots.cs",
+      "sha256": "c6ed7ccf2bf55c520416269518c91956fde753dade7d00587fde4448ab46f236"
+    },
+    {
+      "path": "src/DraftTG.Application/ArenaDisplayOrderEvidence.cs",
+      "sha256": "b67beb5b030bd80e4d81585223eb0fa410585f3dbde4285958a36defc495ccce"
+    },
+    {
+      "path": "src/DraftTG.Application/ArenaDisplayOrderEvidenceService.cs",
+      "sha256": "576303e8195b7a2110d9555be0899d1b13ba8ae52462a70e928c536fa564457a"
+    },
+    {
+      "path": "src/DraftTG.Application/ArenaDisplayOrderModel.cs",
+      "sha256": "7c1e5872fbe15ef392a9b031935d864b68cb33dc84a12ae10c66849ed9798c85"
+    },
+    {
+      "path": "src/DraftTG.Application/ArenaDraftPoolAssembler.cs",
+      "sha256": "d09c921b024c6971657aa8bff5a8cf6690261ed48a97b9169c15b1740621da93"
+    },
+    {
+      "path": "src/DraftTG.Application/ArenaDraftSnapshotAdapter.cs",
+      "sha256": "e580ebaffe04e0772808ced9997990b049f797d65e6dae26b2300a4ca17fe27b"
+    },
+    {
+      "path": "src/DraftTG.Application/ArenaDraftSnapshotResult.cs",
+      "sha256": "fe43da69b4fe76efe3e9af6a71968c730ee575121e9011c96ef026fe9cd9ae89"
+    },
+    {
+      "path": "src/DraftTG.Application/ArenaSavedDeckAdapter.cs",
+      "sha256": "9f3612757e989c77d5b3fd10ab7a364b2bc47b26d9509c88582c0bfb24485028"
+    },
+    {
+      "path": "src/DraftTG.Application/CaptureFreeDraftLayout.cs",
+      "sha256": "168bb2590d3082005dd8e3494c6f830425acd83d859e4a202154e0c66721a698"
+    },
+    {
+      "path": "src/DraftTG.Application/CaptureFreeDraftReconciliation.cs",
+      "sha256": "542069da02900b93498b02e2d7e28192ed2bd531c0ebfd5cfd9038b990e690a1"
+    },
+    {
+      "path": "src/DraftTG.Application/CaptureFreeDraftSession.cs",
+      "sha256": "13125775bb0ca1cbb581ebd4feea97bbe869537f5ff214bdd099cdee9e779481"
+    },
+    {
+      "path": "src/DraftTG.Application/CardVisualLocalization.cs",
+      "sha256": "3e56c7afc8c626c52ecdb6c11d82e72a8caaf794bda298328e56eddb743f4dc5"
+    },
+    {
+      "path": "src/DraftTG.Application/ContextualRecommendationPresentation.cs",
+      "sha256": "b8cfcff28eaa67843dbbc077827f9af6f406eacabb2268a1b7db66d94f73f24d"
+    },
+    {
+      "path": "src/DraftTG.Application/CurrentPackCardPresentation.cs",
+      "sha256": "e6bccce0eff4e41b3c60976945d934528cc811a7f782bbee9ea0e051ca7a8951"
+    },
+    {
+      "path": "src/DraftTG.Application/DeckConstructionCoordinator.cs",
+      "sha256": "dc3f5320b2e0a6bc0c5bded57c82eb5153d813546849cc55c261bd28bde7946a"
+    },
+    {
+      "path": "src/DraftTG.Application/DeckConstructionService.cs",
+      "sha256": "6058cdd07d6502e9c761153841d5a77b8ba662172f456b2ee2d6e28e0ae2f720"
+    },
+    {
+      "path": "src/DraftTG.Application/DraftCardLayout.cs",
+      "sha256": "17801908cb355ea18760ede5ee6bcf2ecd1e93fc1b13fc7301740549d247fd99"
+    },
+    {
+      "path": "src/DraftTG.Application/DraftExpansionResolver.cs",
+      "sha256": "794c4b2790f314a2c6b71bb60d5b609a468854fd4873cffa8ccfb79f8ec45495"
+    },
+    {
+      "path": "src/DraftTG.Application/DraftSessionCoordinator.cs",
+      "sha256": "5d06bddd37b1ad83b37f2e43136a8da24190cda66b93effb5a3a3d5ded290a3f"
+    },
+    {
+      "path": "src/DraftTG.Application/DraftSessionUpdate.cs",
+      "sha256": "060c2162696ff06c10f49a3060ef8b1c35d3fb25df2a141587a6eb11e61fc13c"
+    },
+    {
+      "path": "src/DraftTG.Application/DraftTGCardDataBootstrapper.cs",
+      "sha256": "8ae615b9bb700d6a3ef5385b0fe0925ee8f160249f53b9d13835dd8bc5927dee"
+    },
+    {
+      "path": "src/DraftTG.Application/DraftTGRuntime.cs",
+      "sha256": "4d2ad7462eaa91617f63bfff17cbbaf44248a3e74e6239ad96b026afb5ca9889"
+    },
+    {
+      "path": "src/DraftTG.Application/LaneRecommendationPresentation.cs",
+      "sha256": "de8f382af1852a67dd0de46fca93752001fe1d06ed3257347557115acc80a03e"
+    },
+    {
+      "path": "src/DraftTG.Application/LimitedStatisticsCoordinator.cs",
+      "sha256": "fd95b30adbbaf24766d06feb194af4bebea0e257ea5502372aac65e64b630be8"
+    },
+    {
+      "path": "src/DraftTG.Application/LimitedStatisticsMapper.cs",
+      "sha256": "79ecb97139dda335dd5a9543dd07ca31e42d31dac346baa3368f86e19bd17af3"
+    },
+    {
+      "path": "src/DraftTG.Application/LimitedStatisticsService.cs",
+      "sha256": "9fee834f27911d155d9f7faa721ed3ba0b509cffeb817bfd5afeed04687aad7c"
+    },
+    {
+      "path": "src/DraftTG.Application/LimitedStatisticsUpdate.cs",
+      "sha256": "9ede77d52ae8a685b225daf2a16ec76da1e1f983a671da03d56e1e18b4ea6a58"
+    },
+    {
+      "path": "src/DraftTG.Application/OverlayCalibrationService.cs",
+      "sha256": "c04723f48fa96d7ebdba8dc4b6d7f54c54c1a51b2c9f0c0e54c326f84356e073"
+    },
+    {
+      "path": "src/DraftTG.Application/PickScorePresentation.cs",
+      "sha256": "fbc3e67b71bc8964da4354a27802b387181b8db5e9e9208c10117c57d8b69f1c"
+    },
+    {
+      "path": "src/DraftTG.Application/RecommendationPresentation.cs",
+      "sha256": "9a1124b9dfd5793b0044c4d3a924b45f21da526f800a091d8b73bd516aaf95f2"
+    },
+    {
+      "path": "src/DraftTG.Application/SeventeenLandsStatisticalIdentity.cs",
+      "sha256": "bb53c39363a7fe51b63e5d55565da77883d0e5bde1b474054cf24d0c78925f9d"
+    },
+    {
+      "path": "src/DraftTG.Application/TrophyRecommendationPresentation.cs",
+      "sha256": "de0606f86e4d2e19b312d36c6e80df02a7fa5ee77960894ff6a8261092fa5ba6"
+    },
+    {
+      "path": "src/DraftTG.Application/VisualCardPlacement.cs",
+      "sha256": "1ef8c4d157b9fac43a53a1a527199a248ad19360bf653bd09c76f0297cba37aa"
+    },
+    {
+      "path": "src/DraftTG.ArenaIntegration/ArenaCardMultiset.cs",
+      "sha256": "ce8b560e92c955a874c8e0999fb97bc81cf3e54eea1337323e5e2fc2169d350b"
+    },
+    {
+      "path": "src/DraftTG.ArenaIntegration/ArenaDeckLogParser.cs",
+      "sha256": "a85ee4ca23c32b98b2307e086fcc51e230e837dad791b2304fee574e2f6b74ae"
+    },
+    {
+      "path": "src/DraftTG.ArenaIntegration/ArenaDraftLogParseException.cs",
+      "sha256": "4ec47bc93626408ffdd71921b609daea2ce97fbe4fe074e50a1a459bf4e9b009"
+    },
+    {
+      "path": "src/DraftTG.ArenaIntegration/ArenaDraftLogParser.cs",
+      "sha256": "c01c96ef2a7e3572249710971d3fcc75b26d3b67059eebbb36a04446a5b10f21"
+    },
+    {
+      "path": "src/DraftTG.ArenaIntegration/ArenaDraftState.cs",
+      "sha256": "cec515ef57da80b3a78b01d589e2d64c8ae7348517a6f0f6a5df31bad909b891"
+    },
+    {
+      "path": "src/DraftTG.ArenaIntegration/ArenaDraftStateEngine.cs",
+      "sha256": "b10a3468b0599810320f23b186e54273b6fc6c9f657be8664639f4765e1d494c"
+    },
+    {
+      "path": "src/DraftTG.ArenaIntegration/ArenaDraftTypes.cs",
+      "sha256": "be818e68e0f358484a5ed88e217bf66c1e4e37bdf21c572e4a49d19da92c529a"
+    },
+    {
+      "path": "src/DraftTG.ArenaIntegration/ArenaLogLocation.cs",
+      "sha256": "26bbaa214cc7141144f755c201b8cacec1b8f7966ffce8500277047eb1a88922"
+    },
+    {
+      "path": "src/DraftTG.ArenaIntegration/ArenaLogSource.cs",
+      "sha256": "3746503b4cbb08538883b23dfed71fa152746fbf185a1a7c22a133d24d911707"
+    },
+    {
+      "path": "src/DraftTG.ArenaIntegration/ArenaProcessDiscovery.cs",
+      "sha256": "fa8d9466c298fa27d935c50db0c98e78b523ec2afa9b842cb43e5b52457d1e7b"
+    },
+    {
+      "path": "src/DraftTG.ArenaIntegration/AssemblyInfo.cs",
+      "sha256": "24179f1edd8c1407a1e1ecf2724d36ca9a8eced5567ad3268930408385ae4c20"
+    },
+    {
+      "path": "src/DraftTG.ArenaIntegration/Memory/ArenaDraftMemoryFormatter.cs",
+      "sha256": "231a20dfc25b7e245e7d627d415b85dd73eb44aa128792aa4e625b72b0136dc9"
+    },
+    {
+      "path": "src/DraftTG.ArenaIntegration/Memory/ArenaDraftMemorySnapshot.cs",
+      "sha256": "935441ec69382778ad1d319475d6b4b7bbd222d8d47c015992b76e98ab5c1aaa"
+    },
+    {
+      "path": "src/DraftTG.ArenaIntegration/Memory/ArenaDraftMemoryWatcher.cs",
+      "sha256": "dd48db85904fd9cfcd23260d8037619a17d12ae9988e9fd3ca4eba86041e3b06"
+    },
+    {
+      "path": "src/DraftTG.ArenaIntegration/Memory/Windows/ArenaDraftMemoryReader.cs",
+      "sha256": "ad84ba91254922c1211bdd84871e0fde241e7e6fd47d20ed4ade0032b41de898"
+    },
+    {
+      "path": "src/DraftTG.ArenaIntegration/Memory/Windows/ArenaDraftObjectGraph.cs",
+      "sha256": "5526adc6fd80ce91262d1c544e998a7aa0c7a807aeb8422f0c42e920e6094b60"
+    },
+    {
+      "path": "src/DraftTG.ArenaIntegration/Memory/Windows/ArenaMemoryCompatibility.cs",
+      "sha256": "e3814d605d073c6967491d46dc65634744acbad034c42c9da39c9f208e77692f"
+    },
+    {
+      "path": "src/DraftTG.ArenaIntegration/Memory/Windows/ArenaMonoRuntime.cs",
+      "sha256": "afe16a4d823bd85b579005610a927dc5f495ece73cfe8b612f1ecc7ed96493d2"
+    },
+    {
+      "path": "src/DraftTG.ArenaIntegration/Memory/Windows/ArenaProcessReader.cs",
+      "sha256": "717fe48863960a013e75ca9d8d8eca80920ddbd68e04f62bb4c4ae40e4704983"
+    },
+    {
+      "path": "src/DraftTG.ArenaIntegration/Memory/Windows/RemoteMemory.cs",
+      "sha256": "5c01b0eb7e626f589a2fc2c784d64374b8a956c870c3852bd026bfc7cb7113d3"
+    },
+    {
+      "path": "src/DraftTG.Domain/ArchetypeProfiles.cs",
+      "sha256": "ed48e5286712ca0da42eb5f08cb04e9f673bdab71b23a448a8b329324055544b"
+    },
+    {
+      "path": "src/DraftTG.Domain/ArenaDeckSnapshot.cs",
+      "sha256": "b1acac7569ac48957364a586ea5ab9592f34cefa837caec80c1fa77237b6e43f"
+    },
+    {
+      "path": "src/DraftTG.Domain/Card.cs",
+      "sha256": "33a5b5ab3dd3afa3e62dec0d28665ec4101e9751249182e3a1dbeefe8e13052f"
+    },
+    {
+      "path": "src/DraftTG.Domain/CardCatalog.cs",
+      "sha256": "eddecd984f9ae7f2b2d841fa8a3aee51d78bec5f282821d4a7a6253983331bcf"
+    },
+    {
+      "path": "src/DraftTG.Domain/CardGameplayMetadata.cs",
+      "sha256": "e7c5b71c5edd4cdbd7677614bd11b33a85a6a64c65e797c29005af7901fe09a5"
+    },
+    {
+      "path": "src/DraftTG.Domain/Colors.cs",
+      "sha256": "1eb342f6a1cf5eb37f561820ae72237992b49d707353db3cd9dc70962ec4447e"
+    },
+    {
+      "path": "src/DraftTG.Domain/DraftedCardPool.cs",
+      "sha256": "5a4a1c0f65dfcece2b21ad7a3c1db1963107bc0cfe69c9212d99a1779af764e2"
+    },
+    {
+      "path": "src/DraftTG.Domain/DraftModel.cs",
+      "sha256": "67d15fae812fe1b60b1374aab4cbf5666d0cdce9eca0f0a03f9f2dc7c676208d"
+    },
+    {
+      "path": "src/DraftTG.Domain/DraftPoolSnapshot.cs",
+      "sha256": "0872a135814ce88601d2556777221de59fbe7fc18a2cba9a0daf509a093228cc"
+    },
+    {
+      "path": "src/DraftTG.Domain/SuccessfulDeckCorpus.cs",
+      "sha256": "52b9a2f412c7e6feced29e46e4329c44bdd51c0444a5b61cf308f51b45863fb8"
+    },
+    {
+      "path": "src/DraftTG.Domain/ValidatedValues.cs",
+      "sha256": "3284a6879448e2775670055fcdfc73660ad472fe15f028f9a8e14b428dc85cd3"
+    },
+    {
+      "path": "src/DraftTG.HistoricalEvaluation/ExperimentalQualitySubstitution.cs",
+      "sha256": "8e237417af7d5685f85fee995591ffbd5144dcca5b01f9d61f94da5c5578c569"
+    },
+    {
+      "path": "src/DraftTG.HistoricalEvaluation/HistoricalDeckCorpus.cs",
+      "sha256": "b2d57059af16e5160dec3fc658488bbf783e5469c313865513a4bfe13ac75e93"
+    },
+    {
+      "path": "src/DraftTG.HistoricalEvaluation/HistoricalEvaluator.cs",
+      "sha256": "b80f02ac9f233d49853d1ec2cf8e9a0780d7adeb3c2942566362c19d08c470e0"
+    },
+    {
+      "path": "src/DraftTG.HistoricalEvaluation/HistoricalIdentityResolver.cs",
+      "sha256": "2c2bfa3d2b50b366cdb83e8495ce20db8fec196f5d458963e4c339a5672270c4"
+    },
+    {
+      "path": "src/DraftTG.HistoricalEvaluation/HistoricalModels.cs",
+      "sha256": "8cd701f06406df5f054be575d4c19876384d6a97dfc972e5ff8661ca8cf1491e"
+    },
+    {
+      "path": "src/DraftTG.HistoricalEvaluation/HistoricalReplay.cs",
+      "sha256": "77c8a946f8a9bd9a2893a152c2c04f451a6598b185b870557d59a6b2e34dbb02"
+    },
+    {
+      "path": "src/DraftTG.HistoricalEvaluation/HistoricalStore.cs",
+      "sha256": "a929682e139b0b64d7c7f78c5bfed68fda7541b8ec22b80c88b3a3523fe2faea"
+    },
+    {
+      "path": "src/DraftTG.HistoricalEvaluation/StreamingCsv.cs",
+      "sha256": "7d0828f638123e19760d2fc1cf2ae0e484ad9813761e26900a1fe56629b72d14"
+    },
+    {
+      "path": "src/DraftTG.RecommendationEngine/ArchetypeRecommendationEngine.cs",
+      "sha256": "551574eb82d5d48b6fc4ba71b789052ff5eda9410cf24ac42b3e1e349aa981ad"
+    },
+    {
+      "path": "src/DraftTG.RecommendationEngine/BaselineDeckBuilder.cs",
+      "sha256": "729b43b01ec6c3569c41031a59368bae051948ca4a0e1fb8718972e037b3cf94"
+    },
+    {
+      "path": "src/DraftTG.RecommendationEngine/CandidateDeckImpactEvaluator.cs",
+      "sha256": "87d8cf07f658d5e2685500b86b4954ee7fe32cec51354cb8d0df1fa9e30b29b2"
+    },
+    {
+      "path": "src/DraftTG.RecommendationEngine/ColorCommitment.cs",
+      "sha256": "b2eb5ca0ca11ebf964864a3a3240435766a74e9fa9ef681b5d206033167de3a2"
+    },
+    {
+      "path": "src/DraftTG.RecommendationEngine/ContextualPickScoreCalibration.cs",
+      "sha256": "d8c15148c9d45d315d1526a819707c3369fa336029ec2d3eb24900da900cb9e2"
+    },
+    {
+      "path": "src/DraftTG.RecommendationEngine/ContextualPickScoreEngine.cs",
+      "sha256": "29f7fd091e558ddec471a353550bc25395aae95600142a5f9a48ecc116590164"
+    },
+    {
+      "path": "src/DraftTG.RecommendationEngine/ContextualPickScoreModels.cs",
+      "sha256": "dcf586339e32ed51115cad33520f0f8fde23a7666b16ee86b450e77b87eb866f"
+    },
+    {
+      "path": "src/DraftTG.RecommendationEngine/ContextualRecommendationEngine.cs",
+      "sha256": "7d1d4ee77028089edc61d68ded8c72e6b73bbd862c7660c8006cebc92b9277c4"
+    },
+    {
+      "path": "src/DraftTG.RecommendationEngine/DeckBuildingModels.cs",
+      "sha256": "b90c324e58633ec73cb30d121f0ad3bb8ecd05713944a50780f8e0a6a665eee3"
+    },
+    {
+      "path": "src/DraftTG.RecommendationEngine/DeckMana.cs",
+      "sha256": "e9824dcc1521a7af18b128f16d39633f2875e9de9f53dd653d5a9fa3a0af03e0"
+    },
+    {
+      "path": "src/DraftTG.RecommendationEngine/DeckPlanSelector.cs",
+      "sha256": "42d669649f2b05b2dd2f8fd9393a008a3c86a3c43480326418e45b05b6102802"
+    },
+    {
+      "path": "src/DraftTG.RecommendationEngine/DeckSpellOptimizer.cs",
+      "sha256": "00832d1d75ade8511fa867418e4d29374cb93e2e096c782b4f5bcbea097d6bb3"
+    },
+    {
+      "path": "src/DraftTG.RecommendationEngine/DraftPackObservationHistory.cs",
+      "sha256": "54b0e243c756d85df61d3db2c6a39170a196ed81a7743c4d4f4b01c698d56340"
+    },
+    {
+      "path": "src/DraftTG.RecommendationEngine/DraftPoolAnalyzer.cs",
+      "sha256": "8f910b3467567b9c3c3a76ea12b00f4937d2bfc33ce481cecb45986aeca6483c"
+    },
+    {
+      "path": "src/DraftTG.RecommendationEngine/LaneContextualRecommendationEngine.cs",
+      "sha256": "bb8c676323c20350ed4902dffe26cb0797f7105f984929aa7d59f49e10476f21"
+    },
+    {
+      "path": "src/DraftTG.RecommendationEngine/LaneDetectionConfiguration.cs",
+      "sha256": "3215e5c35a0e64e5876efce136b0f7f455b9f732783a82f9742a4de3ac52bd78"
+    },
+    {
+      "path": "src/DraftTG.RecommendationEngine/LaneOpennessProfile.cs",
+      "sha256": "1da07f29ed543c1d000dd117ce3a5800d893548325012ac901f36621cbc53a3d"
+    },
+    {
+      "path": "src/DraftTG.RecommendationEngine/LimitedCardRoles.cs",
+      "sha256": "634a32f84df627ce90a200d07254d9a881d0f0bfa0a6fd0b30964adbe0637cf8"
+    },
+    {
+      "path": "src/DraftTG.RecommendationEngine/LimitedCardStatistics.cs",
+      "sha256": "7f62e37f381c5d769f1c517667186fde8943b3d99f7f9e72533cc09ea68c7e7f"
+    },
+    {
+      "path": "src/DraftTG.RecommendationEngine/ProjectedColorCommitment.cs",
+      "sha256": "63ecceb20dd868b88126d3f7a7fabad52ce8895ce78c3eefc7bbde17dcf56ae7"
+    },
+    {
+      "path": "src/DraftTG.RecommendationEngine/SparsePrimaryQualityPrior.cs",
+      "sha256": "dc67c73dba891a2c8a0ac4f184565efe0dc44f3067b7e52c44fccfe87a01aaf3"
+    },
+    {
+      "path": "src/DraftTG.RecommendationEngine/StatisticalRecommendationEngine.cs",
+      "sha256": "a6616dcda49baa7ebd85efa27ae4904f6bc14d2a5be385d38a71da0748934fea"
+    },
+    {
+      "path": "src/DraftTG.RecommendationEngine/SuggestedDeckBuilder.cs",
+      "sha256": "53eebc9f40437d98e8915712f22915eaceb82f02e80b8617aae7a35c5b0dfac1"
+    },
+    {
+      "path": "src/DraftTG.RecommendationEngine/SuggestedDeckModels.cs",
+      "sha256": "8e42d11abbc50986f92ff5d16f8cc19335f5a0d18004cb0354ea3007a4df9965"
+    },
+    {
+      "path": "src/DraftTG.RecommendationEngine/TrophyRecommendationEngine.cs",
+      "sha256": "9c5e9d65589a025223af587eeb770b3702a850ea23c5b33887aeb4012d718c9e"
+    },
+    {
+      "path": "tests/Fixtures/17lands-api-card-data.json",
+      "sha256": "e2fee17fb427683fd4ed2266ec7ee48b16449bd433155a789a914e3975f11a08"
+    },
+    {
+      "path": "tests/Fixtures/17lands-phase7-5.json",
+      "sha256": "4c14290c0d4a0be27a488939c8c0368b001bfbbb620aaa05dedda4e49024a79b"
+    },
+    {
+      "path": "tests/Fixtures/arena-artwork-live/09a4578a-7dc6-4da3-93ee-913b10be5740.jpg",
+      "sha256": "bf9ce878aac46a16be478f3807775036a652e6d20341f59b91f713656c7d3ae4"
+    },
+    {
+      "path": "tests/Fixtures/arena-artwork-live/3dc08461-bec6-4a18-b782-da4c92abb789.jpg",
+      "sha256": "b3bec00f45a41e29bfdefeddd5a793baf97425d9d77020bb3e2f9f371b8172a7"
+    },
+    {
+      "path": "tests/Fixtures/arena-artwork-live/9597d9ea-d9b2-4009-8e7c-02caa3585bc5.jpg",
+      "sha256": "564477a656139af074eaac2d077d2991f2d6438d5a30a95a6f53d5208e754331"
+    },
+    {
+      "path": "tests/Fixtures/arena-artwork-live/arena-draft-capture.png",
+      "sha256": "0524fec7b15bc8699a81400f2a3677db3de33d05e86cb1956344672a4c2acca1"
+    },
+    {
+      "path": "tests/Fixtures/arena-artwork-live/b0058b9b-e919-45eb-9da0-690f62aa252e.jpg",
+      "sha256": "847ca3637d3f5469b8d505e8e5588a8ca4b62d9fea29d9522f67c2585ce05147"
+    },
+    {
+      "path": "tests/Fixtures/arena-artwork-live/cda6bdeb-a0d6-46ca-ba8c-317ee0096416.jpg",
+      "sha256": "978722906f02e95ad8a87641fd6399ee5281e2e0dedf5f4a265937f713bc20c5"
+    },
+    {
+      "path": "tests/Fixtures/arena-artwork-live/e8ebcbfb-1522-4ff5-b23a-f3ea9e08ad9b.jpg",
+      "sha256": "48f01c79520a458b6933e8a93bb1d74e7f785d99d752ecadcf48c9e824f2ce4f"
+    },
+    {
+      "path": "tests/Fixtures/arena-artwork-live/f2c42755-bf91-4c75-95c6-d2a60ba3492a.jpg",
+      "sha256": "a26505aee6e7368c30a511c9e62c0c819596396a879e8212b7dbbef1bde4589a"
+    },
+    {
+      "path": "tests/Fixtures/arena-artwork-live/fab7646a-61e8-446b-9dba-ac6e0db82f10.jpg",
+      "sha256": "16205fbbb3b79ec72c4407a8980256b15fcc29e6b5d4fc342fed3f94c0d9cb06"
+    },
+    {
+      "path": "tests/Fixtures/arena-artwork-live/fb22f79c-3075-439d-a072-ceaabe35d76f.jpg",
+      "sha256": "7de55980174448229b4d1145c3f1549cdc04381d25f5f4d4991aa8fd5c23c02d"
+    },
+    {
+      "path": "tests/Fixtures/arena-artwork-live/manifest.json",
+      "sha256": "fae458e3326bdc0798322d6764bab063c0fb36ca7f6e75208e057282624f085d"
+    },
+    {
+      "path": "tests/Fixtures/arena-artwork-live/README.md",
+      "sha256": "a3a768800d4b3b9807f29703ebfecd24ecd0d1f3615c451060316008ec0ee643"
+    },
+    {
+      "path": "tests/Fixtures/arena-card-database-fra-identity.sql",
+      "sha256": "530d6043f61a430655efb3c83662a3a31fee1076b6041630073c985c203cdef8"
+    },
+    {
+      "path": "tests/Fixtures/arena-card-database-synthetic.sql",
+      "sha256": "35259fb54c24e0d5797cd63ce66738477e08035afbee9dc5fd746da220dd9f89"
+    },
+    {
+      "path": "tests/Fixtures/arena-wgc-p1p7/1a8bb9c7-2c4b-48a1-806e-742addb72b4b.jpg",
+      "sha256": "f9af9365262ef5506358d958bf2e961fb58c959ca3aa1d55c0e91ce995db6ca5"
+    },
+    {
+      "path": "tests/Fixtures/arena-wgc-p1p7/1db79785-4f55-445f-93f2-14c6e4606fc5.jpg",
+      "sha256": "601e85b9e6f0b7b8289fcb17bde52863504530f7159bfb09efddc763a67e87c9"
+    },
+    {
+      "path": "tests/Fixtures/arena-wgc-p1p7/4c6c7a43-c3d1-450e-834a-54e1b9def1cd.jpg",
+      "sha256": "253086a1da930ec44036476944be6e79aa0c995243edcaa9e3a0671317a04945"
+    },
+    {
+      "path": "tests/Fixtures/arena-wgc-p1p7/60acc0b7-6842-44aa-a7cc-c5d315d90287.jpg",
+      "sha256": "72545acd339bfea98f675179049a39bd570584427066e5d08e08f4efda46c3c9"
+    },
+    {
+      "path": "tests/Fixtures/arena-wgc-p1p7/742f2d20-0f6b-488e-ae37-54a41522c191.jpg",
+      "sha256": "9a02bf56c20085e71416b9b1d030c7999430e431c6fb43ed5aa2a10e4c25e633"
+    },
+    {
+      "path": "tests/Fixtures/arena-wgc-p1p7/74f9c819-719a-461b-8e7e-a26c88e8099b.jpg",
+      "sha256": "4352f7bf2e76e910636f607cfced7fc840abfb7257583824b7101be175d78f0d"
+    },
+    {
+      "path": "tests/Fixtures/arena-wgc-p1p7/8059be65-3c73-49bb-a3b6-c346ce2f9fa4.jpg",
+      "sha256": "3c573eda3f8fa462bf75663ee97ea0a72135d51c48a24bf37dace28515f24723"
+    },
+    {
+      "path": "tests/Fixtures/arena-wgc-p1p7/arena-draft-capture.png",
+      "sha256": "b744651bb9fff71b2ec57fc532d6ec3a5d0c3446ce77dcf08254f3756b147ec7"
+    },
+    {
+      "path": "tests/Fixtures/arena-wgc-p1p7/e78e50ca-d27b-45db-91fa-7fef3cad16d0.jpg",
+      "sha256": "4c548f1da888dc67734b801d89ba5f51a258f9c13c74166f97bed690f8fcdd45"
+    },
+    {
+      "path": "tests/Fixtures/arena-wgc-p1p7/manifest.json",
+      "sha256": "93c85da26c9fba9ab7b0f64a7896c8bd7dfda14c0b28decdaf8500fede3eec4a"
+    },
+    {
+      "path": "tests/Fixtures/arena-wgc-p1p7/README.md",
+      "sha256": "2361c32bc29249f9e3fabd00febdc9e2c8cc033e7e7e691a01854211587361c6"
+    },
+    {
+      "path": "tests/Fixtures/arena-woe-p1p6-visual-placement.json",
+      "sha256": "9fdafde2a8ab6a00e4a65b14b5c269c5fb1dfb3574af311a1fd86c33a4b3a16a"
+    },
+    {
+      "path": "tests/Fixtures/arena-woe-saved-deck-cards.json",
+      "sha256": "59690d47bf5ca29a9fe9cf51c4525c9b55e26ce239611aeecf0b66a4864e2f73"
+    },
+    {
+      "path": "tests/Fixtures/arena-woe-saved-deck-live.jsonl",
+      "sha256": "d2d194c923ce407bb0a83bdf0c65105a0bfc647ac55f747b614dfc12b0634c39"
+    },
+    {
+      "path": "tests/Fixtures/arena-woe-saved-deck-README.md",
+      "sha256": "92f1f8e6077c8247a4920d3e3aaa7cbaa3b1c82a2c57d13e8b808ad201ca816f"
+    },
+    {
+      "path": "tests/Fixtures/deckselect-woe-cards.json",
+      "sha256": "9ec1f6acc0812b079fc7409545bc89a88939840ae3119e30503df19af3d479dc"
+    },
+    {
+      "path": "tests/Fixtures/deckselect-woe-completion-live.jsonl",
+      "sha256": "00d1e42a61ba3221765b51cf15c0b9d43eebd456f1f4badc24032a979a8db230"
+    },
+    {
+      "path": "tests/Fixtures/deckselect-woe-completion-README.md",
+      "sha256": "346876a586cbbee7060683569e2d5fba64cd83f56d0990b2d98b29690cde0257"
+    },
+    {
+      "path": "tests/Fixtures/phase10a-scryfall-cards.json",
+      "sha256": "b59c9286d740f58184277c0c4e5a6694af9cde8d7ab9be3db519a6c8121ca72e"
+    },
+    {
+      "path": "tests/Fixtures/phase9e2a1-replay-metadata.json",
+      "sha256": "8aaf8119d25eb69b5ae438ad8f0934ddcf63236279c3cb74518f276b75f8cf9c"
+    },
+    {
+      "path": "tests/Fixtures/phase9e2b-p1p8-rg-failure.json",
+      "sha256": "c8ea0b051ff7a74c02df28f2f8b21e41018684f0e030577f595ab1cf882c9db0"
+    },
+    {
+      "path": "tests/Fixtures/phase9e2b-p1p8-v1.6.2.json",
+      "sha256": "b33caa4893bbcbac93c568e0f626caeec353180b6961023fa791ef1021e0f525"
+    },
+    {
+      "path": "tests/Fixtures/phase9e2b-supported-attempt-forensics.json",
+      "sha256": "ff4e5e0d7a416d5591bd5ade269c8c5bfa6ee68c5a2e5033c3d237ef1917b630"
+    },
+    {
+      "path": "tests/Fixtures/phase9f2-live-pack-stat-provenance.json",
+      "sha256": "685280bac2bba899d61437c21aa71ecaf6bf71fd2d4d925127f73986079e40d1"
+    },
+    {
+      "path": "tests/Fixtures/phase9f2-live-pack-v1.6.1.json",
+      "sha256": "9b64d8dbc090e03e49c4b8562e5695b74092102a244e38becc4bfd7af4c3c494"
+    },
+    {
+      "path": "tests/Fixtures/premier-fra-course-cards.json",
+      "sha256": "255c871a0fec9cad330901bb422a933a986ad7d0296fbcfc4053b22a017eb6c6"
+    },
+    {
+      "path": "tests/Fixtures/premier-fra-course-snapshot-live.jsonl",
+      "sha256": "09ed5856f02dce226226aebdbe175b646e33dfe78245fca8c5bef57dd8345ab5"
+    },
+    {
+      "path": "tests/Fixtures/premier-fra-course-snapshot-README.md",
+      "sha256": "4a73d7e167763b1aa7f94b9df6a5678fec7c80775fcd522e2ee7a1cbe1b5445b"
+    },
+    {
+      "path": "tests/Fixtures/quick-draft-picked-cards-live.jsonl",
+      "sha256": "e02b0a789dfbc1d9e3eed6738f8b746b87d1fb67a8fe409758b957c7efce6c44"
+    },
+    {
+      "path": "tools/DraftTG.HistoricalEvaluation/phase_b.py",
+      "sha256": "8b9bb9f78a7561bc6006fdc68734a0e145edb24eaefb768ccede9068e97b3c52"
+    },
+    {
+      "path": "tools/DraftTG.HistoricalEvaluation/phase_b1.py",
+      "sha256": "3a6da7f905a45698cb40373b65ace08cfbaace8e520382d7789c08906aadf3fa"
+    },
+    {
+      "path": "tools/DraftTG.HistoricalEvaluation/phase_b1_core.py",
+      "sha256": "c0a182f91df192d41af39bca8b8380fd73e32d132fe81d2ae77a748763e5a161"
+    },
+    {
+      "path": "tools/DraftTG.HistoricalEvaluation/phase_b1_prior.py",
+      "sha256": "8b9ee4128952829d934d4f45c9f48eaed685ae30df67ea4f099e190a78d949ca"
+    },
+    {
+      "path": "tools/DraftTG.HistoricalEvaluation/phase_b1_replay.py",
+      "sha256": "2bcf534239513cb8efa7a321ebc239149b9eac972cf82475c55ffebb714955a8"
+    },
+    {
+      "path": "tools/DraftTG.HistoricalEvaluation/phase_b1_report.py",
+      "sha256": "91f2a8305cca4699744fad9a52553065e8b4a248ce885327e5180f6a59129326"
+    },
+    {
+      "path": "tools/DraftTG.HistoricalEvaluation/phase_b1_research.py",
+      "sha256": "4b43536ccea8574ea8085e7df8356cd13f89a786687ba3caeb7e299c980ee921"
+    },
+    {
+      "path": "tools/DraftTG.HistoricalEvaluation/phase_b1_source.py",
+      "sha256": "e815ccdcc78fd1b7075870b904122237aea72b139959ea3b78637afd3c275945"
+    },
+    {
+      "path": "tools/DraftTG.HistoricalEvaluation/phase_b1_tests.py",
+      "sha256": "790bb4328a04284801f98814eea16bb67d9e6b3627549135ee25cc33f4713b7d"
+    },
+    {
+      "path": "tools/DraftTG.HistoricalEvaluation/phase_b1_validate.py",
+      "sha256": "efff9a10c3c3ee74ae63ad8ccab6357d9eedd23963a1e75c0f4af4e0610b1c4e"
+    },
+    {
+      "path": "tools/DraftTG.HistoricalEvaluation/phase_b_audit.py",
+      "sha256": "ce553c155a4b1c5c132afbc5c4c5ea98a4142bb26d6d5d13bfb0eaa894b3fbf3"
+    },
+    {
+      "path": "tools/DraftTG.HistoricalEvaluation/phase_b_core.py",
+      "sha256": "bb88f97e15b222ad60b2abe7a4115b58134acc31fe870add4cdf012216d723c1"
+    },
+    {
+      "path": "tools/DraftTG.HistoricalEvaluation/phase_b_diagnostics.py",
+      "sha256": "dfc28641927e004030b9c15b20c114d0ef7ad22674f14ef4418be42edd115334"
+    },
+    {
+      "path": "tools/DraftTG.HistoricalEvaluation/phase_b_golden.py",
+      "sha256": "1d23d0cef96bdc99eb7d94d24acdfcd8942a1ee0b644b123d85c6a4ec191cc9b"
+    },
+    {
+      "path": "tools/DraftTG.HistoricalEvaluation/phase_b_qualify.py",
+      "sha256": "bec76ca82ecd0662794803d28d939fe48a7c209f387fcb8e0b8d22f8ed5c90a1"
+    },
+    {
+      "path": "tools/DraftTG.HistoricalEvaluation/phase_b_replay.py",
+      "sha256": "064d4b415cec50403f473b4828ebcdf6485cb99675c674bf6fc519fb86c15f30"
+    },
+    {
+      "path": "tools/DraftTG.HistoricalEvaluation/phase_b_report.py",
+      "sha256": "561a59721424e28b3d91a5559748edbcfe9ed0491696e3494ef0bcc176c1f5b0"
+    },
+    {
+      "path": "tools/DraftTG.HistoricalEvaluation/phase_b_research.py",
+      "sha256": "b88d7defe0e93d46f7225fe57b7f24e10cacaeca8a69cf4e65f953e8597ee7f6"
+    },
+    {
+      "path": "tools/DraftTG.HistoricalEvaluation/phase_b_source.py",
+      "sha256": "aacc212515924308886f5ec551f13afe88611e5a65a851b14b2f1d79d0207177"
+    },
+    {
+      "path": "tools/DraftTG.HistoricalEvaluation/test_phase_b.py",
+      "sha256": "fe3db76443da56ad15dba6126ef71e62b9648d48a4d7235ae92f5b0e33b5a7ac"
+    },
+    {
+      "path": "V2_PHASE_A_HISTORICAL_LIMITED_DATASET_EVALUATOR.md",
+      "sha256": "beaf845a40cb2f79cc976372df39fb29c1290af3287d242bb2e813a0b6ec1167"
+    },
+    {
+      "path": "V2_PHASE_B1_QUALITY_EVIDENCE_COMPATIBILITY.md",
+      "sha256": "ea59148f41dc83c6ebd38e77dbca8effaea8caa034afbbf71879c3caf04eaba0"
+    },
+    {
+      "path": "V2_PHASE_B1_SPLIT_MANIFEST.json",
+      "sha256": "6856df32859cd1f81e035de4f4f3ae880e5b0dbebaeda08e78ae0f0e248e0ac0"
+    },
+    {
+      "path": "V2_PHASE_B_SET_NORMALIZED_QUALITY_RESEARCH.md",
+      "sha256": "0667fbc83dc2ad89198e49fbd7d16565c2e0ff7cc945ed13739f95faab9206f7"
+    }
+  ],
+  "splitSha256": "6856df32859cd1f81e035de4f4f3ae880e5b0dbebaeda08e78ae0f0e248e0ac0"
+}
