@@ -1,0 +1,26 @@
+{
+  "commit": "781c4e353ac728355d0633d9768a402d769f8796",
+  "dirtyTree": true,
+  "buildPassed": true,
+  "warnings": 0,
+  "errors": 0,
+  "CSharp": {
+    "total": 1295,
+    "passed": 1295,
+    "failed": 0,
+    "notExecuted": 0
+  },
+  "python": {
+    "phase-c": 7
+  },
+  "golden": 40,
+  "preservedFiles": 303,
+  "productionChanged": false,
+  "buildLog": "data/historical/phase-c-build-completion.log",
+  "testResults": "data/historical/evaluation/phase-c/tests-completion",
+  "validationScope": "Final build, complete C# suite, seven Phase C research tests and 40 golden regressions only; no research rerun",
+  "initialTestFailure": "Existing WGC HundredScopedCaptures ResourcesBounded assertion failed once in solution-wide test; isolated and final full-suite reruns passed. No capture code changed; exact cause not established.",
+  "sourceFingerprint": "61eb5668e45d92da603c89e2b92b28e67cf705973526d3048970942e04968ca6",
+  "scoreAssemblySha256": "168b467c9d9503c2af063d1ad9325d1a081eb39566a453d8f28c8d9070735b3f",
+  "reproBaselineUnchanged": true
+}

@@ -24,6 +24,12 @@ try
     var output=Required("output");Directory.CreateDirectory(Path.GetDirectoryName(Path.GetFullPath(output))!);
     var setup=Stopwatch.StartNew();
     var catalog=new ScryfallCardCatalogDecoder().Decode(File.ReadAllText(Required("catalog")));
+    if(options.TryGetValue("export-card-metadata",out var metadataPath))
+    {
+        File.WriteAllText(metadataPath,HistoricalJson.Serialize(catalog.Cards.ToDictionary(c=>c.Identifier.Value,c=>new
+            {colors=c.Colors.Colors.Select(x=>(int)x).ToArray(),land=c.GameplayMetadata.CardTypes.Contains(CardType.Land),rarity=c.Rarity.ToString(),name=c.Name})));
+        return;
+    }
     var stats=HistoricalJson.Read<HistoricalStatsSnapshot[]>(File.ReadAllText(Required("stats")));
     var bonus=HistoricalJson.Read<Dictionary<string,string[]>>(File.ReadAllText(Required("bonus")));
     if(stats.Any(s=>s.Regime!=EvaluationRegime.MatureFormatReplay || !sets.Contains(s.SetCode)))
@@ -42,6 +48,9 @@ try
         }
     }
     using var store=new HistoricalStore(Required("db"));
+    using var experimentalLane=options.TryGetValue("lane",out var lanePath)?new ExperimentalLaneSubstitution(lanePath,Required("lane-alsa")):null;
+    if(experimentalLane is not null&&qvalues.Count>0)throw new ArgumentException("Q and L ablations cannot be combined.");
+    using var laneTrace=experimentalLane is not null?new StreamWriter(output+".lanes.jsonl"):null;
     var setupSeconds=setup.Elapsed.TotalSeconds;
     using var hash=IncrementalHash.CreateHash(HashAlgorithmName.SHA256);
     var metrics=new SortedDictionary<string,MetricAccumulator>();
@@ -72,6 +81,38 @@ try
             history=baseline.ObservationHistory;calls+=baseline.OptimizerCalls;engineMs+=baseline.TotalMilliseconds;cardScores+=baseline.Cards.Count(c=>c.ContextualValue.HasValue);
             if(baseline.UnscorableCards==0&&baseline.Cards.Length==input.OfferedCards.Sum(c=>c.Count))scored++;
             var a=HistoricalEvaluator.Agreement(d,baseline);Record("current",baseline,a);
+            if(experimentalLane is not null)
+            {
+                var prediction=experimentalLane.Read(input);var currentLane=experimentalLane.Current(input,baseline,catalog);
+                var complete=input.PoolIsComplete&&input.PoolBeforePick.All(c=>c.Card.Identifier is not null)&&input.OfferedCards.All(c=>c.Card.Identifier is not null)
+                    &&a.Rank is not null;
+                var currentResult=ExperimentalLaneSubstitution.Apply(baseline,currentLane,catalog,"current-derived");
+                var currentAgreement=HistoricalEvaluator.Agreement(d,currentResult);
+                var agreements=new Dictionary<string,DecisionAgreement>{{"baseline",a},{"current-derived",currentAgreement}};
+                var states=prediction.Models.Append(new KeyValuePair<string,ResearchLaneState>("current-derived",currentLane));
+                if(complete)
+                foreach(var pair in states)
+                {
+                    var substituted=ExperimentalLaneSubstitution.Apply(baseline,pair.Value,catalog,pair.Key);var b=HistoricalEvaluator.Agreement(d,substituted);
+                    Record("lane-"+pair.Key,substituted,b,pair.Value.Confidence);agreements[pair.Key]=b;
+                    var changed=!baseline.Cards.OrderBy(c=>c.CurrentPackRank).Select(c=>c.PackIndex).SequenceEqual(substituted.Cards.OrderBy(c=>c.CurrentPackRank).Select(c=>c.PackIndex));
+                    foreach(var key in Strata(input,d.Outcome,baseline.InputColorCommitment).Append("lane-confidence="+(pair.Value.Confidence<.25?"0-.25":pair.Value.Confidence<.5?".25-.5":pair.Value.Confidence<.75?".5-.75":".75-1")))
+                    {
+                        var name=pair.Key+" | "+key;if(!changes.TryGetValue(name,out var count))changes[name]=count=new long[4];
+                        count[0]++;count[1]+=changed?1:0;count[2]+=b.Rank<a.Rank?1:0;count[3]+=b.Rank>a.Rank?1:0;
+                        if(pair.Key!="current-derived")
+                        {
+                            var other=pair.Key+"-vs-current-derived | "+key;
+                            if(!changes.TryGetValue(other,out var altCount))changes[other]=altCount=new long[4];
+                            var different=!currentResult.Cards.OrderBy(c=>c.CurrentPackRank).Select(c=>c.PackIndex).SequenceEqual(substituted.Cards.OrderBy(c=>c.CurrentPackRank).Select(c=>c.PackIndex));
+                            altCount[0]++;altCount[1]+=different?1:0;altCount[2]+=b.Rank<currentAgreement.Rank?1:0;altCount[3]+=b.Rank>currentAgreement.Rank?1:0;
+                        }
+                    }
+                }
+                if(complete)Record("complete-baseline",baseline,a);
+                laneTrace!.WriteLine(HistoricalJson.Serialize(new {input.SetCode,input.Format,input.DraftId,input.PackNumber,input.PickNumber,
+                    Complete=complete,Current=currentLane,Models=prediction.Models,Commitment=baseline.InputColorCommitment,Agreements=agreements}));
+            }
             foreach(var reason in baseline.MissingInputs)missing[reason]=missing.GetValueOrDefault(reason)+1;
             if(qvalues.Count>0)
             {
@@ -98,9 +139,10 @@ try
             past.Add(new(input.PackNumber,input.PickNumber,d.Label.ActualPickedCard));decisions++;
             if(decisions%1000==0)Console.WriteLine($"{decisions} decisions; {timer.Elapsed.TotalSeconds:F1}s");
 
-            void Record(string model,HistoricalReplayResult r,DecisionAgreement agreement)
+            void Record(string model,HistoricalReplayResult r,DecisionAgreement agreement,double? laneConfidence=null)
             {
-                foreach(var key in Strata(input,d.Outcome,baseline.InputColorCommitment))
+                foreach(var key in Strata(input,d.Outcome,baseline.InputColorCommitment).Concat(laneConfidence is {} lc
+                    ?new[]{"lane-confidence="+(lc<.25?"0-.25":lc<.5?".25-.5":lc<.75?".5-.75":".75-1")}:[]))
                 {
                     var name=model+" | "+key;if(!metrics.TryGetValue(name,out var accumulator))metrics[name]=accumulator=new();
                     accumulator.Add(agreement.Rank,agreement.Occurrences,agreement.ScoreGap,r.Cards.Count(c=>c.IsQualityEstimated),d.Label.ObservedMaindeckRate,
@@ -110,6 +152,7 @@ try
         }
     }
     finally {trace?.Dispose();}
+    experimentalLane?.Complete();
     var result=new {Version="research-q-phase-b1-v1",Cache=cached,Detailed=detailed,Decisions=decisions,Drafts=drafts,FullyScoredDecisions=scored,CardScores=cardScores,
         Seconds=timer.Elapsed.TotalSeconds,SetupSeconds=setupSeconds,ReadMilliseconds=readMs,ReplayMilliseconds=replayMs,EngineMilliseconds=engineMs,SerializationMilliseconds=serializationMs,AblationMilliseconds=ablationMs,
         OptimizerCalls=calls,PeakWorkingSetBytes=Process.GetCurrentProcess().PeakWorkingSet64,OutputHash=detailed?Convert.ToHexString(hash.GetHashAndReset()).ToLowerInvariant():null,

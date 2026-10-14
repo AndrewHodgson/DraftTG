@@ -1,0 +1,51 @@
+{
+  "version": "research-l-phase-c-v1",
+  "packSpecific": false,
+  "lambdaDrafts": 0,
+  "calibrationCRPS": 0.10698839433340318,
+  "metric": "Equal-set/equal-card-pack empirical CDF CRPS on independent audit half of evidence drafts; no target positions",
+  "scoreGrid": [
+    {
+      "packSpecific": false,
+      "lambdaDrafts": 0,
+      "CRPS": 0.10698839433340318
+    },
+    {
+      "packSpecific": false,
+      "lambdaDrafts": 20,
+      "CRPS": 0.11674094998510012
+    },
+    {
+      "packSpecific": false,
+      "lambdaDrafts": 100,
+      "CRPS": 0.1263228651843581
+    },
+    {
+      "packSpecific": false,
+      "lambdaDrafts": 400,
+      "CRPS": 0.1316115093261075
+    },
+    {
+      "packSpecific": true,
+      "lambdaDrafts": 0,
+      "CRPS": 0.1118288100612457
+    },
+    {
+      "packSpecific": true,
+      "lambdaDrafts": 20,
+      "CRPS": 0.1237176668740206
+    },
+    {
+      "packSpecific": true,
+      "lambdaDrafts": 100,
+      "CRPS": 0.13039359055314192
+    },
+    {
+      "packSpecific": true,
+      "lambdaDrafts": 400,
+      "CRPS": 0.13333439690949875
+    }
+  ],
+  "MeanMedianTrimmed": "All compared; family A/B explicitly retain means, C uses CDF. No method chosen from future color/human outcomes.",
+  "seconds": 85.38405130011961
+}

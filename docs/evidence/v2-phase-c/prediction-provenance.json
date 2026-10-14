@@ -1,0 +1,9 @@
+{
+  "version": "research-l-phase-c-v1",
+  "decisions": 54283,
+  "sha256": "1090562edd9bc578f36adfaff05f445fffcbd6ed87312e514769f6c408329ab4",
+  "calibrationHash": "73737433c42784bcc6fee3ae506a741941c60051ff82a5d894793775d27a4d59",
+  "evidenceOnlyPositions": true,
+  "scoringAPI": "PickTimeState -> observation -> accumulator; no label/outcome/future arguments",
+  "qualityFrozen": "Existing B.1 currentQ/k500 scalars only for bounded eligibility; never substituted"
+}

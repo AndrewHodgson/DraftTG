@@ -1,0 +1,8 @@
+{
+  "consumed": false,
+  "sets": [
+    "MH3",
+    "DFT"
+  ],
+  "reason": "Preregistered development gate fails; no files downloaded or performance read; no release lock created"
+}

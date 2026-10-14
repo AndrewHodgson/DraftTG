@@ -1,0 +1,18 @@
+{
+  "files": {
+    "C:\\Users\\Graphics0\\Documents\\Projects\\DraftTG\\tools\\DraftTG.HistoricalEvaluation\\phase_c.py": "3fbaf37bfb5b1d94ee19bf157d49c011c12cea17073baf3199aad2e53afc3a90",
+    "C:\\Users\\Graphics0\\Documents\\Projects\\DraftTG\\tools\\DraftTG.HistoricalEvaluation\\phase_c_behaviors.py": "061451512c3bf7572cbf288b989d53721db6c3394dc5b4d868dabb0fc0f263a2",
+    "C:\\Users\\Graphics0\\Documents\\Projects\\DraftTG\\tools\\DraftTG.HistoricalEvaluation\\phase_c_core.py": "d727769433288512310481aac95814622dea7ccd3c5ca12188bc4a78a01492b0",
+    "C:\\Users\\Graphics0\\Documents\\Projects\\DraftTG\\tools\\DraftTG.HistoricalEvaluation\\phase_c_metrics.py": "e867b541b72787eeaf122de99b79c4f015560a1b91c6d093b760bbe6086cc77c",
+    "C:\\Users\\Graphics0\\Documents\\Projects\\DraftTG\\tools\\DraftTG.HistoricalEvaluation\\phase_c_positions.py": "93fe2672c59f2edf213b19b278d738a2c18b14fc36d4dd6e9b4356fb1b140fa8",
+    "C:\\Users\\Graphics0\\Documents\\Projects\\DraftTG\\tools\\DraftTG.HistoricalEvaluation\\phase_c_replay.py": "56cee138c6d97673357eafb4201e0dfd30f3ec685ccaf5f533bba30c46d94122",
+    "C:\\Users\\Graphics0\\Documents\\Projects\\DraftTG\\tools\\DraftTG.HistoricalEvaluation\\phase_c_report.py": "c3cfd66c49c52352d90883801fc964a06565f28e8953eae3f932f202a474acd0",
+    "C:\\Users\\Graphics0\\Documents\\Projects\\DraftTG\\tools\\DraftTG.HistoricalEvaluation\\phase_c_research.py": "6ee43790b7f0188f5127f503b5ab61e3fc430d15766383c39c9d5fb46433c999",
+    "C:\\Users\\Graphics0\\Documents\\Projects\\DraftTG\\tools\\DraftTG.HistoricalEvaluation\\phase_c_validation.py": "f5830d80ead79ec2fabf8f5acde822825037356caad52c69ef12daee7e659553",
+    "tools/DraftTG.HistoricalEvaluation/test_phase_c.py": "18e2470fdbf20c7544a54c53b8e0b34cf67a4a1f296d94683f1a9a43e133c1cd",
+    "src/DraftTG.HistoricalEvaluation/ExperimentalLaneSubstitution.cs": "92dea2c38a1f67aaa9db2f871464cf85d67f87ee6e2aee429815e7e9cdd362d0",
+    "tools/DraftTG.QualityEvidenceResearch/Program.cs": "303b8d3834f6a09513d5f46cc858127af5c53663e6acbc30f649a38ca1060b03",
+    "tests/DraftTG.HistoricalEvaluation.Tests/ExperimentalLaneTests.cs": "b1bb9530eeb80eee95fc736c130defa641f4215c3c0d56e87b769f3a3ceecd99"
+  },
+  "fingerprint": "61eb5668e45d92da603c89e2b92b28e67cf705973526d3048970942e04968ca6"
+}

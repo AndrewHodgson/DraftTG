@@ -1,0 +1,16 @@
+{
+  "studyVersion": "research-l-phase-c-v1",
+  "sharedCLIReportVersion": "research-q-phase-b1-v1",
+  "LOnly": true,
+  "productionChanged": false,
+  "qualifiedFormats": [
+    "PremierDraft"
+  ],
+  "positionOnlyFormats": [
+    "VOW QuickDraft"
+  ],
+  "note": "Reused B.1 CLI retains its legacy outer report version in the immutable raw aggregate. L-only model keys, prediction provenance, summary and this scope record identify Phase C; it is not a Q substitution run.",
+  "postFreezeHardening": "Missing positional datasets decline substitution and retain current L; qualified eight-set predictions and numeric metrics unchanged. Input hashes remain frozen.",
+  "namespace": "docs/evidence/v2-phase-c",
+  "holdoutConsumed": false
+}

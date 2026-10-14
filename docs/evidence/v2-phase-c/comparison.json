@@ -1,0 +1,132 @@
+{
+  "version": "research-l-phase-c-v1",
+  "best": "A",
+  "reference": "current-derived",
+  "macro": {
+    "calibration": {
+      "A": 0.08200695321632172,
+      "B": 0.08203117613581912,
+      "C": 0.08230493437852336,
+      "current-derived": 0.08022744823952238,
+      "uniform": 0.08365239172593666,
+      "current-pack-quality-mass": 0.1491621658048732
+    },
+    "development": {
+      "A": 0.08125774774936216,
+      "B": 0.08127603543156088,
+      "C": 0.0817609019897148,
+      "current-derived": 0.07796793825611932,
+      "uniform": 0.08414225096987706,
+      "current-pack-quality-mass": 0.1381475874533328
+    }
+  },
+  "perSet": {
+    "DMU": {
+      "A": 0.08760672980357358,
+      "B": 0.08761377975138987,
+      "C": 0.08794683927954318,
+      "current-derived": 0.08477905636614069,
+      "uniform": 0.08942998346103408,
+      "current-pack-quality-mass": 0.15082891995723052
+    },
+    "BRO": {
+      "A": 0.07270509641747314,
+      "B": 0.07278272947573312,
+      "C": 0.07303891715304867,
+      "current-derived": 0.07157201609282034,
+      "uniform": 0.07426114641890816,
+      "current-pack-quality-mass": 0.14281713269974308
+    },
+    "WOE": {
+      "A": 0.08570903342791844,
+      "B": 0.08569701918033437,
+      "C": 0.08592904670297824,
+      "current-derived": 0.0843312722596061,
+      "uniform": 0.08726604529786774,
+      "current-pack-quality-mass": 0.153840444757646
+    },
+    "LCI": {
+      "A": 0.08345900664977769,
+      "B": 0.08342885207377881,
+      "C": 0.08356935388893029,
+      "current-derived": 0.08351080459185038,
+      "uniform": 0.08467095515609027,
+      "current-pack-quality-mass": 0.15071305124543982
+    },
+    "MKM": {
+      "A": 0.08167741564966798,
+      "B": 0.08166523766372204,
+      "C": 0.08202594476834443,
+      "current-derived": 0.07861732790608451,
+      "uniform": 0.08353940931317051,
+      "current-pack-quality-mass": 0.13821776314585307
+    },
+    "OTJ": {
+      "A": 0.08489476997635909,
+      "B": 0.08484858298922654,
+      "C": 0.08529989825895642,
+      "current-derived": 0.08174855889288273,
+      "uniform": 0.08741669895474993,
+      "current-pack-quality-mass": 0.13980252110867186
+    },
+    "ONE": {
+      "A": 0.08043871004180844,
+      "B": 0.08062056512872665,
+      "C": 0.08177896800537363,
+      "current-derived": 0.07228674647778062,
+      "uniform": 0.08723992176531835,
+      "current-pack-quality-mass": 0.12869813016676124
+    },
+    "MOM": {
+      "A": 0.07581883642919758,
+      "B": 0.0758169393023504,
+      "C": 0.07613034502696917,
+      "current-derived": 0.07367625341199838,
+      "uniform": 0.07784426966005618,
+      "current-pack-quality-mass": 0.133306471599938
+    }
+  },
+  "relativeDevelopmentImprovement": -0.042194388704188235,
+  "setsBeatingAllReferences": 1,
+  "contextualDevelopment": {
+    "A": {
+      "Top1": 0.38170751241390355,
+      "Top3": 0.7247477174435367,
+      "MeanReciprocalRank": 0.5823576176435403,
+      "MeanNormalizedRank": 0.29639386118002103
+    },
+    "B": {
+      "Top1": 0.3817715841742752,
+      "Top3": 0.7248117892039084,
+      "MeanReciprocalRank": 0.5824080487295312,
+      "MeanNormalizedRank": 0.2962776903094052
+    },
+    "C": {
+      "Top1": 0.38196379945539005,
+      "Top3": 0.7254525068076245,
+      "MeanReciprocalRank": 0.5825950379554441,
+      "MeanNormalizedRank": 0.296031663088366
+    },
+    "current-derived": {
+      "Top1": 0.3783117091142079,
+      "Top3": 0.7209995194617972,
+      "MeanReciprocalRank": 0.5792003755050394,
+      "MeanNormalizedRank": 0.29896613966772484
+    }
+  },
+  "developmentGate": {
+    "predictive": false,
+    "perSet": false,
+    "contextual": true,
+    "earlyLock": true,
+    "recovery": true
+  },
+  "convincing": false,
+  "qualifiedForIntegration": false,
+  "holdoutsConsumed": false,
+  "recoveryDevelopment": {
+    "candidate": 0.5025996533795494,
+    "current": 0.42234848484848486
+  },
+  "recommendation": "No final holdout release without the complete preregistered development gate. Preserve production; Phase D not started."
+}

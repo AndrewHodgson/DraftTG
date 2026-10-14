@@ -1,0 +1,7 @@
+{
+  "originalSha256": "73737433c42784bcc6fee3ae506a741941c60051ff82a5d894793775d27a4d59",
+  "correctedSha256": "34265114787c682121be3ddcdbd03a5fe4eecfe3c2af8b789542fe41640e8503",
+  "parametersIdentical": true,
+  "reason": "Future-label integrity audit found one incomplete calibration horizon; exclude unresolved/noncontiguous future labels. Corrected prospective calibration before development analysis; all temporal/sample parameters remain identical, so predictions and live replay need no changes.",
+  "holdoutRead": false
+}

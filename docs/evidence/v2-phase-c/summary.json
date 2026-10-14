@@ -1,0 +1,229 @@
+{
+  "version": "research-l-phase-c-v1",
+  "bestTested": "A",
+  "qualifiedForIntegration": false,
+  "productionChanged": false,
+  "totalReplayed": 54283,
+  "completeComparable": 50285,
+  "drafts": 1280,
+  "seconds": 640.1144095,
+  "developmentBrier": {
+    "A": 0.08125774774936216,
+    "B": 0.08127603543156088,
+    "C": 0.0817609019897148,
+    "current-derived": 0.07796793825611932,
+    "uniform": 0.08414225096987706,
+    "current-pack-quality-mass": 0.1381475874533328
+  },
+  "developmentGate": {
+    "predictive": false,
+    "perSet": false,
+    "contextual": true,
+    "earlyLock": true,
+    "recovery": true
+  },
+  "holdoutsConsumed": false,
+  "primary": {
+    "metric": "Same-pack next-3 quality-availability color-composition Brier; lower is better",
+    "aggregation": "Equal set, pack and early/mid/late stage weights",
+    "calibration": {
+      "sets": [
+        "DMU",
+        "BRO",
+        "WOE"
+      ],
+      "metrics": {
+        "A": 0.08200695321632172,
+        "B": 0.08203117613581912,
+        "C": 0.08230493437852336,
+        "current-derived": 0.08022744823952238,
+        "uniform": 0.08365239172593666,
+        "current-pack-quality-mass": 0.1491621658048732
+      },
+      "purpose": "Parameter fitting only"
+    },
+    "development": {
+      "sets": [
+        "LCI",
+        "MKM",
+        "OTJ",
+        "ONE",
+        "MOM"
+      ],
+      "metrics": {
+        "A": 0.08125774774936216,
+        "B": 0.08127603543156088,
+        "C": 0.0817609019897148,
+        "current-derived": 0.07796793825611932,
+        "uniform": 0.08414225096987706,
+        "current-pack-quality-mass": 0.1381475874533328
+      },
+      "purpose": "Family selection and preregistered gate",
+      "candidateRelativeErrorIncrease": 0.042194388704188235,
+      "setsBeatingAllReferences": 1,
+      "totalSets": 5
+    },
+    "reference": "Actual Phase 9B lane formula populated offline with disjoint derived position evidence; production inputs unchanged"
+  },
+  "candidateA": {
+    "parameters": {
+      "family": "A",
+      "halfLife": 16,
+      "lambdaSignal": 20,
+      "negative": 0,
+      "retention": 0.5
+    },
+    "surprise": "clip((packLocalPick - meanSeenPosition)/3,0,1)",
+    "cardConfidence": "uniqueEvidenceDraftsSeen/(uniqueEvidenceDraftsSeen+20)",
+    "qualityGate": "clip(2*(frozenK500RawQ-.5),0,1)",
+    "pickRamp": "clip((packLocalPick-2)/6,0,1)",
+    "aggregation": "Occurrence-weighted color allocation, extra .5 gold discount; per-observation normalization max(1,totalPositive+abs(totalNegative))",
+    "decay": "2^(-sourceGlobalPickGap/16)",
+    "olderSameDirectionRetention": 0.5,
+    "rollingConfidence": "effectiveObservationSupport/(effectiveObservationSupport+4)",
+    "colorSupport": "tanh((evidenceColor-meanEvidence)/1.5)*rollingConfidence",
+    "cardL": ".5+.5*min(constituentColorSupport)",
+    "availabilityForecast": "softmax(2*colorSupport)",
+    "missingDataset": "Decline experimental substitution and retain existing production L"
+  },
+  "secondary": {
+    "primaryGateOverride": false,
+    "contextualAllComplete": {
+      "scope": "Calibration and development pooled; 50,285 comparable decisions",
+      "models": {
+        "complete-baseline": {
+          "Decisions": 50285,
+          "Eligible": 50285,
+          "Top1Count": 18857,
+          "Top3Count": 36246,
+          "Top5Count": 43318,
+          "Top1": 0.3750024858307646,
+          "Top3": 0.720811375161579,
+          "Top5": 0.8614497365019389,
+          "MeanReciprocalRank": 0.5771582357408029,
+          "MeanNormalizedRank": 0.29783316519968733,
+          "MeanScoreGap": 4.491485849744949,
+          "EstimatedCardScores": 9840,
+          "TotalOfferedOccurrences": 409625,
+          "MaindeckLabelCount": 50285,
+          "MeanObservedMaindeckRate": 0.5967743820224708,
+          "MeanActualRankWhenObservedMaindeckRatePositive": 3.0531575659949373,
+          "PartialPoolDecisions": 0,
+          "MissingGihCards": 9840
+        },
+        "lane-current-derived": {
+          "Decisions": 50285,
+          "Eligible": 50285,
+          "Top1Count": 18662,
+          "Top3Count": 36039,
+          "Top5Count": 43216,
+          "Top1": 0.37112458983792385,
+          "Top3": 0.7166948394153326,
+          "Top5": 0.8594212985979914,
+          "MeanReciprocalRank": 0.5738095102338764,
+          "MeanNormalizedRank": 0.3007178330933054,
+          "MeanScoreGap": 4.693732098384368,
+          "EstimatedCardScores": 9840,
+          "TotalOfferedOccurrences": 409625,
+          "MaindeckLabelCount": 50285,
+          "MeanObservedMaindeckRate": 0.5967743820224708,
+          "MeanActualRankWhenObservedMaindeckRatePositive": 3.0799171570400077,
+          "PartialPoolDecisions": 0,
+          "MissingGihCards": 9840
+        },
+        "lane-A": {
+          "Decisions": 50285,
+          "Eligible": 50285,
+          "Top1Count": 18803,
+          "Top3Count": 36200,
+          "Top5Count": 43295,
+          "Top1": 0.3739286069404395,
+          "Top3": 0.7198965894401909,
+          "Top5": 0.8609923436412449,
+          "MeanReciprocalRank": 0.5763554384475005,
+          "MeanNormalizedRank": 0.29884225068625164,
+          "MeanScoreGap": 4.534121034779217,
+          "EstimatedCardScores": 9840,
+          "TotalOfferedOccurrences": 409625,
+          "MaindeckLabelCount": 50285,
+          "MeanObservedMaindeckRate": 0.5967743820224708,
+          "MeanActualRankWhenObservedMaindeckRatePositive": 3.0587461783753573,
+          "PartialPoolDecisions": 0,
+          "MissingGihCards": 9840
+        }
+      },
+      "changes": {
+        "Compared": 50285,
+        "Changed": 16761,
+        "Improved": 2522,
+        "Regressed": 1769
+      }
+    },
+    "contextualDevelopment": {
+      "A": {
+        "Top1": 0.38170751241390355,
+        "Top3": 0.7247477174435367,
+        "MeanReciprocalRank": 0.5823576176435403,
+        "MeanNormalizedRank": 0.29639386118002103
+      },
+      "B": {
+        "Top1": 0.3817715841742752,
+        "Top3": 0.7248117892039084,
+        "MeanReciprocalRank": 0.5824080487295312,
+        "MeanNormalizedRank": 0.2962776903094052
+      },
+      "C": {
+        "Top1": 0.38196379945539005,
+        "Top3": 0.7254525068076245,
+        "MeanReciprocalRank": 0.5825950379554441,
+        "MeanNormalizedRank": 0.296031663088366
+      },
+      "current-derived": {
+        "Top1": 0.3783117091142079,
+        "Top3": 0.7209995194617972,
+        "MeanReciprocalRank": 0.5792003755050394,
+        "MeanNormalizedRank": 0.29896613966772484
+      }
+    },
+    "recoveryDevelopment": {
+      "candidate": 0.5025996533795494,
+      "current": 0.42234848484848486
+    },
+    "recoveryCaveat": "Conditional on initial recognition; candidate/current denominators differ. Descriptive, not causal."
+  },
+  "controlledProbe": {
+    "synthetic": true,
+    "usedForCalibration": false,
+    "qualified": false,
+    "candidateA": {
+      "blueAt8": 0.3661826331036365,
+      "blueAt14": 0.5709765257543704,
+      "confidenceAt8": 0.4443618353003624,
+      "confidenceAt14": 0.6598560371801543
+    },
+    "failure": "Zero explicit negative weight permits coverage confidence and retained support to rise despite earlier-than-expected qualified color sightings"
+  },
+  "untouchedHoldouts": {
+    "sets": [
+      "MH3",
+      "DFT"
+    ],
+    "consumed": false,
+    "performance": null,
+    "reason": "Preregistered development gate fails; no files downloaded or performance read; no release lock created"
+  },
+  "failureDiagnosis": "Secondary agreement and conditional recovery target human preferences and selected reversal episodes, not independent future availability. A fails primary predictive and per-set gates; coverage confidence also fails the controlled contested-color probe. No causal benefit or parameter repair is claimed.",
+  "tests": {
+    "CSharp": {
+      "total": 1295,
+      "passed": 1295,
+      "failed": 0,
+      "notExecuted": 0
+    },
+    "python": {
+      "phase-c": 7
+    },
+    "golden": 40
+  },
+  "recommendation": "Retain existing Phase 9B production lane behavior and v1.6.2. Preserve MH3/DFT. Any Phase D must be separately authorized offline affinity research with current L frozen; do not carry Candidate A as an approved replacement. Phase D not started."
+}

@@ -1,0 +1,26 @@
+{
+  "version": "research-l-phase-c-v1",
+  "best": "A",
+  "convincing": false,
+  "parameters": {
+    "family": "A",
+    "halfLife": 16,
+    "lambdaSignal": 20,
+    "negative": 0,
+    "retention": 0.5
+  },
+  "inputs": {
+    "docs\\evidence\\v2-phase-c\\position-policy.json": "e21e4b2f514fbb30bbd3e783c8705562057495d59b26b20b70dd9777994a4a5f",
+    "docs\\evidence\\v2-phase-c\\temporal-calibration.json": "73737433c42784bcc6fee3ae506a741941c60051ff82a5d894793775d27a4d59",
+    "docs\\evidence\\v2-phase-c\\contextual-replay.json": "c26675bed681c0e78b2923f139587fcb4ae5dafa6d8d9cee8ce81d2c27d1b060",
+    "docs\\evidence\\v2-phase-c\\lane-metrics.json": "955314923bfd5f02016a86fb002e52a4e08aa2b2b748a5a38e44c8a7319fa2ac",
+    "docs\\evidence\\v2-phase-c\\comparison.json": "b96c0ff8daadf8fb9aa73572dfc5ae27ca6101ac3de11d32ec76ea46f4bdc98e",
+    "data\\historical\\normalized\\phase-c-v1\\predictions.jsonl.gz": "1090562edd9bc578f36adfaff05f445fffcbd6ed87312e514769f6c408329ab4"
+  },
+  "splitSha256": "6856df32859cd1f81e035de4f4f3ae880e5b0dbebaeda08e78ae0f0e248e0ac0",
+  "holdoutsUntouched": [
+    "MH3",
+    "DFT"
+  ],
+  "productionChanged": false
+}

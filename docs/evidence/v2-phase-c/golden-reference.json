@@ -1,0 +1,247 @@
+{
+  "productionQCommitmentUnchanged": true,
+  "reference": {
+    "Uldaros": {
+      "effective_rate": 0.6709705429277599,
+      "q": 0.9765137572943683,
+      "primary_source": "primary fixture",
+      "alternate_source": "alternate fixture",
+      "reliability": 0.9,
+      "shrinkage": 0.8814322978420678,
+      "mode": "alternate-prior",
+      "reason": "Explicit same-set alternate prior",
+      "provenance": [
+        "frozen primary",
+        "frozen alternate"
+      ]
+    },
+    "productionQ": 0.9765137572943683,
+    "productionExact": 48.21998625015792,
+    "portableExact": 48.21998625015792,
+    "passed": true,
+    "goldenUsedForFit": false,
+    "formula": "Generic identity/set/direction contract; preregistered reference .9/500, no FRA/card branch",
+    "Unsummon": {
+      "commitment": 0.9446064139941691,
+      "relevance": 0.10262390670553934,
+      "playability": 0,
+      "productionQ": 0.5786468825336437,
+      "productionExact": 25.328185285150624,
+      "unchanged": true
+    }
+  },
+  "usedForTuning": false,
+  "checks": [
+    {
+      "name": "Blessed Ghoul",
+      "rawQ": 0.474950164682197,
+      "R": 0.10262390670553934,
+      "C": 0.9446064139941691,
+      "exact": 23.305592474026962,
+      "QADCommitmentUnchanged": true,
+      "missingLDeclined": true,
+      "LRetained": 0.48931065487401465
+    },
+    {
+      "name": "Cryotheory Adept",
+      "rawQ": 0.4425567387042253,
+      "R": 0.10262390670553934,
+      "C": 0.9446064139941691,
+      "exact": 22.193592838111602,
+      "QADCommitmentUnchanged": true,
+      "missingLDeclined": true,
+      "LRetained": 0.5205887691061061
+    },
+    {
+      "name": "Arcane Amphisbaena",
+      "rawQ": 0.5057055995069826,
+      "R": 1,
+      "C": 0.9446064139941691,
+      "exact": 25.501120969070218,
+      "QADCommitmentUnchanged": true,
+      "missingLDeclined": true,
+      "LRetained": 0.5011925995257194
+    },
+    {
+      "name": "Hallway Heckler // Vicious Verse",
+      "rawQ": 0.33553167342092627,
+      "R": 1,
+      "C": 0.9446064139941691,
+      "exact": 17.03355409469345,
+      "QADCommitmentUnchanged": true,
+      "missingLDeclined": true,
+      "LRetained": 0.4924666066138767
+    },
+    {
+      "name": "Unsummon",
+      "rawQ": 0.5786468825336437,
+      "R": 0.10262390670553934,
+      "C": 0.9446064139941691,
+      "exact": 25.328185285150624,
+      "QADCommitmentUnchanged": true,
+      "missingLDeclined": true,
+      "LRetained": 0.5205887691061061
+    },
+    {
+      "name": "Way of the Necromancer",
+      "rawQ": 0.04254748381377049,
+      "R": 0.10262390670553934,
+      "C": 0.9446064139941691,
+      "exact": 2.716718844037702,
+      "QADCommitmentUnchanged": true,
+      "missingLDeclined": true,
+      "LRetained": 0.49644136988028315
+    },
+    {
+      "name": "Dedicated Commons",
+      "rawQ": 0.2987386185071129,
+      "R": 1,
+      "C": 0.9446064139941691,
+      "exact": 15.024239942318646,
+      "QADCommitmentUnchanged": true,
+      "missingLDeclined": true,
+      "LRetained": 0.5
+    },
+    {
+      "name": "Uldaros Theorix",
+      "rawQ": 0.9765137572943683,
+      "R": 1,
+      "C": null,
+      "exact": 48.21998625015792,
+      "QADCommitmentUnchanged": true,
+      "missingLDeclined": true,
+      "LRetained": 0.5
+    },
+    {
+      "name": "Rise of the Deathbringer",
+      "rawQ": 0.500491471192239,
+      "R": 1,
+      "C": null,
+      "exact": 25.024082088419718,
+      "QADCommitmentUnchanged": true,
+      "missingLDeclined": true,
+      "LRetained": 0.5
+    },
+    {
+      "name": "Tomik, Orzhov Lawmage",
+      "rawQ": 0.31117197213901504,
+      "R": 1,
+      "C": null,
+      "exact": 15.747426634811736,
+      "QADCommitmentUnchanged": true,
+      "missingLDeclined": true,
+      "LRetained": 0.5
+    },
+    {
+      "name": "Yargle, Glutton of Urborg",
+      "rawQ": 0.5,
+      "R": 1,
+      "C": null,
+      "exact": 24.999999999999996,
+      "QADCommitmentUnchanged": true,
+      "missingLDeclined": true,
+      "LRetained": 0.5
+    },
+    {
+      "name": "Tomik, Izzet Sparkmage",
+      "rawQ": 0.23874152351597872,
+      "R": 1,
+      "C": null,
+      "exact": 12.198334652282957,
+      "QADCommitmentUnchanged": true,
+      "missingLDeclined": true,
+      "LRetained": 0.5
+    },
+    {
+      "name": "Restore with Empathy",
+      "rawQ": 0.5500137800303071,
+      "R": 1,
+      "C": null,
+      "exact": 27.450675221485056,
+      "QADCommitmentUnchanged": true,
+      "missingLDeclined": true,
+      "LRetained": 0.5
+    },
+    {
+      "name": "Desperate Futurescribe",
+      "rawQ": 0.6021321854690532,
+      "R": 1,
+      "C": null,
+      "exact": 30.00447708798361,
+      "QADCommitmentUnchanged": true,
+      "missingLDeclined": true,
+      "LRetained": 0.5
+    },
+    {
+      "name": "Memory Trap",
+      "rawQ": 0.5177115925859027,
+      "R": 1,
+      "C": null,
+      "exact": 25.86786803670924,
+      "QADCommitmentUnchanged": true,
+      "missingLDeclined": true,
+      "LRetained": 0.5
+    },
+    {
+      "name": "Rampart Hunter",
+      "rawQ": 0.1176481979033594,
+      "R": 1,
+      "C": null,
+      "exact": 6.264761697264612,
+      "QADCommitmentUnchanged": true,
+      "missingLDeclined": true,
+      "LRetained": 0.5
+    },
+    {
+      "name": "Tether Technician",
+      "rawQ": 0.3081056908964509,
+      "R": 1,
+      "C": null,
+      "exact": 15.597178853926094,
+      "QADCommitmentUnchanged": true,
+      "missingLDeclined": true,
+      "LRetained": 0.5
+    },
+    {
+      "name": "Fatehold Chronologist // Peer Review",
+      "rawQ": 0.5623544592066914,
+      "R": 1,
+      "C": null,
+      "exact": 28.05536850112788,
+      "QADCommitmentUnchanged": true,
+      "missingLDeclined": true,
+      "LRetained": 0.5
+    },
+    {
+      "name": "Konstrari Improviser // Soul Tether",
+      "rawQ": 0.4738905711150282,
+      "R": 1,
+      "C": null,
+      "exact": 23.720637984636383,
+      "QADCommitmentUnchanged": true,
+      "missingLDeclined": true,
+      "LRetained": 0.5
+    },
+    {
+      "name": "Medic's Kitesail",
+      "rawQ": 0.3964751671994632,
+      "R": 1,
+      "C": null,
+      "exact": 19.927283192773697,
+      "QADCommitmentUnchanged": true,
+      "missingLDeclined": true,
+      "LRetained": 0.5
+    },
+    {
+      "name": "Formidable Commons",
+      "rawQ": 0.5672546938533019,
+      "R": 1,
+      "C": null,
+      "exact": 28.29547999881179,
+      "QADCommitmentUnchanged": true,
+      "missingLDeclined": true,
+      "LRetained": 0.5
+    }
+  ],
+  "missingPositionPolicy": "FRA has no qualified positional dataset: decline experimental substitution and retain existing L, with explicit provenance; missing individual-card expectation contributes no evidence"
+}

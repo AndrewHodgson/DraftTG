@@ -1,0 +1,26 @@
+{
+  "seed": "DraftTG-phase-c-v1",
+  "positionFileHash": "58cd5fb059c14b9c3fdb7838ac0d0f39c1b608145863992ba8c582cc50ee9d1d",
+  "qualityFileHash": "d32f8e28a3030f71cd7b3ab35092cd4406570180d8f90b429bcf7de4cd1628b3",
+  "metadataHash": "129b814e4a4fb619de926d7a4b0db86b59023c8f50765d536f9ca592390ebd53",
+  "sourceFiles": {
+    "data\\historical\\normalized\\phase-b-v1\\STX.PremierDraft.decisions.jsonl.gz": "61535077651645565a9b464ae69b0b9e891911f02a91a3ce704ca0a83e9b7127",
+    "data\\historical\\normalized\\phase-b-v1\\AFR.PremierDraft.decisions.jsonl.gz": "38af679edc9036938c3889beb935d91ef8d782e5fca5fc2b921871dee458e7ed",
+    "data\\historical\\normalized\\phase-b-v1\\NEO.PremierDraft.decisions.jsonl.gz": "7a59a9352aa1f6cc8080b433b9d1580784908c6f21a770524983ae1cfdb4528f",
+    "data\\historical\\normalized\\phase-b-v1\\SNC.PremierDraft.decisions.jsonl.gz": "9a83951000d9729f85901f4bf798ae8c321801f973999a543f6c71c75f4dc2be",
+    "data\\historical\\normalized\\phase-b-v1\\DMU.PremierDraft.decisions.jsonl.gz": "482425f38aa1685af3c7b6aee42a21764cd9afbf558157a2c87955279677a231",
+    "data\\historical\\normalized\\phase-b-v1\\BRO.PremierDraft.decisions.jsonl.gz": "bec94c5cda39eda54fb9f47e9faddab95157a96d2d5a643f2667375938b9c4e6",
+    "data\\historical\\normalized\\phase-b-v1\\VOW.PremierDraft.decisions.jsonl.gz": "a947be9622f71d0cd42aa6e7a9e5f7712d9497edfa3f4a080f5770d2c955d6f6",
+    "data\\historical\\normalized\\phase-b-v1\\VOW.QuickDraft.decisions.jsonl.gz": "f9867c911db2f696839478a1d74f301122f047393028e4609f63a60666ba5d20",
+    "data\\historical\\normalized\\phase-b-v1\\WOE.PremierDraft.decisions.jsonl.gz": "f25639e6cf9d88d2dbbd32c61611c0e19f616da16072d613347ef943f2d5cd57",
+    "data\\historical\\normalized\\phase-b-v1\\LCI.PremierDraft.decisions.jsonl.gz": "e804cc948aa2152022939138b6bab409037a5d32c77f69914d7b54bc03a59f83",
+    "data\\historical\\normalized\\phase-b-v1\\MKM.PremierDraft.decisions.jsonl.gz": "33ae88e79b397664db2cecf74d2b67a30fb9759d87ef6e06a2803b1db25822ec",
+    "data\\historical\\normalized\\phase-b-v1\\OTJ.PremierDraft.decisions.jsonl.gz": "268136bf9712d774b405c0c83555857c222c8bfc2aaf6e6fb1cdd421fb9deb61",
+    "data\\historical\\normalized\\phase-b1-v1\\ONE.PremierDraft.decisions.jsonl.gz": "8199147d1586674649de217cf90984c749421532380fc2538307bc26f087ba2b",
+    "data\\historical\\normalized\\phase-b1-v1\\MOM.PremierDraft.decisions.jsonl.gz": "117bf665c50f5c65ec574382451d1e5b4c20d25182aff55d81633b36119b5dbe"
+  },
+  "targetDraftsExcluded": true,
+  "physicalCardOrPackIDsAvailable": false,
+  "distributionsAreDerivedNotOfficialALSA": true,
+  "datasets": 14
+}
